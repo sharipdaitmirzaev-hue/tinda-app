@@ -334,34 +334,41 @@ Query: `category_id`, `q`, `availability`, `is_promo`, `is_new`, `is_hit`, `page
 
 ### `GET /api/v1/client/orders`
 
-Query: `status`, `page`, `page_size`
+**Кто:** `client` + `approved`  
+Query: `status`, `date_from`, `date_to`, `q` (номер), `page`, `page_size`  
+Сортировка: `created_at` DESC. Цены отсутствуют. `manager_comment` не возвращается.
 
 ### `GET /api/v1/client/orders/:id`
 
-Полная карточка: заказ, `items[]`, `history[]`.
+Полная карточка своего заказа: поля доставки, `items[]` (snapshot), `status_history[]`.  
+Чужой заказ → `404`.
 
 ### `PATCH /api/v1/client/orders/:id`
 
-Только `status = new`. Частичное обновление контактов/состава.
+Только владелец и только `status = new`.  
+Если заказ уже обработан → `409` / `ORDER_ALREADY_PROCESSED`.
 
-**Вход (пример):**
+**Вход:**
 
 ```json
 {
-  "desired_delivery_date": "2026-08-02",
+  "address": "string",
+  "desired_delivery_date": "YYYY-MM-DD",
   "contact_name": "string",
   "contact_phone": "string",
-  "payment_method": "cash_on_delivery",
+  "payment_method": "bank_transfer|deferred|cash_on_delivery|transfer",
   "is_urgent": true,
   "client_comment": "string|null",
-  "address": "string",
   "items": [{ "product_id": "uuid", "qty": 24 }]
 }
 ```
 
+Состав заменяется целиком; qty через `lib/quantity.ts`.
+
 ### `POST /api/v1/client/orders/:id/cancel`
 
-**Вход:** `{ "reason": "string|null" }`
+**Вход:** `{ "reason": "string|null" }` (до 1000 символов)  
+Только `status = new`. Пишет `cancelled_at`, `cancel_reason`, `order_status_history`.
 
 ---
 

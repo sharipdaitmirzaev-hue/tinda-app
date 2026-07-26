@@ -6,7 +6,8 @@ export type ApiErrorCode =
   | "forbidden"
   | "conflict"
   | "not_found"
-  | "internal_error";
+  | "internal_error"
+  | "ORDER_ALREADY_PROCESSED";
 
 export function api_error(
   status: number,
