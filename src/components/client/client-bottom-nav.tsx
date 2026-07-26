@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTemporaryCartCount } from "@/hooks/useTemporaryCart";
+import { useServerCartCount } from "@/hooks/useServerCart";
 
 const links = [
   { href: "/catalog", label: "Каталог" },
@@ -13,7 +13,7 @@ const links = [
 
 export function ClientBottomNav() {
   const pathname = usePathname();
-  const cart_count = useTemporaryCartCount();
+  const cart_count = useServerCartCount();
 
   return (
     <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-2 py-2 md:hidden">

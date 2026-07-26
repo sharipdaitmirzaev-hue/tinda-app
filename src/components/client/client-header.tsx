@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { LogoutButton } from "@/components/auth/logout-button";
-import { useTemporaryCartCount } from "@/hooks/useTemporaryCart";
+import { useServerCartCount } from "@/hooks/useServerCart";
 
 export function ClientHeader({ full_name }: { full_name?: string }) {
-  const cart_count = useTemporaryCartCount();
+  const cart_count = useServerCartCount();
 
   return (
     <header className="sticky top-0 z-30 border-b border-teal-900/10 bg-white/95 backdrop-blur">

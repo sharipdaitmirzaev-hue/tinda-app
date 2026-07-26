@@ -1,7 +1,7 @@
 /**
- * TEMPORARY client-side cart store (E1.6 / E1.7).
- * Server cart + /cart checkout will be implemented in E1.8.
- * Do not treat this as production cart persistence.
+ * LEGACY temporary cart (E1.6 / E1.7).
+ * Kept only for one-time migration into the server cart (E1.8).
+ * New add/update/delete operations must use /api/v1/cart.
  */
 
 import {
@@ -86,8 +86,9 @@ function sanitize_items(raw: unknown): TemporaryCartItem[] {
       continue;
     }
 
+    const qty_value = (entry as Record<string, unknown>).qty;
     const qty_raw =
-      typeof row.qty === "number" ? row.qty : get_initial_qty(product);
+      typeof qty_value === "number" ? qty_value : get_initial_qty(product);
     const qty = normalize_cart_qty(product, qty_raw);
     if (qty === null) continue;
 

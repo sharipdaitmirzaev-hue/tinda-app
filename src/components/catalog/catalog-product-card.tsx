@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ProductImage } from "@/components/catalog/product-image";
 import { can_add_to_cart } from "@/lib/quantity";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
-import { useAddToTemporaryCart } from "@/hooks/useTemporaryCart";
+import { useAddToServerCart } from "@/hooks/useServerCart";
 import { Toast } from "@/components/catalog/toast";
 
 export type CatalogProduct = {
@@ -27,7 +27,7 @@ export type CatalogProduct = {
 };
 
 export function CatalogProductCard({ product }: { product: CatalogProduct }) {
-  const { add_from_catalog, toast } = useAddToTemporaryCart();
+  const { add_from_catalog, toast, pending } = useAddToServerCart();
   const allowed = can_add_to_cart(product);
   const availability_label =
     product.availability_label ??
@@ -35,12 +35,9 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
     product.availability;
 
   function on_add() {
-    if (!allowed) return;
-    add_from_catalog({
+    if (!allowed || pending) return;
+    void add_from_catalog({
       product_id: product.id,
-      name: product.name,
-      sku: product.sku,
-      image_url: product.image_url,
       units_per_package: product.units_per_package,
       min_order_qty: product.min_order_qty,
       allow_piece_sale: product.allow_piece_sale,
@@ -107,11 +104,11 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           </Link>
           <button
             type="button"
-            disabled={!allowed}
+            disabled={!allowed || pending}
             onClick={on_add}
             className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
           >
-            В корзину
+            {pending ? "Добавляем…" : "В корзину"}
           </button>
         </div>
       </article>

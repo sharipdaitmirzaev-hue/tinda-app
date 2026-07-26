@@ -237,33 +237,59 @@ Query: `category_id`, `q`, `availability`, `is_promo`, `is_new`, `is_hit`, `page
 
 ### `GET /api/v1/cart`
 
+**Кто:** `client` + `status = approved`  
+Неавторизованный → `401`. `pending` / `rejected` / `blocked`, manager, director → `403`.
+
 ```json
 {
   "items": [
     {
       "product_id": "uuid",
-      "product": { },
       "qty": 12,
+      "product": {
+        "id": "uuid",
+        "sku": "string",
+        "name": "string",
+        "brand": "string|null",
+        "volume_text": "string|null",
+        "package_type": "string|null",
+        "units_per_package": 12,
+        "sale_unit": "string",
+        "min_order_qty": 12,
+        "allow_piece_sale": false,
+        "availability": "in_stock",
+        "image_url": "string|null",
+        "is_active": true
+      },
       "qty_error": null,
       "suggested_qty": null
     }
   ],
+  "items_count": 1,
+  "total_qty": 12,
   "is_ready_to_checkout": true
 }
 ```
 
+Цены в ответе отсутствуют. При каждом `GET` позиции перепроверяются (`out_of_stock` / `inactive` / кратность).
+
 ### `POST /api/v1/cart/items`
 
 **Вход:** `{ "product_id": "uuid", "qty": 12 }`  
+Если товара нет — создать; если есть — прибавить `qty`.  
 **Выход:** объект корзины как в `GET /cart`.
 
 ### `PATCH /api/v1/cart/items/:product_id`
 
-**Вход:** `{ "qty": 24 }`
+**Вход:** `{ "qty": 24 }` — заменить количество.
 
 ### `DELETE /api/v1/cart/items/:product_id`
 
+Удаляет одну позицию.
+
 ### `DELETE /api/v1/cart`
+
+Полностью очищает корзину.
 
 ---
 

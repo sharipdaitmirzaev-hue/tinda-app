@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
 import { QuantityStepper } from "@/components/catalog/quantity-stepper";
 import { Toast } from "@/components/catalog/toast";
-import { useAddToTemporaryCart } from "@/hooks/useTemporaryCart";
+import { useAddToServerCart } from "@/hooks/useServerCart";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
 import {
   can_add_to_cart,
@@ -38,7 +38,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
   const [loading, set_loading] = useState(true);
   const [error, set_error] = useState<string | null>(null);
   const [qty, set_qty] = useState(1);
-  const { add_with_qty, toast } = useAddToTemporaryCart();
+  const { add_with_qty, toast, pending } = useAddToServerCart();
 
   async function load() {
     set_loading(true);
@@ -98,13 +98,10 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
     product.availability;
 
   function on_add() {
-    if (!product || !allowed || !qty_check.valid) return;
-    add_with_qty(
+    if (!product || !allowed || !qty_check.valid || pending) return;
+    void add_with_qty(
       {
         product_id: product.id,
-        name: product.name,
-        sku: product.sku,
-        image_url: product.image_url,
         ...quantity_product,
       },
       qty,
@@ -222,11 +219,11 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
           <div className="sticky bottom-20 z-10 flex flex-wrap gap-2 bg-white/95 py-2 md:static md:bottom-auto md:bg-transparent md:py-0">
             <button
               type="button"
-              disabled={!allowed || !qty_check.valid}
+              disabled={!allowed || !qty_check.valid || pending}
               onClick={on_add}
               className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
             >
-              В корзину
+              {pending ? "Добавляем…" : "В корзину"}
             </button>
             <Link
               href="/catalog"
