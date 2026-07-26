@@ -453,15 +453,44 @@ Director — любой активный manager или null. Manager — тол
 
 ### `GET /api/v1/staff/products`
 
+Query: `q`, `category_id`, `availability`, `is_active`, `is_promo`, `is_new`, `is_hit`, `page`, `page_size`, `sort`.
+
 ### `POST /api/v1/staff/products`
 
-Поля как в таблице `products` (без системных дат).
+Поля как в таблице `products` (без системных дат и без цен).
 
 ### `PATCH /api/v1/staff/products/:id`
 
+Частичное обновление. Для soft-деактивации: `{ "is_active": false }`.  
+Физическое удаление товара не поддерживается.
+
 ### `POST /api/v1/staff/products/:id/image`
 
-`multipart/form-data`, поле файла `file` → обновляет `image_url`.
+`multipart/form-data`, поле файла `file`.
+
+Ограничения:
+
+- MIME: `image/jpeg`, `image/png`, `image/webp`
+- размер ≤ 5 МБ
+- проверка расширения и реального содержимого
+- обработка: EXIF-ориентация, срез метаданных, max сторона 1600px, WebP
+
+Ответ:
+
+```json
+{
+  "product_id": "uuid",
+  "image_url": "string"
+}
+```
+
+При замене: новый файл загружается → обновляется `image_url` → старый файл удаляется только после успешного обновления БД.
+
+### `DELETE /api/v1/staff/products/:id/image`
+
+Ставит `image_url = null`, удаляет файл из хранилища. Сам товар не удаляется.
+
+Доступ ко всем staff catalog endpoints: `director` или manager с `can_edit_catalog = true`. Иначе `403`.
 
 ---
 

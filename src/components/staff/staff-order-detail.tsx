@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ProductImage } from "@/components/catalog/product-image";
 
 type StaffOrder = {
   id: string;
@@ -35,6 +36,7 @@ type StaffOrder = {
     package_info: string | null;
     sale_unit: string;
     qty: number;
+    image_url?: string | null;
   }>;
   status_history: Array<{
     id: string;
@@ -558,13 +560,23 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
         <h2 className="text-lg font-semibold">Состав заказа</h2>
         <ul className="mt-3 space-y-3 md:hidden">
           {order.items.map((item) => (
-            <li key={item.id} className="border-b pb-3 text-sm last:border-0">
-              <p className="font-medium">{item.product_name}</p>
-              <p className="text-xs text-slate-500">{item.product_sku}</p>
-              <p className="text-xs text-slate-600">{item.package_info || "—"}</p>
-              <p>
-                {item.qty} {item.sale_unit}
-              </p>
+            <li
+              key={item.id}
+              className="flex gap-3 border-b pb-3 text-sm last:border-0"
+            >
+              <ProductImage
+                src={item.image_url}
+                alt={item.product_name}
+                className="h-14 w-14 shrink-0"
+              />
+              <div>
+                <p className="font-medium">{item.product_name}</p>
+                <p className="text-xs text-slate-500">{item.product_sku}</p>
+                <p className="text-xs text-slate-600">{item.package_info || "—"}</p>
+                <p>
+                  {item.qty} {item.sale_unit}
+                </p>
+              </div>
             </li>
           ))}
         </ul>
@@ -572,6 +584,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
           <table className="min-w-full text-left text-sm">
             <thead className="border-b bg-slate-50 text-xs uppercase text-slate-500">
               <tr>
+                <th className="px-3 py-2">Фото</th>
                 <th className="px-3 py-2">Товар</th>
                 <th className="px-3 py-2">Артикул</th>
                 <th className="px-3 py-2">Упаковка</th>
@@ -581,6 +594,13 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
             <tbody>
               {order.items.map((item) => (
                 <tr key={item.id} className="border-b last:border-0">
+                  <td className="px-3 py-2">
+                    <ProductImage
+                      src={item.image_url}
+                      alt={item.product_name}
+                      className="h-12 w-12"
+                    />
+                  </td>
                   <td className="px-3 py-2 font-medium">{item.product_name}</td>
                   <td className="px-3 py-2">{item.product_sku}</td>
                   <td className="px-3 py-2">{item.package_info || "—"}</td>

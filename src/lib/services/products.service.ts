@@ -1,20 +1,15 @@
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
-import {
-  can_edit_catalog,
-  can_place_orders,
-  is_staff,
-  type AuthUserPayload,
-} from "@/lib/access";
+import { can_place_orders, type AuthUserPayload } from "@/lib/access";
+import { assert_catalog_editor } from "@/lib/catalog/assert-editor";
 import type { ProductSort } from "@/lib/catalog/constants";
 import { AVAILABILITY_LABELS } from "@/lib/catalog/constants";
-
-function assert_catalog_editor(payload: AuthUserPayload) {
-  if (!is_staff(payload.user.roles) || !can_edit_catalog(payload)) {
-    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
-  }
-}
+import {
+  delete_product_image,
+  extract_product_image_storage_key,
+  upload_product_image as store_product_image,
+} from "@/lib/storage/product-images";
 
 function assert_approved_client(payload: AuthUserPayload) {
   if (!can_place_orders(payload)) {
@@ -105,6 +100,9 @@ export async function list_staff_products(
     category_id?: string;
     availability?: string;
     is_active?: boolean;
+    is_promo?: boolean;
+    is_new?: boolean;
+    is_hit?: boolean;
     page: number;
     page_size: number;
     sort: ProductSort;
@@ -116,6 +114,9 @@ export async function list_staff_products(
   if (params.category_id) where.category_id = params.category_id;
   if (params.availability) where.availability = params.availability;
   if (params.is_active !== undefined) where.is_active = params.is_active;
+  if (params.is_promo !== undefined) where.is_promo = params.is_promo;
+  if (params.is_new !== undefined) where.is_new = params.is_new;
+  if (params.is_hit !== undefined) where.is_hit = params.is_hit;
   if (params.q?.trim()) {
     const q = params.q.trim();
     where.OR = [
@@ -347,6 +348,116 @@ export async function update_product(
   });
 
   return { product: map_product(product), message: "Товар сохранён" };
+}
+
+export async function activate_product(
+  payload: AuthUserPayload,
+  product_id: string,
+) {
+  const result = await update_product(payload, product_id, { is_active: true });
+  return { product: result.product, message: "Товар активирован" };
+}
+
+export async function deactivate_product(
+  payload: AuthUserPayload,
+  product_id: string,
+) {
+  const result = await update_product(payload, product_id, { is_active: false });
+  return { product: result.product, message: "Товар деактивирован" };
+}
+
+export async function upload_product_image(
+  payload: AuthUserPayload,
+  product_id: string,
+  file: {
+    buffer: Buffer;
+    mime_type?: string | null;
+    filename?: string | null;
+  },
+) {
+  assert_catalog_editor(payload);
+
+  const current = await prisma.products.findUnique({
+    where: { id: product_id },
+  });
+  if (!current) {
+    throw new AppError(404, "not_found", "Товар не найден");
+  }
+
+  const previous_url = current.image_url;
+  const previous_key = extract_product_image_storage_key(previous_url);
+
+  const stored = await store_product_image({
+    product_id,
+    buffer: file.buffer,
+    mime_type: file.mime_type,
+    filename: file.filename,
+  });
+
+  try {
+    await prisma.products.update({
+      where: { id: product_id },
+      data: { image_url: stored.image_url },
+    });
+  } catch (error) {
+    await delete_product_image(stored.storage_key).catch(() => undefined);
+    throw error;
+  }
+
+  if (previous_key && previous_key !== stored.storage_key) {
+    await delete_product_image(previous_key).catch((error) => {
+      console.error("old product image cleanup failed", {
+        product_id,
+        storage_key: previous_key,
+      });
+      void error;
+    });
+  }
+
+  return {
+    product_id,
+    image_url: stored.image_url,
+  };
+}
+
+export async function remove_product_image(
+  payload: AuthUserPayload,
+  product_id: string,
+) {
+  assert_catalog_editor(payload);
+
+  const current = await prisma.products.findUnique({
+    where: { id: product_id },
+  });
+  if (!current) {
+    throw new AppError(404, "not_found", "Товар не найден");
+  }
+
+  const previous_url = current.image_url;
+  const previous_key = extract_product_image_storage_key(previous_url);
+
+  await prisma.products.update({
+    where: { id: product_id },
+    data: { image_url: null },
+  });
+
+  if (previous_key) {
+    await delete_product_image(previous_key).catch((error) => {
+      console.error("product image delete after nulling failed", {
+        product_id,
+        storage_key: previous_key,
+      });
+      void error;
+    });
+  } else if (previous_url) {
+    // External/manual URL: only clear DB field.
+  }
+
+  return {
+    product_id,
+    image_url: null as string | null,
+    message: "Изображение удалено",
+  };
 }
 
 export async function list_catalog_products(

@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# local product image uploads (keep directory)
+/public/uploads/products/**
+!/public/uploads/products/.gitkeep
+
 # debug
 npm-debug.log*
 yarn-debug.log*

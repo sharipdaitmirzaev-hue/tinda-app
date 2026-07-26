@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+export const PRODUCT_IMAGE_PLACEHOLDER = "/images/product-placeholder.svg";
 
 export function ProductImage({
   src,
@@ -14,13 +16,18 @@ export function ProductImage({
   const [failed, set_failed] = useState(false);
   const show_placeholder = !src || failed;
 
+  useEffect(() => {
+    set_failed(false);
+  }, [src]);
+
   if (show_placeholder) {
     return (
-      <div
-        className={`${className} flex items-center justify-center rounded-md bg-slate-100 text-[10px] text-slate-500`}
-      >
-        Нет фото
-      </div>
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={PRODUCT_IMAGE_PLACEHOLDER}
+        alt={alt || "Нет фото"}
+        className={`${className} rounded-md object-cover bg-slate-100`}
+      />
     );
   }
 
@@ -29,7 +36,7 @@ export function ProductImage({
     <img
       src={src}
       alt={alt}
-      className={`${className} rounded-md object-cover`}
+      className={`${className} rounded-md object-cover bg-slate-100`}
       onError={() => set_failed(true)}
     />
   );

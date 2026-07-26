@@ -61,23 +61,39 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 
 ## Текущий прогресс
 
-Выполнены шаги **Э1.0–Э1.11**.  
-Дальше — только после подтверждения (Э1.12: staff CRUD каталога + фото).
+Выполнены шаги **Э1.0–Э1.12**.  
+Дальше — только после подтверждения (Э1.13).
 
-### Auth API
+### Auth / API (кратко)
 
-- `POST /api/v1/auth/register`
-- `POST /api/v1/auth/login`
-- `POST /api/v1/auth/logout`
-- `GET /api/v1/auth/me`
-- `GET /api/v1/cities` (для формы регистрации)
-- `GET /api/v1/client/registration-status`
-- `GET/POST /api/v1/staff/registration-requests` (+ approve/reject)
-- Staff catalog: `/api/v1/staff/categories`, `/api/v1/staff/products`
-- Client catalog: `/api/v1/catalog/categories`, `/api/v1/catalog/products`
-- Client cart: `GET/DELETE /api/v1/cart`, `POST /api/v1/cart/items`, `PATCH/DELETE /api/v1/cart/items/:productId`
-- Client orders: `POST /api/v1/orders` (Idempotency-Key); `GET/PATCH /api/v1/client/orders`, `POST .../cancel`; UI `/orders`, `/orders/[id]`, `/orders/[id]/edit`
-- Staff orders: `GET/PATCH /api/v1/staff/orders`, confirm/cancel/deliver/manager; UI `/staff/orders`
+- Auth: register / login / logout / me
+- Staff catalog: `/api/v1/staff/categories`, `/api/v1/staff/products`, `POST|DELETE .../products/:id/image`
+- Client catalog / cart / orders; staff orders
+
+### Фотографии товаров (Э1.12)
+
+Локально (`STORAGE_DRIVER=local`):
+
+- файлы пишутся в `public/uploads/products/{product_id}/{uuid}.webp`
+- URL вида `/uploads/products/...`
+- каталог `public/uploads/products/**` в gitignore (секреты и загруженные файлы не коммитятся)
+
+Production (`STORAGE_DRIVER=s3`):
+
+```env
+STORAGE_DRIVER=s3
+STORAGE_ENDPOINT=https://s3.example.com
+STORAGE_REGION=ru-1
+STORAGE_BUCKET=tinda-product-images
+STORAGE_ACCESS_KEY=...
+STORAGE_SECRET_KEY=...
+STORAGE_PUBLIC_URL=https://cdn.example.com/tinda-product-images
+```
+
+Права ключа: `s3:PutObject`, `s3:DeleteObject` (и чтение через публичный URL/CDN).  
+Реальные ключи храните только в `.env` / секретах хостинга — не в репозитории.
+
+Доступ к staff-каталогу и API фото: `director` или manager с `can_edit_catalog=true`.
 
 ### Тесты
 

@@ -388,6 +388,7 @@ type OrderDetailRow = {
     package_info: string | null;
     sale_unit: string;
     qty: number;
+    product?: { image_url: string | null } | null;
   }>;
   status_history: Array<{
     id: string;
@@ -450,6 +451,7 @@ export function serialize_client_order_details(order: OrderDetailRow) {
         package_info: item.package_info,
         sale_unit: item.sale_unit,
         qty: item.qty,
+        image_url: item.product?.image_url ?? null,
       })),
       status_history: order.status_history.map((row) => ({
         id: row.id,
@@ -529,7 +531,12 @@ export async function get_client_order(
   const order = await prisma.orders.findFirst({
     where: { id: order_id, client_id },
     include: {
-      items: { orderBy: { id: "asc" } },
+      items: {
+        orderBy: { id: "asc" },
+        include: {
+          product: { select: { image_url: true } },
+        },
+      },
       status_history: { orderBy: { created_at: "asc" } },
     },
   });
@@ -665,7 +672,10 @@ export async function update_client_order(
     return tx.orders.findFirstOrThrow({
       where: { id: order_id, client_id },
       include: {
-        items: { orderBy: { id: "asc" } },
+        items: {
+          orderBy: { id: "asc" },
+          include: { product: { select: { image_url: true } } },
+        },
         status_history: { orderBy: { created_at: "asc" } },
       },
     });
@@ -707,7 +717,10 @@ export async function cancel_client_order(
     return tx.orders.findFirstOrThrow({
       where: { id: order_id, client_id },
       include: {
-        items: { orderBy: { id: "asc" } },
+        items: {
+          orderBy: { id: "asc" },
+          include: { product: { select: { image_url: true } } },
+        },
         status_history: { orderBy: { created_at: "asc" } },
       },
     });

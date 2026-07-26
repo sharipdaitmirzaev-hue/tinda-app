@@ -1,10 +1,7 @@
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
-import {
-  can_edit_catalog,
-  is_staff,
-  type AuthUserPayload,
-} from "@/lib/access";
+import type { AuthUserPayload } from "@/lib/access";
+import { assert_catalog_editor } from "@/lib/catalog/assert-editor";
 
 export type CategoryNode = {
   id: string;
@@ -13,14 +10,10 @@ export type CategoryNode = {
   parent_id: string | null;
   sort_order: number;
   is_active: boolean;
+  products_count: number;
+  active_products_count: number;
   children: CategoryNode[];
 };
-
-function assert_catalog_editor(payload: AuthUserPayload) {
-  if (!is_staff(payload.user.roles) || !can_edit_catalog(payload)) {
-    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
-  }
-}
 
 function build_tree(
   rows: Array<{
@@ -30,6 +23,8 @@ function build_tree(
     parent_id: string | null;
     sort_order: number;
     is_active: boolean;
+    products_count?: number;
+    active_products_count?: number;
   }>,
 ): CategoryNode[] {
   const by_parent = new Map<string | null, CategoryNode[]>();
@@ -42,6 +37,8 @@ function build_tree(
       parent_id: row.parent_id,
       sort_order: row.sort_order,
       is_active: row.is_active,
+      products_count: row.products_count ?? 0,
+      active_products_count: row.active_products_count ?? 0,
       children: [],
     };
     const key = row.parent_id;
@@ -64,10 +61,40 @@ function build_tree(
 
 export async function list_staff_categories(payload: AuthUserPayload) {
   assert_catalog_editor(payload);
-  const rows = await prisma.categories.findMany({
-    orderBy: [{ sort_order: "asc" }, { name: "asc" }],
-  });
-  return { items: build_tree(rows), flat: rows };
+  const [rows, active_counts] = await Promise.all([
+    prisma.categories.findMany({
+      orderBy: [{ sort_order: "asc" }, { name: "asc" }],
+      include: {
+        _count: {
+          select: {
+            products: true,
+          },
+        },
+      },
+    }),
+    prisma.products.groupBy({
+      by: ["category_id"],
+      where: { is_active: true },
+      _count: { _all: true },
+    }),
+  ]);
+
+  const active_by_category = new Map(
+    active_counts.map((row) => [row.category_id, row._count._all]),
+  );
+
+  const mapped = rows.map((row) => ({
+    id: row.id,
+    name: row.name,
+    slug: row.slug,
+    parent_id: row.parent_id,
+    sort_order: row.sort_order,
+    is_active: row.is_active,
+    products_count: row._count.products,
+    active_products_count: active_by_category.get(row.id) ?? 0,
+  }));
+
+  return { items: build_tree(mapped), flat: mapped };
 }
 
 export async function list_catalog_categories_tree() {
@@ -124,10 +151,11 @@ async function assert_parent_valid(
     }
     if (guard.has(current_id)) break;
     guard.add(current_id);
-    const current = await prisma.categories.findUnique({
-      where: { id: current_id },
-      select: { parent_id: true },
-    });
+    const current: { parent_id: string | null } | null =
+      await prisma.categories.findUnique({
+        where: { id: current_id },
+        select: { parent_id: true },
+      });
     current_id = current?.parent_id ?? null;
   }
 }

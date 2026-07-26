@@ -48,7 +48,12 @@ function is_director(payload: AuthUserPayload) {
 }
 
 const staff_order_include = {
-  items: { orderBy: { id: "asc" as const } },
+  items: {
+    orderBy: { id: "asc" as const },
+    include: {
+      product: { select: { image_url: true } },
+    },
+  },
   status_history: { orderBy: { created_at: "asc" as const } },
   client: {
     select: {
@@ -169,6 +174,7 @@ export function serialize_staff_order_details(order: StaffOrderFull) {
         package_info: item.package_info,
         sale_unit: item.sale_unit,
         qty: item.qty,
+        image_url: item.product?.image_url ?? null,
       })),
       status_history: order.status_history.map((row) => ({
         id: row.id,

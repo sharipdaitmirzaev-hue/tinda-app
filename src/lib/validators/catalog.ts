@@ -50,28 +50,41 @@ export const product_create_schema = z.object({
   is_new: z.boolean().default(false),
   is_hit: z.boolean().default(false),
   image_url: z
-    .string()
-    .trim()
-    .url("Укажите корректный URL изображения")
-    .nullable()
+    .union([
+      z.literal(""),
+      z.null(),
+      z
+        .string()
+        .trim()
+        .refine(
+          (value) =>
+            value.startsWith("/uploads/") ||
+            /^https?:\/\//i.test(value),
+          "Укажите корректный URL изображения",
+        ),
+    ])
     .optional()
-    .or(z.literal(""))
-    .transform((value) => (value === "" ? null : value)),
+    .transform((value) => (value === "" || value === undefined ? null : value)),
   is_active: z.boolean().default(true),
 });
 
 export const product_update_schema = product_create_schema.partial();
 
+const optional_bool_query = z
+  .enum(["true", "false"])
+  .optional()
+  .transform((value) =>
+    value === undefined ? undefined : value === "true",
+  );
+
 export const staff_products_query_schema = z.object({
   q: z.string().trim().max(200).optional(),
   category_id: z.string().uuid().optional(),
   availability: z.enum(AVAILABILITY_VALUES).optional(),
-  is_active: z
-    .enum(["true", "false"])
-    .optional()
-    .transform((value) =>
-      value === undefined ? undefined : value === "true",
-    ),
+  is_active: optional_bool_query,
+  is_promo: optional_bool_query,
+  is_new: optional_bool_query,
+  is_hit: optional_bool_query,
   page: z.coerce.number().int().min(1).default(1),
   page_size: z.coerce.number().int().min(1).max(100).default(20),
   sort: z.enum(PRODUCT_SORT_OPTIONS).default("created_at_desc"),
