@@ -11,7 +11,7 @@ API JSON использует те же имена.
 
 ## 1. Перечень таблиц
 
-`roles`, `users`, `user_roles`, `employee_profiles`, `cities`, `clients`, `categories`, `products`, `carts`, `cart_items`, `orders`, `order_items`, `order_status_history`, `settings`, `sessions` (для httpOnly session store).
+`roles`, `users`, `user_roles`, `employee_profiles`, `cities`, `clients`, `categories`, `products`, `carts`, `cart_items`, `orders`, `order_items`, `order_status_history`, `order_number_counters`, `order_idempotency_keys`, `settings`, `sessions` (для httpOnly session store).
 
 ---
 
@@ -214,6 +214,29 @@ CHECK: `payment_method IN ('bank_transfer','deferred','cash_on_delivery','transf
 | changed_by_user_id | UUID | NOT NULL, FK → users.id |
 | comment | TEXT | NULL |
 | created_at | TIMESTAMPTZ | NOT NULL |
+
+### `order_number_counters`
+
+Счётчик суточных номеров заказов (`T-YYYYMMDD-NNNNNN`).
+
+| Поле | Тип | Ограничения |
+|------|-----|-------------|
+| date_key | VARCHAR(8) | PK, формат `YYYYMMDD` |
+| last_seq | INT | NOT NULL |
+
+### `order_idempotency_keys`
+
+Защита от двойной отправки заказа.
+
+| Поле | Тип | Ограничения |
+|------|-----|-------------|
+| id | UUID | PK |
+| user_id | UUID | NOT NULL, FK → users.id ON DELETE CASCADE |
+| key | VARCHAR(64) | NOT NULL |
+| order_id | UUID | NOT NULL, FK → orders.id ON DELETE CASCADE |
+| created_at | TIMESTAMPTZ | NOT NULL |
+
+UNIQUE: `(user_id, key)`.
 
 ### `settings`
 

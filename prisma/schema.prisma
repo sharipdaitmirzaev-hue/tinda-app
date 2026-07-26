@@ -34,6 +34,7 @@ model users {
   orders_created              orders[]                     @relation("order_created_by")
   orders_managed              orders[]                     @relation("order_manager")
   order_status_changes        order_status_history[]
+  order_idempotency_keys      order_idempotency_keys[]
 }
 
 model user_roles {
@@ -166,37 +167,56 @@ model cart_items {
 }
 
 model orders {
-  id                     String                 @id @default(uuid()) @db.Uuid
-  number                 String                 @unique @db.VarChar(32)
-  client_id              String                 @db.Uuid
-  manager_id             String?                @db.Uuid
-  created_by_user_id     String                 @db.Uuid
-  status                 String                 @db.VarChar(30)
-  city_id                String                 @db.Uuid
+  id                     String                   @id @default(uuid()) @db.Uuid
+  number                 String                   @unique @db.VarChar(32)
+  client_id              String                   @db.Uuid
+  manager_id             String?                  @db.Uuid
+  created_by_user_id     String                   @db.Uuid
+  status                 String                   @db.VarChar(30)
+  city_id                String                   @db.Uuid
   address_snapshot       String
-  contact_name           String                 @db.VarChar(255)
-  contact_phone          String                 @db.VarChar(32)
-  desired_delivery_date  DateTime               @db.Date
-  payment_method         String                 @db.VarChar(30)
-  is_urgent              Boolean                @default(false)
+  contact_name           String                   @db.VarChar(255)
+  contact_phone          String                   @db.VarChar(32)
+  desired_delivery_date  DateTime                 @db.Date
+  payment_method         String                   @db.VarChar(30)
+  is_urgent              Boolean                  @default(false)
   client_comment         String?
   manager_comment        String?
   cancel_reason          String?
-  confirmed_at           DateTime?              @db.Timestamptz(6)
-  delivered_at           DateTime?              @db.Timestamptz(6)
-  cancelled_at           DateTime?              @db.Timestamptz(6)
-  created_at             DateTime               @default(now()) @db.Timestamptz(6)
-  updated_at             DateTime               @updatedAt @db.Timestamptz(6)
-  client                 clients                @relation(fields: [client_id], references: [id])
-  manager                users?                 @relation("order_manager", fields: [manager_id], references: [id], onDelete: SetNull)
-  created_by             users                  @relation("order_created_by", fields: [created_by_user_id], references: [id])
-  city                   cities                 @relation(fields: [city_id], references: [id])
+  confirmed_at           DateTime?                @db.Timestamptz(6)
+  delivered_at           DateTime?                @db.Timestamptz(6)
+  cancelled_at           DateTime?                @db.Timestamptz(6)
+  created_at             DateTime                 @default(now()) @db.Timestamptz(6)
+  updated_at             DateTime                 @updatedAt @db.Timestamptz(6)
+  client                 clients                  @relation(fields: [client_id], references: [id])
+  manager                users?                   @relation("order_manager", fields: [manager_id], references: [id], onDelete: SetNull)
+  created_by             users                    @relation("order_created_by", fields: [created_by_user_id], references: [id])
+  city                   cities                   @relation(fields: [city_id], references: [id])
   items                  order_items[]
   status_history         order_status_history[]
+  idempotency_keys       order_idempotency_keys[]
 
   @@index([client_id, created_at])
   @@index([manager_id, status])
   @@index([status, created_at])
+}
+
+model order_number_counters {
+  date_key String @id @db.VarChar(8)
+  last_seq Int
+}
+
+model order_idempotency_keys {
+  id         String   @id @default(uuid()) @db.Uuid
+  user_id    String   @db.Uuid
+  key        String   @db.VarChar(64)
+  order_id   String   @db.Uuid
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  user       users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  order      orders   @relation(fields: [order_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, key])
+  @@index([order_id])
 }
 
 model order_items {

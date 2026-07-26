@@ -410,3 +410,13 @@ export function reset_server_cart_store_for_tests() {
 export function get_empty_cart(): SerializedCart {
   return empty_cart;
 }
+
+/** After successful checkout — sync client mirror without waiting for GET. */
+export function mark_server_cart_empty() {
+  set_state({
+    cart: { ...empty_cart },
+    loading: false,
+    error: null,
+    mutating: false,
+  });
+}

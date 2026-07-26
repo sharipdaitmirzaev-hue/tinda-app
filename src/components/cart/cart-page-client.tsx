@@ -231,11 +231,12 @@ function CartItemRow({
   );
 }
 
-export function CartPageClient() {
+export function CartPageClient({ notice = null }: { notice?: string | null }) {
   const { cart, loading, error, mutating } = useServerCart();
   const [toast, set_toast] = useState<string | null>(null);
   const [confirm_clear, set_confirm_clear] = useState(false);
   const [action_error, set_action_error] = useState<string | null>(null);
+  const [banner, set_banner] = useState<string | null>(notice ?? null);
 
   useEffect(() => {
     if (!toast) return;
@@ -314,6 +315,11 @@ export function CartPageClient() {
   if (empty) {
     return (
       <>
+        {banner ? (
+          <div className="mb-4 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
+            {banner}
+          </div>
+        ) : null}
         <div className="rounded-xl border border-slate-200 bg-white p-8 text-center shadow-sm">
           <h1 className="text-2xl font-semibold text-slate-900">Корзина пуста</h1>
           <p className="mt-2 text-slate-600">Добавьте товары из каталога</p>
@@ -336,6 +342,19 @@ export function CartPageClient() {
     <>
       <div className="space-y-4">
         <h1 className="text-2xl font-semibold text-slate-900">Корзина</h1>
+
+        {banner ? (
+          <div className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
+            <p>{banner}</p>
+            <button
+              type="button"
+              className="mt-1 underline"
+              onClick={() => set_banner(null)}
+            >
+              Закрыть
+            </button>
+          </div>
+        ) : null}
 
         {action_error || error ? (
           <div className="rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">

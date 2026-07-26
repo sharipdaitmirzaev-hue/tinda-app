@@ -297,35 +297,40 @@ Query: `category_id`, `q`, `availability`, `is_promo`, `is_new`, `is_hit`, `page
 
 ### `POST /api/v1/orders`
 
-**Кто:** `client` + `status = approved`
+**Кто:** `client` + `status = approved`  
+Заголовок: `Idempotency-Key: <uuid>` (обязателен).
 
 **Вход:**
 
 ```json
 {
-  "desired_delivery_date": "2026-08-01",
+  "address": "string",
+  "desired_delivery_date": "YYYY-MM-DD",
   "contact_name": "string",
   "contact_phone": "string",
-  "payment_method": "bank_transfer",
+  "payment_method": "bank_transfer|deferred|cash_on_delivery|transfer",
   "is_urgent": false,
-  "client_comment": "string|null",
-  "address": "string|null"
+  "client_comment": "string|null"
 }
 ```
 
-Если `address` = `null`, берётся `clients.address`.
+Адрес сохраняется только в `orders.address_snapshot` (профиль клиента не меняется).  
+Создание идёт из серверной корзины в одной транзакции; при успехе `cart_items` очищаются.
 
-**Выход:**
+**Выход:** `201`
 
 ```json
 {
   "order": {
     "id": "uuid",
-    "number": "T-2026-0001",
-    "status": "new"
+    "number": "T-20260726-000001",
+    "status": "new",
+    "created_at": "ISO datetime"
   }
 }
 ```
+
+Повтор с тем же `Idempotency-Key` возвращает уже созданный заказ без дубля.
 
 ### `GET /api/v1/client/orders`
 

@@ -61,8 +61,8 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 
 ## Текущий прогресс
 
-Выполнены шаги **Э1.0–Э1.8**.  
-Дальше — только после подтверждения (Э1.9: оформление заказа).
+Выполнены шаги **Э1.0–Э1.9**.  
+Дальше — только после подтверждения (Э1.10: история заказов клиента).
 
 ### Auth API
 
@@ -76,6 +76,7 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 - Staff catalog: `/api/v1/staff/categories`, `/api/v1/staff/products`
 - Client catalog: `/api/v1/catalog/categories`, `/api/v1/catalog/products`
 - Client cart: `GET/DELETE /api/v1/cart`, `POST /api/v1/cart/items`, `PATCH/DELETE /api/v1/cart/items/:productId`
+- Client orders: `POST /api/v1/orders` (Idempotency-Key), success UI `/checkout/success/[orderId]`
 
 ### Тесты
 
