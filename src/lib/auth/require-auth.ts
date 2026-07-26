@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { get_current_auth_payload } from "@/lib/auth/current-user";
 import {
   get_post_auth_path,
+  resolve_catalog_editor_access,
   resolve_client_shop_access,
   resolve_pending_page_access,
   resolve_staff_access,
@@ -51,4 +52,10 @@ export async function require_client_area(): Promise<AuthUserPayload> {
 export async function require_pending_client(): Promise<AuthUserPayload> {
   const payload = await get_current_auth_payload();
   return apply_decision(resolve_pending_page_access(payload), payload);
+}
+
+/** Staff catalog editors: director or manager with can_edit_catalog. */
+export async function require_catalog_editor(): Promise<AuthUserPayload> {
+  const payload = await get_current_auth_payload();
+  return apply_decision(resolve_catalog_editor_access(payload), payload);
 }

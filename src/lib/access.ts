@@ -36,6 +36,16 @@ export function is_staff(roles: string[]): boolean {
   return has_role(roles, "manager") || has_role(roles, "director");
 }
 
+export function can_edit_catalog(payload: AuthUserPayload): boolean {
+  if (has_role(payload.user.roles, "director")) {
+    return true;
+  }
+  return (
+    has_role(payload.user.roles, "manager") &&
+    Boolean(payload.employee?.can_edit_catalog)
+  );
+}
+
 export function is_client_status(status: string): status is ClientStatus {
   return (
     status === "pending" ||
@@ -119,6 +129,20 @@ export function resolve_staff_access(
   }
   if (!is_staff(payload.user.roles)) {
     return { allow: false, redirect_to: get_post_auth_path(payload) };
+  }
+  return { allow: true };
+}
+
+/** /staff/categories, /staff/products */
+export function resolve_catalog_editor_access(
+  payload: AuthUserPayload | null,
+): AccessDecision {
+  const staff = resolve_staff_access(payload);
+  if (!staff.allow) {
+    return staff;
+  }
+  if (!payload || !can_edit_catalog(payload)) {
+    return { allow: false, redirect_to: "/staff/orders" };
   }
   return { allow: true };
 }

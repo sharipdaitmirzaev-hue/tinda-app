@@ -61,8 +61,8 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 
 ## Текущий прогресс
 
-Выполнены шаги **Э1.0–Э1.4**.  
-Дальше — только после подтверждения (Э1.5: данные каталога / CRUD).
+Выполнены шаги **Э1.0–Э1.5**.  
+Дальше — только после подтверждения (Э1.6: клиентский каталог UI).
 
 ### Auth API
 
@@ -73,6 +73,8 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 - `GET /api/v1/cities` (для формы регистрации)
 - `GET /api/v1/client/registration-status`
 - `GET/POST /api/v1/staff/registration-requests` (+ approve/reject)
+- Staff catalog: `/api/v1/staff/categories`, `/api/v1/staff/products`
+- Client catalog: `/api/v1/catalog/categories`, `/api/v1/catalog/products`
 
 ### Тесты
 

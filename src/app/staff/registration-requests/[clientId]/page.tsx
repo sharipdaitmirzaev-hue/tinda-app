@@ -4,6 +4,7 @@ import { RegistrationRequestDetail } from "@/components/staff/registration-reque
 import { require_staff } from "@/lib/auth/require-auth";
 import { AppError } from "@/lib/http/errors";
 import { get_registration_request } from "@/lib/services/registration-requests.service";
+import { staff_nav_props } from "@/lib/staff/nav-props";
 
 type PageProps = {
   params: Promise<{ clientId: string }>;
@@ -28,7 +29,7 @@ export default async function RegistrationRequestDetailPage({
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-8">
       <div className="mx-auto max-w-4xl">
-        <StaffNav full_name={auth.user.full_name} roles={auth.user.roles} />
+        <StaffNav {...staff_nav_props(auth)} />
         <RegistrationRequestDetail
           initial_request={data.request}
           managers={data.managers}

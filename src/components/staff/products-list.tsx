@@ -1,0 +1,314 @@
+"use client";
+
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
+import { ProductImage } from "@/components/catalog/product-image";
+
+type CategoryFlat = { id: string; name: string };
+type ProductItem = {
+  id: string;
+  sku: string;
+  name: string;
+  brand: string | null;
+  category_name: string | null;
+  volume_text: string | null;
+  package_type: string | null;
+  units_per_package: number;
+  sale_unit: string;
+  min_order_qty: number;
+  allow_piece_sale: boolean;
+  availability_label: string;
+  is_promo: boolean;
+  is_new: boolean;
+  is_hit: boolean;
+  is_active: boolean;
+  image_url: string | null;
+};
+
+export function ProductsList() {
+  const router = useRouter();
+  const search_params = useSearchParams();
+  const [items, set_items] = useState<ProductItem[]>([]);
+  const [categories, set_categories] = useState<CategoryFlat[]>([]);
+  const [total, set_total] = useState(0);
+  const [loading, set_loading] = useState(true);
+  const [error, set_error] = useState<string | null>(null);
+
+  const q = search_params.get("q") || "";
+  const category_id = search_params.get("category_id") || "";
+  const availability = search_params.get("availability") || "";
+  const is_active = search_params.get("is_active") || "";
+  const sort = search_params.get("sort") || "created_at_desc";
+  const page = Number(search_params.get("page") || "1");
+  const page_size = 20;
+  const flash = search_params.get("flash");
+
+  useEffect(() => {
+    fetch("/api/v1/staff/categories")
+      .then((res) => res.json())
+      .then((data) => set_categories(data.flat ?? []))
+      .catch(() => set_categories([]));
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      set_loading(true);
+      set_error(null);
+      try {
+        const params = new URLSearchParams({
+          page: String(page),
+          page_size: String(page_size),
+          sort,
+        });
+        if (q) params.set("q", q);
+        if (category_id) params.set("category_id", category_id);
+        if (availability) params.set("availability", availability);
+        if (is_active) params.set("is_active", is_active);
+
+        const response = await fetch(
+          `/api/v1/staff/products?${params.toString()}`,
+        );
+        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data?.error?.message ?? "Не удалось загрузить товары");
+        }
+        if (!cancelled) {
+          set_items(data.items ?? []);
+          set_total(data.total ?? 0);
+        }
+      } catch (err) {
+        if (!cancelled) {
+          set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+        }
+      } finally {
+        if (!cancelled) set_loading(false);
+      }
+    }
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, [q, category_id, availability, is_active, sort, page]);
+
+  function update_query(next: Record<string, string>) {
+    const params = new URLSearchParams(search_params.toString());
+    for (const [key, value] of Object.entries(next)) {
+      if (!value) params.delete(key);
+      else params.set(key, value);
+    }
+    if (!next.page) params.delete("page");
+    router.push(`/staff/products?${params.toString()}`);
+  }
+
+  function on_filter(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    update_query({
+      q: String(form.get("q") || ""),
+      category_id: String(form.get("category_id") || ""),
+      availability: String(form.get("availability") || ""),
+      is_active: String(form.get("is_active") || ""),
+      sort: String(form.get("sort") || "created_at_desc"),
+      page: "1",
+    });
+  }
+
+  const total_pages = Math.max(1, Math.ceil(total / page_size));
+
+  return (
+    <div className="space-y-4">
+      {flash === "saved" ? (
+        <p className="rounded-md bg-teal-50 px-3 py-2 text-sm text-teal-900">
+          Товар сохранён
+        </p>
+      ) : null}
+
+      <div className="flex justify-end">
+        <Link
+          href="/staff/products/new"
+          className="rounded-md bg-teal-700 px-4 py-2 text-sm text-white hover:bg-teal-800"
+        >
+          Новый товар
+        </Link>
+      </div>
+
+      <form
+        onSubmit={on_filter}
+        className="grid gap-3 rounded-lg border border-slate-200 bg-white p-4 md:grid-cols-3"
+      >
+        <label className="text-sm md:col-span-3">
+          <span className="mb-1 block font-medium">Поиск</span>
+          <input
+            name="q"
+            defaultValue={q}
+            placeholder="Название, артикул, бренд"
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          />
+        </label>
+        <label className="text-sm">
+          <span className="mb-1 block font-medium">Категория</span>
+          <select
+            name="category_id"
+            defaultValue={category_id}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          >
+            <option value="">Все</option>
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="text-sm">
+          <span className="mb-1 block font-medium">Наличие</span>
+          <select
+            name="availability"
+            defaultValue={availability}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          >
+            <option value="">Любое</option>
+            <option value="in_stock">В наличии</option>
+            <option value="on_order">Под заказ</option>
+            <option value="out_of_stock">Временно нет</option>
+          </select>
+        </label>
+        <label className="text-sm">
+          <span className="mb-1 block font-medium">Активность</span>
+          <select
+            name="is_active"
+            defaultValue={is_active}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          >
+            <option value="">Все</option>
+            <option value="true">Активные</option>
+            <option value="false">Неактивные</option>
+          </select>
+        </label>
+        <label className="text-sm md:col-span-2">
+          <span className="mb-1 block font-medium">Сортировка</span>
+          <select
+            name="sort"
+            defaultValue={sort}
+            className="w-full rounded-md border border-slate-300 px-3 py-2"
+          >
+            <option value="created_at_desc">Сначала новые</option>
+            <option value="created_at_asc">Сначала старые</option>
+            <option value="name_asc">Название А–Я</option>
+            <option value="name_desc">Название Я–А</option>
+          </select>
+        </label>
+        <div className="md:col-span-3">
+          <button
+            type="submit"
+            className="rounded-md bg-teal-700 px-4 py-2 text-sm text-white"
+          >
+            Применить
+          </button>
+        </div>
+      </form>
+
+      {loading ? <p className="text-sm text-slate-600">Загрузка…</p> : null}
+      {error ? (
+        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
+          {error}
+        </p>
+      ) : null}
+      {!loading && !error && items.length === 0 ? (
+        <p className="rounded-md border border-dashed px-4 py-8 text-center text-sm text-slate-600">
+          {q || category_id || availability || is_active
+            ? "Нет результатов поиска"
+            : "Товаров пока нет"}
+        </p>
+      ) : null}
+
+      {!loading && items.length > 0 ? (
+        <>
+          <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+            <table className="min-w-full text-left text-sm">
+              <thead className="bg-slate-50 text-slate-600">
+                <tr>
+                  <th className="px-3 py-2">Фото</th>
+                  <th className="px-3 py-2">SKU / Название</th>
+                  <th className="px-3 py-2">Категория</th>
+                  <th className="px-3 py-2">Упаковка</th>
+                  <th className="px-3 py-2">Наличие</th>
+                  <th className="px-3 py-2">Метки</th>
+                  <th className="px-3 py-2">Активен</th>
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((item) => (
+                  <tr key={item.id} className="border-t border-slate-100">
+                    <td className="px-3 py-2">
+                      <ProductImage src={item.image_url} alt={item.name} />
+                    </td>
+                    <td className="px-3 py-2">
+                      <Link
+                        href={`/staff/products/${item.id}`}
+                        className="font-medium text-teal-800 underline-offset-2 hover:underline"
+                      >
+                        {item.name}
+                      </Link>
+                      <div className="text-xs text-slate-500">
+                        {item.sku}
+                        {item.brand ? ` · ${item.brand}` : ""}
+                      </div>
+                    </td>
+                    <td className="px-3 py-2">{item.category_name ?? "—"}</td>
+                    <td className="px-3 py-2">
+                      {item.volume_text ?? "—"} / {item.package_type ?? "—"}
+                      <div className="text-xs text-slate-500">
+                        {item.units_per_package} в уп., мин. {item.min_order_qty},{" "}
+                        {item.sale_unit}
+                        {item.allow_piece_sale ? ", поштучно" : ""}
+                      </div>
+                    </td>
+                    <td className="px-3 py-2">{item.availability_label}</td>
+                    <td className="px-3 py-2 text-xs">
+                      {[
+                        item.is_promo ? "Акция" : null,
+                        item.is_new ? "Новинка" : null,
+                        item.is_hit ? "Хит" : null,
+                      ]
+                        .filter(Boolean)
+                        .join(", ") || "—"}
+                    </td>
+                    <td className="px-3 py-2">
+                      {item.is_active ? "Да" : "Нет"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="flex items-center justify-between text-sm text-slate-600">
+            <span>
+              Всего: {total}. Страница {page} из {total_pages}
+            </span>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                disabled={page <= 1}
+                onClick={() => update_query({ page: String(page - 1) })}
+                className="rounded-md border px-3 py-1 disabled:opacity-40"
+              >
+                Назад
+              </button>
+              <button
+                type="button"
+                disabled={page >= total_pages}
+                onClick={() => update_query({ page: String(page + 1) })}
+                className="rounded-md border px-3 py-1 disabled:opacity-40"
+              >
+                Далее
+              </button>
+            </div>
+          </div>
+        </>
+      ) : null}
+    </div>
+  );
+}

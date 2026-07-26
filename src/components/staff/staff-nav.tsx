@@ -1,18 +1,28 @@
 import Link from "next/link";
 import { LogoutButton } from "@/components/auth/logout-button";
 
-const links = [
-  { href: "/staff/registration-requests", label: "Заявки" },
-  { href: "/staff/orders", label: "Заказы" },
-];
+type Props = {
+  full_name: string;
+  roles: string[];
+  can_edit_catalog?: boolean;
+};
 
 export function StaffNav({
   full_name,
   roles,
-}: {
-  full_name: string;
-  roles: string[];
-}) {
+  can_edit_catalog = false,
+}: Props) {
+  const links = [
+    { href: "/staff/registration-requests", label: "Заявки" },
+    { href: "/staff/orders", label: "Заказы" },
+    ...(can_edit_catalog
+      ? [
+          { href: "/staff/categories", label: "Категории" },
+          { href: "/staff/products", label: "Товары" },
+        ]
+      : []),
+  ];
+
   return (
     <header className="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4">
       <div>
