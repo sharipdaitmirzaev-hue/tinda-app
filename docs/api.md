@@ -225,7 +225,11 @@ Query: `category_id`, `q`, `availability`, `is_promo`, `is_new`, `is_hit`, `page
 
 ### `GET /api/v1/catalog/products/:id`
 
-Карточка товара + `category_name`, `step`, `suggested_qty` (для текущего/мин. количества).
+Только поля каталога (без цен):
+
+`id`, `sku`, `name`, `brand`, `category` `{ id, name }`, `volume_text`, `package_type`, `units_per_package`, `sale_unit`, `min_order_qty`, `allow_piece_sale`, `description`, `availability`, `is_promo`, `is_new`, `is_hit`, `image_url`.
+
+Расчёт `step` / `suggested_qty` — на клиенте через `lib/quantity.ts`.
 
 ---
 
