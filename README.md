@@ -61,7 +61,22 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 
 ## Текущий прогресс
 
-Выполнены шаги **Э1.0** и **Э1.1**. Дальше — только после подтверждения (Э1.2: auth).
+Выполнены шаги **Э1.0**, **Э1.1**, **Э1.2** (регистрация, вход, выход, `/auth/me`, httpOnly session).  
+Дальше — только после подтверждения (Э1.3: экран ожидания и staff-заявки).
+
+### Auth API
+
+- `POST /api/v1/auth/register`
+- `POST /api/v1/auth/login`
+- `POST /api/v1/auth/logout`
+- `GET /api/v1/auth/me`
+- `GET /api/v1/cities` (для формы регистрации)
+
+### Тесты
+
+```bash
+npm test
+```
 
 ## Полезные команды
 
