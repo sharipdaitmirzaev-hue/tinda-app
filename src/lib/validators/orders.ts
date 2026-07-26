@@ -156,7 +156,105 @@ export const idempotency_key_schema = z
   .string()
   .uuid("Некорректный Idempotency-Key");
 
+export const STAFF_ORDER_SORT_OPTIONS = [
+  "created_at_desc",
+  "created_at_asc",
+  "desired_delivery_date_asc",
+  "desired_delivery_date_desc",
+  "is_urgent_desc",
+] as const;
+
+const optional_comment = z
+  .string()
+  .trim()
+  .max(2000, "Комментарий слишком длинный")
+  .nullable()
+  .optional()
+  .transform((value) => {
+    if (value === undefined || value === null || value === "") return null;
+    return value;
+  });
+
+export const staff_orders_query_schema = z.object({
+  status: z.enum(ORDER_STATUSES).optional(),
+  is_urgent: z
+    .enum(["true", "false"])
+    .optional()
+    .transform((value) =>
+      value === undefined ? undefined : value === "true",
+    ),
+  date_from: z
+    .string()
+    .trim()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Некорректная дата")
+    .optional(),
+  date_to: z
+    .string()
+    .trim()
+    .regex(/^\d{4}-\d{2}-\d{2}$/, "Некорректная дата")
+    .optional(),
+  client_id: z.string().uuid().optional(),
+  manager_id: z.string().uuid().optional(),
+  city_id: z.string().uuid().optional(),
+  q: z.string().trim().max(200).optional(),
+  page: z.coerce.number().int().min(1).default(1),
+  page_size: z.coerce.number().int().min(1).max(50).default(20),
+  sort: z.enum(STAFF_ORDER_SORT_OPTIONS).default("created_at_desc"),
+});
+
+export const update_staff_order_schema = z
+  .object({
+    ...delivery_fields,
+    manager_comment: optional_comment,
+    items: z
+      .array(order_item_input_schema)
+      .min(1, "Добавьте хотя бы один товар в заказ"),
+  })
+  .superRefine((data, ctx) => {
+    refine_delivery_and_phone(data, ctx, { allow_past_date: true });
+
+    const seen = new Set<string>();
+    for (const [index, item] of data.items.entries()) {
+      if (seen.has(item.product_id)) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["items", index, "product_id"],
+          message: "Товар уже добавлен в заказ",
+        });
+      }
+      seen.add(item.product_id);
+    }
+  })
+  .transform(transform_delivery);
+
+export const staff_confirm_order_schema = z.object({
+  manager_comment: optional_comment,
+});
+
+export const staff_cancel_order_schema = z.object({
+  reason: z
+    .string({ error: "Укажите причину отмены" })
+    .trim()
+    .min(1, "Укажите причину отмены")
+    .max(1000, "Причина отмены слишком длинная"),
+  manager_comment: optional_comment,
+});
+
+export const staff_deliver_order_schema = z.object({
+  manager_comment: optional_comment,
+});
+
+export const assign_order_manager_schema = z.object({
+  manager_id: z.string().uuid("Некорректный менеджер").nullable(),
+});
+
 export type CreateOrderInput = z.infer<typeof create_order_schema>;
 export type UpdateClientOrderInput = z.infer<typeof update_client_order_schema>;
 export type CancelClientOrderInput = z.infer<typeof cancel_client_order_schema>;
 export type ClientOrdersQuery = z.infer<typeof client_orders_query_schema>;
+export type StaffOrdersQuery = z.infer<typeof staff_orders_query_schema>;
+export type UpdateStaffOrderInput = z.infer<typeof update_staff_order_schema>;
+export type StaffConfirmOrderInput = z.infer<typeof staff_confirm_order_schema>;
+export type StaffCancelOrderInput = z.infer<typeof staff_cancel_order_schema>;
+export type StaffDeliverOrderInput = z.infer<typeof staff_deliver_order_schema>;
+export type AssignOrderManagerInput = z.infer<typeof assign_order_manager_schema>;

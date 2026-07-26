@@ -9,6 +9,7 @@ import {
 import { check_qty } from "@/lib/quantity";
 import { format_date_only, parse_date_only, today_date_key } from "@/lib/dates";
 import { get_order_status_label } from "@/lib/orders/constants";
+import { build_package_info } from "@/lib/orders/package-info";
 import { PAYMENT_METHOD_LABELS } from "@/lib/validators/orders";
 import type {
   CancelClientOrderInput,
@@ -16,6 +17,19 @@ import type {
   CreateOrderInput,
   UpdateClientOrderInput,
 } from "@/lib/validators/orders";
+
+export { build_package_info } from "@/lib/orders/package-info";
+export {
+  list_staff_orders,
+  get_staff_order,
+  update_staff_order,
+  confirm_staff_order,
+  cancel_staff_order,
+  deliver_staff_order,
+  assign_order_manager,
+  serialize_staff_order_list_item,
+  serialize_staff_order_details,
+} from "@/lib/services/staff-orders.service";
 
 const ORDER_STATUS_NEW = "new";
 const ORDER_STATUS_CANCELLED = "cancelled";
@@ -44,25 +58,6 @@ function assert_approved_client(payload: AuthUserPayload) {
     );
   }
   return payload.client.id;
-}
-
-export function build_package_info(product: {
-  volume_text: string | null;
-  package_type: string | null;
-  units_per_package: number;
-  allow_piece_sale: boolean;
-}): string {
-  const parts = [
-    product.volume_text,
-    product.package_type,
-    `${product.units_per_package} шт. в упаковке`,
-  ].filter((part): part is string => Boolean(part && String(part).trim()));
-
-  if (product.allow_piece_sale) {
-    parts.push("поштучно");
-  }
-
-  return parts.join(" · ").slice(0, 255);
 }
 
 export async function generate_order_number(
@@ -464,7 +459,8 @@ export function serialize_client_order_details(order: OrderDetailRow) {
           : null,
         to_status: row.to_status,
         to_status_label: get_order_status_label(row.to_status),
-        comment: row.comment,
+        // Internal staff notes are not exposed to clients.
+        comment: null,
         created_at: row.created_at.toISOString(),
       })),
     },

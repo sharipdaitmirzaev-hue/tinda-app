@@ -13,8 +13,8 @@ export function StaffNav({
   can_edit_catalog = false,
 }: Props) {
   const links = [
-    { href: "/staff/registration-requests", label: "Заявки" },
     { href: "/staff/orders", label: "Заказы" },
+    { href: "/staff/registration-requests", label: "Заявки" },
     ...(can_edit_catalog
       ? [
           { href: "/staff/categories", label: "Категории" },
