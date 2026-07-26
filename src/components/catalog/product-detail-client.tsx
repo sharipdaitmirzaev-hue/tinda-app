@@ -7,15 +7,18 @@ import { QuantityStepper } from "@/components/catalog/quantity-stepper";
 import { Toast } from "@/components/catalog/toast";
 import { useAddToTemporaryCart } from "@/hooks/useTemporaryCart";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
-import { can_add_to_cart, check_qty, suggest_qty } from "@/lib/quantity";
+import {
+  can_add_to_cart,
+  check_qty,
+  get_initial_qty,
+} from "@/lib/quantity";
 
-type ProductDetail = {
+type CatalogProductDetail = {
   id: string;
   sku: string;
   name: string;
   brand: string | null;
-  category_id: string;
-  category_name: string | null;
+  category: { id: string; name: string } | null;
   volume_text: string | null;
   package_type: string | null;
   units_per_package: number;
@@ -24,7 +27,6 @@ type ProductDetail = {
   allow_piece_sale: boolean;
   description: string | null;
   availability: string;
-  availability_label?: string;
   is_promo: boolean;
   is_new: boolean;
   is_hit: boolean;
@@ -32,11 +34,11 @@ type ProductDetail = {
 };
 
 export function ProductDetailClient({ product_id }: { product_id: string }) {
-  const [product, set_product] = useState<ProductDetail | null>(null);
+  const [product, set_product] = useState<CatalogProductDetail | null>(null);
   const [loading, set_loading] = useState(true);
   const [error, set_error] = useState<string | null>(null);
   const [qty, set_qty] = useState(1);
-  const { add_item, toast } = useAddToTemporaryCart();
+  const { add_with_qty, toast } = useAddToTemporaryCart();
 
   async function load() {
     set_loading(true);
@@ -47,8 +49,9 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
       if (!response.ok) {
         throw new Error(data?.error?.message ?? "Не удалось загрузить товар");
       }
-      set_product(data.product);
-      set_qty(suggest_qty(data.product, data.product.min_order_qty));
+      const next = data.product as CatalogProductDetail;
+      set_product(next);
+      set_qty(get_initial_qty(next));
     } catch (err) {
       set_error(err instanceof Error ? err.message : "Ошибка загрузки");
       set_product(null);
@@ -81,33 +84,45 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
     );
   }
 
-  const allowed = can_add_to_cart(product);
-  const qty_check = check_qty(product, qty);
+  const quantity_product = {
+    units_per_package: product.units_per_package,
+    min_order_qty: product.min_order_qty,
+    allow_piece_sale: product.allow_piece_sale,
+    availability: product.availability,
+  };
+
+  const allowed = can_add_to_cart(quantity_product);
+  const qty_check = check_qty(quantity_product, qty);
   const availability_label =
-    product.availability_label ??
     AVAILABILITY_LABELS[product.availability as Availability] ??
     product.availability;
 
   function on_add() {
     if (!product || !allowed || !qty_check.valid) return;
-    add_item({
-      product_id: product.id,
+    add_with_qty(
+      {
+        product_id: product.id,
+        name: product.name,
+        sku: product.sku,
+        image_url: product.image_url,
+        ...quantity_product,
+      },
       qty,
-      name: product.name,
-      sku: product.sku,
-      image_url: product.image_url,
-    });
+    );
   }
 
   return (
     <>
       <div className="grid gap-6 rounded-xl border border-slate-200 bg-white p-4 md:grid-cols-2 md:p-6">
-        <ProductImage
-          src={product.image_url}
-          alt={product.name}
-          className="h-72 w-full md:h-full md:min-h-96"
-        />
-        <div className="space-y-4">
+        <div className="md:sticky md:top-20 md:self-start">
+          <ProductImage
+            src={product.image_url}
+            alt={product.name}
+            className="h-72 w-full md:min-h-[28rem]"
+          />
+        </div>
+
+        <div className="space-y-4 pb-4">
           <div>
             <Link href="/catalog" className="text-sm text-teal-800 underline">
               ← Назад в каталог
@@ -142,7 +157,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
             </div>
             <div>
               <dt className="text-xs text-slate-500">Категория</dt>
-              <dd>{product.category_name || "—"}</dd>
+              <dd>{product.category?.name || "—"}</dd>
             </div>
             <div>
               <dt className="text-xs text-slate-500">Объём / вес</dt>
@@ -161,7 +176,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
               <dd>{product.sale_unit}</dd>
             </div>
             <div>
-              <dt className="text-xs text-slate-500">Мин. заказ</dt>
+              <dt className="text-xs text-slate-500">Минимальный заказ</dt>
               <dd>{product.min_order_qty}</dd>
             </div>
             <div>
@@ -182,31 +197,40 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
             {availability_label}
           </p>
 
+          {product.availability === "out_of_stock" ? (
+            <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-800">
+              Товара временно нет
+            </p>
+          ) : null}
+
+          {product.availability === "on_order" ? (
+            <p className="rounded-md bg-amber-50 px-3 py-2 text-sm text-amber-900">
+              Товар под заказ. Срок поставки уточнит менеджер.
+            </p>
+          ) : null}
+
           {product.description ? (
             <p className="text-sm text-slate-700">{product.description}</p>
           ) : null}
 
           <QuantityStepper
-            units_per_package={product.units_per_package}
-            min_order_qty={product.min_order_qty}
-            allow_piece_sale={product.allow_piece_sale}
-            availability={product.availability}
+            product={quantity_product}
             qty={qty}
             on_change={set_qty}
           />
 
-          <div className="flex flex-wrap gap-2">
+          <div className="sticky bottom-20 z-10 flex flex-wrap gap-2 bg-white/95 py-2 md:static md:bottom-auto md:bg-transparent md:py-0">
             <button
               type="button"
               disabled={!allowed || !qty_check.valid}
               onClick={on_add}
-              className="rounded-md bg-teal-700 px-4 py-2.5 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+              className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
             >
               В корзину
             </button>
             <Link
               href="/catalog"
-              className="rounded-md border border-slate-300 px-4 py-2.5 text-sm text-slate-800"
+              className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
             >
               Назад в каталог
             </Link>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ProductImage } from "@/components/catalog/product-image";
-import { can_add_to_cart, suggest_qty } from "@/lib/quantity";
+import { can_add_to_cart } from "@/lib/quantity";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
 import { useAddToTemporaryCart } from "@/hooks/useTemporaryCart";
 import { Toast } from "@/components/catalog/toast";
@@ -27,7 +27,7 @@ export type CatalogProduct = {
 };
 
 export function CatalogProductCard({ product }: { product: CatalogProduct }) {
-  const { add_item, toast } = useAddToTemporaryCart();
+  const { add_from_catalog, toast } = useAddToTemporaryCart();
   const allowed = can_add_to_cart(product);
   const availability_label =
     product.availability_label ??
@@ -36,13 +36,15 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
 
   function on_add() {
     if (!allowed) return;
-    const qty = suggest_qty(product, product.min_order_qty);
-    add_item({
+    add_from_catalog({
       product_id: product.id,
-      qty,
       name: product.name,
       sku: product.sku,
       image_url: product.image_url,
+      units_per_package: product.units_per_package,
+      min_order_qty: product.min_order_qty,
+      allow_piece_sale: product.allow_piece_sale,
+      availability: product.availability,
     });
   }
 

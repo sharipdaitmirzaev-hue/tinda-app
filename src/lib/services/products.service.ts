@@ -408,6 +408,48 @@ export async function list_catalog_products(
   };
 }
 
+function map_catalog_product_detail(product: {
+  id: string;
+  sku: string;
+  name: string;
+  brand: string | null;
+  volume_text: string | null;
+  package_type: string | null;
+  units_per_package: number;
+  sale_unit: string;
+  min_order_qty: number;
+  allow_piece_sale: boolean;
+  description: string | null;
+  availability: string;
+  is_promo: boolean;
+  is_new: boolean;
+  is_hit: boolean;
+  image_url: string | null;
+  category?: { id: string; name: string } | null;
+}) {
+  return {
+    id: product.id,
+    sku: product.sku,
+    name: product.name,
+    brand: product.brand,
+    category: product.category
+      ? { id: product.category.id, name: product.category.name }
+      : null,
+    volume_text: product.volume_text,
+    package_type: product.package_type,
+    units_per_package: product.units_per_package,
+    sale_unit: product.sale_unit,
+    min_order_qty: product.min_order_qty,
+    allow_piece_sale: product.allow_piece_sale,
+    description: product.description,
+    availability: product.availability,
+    is_promo: product.is_promo,
+    is_new: product.is_new,
+    is_hit: product.is_hit,
+    image_url: product.image_url,
+  };
+}
+
 export async function get_catalog_product(
   payload: AuthUserPayload,
   product_id: string,
@@ -421,7 +463,7 @@ export async function get_catalog_product(
       category: { is_active: true },
     },
     include: {
-      category: { select: { id: true, name: true, is_active: true } },
+      category: { select: { id: true, name: true } },
     },
   });
 
@@ -429,7 +471,7 @@ export async function get_catalog_product(
     throw new AppError(404, "not_found", "Товар не найден");
   }
 
-  return { product: map_product(product) };
+  return { product: map_catalog_product_detail(product) };
 }
 
 export async function list_catalog_categories_for_client(

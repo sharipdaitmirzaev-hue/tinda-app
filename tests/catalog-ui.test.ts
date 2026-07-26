@@ -63,8 +63,11 @@ describe("catalog UI access and quantity E1.6", () => {
     };
     expect(get_order_step(pack)).toBe(12);
     expect(suggest_qty(pack, 10)).toBe(12);
-    expect(check_qty(pack, 10).message).toContain("кратно 12");
+    expect(check_qty(pack, 10).qty_error).toBe("below_min");
+    expect(check_qty(pack, 10).message).toContain("Минимальное количество");
     expect(check_qty(pack, 10).suggested_qty).toBe(12);
+    expect(check_qty(pack, 18).qty_error).toBe("not_multiple");
+    expect(check_qty(pack, 18).suggested_qty).toBe(24);
     expect(check_qty(pack, 24).valid).toBe(true);
 
     const piece = {

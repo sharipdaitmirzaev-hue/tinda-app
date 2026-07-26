@@ -5,7 +5,7 @@ import {
   add_to_temporary_cart,
   get_temporary_cart_positions_count,
   subscribe_temporary_cart,
-  type TemporaryCartItem,
+  type TemporaryCartProduct,
 } from "@/lib/cart/temporary-cart-store";
 
 function get_server_snapshot() {
@@ -29,10 +29,33 @@ export function useAddToTemporaryCart() {
     return () => window.clearTimeout(timer);
   }, [toast]);
 
-  function add_item(item: TemporaryCartItem) {
-    add_to_temporary_cart(item);
-    set_toast("Товар добавлен в корзину");
+  function add_from_catalog(product: TemporaryCartProduct) {
+    const result = add_to_temporary_cart(product, { mode: "initial_or_step" });
+    if (result.ok) {
+      set_toast("Товар добавлен в корзину");
+    } else {
+      set_toast(result.message);
+    }
+    return result;
   }
 
-  return { add_item, toast, clear_toast: () => set_toast(null) };
+  function add_with_qty(product: TemporaryCartProduct, qty: number) {
+    const result = add_to_temporary_cart(product, {
+      mode: "add_qty",
+      qty,
+    });
+    if (result.ok) {
+      set_toast("Товар добавлен в корзину");
+    } else {
+      set_toast(result.message);
+    }
+    return result;
+  }
+
+  return {
+    add_from_catalog,
+    add_with_qty,
+    toast,
+    clear_toast: () => set_toast(null),
+  };
 }
