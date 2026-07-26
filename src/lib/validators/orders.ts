@@ -252,7 +252,13 @@ export type CreateOrderInput = z.infer<typeof create_order_schema>;
 export type UpdateClientOrderInput = z.infer<typeof update_client_order_schema>;
 export type CancelClientOrderInput = z.infer<typeof cancel_client_order_schema>;
 export type ClientOrdersQuery = z.infer<typeof client_orders_query_schema>;
-export type StaffOrdersQuery = z.infer<typeof staff_orders_query_schema>;
+/** Zod transform keeps `is_urgent` as an explicit key; callers may omit it. */
+export type StaffOrdersQuery = Omit<
+  z.infer<typeof staff_orders_query_schema>,
+  "is_urgent"
+> & {
+  is_urgent?: boolean;
+};
 export type UpdateStaffOrderInput = z.infer<typeof update_staff_order_schema>;
 export type StaffConfirmOrderInput = z.infer<typeof staff_confirm_order_schema>;
 export type StaffCancelOrderInput = z.infer<typeof staff_cancel_order_schema>;

@@ -14,7 +14,7 @@ export const category_create_schema = z.object({
     .max(150)
     .regex(
       /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
-      "Slug: только латиница, цифры и дефис",
+      "Символьный код: только латиница, цифры и дефис",
     ),
   parent_id: z.string().uuid().nullable().optional(),
   sort_order: z.coerce.number().int().default(0),
@@ -60,7 +60,7 @@ export const product_create_schema = z.object({
           (value) =>
             value.startsWith("/uploads/") ||
             /^https?:\/\//i.test(value),
-          "Укажите корректный URL изображения",
+          "Укажите корректный адрес изображения",
         ),
     ])
     .optional()

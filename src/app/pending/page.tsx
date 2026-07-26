@@ -2,10 +2,10 @@ import { LogoutButton } from "@/components/auth/logout-button";
 import { RefreshStatusButton } from "@/components/auth/refresh-status-button";
 import { get_current_auth_payload } from "@/lib/auth/current-user";
 import { get_support_contacts } from "@/lib/access";
+import { client_status_label } from "@/lib/i18n/labels";
 import { prisma } from "@/lib/db";
 
 export default async function PendingPage() {
-  // Access enforced in layout via require_pending_client
   const auth = await get_current_auth_payload();
   const client_id = auth?.client?.id;
   if (!client_id) {
@@ -34,6 +34,7 @@ export default async function PendingPage() {
   const status = client?.status ?? "pending";
   const company_name = client?.company_name ?? auth.client!.company_name;
   const rejected_reason = client?.rejected_reason;
+  const status_label = client_status_label(status);
 
   const title =
     status === "blocked"
@@ -44,13 +45,16 @@ export default async function PendingPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-100 to-teal-50 px-4 py-12">
-      <div className="mx-auto max-w-lg space-y-5 rounded-xl bg-white p-6 shadow-sm">
+      <div className="ui-card mx-auto max-w-lg space-y-5 p-6">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-teal-800">
               ТИНДА
             </p>
             <h1 className="mt-2 text-2xl font-semibold text-slate-900">{title}</h1>
+            <p className="mt-2">
+              <span className={`ui-status-${status}`}>{status_label}</span>
+            </p>
           </div>
           <LogoutButton />
         </div>
@@ -85,7 +89,7 @@ export default async function PendingPage() {
 
         <div className="rounded-md bg-slate-50 px-3 py-3 text-sm text-slate-600">
           <p className="font-medium text-slate-800">Контакты поддержки</p>
-          <p>Email: {support.support_email ?? "support@tinda.ru"}</p>
+          <p>Эл. почта: {support.support_email ?? "support@tinda.ru"}</p>
           {support.support_phone ? <p>Телефон: {support.support_phone}</p> : null}
         </div>
 
@@ -94,7 +98,7 @@ export default async function PendingPage() {
         ) : null}
 
         <p className="text-xs text-slate-500">
-          Каталог, корзина и заказы недоступны при статусе «{status}».
+          Каталог, корзина и заказы недоступны при статусе «{status_label}».
         </p>
       </div>
     </main>

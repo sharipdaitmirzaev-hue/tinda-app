@@ -19,6 +19,11 @@ import {
   increase_qty,
 } from "@/lib/quantity";
 import type { SerializedCartItem } from "@/lib/cart/types";
+import {
+  EmptyBlock,
+  ErrorBlock,
+  LoadingBlock,
+} from "@/components/ui/state-blocks";
 
 function qty_error_message(item: SerializedCartItem): string | null {
   if (!item.qty_error) return null;
@@ -285,27 +290,15 @@ export function CartPageClient({ notice = null }: { notice?: string | null }) {
   }
 
   if (loading && !cart) {
-    return (
-      <div className="space-y-3">
-        <div className="h-8 w-40 animate-pulse rounded bg-slate-200" />
-        <div className="h-40 animate-pulse rounded-xl bg-slate-200" />
-        <div className="h-40 animate-pulse rounded-xl bg-slate-200" />
-      </div>
-    );
+    return <LoadingBlock label="Загрузка корзины…" />;
   }
 
   if (error && !cart) {
     return (
-      <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
-        <p>{error}</p>
-        <button
-          type="button"
-          onClick={() => void refresh_server_cart()}
-          className="mt-2 rounded-md bg-red-700 px-3 py-1.5 text-white"
-        >
-          Повторить
-        </button>
-      </div>
+      <ErrorBlock
+        message={error}
+        on_retry={() => void refresh_server_cart()}
+      />
     );
   }
 
@@ -320,16 +313,15 @@ export function CartPageClient({ notice = null }: { notice?: string | null }) {
             {banner}
           </div>
         ) : null}
-        <div className="rounded-xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-          <h1 className="text-2xl font-semibold text-slate-900">Корзина пуста</h1>
-          <p className="mt-2 text-slate-600">Добавьте товары из каталога</p>
-          <Link
-            href="/catalog"
-            className="mt-6 inline-block rounded-md bg-teal-700 px-4 py-2.5 text-sm text-white hover:bg-teal-800"
-          >
-            Перейти в каталог
-          </Link>
-        </div>
+        <EmptyBlock
+          title="Корзина пуста"
+          description="Добавьте товары из каталога"
+          action={
+            <Link href="/catalog" className="ui-btn-primary">
+              Перейти в каталог
+            </Link>
+          }
+        />
         <Toast message={toast} />
       </>
     );

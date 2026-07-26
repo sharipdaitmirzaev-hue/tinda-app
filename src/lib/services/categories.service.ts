@@ -179,7 +179,7 @@ export async function create_category(
     where: { slug: input.slug },
   });
   if (existing) {
-    throw new AppError(409, "conflict", "Slug категории уже используется");
+    throw new AppError(409, "conflict", "Символьный код категории уже используется");
   }
 
   const category = await prisma.categories.create({
@@ -224,7 +224,7 @@ export async function update_category(
       where: { slug: input.slug },
     });
     if (existing) {
-      throw new AppError(409, "conflict", "Slug категории уже используется");
+      throw new AppError(409, "conflict", "Символьный код категории уже используется");
     }
   }
 

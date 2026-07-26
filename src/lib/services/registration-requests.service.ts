@@ -4,7 +4,6 @@ import { AppError } from "@/lib/http/errors";
 import {
   assert_staff,
   has_role,
-  is_director,
   type AuthUserPayload,
 } from "@/lib/access";
 

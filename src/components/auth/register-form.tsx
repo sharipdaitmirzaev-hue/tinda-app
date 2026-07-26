@@ -134,7 +134,7 @@ export function RegisterForm() {
         <Field label="Контактное лицо" name="contact_name" required />
         <Field label="Телефон" name="phone" required />
         <Field label="Дополнительный телефон" name="extra_phone" />
-        <Field label="Email" name="email" type="email" required />
+        <Field label="Эл. почта" name="email" type="email" required />
         <div>
           <label className="mb-1 block text-sm font-medium" htmlFor="comment">
             Комментарий

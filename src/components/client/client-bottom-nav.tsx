@@ -16,7 +16,10 @@ export function ClientBottomNav() {
   const cart_count = useServerCartCount();
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-2 py-2 md:hidden">
+    <nav
+      aria-label="Мобильная навигация"
+      className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-2 py-2 md:hidden"
+    >
       <ul className="mx-auto grid max-w-lg grid-cols-4 gap-1">
         {links.map((link) => {
           const active =

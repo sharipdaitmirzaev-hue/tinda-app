@@ -30,22 +30,16 @@
 | **Э1.11** | Staff: заказы confirm/cancel/deliver | готово |
 | **Э1.12** | Staff CRUD каталога + фото | готово |
 | **Э1.13** | Проверка прав client/manager/director | готово |
-| **Э1.14** | Адаптив, пустые состояния, подготовка к деплою | ожидает |
+| **Э1.14** | Адаптив, пустые состояния, подготовка к деплою | готово |
 
 ## Правило работы
 
-После каждого согласованного блока шагов — остановка и отчёт.  
-**Э1.13 выполнен.** Дальше — только после подтверждения (Э1.14).
+**Э1 завершён на уровне кода Э1.0–Э1.14.** Новые крупные функции вне утверждённого Э1 не добавлять без отдельного согласования.
 
-### Э1.13 — кратко
+### Э1.14 — кратко
 
-- Единые guards: `src/lib/access.ts`, `require-auth`, `orders/access`, `assert_catalog_editor`
-- CSRF Origin/Host для mutating API (`src/middleware.ts`)
-- Rate limit (in-memory): login, register, image upload, create order
-- Security headers: CSP, nosniff, Referrer-Policy, Permissions-Policy, frame deny, HSTS (prod)
-- SESSION_SECRET обязателен; session token hash = HMAC-SHA256(SESSION_SECRET)
-- Аудит ответов / redaction логов; тесты `tests/security-access.test.ts`
-
-## Критерий готовности всего Э1 (позже)
-
-Клиент регистрируется → менеджер подтверждает → клиент собирает корзину с кратностью → отправляет заказ → менеджер подтверждает → клиент видит статус; руководитель видит всё и управляет каталогом.
+- Полировка UI, русские лейблы ролей/статусов, дизайн-токены
+- Мобильные карточки вместо плотных таблиц
+- Production env validation, health с проверкой БД
+- Docker + compose, Nginx example, CI, Playwright E2E
+- Документация деплоя и backup

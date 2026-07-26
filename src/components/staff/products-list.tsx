@@ -294,9 +294,13 @@ export function ProductsList() {
         </div>
       </form>
 
-      {loading ? <p className="text-sm text-slate-600">Загрузка…</p> : null}
+      {loading ? (
+        <p className="text-sm text-slate-600" role="status">
+          Загрузка…
+        </p>
+      ) : null}
       {error ? (
-        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
+        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">
           {error}
         </p>
       ) : null}
@@ -316,12 +320,43 @@ export function ProductsList() {
 
       {!loading && items.length > 0 ? (
         <>
-          <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+          <ul className="space-y-3 md:hidden">
+            {items.map((item) => (
+              <li key={item.id} className="ui-card p-3">
+                <div className="flex gap-3">
+                  <ProductImage src={item.image_url} alt={item.name} />
+                  <div className="min-w-0 flex-1">
+                    <Link
+                      href={`/staff/products/${item.id}`}
+                      className="font-medium text-teal-800 underline-offset-2 hover:underline"
+                    >
+                      {item.name}
+                    </Link>
+                    <p className="text-xs text-slate-500">
+                      Артикул: {item.sku}
+                      {item.brand ? ` · ${item.brand}` : ""}
+                    </p>
+                    <p className="mt-1 text-xs text-slate-600">
+                      {item.category_name ?? "—"} · {item.availability_label}
+                    </p>
+                    <p className="mt-1">
+                      {item.is_active ? (
+                        <span className="ui-status-approved">Активен</span>
+                      ) : (
+                        <span className="ui-status-pending">Неактивен</span>
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white md:block">
             <table className="min-w-full text-left text-sm">
               <thead className="bg-slate-50 text-slate-600">
                 <tr>
                   <th className="px-3 py-2">Фото</th>
-                  <th className="px-3 py-2">SKU</th>
+                  <th className="px-3 py-2">Артикул</th>
                   <th className="px-3 py-2">Название</th>
                   <th className="px-3 py-2">Бренд</th>
                   <th className="px-3 py-2">Категория</th>

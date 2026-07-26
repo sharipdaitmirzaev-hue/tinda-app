@@ -29,7 +29,7 @@ export async function register_client(
 
   const existing_email = await prisma.users.findUnique({ where: { email } });
   if (existing_email) {
-    throw new AppError(409, "conflict", "Email уже используется");
+    throw new AppError(409, "conflict", "Эл. почта уже используется");
   }
 
   const existing_inn = await prisma.clients.findUnique({ where: { inn } });

@@ -179,7 +179,7 @@ describe("auth service integration", () => {
       }),
     ).rejects.toMatchObject({
       code: "conflict",
-      message: "Email уже используется",
+      message: "Эл. почта уже используется",
     });
   });
 

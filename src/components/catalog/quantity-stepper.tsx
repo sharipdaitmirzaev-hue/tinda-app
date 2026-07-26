@@ -46,6 +46,7 @@ export function QuantityStepper({ product, qty, on_change }: Props) {
             }
             on_change(Number(value));
           }}
+          aria-label="Количество"
           className="h-11 w-28 rounded-md border border-slate-300 px-2 text-center"
         />
         <button

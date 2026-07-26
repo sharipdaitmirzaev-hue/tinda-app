@@ -2,95 +2,92 @@
 
 Сокращённый Э1: каталог без цен, корзина, заказы, кабинеты клиента / менеджера / руководителя.
 
-Документация: папка [`docs/`](./docs/).
+Документация: [`docs/`](./docs/) — ТЗ, API, БД, план, [деплой](./docs/deployment.md).
 
 ## Стек
 
-- Next.js + TypeScript
-- PostgreSQL + Prisma
-- Zod, Tailwind CSS
-- Auth: httpOnly cookie (с Э1.2)
+- Next.js 15 + TypeScript + Tailwind
+- PostgreSQL + Prisma 6
+- Zod, Vitest, Playwright
+- Auth: httpOnly cookie (HMAC session hash)
 
-## Требования
-
-- Node.js 20+
-- PostgreSQL 14+
-- npm
-
-## Настройка
-
-1. Скопируйте окружение:
+## Локальный запуск
 
 ```bash
 cp .env.example .env
-```
+# укажите DATABASE_URL и SESSION_SECRET (>= 16 символов для dev)
 
-2. Укажите `DATABASE_URL` на свою БД PostgreSQL.
-
-3. Установите зависимости:
-
-```bash
 npm install
-```
-
-4. Примените миграции и seed:
-
-```bash
-npm run db:migrate
+npm run db:deploy
 npm run db:seed
-```
-
-5. Запуск:
-
-```bash
 npm run dev
 ```
 
-Приложение: [http://localhost:3000](http://localhost:3000)  
-Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/health)
+Приложение: http://localhost:3000  
+Health: http://localhost:3000/api/v1/health → `{"ok":true,"database":"ok"}`
 
-## Учётные записи после seed
+### Проверка чистого развёртывания БД
+
+```bash
+npm run db:verify-clean
+```
+
+## Переменные окружения
+
+См. `.env.example`.
+
+Обязательные: `DATABASE_URL`, `SESSION_SECRET`, `APP_URL`.  
+Хранилище фото: `STORAGE_DRIVER=local|s3` (+ `STORAGE_*` для S3).  
+Seed: `SEED_PASSWORD` (в production обязателен, `ChangeMe123!` запрещён).
+
+## Тестовые учётки (только development seed)
 
 | Роль | Email | Пароль |
 |------|-------|--------|
-| Руководитель (`director`) | director@tinda.local | ChangeMe123! |
-| Менеджер | manager1@tinda.local | ChangeMe123! |
-| Менеджер | manager2@tinda.local | ChangeMe123! |
+| Руководитель | director@tinda.local | `SEED_PASSWORD` или `ChangeMe123!` |
+| Менеджер (каталог) | manager1@tinda.local | то же |
+| Менеджер (без каталога) | manager2@tinda.local | то же |
 
-Смените пароли перед боевым запуском.
+**Не используйте эти пароли в production.** Seed в production требует `ALLOW_PROD_SEED=true`.
 
-## Текущий прогресс
-
-Выполнены шаги **Э1.0–Э1.13**.  
-Дальше — только после подтверждения (Э1.14).
-
-### Безопасность (Э1.13)
-
-- Cookie-сессия: `httpOnly`, `SameSite=Lax`, `Secure` в production; hash = HMAC(`SESSION_SECRET`)
-- CSRF: проверка Origin/Host для mutating `/api/*`
-- Rate limit (локальный in-memory): login, register, upload, create order  
-  **Production с несколькими процессами требует Redis** — текущий адаптер только для одного процесса
-- Security headers через `src/middleware.ts` (CSP, nosniff, frame deny, HSTS в prod)
-- Матрица ролей: см. `docs/tz.md` §4
-- Guards: `src/lib/access.ts`, `src/lib/auth/require-auth.ts`, `src/lib/orders/access.ts`
-
-### Фотографии товаров
-
-`STORAGE_DRIVER=local|s3` — см. `.env.example`. Секреты только на сервере.
-
-### Тесты
+## Скрипты
 
 ```bash
-npm test
-```
-
-## Полезные команды
-
-```bash
-npm run dev          # локальная разработка
-npm run db:generate  # prisma generate
-npm run db:migrate   # миграции
-npm run db:seed      # начальные данные
-npm run db:studio    # Prisma Studio
+npm run dev
 npm run lint
+npm run typecheck
+npm test                 # unit/integration
+npm run test:e2e         # Playwright (отдельная БД)
+npm run build
+npm start
+npm run db:deploy
+npm run db:seed
 ```
+
+## Docker (production)
+
+```bash
+# заполните .env (POSTGRES_PASSWORD, SESSION_SECRET, APP_URL)
+docker compose -f docker-compose.production.yml up -d --build
+```
+
+Nginx example: `deploy/nginx/tinda.conf.example`  
+Полный гайд: `docs/deployment.md`
+
+## CI
+
+GitHub Actions (`.github/workflows/ci.yml`): lint, typecheck, tests, build; отдельный job E2E с PostgreSQL service.
+
+## Production checklist
+
+1. Сильные `SESSION_SECRET` и пароль БД  
+2. HTTPS + корректный `APP_URL`  
+3. Миграции применены  
+4. Seed-пароли сменены / seed не с default  
+5. Backup PostgreSQL (+ uploads при local storage)  
+6. Health OK  
+7. Rate limit: для нескольких инстансов нужен Redis (локальный адаптер — один процесс)
+
+## Ограничения Э1 (осознанно отложены)
+
+Персональные цены, точные остатки, 1С, WhatsApp/SMS, GPS, PDF, восстановление пароля, UI управления сотрудниками и др. — см. ТЗ.

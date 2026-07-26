@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { ORDER_STATUSES, ORDER_STATUS_LABELS } from "@/lib/orders/constants";
+import {
+  EmptyBlock,
+  ErrorBlock,
+  LoadingBlock,
+} from "@/components/ui/state-blocks";
 
 type OrderListItem = {
   id: string;
@@ -147,7 +152,7 @@ export function OrdersListClient() {
           />
         </label>
         <label className="text-sm">
-          <span className="mb-1 block text-slate-600">По дату</span>
+          <span className="mb-1 block text-slate-600">До даты</span>
           <input
             type="date"
             name="date_to"
@@ -182,40 +187,25 @@ export function OrdersListClient() {
         </div>
       </form>
 
-      {loading ? (
-        <div className="space-y-3">
-          <div className="h-24 animate-pulse rounded-xl bg-slate-200" />
-          <div className="h-24 animate-pulse rounded-xl bg-slate-200" />
-          <div className="h-24 animate-pulse rounded-xl bg-slate-200" />
-        </div>
-      ) : null}
+      {loading ? <LoadingBlock label="Загрузка заказов…" /> : null}
 
       {error ? (
-        <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
-          <p>{error}</p>
-          <button
-            type="button"
-            onClick={() => update_query({ page: String(page) }, false)}
-            className="mt-2 rounded-md bg-red-700 px-3 py-1.5 text-white"
-          >
-            Повторить
-          </button>
-        </div>
+        <ErrorBlock
+          message={error}
+          on_retry={() => update_query({ page: String(page) }, false)}
+        />
       ) : null}
 
       {!loading && !error && items.length === 0 ? (
-        <div className="rounded-xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-          <p className="text-lg font-medium text-slate-900">Заказов пока нет</p>
-          <p className="mt-2 text-sm text-slate-600">
-            Оформите заказ из каталога
-          </p>
-          <Link
-            href="/catalog"
-            className="mt-4 inline-block rounded-md bg-teal-700 px-4 py-2 text-sm text-white"
-          >
-            Перейти в каталог
-          </Link>
-        </div>
+        <EmptyBlock
+          title="Заказов пока нет"
+          description="Оформите заказ из каталога"
+          action={
+            <Link href="/catalog" className="ui-btn-primary">
+              Перейти в каталог
+            </Link>
+          }
+        />
       ) : null}
 
       {!loading && !error && items.length > 0 ? (

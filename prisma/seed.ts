@@ -1,8 +1,37 @@
 import "dotenv/config";
+import { randomBytes } from "crypto";
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 
 const prisma = new PrismaClient();
+
+function resolve_seed_password(): string {
+  if (process.env.NODE_ENV === "production" && process.env.ALLOW_PROD_SEED !== "true") {
+    throw new Error(
+      "Seed в production отключён. Для явного запуска задайте ALLOW_PROD_SEED=true и SEED_PASSWORD.",
+    );
+  }
+
+  const from_env = process.env.SEED_PASSWORD?.trim();
+  if (from_env) {
+    if (
+      process.env.NODE_ENV === "production" &&
+      (from_env === "ChangeMe123!" || from_env.length < 12)
+    ) {
+      throw new Error(
+        "SEED_PASSWORD в production должен быть не короче 12 символов и не равен ChangeMe123!",
+      );
+    }
+    return from_env;
+  }
+
+  if (process.env.NODE_ENV === "production") {
+    throw new Error("В production обязателен SEED_PASSWORD");
+  }
+
+  // Development default — change before any shared/staging use.
+  return "ChangeMe123!";
+}
 
 async function upsert_role(code: string, name: string) {
   return prisma.roles.upsert({
@@ -17,7 +46,8 @@ async function main() {
   const role_manager = await upsert_role("manager", "Менеджер");
   const role_director = await upsert_role("director", "Руководитель");
 
-  const password_hash = await bcrypt.hash("ChangeMe123!", 10);
+  const seed_password = resolve_seed_password();
+  const password_hash = await bcrypt.hash(seed_password, 10);
 
   const director = await prisma.users.upsert({
     where: { email: "director@tinda.local" },
@@ -397,8 +427,13 @@ async function main() {
     director_email: director.email,
     manager_one_email: manager_one.email,
     manager_two_email: manager_two.email,
-    password: "ChangeMe123!",
+    password: seed_password,
+    note:
+      process.env.NODE_ENV === "production"
+        ? "Смените пароли сразу после первого входа"
+        : "Только для локальной разработки",
     roles: [role_client.code, role_manager.code, role_director.code],
+    random_hint: randomBytes(4).toString("hex"),
   });
 }
 

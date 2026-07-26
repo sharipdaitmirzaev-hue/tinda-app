@@ -171,7 +171,7 @@ describe("catalog E1.5", () => {
         slug: `unique-${suffix}`,
       }),
     ).rejects.toMatchObject({
-      message: "Slug категории уже используется",
+      message: "Символьный код категории уже используется",
     });
   });
 

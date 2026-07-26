@@ -5,6 +5,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { ORDER_STATUSES, ORDER_STATUS_LABELS } from "@/lib/orders/constants";
 import { STAFF_ORDER_SORT_OPTIONS } from "@/lib/validators/orders";
+import {
+  EmptyBlock,
+  ErrorBlock,
+  LoadingBlock,
+} from "@/components/ui/state-blocks";
 
 type OrderItem = {
   id: string;
@@ -209,7 +214,7 @@ export function StaffOrdersList({ is_director }: { is_director: boolean }) {
         />
       </label>
       <label className="text-sm">
-        <span className="mb-1 block text-slate-600">По дату</span>
+        <span className="mb-1 block text-slate-600">До даты</span>
         <input
           type="date"
           name="date_to"
@@ -313,30 +318,17 @@ export function StaffOrdersList({ is_director }: { is_director: boolean }) {
         </div>
       ) : null}
 
-      {loading ? (
-        <div className="space-y-3">
-          <div className="h-20 animate-pulse rounded-xl bg-slate-200" />
-          <div className="h-20 animate-pulse rounded-xl bg-slate-200" />
-        </div>
-      ) : null}
+      {loading ? <LoadingBlock label="Загрузка заказов…" /> : null}
 
       {error ? (
-        <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
-          <p>{error}</p>
-          <button
-            type="button"
-            className="mt-2 rounded-md bg-red-700 px-3 py-1.5 text-white"
-            onClick={() => update_query({ page: String(page) }, false)}
-          >
-            Повторить
-          </button>
-        </div>
+        <ErrorBlock
+          message={error}
+          on_retry={() => update_query({ page: String(page) }, false)}
+        />
       ) : null}
 
       {!loading && !error && items.length === 0 ? (
-        <div className="rounded-xl border bg-white p-8 text-center text-slate-600">
-          Заказы не найдены
-        </div>
+        <EmptyBlock title="Заказы не найдены" />
       ) : null}
 
       {!loading && !error && items.length > 0 ? (

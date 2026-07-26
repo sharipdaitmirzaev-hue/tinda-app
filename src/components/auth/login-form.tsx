@@ -42,7 +42,7 @@ export function LoginForm() {
     <form onSubmit={on_submit} className="space-y-4">
       <div>
         <label className="mb-1 block text-sm font-medium" htmlFor="login">
-          Email или телефон
+          Эл. почта или телефон
         </label>
         <input
           id="login"

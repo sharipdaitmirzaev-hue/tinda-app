@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { RejectRequestModal } from "@/components/staff/reject-request-modal";
+import { client_status_label } from "@/lib/i18n/labels";
 
 type ManagerOption = {
   id: string;
@@ -31,12 +32,6 @@ type RequestDetail = {
   status: string;
   rejected_reason: string | null;
   manager: { id: string; full_name: string; email: string } | null;
-};
-
-const STATUS_LABELS: Record<string, string> = {
-  pending: "На рассмотрении",
-  rejected: "Отклонена",
-  approved: "Подтверждён",
 };
 
 type Props = {
@@ -136,7 +131,7 @@ export function RegistrationRequestDetail({
             {request.company_name}
           </h1>
           <p className="text-sm text-slate-600">
-            Статус: {STATUS_LABELS[request.status] ?? request.status}
+            Статус: {client_status_label(request.status)}
           </p>
         </div>
       </div>
@@ -166,7 +161,7 @@ export function RegistrationRequestDetail({
         <Field label="Контактное лицо" value={request.contact_name} />
         <Field label="Телефон" value={request.phone} />
         <Field label="Доп. телефон" value={request.extra_phone} />
-        <Field label="Email" value={request.email} />
+        <Field label="Эл. почта" value={request.email} />
         <Field label="Адрес доставки" value={request.address} />
         <Field label="Комментарий" value={request.comment} />
         <Field

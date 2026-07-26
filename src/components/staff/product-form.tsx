@@ -412,7 +412,7 @@ export function ProductForm({ product_id, initial }: Props) {
       </section>
 
       <div className="grid gap-3 md:grid-cols-2">
-        <Field label="Артикул (SKU)" required>
+        <Field label="Артикул" required>
           <input
             required
             value={form.sku}
@@ -569,7 +569,7 @@ export function ProductForm({ product_id, initial }: Props) {
           Дополнительно
         </summary>
         <label className="mt-3 block text-sm">
-          <span className="mb-1 block font-medium">URL изображения (вручную)</span>
+          <span className="mb-1 block font-medium">Адрес изображения (вручную)</span>
           <input
             value={form.image_url}
             onChange={(e) => {

@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { CatalogProductCard, type CatalogProduct } from "@/components/catalog/catalog-product-card";
+import {
+  EmptyBlock,
+  ErrorBlock,
+  LoadingBlock,
+} from "@/components/ui/state-blocks";
 
 type CategoryNode = {
   id: string;
@@ -310,45 +315,27 @@ export function CatalogPageClient() {
           </div>
         </div>
 
-        {loading ? (
-          <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 xl:grid-cols-4">
-            {Array.from({ length: 8 }).map((_, index) => (
-              <div
-                key={index}
-                className="h-72 animate-pulse rounded-xl bg-slate-200"
-              />
-            ))}
-          </div>
-        ) : null}
+        {loading ? <LoadingBlock label="Загрузка каталога…" /> : null}
 
         {error ? (
-          <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
-            <p>{error}</p>
-            <button
-              type="button"
-              onClick={load_products}
-              className="mt-2 rounded-md bg-red-700 px-3 py-1.5 text-white"
-            >
-              Повторить
-            </button>
-          </div>
+          <ErrorBlock message={error} on_retry={() => void load_products()} />
         ) : null}
 
         {!loading && !error && items.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-slate-300 bg-white px-4 py-10 text-center">
-            <p className="text-slate-700">
-              {has_filters ? "Товары не найдены" : "Каталог пока пуст"}
-            </p>
-            {has_filters ? (
-              <button
-                type="button"
-                onClick={reset_filters}
-                className="mt-3 rounded-md bg-teal-700 px-4 py-2 text-sm text-white"
-              >
-                Сбросить фильтры
-              </button>
-            ) : null}
-          </div>
+          <EmptyBlock
+            title={has_filters ? "Товары не найдены" : "Каталог пока пуст"}
+            action={
+              has_filters ? (
+                <button
+                  type="button"
+                  onClick={reset_filters}
+                  className="ui-btn-primary"
+                >
+                  Сбросить фильтры
+                </button>
+              ) : undefined
+            }
+          />
         ) : null}
 
         {!loading && items.length > 0 ? (

@@ -335,7 +335,7 @@ export function CategoriesManager() {
           />
         </label>
         <label className="block text-sm">
-          <span className="mb-1 block font-medium">Slug</span>
+          <span className="mb-1 block font-medium">Символьный код</span>
           <input
             required
             value={form.slug}

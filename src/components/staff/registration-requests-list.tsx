@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
+import { client_status_label } from "@/lib/i18n/labels";
+import { EmptyBlock, ErrorBlock, LoadingBlock } from "@/components/ui/state-blocks";
 
 type CityItem = { id: string; name: string; region: string };
 
@@ -18,11 +20,6 @@ type RequestItem = {
   created_at: string;
   status: string;
   manager: { id: string; full_name: string } | null;
-};
-
-const STATUS_LABELS: Record<string, string> = {
-  pending: "На рассмотрении",
-  rejected: "Отклонена",
 };
 
 export function RegistrationRequestsList() {
@@ -160,7 +157,7 @@ export function RegistrationRequestsList() {
           <input
             name="q"
             defaultValue={q}
-            placeholder="Компания, ИНН, телефон, email"
+            placeholder="Компания, ИНН, телефон, эл. почта"
             className="w-full rounded-md border border-slate-300 px-3 py-2"
           />
         </label>
@@ -174,29 +171,51 @@ export function RegistrationRequestsList() {
         </div>
       </form>
 
-      {loading ? (
-        <p className="text-sm text-slate-600">Загрузка заявок…</p>
-      ) : null}
+      {loading ? <LoadingBlock label="Загрузка заявок…" /> : null}
 
       {error ? (
-        <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-700">
-          {error}
-        </p>
+        <ErrorBlock message={error} on_retry={() => window.location.reload()} />
       ) : null}
 
       {!loading && !error && items.length === 0 ? (
-        <p className="rounded-md border border-dashed border-slate-300 px-4 py-8 text-center text-sm text-slate-600">
-          {q || city_id
-            ? "Нет результатов поиска"
-            : status === "rejected"
-              ? "Отклонённых заявок нет"
-              : "Новых заявок пока нет"}
-        </p>
+        <EmptyBlock
+          title={
+            q || city_id
+              ? "Нет результатов поиска"
+              : status === "rejected"
+                ? "Отклонённых заявок нет"
+                : "Новых заявок пока нет"
+          }
+        />
       ) : null}
 
       {!loading && items.length > 0 ? (
         <>
-          <div className="overflow-x-auto rounded-lg border border-slate-200 bg-white">
+          <ul className="space-y-3 md:hidden">
+            {items.map((item) => (
+              <li key={item.id} className="rounded-lg border border-slate-200 bg-white p-3">
+                <Link
+                  href={`/staff/registration-requests/${item.id}`}
+                  className="font-medium text-teal-800 underline-offset-2 hover:underline"
+                >
+                  {item.company_name}
+                </Link>
+                <p className="mt-1 text-xs text-slate-500">
+                  ИНН {item.inn} · {item.city.name}
+                </p>
+                <p className="mt-1 text-sm text-slate-700">
+                  {item.contact_name} · {item.phone}
+                </p>
+                <p className="mt-2 text-xs">
+                  {client_status_label(item.status)}
+                  {item.manager?.full_name
+                    ? ` · ${item.manager.full_name}`
+                    : ""}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <div className="hidden overflow-x-auto rounded-lg border border-slate-200 bg-white md:block">
             <table className="min-w-full text-left text-sm">
               <thead className="bg-slate-50 text-slate-600">
                 <tr>
@@ -232,7 +251,7 @@ export function RegistrationRequestsList() {
                       <div className="text-xs text-slate-500">{item.phone}</div>
                     </td>
                     <td className="px-3 py-2">
-                      {STATUS_LABELS[item.status] ?? item.status}
+                      {client_status_label(item.status)}
                     </td>
                     <td className="px-3 py-2">
                       {item.manager?.full_name ?? "—"}
