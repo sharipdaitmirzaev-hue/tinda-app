@@ -1,0 +1,38 @@
+import { NextResponse } from "next/server";
+
+export type ApiErrorCode =
+  | "validation_error"
+  | "unauthorized"
+  | "forbidden"
+  | "conflict"
+  | "not_found"
+  | "internal_error";
+
+export function api_error(
+  status: number,
+  code: ApiErrorCode,
+  message: string,
+  details?: unknown,
+) {
+  return NextResponse.json(
+    {
+      error: {
+        code,
+        message,
+        ...(details !== undefined ? { details } : {}),
+      },
+    },
+    { status },
+  );
+}
+
+export class AppError extends Error {
+  constructor(
+    public status: number,
+    public code: ApiErrorCode,
+    message: string,
+  ) {
+    super(message);
+    this.name = "AppError";
+  }
+}

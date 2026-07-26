@@ -85,9 +85,13 @@ suggested_qty:
     "id": "uuid",
     "status": "pending",
     "company_name": "string"
-  }
+  },
+  "employee": null,
+  "redirect_to": "/pending"
 }
 ```
+
+`redirect_to`: `/pending` (клиент не `approved`), `/catalog` (клиент `approved`), `/staff/orders` (manager/director).
 
 ### `POST /api/v1/auth/login`
 

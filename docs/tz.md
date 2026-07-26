@@ -18,7 +18,7 @@
 | ORM | Prisma 6 |
 | Валидация | Zod |
 | Стили | Tailwind CSS |
-| Авторизация | безопасная httpOnly cookie (сессия) |
+| Авторизация | безопасная httpOnly cookie + таблица `sessions` |
 | Роли | `client`, `manager`, `director` |
 | Цены в Э1 | отсутствуют |
 | Адреса клиента | один адрес (`clients.address`) |
