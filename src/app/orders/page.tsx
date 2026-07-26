@@ -1,9 +1,8 @@
 import { LogoutButton } from "@/components/auth/logout-button";
-import { get_current_auth_payload } from "@/lib/auth/current-user";
+import { require_client_area } from "@/lib/auth/require-auth";
 
-export default async function CatalogPage() {
-  // Access enforced in layout via require_client_area
-  const auth = await get_current_auth_payload();
+export default async function OrdersPage() {
+  await require_client_area();
 
   return (
     <main className="min-h-screen bg-slate-50 px-4 py-12">
@@ -13,13 +12,13 @@ export default async function CatalogPage() {
             <p className="text-sm font-semibold uppercase tracking-wide text-teal-800">
               ТИНДА
             </p>
-            <h1 className="mt-2 text-2xl font-semibold">Каталог</h1>
+            <h1 className="mt-2 text-2xl font-semibold">Заказы</h1>
           </div>
           <LogoutButton />
         </div>
         <p className="text-slate-600">
-          Здравствуйте, {auth?.user.full_name}. Доступ к заказам открыт. Каталог
-          товаров появится на следующем этапе (Э1.6).
+          История заказов появится на этапе Э1.10. Доступ открыт только для
+          подтверждённых клиентов.
         </p>
       </div>
     </main>

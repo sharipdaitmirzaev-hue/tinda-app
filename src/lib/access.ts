@@ -1,5 +1,7 @@
 export type RoleCode = "client" | "manager" | "director";
 
+export type ClientStatus = "pending" | "approved" | "rejected" | "blocked";
+
 export type AuthClientSummary = {
   id: string;
   status: string;
@@ -22,12 +24,25 @@ export type AuthUserPayload = {
   employee: AuthEmployeeSummary;
 };
 
+export type AccessDecision =
+  | { allow: true }
+  | { allow: false; redirect_to: string };
+
 export function has_role(roles: string[], role: RoleCode): boolean {
   return roles.includes(role);
 }
 
 export function is_staff(roles: string[]): boolean {
   return has_role(roles, "manager") || has_role(roles, "director");
+}
+
+export function is_client_status(status: string): status is ClientStatus {
+  return (
+    status === "pending" ||
+    status === "approved" ||
+    status === "rejected" ||
+    status === "blocked"
+  );
 }
 
 /** Post-login / post-register destination path. */
@@ -51,4 +66,71 @@ export function can_place_orders(payload: AuthUserPayload): boolean {
     has_role(payload.user.roles, "client") &&
     payload.client?.status === "approved"
   );
+}
+
+export function can_access_client_shop(payload: AuthUserPayload): boolean {
+  return can_place_orders(payload);
+}
+
+/** /catalog, /cart, /orders */
+export function resolve_client_shop_access(
+  payload: AuthUserPayload | null,
+): AccessDecision {
+  if (!payload) {
+    return { allow: false, redirect_to: "/login" };
+  }
+  if (is_staff(payload.user.roles)) {
+    return { allow: false, redirect_to: "/staff/orders" };
+  }
+  if (!payload.client) {
+    return { allow: false, redirect_to: "/login" };
+  }
+  if (payload.client.status === "approved") {
+    return { allow: true };
+  }
+  return { allow: false, redirect_to: "/pending" };
+}
+
+/** /pending — waiting / rejected / blocked screen */
+export function resolve_pending_page_access(
+  payload: AuthUserPayload | null,
+): AccessDecision {
+  if (!payload) {
+    return { allow: false, redirect_to: "/login" };
+  }
+  if (is_staff(payload.user.roles)) {
+    return { allow: false, redirect_to: "/staff/orders" };
+  }
+  if (!payload.client) {
+    return { allow: false, redirect_to: "/login" };
+  }
+  if (payload.client.status === "approved") {
+    return { allow: false, redirect_to: "/catalog" };
+  }
+  return { allow: true };
+}
+
+/** /staff/* */
+export function resolve_staff_access(
+  payload: AuthUserPayload | null,
+): AccessDecision {
+  if (!payload) {
+    return { allow: false, redirect_to: "/login" };
+  }
+  if (!is_staff(payload.user.roles)) {
+    return { allow: false, redirect_to: get_post_auth_path(payload) };
+  }
+  return { allow: true };
+}
+
+export function get_support_contacts(settings: {
+  support_email?: unknown;
+  support_phone?: unknown;
+}): { support_email: string | null; support_phone: string | null } {
+  return {
+    support_email:
+      typeof settings.support_email === "string" ? settings.support_email : null,
+    support_phone:
+      typeof settings.support_phone === "string" ? settings.support_phone : null,
+  };
 }

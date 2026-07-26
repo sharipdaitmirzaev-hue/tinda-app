@@ -2,9 +2,24 @@ import { redirect } from "next/navigation";
 import { get_current_auth_payload } from "@/lib/auth/current-user";
 import {
   get_post_auth_path,
-  is_staff,
+  resolve_client_shop_access,
+  resolve_pending_page_access,
+  resolve_staff_access,
   type AuthUserPayload,
 } from "@/lib/access";
+
+function apply_decision(
+  decision: { allow: true } | { allow: false; redirect_to: string },
+  payload: AuthUserPayload | null,
+): AuthUserPayload {
+  if (!decision.allow) {
+    redirect(decision.redirect_to);
+  }
+  if (!payload) {
+    redirect("/login");
+  }
+  return payload;
+}
 
 export async function require_auth(): Promise<AuthUserPayload> {
   const payload = await get_current_auth_payload();
@@ -22,37 +37,18 @@ export async function require_guest(): Promise<void> {
 }
 
 export async function require_staff(): Promise<AuthUserPayload> {
-  const payload = await require_auth();
-  if (!is_staff(payload.user.roles)) {
-    redirect(get_post_auth_path(payload));
-  }
-  return payload;
+  const payload = await get_current_auth_payload();
+  return apply_decision(resolve_staff_access(payload), payload);
 }
 
+/** Catalog, cart, orders — only approved clients. */
 export async function require_client_area(): Promise<AuthUserPayload> {
-  const payload = await require_auth();
-  if (is_staff(payload.user.roles)) {
-    redirect("/staff/orders");
-  }
-  if (!payload.client) {
-    redirect("/login");
-  }
-  if (payload.client.status !== "approved") {
-    redirect("/pending");
-  }
-  return payload;
+  const payload = await get_current_auth_payload();
+  return apply_decision(resolve_client_shop_access(payload), payload);
 }
 
+/** Pending / rejected / blocked status screen. */
 export async function require_pending_client(): Promise<AuthUserPayload> {
-  const payload = await require_auth();
-  if (is_staff(payload.user.roles)) {
-    redirect("/staff/orders");
-  }
-  if (!payload.client) {
-    redirect("/login");
-  }
-  if (payload.client.status === "approved") {
-    redirect("/catalog");
-  }
-  return payload;
+  const payload = await get_current_auth_payload();
+  return apply_decision(resolve_pending_page_access(payload), payload);
 }

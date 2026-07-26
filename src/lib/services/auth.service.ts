@@ -117,13 +117,7 @@ export async function login_user(input: LoginInput): Promise<AuthUserPayload> {
     throw new AppError(401, "unauthorized", "Неверный логин или пароль");
   }
 
-  if (user.client?.status === "blocked") {
-    throw new AppError(
-      403,
-      "forbidden",
-      "Доступ заблокирован. Свяжитесь с менеджером.",
-    );
-  }
+  // blocked clients may log in to see the status screen, but shop routes stay closed
 
   const payload = await build_auth_payload(user.id);
   if (!payload) {

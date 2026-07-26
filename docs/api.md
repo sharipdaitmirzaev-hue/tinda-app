@@ -156,7 +156,7 @@ suggested_qty:
 
 ### `GET /api/v1/client/registration-status`
 
-**Кто:** `client`
+**Кто:** `client` (в том числе `pending` / `rejected` / `blocked` / `approved`)
 
 ```json
 {
@@ -164,9 +164,12 @@ suggested_qty:
   "rejected_reason": null,
   "company_name": "string",
   "support_email": "string|null",
-  "support_phone": "string|null"
+  "support_phone": "string|null",
+  "redirect_to": "/pending"
 }
 ```
+
+Для `approved` поле `redirect_to` = `/catalog`.
 
 ---
 

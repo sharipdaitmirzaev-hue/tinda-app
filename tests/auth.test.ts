@@ -224,18 +224,15 @@ describe("auth service integration", () => {
     });
   });
 
-  it("blocks blocked client login", async () => {
+  it("allows blocked client login for status screen", async () => {
     const user = await prisma.users.findUniqueOrThrow({ where: { email } });
     await prisma.clients.update({
       where: { user_id: user.id },
       data: { status: "blocked" },
     });
 
-    await expect(
-      login_user({ login: email, password }),
-    ).rejects.toMatchObject({
-      code: "forbidden",
-    });
+    const payload = await login_user({ login: email, password });
+    expect(payload.client?.status).toBe("blocked");
 
     await prisma.clients.update({
       where: { user_id: user.id },
