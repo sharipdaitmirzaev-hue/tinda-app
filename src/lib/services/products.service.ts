@@ -78,7 +78,9 @@ function map_product(product: {
   };
 }
 
-function sort_to_order(sort: ProductSort): Prisma.productsOrderByWithRelationInput {
+function sort_to_order(
+  sort: ProductSort,
+): Prisma.productsOrderByWithRelationInput | Prisma.productsOrderByWithRelationInput[] {
   switch (sort) {
     case "name_asc":
       return { name: "asc" };
@@ -86,6 +88,10 @@ function sort_to_order(sort: ProductSort): Prisma.productsOrderByWithRelationInp
       return { name: "desc" };
     case "created_at_asc":
       return { created_at: "asc" };
+    case "is_new_desc":
+      return [{ is_new: "desc" }, { name: "asc" }];
+    case "is_hit_desc":
+      return [{ is_hit: "desc" }, { name: "asc" }];
     case "created_at_desc":
     default:
       return { created_at: "desc" };

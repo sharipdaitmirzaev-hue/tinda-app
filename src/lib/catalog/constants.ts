@@ -27,6 +27,10 @@ export const PRODUCT_SORT_OPTIONS = [
   "name_desc",
   "created_at_desc",
   "created_at_asc",
+  "is_new_desc",
+  "is_hit_desc",
 ] as const;
 
 export type ProductSort = (typeof PRODUCT_SORT_OPTIONS)[number];
+
+export const CATALOG_PAGE_SIZE_OPTIONS = [12, 24] as const;

@@ -1,27 +1,16 @@
-import { LogoutButton } from "@/components/auth/logout-button";
-import { get_current_auth_payload } from "@/lib/auth/current-user";
+import { Suspense } from "react";
+import { CatalogPageClient } from "@/components/catalog/catalog-page-client";
 
-export default async function CatalogPage() {
-  // Access enforced in layout via require_client_area
-  const auth = await get_current_auth_payload();
-
+export default function CatalogPage() {
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-12">
-      <div className="mx-auto max-w-lg space-y-4 rounded-xl bg-white p-6 shadow-sm">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-teal-800">
-              ТИНДА
-            </p>
-            <h1 className="mt-2 text-2xl font-semibold">Каталог</h1>
-          </div>
-          <LogoutButton />
+    <Suspense
+      fallback={
+        <div className="mx-auto max-w-7xl px-4 py-8">
+          <div className="h-40 animate-pulse rounded-xl bg-slate-200" />
         </div>
-        <p className="text-slate-600">
-          Здравствуйте, {auth?.user.full_name}. Доступ к заказам открыт. Каталог
-          товаров появится на следующем этапе (Э1.6).
-        </p>
-      </div>
-    </main>
+      }
+    >
+      <CatalogPageClient />
+    </Suspense>
   );
 }
