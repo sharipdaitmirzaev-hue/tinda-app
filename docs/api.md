@@ -400,19 +400,38 @@ Query: `status` (`pending`|`rejected`, по умолчанию `pending`), `city
 
 ## 9. Заказы (staff)
 
+**Кто:** `manager`, `director`  
+Доступ менеджера: свои клиенты / `orders.manager_id` / `can_view_all_clients`.  
+Чужой заказ → `404`. Конфликт статуса → `409` / `ORDER_STATUS_CONFLICT`.
+
 ### `GET /api/v1/staff/orders`
 
-Query: `status`, `is_urgent`, `client_id`, `date_from`, `date_to`, `page`, `page_size`
+Query: `status`, `is_urgent`, `date_from`, `date_to`, `client_id`, `manager_id` (только director), `city_id`, `q`, `page`, `page_size`, `sort`.
 
 ### `GET /api/v1/staff/orders/:id`
 
+Карточка со snapshot позиций, `manager_comment`, историей. Director дополнительно получает `managers[]`.
+
+### `PATCH /api/v1/staff/orders/:id`
+
+Только `new` / `confirmed`. Тело: адрес, контакты, оплата, срочность, `client_comment`, `manager_comment`, `items[]`.
+
 ### `POST /api/v1/staff/orders/:id/confirm`
+
+**Вход:** `{ "manager_comment": "string|null" }` — только `new`.
 
 ### `POST /api/v1/staff/orders/:id/cancel`
 
-**Вход:** `{ "reason": "string" }`
+**Вход:** `{ "reason": "string", "manager_comment": "string|null" }` — `new` или `confirmed`.
 
 ### `POST /api/v1/staff/orders/:id/deliver`
+
+**Вход:** `{ "manager_comment": "string|null" }` — только `confirmed`.
+
+### `PATCH /api/v1/staff/orders/:id/manager`
+
+**Вход:** `{ "manager_id": "uuid|null" }`  
+Director — любой активный manager или null. Manager — только себя и только если `manager_id` был null.
 
 ### `PATCH /api/v1/staff/orders/:id`
 
