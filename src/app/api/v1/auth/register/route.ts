@@ -5,9 +5,24 @@ import { create_session } from "@/lib/auth/session";
 import { get_post_auth_path } from "@/lib/access";
 import { register_client } from "@/lib/services/auth.service";
 import { register_schema } from "@/lib/validators/auth";
+import {
+  client_ip_from_headers,
+  consume_rate_limit,
+} from "@/lib/security/rate-limit";
+import { safe_log_error } from "@/lib/security/redact";
 
 export async function POST(request: Request) {
   try {
+    const ip = client_ip_from_headers(request.headers);
+    const limit = await consume_rate_limit("register", ip);
+    if (!limit.allowed) {
+      return api_error(
+        429,
+        "rate_limited",
+        "Слишком много регистраций с этого адреса. Попробуйте позже",
+      );
+    }
+
     const body = await request.json();
     const input = register_schema.parse(body);
     const payload = await register_client(input);
@@ -29,7 +44,7 @@ export async function POST(request: Request) {
     if (error instanceof AppError) {
       return api_error(error.status, error.code, error.message);
     }
-    console.error("register error", error);
+    safe_log_error("register error", error);
     return api_error(500, "internal_error", "Не удалось выполнить регистрацию");
   }
 }

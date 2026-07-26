@@ -2,8 +2,7 @@ import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
 import {
-  can_place_orders,
-  is_staff,
+  assert_approved_client,
   type AuthUserPayload,
 } from "@/lib/access";
 import { check_qty } from "@/lib/quantity";
@@ -40,24 +39,6 @@ function throw_already_processed(): never {
     "ORDER_ALREADY_PROCESSED",
     "Заказ уже обработан менеджером. Изменения недоступны",
   );
-}
-
-function assert_approved_client(payload: AuthUserPayload) {
-  if (is_staff(payload.user.roles)) {
-    throw new AppError(
-      403,
-      "forbidden",
-      "Клиентский заказ доступен только клиентам",
-    );
-  }
-  if (!can_place_orders(payload) || !payload.client) {
-    throw new AppError(
-      403,
-      "forbidden",
-      "Оформление заказа доступно после подтверждения заявки",
-    );
-  }
-  return payload.client.id;
 }
 
 export async function generate_order_number(

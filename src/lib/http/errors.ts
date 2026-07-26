@@ -7,6 +7,7 @@ export type ApiErrorCode =
   | "conflict"
   | "not_found"
   | "internal_error"
+  | "rate_limited"
   | "ORDER_ALREADY_PROCESSED"
   | "ORDER_STATUS_CONFLICT";
 
@@ -21,7 +22,10 @@ export function api_error(
       error: {
         code,
         message,
-        ...(details !== undefined ? { details } : {}),
+        // Zod field issues only — never stack traces / Prisma / secrets.
+        ...(code === "validation_error" && details !== undefined
+          ? { details }
+          : {}),
       },
     },
     { status },

@@ -1,8 +1,7 @@
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
 import {
-  can_place_orders,
-  is_staff,
+  assert_approved_client,
   type AuthUserPayload,
 } from "@/lib/access";
 import { can_add_to_cart, check_qty } from "@/lib/quantity";
@@ -34,24 +33,6 @@ type CartProductRow = {
   is_active: boolean;
   category: { is_active: boolean } | null;
 };
-
-function assert_approved_client(payload: AuthUserPayload) {
-  if (is_staff(payload.user.roles)) {
-    throw new AppError(
-      403,
-      "forbidden",
-      "Клиентская корзина доступна только клиентам",
-    );
-  }
-  if (!can_place_orders(payload) || !payload.client) {
-    throw new AppError(
-      403,
-      "forbidden",
-      "Корзина доступна после подтверждения заявки",
-    );
-  }
-  return payload.client.id;
-}
 
 function serialize_product(product: CartProductRow): SerializedCartProduct {
   return {

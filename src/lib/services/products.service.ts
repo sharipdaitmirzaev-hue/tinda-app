@@ -1,8 +1,11 @@
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
-import { can_place_orders, type AuthUserPayload } from "@/lib/access";
-import { assert_catalog_editor } from "@/lib/catalog/assert-editor";
+import {
+  assert_approved_client,
+  assert_catalog_editor,
+  type AuthUserPayload,
+} from "@/lib/access";
 import type { ProductSort } from "@/lib/catalog/constants";
 import { AVAILABILITY_LABELS } from "@/lib/catalog/constants";
 import {
@@ -10,12 +13,6 @@ import {
   extract_product_image_storage_key,
   upload_product_image as store_product_image,
 } from "@/lib/storage/product-images";
-
-function assert_approved_client(payload: AuthUserPayload) {
-  if (!can_place_orders(payload)) {
-    throw new AppError(403, "forbidden", "Каталог доступен после подтверждения заявки");
-  }
-}
 
 function empty_to_null(value: string | null | undefined): string | null {
   if (value === undefined || value === null || value.trim() === "") return null;

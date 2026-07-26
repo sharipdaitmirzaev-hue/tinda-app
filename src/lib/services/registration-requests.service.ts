@@ -2,10 +2,13 @@ import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
 import {
+  assert_staff,
   has_role,
-  is_staff,
+  is_director,
   type AuthUserPayload,
 } from "@/lib/access";
+
+export { assert_staff };
 
 const CLIENT_TYPE_LABELS: Record<string, string> = {
   shop: "Магазин",
@@ -20,12 +23,6 @@ const CLIENT_TYPE_LABELS: Record<string, string> = {
 export function client_type_label(client_type: string | null): string | null {
   if (!client_type) return null;
   return CLIENT_TYPE_LABELS[client_type] ?? client_type;
-}
-
-export function assert_staff(payload: AuthUserPayload): void {
-  if (!is_staff(payload.user.roles)) {
-    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
-  }
 }
 
 function map_request_list_item(client: {

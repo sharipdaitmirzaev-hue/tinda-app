@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { get_current_auth_payload } from "@/lib/auth/current-user";
 import {
   get_post_auth_path,
+  is_director,
   resolve_catalog_editor_access,
   resolve_client_shop_access,
   resolve_pending_page_access,
@@ -20,6 +21,11 @@ function apply_decision(
     redirect("/login");
   }
   return payload;
+}
+
+/** Page guard: any authenticated active user. */
+export async function require_authenticated_user(): Promise<AuthUserPayload> {
+  return require_auth();
 }
 
 export async function require_auth(): Promise<AuthUserPayload> {
@@ -42,7 +48,28 @@ export async function require_staff(): Promise<AuthUserPayload> {
   return apply_decision(resolve_staff_access(payload), payload);
 }
 
-/** Catalog, cart, orders — only approved clients. */
+/** Alias: approved client shop area. */
+export async function require_approved_client(): Promise<AuthUserPayload> {
+  return require_client_area();
+}
+
+/** Any client profile (pending/approved/rejected/blocked). Staff redirected away. */
+export async function require_client(): Promise<AuthUserPayload> {
+  const payload = await get_current_auth_payload();
+  if (!payload) {
+    redirect("/login");
+  }
+  const staff = resolve_staff_access(payload);
+  if (staff.allow) {
+    redirect("/staff/orders");
+  }
+  if (!payload.client) {
+    redirect("/login");
+  }
+  return payload;
+}
+
+/** Catalog, cart, orders, checkout — only approved clients. */
 export async function require_client_area(): Promise<AuthUserPayload> {
   const payload = await get_current_auth_payload();
   return apply_decision(resolve_client_shop_access(payload), payload);
@@ -58,4 +85,12 @@ export async function require_pending_client(): Promise<AuthUserPayload> {
 export async function require_catalog_editor(): Promise<AuthUserPayload> {
   const payload = await get_current_auth_payload();
   return apply_decision(resolve_catalog_editor_access(payload), payload);
+}
+
+export async function require_director(): Promise<AuthUserPayload> {
+  const payload = await require_staff();
+  if (!is_director(payload)) {
+    redirect("/staff/orders");
+  }
+  return payload;
 }

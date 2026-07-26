@@ -315,10 +315,12 @@ users 1:N sessions
 
 ## 5. Разграничение доступа (данные)
 
-- Клиент: строки с `clients.user_id = current_user.id`; заказы только своего `client_id`.  
-- Менеджер: `clients.manager_id = current_user.id` (или все, если `can_view_all_clients`).  
-- Руководитель (`director`): без фильтра по менеджеру.  
-- Заявки `pending` в Э1 видят все менеджеры и руководитель (чтобы заявки не зависали без назначенного менеджера).
+- Клиент: строки с `clients.user_id = current_user.id`; заказы только своего `client_id` из сессии (не из body).  
+- Менеджер: клиенты `clients.manager_id = current_user.id`; заказы где `orders.manager_id` **или** `client.manager_id` совпадает.  
+- `can_view_all_clients`: расширение видимости клиентов/заказов, **не** права director.  
+- Руководитель (`director`): без фильтра по менеджеру; может назначать активного manager.  
+- Заявки `pending` в Э1 видят все менеджеры и руководитель (чтобы заявки не зависали без назначенного менеджера).  
+- Сессии: `sessions.token_hash` = HMAC-SHA256(`SESSION_SECRET`, raw cookie token); raw token и `password_hash` в API не отдаются.
 
 ---
 

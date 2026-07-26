@@ -61,39 +61,22 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 
 ## Текущий прогресс
 
-Выполнены шаги **Э1.0–Э1.12**.  
-Дальше — только после подтверждения (Э1.13).
+Выполнены шаги **Э1.0–Э1.13**.  
+Дальше — только после подтверждения (Э1.14).
 
-### Auth / API (кратко)
+### Безопасность (Э1.13)
 
-- Auth: register / login / logout / me
-- Staff catalog: `/api/v1/staff/categories`, `/api/v1/staff/products`, `POST|DELETE .../products/:id/image`
-- Client catalog / cart / orders; staff orders
+- Cookie-сессия: `httpOnly`, `SameSite=Lax`, `Secure` в production; hash = HMAC(`SESSION_SECRET`)
+- CSRF: проверка Origin/Host для mutating `/api/*`
+- Rate limit (локальный in-memory): login, register, upload, create order  
+  **Production с несколькими процессами требует Redis** — текущий адаптер только для одного процесса
+- Security headers через `src/middleware.ts` (CSP, nosniff, frame deny, HSTS в prod)
+- Матрица ролей: см. `docs/tz.md` §4
+- Guards: `src/lib/access.ts`, `src/lib/auth/require-auth.ts`, `src/lib/orders/access.ts`
 
-### Фотографии товаров (Э1.12)
+### Фотографии товаров
 
-Локально (`STORAGE_DRIVER=local`):
-
-- файлы пишутся в `public/uploads/products/{product_id}/{uuid}.webp`
-- URL вида `/uploads/products/...`
-- каталог `public/uploads/products/**` в gitignore (секреты и загруженные файлы не коммитятся)
-
-Production (`STORAGE_DRIVER=s3`):
-
-```env
-STORAGE_DRIVER=s3
-STORAGE_ENDPOINT=https://s3.example.com
-STORAGE_REGION=ru-1
-STORAGE_BUCKET=tinda-product-images
-STORAGE_ACCESS_KEY=...
-STORAGE_SECRET_KEY=...
-STORAGE_PUBLIC_URL=https://cdn.example.com/tinda-product-images
-```
-
-Права ключа: `s3:PutObject`, `s3:DeleteObject` (и чтение через публичный URL/CDN).  
-Реальные ключи храните только в `.env` / секретах хостинга — не в репозитории.
-
-Доступ к staff-каталогу и API фото: `director` или manager с `can_edit_catalog=true`.
+`STORAGE_DRIVER=local|s3` — см. `.env.example`. Секреты только на сервере.
 
 ### Тесты
 

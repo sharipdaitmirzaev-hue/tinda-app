@@ -16,6 +16,17 @@
 }
 ```
 
+Коды: `validation_error`, `unauthorized`, `forbidden`, `conflict`, `not_found`, `internal_error`, `rate_limited`, `ORDER_ALREADY_PROCESSED`, `ORDER_STATUS_CONFLICT`.  
+В ответах нет stack trace, Prisma details, SQL, секретов окружения.
+
+### Безопасность API (Э1.13)
+
+- **CSRF:** для `POST/PUT/PATCH/DELETE` на `/api/*` проверяется `Origin` (или Host / Sec-Fetch-Site). Чужой Origin → `403`.
+- **Cookie:** `httpOnly`, `SameSite=Lax`, `Secure` в production, TTL 14 дней; в БД хранится HMAC-SHA256(`SESSION_SECRET`, token).
+- **Rate limit (in-memory, один процесс):** login (IP+login), register (IP), upload image (user_id), create order (user_id). Для нескольких инстансов production нужен Redis — локальный адаптер недостаточен.
+- **Headers:** CSP, `X-Content-Type-Options: nosniff`, `Referrer-Policy`, `Permissions-Policy`, `X-Frame-Options: DENY`, HSTS только в production.
+- Клиентские ответы не содержат `password_hash`, `token_hash`, `manager_comment`, price-поля.
+
 ---
 
 ## 1. Правила кратности (`qty`)

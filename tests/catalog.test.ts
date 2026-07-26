@@ -323,7 +323,7 @@ describe("catalog E1.5", () => {
       }),
     ).rejects.toMatchObject({
       code: "forbidden",
-      message: "Каталог доступен после подтверждения заявки",
+      message: "Доступно после подтверждения заявки",
     });
   });
 });

@@ -2,8 +2,9 @@ import { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
 import {
+  assert_staff,
   has_role,
-  is_staff,
+  is_director,
   type AuthUserPayload,
 } from "@/lib/access";
 import {
@@ -35,16 +36,6 @@ function throw_status_conflict(): never {
     "ORDER_STATUS_CONFLICT",
     "Статус заказа уже изменён. Обновите страницу",
   );
-}
-
-function assert_staff(payload: AuthUserPayload) {
-  if (!is_staff(payload.user.roles)) {
-    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
-  }
-}
-
-function is_director(payload: AuthUserPayload) {
-  return has_role(payload.user.roles, "director");
 }
 
 const staff_order_include = {

@@ -1,3 +1,5 @@
+import { AppError } from "@/lib/http/errors";
+
 export type RoleCode = "client" | "manager" | "director";
 
 export type ClientStatus = "pending" | "approved" | "rejected" | "blocked";
@@ -36,13 +38,28 @@ export function is_staff(roles: string[]): boolean {
   return has_role(roles, "manager") || has_role(roles, "director");
 }
 
+export function is_director(payload: AuthUserPayload): boolean {
+  return has_role(payload.user.roles, "director");
+}
+
 export function can_edit_catalog(payload: AuthUserPayload): boolean {
-  if (has_role(payload.user.roles, "director")) {
+  if (is_director(payload)) {
     return true;
   }
   return (
     has_role(payload.user.roles, "manager") &&
     Boolean(payload.employee?.can_edit_catalog)
+  );
+}
+
+/** Visibility expansion for clients/orders — not a director privilege. */
+export function can_view_all_clients(payload: AuthUserPayload): boolean {
+  if (is_director(payload)) {
+    return true;
+  }
+  return (
+    has_role(payload.user.roles, "manager") &&
+    Boolean(payload.employee?.can_view_all_clients)
   );
 }
 
@@ -73,6 +90,7 @@ export function get_post_auth_path(payload: AuthUserPayload): string {
 
 export function can_place_orders(payload: AuthUserPayload): boolean {
   return (
+    !is_staff(payload.user.roles) &&
     has_role(payload.user.roles, "client") &&
     payload.client?.status === "approved"
   );
@@ -82,7 +100,21 @@ export function can_access_client_shop(payload: AuthUserPayload): boolean {
   return can_place_orders(payload);
 }
 
-/** /catalog, /cart, /orders */
+/** Whether staff may access a client record by manager assignment. */
+export function can_access_client(
+  payload: AuthUserPayload,
+  client: { manager_id: string | null },
+): boolean {
+  if (!is_staff(payload.user.roles)) {
+    return false;
+  }
+  if (can_view_all_clients(payload)) {
+    return true;
+  }
+  return client.manager_id === payload.user.id;
+}
+
+/** /catalog, /cart, /orders, /checkout, /profile */
 export function resolve_client_shop_access(
   payload: AuthUserPayload | null,
 ): AccessDecision {
@@ -157,4 +189,64 @@ export function get_support_contacts(settings: {
     support_phone:
       typeof settings.support_phone === "string" ? settings.support_phone : null,
   };
+}
+
+/* -------------------------------------------------------------------------- */
+/* Shared server asserts (API + services). UI hiding is not a security control. */
+/* -------------------------------------------------------------------------- */
+
+export function assert_authenticated(
+  payload: AuthUserPayload | null,
+): AuthUserPayload {
+  if (!payload) {
+    throw new AppError(401, "unauthorized", "Требуется вход в систему");
+  }
+  return payload;
+}
+
+export function assert_staff(payload: AuthUserPayload): void {
+  if (!is_staff(payload.user.roles)) {
+    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
+  }
+}
+
+export function assert_director(payload: AuthUserPayload): void {
+  if (!is_director(payload)) {
+    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
+  }
+}
+
+export function assert_catalog_editor(payload: AuthUserPayload): void {
+  if (!is_staff(payload.user.roles) || !can_edit_catalog(payload)) {
+    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
+  }
+}
+
+/**
+ * Approved client for shop APIs (catalog/cart/orders).
+ * Staff are always rejected even if they also have a client profile.
+ */
+export function assert_approved_client(payload: AuthUserPayload): string {
+  if (is_staff(payload.user.roles)) {
+    throw new AppError(
+      403,
+      "forbidden",
+      "Клиентский раздел доступен только клиентам",
+    );
+  }
+  if (!can_place_orders(payload) || !payload.client) {
+    throw new AppError(
+      403,
+      "forbidden",
+      "Доступно после подтверждения заявки",
+    );
+  }
+  return payload.client.id;
+}
+
+export function assert_client_profile(payload: AuthUserPayload): string {
+  if (is_staff(payload.user.roles) || !payload.client) {
+    throw new AppError(403, "forbidden", "Недостаточно прав для этого действия");
+  }
+  return payload.client.id;
 }

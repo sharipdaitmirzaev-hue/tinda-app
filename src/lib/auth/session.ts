@@ -1,12 +1,24 @@
-import { createHash, randomBytes } from "crypto";
+import { createHmac, randomBytes } from "crypto";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
+import { assert_security_env, get_session_secret } from "@/lib/security/env";
 
 export const SESSION_COOKIE_NAME = "tinda_session";
 const SESSION_DAYS = 14;
 
 function hash_token(token: string): string {
-  return createHash("sha256").update(token).digest("hex");
+  assert_security_env();
+  return createHmac("sha256", get_session_secret()).update(token).digest("hex");
+}
+
+function session_cookie_options(expires: Date) {
+  return {
+    httpOnly: true as const,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax" as const,
+    path: "/",
+    expires,
+  };
 }
 
 function session_expiry_date(): Date {
@@ -29,13 +41,11 @@ export async function create_session(user_id: string): Promise<void> {
   });
 
   const cookie_store = await cookies();
-  cookie_store.set(SESSION_COOKIE_NAME, token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-    expires: expires_at,
-  });
+  cookie_store.set(
+    SESSION_COOKIE_NAME,
+    token,
+    session_cookie_options(expires_at),
+  );
 }
 
 export async function destroy_session(): Promise<void> {
@@ -43,17 +53,19 @@ export async function destroy_session(): Promise<void> {
   const token = cookie_store.get(SESSION_COOKIE_NAME)?.value;
 
   if (token) {
-    const token_hash = hash_token(token);
-    await prisma.sessions.deleteMany({ where: { token_hash } });
+    try {
+      const token_hash = hash_token(token);
+      await prisma.sessions.deleteMany({ where: { token_hash } });
+    } catch {
+      // Invalid secret / env during logout — still clear cookie.
+    }
   }
 
-  cookie_store.set(SESSION_COOKIE_NAME, "", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-    expires: new Date(0),
-  });
+  cookie_store.set(
+    SESSION_COOKIE_NAME,
+    "",
+    session_cookie_options(new Date(0)),
+  );
 }
 
 export async function get_session_user_id(): Promise<string | null> {
@@ -63,7 +75,13 @@ export async function get_session_user_id(): Promise<string | null> {
     return null;
   }
 
-  const token_hash = hash_token(token);
+  let token_hash: string;
+  try {
+    token_hash = hash_token(token);
+  } catch {
+    return null;
+  }
+
   const session = await prisma.sessions.findUnique({
     where: { token_hash },
     select: { user_id: true, expires_at: true },
@@ -75,13 +93,11 @@ export async function get_session_user_id(): Promise<string | null> {
 
   if (session.expires_at.getTime() < Date.now()) {
     await prisma.sessions.deleteMany({ where: { token_hash } });
-    cookie_store.set(SESSION_COOKIE_NAME, "", {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      path: "/",
-      expires: new Date(0),
-    });
+    cookie_store.set(
+      SESSION_COOKIE_NAME,
+      "",
+      session_cookie_options(new Date(0)),
+    );
     return null;
   }
 

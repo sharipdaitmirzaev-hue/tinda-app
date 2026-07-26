@@ -7,12 +7,23 @@ import {
   create_order_schema,
   idempotency_key_schema,
 } from "@/lib/validators/orders";
+import { consume_rate_limit } from "@/lib/security/rate-limit";
+import { safe_log_error } from "@/lib/security/redact";
 
 export async function POST(request: Request) {
   try {
     const payload = await get_current_auth_payload();
     if (!payload) {
       return api_error(401, "unauthorized", "Требуется вход в систему");
+    }
+
+    const limit = await consume_rate_limit("create_order", payload.user.id);
+    if (!limit.allowed) {
+      return api_error(
+        429,
+        "rate_limited",
+        "Слишком много заказов. Подождите и попробуйте снова",
+      );
     }
 
     const idempotency_header = request.headers.get("Idempotency-Key");
@@ -45,7 +56,7 @@ export async function POST(request: Request) {
     if (error instanceof AppError) {
       return api_error(error.status, error.code, error.message);
     }
-    console.error("create order error", error);
+    safe_log_error("create order error", error);
     return api_error(
       500,
       "internal_error",

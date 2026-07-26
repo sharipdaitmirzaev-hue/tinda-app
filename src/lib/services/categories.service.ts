@@ -1,7 +1,9 @@
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
-import type { AuthUserPayload } from "@/lib/access";
-import { assert_catalog_editor } from "@/lib/catalog/assert-editor";
+import {
+  assert_catalog_editor,
+  type AuthUserPayload,
+} from "@/lib/access";
 
 export type CategoryNode = {
   id: string;

@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
+import { assert_catalog_editor } from "@/lib/access";
 import { get_current_auth_payload } from "@/lib/auth/current-user";
-import { assert_catalog_editor } from "@/lib/catalog/assert-editor";
 import { AppError, api_error } from "@/lib/http/errors";
 import {
   remove_product_image,
   upload_product_image,
 } from "@/lib/services/products.service";
 import { PRODUCT_IMAGE_MAX_BYTES } from "@/lib/storage/product-images";
+import { consume_rate_limit } from "@/lib/security/rate-limit";
+import { safe_log_error } from "@/lib/security/redact";
 
 type RouteContext = { params: Promise<{ productId: string }> };
 
@@ -20,10 +22,18 @@ export async function POST(request: Request, context: RouteContext) {
     }
     assert_catalog_editor(payload);
 
+    const limit = await consume_rate_limit("upload_image", payload.user.id);
+    if (!limit.allowed) {
+      return api_error(
+        429,
+        "rate_limited",
+        "Слишком много загрузок изображений. Попробуйте позже",
+      );
+    }
+
     const content_length = request.headers.get("content-length");
     if (content_length) {
       const size = Number(content_length);
-      // Allow multipart overhead above the raw 5 MB file limit.
       if (Number.isFinite(size) && size > PRODUCT_IMAGE_MAX_BYTES + 1024 * 256) {
         return api_error(
           400,
@@ -61,7 +71,7 @@ export async function POST(request: Request, context: RouteContext) {
     if (error instanceof AppError) {
       return api_error(error.status, error.code, error.message);
     }
-    console.error("staff product image upload error", error);
+    safe_log_error("staff product image upload error", error);
     return api_error(500, "internal_error", "Не удалось загрузить изображение");
   }
 }
@@ -81,7 +91,7 @@ export async function DELETE(_request: Request, context: RouteContext) {
     if (error instanceof AppError) {
       return api_error(error.status, error.code, error.message);
     }
-    console.error("staff product image delete error", error);
+    safe_log_error("staff product image delete error", error);
     return api_error(500, "internal_error", "Не удалось удалить изображение");
   }
 }

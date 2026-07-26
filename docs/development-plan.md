@@ -29,22 +29,22 @@
 | **Э1.10** | История и карточка заказа клиента | готово |
 | **Э1.11** | Staff: заказы confirm/cancel/deliver | готово |
 | **Э1.12** | Staff CRUD каталога + фото | готово |
-| **Э1.13** | Проверка прав client/manager/director | ожидает |
+| **Э1.13** | Проверка прав client/manager/director | готово |
 | **Э1.14** | Адаптив, пустые состояния, подготовка к деплою | ожидает |
 
 ## Правило работы
 
 После каждого согласованного блока шагов — остановка и отчёт.  
-**Э1.12 выполнен.** Дальше — только после подтверждения (Э1.13).
+**Э1.13 выполнен.** Дальше — только после подтверждения (Э1.14).
 
-### Э1.12 — кратко
+### Э1.13 — кратко
 
-- Staff UI: `/staff/categories`, `/staff/products`, создание/редактирование товара
-- Загрузка / замена / удаление фото (`sharp` → WebP, max 1600px)
-- Адаптер хранилища: `STORAGE_DRIVER=local|s3` (`src/lib/storage/product-images.ts`)
-- Soft-деактивация товаров и категорий (без физического удаления)
-- Guard `can_edit_catalog` / `assert_catalog_editor`
-- Цены не добавлялись
+- Единые guards: `src/lib/access.ts`, `require-auth`, `orders/access`, `assert_catalog_editor`
+- CSRF Origin/Host для mutating API (`src/middleware.ts`)
+- Rate limit (in-memory): login, register, image upload, create order
+- Security headers: CSP, nosniff, Referrer-Policy, Permissions-Policy, frame deny, HSTS (prod)
+- SESSION_SECRET обязателен; session token hash = HMAC-SHA256(SESSION_SECRET)
+- Аудит ответов / redaction логов; тесты `tests/security-access.test.ts`
 
 ## Критерий готовности всего Э1 (позже)
 
