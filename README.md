@@ -61,8 +61,8 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 
 ## Текущий прогресс
 
-Выполнены шаги **Э1.0–Э1.3**.  
-Дальше — только после подтверждения (Э1.4: заявки staff approve/reject).
+Выполнены шаги **Э1.0–Э1.4**.  
+Дальше — только после подтверждения (Э1.5: данные каталога / CRUD).
 
 ### Auth API
 
@@ -72,6 +72,7 @@ Health: [http://localhost:3000/api/v1/health](http://localhost:3000/api/v1/healt
 - `GET /api/v1/auth/me`
 - `GET /api/v1/cities` (для формы регистрации)
 - `GET /api/v1/client/registration-status`
+- `GET/POST /api/v1/staff/registration-requests` (+ approve/reject)
 
 ### Тесты
 

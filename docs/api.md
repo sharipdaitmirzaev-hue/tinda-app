@@ -334,17 +334,25 @@ Query: `status`, `page`, `page_size`
 
 ### `GET /api/v1/staff/registration-requests`
 
-Query: `status` (`pending` по умолчанию), `page`, `page_size`
+**Кто:** `manager`, `director`  
+Query: `status` (`pending`|`rejected`, по умолчанию `pending`), `city_id`, `q`, `page`, `page_size`  
+Сортировка: `created_at` DESC.
 
 ### `GET /api/v1/staff/registration-requests/:client_id`
 
+Возвращает `request`, список `managers` (для director) и флаг `can_assign_manager`.
+
 ### `POST /api/v1/staff/registration-requests/:client_id/approve`
 
-**Вход:** `{ "manager_id": "uuid|null" }`
+**Вход:** `{ "manager_id": "uuid|null" }`  
+- `manager`: всегда назначает себя, `manager_id` из тела игнорируется.  
+- `director`: может указать менеджера или `null`.  
+Только статус `pending`. Иначе: «Заявка уже обработана».
 
 ### `POST /api/v1/staff/registration-requests/:client_id/reject`
 
-**Вход:** `{ "reason": "string" }`
+**Вход:** `{ "reason": "string" }` (обязательно, не пустое)  
+Только статус `pending`.
 
 ---
 
