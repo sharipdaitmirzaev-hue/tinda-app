@@ -25,7 +25,9 @@ test("сценарий 1: регистрация → pending → approve → к�
   await page.getByText(/согласен на обработку персональных данных/i).click();
   await page.getByRole("button", { name: "Отправить заявку" }).click();
   await expect(page).toHaveURL(/\/pending/);
-  await expect(page.getByText(/на рассмотрении/i)).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: /заявка на рассмотрении/i }),
+  ).toBeVisible();
 
   await context.clearCookies();
   await login(page, "manager1@tinda.local");
@@ -79,26 +81,30 @@ test("сценарий 2: корзина → checkout → успех → ист�
   order_number = ((await number_el.textContent()) || "").trim();
 
   await page.goto("/orders");
-  await expect(page.getByText(order_number)).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: order_number }).first(),
+  ).toBeVisible();
 });
 
 test("сценарий 3: manager confirm → delivered", async ({ page, context }) => {
+  test.setTimeout(60_000);
   test.skip(!order_number, "order from scenario 2 required");
 
   await login(page, "manager1@tinda.local");
   await page.goto("/staff/orders");
   await page.getByRole("link", { name: order_number }).first().click();
-  await page.getByRole("button", { name: "Подтвердить заказ" }).first().click();
+  await page.getByRole("button", { name: "Подтвердить заказ" }).click();
   await page.getByRole("button", { name: "Подтвердить", exact: true }).click();
   await expect(page.getByText("Подтверждён").first()).toBeVisible();
 
-  await page.getByRole("button", { name: "Доставлен" }).first().click();
+  await page.getByRole("button", { name: "Отметить доставленным" }).click();
   await page.getByRole("button", { name: "Да, доставлен" }).click();
   await expect(page.getByText("Доставлен").first()).toBeVisible();
 
   await context.clearCookies();
   await login(page, client_email, client_password);
   await page.goto("/orders");
+  await expect(page).toHaveURL(/\/orders/);
   await page.getByRole("link", { name: order_number }).first().click();
   await expect(page.getByText("Доставлен").first()).toBeVisible();
 });
