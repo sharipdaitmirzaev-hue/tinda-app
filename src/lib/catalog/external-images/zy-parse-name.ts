@@ -115,6 +115,26 @@ export function detect_carbonation(
   return "unknown";
 }
 
+export type ZyPackageCode =
+  | "PET"
+  | "CAN"
+  | "GLASS"
+  | "CARTON"
+  | "POUCH"
+  | "PACK"
+  | "OTHER"
+  | "UNK";
+
+/** Canonical juice package codes used by second-pass review. */
+export type JuicePackageType =
+  | "carton"
+  | "pet"
+  | "glass"
+  | "can"
+  | "pouch"
+  | "other"
+  | "unknown";
+
 export type ParsedZyName = {
   source_name: string;
   brand: string;
@@ -122,40 +142,228 @@ export type ParsedZyName = {
   volume_text: string | null;
   volume_ml: number | null;
   package_type: string | null;
-  package_code: "PET" | "CAN" | "GLASS" | "PACK" | "UNK";
+  package_code: ZyPackageCode;
   sugar_free: boolean | null;
 };
 
+const PACKAGE_TYPE_TO_CODE: Record<
+  Exclude<JuicePackageType, "unknown">,
+  ZyPackageCode
+> = {
+  pet: "PET",
+  can: "CAN",
+  glass: "GLASS",
+  carton: "CARTON",
+  pouch: "POUCH",
+  other: "OTHER",
+};
+
+/** Russian display labels kept for backward-compatible scrape outputs. */
+const PACKAGE_TYPE_RU: Record<Exclude<JuicePackageType, "unknown" | "other">, string> =
+  {
+    pet: "ПЭТ",
+    glass: "стекло",
+    can: "банка",
+    carton: "картон",
+    pouch: "пауч",
+  };
+
+const CARTON_LIKELY_BRANDS = new Set(
+  [
+    "добрый",
+    "вико",
+    "j7",
+    "rich",
+    "рич",
+    "sis",
+    "сады придонья",
+    "сочная долина",
+    "любимый",
+    "мой",
+    "сантал",
+    "дары кубани",
+    "фрутоняня",
+    "агуша",
+    "малышам",
+    "маленькое счастье",
+  ].map((x) => x.toLowerCase()),
+);
+
+/** Typical retail carton / Tetra volumes for juices & nectars (ml). */
+const CARTON_TYPICAL_VOLUMES_ML = new Set([
+  200, 250, 950, 970, 1000, 1500, 1600, 1930, 2000,
+]);
+
+export function juice_package_code(type: JuicePackageType): ZyPackageCode {
+  if (type === "unknown") return "UNK";
+  return PACKAGE_TYPE_TO_CODE[type];
+}
+
+export function juice_package_ru(type: JuicePackageType): string | null {
+  if (type === "unknown" || type === "other") return type === "other" ? "другое" : null;
+  return PACKAGE_TYPE_RU[type];
+}
+
+/**
+ * Explicit package markers from title / description / attributes.
+ * Ignores transport outer boxes ("коробка 12 шт") unless a unit package is also named.
+ */
+export function detect_explicit_juice_package(text: string): JuicePackageType {
+  const t = lower(text);
+  if (!t) return "unknown";
+
+  const has_unit =
+    /(пл\s*\/\s*б|пэт|pet|пластик|п\s*\/\s*бут|ст\s*\/\s*б|стекл|ж\s*\/\s*б|банка|тетра|tetra|т\s*\/\s*п|тпак|pure[\s-]?pak|пюр|combibloc|sig\b|дой[\s-]?пак|doypack|pouch|пауч|carton|картон)/.test(
+      t,
+    );
+  const transport_only =
+    !has_unit &&
+    /(транспортн\w*\s*короб|коробк\w*\s*\d+\s*шт|блок\s*\d+\s*шт|упаковк\w*\s*\d+\s*шт)/.test(
+      t,
+    );
+  if (transport_only) return "unknown";
+
+  if (/(пл\s*\/\s*б|пэт|\bpet\b|пластик|п\s*\/\s*бут)/.test(t)) return "pet";
+  if (/(ст\s*\/\s*б|стекл|\bglass\b)/.test(t)) return "glass";
+  if (/(ж\s*\/\s*б|жест|алюм|\bcan\b|банка)/.test(t)) return "can";
+  if (
+    /(тетра|tetra|т\s*\/\s*п|тпак|т-пак|pure[\s-]?pak|пюр[\s-]?пак|combibloc|\bsig\b|brick|carton|картон\w*\s*пак|тетрапак)/.test(
+      t,
+    )
+  ) {
+    return "carton";
+  }
+  if (/(дой[\s-]?пак|doypack|\bpouch\b|пауч|мягк\w*\s*упаков)/.test(t)) {
+    return "pouch";
+  }
+  return "unknown";
+}
+
+export type JuicePackageInference = {
+  package_type: JuicePackageType;
+  package_code: ZyPackageCode;
+  confidence: "high" | "medium" | "low";
+  source:
+    | "name_explicit"
+    | "description_explicit"
+    | "attributes_explicit"
+    | "brand_volume_heuristic"
+    | "unknown";
+  evidence: string[];
+};
+
+/**
+ * Infer juice/nectar/mors package for second-pass review.
+ * Does not invent package for ambiguous soft drinks without markers.
+ */
+export function infer_juice_package(input: {
+  source_name: string;
+  brand?: string | null;
+  volume_ml?: number | null;
+  product_type?: JuiceProductType | string | null;
+  description?: string | null;
+  attributes_text?: string | null;
+}): JuicePackageInference {
+  const evidence: string[] = [];
+  const name_pkg = detect_explicit_juice_package(input.source_name);
+  if (name_pkg !== "unknown") {
+    evidence.push(`name:${name_pkg}`);
+    return {
+      package_type: name_pkg,
+      package_code: juice_package_code(name_pkg),
+      confidence: "high",
+      source: "name_explicit",
+      evidence,
+    };
+  }
+
+  const desc = String(input.description || "");
+  const desc_pkg = detect_explicit_juice_package(desc);
+  if (desc_pkg !== "unknown") {
+    evidence.push(`description:${desc_pkg}`);
+    return {
+      package_type: desc_pkg,
+      package_code: juice_package_code(desc_pkg),
+      confidence: "high",
+      source: "description_explicit",
+      evidence,
+    };
+  }
+
+  const attrs = String(input.attributes_text || "");
+  const attr_pkg = detect_explicit_juice_package(attrs);
+  if (attr_pkg !== "unknown") {
+    evidence.push(`attributes:${attr_pkg}`);
+    return {
+      package_type: attr_pkg,
+      package_code: juice_package_code(attr_pkg),
+      confidence: "high",
+      source: "attributes_explicit",
+      evidence,
+    };
+  }
+
+  const ptype = String(input.product_type || "");
+  const brand = lower(input.brand || detect_brand(input.source_name));
+  const volume_ml = input.volume_ml ?? parse_volume_ml(input.source_name);
+  const brand_ok = CARTON_LIKELY_BRANDS.has(brand);
+  const volume_ok =
+    volume_ml != null && CARTON_TYPICAL_VOLUMES_ML.has(volume_ml);
+  const juice_like = ["juice", "nectar", "mors"].includes(ptype);
+  const kids_juice_drink =
+    ptype === "juice_drink" &&
+    (brand_ok || detect_kids_line(input.source_name)) &&
+    volume_ml === 200;
+
+  // Retail juice/nectar cartons (Tetra / Pure-Pak) rarely spell "тетра" in title.
+  if ((juice_like || kids_juice_drink) && brand_ok && volume_ok) {
+    evidence.push(`brand=${brand}`, `volume_ml=${volume_ml}`, `product_type=${ptype}`);
+    return {
+      package_type: "carton",
+      package_code: "CARTON",
+      confidence: kids_juice_drink || volume_ml === 200 || volume_ml === 1000
+        ? "high"
+        : "medium",
+      source: "brand_volume_heuristic",
+      evidence,
+    };
+  }
+
+  evidence.push("no_package_signal");
+  return {
+    package_type: "unknown",
+    package_code: "UNK",
+    confidence: "low",
+    source: "unknown",
+    evidence,
+  };
+}
+
 function detect_package(name: string): {
   package_type: string | null;
-  package_code: ParsedZyName["package_code"];
+  package_code: ZyPackageCode;
 } {
-  const t = lower(name);
-  if (/(пл\s*\/\s*б|пэт|pet|пластик)/.test(t)) {
+  const explicit = detect_explicit_juice_package(name);
+  if (explicit !== "unknown") {
+    const code = juice_package_code(explicit);
+    const ru = juice_package_ru(explicit);
+    return { package_type: ru || explicit, package_code: code };
+  }
+  if (/(п\s*\/\s*бут|бут)/.test(lower(name)) && /(пэт|pet|пласт)/.test(lower(name))) {
     return { package_type: "ПЭТ", package_code: "PET" };
   }
-  if (/(ст\s*\/\s*б|стекл)/.test(t)) {
-    return { package_type: "стекло", package_code: "GLASS" };
-  }
-  if (/(ж\s*\/\s*б|жест|алюм|банка|\bcan\b)/.test(t)) {
-    return { package_type: "банка", package_code: "CAN" };
-  }
-  if (/(тетра|tetra|т\s*\/\s*п|тпак|т-пак|карто|пюр[-]?пак|combibloc|brick)/.test(t)) {
-    return { package_type: "картон", package_code: "CARTON" };
-  }
-  if (/(п\s*\/\s*бут|бут)/.test(t) && /(пэт|pet|пласт)/.test(t)) {
-    return { package_type: "ПЭТ", package_code: "PET" };
-  }
-  if (/п\s*\/\s*бут/.test(t)) {
+  if (/п\s*\/\s*бут/.test(lower(name))) {
     return { package_type: "ПЭТ", package_code: "PET" };
   }
   const norm = normalize_package(name);
   if (norm === "pet") return { package_type: "ПЭТ", package_code: "PET" };
   if (norm === "glass") return { package_type: "стекло", package_code: "GLASS" };
   if (norm === "can") return { package_type: "банка", package_code: "CAN" };
+  if (norm === "pouch") return { package_type: "пауч", package_code: "POUCH" };
   if (norm === "pack" || norm === "carton") {
     return { package_type: "картон", package_code: "CARTON" };
   }
+  if (norm === "other") return { package_type: "другое", package_code: "OTHER" };
   return { package_type: null, package_code: "UNK" };
 }
 

@@ -211,7 +211,7 @@ function package_ok(card: Card, tinda: TindaProductImageTarget | null): boolean 
     )
       ? from_name
       : "");
-  if (!sp || !["pet", "glass", "can", "carton", "pack"].includes(sp)) {
+  if (!sp || !["pet", "glass", "can", "carton", "pack", "pouch", "other"].includes(sp)) {
     return false;
   }
   if (!tinda) return true;

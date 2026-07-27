@@ -32,7 +32,8 @@
     "zelenoe-images:gallery": "tsx scripts/zelenoe-yabloko/build-gallery.ts",
     "zelenoe-images:serve": "tsx scripts/zelenoe-yabloko/gallery-server.ts",
     "zelenoe-images:auto-review": "tsx scripts/zelenoe-yabloko/auto-review.ts",
-    "zelenoe-images:prepare-approved": "tsx scripts/zelenoe-yabloko/prepare-approved.ts"
+    "zelenoe-images:prepare-approved": "tsx scripts/zelenoe-yabloko/prepare-approved.ts",
+    "zy:second-pass-juice": "tsx scripts/zelenoe-yabloko/second-pass-juice-review.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",

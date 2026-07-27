@@ -83,12 +83,19 @@ export function parse_volume_ml(raw: unknown): number | null {
 export function normalize_package(raw: unknown): string {
   const t = lower(raw);
   if (!t) return "";
+  if (t === "unknown" || t === "unk") return "";
+  if (t === "other") return "other";
   if (/(пэт|pet|пластик)/.test(t)) return "pet";
   if (/(стекл|glass)/.test(t)) return "glass";
   if (/(жест|алюм|can|банка|ж\s*\/\s*б|жб)/.test(t)) return "can";
-  if (/(тетра|tetra|т\s*\/\s*п|тпак|карто|combibloc|brick|пюр)/.test(t)) {
+  if (
+    /(тетра|tetra|т\s*\/\s*п|тпак|карто|combibloc|brick|пюр|pure[\s-]?pak|sig\b|carton)/.test(
+      t,
+    )
+  ) {
     return "carton";
   }
+  if (/(дой[\s-]?пак|doypack|pouch|пауч)/.test(t)) return "pouch";
   if (/(упаков)/.test(t)) return "pack";
   return translit(t).replace(/\s+/g, "");
 }

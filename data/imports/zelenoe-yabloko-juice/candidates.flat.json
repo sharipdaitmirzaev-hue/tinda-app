@@ -6,7 +6,7 @@
     "brand": "Добрый",
     "flavor": "мультифрукт",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -17,7 +17,7 @@
     "source_brand": "Добрый",
     "source_flavor": "мультифрукт",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6912",
     "source_category_slug": "soki-nektary-morsy",
@@ -25,7 +25,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -34,7 +34,7 @@
     "brand": "Добрый",
     "flavor": "яблоко",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -45,7 +45,7 @@
     "source_brand": "Добрый",
     "source_flavor": "яблоко",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6913",
     "source_category_slug": "soki-nektary-morsy",
@@ -53,7 +53,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -62,7 +62,7 @@
     "brand": "Вико",
     "flavor": "апельсиновый",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -73,7 +73,7 @@
     "source_brand": "Вико",
     "source_flavor": "апельсиновый",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9695",
     "source_category_slug": "soki-nektary-morsy",
@@ -81,7 +81,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -174,7 +174,7 @@
     "brand": "Добрый",
     "flavor": "апельсин",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -185,7 +185,7 @@
     "source_brand": "Добрый",
     "source_flavor": "апельсин",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6909",
     "source_category_slug": "soki-nektary-morsy",
@@ -193,7 +193,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -202,7 +202,7 @@
     "brand": "Ириб",
     "flavor": "ст б мультифруктовый",
     "volume_text": "750 мл",
-    "package_type": "стекло",
+    "package_type": "glass",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -213,7 +213,7 @@
     "source_brand": "Ириб",
     "source_flavor": "ст б мультифруктовый",
     "source_volume": "750 мл",
-    "source_package": "стекло",
+    "source_package": "glass",
     "source_priority": 3,
     "source_product_id": "24142",
     "source_category_slug": "soki-nektary-morsy",
@@ -258,7 +258,7 @@
     "brand": "Вико",
     "flavor": "ананасовый",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -269,7 +269,7 @@
     "source_brand": "Вико",
     "source_flavor": "ананасовый",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9693",
     "source_category_slug": "soki-nektary-morsy",
@@ -277,7 +277,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -286,7 +286,7 @@
     "brand": "Вико",
     "flavor": "вишневый",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -297,7 +297,7 @@
     "source_brand": "Вико",
     "source_flavor": "вишневый",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9698",
     "source_category_slug": "soki-nektary-morsy",
@@ -305,7 +305,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -314,7 +314,7 @@
     "brand": "Вико",
     "flavor": "мультифрукт",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -325,7 +325,7 @@
     "source_brand": "Вико",
     "source_flavor": "мультифрукт",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9701",
     "source_category_slug": "soki-nektary-morsy",
@@ -333,7 +333,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -342,7 +342,7 @@
     "brand": "SIS",
     "flavor": "апельсин",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -353,7 +353,7 @@
     "source_brand": "SIS",
     "source_flavor": "апельсин",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6849",
     "source_category_slug": "soki-nektary-morsy",
@@ -361,7 +361,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -398,7 +398,7 @@
     "brand": "Вико",
     "flavor": "зеленое яблоко",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -409,7 +409,7 @@
     "source_brand": "Вико",
     "source_flavor": "зеленое яблоко",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9700",
     "source_category_slug": "soki-nektary-morsy",
@@ -417,7 +417,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -454,7 +454,7 @@
     "brand": "Вико",
     "flavor": "гранатовый",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -465,7 +465,7 @@
     "source_brand": "Вико",
     "source_flavor": "гранатовый",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9699",
     "source_category_slug": "soki-nektary-morsy",
@@ -473,7 +473,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -482,7 +482,7 @@
     "brand": "Вико",
     "flavor": "яблоко",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -493,7 +493,7 @@
     "source_brand": "Вико",
     "source_flavor": "яблоко",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9704",
     "source_category_slug": "soki-nektary-morsy",
@@ -501,7 +501,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -510,7 +510,7 @@
     "brand": "Сады Придонья",
     "flavor": "яблочный",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": true,
     "product_type": "juice",
     "has_pulp": null,
@@ -521,7 +521,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "яблочный",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9769",
     "source_category_slug": "soki-nektary-morsy",
@@ -529,7 +529,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -538,7 +538,7 @@
     "brand": "Сочная долина",
     "flavor": "мультифрукт",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -549,7 +549,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "мультифрукт",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6970",
     "source_category_slug": "soki-nektary-morsy",
@@ -557,7 +557,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -650,7 +650,7 @@
     "brand": "Добрый",
     "flavor": "палпи пл б апельсин",
     "volume_text": "900 мл",
-    "package_type": "ПЭТ",
+    "package_type": "pet",
     "sugar_free": null,
     "product_type": "juice_drink",
     "has_pulp": null,
@@ -661,7 +661,7 @@
     "source_brand": "Добрый",
     "source_flavor": "палпи пл б апельсин",
     "source_volume": "900 мл",
-    "source_package": "ПЭТ",
+    "source_package": "pet",
     "source_priority": 3,
     "source_product_id": "6547",
     "source_category_slug": "soki-nektary-morsy",
@@ -706,7 +706,7 @@
     "brand": "Добрый",
     "flavor": "ананас яблоко",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -717,7 +717,7 @@
     "source_brand": "Добрый",
     "source_flavor": "ананас яблоко",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "53318",
     "source_category_slug": "soki-nektary-morsy",
@@ -725,7 +725,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -734,7 +734,7 @@
     "brand": "Сочная долина",
     "flavor": "смесь из ягод фруктов",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -745,7 +745,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "смесь из ягод фруктов",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6972",
     "source_category_slug": "soki-nektary-morsy",
@@ -753,7 +753,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -790,7 +790,7 @@
     "brand": "SIS",
     "flavor": "вишня",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -801,7 +801,7 @@
     "source_brand": "SIS",
     "source_flavor": "вишня",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6850",
     "source_category_slug": "soki-nektary-morsy",
@@ -809,7 +809,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -818,7 +818,7 @@
     "brand": "Рич",
     "flavor": "персик",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -829,7 +829,7 @@
     "source_brand": "Рич",
     "source_flavor": "персик",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "47774",
     "source_category_slug": "soki-nektary-morsy",
@@ -837,7 +837,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -846,7 +846,7 @@
     "brand": "Добрый",
     "flavor": "мультифрукт",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -857,7 +857,7 @@
     "source_brand": "Добрый",
     "source_flavor": "мультифрукт",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "38041",
     "source_category_slug": "soki-nektary-morsy",
@@ -865,7 +865,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -874,7 +874,7 @@
     "brand": "Вико",
     "flavor": "персиковый",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -885,7 +885,7 @@
     "source_brand": "Вико",
     "source_flavor": "персиковый",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9702",
     "source_category_slug": "soki-nektary-morsy",
@@ -893,7 +893,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -930,7 +930,7 @@
     "brand": "Рич",
     "flavor": "вишня",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -941,7 +941,7 @@
     "source_brand": "Рич",
     "source_flavor": "вишня",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9755",
     "source_category_slug": "soki-nektary-morsy",
@@ -949,7 +949,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -958,7 +958,7 @@
     "brand": "SIS",
     "flavor": "клубнично банановый",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -969,7 +969,7 @@
     "source_brand": "SIS",
     "source_flavor": "клубнично банановый",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6852",
     "source_category_slug": "soki-nektary-morsy",
@@ -977,7 +977,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1042,7 +1042,7 @@
     "brand": "Вико",
     "flavor": "мультифрукт",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1053,7 +1053,7 @@
     "source_brand": "Вико",
     "source_flavor": "мультифрукт",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "13525",
     "source_category_slug": "soki-nektary-morsy",
@@ -1061,7 +1061,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1070,7 +1070,7 @@
     "brand": "Добрый",
     "flavor": "яблоко персик",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1081,7 +1081,7 @@
     "source_brand": "Добрый",
     "source_flavor": "яблоко персик",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6914",
     "source_category_slug": "soki-nektary-morsy",
@@ -1089,7 +1089,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1098,7 +1098,7 @@
     "brand": "Сады Придонья",
     "flavor": "мультифрукт",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": true,
     "product_type": "juice",
     "has_pulp": null,
@@ -1109,7 +1109,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "мультифрукт",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9762",
     "source_category_slug": "soki-nektary-morsy",
@@ -1117,7 +1117,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1126,7 +1126,7 @@
     "brand": "Вико",
     "flavor": "виноградно яблочный",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1137,7 +1137,7 @@
     "source_brand": "Вико",
     "source_flavor": "виноградно яблочный",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9696",
     "source_category_slug": "soki-nektary-morsy",
@@ -1145,7 +1145,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1210,7 +1210,7 @@
     "brand": "Вико",
     "flavor": "персик",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1221,7 +1221,7 @@
     "source_brand": "Вико",
     "source_flavor": "персик",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "24433",
     "source_category_slug": "soki-nektary-morsy",
@@ -1229,7 +1229,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1266,7 +1266,7 @@
     "brand": "SIS",
     "flavor": "гранат",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1277,7 +1277,7 @@
     "source_brand": "SIS",
     "source_flavor": "гранат",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6851",
     "source_category_slug": "soki-nektary-morsy",
@@ -1285,7 +1285,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1294,7 +1294,7 @@
     "brand": "Рич",
     "flavor": "яблоко",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1305,7 +1305,7 @@
     "source_brand": "Рич",
     "source_flavor": "яблоко",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9757",
     "source_category_slug": "soki-nektary-morsy",
@@ -1313,7 +1313,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1322,7 +1322,7 @@
     "brand": "Сочная долина",
     "flavor": "клубника земляника",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1333,7 +1333,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "клубника земляника",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6969",
     "source_category_slug": "soki-nektary-morsy",
@@ -1341,7 +1341,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1350,7 +1350,7 @@
     "brand": "Добрый",
     "flavor": "манго",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1361,7 +1361,7 @@
     "source_brand": "Добрый",
     "source_flavor": "манго",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6911",
     "source_category_slug": "soki-nektary-morsy",
@@ -1369,7 +1369,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1378,7 +1378,7 @@
     "brand": "Сады Придонья",
     "flavor": "яблоко вишня",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": true,
     "product_type": "juice",
     "has_pulp": null,
@@ -1389,7 +1389,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "яблоко вишня",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9765",
     "source_category_slug": "soki-nektary-morsy",
@@ -1397,7 +1397,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1406,7 +1406,7 @@
     "brand": "Сады Придонья",
     "flavor": "клюквенный",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "mors",
     "has_pulp": null,
@@ -1417,7 +1417,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "клюквенный",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "5955",
     "source_category_slug": "soki-nektary-morsy",
@@ -1425,7 +1425,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1434,7 +1434,7 @@
     "brand": "Добрый",
     "flavor": "палпи пл б апельсин",
     "volume_text": "450 мл",
-    "package_type": "ПЭТ",
+    "package_type": "pet",
     "sugar_free": null,
     "product_type": "juice_drink",
     "has_pulp": null,
@@ -1445,7 +1445,7 @@
     "source_brand": "Добрый",
     "source_flavor": "палпи пл б апельсин",
     "source_volume": "450 мл",
-    "source_package": "ПЭТ",
+    "source_package": "pet",
     "source_priority": 3,
     "source_product_id": "6545",
     "source_category_slug": "soki-nektary-morsy",
@@ -1462,7 +1462,7 @@
     "brand": "Мой",
     "flavor": "яблочный из зел яблок",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1473,7 +1473,7 @@
     "source_brand": "Мой",
     "source_flavor": "яблочный из зел яблок",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6942",
     "source_category_slug": "soki-nektary-morsy",
@@ -1481,7 +1481,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1490,7 +1490,7 @@
     "brand": "Сочная долина",
     "flavor": "яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1501,7 +1501,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6964",
     "source_category_slug": "soki-nektary-morsy",
@@ -1509,7 +1509,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1574,7 +1574,7 @@
     "brand": "Ириб",
     "flavor": "ст б яблочный",
     "volume_text": "500 мл",
-    "package_type": "стекло",
+    "package_type": "glass",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1585,7 +1585,7 @@
     "source_brand": "Ириб",
     "source_flavor": "ст б яблочный",
     "source_volume": "500 мл",
-    "source_package": "стекло",
+    "source_package": "glass",
     "source_priority": 3,
     "source_product_id": "42789",
     "source_category_slug": "soki-nektary-morsy",
@@ -1602,7 +1602,7 @@
     "brand": "Добрый",
     "flavor": "апельсин мандарин",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1613,7 +1613,7 @@
     "source_brand": "Добрый",
     "source_flavor": "апельсин мандарин",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "38732",
     "source_category_slug": "soki-nektary-morsy",
@@ -1621,7 +1621,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1630,7 +1630,7 @@
     "brand": "Рич",
     "flavor": "мультифрукт",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1641,7 +1641,7 @@
     "source_brand": "Рич",
     "source_flavor": "мультифрукт",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9756",
     "source_category_slug": "soki-nektary-morsy",
@@ -1649,7 +1649,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1686,7 +1686,7 @@
     "brand": "SIS",
     "flavor": "мультифрукт",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1697,7 +1697,7 @@
     "source_brand": "SIS",
     "source_flavor": "мультифрукт",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6854",
     "source_category_slug": "soki-nektary-morsy",
@@ -1705,7 +1705,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1770,7 +1770,7 @@
     "brand": "Вико",
     "flavor": "вишневый",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1781,7 +1781,7 @@
     "source_brand": "Вико",
     "source_flavor": "вишневый",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6892",
     "source_category_slug": "soki-nektary-morsy",
@@ -1789,7 +1789,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1798,7 +1798,7 @@
     "brand": "Добрый",
     "flavor": "виноград",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1809,7 +1809,7 @@
     "source_brand": "Добрый",
     "source_flavor": "виноград",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6910",
     "source_category_slug": "soki-nektary-morsy",
@@ -1817,7 +1817,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1854,7 +1854,7 @@
     "brand": "Мой",
     "flavor": "ананас",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -1865,7 +1865,7 @@
     "source_brand": "Мой",
     "source_flavor": "ананас",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6943",
     "source_category_slug": "soki-nektary-morsy",
@@ -1873,7 +1873,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1882,7 +1882,7 @@
     "brand": "Вико",
     "flavor": "апельсиновый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1893,7 +1893,7 @@
     "source_brand": "Вико",
     "source_flavor": "апельсиновый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9688",
     "source_category_slug": "soki-nektary-morsy",
@@ -1901,7 +1901,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1910,7 +1910,7 @@
     "brand": "Вико",
     "flavor": "зеленое яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -1921,7 +1921,7 @@
     "source_brand": "Вико",
     "source_flavor": "зеленое яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9690",
     "source_category_slug": "soki-nektary-morsy",
@@ -1929,7 +1929,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -1994,7 +1994,7 @@
     "brand": "J7",
     "flavor": "апельсин",
     "volume_text": "970 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": true,
@@ -2005,7 +2005,7 @@
     "source_brand": "J7",
     "source_flavor": "апельсин",
     "source_volume": "970 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "43993",
     "source_category_slug": "soki-nektary-morsy",
@@ -2013,7 +2013,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 970,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2078,7 +2078,7 @@
     "brand": "Сады Придонья",
     "flavor": "il primo мультифрукт",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2089,7 +2089,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "il primo мультифрукт",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6958",
     "source_category_slug": "soki-nektary-morsy",
@@ -2097,7 +2097,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2106,7 +2106,7 @@
     "brand": "Сочная долина",
     "flavor": "яблочный",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2117,7 +2117,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "яблочный",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6975",
     "source_category_slug": "soki-nektary-morsy",
@@ -2125,7 +2125,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2190,7 +2190,7 @@
     "brand": "Сады Придонья",
     "flavor": "il primo яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2201,7 +2201,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "il primo яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6959",
     "source_category_slug": "soki-nektary-morsy",
@@ -2209,7 +2209,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2218,7 +2218,7 @@
     "brand": "Сочная долина",
     "flavor": "мультифрукт",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2229,7 +2229,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "мультифрукт",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6977",
     "source_category_slug": "soki-nektary-morsy",
@@ -2237,7 +2237,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2246,7 +2246,7 @@
     "brand": "Добрый",
     "flavor": "яблоко",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2257,7 +2257,7 @@
     "source_brand": "Добрый",
     "source_flavor": "яблоко",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "38042",
     "source_category_slug": "soki-nektary-morsy",
@@ -2265,7 +2265,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2274,7 +2274,7 @@
     "brand": "Любимый",
     "flavor": "вишневая черешня",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2285,7 +2285,7 @@
     "source_brand": "Любимый",
     "source_flavor": "вишневая черешня",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6938",
     "source_category_slug": "soki-nektary-morsy",
@@ -2293,7 +2293,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2302,7 +2302,7 @@
     "brand": "J7",
     "flavor": "яблоко зеленое",
     "volume_text": "970 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -2313,7 +2313,7 @@
     "source_brand": "J7",
     "source_flavor": "яблоко зеленое",
     "source_volume": "970 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9683",
     "source_category_slug": "soki-nektary-morsy",
@@ -2321,7 +2321,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 970,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2330,7 +2330,7 @@
     "brand": "Сады Придонья",
     "flavor": "яблоко из зеленых яблок",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -2341,7 +2341,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "яблоко из зеленых яблок",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9760",
     "source_category_slug": "soki-nektary-morsy",
@@ -2349,7 +2349,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2358,7 +2358,7 @@
     "brand": "Сады Придонья",
     "flavor": "яблоко персик",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": true,
     "product_type": "juice",
     "has_pulp": true,
@@ -2369,7 +2369,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "яблоко персик",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9767",
     "source_category_slug": "soki-nektary-morsy",
@@ -2377,7 +2377,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2414,7 +2414,7 @@
     "brand": "Вико",
     "flavor": "апельсин манго",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -2425,7 +2425,7 @@
     "source_brand": "Вико",
     "source_flavor": "апельсин манго",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9694",
     "source_category_slug": "soki-nektary-morsy",
@@ -2433,7 +2433,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2470,7 +2470,7 @@
     "brand": "Добрый",
     "flavor": "яблоко персик",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2481,7 +2481,7 @@
     "source_brand": "Добрый",
     "source_flavor": "яблоко персик",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "38043",
     "source_category_slug": "soki-nektary-morsy",
@@ -2489,7 +2489,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2526,7 +2526,7 @@
     "brand": "Сочная долина",
     "flavor": "персик яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2537,7 +2537,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "персик яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6963",
     "source_category_slug": "soki-nektary-morsy",
@@ -2545,7 +2545,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2554,7 +2554,7 @@
     "brand": "Сочная долина",
     "flavor": "томатный",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2565,7 +2565,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "томатный",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6973",
     "source_category_slug": "soki-nektary-morsy",
@@ -2573,7 +2573,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2582,7 +2582,7 @@
     "brand": "J7",
     "flavor": "ананас",
     "volume_text": "970 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": true,
@@ -2593,7 +2593,7 @@
     "source_brand": "J7",
     "source_flavor": "ананас",
     "source_volume": "970 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9679",
     "source_category_slug": "soki-nektary-morsy",
@@ -2601,7 +2601,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 970,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2610,7 +2610,7 @@
     "brand": "Вико",
     "flavor": "виноградный черный",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -2621,7 +2621,7 @@
     "source_brand": "Вико",
     "source_flavor": "виноградный черный",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9697",
     "source_category_slug": "soki-nektary-morsy",
@@ -2629,7 +2629,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2638,7 +2638,7 @@
     "brand": "Сады Придонья",
     "flavor": "яблочный из зеленых яблок",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": true,
     "product_type": "juice",
     "has_pulp": null,
@@ -2649,7 +2649,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "яблочный из зеленых яблок",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9768",
     "source_category_slug": "soki-nektary-morsy",
@@ -2657,7 +2657,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2666,7 +2666,7 @@
     "brand": "Сочная долина",
     "flavor": "яблочный",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2677,7 +2677,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "яблочный",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6979",
     "source_category_slug": "soki-nektary-morsy",
@@ -2685,7 +2685,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2722,7 +2722,7 @@
     "brand": "SIS",
     "flavor": "манго",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2733,7 +2733,7 @@
     "source_brand": "SIS",
     "source_flavor": "манго",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6853",
     "source_category_slug": "soki-nektary-morsy",
@@ -2741,7 +2741,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2750,7 +2750,7 @@
     "brand": "SIS",
     "flavor": "яблоко",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2761,7 +2761,7 @@
     "source_brand": "SIS",
     "source_flavor": "яблоко",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6857",
     "source_category_slug": "soki-nektary-morsy",
@@ -2769,7 +2769,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2778,7 +2778,7 @@
     "brand": "Сочная долина",
     "flavor": "мультифрукт",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2789,7 +2789,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "мультифрукт",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6962",
     "source_category_slug": "soki-nektary-morsy",
@@ -2797,7 +2797,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2806,7 +2806,7 @@
     "brand": "Сочная долина",
     "flavor": "персик яблоко",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2817,7 +2817,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "персик яблоко",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6971",
     "source_category_slug": "soki-nektary-morsy",
@@ -2825,7 +2825,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2834,7 +2834,7 @@
     "brand": "J7",
     "flavor": "мультифрукт",
     "volume_text": "970 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -2845,7 +2845,7 @@
     "source_brand": "J7",
     "source_flavor": "мультифрукт",
     "source_volume": "970 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9681",
     "source_category_slug": "soki-nektary-morsy",
@@ -2853,7 +2853,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 970,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2862,7 +2862,7 @@
     "brand": "J7",
     "flavor": "персик",
     "volume_text": "970 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": true,
@@ -2873,7 +2873,7 @@
     "source_brand": "J7",
     "source_flavor": "персик",
     "source_volume": "970 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9682",
     "source_category_slug": "soki-nektary-morsy",
@@ -2881,7 +2881,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 970,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -2946,7 +2946,7 @@
     "brand": "Сады Придонья",
     "flavor": "il primo вишня",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -2957,7 +2957,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "il primo вишня",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6955",
     "source_category_slug": "soki-nektary-morsy",
@@ -2965,7 +2965,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3030,7 +3030,7 @@
     "brand": "Добрый",
     "flavor": "томат",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3041,7 +3041,7 @@
     "source_brand": "Добрый",
     "source_flavor": "томат",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "47765",
     "source_category_slug": "soki-nektary-morsy",
@@ -3049,7 +3049,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3058,7 +3058,7 @@
     "brand": "Сады Придонья",
     "flavor": "брусника малина",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "mors",
     "has_pulp": null,
@@ -3069,7 +3069,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "брусника малина",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "5954",
     "source_category_slug": "soki-nektary-morsy",
@@ -3077,7 +3077,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3170,7 +3170,7 @@
     "brand": "Мой",
     "flavor": "персик яблоко",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3181,7 +3181,7 @@
     "source_brand": "Мой",
     "source_flavor": "персик яблоко",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6947",
     "source_category_slug": "soki-nektary-morsy",
@@ -3189,7 +3189,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3198,7 +3198,7 @@
     "brand": "Мой",
     "flavor": "тропические фрукты",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3209,7 +3209,7 @@
     "source_brand": "Мой",
     "source_flavor": "тропические фрукты",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6951",
     "source_category_slug": "soki-nektary-morsy",
@@ -3217,7 +3217,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3226,7 +3226,7 @@
     "brand": "Сочная долина",
     "flavor": "апельсин манго",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3237,7 +3237,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "апельсин манго",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6961",
     "source_category_slug": "soki-nektary-morsy",
@@ -3245,7 +3245,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3254,7 +3254,7 @@
     "brand": "Сочная долина",
     "flavor": "апельсин манго",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3265,7 +3265,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "апельсин манго",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6966",
     "source_category_slug": "soki-nektary-morsy",
@@ -3273,7 +3273,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3282,7 +3282,7 @@
     "brand": "Сочная долина",
     "flavor": "яблоко вишня черешня",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3293,7 +3293,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "яблоко вишня черешня",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6974",
     "source_category_slug": "soki-nektary-morsy",
@@ -3301,7 +3301,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3366,7 +3366,7 @@
     "brand": "Сады Придонья",
     "flavor": "il primo ананас",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3377,7 +3377,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "il primo ананас",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6953",
     "source_category_slug": "soki-nektary-morsy",
@@ -3385,7 +3385,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3506,7 +3506,7 @@
     "brand": "Мой",
     "flavor": "ананасовый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3517,7 +3517,7 @@
     "source_brand": "Мой",
     "source_flavor": "ананасовый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "49886",
     "source_category_slug": "soki-nektary-morsy",
@@ -3525,7 +3525,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3534,7 +3534,7 @@
     "brand": "Мой",
     "flavor": "персиковый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3545,7 +3545,7 @@
     "source_brand": "Мой",
     "source_flavor": "персиковый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "49888",
     "source_category_slug": "soki-nektary-morsy",
@@ -3553,7 +3553,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3562,7 +3562,7 @@
     "brand": "Добрый",
     "flavor": "томат",
     "volume_text": "2 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3573,7 +3573,7 @@
     "source_brand": "Добрый",
     "source_flavor": "томат",
     "source_volume": "2 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "51660",
     "source_category_slug": "soki-nektary-morsy",
@@ -3581,7 +3581,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 2000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3702,7 +3702,7 @@
     "brand": "Любимый",
     "flavor": "апельсин манго мандарин",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3713,7 +3713,7 @@
     "source_brand": "Любимый",
     "source_flavor": "апельсин манго мандарин",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6931",
     "source_category_slug": "soki-nektary-morsy",
@@ -3721,7 +3721,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3730,7 +3730,7 @@
     "brand": "Любимый",
     "flavor": "вишневая черешня",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3741,7 +3741,7 @@
     "source_brand": "Любимый",
     "source_flavor": "вишневая черешня",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6932",
     "source_category_slug": "soki-nektary-morsy",
@@ -3749,7 +3749,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3758,7 +3758,7 @@
     "brand": "Любимый",
     "flavor": "персик",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3769,7 +3769,7 @@
     "source_brand": "Любимый",
     "source_flavor": "персик",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6934",
     "source_category_slug": "soki-nektary-morsy",
@@ -3777,7 +3777,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3786,7 +3786,7 @@
     "brand": "Любимый",
     "flavor": "тропический микс",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3797,7 +3797,7 @@
     "source_brand": "Любимый",
     "source_flavor": "тропический микс",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6935",
     "source_category_slug": "soki-nektary-morsy",
@@ -3805,7 +3805,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3814,7 +3814,7 @@
     "brand": "Мой",
     "flavor": "апельсин",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3825,7 +3825,7 @@
     "source_brand": "Мой",
     "source_flavor": "апельсин",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6944",
     "source_category_slug": "soki-nektary-morsy",
@@ -3833,7 +3833,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3842,7 +3842,7 @@
     "brand": "Мой",
     "flavor": "бананово клубничный",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3853,7 +3853,7 @@
     "source_brand": "Мой",
     "source_flavor": "бананово клубничный",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6945",
     "source_category_slug": "soki-nektary-morsy",
@@ -3861,7 +3861,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3870,7 +3870,7 @@
     "brand": "Мой",
     "flavor": "томат",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -3881,7 +3881,7 @@
     "source_brand": "Мой",
     "source_flavor": "томат",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6948",
     "source_category_slug": "soki-nektary-morsy",
@@ -3889,7 +3889,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3898,7 +3898,7 @@
     "brand": "Вико",
     "flavor": "персиковый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -3909,7 +3909,7 @@
     "source_brand": "Вико",
     "source_flavor": "персиковый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9692",
     "source_category_slug": "soki-nektary-morsy",
@@ -3917,7 +3917,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3926,7 +3926,7 @@
     "brand": "Вико",
     "flavor": "томатный",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -3937,7 +3937,7 @@
     "source_brand": "Вико",
     "source_flavor": "томатный",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9703",
     "source_category_slug": "soki-nektary-morsy",
@@ -3945,7 +3945,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -3954,7 +3954,7 @@
     "brand": "Сантал",
     "flavor": "апельсиновый",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -3965,7 +3965,7 @@
     "source_brand": "Сантал",
     "source_flavor": "апельсиновый",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9771",
     "source_category_slug": "soki-nektary-morsy",
@@ -3973,7 +3973,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4010,7 +4010,7 @@
     "brand": "Сады Придонья",
     "flavor": "il primo грейпфрут",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4021,7 +4021,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "il primo грейпфрут",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6956",
     "source_category_slug": "soki-nektary-morsy",
@@ -4029,7 +4029,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4038,7 +4038,7 @@
     "brand": "Сочная долина",
     "flavor": "апельсин манго",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4049,7 +4049,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "апельсин манго",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6976",
     "source_category_slug": "soki-nektary-morsy",
@@ -4057,7 +4057,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4066,7 +4066,7 @@
     "brand": "Сочная долина",
     "flavor": "персик яблоко",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4077,7 +4077,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "персик яблоко",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6978",
     "source_category_slug": "soki-nektary-morsy",
@@ -4085,7 +4085,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4150,7 +4150,7 @@
     "brand": "Мой",
     "flavor": "мультифрукт",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4161,7 +4161,7 @@
     "source_brand": "Мой",
     "source_flavor": "мультифрукт",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "49887",
     "source_category_slug": "soki-nektary-morsy",
@@ -4169,7 +4169,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4206,7 +4206,7 @@
     "brand": "Добрый",
     "flavor": "мультифрукт",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4217,7 +4217,7 @@
     "source_brand": "Добрый",
     "source_flavor": "мультифрукт",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "25330",
     "source_category_slug": "soki-nektary-morsy",
@@ -4225,7 +4225,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4234,7 +4234,7 @@
     "brand": "Добрый",
     "flavor": "яблоко персик",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4245,7 +4245,7 @@
     "source_brand": "Добрый",
     "source_flavor": "яблоко персик",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6907",
     "source_category_slug": "soki-nektary-morsy",
@@ -4253,7 +4253,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4262,7 +4262,7 @@
     "brand": "Добрый",
     "flavor": "яблоко",
     "volume_text": "300 мл",
-    "package_type": "ПЭТ",
+    "package_type": "pet",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -4273,7 +4273,7 @@
     "source_brand": "Добрый",
     "source_flavor": "яблоко",
     "source_volume": "300 мл",
-    "source_package": "ПЭТ",
+    "source_package": "pet",
     "source_priority": 3,
     "source_product_id": "47772",
     "source_category_slug": "soki-nektary-morsy",
@@ -4346,7 +4346,7 @@
     "brand": "SIS",
     "flavor": "персик",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4357,7 +4357,7 @@
     "source_brand": "SIS",
     "source_flavor": "персик",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6855",
     "source_category_slug": "soki-nektary-morsy",
@@ -4365,7 +4365,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4374,7 +4374,7 @@
     "brand": "Вико",
     "flavor": "абрикос",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4385,7 +4385,7 @@
     "source_brand": "Вико",
     "source_flavor": "абрикос",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6891",
     "source_category_slug": "soki-nektary-morsy",
@@ -4393,7 +4393,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4402,7 +4402,7 @@
     "brand": "Любимый",
     "flavor": "яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4413,7 +4413,7 @@
     "source_brand": "Любимый",
     "source_flavor": "яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6930",
     "source_category_slug": "soki-nektary-morsy",
@@ -4421,7 +4421,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4430,7 +4430,7 @@
     "brand": "Любимый",
     "flavor": "яблоко",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4441,7 +4441,7 @@
     "source_brand": "Любимый",
     "source_flavor": "яблоко",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6936",
     "source_category_slug": "soki-nektary-morsy",
@@ -4449,7 +4449,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4458,7 +4458,7 @@
     "brand": "Любимый",
     "flavor": "яблоко",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4469,7 +4469,7 @@
     "source_brand": "Любимый",
     "source_flavor": "яблоко",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6940",
     "source_category_slug": "soki-nektary-morsy",
@@ -4477,7 +4477,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4486,7 +4486,7 @@
     "brand": "Мой",
     "flavor": "вишня яблоко",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4497,7 +4497,7 @@
     "source_brand": "Мой",
     "source_flavor": "вишня яблоко",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6946",
     "source_category_slug": "soki-nektary-morsy",
@@ -4505,7 +4505,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4514,7 +4514,7 @@
     "brand": "Мой",
     "flavor": "вишня яблоко",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4525,7 +4525,7 @@
     "source_brand": "Мой",
     "source_flavor": "вишня яблоко",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6949",
     "source_category_slug": "soki-nektary-morsy",
@@ -4533,7 +4533,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4542,7 +4542,7 @@
     "brand": "Мой",
     "flavor": "персик яблоко",
     "volume_text": "1,93 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4553,7 +4553,7 @@
     "source_brand": "Мой",
     "source_flavor": "персик яблоко",
     "source_volume": "1,93 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6950",
     "source_category_slug": "soki-nektary-morsy",
@@ -4561,7 +4561,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1930,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4570,7 +4570,7 @@
     "brand": "Сочная долина",
     "flavor": "виноградный микс",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4581,7 +4581,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "виноградный микс",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6967",
     "source_category_slug": "soki-nektary-morsy",
@@ -4589,7 +4589,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4598,7 +4598,7 @@
     "brand": "Сочная долина",
     "flavor": "гранат ананас яблоко",
     "volume_text": "950 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4609,7 +4609,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "гранат ананас яблоко",
     "source_volume": "950 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6968",
     "source_category_slug": "soki-nektary-morsy",
@@ -4617,7 +4617,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 950,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4626,7 +4626,7 @@
     "brand": "J7",
     "flavor": "вишня",
     "volume_text": "970 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -4637,7 +4637,7 @@
     "source_brand": "J7",
     "source_flavor": "вишня",
     "source_volume": "970 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9680",
     "source_category_slug": "soki-nektary-morsy",
@@ -4645,7 +4645,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 970,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4654,7 +4654,7 @@
     "brand": "Вико",
     "flavor": "вишневый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -4665,7 +4665,7 @@
     "source_brand": "Вико",
     "source_flavor": "вишневый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9689",
     "source_category_slug": "soki-nektary-morsy",
@@ -4673,7 +4673,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4682,7 +4682,7 @@
     "brand": "Вико",
     "flavor": "мультифрукт",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -4693,7 +4693,7 @@
     "source_brand": "Вико",
     "source_flavor": "мультифрукт",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9691",
     "source_category_slug": "soki-nektary-morsy",
@@ -4701,7 +4701,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4710,7 +4710,7 @@
     "brand": "Сады Придонья",
     "flavor": "мультифруктовый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -4721,7 +4721,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "мультифруктовый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9758",
     "source_category_slug": "soki-nektary-morsy",
@@ -4729,7 +4729,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4738,7 +4738,7 @@
     "brand": "Сады Придонья",
     "flavor": "яблоко абрикос",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": true,
     "product_type": "juice",
     "has_pulp": null,
@@ -4749,7 +4749,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "яблоко абрикос",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9763",
     "source_category_slug": "soki-nektary-morsy",
@@ -4757,7 +4757,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4766,7 +4766,7 @@
     "brand": "Сады Придонья",
     "flavor": "яблоко груша",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": true,
     "product_type": "juice",
     "has_pulp": true,
@@ -4777,7 +4777,7 @@
     "source_brand": "Сады Придонья",
     "source_flavor": "яблоко груша",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9766",
     "source_category_slug": "soki-nektary-morsy",
@@ -4785,7 +4785,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4794,7 +4794,7 @@
     "brand": "Rusberries",
     "flavor": "натуральный ягодный ст б брусника",
     "volume_text": "1 л",
-    "package_type": "стекло",
+    "package_type": "glass",
     "sugar_free": null,
     "product_type": "mors",
     "has_pulp": null,
@@ -4805,7 +4805,7 @@
     "source_brand": "Rusberries",
     "source_flavor": "натуральный ягодный ст б брусника",
     "source_volume": "1 л",
-    "source_package": "стекло",
+    "source_package": "glass",
     "source_priority": 3,
     "source_product_id": "14410",
     "source_category_slug": "soki-nektary-morsy",
@@ -4822,7 +4822,7 @@
     "brand": "Rusberries",
     "flavor": "натуральный ягодный ст б клюква",
     "volume_text": "1 л",
-    "package_type": "стекло",
+    "package_type": "glass",
     "sugar_free": null,
     "product_type": "mors",
     "has_pulp": null,
@@ -4833,7 +4833,7 @@
     "source_brand": "Rusberries",
     "source_flavor": "натуральный ягодный ст б клюква",
     "source_volume": "1 л",
-    "source_package": "стекло",
+    "source_package": "glass",
     "source_priority": 3,
     "source_product_id": "14411",
     "source_category_slug": "soki-nektary-morsy",
@@ -4850,7 +4850,7 @@
     "brand": "Rusberries",
     "flavor": "натуральный ягодный ст б лесная ягода",
     "volume_text": "1 л",
-    "package_type": "стекло",
+    "package_type": "glass",
     "sugar_free": null,
     "product_type": "mors",
     "has_pulp": null,
@@ -4861,7 +4861,7 @@
     "source_brand": "Rusberries",
     "source_flavor": "натуральный ягодный ст б лесная ягода",
     "source_volume": "1 л",
-    "source_package": "стекло",
+    "source_package": "glass",
     "source_priority": 3,
     "source_product_id": "14412",
     "source_category_slug": "soki-nektary-morsy",
@@ -4878,7 +4878,7 @@
     "brand": "SIS",
     "flavor": "черная смородина",
     "volume_text": "1,6 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4889,7 +4889,7 @@
     "source_brand": "SIS",
     "source_flavor": "черная смородина",
     "source_volume": "1,6 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6856",
     "source_category_slug": "soki-nektary-morsy",
@@ -4897,7 +4897,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1600,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -4906,7 +4906,7 @@
     "brand": "Сочная долина",
     "flavor": "яблоко вишня",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -4917,7 +4917,7 @@
     "source_brand": "Сочная долина",
     "source_flavor": "яблоко вишня",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6965",
     "source_category_slug": "soki-nektary-morsy",
@@ -4925,7 +4925,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5046,7 +5046,7 @@
     "brand": "Вико",
     "flavor": "банановый",
     "volume_text": "1 л",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -5057,7 +5057,7 @@
     "source_brand": "Вико",
     "source_flavor": "банановый",
     "source_volume": "1 л",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "45196",
     "source_category_slug": "soki-nektary-morsy",
@@ -5065,7 +5065,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 1000,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5130,7 +5130,7 @@
     "brand": "Добрый",
     "flavor": "яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -5141,7 +5141,7 @@
     "source_brand": "Добрый",
     "source_flavor": "яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6906",
     "source_category_slug": "soki-nektary-morsy",
@@ -5149,7 +5149,7 @@
     "source_category_title": "Соки, нектары, морсы",
     "source_category_id": 45,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5158,7 +5158,7 @@
     "brand": "Добрый",
     "flavor": "мультифрукт",
     "volume_text": "300 мл",
-    "package_type": "ПЭТ",
+    "package_type": "pet",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -5169,7 +5169,7 @@
     "source_brand": "Добрый",
     "source_flavor": "мультифрукт",
     "source_volume": "300 мл",
-    "source_package": "ПЭТ",
+    "source_package": "pet",
     "source_priority": 3,
     "source_product_id": "47764",
     "source_category_slug": "soki-nektary-morsy",
@@ -5186,7 +5186,7 @@
     "brand": "ФрутоНяня",
     "flavor": "яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": false,
@@ -5197,7 +5197,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9783",
     "source_category_slug": "voda-soki",
@@ -5205,7 +5205,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5214,7 +5214,7 @@
     "brand": "ФрутоНяня",
     "flavor": "груша освет",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -5225,7 +5225,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "груша освет",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9779",
     "source_category_slug": "voda-soki",
@@ -5233,7 +5233,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5242,7 +5242,7 @@
     "brand": "ФрутоНяня",
     "flavor": "мультифруктовый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": true,
@@ -5253,7 +5253,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "мультифруктовый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9780",
     "source_category_slug": "voda-soki",
@@ -5261,7 +5261,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5270,7 +5270,7 @@
     "brand": "ФрутоНяня",
     "flavor": "яблоко вишня",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": false,
@@ -5281,7 +5281,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "яблоко вишня",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9782",
     "source_category_slug": "voda-soki",
@@ -5289,7 +5289,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5298,7 +5298,7 @@
     "brand": "ФрутоНяня",
     "flavor": "яблоко черн смородина",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -5309,7 +5309,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "яблоко черн смородина",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9785",
     "source_category_slug": "voda-soki",
@@ -5317,7 +5317,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5326,7 +5326,7 @@
     "brand": "ФрутоНяня",
     "flavor": "яблоко персик",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": true,
@@ -5337,7 +5337,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "яблоко персик",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9781",
     "source_category_slug": "voda-soki",
@@ -5345,7 +5345,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5382,7 +5382,7 @@
     "brand": "ФрутоНяня",
     "flavor": "банан",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": true,
@@ -5393,7 +5393,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "банан",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6980",
     "source_category_slug": "voda-soki",
@@ -5401,7 +5401,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5410,7 +5410,7 @@
     "brand": "Дары Кубани",
     "flavor": "яблочный",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -5421,7 +5421,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "яблочный",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9731",
     "source_category_slug": "voda-soki",
@@ -5429,7 +5429,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5522,7 +5522,7 @@
     "brand": "ФрутоНяня",
     "flavor": "яблоко груша",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": true,
@@ -5533,7 +5533,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "яблоко груша",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "41718",
     "source_category_slug": "voda-soki",
@@ -5541,7 +5541,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5550,7 +5550,7 @@
     "brand": "ФрутоНяня",
     "flavor": "яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": null,
@@ -5561,7 +5561,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "46907",
     "source_category_slug": "voda-soki",
@@ -5569,7 +5569,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5606,7 +5606,7 @@
     "brand": "Дары Кубани",
     "flavor": "яблочно виноградный",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": false,
@@ -5617,7 +5617,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "яблочно виноградный",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "34203",
     "source_category_slug": "voda-soki",
@@ -5625,7 +5625,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5634,7 +5634,7 @@
     "brand": "Дары Кубани",
     "flavor": "яблочный",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -5645,7 +5645,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "яблочный",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6900",
     "source_category_slug": "voda-soki",
@@ -5653,7 +5653,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5690,7 +5690,7 @@
     "brand": "Агуша",
     "flavor": "яблоко персик",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": true,
@@ -5701,7 +5701,7 @@
     "source_brand": "Агуша",
     "source_flavor": "яблоко персик",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6872",
     "source_category_slug": "voda-soki",
@@ -5709,7 +5709,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5718,7 +5718,7 @@
     "brand": "Дары Кубани",
     "flavor": "яблоко груша",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -5729,7 +5729,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "яблоко груша",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6898",
     "source_category_slug": "voda-soki",
@@ -5737,7 +5737,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5746,7 +5746,7 @@
     "brand": "ФрутоНяня",
     "flavor": "из клюквы черники и вишни",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "mors",
     "has_pulp": null,
@@ -5757,7 +5757,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "из клюквы черники и вишни",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "5956",
     "source_category_slug": "voda-soki",
@@ -5765,7 +5765,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5774,7 +5774,7 @@
     "brand": "ФрутоНяня",
     "flavor": "яблоко шиповник",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": false,
@@ -5785,7 +5785,7 @@
     "source_brand": "ФрутоНяня",
     "source_flavor": "яблоко шиповник",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9786",
     "source_category_slug": "voda-soki",
@@ -5793,7 +5793,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5802,7 +5802,7 @@
     "brand": "Дары Кубани",
     "flavor": "яблочно шиповниковый",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "juice",
     "has_pulp": false,
@@ -5813,7 +5813,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "яблочно шиповниковый",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "9730",
     "source_category_slug": "voda-soki",
@@ -5821,7 +5821,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5830,7 +5830,7 @@
     "brand": "Агуша",
     "flavor": "яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": false,
@@ -5841,7 +5841,7 @@
     "source_brand": "Агуша",
     "source_flavor": "яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6871",
     "source_category_slug": "voda-soki",
@@ -5849,7 +5849,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5858,7 +5858,7 @@
     "brand": "Агуша",
     "flavor": "груша",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": false,
@@ -5869,7 +5869,7 @@
     "source_brand": "Агуша",
     "source_flavor": "груша",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6869",
     "source_category_slug": "voda-soki",
@@ -5877,7 +5877,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5886,7 +5886,7 @@
     "brand": "Дары Кубани",
     "flavor": "яблоко персик",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -5897,7 +5897,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "яблоко персик",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6899",
     "source_category_slug": "voda-soki",
@@ -5905,7 +5905,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5970,7 +5970,7 @@
     "brand": "Маленькое Счастье",
     "flavor": "фиксики фрути яблоко банан",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -5981,7 +5981,7 @@
     "source_brand": "Маленькое Счастье",
     "source_flavor": "фиксики фрути яблоко банан",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "26534",
     "source_category_slug": "voda-soki",
@@ -5989,7 +5989,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -5998,7 +5998,7 @@
     "brand": "Дары Кубани",
     "flavor": "банан",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": true,
@@ -6009,7 +6009,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "банан",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6901",
     "source_category_slug": "voda-soki",
@@ -6017,7 +6017,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6026,7 +6026,7 @@
     "brand": "Дары Кубани",
     "flavor": "яблоко вишня",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -6037,7 +6037,7 @@
     "source_brand": "Дары Кубани",
     "source_flavor": "яблоко вишня",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6897",
     "source_category_slug": "voda-soki",
@@ -6045,7 +6045,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6054,7 +6054,7 @@
     "brand": "Маленькое Счастье",
     "flavor": "маши и медведь яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -6065,7 +6065,7 @@
     "source_brand": "Маленькое Счастье",
     "source_flavor": "маши и медведь яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "26529",
     "source_category_slug": "voda-soki",
@@ -6073,7 +6073,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6082,7 +6082,7 @@
     "brand": "Маленькое Счастье",
     "flavor": "фиксики фрути яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -6093,7 +6093,7 @@
     "source_brand": "Маленькое Счастье",
     "source_flavor": "фиксики фрути яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "26533",
     "source_category_slug": "voda-soki",
@@ -6101,7 +6101,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6166,7 +6166,7 @@
     "brand": "Маленькое Счастье",
     "flavor": "фиксики фрути яблоко груша",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -6177,7 +6177,7 @@
     "source_brand": "Маленькое Счастье",
     "source_flavor": "фиксики фрути яблоко груша",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "26535",
     "source_category_slug": "voda-soki",
@@ -6185,7 +6185,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6194,7 +6194,7 @@
     "brand": "Агуша",
     "flavor": "яблоко",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": true,
@@ -6205,7 +6205,7 @@
     "source_brand": "Агуша",
     "source_flavor": "яблоко",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6873",
     "source_category_slug": "voda-soki",
@@ -6213,7 +6213,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6222,7 +6222,7 @@
     "brand": "Агуша",
     "flavor": "яблоко вишня",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": false,
@@ -6233,7 +6233,7 @@
     "source_brand": "Агуша",
     "source_flavor": "яблоко вишня",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6870",
     "source_category_slug": "voda-soki",
@@ -6241,7 +6241,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6250,7 +6250,7 @@
     "brand": "Маленькое Счастье",
     "flavor": "маши и медведь яблоко виноград",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -6261,7 +6261,7 @@
     "source_brand": "Маленькое Счастье",
     "source_flavor": "маши и медведь яблоко виноград",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "26531",
     "source_category_slug": "voda-soki",
@@ -6269,7 +6269,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6278,7 +6278,7 @@
     "brand": "Маленькое Счастье",
     "flavor": "маши и медведь яблоко банан",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -6289,7 +6289,7 @@
     "source_brand": "Маленькое Счастье",
     "source_flavor": "маши и медведь яблоко банан",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "26530",
     "source_category_slug": "voda-soki",
@@ -6297,7 +6297,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6306,7 +6306,7 @@
     "brand": "Агуша",
     "flavor": "яблоко манго банан",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": true,
@@ -6317,7 +6317,7 @@
     "source_brand": "Агуша",
     "source_flavor": "яблоко манго банан",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "30361",
     "source_category_slug": "voda-soki",
@@ -6325,7 +6325,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6334,7 +6334,7 @@
     "brand": "Маленькое Счастье",
     "flavor": "маши и медведь мультифрукт",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": null,
@@ -6345,7 +6345,7 @@
     "source_brand": "Маленькое Счастье",
     "source_flavor": "маши и медведь мультифрукт",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "26528",
     "source_category_slug": "voda-soki",
@@ -6353,7 +6353,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",
@@ -6362,7 +6362,7 @@
     "brand": "Агуша",
     "flavor": "яблоко шиповник",
     "volume_text": "200 мл",
-    "package_type": "",
+    "package_type": "carton",
     "sugar_free": null,
     "product_type": "nectar",
     "has_pulp": false,
@@ -6373,7 +6373,7 @@
     "source_brand": "Агуша",
     "source_flavor": "яблоко шиповник",
     "source_volume": "200 мл",
-    "source_package": "",
+    "source_package": "carton",
     "source_priority": 3,
     "source_product_id": "6874",
     "source_category_slug": "voda-soki",
@@ -6381,7 +6381,7 @@
     "source_category_title": "Вода, соки (детские)",
     "source_category_id": 135,
     "volume_ml": 200,
-    "package_code": "UNK"
+    "package_code": "CARTON"
   },
   {
     "source_site": "zelenoeyabloko.ru",

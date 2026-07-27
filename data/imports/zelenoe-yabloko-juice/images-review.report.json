@@ -1,23 +1,28 @@
 {
-  "generated_at": "2026-07-27T15:35:57.519Z",
+  "generated_at": "2026-07-27T16:04:52.839Z",
   "out_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/images-review.xlsx",
-  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-juice/candidates.flat.json",
-  "products_file": "/workspace/data/imports/tinda_active_products.snapshot.json",
-  "stats": {
-    "products": 264,
-    "candidates": 230,
-    "exact_match": 0,
-    "probable_match": 4,
-    "conflict": 3,
-    "no_match": 257,
-    "new_product": 219,
-    "no_photo": 14,
-    "watermark": 0,
-    "below_500": 0,
-    "low_quality": 0,
-    "metro_cdn_current": 6,
-    "better_photo": 0,
-    "recommended_approve": 0
+  "note": "Updated by juice second-pass (local only).",
+  "counts": {
+    "approved_existing": 0,
+    "approved_new": 177,
+    "needs_review": 44,
+    "rejected": 9
   },
-  "note": "Production not modified. Images not uploaded. image_url not changed. review_status=pending."
+  "second_pass": {
+    "needs_review_before": 171,
+    "carton_detected": 140,
+    "package_resolved": 149,
+    "improved_images": 0,
+    "package_sources": {
+      "brand_volume_heuristic": 121,
+      "unknown": 22,
+      "name_explicit": 9,
+      "description_explicit": 19
+    },
+    "needs_review_after": 44,
+    "approved_new_after": 177,
+    "rejected_after": 9,
+    "second_pass_approved_new_ready": 127,
+    "second_pass_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/second-pass-approved-new.xlsx"
+  }
 }

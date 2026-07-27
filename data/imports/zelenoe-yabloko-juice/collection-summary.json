@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T15:41:36.795Z",
-  "note": "LOCAL preparation only. No production / VPS / DB / image_url / price / seed changes. Nothing imported.",
+  "generated_at": "2026-07-27T16:04:52.831Z",
+  "note": "LOCAL second-pass complete. No production / VPS / DB / image_url / price / seed changes. Nothing imported in this step.",
   "categories": [
     {
       "id": 45,
@@ -40,12 +40,12 @@
   },
   "auto_review": {
     "approved_existing": 0,
-    "approved_new": 50,
-    "needs_review": 171,
+    "approved_new": 177,
+    "needs_review": 44,
     "rejected": 9
   },
   "images_below_500": 27,
-  "unknown_package": 163,
+  "unknown_package": 16,
   "unknown_product_type": 0,
   "download": {
     "urls_processed": 230,
@@ -75,7 +75,9 @@
     "review_decisions": "/workspace/data/imports/zelenoe-yabloko-juice/review-decisions.json",
     "review_decisions_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/review-decisions.xlsx",
     "collection_summary": "/workspace/data/imports/zelenoe-yabloko-juice/collection-summary.json",
-    "tinda_snapshot": "/workspace/data/imports/tinda_active_products.snapshot.json"
+    "tinda_snapshot": "/workspace/data/imports/tinda_active_products.snapshot.json",
+    "second_pass_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/second-pass-approved-new.xlsx",
+    "second_pass_report": "/workspace/data/imports/zelenoe-yabloko-juice/second-pass-report.json"
   },
   "needs_review_reasons": {
     "needs_review_new_incomplete": 146,
@@ -87,5 +89,22 @@
   "rejected_reasons": {
     "rejected_bad_image": 8,
     "rejected_placeholder": 1
+  },
+  "second_pass": {
+    "needs_review_before": 171,
+    "carton_detected": 147,
+    "package_resolved": 214,
+    "improved_images": 0,
+    "package_sources": {
+      "brand_volume_heuristic": 121,
+      "unknown": 22,
+      "name_explicit": 9,
+      "description_explicit": 19
+    },
+    "needs_review_after": 44,
+    "approved_new_after": 177,
+    "rejected_after": 9,
+    "second_pass_approved_new_ready": 127,
+    "second_pass_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/second-pass-approved-new.xlsx"
   }
 }

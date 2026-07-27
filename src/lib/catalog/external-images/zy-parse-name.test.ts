@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import {
   build_zy_sku,
-  dedupe_key,
+  detect_explicit_juice_package,
+  infer_juice_package,
   parse_zy_product_name,
 } from "@/lib/catalog/external-images/zy-parse-name";
 
@@ -38,5 +39,44 @@ describe("parse_zy_product_name", () => {
     const p = parse_zy_product_name("Напиток SWAG! ст/б 0,33мл Слива");
     expect(p.volume_ml).toBe(330);
     expect(p.package_code).toBe("GLASS");
+  });
+
+  it("detects tetra/carton from name", () => {
+    const p = parse_zy_product_name("Нектар Добрый 1л Мультифрукт тетрапак");
+    expect(p.package_code).toBe("CARTON");
+  });
+});
+
+describe("infer_juice_package", () => {
+  it("maps tetra synonyms to carton", () => {
+    expect(detect_explicit_juice_package("сок в tetra pak")).toBe("carton");
+    expect(detect_explicit_juice_package("Pure-Pak 1л")).toBe("carton");
+  });
+
+  it("infers carton for Dobry 1L nectar without package marker", () => {
+    const r = infer_juice_package({
+      source_name: "Нектар Добрый 1л Мультифрукт",
+      brand: "Добрый",
+      volume_ml: 1000,
+      product_type: "nectar",
+    });
+    expect(r.package_type).toBe("carton");
+    expect(r.package_code).toBe("CARTON");
+    expect(r.source).toBe("brand_volume_heuristic");
+  });
+
+  it("keeps glass explicit marker", () => {
+    const r = infer_juice_package({
+      source_name: "Сок Ириб ст/б 0,75л Гранатовый",
+      brand: "Ириб",
+      volume_ml: 750,
+      product_type: "juice",
+    });
+    expect(r.package_type).toBe("glass");
+    expect(r.source).toBe("name_explicit");
+  });
+
+  it("does not treat transport box as unit package", () => {
+    expect(detect_explicit_juice_package("коробка 12 шт")).toBe("unknown");
   });
 });
