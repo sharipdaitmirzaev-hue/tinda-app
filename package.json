@@ -23,7 +23,8 @@
     "external-images:download": "tsx scripts/external-product-images/download-confirmed.ts",
     "external-images:prepare": "tsx scripts/external-product-images/prepare-apply-plan.ts",
     "zy:gazirovannye-review": "tsx scripts/zelenoe-yabloko/build-gazirovannye-review.ts",
-    "zy:scrape-candidates": "tsx scripts/zelenoe-yabloko/scrape-candidates.ts"
+    "zy:scrape-candidates": "tsx scripts/zelenoe-yabloko/scrape-candidates.ts",
+    "zy:build-approval": "tsx scripts/zelenoe-yabloko/build-approval.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",

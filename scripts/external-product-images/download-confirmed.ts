@@ -64,11 +64,29 @@ async function main() {
   }
 
   const wb = XLSX.readFile(review_path);
-  const sheets = ["Точные совпадения", "Требует проверки", "Конфликты"];
+  const preferred = [
+    "К одобрению",
+    "Точные совпадения",
+    "Требует проверки",
+    "Конфликты",
+  ];
+  const sheets = [
+    ...preferred.filter((n) => wb.Sheets[n]),
+    ...wb.SheetNames.filter((n: string) => !preferred.includes(n) && n !== "Инструкция"),
+  ];
   const rows: Record<string, unknown>[] = [];
+  const seen = new Set<string>();
   for (const name of sheets) {
     if (!wb.Sheets[name]) continue;
-    rows.push(...XLSX.utils.sheet_to_json(wb.Sheets[name], { defval: "" }));
+    for (const row of XLSX.utils.sheet_to_json(wb.Sheets[name], { defval: "" }) as Record<
+      string,
+      unknown
+    >[]) {
+      const key = `${row.tinda_sku}||${row.candidate_image_url}`;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      rows.push(row);
+    }
   }
 
   const selected = rows.filter((r) => {
