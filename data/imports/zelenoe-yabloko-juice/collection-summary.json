@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T15:40:29.132Z",
+  "generated_at": "2026-07-27T15:41:24.803Z",
   "note": "LOCAL preparation only. No production / VPS / DB / image_url / price / seed changes. Nothing imported.",
   "categories": [
     {
@@ -40,8 +40,8 @@
   },
   "auto_review": {
     "approved_existing": 0,
-    "approved_new": 183,
-    "needs_review": 28,
+    "approved_new": 46,
+    "needs_review": 165,
     "rejected": 19
   },
   "images_below_500": 27,
@@ -57,9 +57,7 @@
   },
   "proposed_sku_unique": true,
   "proposed_sku_count": 230,
-  "proposed_sku_conflicts_with_tinda": [
-    "ZY-IRIB-500-GLASS-001"
-  ],
+  "proposed_sku_conflicts_with_tinda": [],
   "tinda_products_compared": 264,
   "kids_line": 45,
   "sugar_free_true": 13,
@@ -78,5 +76,17 @@
     "review_decisions_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/review-decisions.xlsx",
     "collection_summary": "/workspace/data/imports/zelenoe-yabloko-juice/collection-summary.json",
     "tinda_snapshot": "/workspace/data/imports/tinda_active_products.snapshot.json"
+  },
+  "needs_review_reasons": {
+    "needs_review_new_incomplete": 140,
+    "needs_review_probable_match": 3,
+    "needs_review_small_image": 18,
+    "needs_review_conflict": 3,
+    "needs_review_unknown": 1
+  },
+  "rejected_reasons": {
+    "rejected_excluded_category": 10,
+    "rejected_bad_image": 8,
+    "rejected_placeholder": 1
   }
 }

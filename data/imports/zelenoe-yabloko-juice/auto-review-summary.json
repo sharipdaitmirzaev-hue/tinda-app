@@ -1,14 +1,54 @@
 {
-  "generated_at": "2026-07-27T15:40:03.690Z",
+  "generated_at": "2026-07-27T15:41:24.725Z",
   "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
   "counts": {
     "approved_existing": 0,
-    "approved_new": 183,
-    "needs_review": 28,
+    "approved_new": 46,
+    "needs_review": 165,
     "rejected": 19
   },
   "approved_existing_skus": [],
   "needs_review_brief": [
+    {
+      "source_index": 1,
+      "source_name": "Нектар Добрый 1л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 2,
+      "source_name": "Нектар Добрый 1л Яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 3,
+      "source_name": "Сок Вико 1л апельсиновый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 5,
+      "source_name": "Сок J7 0,85л Апельсин",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
     {
       "source_index": 7,
       "source_name": "Нектар Добрый 1л Апельсин",
@@ -28,12 +68,82 @@
       ]
     },
     {
+      "source_index": 10,
+      "source_name": "Сок Вико 1л ананасовый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 11,
+      "source_name": "Сок Вико 1л вишневый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 12,
+      "source_name": "Сок Вико 1л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 13,
+      "source_name": "Нектар SIS Апельсин 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 15,
+      "source_name": "Сок Вико 1л зеленое яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 16,
       "source_name": "Сок J7 0,85л Яблоко",
       "match_status": "new_product",
       "reason": "needs_review_small_image",
       "mismatches": [
         "below_500"
+      ]
+    },
+    {
+      "source_index": 17,
+      "source_name": "Сок Вико 1л Гранатовый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 18,
+      "source_name": "Сок Вико 2л яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -46,12 +156,172 @@
       ]
     },
     {
+      "source_index": 20,
+      "source_name": "Нектар Сочная долина 0,95л мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 24,
       "source_name": "Напиток Добрый Палпи пл/б 0,9л апельсин",
       "match_status": "new_product",
       "reason": "needs_review_small_image",
       "mismatches": [
         "below_500"
+      ]
+    },
+    {
+      "source_index": 26,
+      "source_name": "Нектар Добрый 1л Ананас Яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 27,
+      "source_name": "Нектар Сочная долина 0,95л смесь из ягод фруктов",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 29,
+      "source_name": "Нектар SIS Вишня 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 30,
+      "source_name": "Сок Рич 1л Персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 31,
+      "source_name": "Нектар Добрый 2л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 32,
+      "source_name": "Сок Вико 1л персиковый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 34,
+      "source_name": "Сок Рич 1л Вишня",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 35,
+      "source_name": "Нектар SIS клубнично-банановый 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 38,
+      "source_name": "Сок Вико 2л мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 39,
+      "source_name": "Нектар Добрый 1л Яблоко персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 40,
+      "source_name": "Сок Сады Придонья 1л мультифрукт без сахара",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 44,
+      "source_name": "Сок Вико 2л персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 46,
+      "source_name": "Нектар SIS Гранат 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 47,
+      "source_name": "Сок Рич 1л Яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 48,
+      "source_name": "Нектар Сочная долина 0,95л Клубника земляника",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -64,6 +334,26 @@
       ]
     },
     {
+      "source_index": 50,
+      "source_name": "Сок Сады Придонья 1л яблоко вишня без сахара",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 51,
+      "source_name": "Морс Сады Придонья клюквенный 1л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 52,
       "source_name": "Напиток Добрый Палпи пл/б 0,45л апельсин",
       "match_status": "new_product",
@@ -73,12 +363,32 @@
       ]
     },
     {
+      "source_index": 53,
+      "source_name": "Нектар Мой 0,2л Яблочный из зел яблок",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 54,
       "source_name": "Нектар Сочная долина 0,2л яблоко",
       "match_status": "new_product",
       "reason": "needs_review_small_image",
       "mismatches": [
         "below_500"
+      ]
+    },
+    {
+      "source_index": 55,
+      "source_name": "Сок J7 0,3л Апельсин",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -109,6 +419,196 @@
       ]
     },
     {
+      "source_index": 59,
+      "source_name": "Сок Рич 1л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 61,
+      "source_name": "Нектар SIS Мультифрукт 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 64,
+      "source_name": "Нектар Вико 2л вишневый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 67,
+      "source_name": "Нектар Мой 0,95л Ананас",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 68,
+      "source_name": "Сок Вико 0,2л апельсиновый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 69,
+      "source_name": "Сок Вико 0,2л зеленое яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 70,
+      "source_name": "Сок Гуниб абрикосовый 3л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 72,
+      "source_name": "Сок J7 0,97л Апельсин с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 75,
+      "source_name": "Нектар Сады Придонья IL Primo Мультифрукт 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 76,
+      "source_name": "Нектар Сочная долина 0,95л яблочный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 79,
+      "source_name": "Нектар Сады Придонья IL Primo Яблоко 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 80,
+      "source_name": "Нектар Сочная долина 1,93л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 81,
+      "source_name": "Нектар Добрый 2л Яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 82,
+      "source_name": "Нектар Любимый 1,93л Вишневая Черешня",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 83,
+      "source_name": "Сок J7 0,97л Яблоко зеленое",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 84,
+      "source_name": "Сок Сады Придонья 0,2л яблоко из зеленых яблок",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 85,
+      "source_name": "Сок Сады Придонья 1л яблоко персик с мякотью без сахара",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 87,
+      "source_name": "Сок Вико 1л Апельсин манго",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 89,
+      "source_name": "Нектар Добрый 2л Яблоко персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 91,
       "source_name": "Нектар Сочная долина 0,2л персик-яблоко",
       "match_status": "new_product",
@@ -127,12 +627,142 @@
       ]
     },
     {
+      "source_index": 93,
+      "source_name": "Сок J7 0,97л Ананас с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 95,
+      "source_name": "Сок Сады Придонья 1л яблочный из зеленых яблок без сахара",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 96,
+      "source_name": "Нектар Сочная долина 1,93л Яблочный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 98,
+      "source_name": "Нектар SIS Манго 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 99,
+      "source_name": "Нектар SIS Яблоко 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 100,
       "source_name": "Нектар Сочная долина 0,2л мультифрукт",
       "match_status": "new_product",
       "reason": "needs_review_small_image",
       "mismatches": [
         "below_500"
+      ]
+    },
+    {
+      "source_index": 101,
+      "source_name": "Нектар Сочная долина 0,95л персик яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 102,
+      "source_name": "Сок J7 0,97л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 103,
+      "source_name": "Сок J7 0,97л Персик с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 106,
+      "source_name": "Нектар Сады Придонья IL Primo Вишня 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 109,
+      "source_name": "Нектар Добрый 1л Томат",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 110,
+      "source_name": "Морс Сады Придонья брусника малина 1л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 114,
+      "source_name": "Нектар Мой 0,95л Персик яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 115,
+      "source_name": "Нектар Мой 1,93л Тропические фрукты",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -145,6 +775,226 @@
       ]
     },
     {
+      "source_index": 117,
+      "source_name": "Нектар Сочная долина 0,95л Апельсин манго",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 118,
+      "source_name": "Нектар Сочная долина 0,95л яблоко вишня черешня",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 121,
+      "source_name": "Нектар Сады Придонья IL Primo Ананас 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 126,
+      "source_name": "Нектар Мой 0,2л Ананасовый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 127,
+      "source_name": "Нектар Мой 0,2л Персиковый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 128,
+      "source_name": "Нектар Добрый 2л Томат",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 133,
+      "source_name": "Нектар Любимый 0,95л Апельсин манго мандарин",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 134,
+      "source_name": "Нектар Любимый 0,95л Вишневая черешня",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 135,
+      "source_name": "Нектар Любимый 0,95л Персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 136,
+      "source_name": "Нектар Любимый 0,95л Тропический микс",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 137,
+      "source_name": "Нектар Мой 0,95л Апельсин",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 138,
+      "source_name": "Нектар Мой 0,95л Бананово Клубничный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 139,
+      "source_name": "Нектар Мой 0,95л Томат",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 140,
+      "source_name": "Сок Вико 0,2л персиковый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 141,
+      "source_name": "Сок Вико 1л томатный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 142,
+      "source_name": "Сок Сантал апельсиновый 1л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 144,
+      "source_name": "Нектар Сады Придонья IL Primo Грейпфрут 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 145,
+      "source_name": "Нектар Сочная долина 1,93л Апельсин манго",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 146,
+      "source_name": "Нектар Сочная долина 1,93л Персик-яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 149,
+      "source_name": "Нектар Мой 0,2л мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 151,
+      "source_name": "Нектар Добрый 0,2л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 152,
+      "source_name": "Нектар Добрый 0,2л Яблоко персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 153,
       "source_name": "Сок Добрый 0,3л пэт Яблоко",
       "match_status": "conflict",
@@ -154,12 +1004,162 @@
       ]
     },
     {
+      "source_index": 155,
+      "source_name": "Напиток Базил Сид Фантастический личи 290мл",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 156,
+      "source_name": "Нектар SIS Персик 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 157,
+      "source_name": "Нектар Вико 1л абрикос",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 158,
+      "source_name": "Нектар Любимый 0,2л яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 159,
+      "source_name": "Нектар Любимый 0,95л Яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 160,
+      "source_name": "Нектар Любимый 1,93л Яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 161,
+      "source_name": "Нектар Мой 0,95л Вишня яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 162,
+      "source_name": "Нектар Мой 1,93л Вишня яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 163,
+      "source_name": "Нектар Мой 1,93л Персик яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 165,
       "source_name": "Нектар Сочная долина 0,95л гранат ананас яблоко",
       "match_status": "new_product",
       "reason": "needs_review_small_image",
       "mismatches": [
         "below_500"
+      ]
+    },
+    {
+      "source_index": 166,
+      "source_name": "Сок J7 0,97л Вишня",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 167,
+      "source_name": "Сок Вико 0,2л вишневый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 168,
+      "source_name": "Сок Вико 0,2л Мультифрукт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 169,
+      "source_name": "Сок Сады Придонья 0,2л мультифруктовый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 170,
+      "source_name": "Сок Сады Придонья 1л яблоко абрикос без сахара",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 171,
+      "source_name": "Сок Сады Придонья 1л яблоко груша с мякотью без сахара",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -190,6 +1190,36 @@
       ]
     },
     {
+      "source_index": 175,
+      "source_name": "Нектар SIS черная смородина 1.6л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 176,
+      "source_name": "Нектар Сочная долина 0,2л яблоко-вишня",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 177,
+      "source_name": "Напиток Винут Манго 330мл",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 178,
       "source_name": "Сок Гуниб абрикос яблоко 0,5л ст",
       "match_status": "new_product",
@@ -199,12 +1229,132 @@
       ]
     },
     {
+      "source_index": 181,
+      "source_name": "Нектар Вико 1л банановый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 184,
+      "source_name": "Нектар Добрый 0,2л Яблоко",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 185,
       "source_name": "Нектар Добрый 0,3л пэт Мультифрукт",
       "match_status": "conflict",
       "reason": "needs_review_conflict",
       "mismatches": [
         "status_conflict"
+      ]
+    },
+    {
+      "source_index": 186,
+      "source_name": "Сок ФрутоНяня 200мл яблоко осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 187,
+      "source_name": "Сок ФрутоНяня 200мл груша освет",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 188,
+      "source_name": "Сок ФрутоНяня 200мл Мультифруктовый с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 189,
+      "source_name": "Сок ФрутоНяня 200мл яблоко вишня осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 190,
+      "source_name": "Сок ФрутоНяня 200мл яблоко черн смородина",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 191,
+      "source_name": "Сок ФрутоНяня 200мл с мякотью яблоко персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 193,
+      "source_name": "Нектар ФрутоНяня 200мл с мякотью банан",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 194,
+      "source_name": "Сок Дары Кубани 0,2л яблочный прямого отжима",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 197,
+      "source_name": "Сок ФрутоНяня 500мл яблоко освет",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 198,
+      "source_name": "Сок ФрутоНяня 200мл с мякотью яблоко груша",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -222,7 +1372,29 @@
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
-        "volume_missing"
+        "volume_missing",
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 202,
+      "source_name": "Нектар Дары Кубани 0,2л Яблочный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 204,
+      "source_name": "Нектар Агуша 200мл Яблоко персик с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -235,12 +1407,144 @@
       ]
     },
     {
+      "source_index": 206,
+      "source_name": "Морс ФрутоНяня из клюквы черники и вишни 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 207,
+      "source_name": "Сок ФрутоНяня 200мл яблоко шиповник осветл",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 208,
+      "source_name": "Сок Дары Кубани 0,2л яблочно-шиповниковый осветл",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 209,
+      "source_name": "Нектар Агуша 200мл Яблоко осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 210,
+      "source_name": "Нектар Агуша 200мл Груша осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 211,
+      "source_name": "Нектар Дары Кубани 0,2л Яблоко персик",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 212,
+      "source_name": "Сок ФрутоНяня 500мл яблоко персик с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 213,
+      "source_name": "Сок ФрутоНяня 500мл яблоко вишня с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 214,
+      "source_name": "Нектар Маленькое Счастье Фиксики Фрути Яблоко-Банан 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 215,
+      "source_name": "Нектар Дары Кубани Банан с мякотью 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 216,
+      "source_name": "Нектар Дары Кубани 0,2л Яблоко вишня",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 217,
+      "source_name": "Нектар Маленькое счастье Маши и Медведь Яблоко 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 218,
+      "source_name": "Нектар Маленькое Счастье Фиксики Фрути Яблоко 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 219,
       "source_name": "Нектар Малышам яблочно-грушевый неосветленный 200г",
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
-        "volume_missing"
+        "volume_missing",
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {
@@ -249,7 +1553,79 @@
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
-        "volume_missing"
+        "volume_missing",
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 221,
+      "source_name": "Нектар Маленькое Счастье Фиксики Фрути Яблоко-Груша 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 222,
+      "source_name": "Нектар Агуша 200мл Яблоко с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 223,
+      "source_name": "Нектар Агуша 200мл Яблоко-Вишня осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 225,
+      "source_name": "Нектар Маленькое счастье Маши и Медведь Яблоко Банан 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 226,
+      "source_name": "Нектар Агуша 200мл Яблоко манго банан с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 227,
+      "source_name": "Нектар Маленькое счастье Маши и Медведь Мультифрукт 0,2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 228,
+      "source_name": "Нектар Агуша 200мл Яблоко-Шиповник осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
       ]
     },
     {

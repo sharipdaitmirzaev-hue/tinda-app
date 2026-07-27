@@ -112,6 +112,9 @@ function main() {
   const review_path = path.resolve(
     arg("review", "data/imports/zelenoe_yabloko_gazirovannye_images_review.xlsx")!,
   );
+  const products_path = path.resolve(
+    arg("products", "data/imports/tinda_active_products.snapshot.json")!,
+  );
 
   const manifest = JSON.parse(readFileSync(manifest_path, "utf8")) as {
     items: ManifestItem[];
@@ -126,11 +129,25 @@ function main() {
     candidates.map((c) => [String(c.candidate_image_url || ""), c]),
   );
   const review_by_url = load_review_by_url(review_path);
+  const existing_skus = new Set<string>();
+  if (existsSync(products_path)) {
+    const products = JSON.parse(readFileSync(products_path, "utf8")) as Array<{
+      sku?: string;
+    }>;
+    for (const p of products) {
+      if (p.sku) existing_skus.add(String(p.sku));
+    }
+  }
 
   const seq_by_prefix = new Map<string, number>();
+  const used_skus = new Set<string>(existing_skus);
   const cards = manifest.items.map((item) => {
     const rev = review_by_url.get(item.candidate_image_url);
-    const cand = cand_by_url.get(item.candidate_image_url);
+    const cand =
+      cand_by_url.get(item.candidate_image_url) ||
+      candidates.find(
+        (c) => String(c.source_product_url || "") === item.source_product_url,
+      );
     const match_status =
       String(rev?.match_status || item.match_status || "unknown");
     const tinda_volume = String(rev?.tinda_volume || "");
@@ -159,14 +176,24 @@ function main() {
 
     const parsed = parse_zy_product_name(item.source_name);
     const prefix = `${parsed.brand}|${parsed.volume_ml}|${parsed.package_code}`;
-    const seq = (seq_by_prefix.get(prefix) || 0) + 1;
-    seq_by_prefix.set(prefix, seq);
-    const proposed_sku = build_zy_sku(
+    let seq = (seq_by_prefix.get(prefix) || 0) + 1;
+    let proposed_sku = build_zy_sku(
       parsed.brand,
       parsed.volume_ml,
       parsed.package_code,
       seq,
     );
+    while (used_skus.has(proposed_sku)) {
+      seq += 1;
+      proposed_sku = build_zy_sku(
+        parsed.brand,
+        parsed.volume_ml,
+        parsed.package_code,
+        seq,
+      );
+    }
+    seq_by_prefix.set(prefix, seq);
+    used_skus.add(proposed_sku);
 
     const below_500 =
       (item.width != null && item.width < 500) ||

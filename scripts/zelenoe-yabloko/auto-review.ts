@@ -202,8 +202,18 @@ function volume_ok(card: Card, tinda: TindaProductImageTarget | null): boolean {
 }
 
 function package_ok(card: Card, tinda: TindaProductImageTarget | null): boolean {
-  const sp = normalize_package(card.package_type || card.source_name);
-  if (!sp) return false;
+  const from_field = normalize_package(card.package_type);
+  const from_name = normalize_package(card.source_name);
+  const sp =
+    from_field ||
+    (/(пэт|pet|пластик|стекл|glass|жест|алюм|can|банка|ж\s*\/\s*б|тетра|tetra|т\s*\/\s*п|тпак|карто|п\s*\/\s*бут)/i.test(
+      card.source_name || "",
+    )
+      ? from_name
+      : "");
+  if (!sp || !["pet", "glass", "can", "carton", "pack"].includes(sp)) {
+    return false;
+  }
   if (!tinda) return true;
   if (card.package_match === true) return true;
   if (card.package_match === false) return false;
@@ -525,7 +535,7 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
   if (card.match_status === "new_product") {
     const brand = !!normalize_brand(card.brand);
     const volume = parse_volume_ml(card.volume_text) != null;
-    const pkg = !!normalize_package(card.package_type || card.source_name);
+    const pkg = package_ok(card, null);
     const fl = flavor_ok(card, null);
     const name_ok = card.source_name.trim().length >= 8;
     if (brand) matched.push("brand_parsed");
