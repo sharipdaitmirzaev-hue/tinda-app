@@ -1,0 +1,396 @@
+{
+  "generated_at": "2026-07-27T20:54:35.678Z",
+  "mode": "apply",
+  "backup_path": "/var/backups/tinda/tinda-pre-homepage-missing-products-20260727T205413Z.dump",
+  "source": "/app/data/imports/homepage-missing-products/approved-new-import-batch.json",
+  "uploads_root": "/app/public/uploads",
+  "expected_rows": 4,
+  "expected_skus": [
+    "ZY-COCACOLAZERO-330-GLASS-001",
+    "ZY-SPRITE-2000-PET-001",
+    "ZY-ADRENALINE-250-CAN-001",
+    "ZY-ADRENALINE-449-CAN-001"
+  ],
+  "row_count": 4,
+  "note": "Create-only import of 4 homepage-missing approved_new products. No schema/seed. package_requires_review in report only. Existing products/prices/images untouched.",
+  "package_requires_review": true,
+  "package_requires_review_detail": {
+    "field_in_schema": false,
+    "flag_value": true,
+    "skus": [
+      "ZY-COCACOLAZERO-330-GLASS-001",
+      "ZY-SPRITE-2000-PET-001",
+      "ZY-ADRENALINE-250-CAN-001",
+      "ZY-ADRENALINE-449-CAN-001"
+    ],
+    "note": "Transport packaging may be multipack at source; units_per_package forced to 1 for TINDA unit cards."
+  },
+  "categories": {
+    "kola": {
+      "id": "34bee47b-61c3-4e15-81db-75d58ecf018b",
+      "slug": "kola",
+      "name": "Кола",
+      "is_active": true,
+      "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+    },
+    "gazirovannye-napitki": {
+      "id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71",
+      "slug": "gazirovannye-napitki",
+      "name": "Газированные напитки",
+      "is_active": true,
+      "parent_id": null
+    },
+    "energeticheskie-napitki": {
+      "id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "slug": "energeticheskie-napitki",
+      "name": "Энергетические напитки",
+      "is_active": true,
+      "parent_id": null
+    }
+  },
+  "related_existing_not_duplicates": [
+    {
+      "sku": "DRINK-COCACOLA-330-CAN-309",
+      "name": "Coca-Cola Zero, 0,33 л, жестяная банка",
+      "brand": "Coca-Cola",
+      "volume_text": "0,33 л",
+      "package_type": "жестяная банка"
+    },
+    {
+      "sku": "DRINK-COCACOLA-330-CAN-379",
+      "name": "Coca-Cola Zero без кофеина, 0,33 л, жестяная банка",
+      "brand": "Coca-Cola",
+      "volume_text": "0,33 л",
+      "package_type": "жестяная банка"
+    },
+    {
+      "sku": "DRINK-SPRITE-330-CAN-135",
+      "name": "Sprite с лимоном и лаймом, 0,33 л, жестяная банка",
+      "brand": "Sprite",
+      "volume_text": "0,33 л",
+      "package_type": "жестяная банка"
+    }
+  ],
+  "preview": {
+    "ok": 4,
+    "failed": 0,
+    "candidates_exactly_4": true,
+    "proposed_skus_unique": true,
+    "skus_absent_in_db": true
+  },
+  "counts": {
+    "created": 4,
+    "skipped": 0,
+    "failed": 0,
+    "images_uploaded": 4,
+    "preview_ok": 4,
+    "preview_failed": 0
+  },
+  "local_image_urls_ok": true,
+  "before": {
+    "products_total": 455,
+    "showcase_active": 440,
+    "orderable_active": 13,
+    "no_price": 440,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "after": {
+    "products_total": 459,
+    "showcase_active": 444,
+    "orderable_active": 13,
+    "no_price": 444,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "orderable_price_drift": [],
+  "guard_ok": {
+    "orders_unchanged": true,
+    "order_items_unchanged": true,
+    "clients_unchanged": true,
+    "interest_unchanged": true,
+    "no_orderable_price_drift": true,
+    "products_delta": 4
+  },
+  "created_skus": [
+    "ZY-COCACOLAZERO-330-GLASS-001",
+    "ZY-SPRITE-2000-PET-001",
+    "ZY-ADRENALINE-250-CAN-001",
+    "ZY-ADRENALINE-449-CAN-001"
+  ],
+  "webp_uploaded": [
+    {
+      "sku": "ZY-COCACOLAZERO-330-GLASS-001",
+      "product_id": "6d7a2ec3-66eb-4561-b227-ab4268f53e87",
+      "image_url": "/uploads/products/6d7a2ec3-66eb-4561-b227-ab4268f53e87/f36d04bb-1b7b-4390-87a2-adcf01c64307.webp"
+    },
+    {
+      "sku": "ZY-SPRITE-2000-PET-001",
+      "product_id": "a357764c-0f35-4e76-b642-fd06f3406b72",
+      "image_url": "/uploads/products/a357764c-0f35-4e76-b642-fd06f3406b72/bddc7dd1-a03a-490f-bd54-1e91ae63a0f0.webp"
+    },
+    {
+      "sku": "ZY-ADRENALINE-250-CAN-001",
+      "product_id": "577cdd10-3646-41e9-aa3e-bd4c15a16180",
+      "image_url": "/uploads/products/577cdd10-3646-41e9-aa3e-bd4c15a16180/708ed9e7-e5dc-40be-8f39-bdade51fe6e2.webp"
+    },
+    {
+      "sku": "ZY-ADRENALINE-449-CAN-001",
+      "product_id": "085d3428-297b-4e4b-8949-d299c7c6d559",
+      "image_url": "/uploads/products/085d3428-297b-4e4b-8949-d299c7c6d559/11d3b16b-c4c0-45c3-8a33-9639562be5b8.webp"
+    }
+  ],
+  "results": [
+    {
+      "row": 1,
+      "id": "coca-cola-zero-330-glass-napitkiopt",
+      "proposed_sku": "ZY-COCACOLAZERO-330-GLASS-001",
+      "source_name": "Coca-Cola Zero, 0,33 л, стекло",
+      "brand": "Coca-Cola",
+      "sugar_free": true,
+      "volume_text": "0,33 л",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "category_slug": "kola",
+      "category_id": "34bee47b-61c3-4e15-81db-75d58ecf018b",
+      "apply_status": "created",
+      "product_id": "6d7a2ec3-66eb-4561-b227-ab4268f53e87",
+      "image_url": "/uploads/products/6d7a2ec3-66eb-4561-b227-ab4268f53e87/f36d04bb-1b7b-4390-87a2-adcf01c64307.webp",
+      "upload_result": "uploaded",
+      "validation_errors": [],
+      "error_message": null,
+      "package_requires_review": true
+    },
+    {
+      "row": 2,
+      "id": "sprite-2000-pet-napolke",
+      "proposed_sku": "ZY-SPRITE-2000-PET-001",
+      "source_name": "Sprite с лимоном и лаймом, 2 л, ПЭТ",
+      "brand": "Sprite",
+      "sugar_free": false,
+      "volume_text": "2 л",
+      "volume_ml": 2000,
+      "package_type": "ПЭТ",
+      "package_norm": "pet",
+      "category_slug": "gazirovannye-napitki",
+      "category_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71",
+      "apply_status": "created",
+      "product_id": "a357764c-0f35-4e76-b642-fd06f3406b72",
+      "image_url": "/uploads/products/a357764c-0f35-4e76-b642-fd06f3406b72/bddc7dd1-a03a-490f-bd54-1e91ae63a0f0.webp",
+      "upload_result": "uploaded",
+      "validation_errors": [],
+      "error_message": null,
+      "package_requires_review": true
+    },
+    {
+      "row": 3,
+      "id": "adrenaline-250-can-ofisshop",
+      "proposed_sku": "ZY-ADRENALINE-250-CAN-001",
+      "source_name": "Adrenaline Rush Абсолютная энергия, 0,25 л, жестяная банка",
+      "brand": "Adrenaline Rush",
+      "sugar_free": false,
+      "volume_text": "0,25 л",
+      "volume_ml": 250,
+      "package_type": "жестяная банка",
+      "package_norm": "can",
+      "category_slug": "energeticheskie-napitki",
+      "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "apply_status": "created",
+      "product_id": "577cdd10-3646-41e9-aa3e-bd4c15a16180",
+      "image_url": "/uploads/products/577cdd10-3646-41e9-aa3e-bd4c15a16180/708ed9e7-e5dc-40be-8f39-bdade51fe6e2.webp",
+      "upload_result": "uploaded",
+      "validation_errors": [],
+      "error_message": null,
+      "package_requires_review": true
+    },
+    {
+      "row": 4,
+      "id": "adrenaline-449-can-ofisshop",
+      "proposed_sku": "ZY-ADRENALINE-449-CAN-001",
+      "source_name": "Adrenaline Rush Абсолютная энергия, 0,449 л, жестяная банка",
+      "brand": "Adrenaline Rush",
+      "sugar_free": false,
+      "volume_text": "0,449 л",
+      "volume_ml": 449,
+      "package_type": "жестяная банка",
+      "package_norm": "can",
+      "category_slug": "energeticheskie-napitki",
+      "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "apply_status": "created",
+      "product_id": "085d3428-297b-4e4b-8949-d299c7c6d559",
+      "image_url": "/uploads/products/085d3428-297b-4e4b-8949-d299c7c6d559/11d3b16b-c4c0-45c3-8a33-9639562be5b8.webp",
+      "upload_result": "uploaded",
+      "validation_errors": [],
+      "error_message": null,
+      "package_requires_review": true
+    }
+  ],
+  "post_deploy": {
+    "health": {
+      "ok": true,
+      "database": "ok"
+    },
+    "containers": [
+      {
+        "name": "app-app-1",
+        "status": "healthy"
+      },
+      {
+        "name": "app-db-1",
+        "status": "healthy"
+      }
+    ],
+    "homepage_featured_sku_order": [
+      "DRINK-COCACOLA-330-GLASS-105",
+      "ZY-COCACOLAZERO-330-GLASS-001",
+      "ZY-SPRITE-2000-PET-001",
+      "ZY-BORZHOMI-500-GLASS-001",
+      "ZY-BORZHOMI-330-GLASS-001",
+      "ZY-MIN-500-GLASS-001",
+      "ZY-VIKO-1000-CARTON-012",
+      "ZY-VIKO-1000-CARTON-013",
+      "ZY-VIKO-1000-CARTON-009",
+      "ZY-VIKO-1000-CARTON-006",
+      "ZY-VIKO-1000-CARTON-004",
+      "ZY-VIKO-1000-CARTON-002",
+      "ZY-VIKO-1000-CARTON-001",
+      "ZY-VIKO-1000-CARTON-008",
+      "ZY-VIKO-1000-CARTON-010",
+      "ZY-VIKO-1000-CARTON-003",
+      "ZY-VIKO-1000-CARTON-005",
+      "ZY-VIKO-1000-CARTON-007",
+      "ZY-VIKO-1000-CARTON-011",
+      "ZY-ADRENALINE-250-CAN-001",
+      "ZY-ADRENALINE-449-CAN-001"
+    ],
+    "initial_visible_cap": 16,
+    "adrenaline_330_absent": true,
+    "classic_coke_first": true,
+    "adrenaline_small_before_large": true,
+    "guest_prices_hidden_in_popular_section": true,
+    "webp_http_200": true,
+    "qa": {
+      "lint": "pass",
+      "typecheck": "pass",
+      "test": "203 passed",
+      "build": "pass"
+    },
+    "products_total": 459,
+    "showcase_active": 444,
+    "orderable_active": 13,
+    "no_price": 444
+  }
+}

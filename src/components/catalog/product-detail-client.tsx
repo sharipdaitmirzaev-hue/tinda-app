@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
 import { ProductInterestForm } from "@/components/catalog/product-interest-form";
+import { ProductStatusBadges } from "@/components/catalog/product-status-badges";
 import { QuantityStepper } from "@/components/catalog/quantity-stepper";
 import { Toast } from "@/components/catalog/toast";
 import {
   format_rub_price,
+  useCanEditCatalog,
   useCatalogViewer,
 } from "@/components/catalog/catalog-viewer-context";
 import { useAddToServerCart } from "@/hooks/useServerCart";
@@ -41,6 +43,7 @@ type CatalogProductDetail = {
 
 export function ProductDetailClient({ product_id }: { product_id: string }) {
   const viewer = useCatalogViewer();
+  const can_edit = useCanEditCatalog();
   const approved = viewer === "approved";
   const guest = viewer === "guest";
   const [product, set_product] = useState<CatalogProductDetail | null>(null);
@@ -140,7 +143,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
   } else if (approved) {
     if (product.availability === "out_of_stock") {
       price_block = (
-        <p className="text-sm font-medium text-red-700">Временно нет</p>
+        <p className="text-sm font-medium text-red-700">Нет в наличии</p>
       );
     } else if (sales_status === "orderable" && product.price) {
       price_block = (
@@ -176,6 +179,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
             src={product.image_url}
             alt={product.name}
             className="h-72 w-full md:min-h-[28rem]"
+            priority
           />
         </div>
 
@@ -184,27 +188,21 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
             <Link href="/catalog" className="text-sm text-teal-800 underline">
               ← Назад в каталог
             </Link>
-            <div className="mt-2 flex flex-wrap gap-1 text-[11px] font-medium uppercase">
-              {product.is_promo ? (
-                <span className="rounded bg-rose-100 px-1.5 py-0.5 text-rose-800">
-                  Акция
-                </span>
-              ) : null}
-              {product.is_new ? (
-                <span className="rounded bg-sky-100 px-1.5 py-0.5 text-sky-800">
-                  Новинка
-                </span>
-              ) : null}
-              {product.is_hit ? (
-                <span className="rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">
-                  Хит
-                </span>
-              ) : null}
+            <div className="mt-2">
+              <ProductStatusBadges product={product} />
             </div>
             <h1 className="mt-2 text-2xl font-semibold text-slate-900">
               {product.name}
             </h1>
             <p className="text-slate-600">{product.brand || "Без бренда"}</p>
+            {can_edit ? (
+              <Link
+                href={`/staff/products/${product.id}`}
+                className="mt-3 inline-flex rounded-md bg-slate-900 px-3 py-2 text-sm text-white"
+              >
+                Редактировать в staff
+              </Link>
+            ) : null}
           </div>
 
           <dl className="grid grid-cols-2 gap-3 text-sm">

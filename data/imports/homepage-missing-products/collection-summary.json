@@ -1,0 +1,159 @@
+{
+  "generated_at": "2026-07-27T20:48:25.161Z",
+  "note": "LOCAL PREVIEW ONLY. Stopped after preview. Production / VPS / DB / homepage featured block / prices / seed NOT changed. No products created.",
+  "tinda_recheck": {
+    "product_count": 455,
+    "proposed_skus_unique": {
+      "ZY-COCACOLAZERO-330-GLASS-001": true,
+      "ZY-SPRITE-2000-PET-001": true,
+      "ZY-ADRENALINE-250-CAN-001": true,
+      "ZY-ADRENALINE-449-CAN-001": true,
+      "ZY-ADRENALINE-330-CAN-001": true
+    },
+    "related_existing": [
+      {
+        "sku": "DRINK-COCACOLA-330-CAN-379",
+        "name": "Coca-Cola Zero без кофеина, 0,33 л, жестяная банка",
+        "brand": "Coca-Cola",
+        "volume_text": "0,33 л",
+        "package_type": "жестяная банка",
+        "is_active": true,
+        "sales_status": "showcase"
+      },
+      {
+        "sku": "DRINK-COCACOLA-330-CAN-309",
+        "name": "Coca-Cola Zero, 0,33 л, жестяная банка",
+        "brand": "Coca-Cola",
+        "volume_text": "0,33 л",
+        "package_type": "жестяная банка",
+        "is_active": true,
+        "sales_status": "showcase"
+      },
+      {
+        "sku": "DRINK-SPRITE-330-CAN-135",
+        "name": "Sprite с лимоном и лаймом, 0,33 л, жестяная банка",
+        "brand": "Sprite",
+        "volume_text": "0,33 л",
+        "package_type": "жестяная банка",
+        "is_active": true,
+        "sales_status": "showcase"
+      }
+    ],
+    "match_summary": {
+      "coca_cola_zero_033_glass": "new_product (Zero can exists — different package, not duplicate)",
+      "sprite_2l_pet": "new_product (Sprite 0.33 can exists — different volume/package)",
+      "adrenaline_rush": "new_product (no Adrenaline in TINDA)"
+    }
+  },
+  "sources_found": {
+    "coca_cola_zero_033_glass": [
+      "napitkiopt.ru — glass 0.33 Zero (primary image)",
+      "dblack.ru — glass 0.33 Zero (promo badges)",
+      "vodo-ley.ru — rejected (watermark + wrong/group shot)",
+      "globalalco.ru — rejected (narrow image <500)"
+    ],
+    "sprite_2l_pet": [
+      "napolke.ru — 2L PET single bottle (primary)",
+      "vodovoz.ru — card exists, image 200×200 rejected",
+      "napitkiopt.ru — card exists, watermark + width <500 rejected"
+    ],
+    "adrenaline_rush": [
+      "adrenalinerush.ru — official volumes 0.25 / 0.33 / 0.449",
+      "ofisshop.ru — 250 / 330 / 449 single cans",
+      "magnit.ru — 449 can",
+      "barista-ltd.ru — 250 can",
+      "winestyle.ru — cards exist, portrait images <500 width rejected for auto"
+    ]
+  },
+  "adrenaline_selection": {
+    "available_standard_volumes_ml": [
+      250,
+      330,
+      449
+    ],
+    "available_standard_volumes_text": [
+      "0,25 л",
+      "0,33 л",
+      "0,449 л"
+    ],
+    "small": {
+      "volume_ml": 250,
+      "volume_text": "0,25 л",
+      "proposed_sku": "ZY-ADRENALINE-250-CAN-001",
+      "primary_candidate_id": "adrenaline-250-can-ofisshop",
+      "rule": "min_standard_single_can"
+    },
+    "large": {
+      "volume_ml": 449,
+      "volume_text": "0,449 л",
+      "proposed_sku": "ZY-ADRENALINE-449-CAN-001",
+      "primary_candidate_id": "adrenaline-449-can-ofisshop",
+      "rule": "max_standard_single_can"
+    },
+    "mid_preview_only": {
+      "volume_ml": 330,
+      "volume_text": "0,33 л",
+      "proposed_sku": "ZY-ADRENALINE-330-CAN-001",
+      "note": "Показан в preview всех вариантов; не выбран как маленький/большой"
+    },
+    "excluded": [
+      "миниатюры",
+      "промонаборы",
+      "мультипаки / упаковки из нескольких банок"
+    ]
+  },
+  "counts": {
+    "candidates_total": 9,
+    "approved_new": 4,
+    "approved_new_primary_import_ready": 4,
+    "needs_review": 4,
+    "rejected": 1
+  },
+  "import_ready": [
+    {
+      "id": "coca-cola-zero-330-glass-napitkiopt",
+      "proposed_sku": "ZY-COCACOLAZERO-330-GLASS-001",
+      "source_name": "Coca‑Cola Zero 0,33 л стекло (Грузия)",
+      "volume_text": "0,33 л",
+      "package_type": "стекло",
+      "image": "970x546",
+      "source_product_url": "https://napitkiopt.ru/coca-cola-koka-kola-zero-zero-0-33-l-steklo-up-15-sht-gruziya/"
+    },
+    {
+      "id": "sprite-2000-pet-napolke",
+      "proposed_sku": "ZY-SPRITE-2000-PET-001",
+      "source_name": "Напиток газированный Sprite Беларусь 2 л., ПЭТ",
+      "volume_text": "2 л",
+      "package_type": "ПЭТ",
+      "image": "740x740",
+      "source_product_url": "https://napolke.ru/catalog/soki_vody_napitki/gazirovannye_napitki_limonady/product/napitok_gazirovanny_j_sprite_belarus_2_l_pe_t-80663334-0b30-4dcb-aab0-ec1126216c43"
+    },
+    {
+      "id": "adrenaline-250-can-ofisshop",
+      "proposed_sku": "ZY-ADRENALINE-250-CAN-001",
+      "source_name": "Напиток энергетический Adrenaline Rush 0.25л, ж/б",
+      "volume_text": "0,25 л",
+      "package_type": "жестяная банка",
+      "image": "600x600",
+      "source_product_url": "https://ofisshop.ru/catalog/energetiki/napitok_energeticheskiy_adrenaline_rush_025l_zhb_1559495/"
+    },
+    {
+      "id": "adrenaline-449-can-ofisshop",
+      "proposed_sku": "ZY-ADRENALINE-449-CAN-001",
+      "source_name": "Энергетический напиток Adrenaline Rush 449мл",
+      "volume_text": "0,449 л",
+      "package_type": "жестяная банка",
+      "image": "600x600",
+      "source_product_url": "https://ofisshop.ru/catalog/energetiki/napitok_energeticheskiy_adrenaline_rush_449ml_1965286/"
+    }
+  ],
+  "artifact_paths": {
+    "candidates_json": "data/imports/homepage-missing-products/candidates.json",
+    "original_dir": "data/imports/homepage-missing-products/original/",
+    "previews_dir": "data/imports/homepage-missing-products/previews/",
+    "manifest_json": "data/imports/homepage-missing-products/manifest.json",
+    "gallery_html": "data/imports/homepage-missing-products/gallery.html",
+    "review_xlsx": "data/imports/homepage-missing-products/review.xlsx",
+    "collection_summary_json": "data/imports/homepage-missing-products/collection-summary.json"
+  }
+}

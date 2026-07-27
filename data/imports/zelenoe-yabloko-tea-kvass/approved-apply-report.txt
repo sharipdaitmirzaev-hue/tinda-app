@@ -1,0 +1,31 @@
+TINDA Zelenoe TEA/KVASS approved_new import report
+generated_at: 2026-07-27T19:34:00.101Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-tea-kvass-approved-20260727T193341Z.dump
+source: /app/tmp/zelenoe-tea-kvass/approved-new-import-batch.json
+rows: 5 (expected 5)
+categories: kholodnyy-chay=Холодный чай (active=true); kvas=Квас (active=true)
+product_type: {"iced_tea":1,"kvass":4}
+category_distribution: {"kholodnyy-chay":1,"kvas":4}
+package_requires_review: true
+created: 5
+skipped: 0
+failed: 0
+images_uploaded: 5
+created_by_product_type: {"iced_tea":1,"kvass":4}
+created_by_category: {"kholodnyy-chay":1,"kvas":4}
+products_total: 441 -> 446
+showcase_active: 426 -> 431
+orderable_active: 13 -> 13
+no_price: 426 -> 431
+orders: 3->3; order_items: 5->5
+package_requires_review SKUs (5): ZY-RICH-500-PET-001, ZY-OCHAKOVSKII-1000-PET-001, ZY-SULAKSKII-2000-PET-001, ZY-LIDSKII-1500-PET-001, ZY-LIDSKII-1500-PET-002
+
+SKU | status | product_type | category | product_id | image_url | error
+ZY-RICH-500-PET-001 | created | iced_tea | kholodnyy-chay | fff5da73-5036-4877-a261-4c09a7eda9d1 | /uploads/products/fff5da73-5036-4877-a261-4c09a7eda9d1/abcbdb69-1c18-4e50-b776-da0bc9e842f9.webp | -
+ZY-OCHAKOVSKII-1000-PET-001 | created | kvass | kvas | ac24e9ab-f2bc-46f1-bcc5-2ae461cd12cf | /uploads/products/ac24e9ab-f2bc-46f1-bcc5-2ae461cd12cf/2aedd97f-0a23-4663-9993-bf073ea7115c.webp | -
+ZY-SULAKSKII-2000-PET-001 | created | kvass | kvas | 57429589-770c-463a-92c8-f07c59758980 | /uploads/products/57429589-770c-463a-92c8-f07c59758980/2b87b5c1-11f0-4fd2-8fe2-3120675a613a.webp | -
+ZY-LIDSKII-1500-PET-001 | created | kvass | kvas | 3f212a57-8129-4274-b5e3-ac8ef5a222bd | /uploads/products/3f212a57-8129-4274-b5e3-ac8ef5a222bd/cbc06f7a-3e3f-4b33-a766-f021cc2c0e27.webp | -
+ZY-LIDSKII-1500-PET-002 | created | kvass | kvas | dcf5371b-a859-46c8-813a-1b6ff6d49886 | /uploads/products/dcf5371b-a859-46c8-813a-1b6ff6d49886/806b50a1-b04e-4c02-9315-4eecaef0b1be.webp | -
+
+post_verify: guest catalog shows all 5; can_add_to_cart=false; WebP HTTP 200 after app restart; health ok; orders/items unchanged.

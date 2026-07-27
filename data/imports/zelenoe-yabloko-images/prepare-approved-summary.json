@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-27T14:31:45.035Z",
+  "existing_selected": 9,
+  "existing_staged_webp": 9,
+  "existing_errors": [],
+  "existing_plan": "/workspace/data/imports/zelenoe-yabloko-images/existing-image-update-plan.json",
+  "staging_existing_dir": "/workspace/data/imports/zelenoe-yabloko-images/staging-existing",
+  "new_products_draft": 26,
+  "new_internal_duplicates": 0,
+  "new_tinda_near_duplicates": 0,
+  "new_package_requires_review": 26,
+  "new_xlsx": "/workspace/data/imports/zelenoe-yabloko-images/approved-new-products.xlsx",
+  "new_json": "/workspace/data/imports/zelenoe-yabloko-images/approved-new-products.json",
+  "production_changed": false,
+  "image_url_changed": false,
+  "uploaded_to_vps": false,
+  "products_created": false
+}

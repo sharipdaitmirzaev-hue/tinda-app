@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-27T15:04:02.349Z",
+  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-water/candidates.json",
+  "candidates_count": 70,
+  "urls_processed": 70,
+  "downloaded_ok": 70,
+  "errors": 0,
+  "duplicates_sha256": 0,
+  "below_500": 4,
+  "total_original_bytes": 1792241,
+  "original_dir": "/workspace/data/imports/zelenoe-yabloko-water/original",
+  "preview_dir": "/workspace/data/imports/zelenoe-yabloko-water/previews",
+  "manifest_path": "/workspace/data/imports/zelenoe-yabloko-water/manifest.json",
+  "gallery_path": "/workspace/data/imports/zelenoe-yabloko-water/gallery.html",
+  "production_changed": false,
+  "images_uploaded": false,
+  "image_url_changed": false
+}

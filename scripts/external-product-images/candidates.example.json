@@ -1,0 +1,26 @@
+[
+  {
+    "source_site": "coca-cola.com",
+    "source_product_url": "https://www.coca-cola.com/ru/ru/brands/coca-cola/products/coca-cola",
+    "candidate_image_url": "https://example.com/images/coca-cola-033-can.png",
+    "source_name": "Coca-Cola Classic 0.33 л ж/б",
+    "source_brand": "Coca-Cola",
+    "source_volume": "0.33 л",
+    "source_package": "can",
+    "source_flavor": "classic",
+    "source_sku": null,
+    "source_priority": 1
+  },
+  {
+    "source_site": "coca-cola.com",
+    "source_product_url": "https://www.coca-cola.com/ru/ru/brands/coca-cola/products/coca-cola-zero",
+    "candidate_image_url": "https://example.com/images/coca-cola-zero-033-can.png",
+    "source_name": "Coca-Cola Zero 0.33 л ж/б",
+    "source_brand": "Coca-Cola",
+    "source_volume": "0.33 л",
+    "source_package": "can",
+    "source_flavor": "zero",
+    "source_sku": null,
+    "source_priority": 1
+  }
+]
