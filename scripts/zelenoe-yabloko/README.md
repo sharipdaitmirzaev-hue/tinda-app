@@ -9,20 +9,27 @@
 - Фото на VPS **не** загружать
 - `image_url` **не** заменять автоматически
 - Новые товары **не** импортировать сразу
+- `review_status` в Excel = `pending` (вручную `approved` / `rejected`)
 
-## Запуск
+## 1. Собрать candidates
 
 ```bash
-# snapshot каталога ТИНДА (read-only) уже в data/imports/tinda_active_products.snapshot.json
-npm run zy:gazirovannye-review
+npm run zy:scrape-candidates
 ```
 
-Результат:
+→ `data/imports/zelenoe_yabloko_gazirovannye_candidates.json`
 
-- `data/imports/zelenoe_yabloko_gazirovannye_review.xlsx`
-- `data/imports/zelenoe_yabloko_gazirovannye_review.report.json`
-- `data/imports/zelenoe_yabloko_gazirovannye_candidates.json`
+## 2. Pipeline внешних изображений
+
+```bash
+npm run external-images:review -- \
+  --products data/imports/tinda_active_products.snapshot.json \
+  --candidates data/imports/zelenoe_yabloko_gazirovannye_candidates.json \
+  --out data/imports/zelenoe_yabloko_gazirovannye_images_review.xlsx
+```
+
+Листы: Точные совпадения / Требует проверки / Новые товары / Конфликты / Не найдено / Инструкция.
 
 ## После ручного подтверждения
 
-Скачивание фото — только локально, через общий pipeline `external-product-images` (не на VPS).
+Скачивание фото — только локально через `npm run external-images:download` (не на VPS).
