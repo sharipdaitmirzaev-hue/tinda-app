@@ -38,10 +38,27 @@ const PRODUCT_TYPE_TO_CATEGORY = {
   tonic_drink: "toniki",
 };
 const CATEGORY_FALLBACKS = {
-  malt_drink: ["solodovye-napitki", "bezalkogolnye-napitki"],
+  malt_drink: ["solodovye-napitki"],
   non_alcoholic_drink: ["bezalkogolnye-napitki"],
-  tonic_drink: ["toniki", "toniziruyushchie-napitki", "toniziruiushhie-napitki"],
+  tonic_drink: ["toniki"],
 };
+/** Categories this script may create (only if missing). Never create toniki. */
+const ENSURE_CATEGORIES = [
+  {
+    slug: "bezalkogolnye-napitki",
+    name: "Безалкогольные напитки",
+    is_active: true,
+    parent_id: null,
+    sort_order: 7,
+  },
+  {
+    slug: "solodovye-napitki",
+    name: "Солодовые напитки",
+    is_active: true,
+    parent_id: null,
+    sort_order: 8,
+  },
+];
 const ALLOWED_PRODUCT_TYPES = new Set(Object.keys(PRODUCT_TYPE_TO_CATEGORY));
 const ALLOWED_CATEGORIES = new Set([
   ...Object.values(PRODUCT_TYPE_TO_CATEGORY),
@@ -71,10 +88,11 @@ const REPORT_JSON =
   arg("report-json") ||
   path.resolve(
     __dirname,
-    "../../data/imports/zelenoe-yabloko-remaining-drinks/approved-apply-report.json",
+    "../../data/imports/zelenoe-yabloko-remaining-drinks/categories-and-apply-report.json",
   );
 const REPORT_TXT = arg("report-txt") || null;
 const BACKUP = arg("backup") || null;
+const ENSURE_CATS = has_flag("ensure-categories");
 const UPLOADS_ROOT =
   process.env.PRODUCT_IMAGES_UPLOADS_ROOT ||
   path.join(process.cwd(), "public", "uploads");
@@ -304,6 +322,57 @@ async function snapshot_guard() {
   };
 }
 
+async function ensure_missing_categories(cat_by_slug) {
+  const result = {
+    ensured: ENSURE_CATS,
+    created: [],
+    already_existed: [],
+    skipped_toniki: true,
+    note: "Only bezalkogolnye-napitki and solodovye-napitki may be created. toniki must already exist.",
+  };
+  if (!ENSURE_CATS) return result;
+
+  for (const spec of ENSURE_CATEGORIES) {
+    const existing = cat_by_slug.get(spec.slug);
+    if (existing) {
+      result.already_existed.push({
+        id: existing.id,
+        slug: existing.slug,
+        name: existing.name,
+        is_active: existing.is_active,
+      });
+      continue;
+    }
+    const created = await prisma.categories.create({
+      data: {
+        id: randomUUID(),
+        slug: spec.slug,
+        name: spec.name,
+        is_active: spec.is_active,
+        parent_id: spec.parent_id,
+        sort_order: spec.sort_order,
+        updated_at: new Date(),
+      },
+      select: {
+        id: true,
+        slug: true,
+        name: true,
+        is_active: true,
+        parent_id: true,
+        sort_order: true,
+      },
+    });
+    cat_by_slug.set(created.slug, created);
+    result.created.push(created);
+  }
+
+  // toniki must exist — never create
+  if (!cat_by_slug.get("toniki")) {
+    throw new Error("toniki_category_missing_and_must_not_be_created");
+  }
+  return result;
+}
+
 async function load_category_structure() {
   const cats = await prisma.categories.findMany({
     select: {
@@ -327,10 +396,24 @@ async function load_category_structure() {
 async function main() {
   const rows = load_rows();
   const before = await snapshot_guard();
-  const category_structure = await load_category_structure();
-  const cat_by_slug = new Map(category_structure.all.map((c) => [c.slug, c]));
+  let category_structure = await load_category_structure();
+  let cat_by_slug = new Map(category_structure.all.map((c) => [c.slug, c]));
 
-  // Resolve categories per row (existing only). Stop if any required missing.
+  const categories_ensure = await ensure_missing_categories(cat_by_slug);
+  if (categories_ensure.created.length > 0) {
+    category_structure = await load_category_structure();
+    cat_by_slug = new Map(category_structure.all.map((c) => [c.slug, c]));
+  }
+
+  // Force exact mapping: Barbican→solodovye, Vast→bezalk, Angry Animal→toniki
+  for (const row of rows) {
+    if (PRODUCT_TYPE_TO_CATEGORY[row.product_type]) {
+      row.category_slug = PRODUCT_TYPE_TO_CATEGORY[row.product_type];
+      row.category_slug_candidates = CATEGORY_FALLBACKS[row.product_type] || [];
+    }
+  }
+
+  // Resolve categories per row. Stop if any required missing after ensure.
   const resolved_categories = new Map();
   const missing_for_types = [];
   for (const row of rows) {
@@ -353,20 +436,18 @@ async function main() {
 
   if (missing_for_types.length > 0) {
     console.error(
-      "STOP: required categories missing. Do not create categories automatically.",
+      "STOP: required categories missing after ensure step.",
     );
     console.error(
       JSON.stringify(
         {
           expected_mapping: PRODUCT_TYPE_TO_CATEGORY,
-          fallbacks: CATEGORY_FALLBACKS,
+          categories_ensure,
           missing_for: missing_for_types,
-          relevant_categories: category_structure.relevant,
           all_categories: category_structure.all.map((c) => ({
             slug: c.slug,
             name: c.name,
             is_active: c.is_active,
-            parent_id: c.parent_id,
           })),
         },
         null,
@@ -378,54 +459,15 @@ async function main() {
       mode: "preview_stopped",
       reason: "required_categories_missing",
       backup_path: BACKUP,
-      expected_rows: EXPECTED,
-      row_count: rows.length,
-      package_requires_review: true,
-      category_mapping: PRODUCT_TYPE_TO_CATEGORY,
-      category_fallbacks: CATEGORY_FALLBACKS,
+      categories_ensure,
       missing_for: missing_for_types,
-      category_structure: {
-        relevant: category_structure.relevant,
-        all: category_structure.all,
-      },
+      category_structure: { all: category_structure.all },
       before,
-      note: "Import stopped after preview. Missing TINDA categories for Barbican/Vast (solodovye-napitki / bezalkogolnye-napitki). toniki exists for Angry Animal but batch stopped per policy.",
     };
     fs.mkdirSync(path.dirname(REPORT_JSON), { recursive: true });
     fs.writeFileSync(REPORT_JSON, JSON.stringify(stop_report, null, 2) + "\n");
-    if (REPORT_TXT) {
-      const lines = [
-        "TINDA Zelenoe remaining-drinks approved_new import report",
-        `generated_at: ${stop_report.generated_at}`,
-        `mode: preview_stopped`,
-        `reason: required_categories_missing`,
-        `backup: ${BACKUP || "(not set)"}`,
-        `rows: ${rows.length} (expected ${EXPECTED})`,
-        `package_requires_review: true`,
-        "",
-        "Missing category assignments:",
-        ...missing_for_types.map(
-          (m) =>
-            `- ${m.brand} / ${m.source_name} (product_type=${m.product_type}); tried: ${m.tried.join(", ")}`,
-        ),
-        "",
-        "Current TINDA categories:",
-        ...category_structure.all.map(
-          (c) =>
-            `- ${c.slug} | ${c.name} | active=${c.is_active} | parent=${c.parent_id || "-"}`,
-        ),
-        "",
-        "No products created. No seed. No schema change.",
-      ];
-      fs.mkdirSync(path.dirname(REPORT_TXT), { recursive: true });
-      fs.writeFileSync(REPORT_TXT, lines.join("\n") + "\n");
-      console.log(lines.join("\n"));
-    }
     process.exit(4);
   }
-
-  // Categories resolved above; proceed only when all rows have an existing category.
-  void resolved_categories;
 
   const existing_skus = new Set(
     (
@@ -745,7 +787,7 @@ async function main() {
     uploads_root: UPLOADS_ROOT,
     expected_rows: EXPECTED,
     row_count: rows.length,
-    note: "Create-only import of approved_new Zelenoe remaining drinks (Barbican/Vast/Angry Animal). No schema change. package_requires_review has no DB column — SKU list recorded below. Existing products untouched.",
+    note: "Create-only import of approved_new Zelenoe remaining drinks (Barbican/Vast/Angry Animal). May create bezalkogolnye-napitki + solodovye-napitki if missing. Never creates toniki. No schema change. package_requires_review has no DB column — SKU list recorded below. Existing products untouched.",
     package_requires_review: true,
     package_requires_review_detail: {
       field_in_schema: false,
@@ -754,6 +796,7 @@ async function main() {
       count: package_requires_review_skus.length,
       note: "Transport packaging (units_per_package) requires clarification; units_per_package forced to 1.",
     },
+    categories_ensure,
     category_mapping: PRODUCT_TYPE_TO_CATEGORY,
     category_fallbacks: CATEGORY_FALLBACKS,
     categories: Object.fromEntries(
@@ -816,12 +859,18 @@ async function main() {
   fs.writeFileSync(REPORT_JSON, JSON.stringify(report, null, 2) + "\n");
 
   const lines = [];
-  lines.push("TINDA Zelenoe remaining-drinks approved_new import report");
+  lines.push("TINDA Zelenoe remaining-drinks categories + approved_new import report");
   lines.push(`generated_at: ${report.generated_at}`);
   lines.push(`mode: ${MODE}`);
   lines.push(`backup: ${BACKUP || "(not set)"}`);
   lines.push(`source: ${report.source}`);
   lines.push(`rows: ${rows.length} (expected ${EXPECTED})`);
+  lines.push(
+    `categories_created: ${JSON.stringify(categories_ensure.created.map((c) => c.slug))}`,
+  );
+  lines.push(
+    `categories_already_existed: ${JSON.stringify(categories_ensure.already_existed.map((c) => c.slug))}`,
+  );
   lines.push(
     `categories: ${[...resolved_categories.entries()]
       .map(([slug, cat]) => `${slug}=${cat.name} (active=${cat.is_active})`)

@@ -7,11 +7,7 @@
     "malt_drink": "solodovye-napitki",
     "non_alcoholic_drink": "bezalkogolnye-napitki",
     "tonic_drink": "toniki",
-    "malt_drink_fallbacks": [
-      "solodovye-napitki",
-      "bezalkogolnye-napitki"
-    ],
-    "note": "Existing TINDA categories only. Do not auto-create. Preferred slugs may be missing on VPS."
+    "note": "Barbican→solodovye-napitki; Vast→bezalkogolnye-napitki; Angry Animal→toniki (existing). Create missing cats if needed."
   },
   "existing_tinda_categories_used": [
     "solodovye-napitki",
@@ -56,8 +52,7 @@
       "proposed_sku": "ZY-BARBICAN-330-GLASS-001",
       "category_slug": "solodovye-napitki",
       "category_slug_candidates": [
-        "solodovye-napitki",
-        "bezalkogolnye-napitki"
+        "solodovye-napitki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/03_barbican_napitok-barbican-malt-yachmen-st-330ml_330ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/28253",
@@ -82,8 +77,7 @@
       "proposed_sku": "ZY-BARBICAN-330-GLASS-002",
       "category_slug": "solodovye-napitki",
       "category_slug_candidates": [
-        "solodovye-napitki",
-        "bezalkogolnye-napitki"
+        "solodovye-napitki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/04_barbican_napitok-barbican-ananas-st-330ml_330ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/28248",
@@ -108,8 +102,7 @@
       "proposed_sku": "ZY-BARBICAN-330-GLASS-003",
       "category_slug": "solodovye-napitki",
       "category_slug_candidates": [
-        "solodovye-napitki",
-        "bezalkogolnye-napitki"
+        "solodovye-napitki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/05_barbican_napitok-barbican-persik-st-330ml_330ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/28254",
@@ -134,8 +127,7 @@
       "proposed_sku": "ZY-BARBICAN-330-GLASS-004",
       "category_slug": "solodovye-napitki",
       "category_slug_candidates": [
-        "solodovye-napitki",
-        "bezalkogolnye-napitki"
+        "solodovye-napitki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/06_barbican_napitok-barbican-yabloko-st-330ml_330ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/28255",
@@ -160,8 +152,7 @@
       "proposed_sku": "ZY-BARBICAN-330-GLASS-005",
       "category_slug": "solodovye-napitki",
       "category_slug_candidates": [
-        "solodovye-napitki",
-        "bezalkogolnye-napitki"
+        "solodovye-napitki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/07_barbican_napitok-barbican-granat-st-330ml_330ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/28249",
@@ -186,8 +177,7 @@
       "proposed_sku": "ZY-BARBICAN-330-GLASS-006",
       "category_slug": "solodovye-napitki",
       "category_slug_candidates": [
-        "solodovye-napitki",
-        "bezalkogolnye-napitki"
+        "solodovye-napitki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/09_barbican_napitok-barbican-malina-st-330ml_330ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/28252",
@@ -212,8 +202,7 @@
       "proposed_sku": "ZY-BARBICAN-330-GLASS-007",
       "category_slug": "solodovye-napitki",
       "category_slug_candidates": [
-        "solodovye-napitki",
-        "bezalkogolnye-napitki"
+        "solodovye-napitki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/11_barbican_napitok-barbican-limon-st-330ml_330ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/28251",
@@ -263,9 +252,7 @@
       "proposed_sku": "ZY-ANGRYANIMAL-700-PET-001",
       "category_slug": "toniki",
       "category_slug_candidates": [
-        "toniki",
-        "toniziruyushchie-napitki",
-        "toniziruiushhie-napitki"
+        "toniki"
       ],
       "local_image_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original/16_angry-animal_sportivnyi-napitok-angry-animal-l-karnitin-limon_700ml.webp",
       "source_product_url": "https://zelenoeyabloko.ru/product/39209",
