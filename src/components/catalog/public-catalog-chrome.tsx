@@ -6,7 +6,7 @@ export function PublicCatalogHeader() {
   return (
     <header className="sticky top-0 z-30 border-b border-teal-900/10 bg-white/95 backdrop-blur">
       <div className="ui-container flex items-center justify-between gap-3 py-3">
-        <Link href="/catalog" className="min-w-0">
+        <Link href="/" className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-800">
             ТИНДА
           </p>
