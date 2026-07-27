@@ -276,6 +276,12 @@ describe("orders E1.9", () => {
     const cart = await get_cart(approved_a);
     expect(cart.items_count).toBe(0);
 
+    expect(Number(order.subtotal)).toBeGreaterThanOrEqual(0);
+    expect(Number(order.delivery_total)).toBe(0);
+    expect(Number(order.total)).toBe(Number(order.subtotal));
+    expect(Number(order.items[0]?.unit_price)).toBeGreaterThanOrEqual(0);
+    expect(Number(order.items[0]?.line_total)).toBeGreaterThanOrEqual(0);
+
     const json = JSON.stringify(result);
     expect(json.toLowerCase()).not.toContain("price");
   });

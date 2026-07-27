@@ -30,6 +30,9 @@ const empty_cart: SerializedCart = {
   items_count: 0,
   total_qty: 0,
   is_ready_to_checkout: false,
+  subtotal: 0,
+  delivery_total: 0,
+  total: 0,
 };
 
 let state: CartState = {

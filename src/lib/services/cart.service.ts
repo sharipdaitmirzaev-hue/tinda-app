@@ -1,3 +1,4 @@
+import type { Decimal } from "@prisma/client/runtime/library";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
 import {
@@ -5,6 +6,11 @@ import {
   type AuthUserPayload,
 } from "@/lib/access";
 import { can_add_to_cart, check_qty } from "@/lib/quantity";
+import {
+  calc_line_total,
+  money_to_number,
+  sum_money,
+} from "@/lib/money";
 import type {
   SerializedCart,
   SerializedCartItem,
@@ -31,6 +37,8 @@ type CartProductRow = {
   availability: string;
   image_url: string | null;
   is_active: boolean;
+  price_amount: Decimal | string | number;
+  price_currency: string;
   category: { is_active: boolean } | null;
 };
 
@@ -49,6 +57,11 @@ function serialize_product(product: CartProductRow): SerializedCartProduct {
     availability: product.availability,
     image_url: product.image_url,
     is_active: product.is_active,
+    price: {
+      amount: money_to_number(product.price_amount),
+      currency: product.price_currency || "RUB",
+      unit: product.sale_unit,
+    },
   };
 }
 
@@ -93,12 +106,22 @@ export function serialize_cart(
 ): SerializedCart {
   const serialized_items: SerializedCartItem[] = items.map((item) => {
     const evaluated = evaluate_cart_item(item.product, item.qty);
+    // Always price from DB product row — never from client input.
+    const unit_price = money_to_number(item.product.price_amount);
+    const line_total = money_to_number(
+      calc_line_total(item.product.price_amount, item.qty),
+    );
+    const currency = item.product.price_currency || "RUB";
+
     return {
       product_id: item.product_id,
       qty: item.qty,
       product: serialize_product(item.product),
       qty_error: evaluated.qty_error,
       suggested_qty: evaluated.suggested_qty,
+      unit_price,
+      currency,
+      line_total,
     };
   });
 
@@ -107,11 +130,20 @@ export function serialize_cart(
   const is_ready_to_checkout =
     items_count > 0 && serialized_items.every((item) => item.qty_error === null);
 
+  const subtotal = money_to_number(
+    sum_money(serialized_items.map((item) => item.line_total)),
+  );
+  const delivery_total = 0;
+  const total = money_to_number(sum_money([subtotal, delivery_total]));
+
   return {
     items: serialized_items,
     items_count,
     total_qty,
     is_ready_to_checkout,
+    subtotal,
+    delivery_total,
+    total,
   };
 }
 

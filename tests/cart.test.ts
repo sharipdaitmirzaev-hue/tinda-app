@@ -387,12 +387,14 @@ describe("server cart E1.8", () => {
     });
   });
 
-  it("API cart payload has no price fields", async () => {
+  it("API cart payload includes wholesale price from DB", async () => {
     const cart = await add_cart_item(approved_a, { product_id, qty: 12 });
-    const json = JSON.stringify(cart);
-    expect(json.toLowerCase()).not.toContain("price");
-    expect(json.toLowerCase()).not.toContain("цена");
-    expect(cart.items[0]?.product).not.toHaveProperty("price");
+    expect(cart.items[0]?.product).toHaveProperty("price");
+    expect(cart.items[0]?.unit_price).toEqual(expect.any(Number));
+    expect(cart.items[0]?.line_total).toEqual(expect.any(Number));
+    expect(cart.subtotal).toEqual(expect.any(Number));
+    expect(cart.delivery_total).toBe(0);
+    expect(cart.total).toBe(cart.subtotal);
   });
 
   it("serialize_cart counts items and units correctly", () => {
@@ -414,6 +416,8 @@ describe("server cart E1.8", () => {
           availability: "in_stock",
           image_url: null,
           is_active: true,
+          price_amount: 100,
+          price_currency: "RUB",
           category: { is_active: true },
         },
       },
@@ -434,6 +438,8 @@ describe("server cart E1.8", () => {
           availability: "in_stock",
           image_url: null,
           is_active: true,
+          price_amount: 50,
+          price_currency: "RUB",
           category: { is_active: true },
         },
       },
@@ -441,6 +447,12 @@ describe("server cart E1.8", () => {
     expect(cart.items_count).toBe(2);
     expect(cart.total_qty).toBe(36);
     expect(cart.is_ready_to_checkout).toBe(true);
+    expect(cart.items[0]?.unit_price).toBe(100);
+    expect(cart.items[0]?.line_total).toBe(1200);
+    expect(cart.items[1]?.line_total).toBe(1200);
+    expect(cart.subtotal).toBe(2400);
+    expect(cart.delivery_total).toBe(0);
+    expect(cart.total).toBe(2400);
   });
 
   it("localStorage migration imports once and clears temporary cart", async () => {

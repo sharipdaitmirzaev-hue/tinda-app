@@ -23,7 +23,12 @@ export const category_create_schema = z.object({
 
 export const category_update_schema = category_create_schema.partial();
 
-export const product_create_schema = z.object({
+const price_amount_schema = z.coerce
+  .number({ error: "Укажите цену" })
+  .finite("Укажите корректную цену")
+  .min(0, "Цена не может быть отрицательной");
+
+const product_fields_schema = z.object({
   sku: z.string().trim().min(1, "Укажите артикул").max(64),
   name: z.string().trim().min(1, "Укажите название товара").max(255),
   brand: z.string().trim().max(150).nullable().optional(),
@@ -66,9 +71,31 @@ export const product_create_schema = z.object({
     .optional()
     .transform((value) => (value === "" || value === undefined ? null : value)),
   is_active: z.boolean().default(true),
+  price_amount: price_amount_schema,
+  price_currency: z.literal("RUB").default("RUB").optional(),
 });
 
-export const product_update_schema = product_create_schema.partial();
+export const product_create_schema = product_fields_schema.refine(
+  (data) => !data.is_active || data.price_amount !== undefined,
+  {
+    message: "Укажите цену для активного товара",
+    path: ["price_amount"],
+  },
+);
+
+export const product_update_schema = product_fields_schema
+  .partial()
+  .superRefine((data, ctx) => {
+    // When is_active becomes true without price_amount, the service checks the
+    // existing product row. Only validate an explicitly provided amount here.
+    if (data.price_amount !== undefined && data.price_amount < 0) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Цена не может быть отрицательной",
+        path: ["price_amount"],
+      });
+    }
+  });
 
 const optional_bool_query = z
   .enum(["true", "false"])

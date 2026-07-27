@@ -8,9 +8,6 @@ type RouteContext = { params: Promise<{ productId: string }> };
 export async function GET(_request: Request, context: RouteContext) {
   try {
     const payload = await get_current_auth_payload();
-    if (!payload) {
-      return api_error(401, "unauthorized", "Требуется вход в систему");
-    }
     const { productId } = await context.params;
     const result = await get_catalog_product(payload, productId);
     return NextResponse.json(result);

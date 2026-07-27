@@ -136,6 +136,9 @@ model products {
   is_hit             Boolean      @default(false)
   image_url          String?
   is_active          Boolean      @default(true)
+  /// Wholesale unit price for approved clients (Decimal, never float in app logic).
+  price_amount       Decimal      @default(0) @db.Decimal(12, 2)
+  price_currency     String       @default("RUB") @db.VarChar(3)
   created_at         DateTime     @default(now()) @db.Timestamptz(6)
   updated_at         DateTime     @updatedAt @db.Timestamptz(6)
   category           categories   @relation(fields: [category_id], references: [id])
@@ -186,6 +189,9 @@ model orders {
   confirmed_at           DateTime?                @db.Timestamptz(6)
   delivered_at           DateTime?                @db.Timestamptz(6)
   cancelled_at           DateTime?                @db.Timestamptz(6)
+  subtotal               Decimal                  @default(0) @db.Decimal(12, 2)
+  delivery_total         Decimal                  @default(0) @db.Decimal(12, 2)
+  total                  Decimal                  @default(0) @db.Decimal(12, 2)
   created_at             DateTime                 @default(now()) @db.Timestamptz(6)
   updated_at             DateTime                 @updatedAt @db.Timestamptz(6)
   client                 clients                  @relation(fields: [client_id], references: [id])
@@ -228,6 +234,10 @@ model order_items {
   package_info  String?   @db.VarChar(255)
   sale_unit     String    @db.VarChar(30)
   qty           Int
+  /// Snapshot of product price at order time (immutable after create).
+  unit_price    Decimal   @default(0) @db.Decimal(12, 2)
+  currency      String    @default("RUB") @db.VarChar(3)
+  line_total    Decimal   @default(0) @db.Decimal(12, 2)
   order         orders    @relation(fields: [order_id], references: [id])
   product       products? @relation(fields: [product_id], references: [id], onDelete: SetNull)
 

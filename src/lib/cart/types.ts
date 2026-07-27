@@ -14,6 +14,11 @@ export type SerializedCartProduct = {
   availability: string;
   image_url: string | null;
   is_active: boolean;
+  price?: {
+    amount: number;
+    currency: string;
+    unit: string;
+  };
 };
 
 export type SerializedCartItem = {
@@ -22,6 +27,9 @@ export type SerializedCartItem = {
   product: SerializedCartProduct;
   qty_error: QtyErrorCode;
   suggested_qty: number | null;
+  unit_price: number;
+  currency: string;
+  line_total: number;
 };
 
 export type SerializedCart = {
@@ -29,4 +37,7 @@ export type SerializedCart = {
   items_count: number;
   total_qty: number;
   is_ready_to_checkout: boolean;
+  subtotal: number;
+  delivery_total: number;
+  total: number;
 };

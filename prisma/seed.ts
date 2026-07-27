@@ -215,6 +215,7 @@ async function main() {
       min_order_qty: 12,
       allow_piece_sale: false,
       availability: "in_stock",
+      price_amount: 240.0,
       is_new: true,
     },
     {
@@ -229,6 +230,7 @@ async function main() {
       min_order_qty: 6,
       allow_piece_sale: true,
       availability: "in_stock",
+      price_amount: 310.0,
       is_hit: true,
     },
     {
@@ -243,6 +245,7 @@ async function main() {
       min_order_qty: 12,
       allow_piece_sale: false,
       availability: "in_stock",
+      price_amount: 360.0,
       is_promo: true,
     },
     {
@@ -257,6 +260,7 @@ async function main() {
       min_order_qty: 6,
       allow_piece_sale: false,
       availability: "on_order",
+      price_amount: 420.0,
     },
     {
       sku: "J-001",
@@ -270,6 +274,7 @@ async function main() {
       min_order_qty: 12,
       allow_piece_sale: false,
       availability: "in_stock",
+      price_amount: 780.0,
       is_new: true,
     },
     {
@@ -284,6 +289,7 @@ async function main() {
       min_order_qty: 12,
       allow_piece_sale: false,
       availability: "in_stock",
+      price_amount: 820.0,
     },
     {
       sku: "J-003",
@@ -297,6 +303,7 @@ async function main() {
       min_order_qty: 6,
       allow_piece_sale: true,
       availability: "in_stock",
+      price_amount: 540.0,
       is_hit: true,
     },
     {
@@ -311,6 +318,7 @@ async function main() {
       min_order_qty: 12,
       allow_piece_sale: false,
       availability: "in_stock",
+      price_amount: 690.0,
       is_promo: true,
     },
     {
@@ -325,6 +333,7 @@ async function main() {
       min_order_qty: 6,
       allow_piece_sale: false,
       availability: "out_of_stock",
+      price_amount: 560.0,
     },
     {
       sku: "E-001",
@@ -338,6 +347,7 @@ async function main() {
       min_order_qty: 24,
       allow_piece_sale: false,
       availability: "in_stock",
+      price_amount: 1450.0,
       is_new: true,
     },
     {
@@ -352,6 +362,7 @@ async function main() {
       min_order_qty: 12,
       allow_piece_sale: false,
       availability: "in_stock",
+      price_amount: 480.0,
     },
     {
       sku: "K-001",
@@ -365,6 +376,7 @@ async function main() {
       min_order_qty: 6,
       allow_piece_sale: true,
       availability: "in_stock",
+      price_amount: 390.0,
       is_hit: true,
     },
   ] as const;
@@ -384,6 +396,8 @@ async function main() {
         min_order_qty: item.min_order_qty,
         allow_piece_sale: item.allow_piece_sale,
         availability: item.availability,
+        price_amount: item.price_amount,
+        price_currency: "RUB",
         is_promo: "is_promo" in item ? Boolean(item.is_promo) : false,
         is_new: "is_new" in item ? Boolean(item.is_new) : false,
         is_hit: "is_hit" in item ? Boolean(item.is_hit) : false,
@@ -402,6 +416,8 @@ async function main() {
         allow_piece_sale: item.allow_piece_sale,
         description: "Тестовый товар seed Э1.5",
         availability: item.availability,
+        price_amount: item.price_amount,
+        price_currency: "RUB",
         is_promo: "is_promo" in item ? Boolean(item.is_promo) : false,
         is_new: "is_new" in item ? Boolean(item.is_new) : false,
         is_hit: "is_hit" in item ? Boolean(item.is_hit) : false,

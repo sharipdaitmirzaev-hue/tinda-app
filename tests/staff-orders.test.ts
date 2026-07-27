@@ -440,7 +440,9 @@ describe("staff orders E1.11", () => {
     expect(updated.order.address).toBe("Новый адрес staff");
     expect(updated.order.items_count).toBe(2);
     expect(updated.order.manager_comment).toBe("внутр правка");
-    expect(JSON.stringify(updated).toLowerCase()).not.toContain("price");
+    expect(updated.order.items[0]?.unit_price).toEqual(expect.any(Number));
+    expect(updated.order.subtotal).toEqual(expect.any(Number));
+    expect(updated.order.delivery_total).toBe(0);
 
     const foreign = await place_order(approved_b);
     await expect(
