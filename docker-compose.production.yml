@@ -34,7 +34,8 @@ services:
       STORAGE_ACCESS_KEY: ${STORAGE_ACCESS_KEY:-}
       STORAGE_SECRET_KEY: ${STORAGE_SECRET_KEY:-}
       STORAGE_PUBLIC_URL: ${STORAGE_PUBLIC_URL:-}
-      RUN_MIGRATIONS_ON_START: ${RUN_MIGRATIONS_ON_START:-true}
+      # Prefer one-shot migrate on small VPS; see docs/deployment.md
+      RUN_MIGRATIONS_ON_START: ${RUN_MIGRATIONS_ON_START:-false}
     volumes:
       - tinda_uploads:/app/public/uploads
     ports:
