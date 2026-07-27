@@ -1,0 +1,3 @@
+# Draft import artifacts (Excel/JSON) may be committed for review.
+# Downloaded METRO images stay local until an explicit upload step.
+/data/imports/metro-images/
