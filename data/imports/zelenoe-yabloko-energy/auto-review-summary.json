@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-07-27T15:22:40.556Z",
+  "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
+  "counts": {
+    "approved_existing": 0,
+    "approved_new": 5,
+    "needs_review": 0,
+    "rejected": 0
+  },
+  "approved_existing_skus": [],
+  "needs_review_brief": []
+}

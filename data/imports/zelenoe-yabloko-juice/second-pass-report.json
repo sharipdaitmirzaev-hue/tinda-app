@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-07-27T16:04:52.831Z",
+  "production_changed": false,
+  "needs_review_before": 171,
+  "carton_detected": 147,
+  "package_resolved": 214,
+  "improved_images": 0,
+  "package_sources": {
+    "brand_volume_heuristic": 121,
+    "unknown": 22,
+    "name_explicit": 9,
+    "description_explicit": 19
+  },
+  "approved_new_after": 177,
+  "needs_review_after": 44,
+  "rejected_after": 9,
+  "probable_dupes": 3,
+  "second_pass_batch_ready": 127,
+  "imported_skus_excluded_count": 50,
+  "imported_skus_in_second_batch": 0,
+  "paths": {
+    "review_decisions": "/workspace/data/imports/zelenoe-yabloko-juice/review-decisions.json",
+    "images_review_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/images-review.xlsx",
+    "gallery_html": "/workspace/data/imports/zelenoe-yabloko-juice/gallery.html",
+    "collection_summary": "/workspace/data/imports/zelenoe-yabloko-juice/collection-summary.json",
+    "second_pass_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/second-pass-approved-new.xlsx",
+    "second_pass_report": "/workspace/data/imports/zelenoe-yabloko-juice/second-pass-report.json"
+  },
+  "before_counts": {
+    "approved_existing": 0,
+    "approved_new": 50,
+    "needs_review": 171,
+    "rejected": 9
+  },
+  "after_counts": {
+    "approved_existing": 0,
+    "approved_new": 177,
+    "needs_review": 44,
+    "rejected": 9
+  },
+  "package_resolved_now": 214
+}

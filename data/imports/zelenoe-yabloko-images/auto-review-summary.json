@@ -1,0 +1,132 @@
+{
+  "generated_at": "2026-07-27T14:28:47.722Z",
+  "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
+  "counts": {
+    "approved_existing": 9,
+    "approved_new": 26,
+    "needs_review": 12,
+    "rejected": 1
+  },
+  "approved_existing_skus": [
+    "DRINK-DOBRYI-1000-PET-192",
+    "DRINK-DOBRYI-1500-PET-177",
+    "DRINK-DOBRYI-500-PET-196",
+    "DRINK-DOBRYI-1500-PET-060",
+    "DRINK-DOBRYI-500-PET-129",
+    "DRINK-FRUSTYLE-1500-PET-066",
+    "DRINK-FRUSTYLE-1500-PET-145",
+    "DRINK-DOBRYI-1000-PET-094",
+    "DRINK-DOBRYI-330-CAN-018"
+  ],
+  "needs_review_brief": [
+    {
+      "source_index": 1,
+      "source_name": "Напиток Добрый Кола Дыня пл/б 1л",
+      "match_status": "unknown",
+      "reason": "needs_review_unknown",
+      "mismatches": [
+        "status_unknown"
+      ]
+    },
+    {
+      "source_index": 7,
+      "source_name": "Напиток Денеб ж/б 0,45л Мохито Клубника",
+      "match_status": "probable_match",
+      "reason": "needs_review_probable_match",
+      "mismatches": [
+        "status_probable_match"
+      ]
+    },
+    {
+      "source_index": 13,
+      "source_name": "Напиток Добрый Кола пл/б 1,5л Зеро",
+      "match_status": "conflict",
+      "reason": "needs_review_conflict",
+      "mismatches": [
+        "status_conflict"
+      ]
+    },
+    {
+      "source_index": 17,
+      "source_name": "Напиток Рич Гранат пл/б 1л",
+      "match_status": "conflict",
+      "reason": "needs_review_conflict",
+      "mismatches": [
+        "status_conflict"
+      ]
+    },
+    {
+      "source_index": 18,
+      "source_name": "Напиток Evervess пл/б 1л Кола Зеро",
+      "match_status": "probable_match",
+      "reason": "needs_review_probable_match",
+      "mismatches": [
+        "status_probable_match"
+      ]
+    },
+    {
+      "source_index": 24,
+      "source_name": "Напиток Добрый Кола ст/б 0,33л",
+      "match_status": "probable_match",
+      "reason": "needs_review_probable_match",
+      "mismatches": [
+        "status_probable_match"
+      ]
+    },
+    {
+      "source_index": 28,
+      "source_name": "Напиток Добрый Кола пэт 0,3л",
+      "match_status": "exact_match",
+      "reason": "needs_review_exact_incomplete",
+      "mismatches": [
+        "rival_tinda_count_1"
+      ]
+    },
+    {
+      "source_index": 29,
+      "source_name": "Напиток Добрый Кола Зеро пэт 0,3л",
+      "match_status": "probable_match",
+      "reason": "needs_review_probable_match",
+      "mismatches": [
+        "status_probable_match"
+      ]
+    },
+    {
+      "source_index": 31,
+      "source_name": "Напиток Добрый Кола Зеро пэт 1л",
+      "match_status": "conflict",
+      "reason": "needs_review_conflict",
+      "mismatches": [
+        "status_conflict",
+        "below_500"
+      ]
+    },
+    {
+      "source_index": 44,
+      "source_name": "Напиток Кока Кола ст/б 0,33л Зеро",
+      "match_status": "new_product",
+      "reason": "needs_review_small_image",
+      "mismatches": [
+        "below_500"
+      ]
+    },
+    {
+      "source_index": 45,
+      "source_name": "Напиток Добрый Кола пэт 0,5л Зеро",
+      "match_status": "conflict",
+      "reason": "needs_review_conflict",
+      "mismatches": [
+        "status_conflict"
+      ]
+    },
+    {
+      "source_index": 46,
+      "source_name": "Напиток Добрый Кола ж/б 0,33л Зеро",
+      "match_status": "probable_match",
+      "reason": "needs_review_probable_match",
+      "mismatches": [
+        "status_probable_match"
+      ]
+    }
+  ]
+}

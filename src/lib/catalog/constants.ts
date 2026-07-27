@@ -19,7 +19,7 @@ export type Availability = (typeof AVAILABILITY_VALUES)[number];
 export const AVAILABILITY_LABELS: Record<Availability, string> = {
   in_stock: "В наличии",
   on_order: "Под заказ",
-  out_of_stock: "Временно нет",
+  out_of_stock: "Нет в наличии",
 };
 
 export const SALES_STATUS_VALUES = [
@@ -68,11 +68,38 @@ export const PRODUCT_SORT_OPTIONS = [
   "created_at_asc",
   "is_new_desc",
   "is_hit_desc",
+  "brand_asc",
+  "volume_asc",
+  "has_price_desc",
 ] as const;
 
 export type ProductSort = (typeof PRODUCT_SORT_OPTIONS)[number];
 
-export const CATALOG_PAGE_SIZE_OPTIONS = [12, 24] as const;
+export const CATALOG_SORT_LABELS: Record<ProductSort, string> = {
+  name_asc: "По названию А–Я",
+  name_desc: "По названию Я–А",
+  created_at_desc: "Сначала новые",
+  created_at_asc: "Сначала старые",
+  is_new_desc: "Сначала новинки",
+  is_hit_desc: "По популярности",
+  brand_asc: "По бренду",
+  volume_asc: "По объёму",
+  has_price_desc: "Сначала с ценой",
+};
+
+export const CATALOG_PAGE_SIZE_OPTIONS = [24, 48, 96] as const;
+
+/** Quick category chips on the public catalog (slug → label). */
+export const CATALOG_QUICK_CATEGORIES = [
+  { slug: "voda", label: "Вода" },
+  { slug: "gazirovannye-napitki", label: "Газированные напитки" },
+  { slug: "energeticheskie-napitki", label: "Энергетики" },
+  { slug: "sok", label: "Соки" },
+  { slug: "nektar", label: "Нектары" },
+  { slug: "mors", label: "Морсы" },
+  { slug: "detskie-soki", label: "Детские соки" },
+  { slug: "sokosoderzhashchie-napitki", label: "Сокосодержащие напитки" },
+] as const;
 
 /** Server-side gate: can this product enter the cart / checkout. */
 export function is_product_orderable_for_cart(product: {

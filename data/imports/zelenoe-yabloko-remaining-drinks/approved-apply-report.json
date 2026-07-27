@@ -1,0 +1,425 @@
+{
+  "generated_at": "2026-07-27T20:05:03.295Z",
+  "mode": "preview_stopped",
+  "reason": "required_categories_missing",
+  "backup_path": null,
+  "expected_rows": 9,
+  "row_count": 9,
+  "package_requires_review": true,
+  "category_mapping": {
+    "malt_drink": "solodovye-napitki",
+    "non_alcoholic_drink": "bezalkogolnye-napitki",
+    "tonic_drink": "toniki"
+  },
+  "category_fallbacks": {
+    "malt_drink": [
+      "solodovye-napitki",
+      "bezalkogolnye-napitki"
+    ],
+    "non_alcoholic_drink": [
+      "bezalkogolnye-napitki"
+    ],
+    "tonic_drink": [
+      "toniki",
+      "toniziruyushchie-napitki",
+      "toniziruiushhie-napitki"
+    ]
+  },
+  "missing_for": [
+    {
+      "source_name": "Напиток Barbican Malt ячмень ст 330мл",
+      "product_type": "malt_drink",
+      "brand": "Barbican",
+      "tried": [
+        "solodovye-napitki",
+        "solodovye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    },
+    {
+      "source_name": "Напиток Barbican ананас ст 330мл",
+      "product_type": "malt_drink",
+      "brand": "Barbican",
+      "tried": [
+        "solodovye-napitki",
+        "solodovye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    },
+    {
+      "source_name": "Напиток Barbican персик ст 330мл",
+      "product_type": "malt_drink",
+      "brand": "Barbican",
+      "tried": [
+        "solodovye-napitki",
+        "solodovye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    },
+    {
+      "source_name": "Напиток Barbican яблоко ст 330мл",
+      "product_type": "malt_drink",
+      "brand": "Barbican",
+      "tried": [
+        "solodovye-napitki",
+        "solodovye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    },
+    {
+      "source_name": "Напиток Barbican гранат ст 330мл",
+      "product_type": "malt_drink",
+      "brand": "Barbican",
+      "tried": [
+        "solodovye-napitki",
+        "solodovye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    },
+    {
+      "source_name": "Напиток Barbican малина ст 330мл",
+      "product_type": "malt_drink",
+      "brand": "Barbican",
+      "tried": [
+        "solodovye-napitki",
+        "solodovye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    },
+    {
+      "source_name": "Напиток Barbican лимон ст 330мл",
+      "product_type": "malt_drink",
+      "brand": "Barbican",
+      "tried": [
+        "solodovye-napitki",
+        "solodovye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    },
+    {
+      "source_name": "Напиток Vast безалкогольный ж/б 330мл Манго",
+      "product_type": "non_alcoholic_drink",
+      "brand": "Vast",
+      "tried": [
+        "bezalkogolnye-napitki",
+        "bezalkogolnye-napitki"
+      ]
+    }
+  ],
+  "category_structure": {
+    "relevant": [
+      {
+        "id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "slug": "energeticheskie-napitki",
+        "name": "Энергетические напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71",
+        "slug": "gazirovannye-napitki",
+        "name": "Газированные напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "464d40db-1b2c-46ff-aa01-5634578c2a83",
+        "slug": "gazirovka",
+        "name": "Газировка",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "88192b93-0ce7-4b67-b6a5-9cb208a17bbb",
+        "slug": "kholodnyy-chay",
+        "name": "Холодный чай",
+        "is_active": true,
+        "parent_id": "1a87141a-5d11-4809-9596-441c87567bd2"
+      },
+      {
+        "id": "1a87141a-5d11-4809-9596-441c87567bd2",
+        "slug": "kholodnyy-chay-i-kofe",
+        "name": "Холодный чай и кофе",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "e1f3f5b4-7b79-4652-8989-82d30cff34a1",
+        "slug": "kvas",
+        "name": "Квас",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "9527dec2-5a87-4a6b-b4c5-b8001d13d351",
+        "slug": "sokosoderzhashchie-napitki",
+        "name": "Сокосодержащие напитки",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "4b7107be-e187-4e10-805a-13e801d9f484",
+        "slug": "toniki",
+        "name": "Тоники",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "81730d5f-f669-4ea0-b6af-e0f7d645a8fa",
+        "slug": "voda-gazirovannaya",
+        "name": "Газированная вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      },
+      {
+        "id": "977a592b-8d39-4bac-afe4-a7d17687657d",
+        "slug": "voda-negazirovannaya",
+        "name": "Негазированная вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      }
+    ],
+    "all": [
+      {
+        "id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+        "slug": "detskie-soki",
+        "name": "Детские соки",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "slug": "energeticheskie-napitki",
+        "name": "Энергетические напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71",
+        "slug": "gazirovannye-napitki",
+        "name": "Газированные напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "464d40db-1b2c-46ff-aa01-5634578c2a83",
+        "slug": "gazirovka",
+        "name": "Газировка",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "88192b93-0ce7-4b67-b6a5-9cb208a17bbb",
+        "slug": "kholodnyy-chay",
+        "name": "Холодный чай",
+        "is_active": true,
+        "parent_id": "1a87141a-5d11-4809-9596-441c87567bd2"
+      },
+      {
+        "id": "1a87141a-5d11-4809-9596-441c87567bd2",
+        "slug": "kholodnyy-chay-i-kofe",
+        "name": "Холодный чай и кофе",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "e83b3f01-3246-4d1d-9eeb-5f1f45b67516",
+        "slug": "kholodnyy-kofe",
+        "name": "Холодный кофе",
+        "is_active": true,
+        "parent_id": "1a87141a-5d11-4809-9596-441c87567bd2"
+      },
+      {
+        "id": "5430f24d-a2cd-4b37-b373-ba207e646abd",
+        "slug": "kisel",
+        "name": "Кисель",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "34bee47b-61c3-4e15-81db-75d58ecf018b",
+        "slug": "kola",
+        "name": "Кола",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "34c129ec-0046-459f-97e1-5eed8e63b265",
+        "slug": "kompot",
+        "name": "Компот",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "e1f3f5b4-7b79-4652-8989-82d30cff34a1",
+        "slug": "kvas",
+        "name": "Квас",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "a8af36d2-ef7a-49ce-8aea-42fdf99359ae",
+        "slug": "limonady",
+        "name": "Лимонады",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "fee3a6ff-6e8d-4e75-8c98-69269fb753b1",
+        "slug": "mors",
+        "name": "Морс",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "46d78cfd-6749-441c-9b27-c7237552cad8",
+        "slug": "nektar",
+        "name": "Нектар",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "32a861a6-7c39-4329-b17c-09d3a420f7c2",
+        "slug": "sok",
+        "name": "Сок",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "43915e70-b50f-40a8-9499-113a9858864b",
+        "slug": "soki-morsy-nektary",
+        "name": "Соки, морсы и нектары",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "9527dec2-5a87-4a6b-b4c5-b8001d13d351",
+        "slug": "sokosoderzhashchie-napitki",
+        "name": "Сокосодержащие напитки",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "4b7107be-e187-4e10-805a-13e801d9f484",
+        "slug": "toniki",
+        "name": "Тоники",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "c92083fe-33e7-4d86-a15d-3ce1f130572d",
+        "slug": "voda",
+        "name": "Вода",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "81730d5f-f669-4ea0-b6af-e0f7d645a8fa",
+        "slug": "voda-gazirovannaya",
+        "name": "Газированная вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      },
+      {
+        "id": "d4a65b30-c9d5-45aa-ab4b-c50644fa000e",
+        "slug": "voda-lechebno-stolovaya",
+        "name": "Лечебно-столовая вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      },
+      {
+        "id": "58ba9d27-1100-49af-9644-9bbfe6ea00a2",
+        "slug": "voda-mineralnaya",
+        "name": "Минеральная вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      },
+      {
+        "id": "977a592b-8d39-4bac-afe4-a7d17687657d",
+        "slug": "voda-negazirovannaya",
+        "name": "Негазированная вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      },
+      {
+        "id": "58b17c1b-ce93-47d6-9e9d-df407b076889",
+        "slug": "voda-pitevaya",
+        "name": "Питьевая вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      }
+    ]
+  },
+  "before": {
+    "products_total": 446,
+    "showcase_active": 431,
+    "orderable_active": 13,
+    "no_price": 431,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "note": "Import stopped after preview. Missing TINDA categories for Barbican/Vast (solodovye-napitki / bezalkogolnye-napitki). toniki exists for Angry Animal but batch stopped per policy.",
+  "backup_note": "Backup skipped: import stopped after preview (required_categories_missing). No DB changes.",
+  "created": 0,
+  "skipped": 0,
+  "failed": 0,
+  "images_uploaded": 0,
+  "final_status": "stopped_after_preview",
+  "products_total": 446
+}

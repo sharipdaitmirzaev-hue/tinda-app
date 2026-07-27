@@ -122,13 +122,18 @@ export function can_access_client(
 
 /**
  * Public catalog pages (/catalog, product detail).
- * Guests and any client status may browse; staff go to staff catalog.
+ * Guests and any client status may browse.
+ * Catalog editors (director / manager with can_edit_catalog) may browse
+ * public cards to jump into staff edit. Other staff stay in staff area.
  */
 export function resolve_public_catalog_access(
   payload: AuthUserPayload | null,
 ): AccessDecision {
   if (payload && is_staff(payload.user.roles)) {
-    return { allow: false, redirect_to: "/staff/products" };
+    if (can_edit_catalog(payload)) {
+      return { allow: true };
+    }
+    return { allow: false, redirect_to: "/staff/orders" };
   }
   return { allow: true };
 }

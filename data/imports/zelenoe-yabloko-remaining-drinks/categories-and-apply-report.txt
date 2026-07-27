@@ -1,0 +1,52 @@
+TINDA Zelenoe remaining-drinks categories + approved_new import report
+generated_at: 2026-07-27T20:09:56.790Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-remaining-drinks-categories-20260727T200904Z.dump
+source: /app/tmp/zelenoe-rd-apply/approved-new-import-batch.json
+rows: 9 (expected 9)
+categories_created: []
+categories_already_existed: ["bezalkogolnye-napitki","solodovye-napitki"]
+categories: solodovye-napitki=Солодовые напитки (active=true); bezalkogolnye-napitki=Безалкогольные напитки (active=true); toniki=Тоники (active=true)
+product_type: {"malt_drink":7,"non_alcoholic_drink":1,"tonic_drink":1}
+category_distribution: {"solodovye-napitki":7,"bezalkogolnye-napitki":1,"toniki":1}
+package_requires_review: true
+created: 9
+skipped: 0
+failed: 0
+images_uploaded: 9
+created_by_product_type: {"malt_drink":7,"non_alcoholic_drink":1,"tonic_drink":1}
+created_by_category: {"solodovye-napitki":7,"bezalkogolnye-napitki":1,"toniki":1}
+products_total: 446 -> 455
+showcase_active: 431 -> 440
+orderable_active: 13 -> 13
+no_price: 431 -> 440
+orders: 3->3; order_items: 5->5
+package_requires_review SKUs (9): ZY-BARBICAN-330-GLASS-001, ZY-BARBICAN-330-GLASS-002, ZY-BARBICAN-330-GLASS-003, ZY-BARBICAN-330-GLASS-004, ZY-BARBICAN-330-GLASS-005, ZY-BARBICAN-330-GLASS-006, ZY-BARBICAN-330-GLASS-007, ZY-VAST-330-CAN-001, ZY-ANGRYANIMAL-700-PET-001
+
+SKU | status | product_type | category | product_id | image_url | error
+ZY-BARBICAN-330-GLASS-001 | created | malt_drink | solodovye-napitki | 69ec9217-5099-4d7f-8fb2-65337eb971cd | /uploads/products/69ec9217-5099-4d7f-8fb2-65337eb971cd/2208fc69-821c-4129-af5d-a4fd6ce3f5dc.webp | -
+ZY-BARBICAN-330-GLASS-002 | created | malt_drink | solodovye-napitki | 3a52b7df-add3-473e-b60b-f44af5ba420c | /uploads/products/3a52b7df-add3-473e-b60b-f44af5ba420c/e884c394-4a96-4348-a6f1-7170990ca99c.webp | -
+ZY-BARBICAN-330-GLASS-003 | created | malt_drink | solodovye-napitki | 64b8d923-09b3-4af8-ade5-1df350947448 | /uploads/products/64b8d923-09b3-4af8-ade5-1df350947448/70bb24bb-c129-4bc5-b909-dd0dba19e73a.webp | -
+ZY-BARBICAN-330-GLASS-004 | created | malt_drink | solodovye-napitki | b92626a6-d17c-4be3-8901-ed6eedca4f39 | /uploads/products/b92626a6-d17c-4be3-8901-ed6eedca4f39/4d30289d-cef8-4355-9838-b61426b653f1.webp | -
+ZY-BARBICAN-330-GLASS-005 | created | malt_drink | solodovye-napitki | 2a4fa60d-1e48-4706-b4bb-276d9930b0d8 | /uploads/products/2a4fa60d-1e48-4706-b4bb-276d9930b0d8/b0fb3002-7f94-4f21-9130-3d1c1aa20497.webp | -
+ZY-BARBICAN-330-GLASS-006 | created | malt_drink | solodovye-napitki | 1c7e6447-f6b9-4f34-97d5-d9feafadce05 | /uploads/products/1c7e6447-f6b9-4f34-97d5-d9feafadce05/d5c42a98-c4dd-443e-bcfc-874d7b23fd02.webp | -
+ZY-BARBICAN-330-GLASS-007 | created | malt_drink | solodovye-napitki | 616ee187-897d-4aa1-ad72-f8ebcf043199 | /uploads/products/616ee187-897d-4aa1-ad72-f8ebcf043199/f409bd0e-1254-4e15-80f5-f7d447a99e72.webp | -
+ZY-VAST-330-CAN-001 | created | non_alcoholic_drink | bezalkogolnye-napitki | 7e195a08-5f44-45cb-aeee-bd62e95f782c | /uploads/products/7e195a08-5f44-45cb-aeee-bd62e95f782c/f6d5a842-90c3-467a-8e2f-9fc045d0b5ef.webp | -
+ZY-ANGRYANIMAL-700-PET-001 | created | tonic_drink | toniki | beab1cde-294c-4dc2-9cd9-edcce78062f8 | /uploads/products/beab1cde-294c-4dc2-9cd9-edcce78062f8/11fe2438-ede3-4194-9e5e-12eab7bd80e2.webp | -
+
+=== categories ensure (from preview) ===
+categories_created: ["bezalkogolnye-napitki","solodovye-napitki"]
+categories_already_existed_on_apply: ["bezalkogolnye-napitki","solodovye-napitki"]
+
+=== verification ===
+products_total: 455
+showcase_active: 440
+orderable_active: 13
+no_price: 440
+orders/order_items: 3/5
+guest_catalog_total: 453 (includes all 9 new SKUs)
+image_http: 200 image/webp after app restart
+cart: showcase rejected (requires orderable + price)
+health: ok
+containers: app+db healthy
+package_requires_review: true
