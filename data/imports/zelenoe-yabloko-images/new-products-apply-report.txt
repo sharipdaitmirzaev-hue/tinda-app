@@ -1,0 +1,75 @@
+TINDA Zelenoe new products import report
+generated_at: 2026-07-27T14:52:35.127Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-zelenoe-new-products-20260727T145033Z.dump
+source_xlsx: data/imports/zelenoe-yabloko-images/approved-new-products.xlsx
+source_json: /app/tmp/zelenoe-new/approved-new-products.json
+preview_ok: 26
+preview_failed: 0
+created: 26
+skipped: 0
+failed: 0
+images_uploaded: 26
+products_total: 168 -> 194
+showcase_active: 153 -> 179
+orderable_active: 13 -> 13
+no_price: 153 -> 179
+orders: 3; order_items: 5 (unchanged)
+package_requires_review SKUs (26): ZY-KAZBEGI-2000-PET-001, ZY-KAZBEGI-2000-PET-002, ZY-KAZBEGI-2000-PET-003, ZY-KAZBEGI-2000-PET-004, ZY-DENEB-450-CAN-001, ZY-KINZA-320-CAN-001, ZY-DENEB-450-CAN-003, ZY-DENEB-450-CAN-004, ZY-KINZA-320-CAN-002, ZY-KINZA-320-CAN-003, ZY-KINZA-320-CAN-004, ZY-KINZA-320-CAN-005, ZY-BORZHOMI-330-CAN-001, ZY-BORZHOMI-330-CAN-002, ZY-TBILISSIMO-500-GLASS-001, ZY-KINZA-320-CAN-006, ZY-KINZA-320-CAN-007, ZY-KOLA-1500-PET-001, ZY-TBILISSIMO-500-GLASS-002, ZY-TBILISSIMO-500-GLASS-003, ZY-TBILISSIMO-500-GLASS-004, ZY-DRPEPPER-330-CAN-001, ZY-SWAG-330-GLASS-001, ZY-SWAG-330-GLASS-002, ZY-FRUSTAIL-330-CAN-001, ZY-KAZBEGI-500-GLASS-001
+verification: images 26/26 webp; guest 26; approved 26; interest OK; cart rejected for showcase; health OK
+
+Created SKUs:
+  - ZY-KAZBEGI-2000-PET-001
+  - ZY-KAZBEGI-2000-PET-002
+  - ZY-KAZBEGI-2000-PET-003
+  - ZY-KAZBEGI-2000-PET-004
+  - ZY-DENEB-450-CAN-001
+  - ZY-KINZA-320-CAN-001
+  - ZY-DENEB-450-CAN-003
+  - ZY-DENEB-450-CAN-004
+  - ZY-KINZA-320-CAN-002
+  - ZY-KINZA-320-CAN-003
+  - ZY-KINZA-320-CAN-004
+  - ZY-KINZA-320-CAN-005
+  - ZY-BORZHOMI-330-CAN-001
+  - ZY-BORZHOMI-330-CAN-002
+  - ZY-TBILISSIMO-500-GLASS-001
+  - ZY-KINZA-320-CAN-006
+  - ZY-KINZA-320-CAN-007
+  - ZY-KOLA-1500-PET-001
+  - ZY-TBILISSIMO-500-GLASS-002
+  - ZY-TBILISSIMO-500-GLASS-003
+  - ZY-TBILISSIMO-500-GLASS-004
+  - ZY-DRPEPPER-330-CAN-001
+  - ZY-SWAG-330-GLASS-001
+  - ZY-SWAG-330-GLASS-002
+  - ZY-FRUSTAIL-330-CAN-001
+  - ZY-KAZBEGI-500-GLASS-001
+
+SKU | status | product_id | image_url | error
+ZY-KAZBEGI-2000-PET-001 | created | 754988be-5945-4d2c-9cb8-05ce50b53a21 | /uploads/products/754988be-5945-4d2c-9cb8-05ce50b53a21/cf049c61-efa9-4df6-a5d4-434faa5e2546.webp | -
+ZY-KAZBEGI-2000-PET-002 | created | 86ad3620-27eb-43e8-bcbf-329c00e08a17 | /uploads/products/86ad3620-27eb-43e8-bcbf-329c00e08a17/3915cc90-efbe-45eb-a2b7-290010f8452f.webp | -
+ZY-KAZBEGI-2000-PET-003 | created | 733bdd94-2a00-4cbc-9cd3-4c51a7d6f61f | /uploads/products/733bdd94-2a00-4cbc-9cd3-4c51a7d6f61f/19c9970e-92ad-475b-8b5f-c6a7900e4206.webp | -
+ZY-KAZBEGI-2000-PET-004 | created | cddd6e6e-f9e3-4604-8882-317c85849811 | /uploads/products/cddd6e6e-f9e3-4604-8882-317c85849811/a6aca50e-de11-4e19-a384-90fb6a6d9a4b.webp | -
+ZY-DENEB-450-CAN-001 | created | e10ba4f4-1fd7-4342-842f-0f4c4e184fb8 | /uploads/products/e10ba4f4-1fd7-4342-842f-0f4c4e184fb8/98fdbdae-3c98-4fbb-9925-b17dd89a76fb.webp | -
+ZY-KINZA-320-CAN-001 | created | 7faa6705-d244-4ec3-839e-68055fb9e492 | /uploads/products/7faa6705-d244-4ec3-839e-68055fb9e492/6c900b24-36c2-44c3-824b-b9f1430f94d5.webp | -
+ZY-DENEB-450-CAN-003 | created | 8ecb68ea-0b0b-47f7-b4c3-87f20715e811 | /uploads/products/8ecb68ea-0b0b-47f7-b4c3-87f20715e811/e2de58b6-be8d-420a-83e8-97cbc6a3ffea.webp | -
+ZY-DENEB-450-CAN-004 | created | a8dc5395-a20c-4352-af44-e241c03dfc16 | /uploads/products/a8dc5395-a20c-4352-af44-e241c03dfc16/e12a72df-8da5-42fb-82bf-448ce6a92cde.webp | -
+ZY-KINZA-320-CAN-002 | created | c3274afc-88ff-4114-944b-0ef0354a4561 | /uploads/products/c3274afc-88ff-4114-944b-0ef0354a4561/a77e83e2-e646-412b-a998-0631f756fb98.webp | -
+ZY-KINZA-320-CAN-003 | created | 79e75264-1d17-438c-8167-b8e1b6a5e2f6 | /uploads/products/79e75264-1d17-438c-8167-b8e1b6a5e2f6/3a5ce622-1f0a-45f2-99ab-b04873c85004.webp | -
+ZY-KINZA-320-CAN-004 | created | de9ebbe5-67e4-4532-a8ac-fe720d1512a9 | /uploads/products/de9ebbe5-67e4-4532-a8ac-fe720d1512a9/8eab0b0a-8eef-4576-9666-94a1ba6625d0.webp | -
+ZY-KINZA-320-CAN-005 | created | 20e0bf8c-2afe-4fa7-88d8-e17b99360022 | /uploads/products/20e0bf8c-2afe-4fa7-88d8-e17b99360022/aae97e2c-b6a2-460f-aa60-57f36fa6ae13.webp | -
+ZY-BORZHOMI-330-CAN-001 | created | 6986f7e3-dc41-4c5e-8840-702a67823822 | /uploads/products/6986f7e3-dc41-4c5e-8840-702a67823822/77a38477-a6fd-41fa-9ca0-05632d0173fb.webp | -
+ZY-BORZHOMI-330-CAN-002 | created | 4525c23a-4462-4431-99c1-2b468d22cd39 | /uploads/products/4525c23a-4462-4431-99c1-2b468d22cd39/ad3ae405-116d-4bed-8047-4cfcd762b71e.webp | -
+ZY-TBILISSIMO-500-GLASS-001 | created | f983fca7-b503-4e66-b468-0d0b51c263a1 | /uploads/products/f983fca7-b503-4e66-b468-0d0b51c263a1/22685ba4-a24b-4cde-a700-529596354313.webp | -
+ZY-KINZA-320-CAN-006 | created | bbc071ca-b4e2-4934-8396-bc77a50fa0a0 | /uploads/products/bbc071ca-b4e2-4934-8396-bc77a50fa0a0/ab5acf27-fba6-4a96-986a-15060c51a76a.webp | -
+ZY-KINZA-320-CAN-007 | created | eae69caf-8844-45ec-b9a5-7ab686877c97 | /uploads/products/eae69caf-8844-45ec-b9a5-7ab686877c97/b08ebf48-ad28-4547-91aa-17305d0e4a01.webp | -
+ZY-KOLA-1500-PET-001 | created | af15485a-29dd-4fac-8e35-a9d78c9228a1 | /uploads/products/af15485a-29dd-4fac-8e35-a9d78c9228a1/9f69fdeb-4ba6-4e44-9f6e-d12a9f561012.webp | -
+ZY-TBILISSIMO-500-GLASS-002 | created | 72b68543-6420-40e7-8958-147cc62b6afa | /uploads/products/72b68543-6420-40e7-8958-147cc62b6afa/813cbcee-aa6a-4f48-a47a-4acc0b4c4500.webp | -
+ZY-TBILISSIMO-500-GLASS-003 | created | 29386caa-6855-451d-a857-23294aca928f | /uploads/products/29386caa-6855-451d-a857-23294aca928f/2602fe88-95d8-41b9-b986-327f3d016a38.webp | -
+ZY-TBILISSIMO-500-GLASS-004 | created | 27742b08-b8bb-4755-9449-2e95e3a46351 | /uploads/products/27742b08-b8bb-4755-9449-2e95e3a46351/65b0906e-0d85-4ad5-940d-786c63774252.webp | -
+ZY-DRPEPPER-330-CAN-001 | created | 09f06e32-c671-41a3-b71f-beefaf86c9b8 | /uploads/products/09f06e32-c671-41a3-b71f-beefaf86c9b8/dafd122c-396a-4f61-914d-93bcb7768111.webp | -
+ZY-SWAG-330-GLASS-001 | created | 7698b384-fb23-49b0-8940-9990b286eced | /uploads/products/7698b384-fb23-49b0-8940-9990b286eced/09ac345e-f337-4d63-8123-3c4e8de7f94a.webp | -
+ZY-SWAG-330-GLASS-002 | created | e466a6de-472d-48a4-9714-93dd6e3ab733 | /uploads/products/e466a6de-472d-48a4-9714-93dd6e3ab733/2dc35a14-3370-4f06-9361-9d5e1eec11bf.webp | -
+ZY-FRUSTAIL-330-CAN-001 | created | 288a7444-c1aa-4798-bf01-2c09b8a99b7b | /uploads/products/288a7444-c1aa-4798-bf01-2c09b8a99b7b/5e35e626-964f-4118-a80f-5411aa7eda86.webp | -
+ZY-KAZBEGI-500-GLASS-001 | created | 16f75a4e-ca27-4e32-a46c-4bf9c5e462ca | /uploads/products/16f75a4e-ca27-4e32-a46c-4bf9c5e462ca/d3023f33-105a-428f-83c9-8494d8b7210b.webp | -

@@ -82,13 +82,182 @@ function sort_to_order(
     case "created_at_asc":
       return { created_at: "asc" };
     case "is_new_desc":
-      return [{ is_new: "desc" }, { name: "asc" }];
+      return [{ is_new: "desc" }, { created_at: "desc" }, { name: "asc" }];
     case "is_hit_desc":
       return [{ is_hit: "desc" }, { name: "asc" }];
+    case "brand_asc":
+      return [{ brand: "asc" }, { name: "asc" }];
+    case "volume_asc":
+      return [{ volume_text: "asc" }, { name: "asc" }];
+    case "has_price_desc":
+      return [{ price_amount: "desc" }, { name: "asc" }];
     case "created_at_desc":
     default:
       return { created_at: "desc" };
   }
+}
+
+const UUID_RE =
+  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
+async function resolve_catalog_category_ids(
+  category?: string | null,
+  category_id?: string | null,
+): Promise<string[] | null> {
+  const raw = (category || category_id || "").trim();
+  if (!raw) return null;
+
+  const category_row = UUID_RE.test(raw)
+    ? await prisma.categories.findFirst({
+        where: { id: raw, is_active: true },
+        select: { id: true },
+      })
+    : await prisma.categories.findFirst({
+        where: { slug: raw, is_active: true },
+        select: { id: true },
+      });
+
+  if (!category_row) {
+    return [];
+  }
+
+  const ids = new Set<string>([category_row.id]);
+  let frontier = [category_row.id];
+  while (frontier.length) {
+    const children = await prisma.categories.findMany({
+      where: { parent_id: { in: frontier }, is_active: true },
+      select: { id: true },
+    });
+    frontier = [];
+    for (const child of children) {
+      if (!ids.has(child.id)) {
+        ids.add(child.id);
+        frontier.push(child.id);
+      }
+    }
+  }
+  return [...ids];
+}
+
+function build_catalog_where(params: {
+  q?: string;
+  category_ids?: string[] | null;
+  brand?: string;
+  volume?: string;
+  package_type?: string;
+  availability?: string;
+  sales_status?: string;
+  is_promo?: boolean;
+  is_new?: boolean;
+  is_hit?: boolean;
+  has_price?: boolean;
+}): Prisma.productsWhereInput {
+  const where: Prisma.productsWhereInput = {
+    is_active: true,
+    category: { is_active: true },
+  };
+
+  if (params.category_ids) {
+    if (params.category_ids.length === 0) {
+      where.id = { in: [] };
+    } else {
+      where.category_id = { in: params.category_ids };
+    }
+  }
+  if (params.brand?.trim()) {
+    where.brand = { equals: params.brand.trim(), mode: "insensitive" };
+  }
+  if (params.volume?.trim()) {
+    where.volume_text = { equals: params.volume.trim(), mode: "insensitive" };
+  }
+  if (params.package_type?.trim()) {
+    where.package_type = {
+      equals: params.package_type.trim(),
+      mode: "insensitive",
+    };
+  }
+  if (params.availability) where.availability = params.availability;
+  if (params.sales_status) where.sales_status = params.sales_status;
+  if (params.is_promo !== undefined) where.is_promo = params.is_promo;
+  if (params.is_new !== undefined) where.is_new = params.is_new;
+  if (params.is_hit !== undefined) where.is_hit = params.is_hit;
+  if (params.has_price === true) {
+    where.price_amount = { gt: 0 };
+  } else if (params.has_price === false) {
+    where.OR = [{ price_amount: null }, { price_amount: { lte: 0 } }];
+  }
+  if (params.q?.trim()) {
+    const q = params.q.trim();
+    const search_or: Prisma.productsWhereInput[] = [
+      { name: { contains: q, mode: "insensitive" } },
+      { sku: { contains: q, mode: "insensitive" } },
+      { brand: { contains: q, mode: "insensitive" } },
+      { description: { contains: q, mode: "insensitive" } },
+    ];
+    if (where.OR) {
+      where.AND = [{ OR: where.OR }, { OR: search_or }];
+      delete where.OR;
+    } else {
+      where.OR = search_or;
+    }
+  }
+
+  return where;
+}
+
+async function load_catalog_facets(where: Prisma.productsWhereInput) {
+  const [brand_rows, volume_rows, package_rows, category_rows] =
+    await Promise.all([
+      prisma.products.findMany({
+        where: { ...where, brand: { not: null } },
+        distinct: ["brand"],
+        select: { brand: true },
+        orderBy: { brand: "asc" },
+        take: 200,
+      }),
+      prisma.products.findMany({
+        where: { ...where, volume_text: { not: null } },
+        distinct: ["volume_text"],
+        select: { volume_text: true },
+        orderBy: { volume_text: "asc" },
+        take: 200,
+      }),
+      prisma.products.findMany({
+        where: { ...where, package_type: { not: null } },
+        distinct: ["package_type"],
+        select: { package_type: true },
+        orderBy: { package_type: "asc" },
+        take: 200,
+      }),
+      prisma.products.findMany({
+        where,
+        distinct: ["category_id"],
+        select: {
+          category_id: true,
+          category: { select: { id: true, name: true, slug: true } },
+        },
+        take: 200,
+      }),
+    ]);
+
+  return {
+    brands: brand_rows
+      .map((row) => row.brand)
+      .filter((value): value is string => Boolean(value && value.trim())),
+    volumes: volume_rows
+      .map((row) => row.volume_text)
+      .filter((value): value is string => Boolean(value && value.trim())),
+    package_types: package_rows
+      .map((row) => row.package_type)
+      .filter((value): value is string => Boolean(value && value.trim())),
+    categories: category_rows
+      .map((row) => row.category)
+      .filter(
+        (category): category is { id: string; name: string; slug: string } =>
+          Boolean(category),
+      )
+      .sort((a, b) => a.name.localeCompare(b.name, "ru")),
+  };
 }
 
 function map_catalog_list_item(
@@ -516,41 +685,56 @@ export async function list_catalog_products(
   payload: AuthUserPayload | null,
   params: {
     q?: string;
+    category?: string;
     category_id?: string;
+    brand?: string;
+    volume?: string;
+    package_type?: string;
     availability?: string;
     sales_status?: string;
     is_promo?: boolean;
     is_new?: boolean;
     is_hit?: boolean;
+    has_price?: boolean;
     page: number;
     page_size: number;
     sort: ProductSort;
   },
 ) {
-  const where: Prisma.productsWhereInput = {
-    is_active: true,
-    category: { is_active: true },
-  };
+  const category_ids = await resolve_catalog_category_ids(
+    params.category,
+    params.category_id,
+  );
 
-  if (params.category_id) {
-    where.category_id = params.category_id;
-  }
-  if (params.availability) where.availability = params.availability;
-  if (params.sales_status) where.sales_status = params.sales_status;
-  if (params.is_promo !== undefined) where.is_promo = params.is_promo;
-  if (params.is_new !== undefined) where.is_new = params.is_new;
-  if (params.is_hit !== undefined) where.is_hit = params.is_hit;
-  if (params.q?.trim()) {
-    const q = params.q.trim();
-    where.OR = [
-      { name: { contains: q, mode: "insensitive" } },
-      { sku: { contains: q, mode: "insensitive" } },
-      { brand: { contains: q, mode: "insensitive" } },
-    ];
-  }
+  const where = build_catalog_where({
+    q: params.q,
+    category_ids,
+    brand: params.brand,
+    volume: params.volume,
+    package_type: params.package_type,
+    availability: params.availability,
+    sales_status: params.sales_status,
+    is_promo: params.is_promo,
+    is_new: params.is_new,
+    is_hit: params.is_hit,
+    has_price: params.has_price,
+  });
+
+  // Facets: active catalog universe (not narrowed by current brand/volume/package),
+  // so filter dropdowns stay useful while browsing.
+  const facet_where = build_catalog_where({
+    q: params.q,
+    category_ids,
+    availability: params.availability,
+    sales_status: params.sales_status,
+    is_promo: params.is_promo,
+    is_new: params.is_new,
+    is_hit: params.is_hit,
+    has_price: params.has_price,
+  });
 
   const skip = (params.page - 1) * params.page_size;
-  const [total, items] = await Promise.all([
+  const [total, items, filters] = await Promise.all([
     prisma.products.count({ where }),
     prisma.products.findMany({
       where,
@@ -558,16 +742,23 @@ export async function list_catalog_products(
       skip,
       take: params.page_size,
       include: {
-        category: { select: { id: true, name: true, is_active: true } },
+        category: {
+          select: { id: true, name: true, slug: true, is_active: true },
+        },
       },
     }),
+    load_catalog_facets(facet_where),
   ]);
+
+  const total_pages = Math.max(1, Math.ceil(total / params.page_size) || 1);
 
   return {
     items: items.map((product) => map_catalog_list_item(payload, product)),
     page: params.page,
     page_size: params.page_size,
     total,
+    total_pages: total === 0 ? 0 : total_pages,
+    filters,
   };
 }
 

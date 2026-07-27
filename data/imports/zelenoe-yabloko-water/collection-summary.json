@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-07-27T15:04:28.900Z",
+  "note": "LOCAL ONLY. No production / VPS / DB / image_url / seed changes.",
+  "categories_found": [
+    {
+      "slug": "voda-gazirovannaia",
+      "url": "https://zelenoeyabloko.ru/catalog/voda-gazirovannaia",
+      "title": "Вода газированная",
+      "carbonation": "sparkling"
+    },
+    {
+      "slug": "voda-negazirovannaia",
+      "url": "https://zelenoeyabloko.ru/catalog/voda-negazirovannaia",
+      "title": "Вода негазированная",
+      "carbonation": "still"
+    }
+  ],
+  "mineral_note": "Отдельного slug минеральной воды на сайте нет — минеральные позиции входят в voda-gazirovannaia и voda-negazirovannaia.",
+  "pages_processed": 4,
+  "pages_by_category": {
+    "voda-gazirovannaia": 2,
+    "voda-negazirovannaia": 2
+  },
+  "found": 74,
+  "unique": 70,
+  "internal_duplicates_skipped": 4,
+  "mineral_hint_count": 37,
+  "by_carbonation": {
+    "sparkling": 30,
+    "still": 40,
+    "unknown": 0
+  },
+  "match": {
+    "exact_match": 0,
+    "probable_match": 0,
+    "new_product": 70,
+    "conflict": 0,
+    "unknown": 0
+  },
+  "auto_review": {
+    "needs_review": 3,
+    "approved_new": 65,
+    "rejected": 2
+  },
+  "approved_existing": 0,
+  "approved_new": 65,
+  "needs_review": 3,
+  "rejected": 2,
+  "needs_review_items": [
+    {
+      "source_index": 1,
+      "source_name": "Вода мин Doctor Bormental с газом ст/б 0,45",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "volume_missing"
+      ]
+    },
+    {
+      "source_index": 18,
+      "source_name": "Вода мин Нагутская-26 газир ст/б 0,5л",
+      "reason": "needs_review_small_image",
+      "mismatches": [
+        "below_500"
+      ]
+    },
+    {
+      "source_index": 49,
+      "source_name": "Вода Родники Кавказа негаз 0,6л",
+      "reason": "needs_review_small_image",
+      "mismatches": [
+        "below_500"
+      ]
+    }
+  ],
+  "rejected_items": [
+    {
+      "source_index": 7,
+      "source_name": "Вода питьевая Королевская Мия ст/б 0,75л",
+      "reason": "rejected_placeholder",
+      "mismatches": [
+        "placeholder_like",
+        "file_size_2504"
+      ],
+      "comment": "Авто: placeholder / слишком маленький файл"
+    },
+    {
+      "source_index": 60,
+      "source_name": "Вода Денеб Горная ст/б 0,5л",
+      "reason": "rejected_placeholder",
+      "mismatches": [
+        "placeholder_like",
+        "file_size_3328"
+      ],
+      "comment": "Авто: placeholder / слишком маленький файл"
+    }
+  ],
+  "images_below_500": 4,
+  "below_500_items": [
+    {
+      "source_index": 7,
+      "source_name": "Вода питьевая Королевская Мия ст/б 0,75л",
+      "width": 300,
+      "height": 300
+    },
+    {
+      "source_index": 18,
+      "source_name": "Вода мин Нагутская-26 газир ст/б 0,5л",
+      "width": 400,
+      "height": 400
+    },
+    {
+      "source_index": 49,
+      "source_name": "Вода Родники Кавказа негаз 0,6л",
+      "width": 400,
+      "height": 400
+    },
+    {
+      "source_index": 60,
+      "source_name": "Вода Денеб Горная ст/б 0,5л",
+      "width": 300,
+      "height": 600
+    }
+  ],
+  "download_errors": 0,
+  "download_error_items": [],
+  "paths": {
+    "candidates": "/workspace/data/imports/zelenoe-yabloko-water/candidates.json",
+    "original": "/workspace/data/imports/zelenoe-yabloko-water/original",
+    "previews": "/workspace/data/imports/zelenoe-yabloko-water/previews",
+    "manifest": "/workspace/data/imports/zelenoe-yabloko-water/manifest.json",
+    "gallery": "/workspace/data/imports/zelenoe-yabloko-water/gallery.html",
+    "gallery_data": "/workspace/data/imports/zelenoe-yabloko-water/gallery-data.json",
+    "images_review": "/workspace/data/imports/zelenoe-yabloko-water/images-review.xlsx",
+    "review_decisions_json": "/workspace/data/imports/zelenoe-yabloko-water/review-decisions.json",
+    "review_decisions_xlsx": "/workspace/data/imports/zelenoe-yabloko-water/review-decisions.xlsx",
+    "auto_review_summary": "/workspace/data/imports/zelenoe-yabloko-water/auto-review-summary.json",
+    "download_summary": "/workspace/data/imports/zelenoe-yabloko-water/download-summary.json",
+    "collection_summary": "/workspace/data/imports/zelenoe-yabloko-water/collection-summary.json"
+  },
+  "production_changed": false,
+  "images_uploaded": false,
+  "image_url_changed": false,
+  "products_created": false,
+  "seed_run": false
+}

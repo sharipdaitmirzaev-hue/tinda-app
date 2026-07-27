@@ -8,10 +8,13 @@ export function ProductImage({
   src,
   alt,
   className = "h-16 w-16",
+  priority = false,
 }: {
   src: string | null | undefined;
   alt: string;
   className?: string;
+  /** When true, load eagerly (detail hero). Cards use lazy by default. */
+  priority?: boolean;
 }) {
   const [failed, set_failed] = useState(false);
   const show_placeholder = !src || failed;
@@ -27,6 +30,8 @@ export function ProductImage({
         src={PRODUCT_IMAGE_PLACEHOLDER}
         alt={alt || "Нет фото"}
         className={`${className} rounded-md object-cover bg-slate-100`}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
       />
     );
   }
@@ -37,6 +42,8 @@ export function ProductImage({
       src={src}
       alt={alt}
       className={`${className} rounded-md object-cover bg-slate-100`}
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
       onError={() => set_failed(true)}
     />
   );

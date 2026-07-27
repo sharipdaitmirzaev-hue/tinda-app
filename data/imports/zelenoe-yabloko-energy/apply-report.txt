@@ -1,0 +1,40 @@
+TINDA Zelenoe ENERGY products import report
+generated_at: 2026-07-27T15:25:55.896Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-zelenoe-energy-20260727T152548Z.dump
+source: /app/tmp/zelenoe-energy/approved-new-import-batch.json
+rows: 5 (expected 5)
+category: energeticheskie-napitki (Энергетические напитки, active=true)
+package_requires_review: true
+created: 5
+skipped: 0
+failed: 0
+images_uploaded: 5
+products_total: 259 -> 264
+showcase_active: 244 -> 249
+orderable_active: 13 -> 13
+no_price: 244 -> 249
+orders: 3->3; order_items: 5->5
+package_requires_review SKUs (5): ZY-BURN-449-CAN-001, ZY-BURN-449-CAN-002, ZY-BURN-449-CAN-003, ZY-BURN-449-CAN-004, ZY-BURN-449-CAN-005
+
+SKU | status | flavor | product_id | image_url | error
+ZY-BURN-449-CAN-001 | created | classic | b048ac4c-9b7d-4822-9adf-5c09a293d5b7 | /uploads/products/b048ac4c-9b7d-4822-9adf-5c09a293d5b7/6023dc3e-3066-4cdf-862a-c0d2b633e76c.webp | -
+ZY-BURN-449-CAN-002 | created | тропический микс | c2698b0e-d292-4bc8-910d-82e6a25c456e | /uploads/products/c2698b0e-d292-4bc8-910d-82e6a25c456e/db6a0829-7970-4f49-b03f-39cbdd81379b.webp | -
+ZY-BURN-449-CAN-003 | created | apple kiwi | a956e7fa-86fa-4b64-a28a-c2f69fee0f8a | /uploads/products/a956e7fa-86fa-4b64-a28a-c2f69fee0f8a/70e8527f-c335-4d99-866d-5abd98998080.webp | -
+ZY-BURN-449-CAN-004 | created | apple апельсин микс | 7cac9d17-66b6-4961-bab2-eb5cda59eff5 | /uploads/products/7cac9d17-66b6-4961-bab2-eb5cda59eff5/e5d1b35d-739b-4105-98bd-463b1c4390f3.webp | -
+ZY-BURN-449-CAN-005 | created | гуава | c7ce66d8-f6ed-4848-ac42-616eb7e2d543 | /uploads/products/c7ce66d8-f6ed-4848-ac42-616eb7e2d543/5e0a8db1-9f01-4023-96cc-fb726af67fef.webp | -
+
+--- post-import verification ---
+health: ok database=ok
+containers: app-app-1 healthy, app-db-1 healthy
+category: energeticheskie-napitki (catalog_total=6)
+cart_showcase: rejected (400)
+interest: works (cleaned up)
+orderable_prices: unchanged (13)
+orders: 3 / order_items: 5
+products_total: 264
+showcase_active: 249
+orderable_active: 13
+no_price: 249
+created: 5 skipped: 0 failed: 0 images_uploaded: 5
+package_requires_review: true
