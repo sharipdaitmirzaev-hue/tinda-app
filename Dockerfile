@@ -21,8 +21,7 @@ ENV DATABASE_URL="postgresql://tinda:tinda@postgres:5432/tinda?schema=public"
 ENV SESSION_SECRET="docker-build-session-secret-placeholder-32chars"
 ENV APP_URL="http://localhost:3000"
 ENV STORAGE_DRIVER="local"
-RUN npx prisma generate && npm run build \
-  && npm prune --omit=dev
+RUN npx prisma generate && npm run build
 
 FROM node:22-bookworm-slim AS runner
 WORKDIR /app
@@ -36,13 +35,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends openssl ca-cert
   && groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs
 
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/package-lock.json ./package-lock.json
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/.next ./.next
+# Next.js standalone server bundle
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+
+# Prisma schema + CLI for migrate deploy in entrypoint
 COPY --from=builder /app/prisma ./prisma
-COPY --from=builder /app/next.config.ts ./next.config.ts
+COPY --from=builder /app/node_modules/prisma ./node_modules/prisma
+COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
+COPY --from=builder /app/package.json ./package.json
+
 COPY deploy/docker/entrypoint.sh ./deploy/docker/entrypoint.sh
 
 RUN chmod +x ./deploy/docker/entrypoint.sh \
@@ -55,4 +58,4 @@ HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
   CMD node -e "fetch('http://127.0.0.1:3000/api/v1/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
 
 ENTRYPOINT ["./deploy/docker/entrypoint.sh"]
-CMD ["npm", "run", "start"]
+CMD ["node", "server.js"]
