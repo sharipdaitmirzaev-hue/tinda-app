@@ -151,6 +151,46 @@ function assert_not_blocked(status: number, buf: Buffer, url: string) {
   }
 }
 
+/** CDN sometimes blocks /webp/files/* while /files/* is public. */
+function image_url_fallbacks(url: string): string[] {
+  const out: string[] = [];
+  const push = (u: string) => {
+    if (u && !out.includes(u)) out.push(u);
+  };
+  push(url);
+  if (url.includes("/webp/files/")) {
+    push(url.replace("/webp/files/", "/files/"));
+  }
+  if (url.includes("/webp/cropped/")) {
+    push(url.replace("/webp/cropped/", "/cropped/"));
+  }
+  return out;
+}
+
+async function fetch_image_buffer(url: string): Promise<{
+  url: string;
+  buf: Buffer;
+  status: number;
+}> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 30000);
+  try {
+    const res = await fetch(url, {
+      redirect: "follow",
+      signal: controller.signal,
+      headers: {
+        "User-Agent": USER_AGENT,
+        Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+        Referer: "https://zelenoeyabloko.ru/",
+      },
+    });
+    const buf = Buffer.from(await res.arrayBuffer());
+    return { url, buf, status: res.status };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 function load_match_map(review_path: string | null): Map<
   string,
   { match_status: string; tinda_sku: string }
@@ -300,8 +340,13 @@ async function main() {
   mkdirSync(original_dir, { recursive: true });
   mkdirSync(preview_dir, { recursive: true });
 
-  const candidates = JSON.parse(
+  const candidates_raw = JSON.parse(
     readFileSync(candidates_path, "utf8"),
+  );
+  const candidates = (
+    Array.isArray(candidates_raw)
+      ? candidates_raw
+      : candidates_raw.candidates || []
   ) as Candidate[];
   const match_map = load_match_map(
     review_path ? path.resolve(review_path) : null,
@@ -373,19 +418,33 @@ async function main() {
     }
 
     try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 30000);
-      const res = await fetch(url, {
-        redirect: "follow",
-        signal: controller.signal,
-        headers: {
-          "User-Agent": USER_AGENT,
-          Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
-        },
-      });
-      clearTimeout(timer);
-      const buf = Buffer.from(await res.arrayBuffer());
-      assert_not_blocked(res.status, buf, url);
+      const candidates_urls = image_url_fallbacks(url);
+      let fetched: { url: string; buf: Buffer; status: number } | null = null;
+      let last_err: Error | null = null;
+      for (const try_url of candidates_urls) {
+        try {
+          const attempt = await fetch_image_buffer(try_url);
+          assert_not_blocked(attempt.status, attempt.buf, try_url);
+          fetched = attempt;
+          break;
+        } catch (e) {
+          last_err = e instanceof Error ? e : new Error(String(e));
+          // try next fallback; do not hard-stop on single 403
+          if (
+            last_err.message.startsWith("CAPTCHA") ||
+            last_err.message.includes("CAPTCHA_or_HTML")
+          ) {
+            throw last_err;
+          }
+        }
+      }
+      if (!fetched) {
+        throw last_err || new Error("download_failed");
+      }
+      const buf = fetched.buf;
+      if (fetched.url !== url) {
+        row.candidate_image_url = fetched.url;
+      }
 
       if (buf.length > MAX_BYTES) {
         throw new Error(`file_too_large_${buf.length}`);
@@ -459,9 +518,9 @@ async function main() {
       row.download_status = "error";
       row.error_message = msg;
       errors += 1;
-      if (msg.startsWith("BLOCKED") || msg.startsWith("CAPTCHA")) {
+      if (msg.startsWith("CAPTCHA") || msg.includes("CAPTCHA_or_HTML")) {
         rows.push(row);
-        // save progress and stop
+        // save progress and stop — site-wide block
         const manifest_path = path.join(out_root, "manifest.json");
         writeFileSync(
           manifest_path,

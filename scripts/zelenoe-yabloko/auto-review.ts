@@ -19,6 +19,7 @@ import {
   sugar_free_flag,
   token_overlap,
 } from "../../src/lib/catalog/external-images/normalize";
+import { detect_carbonation } from "../../src/lib/catalog/external-images/zy-parse-name";
 import type {
   ExternalImageCandidate,
   TindaProductImageTarget,
@@ -28,13 +29,15 @@ const require = createRequire(import.meta.url);
 const XLSX = require("xlsx");
 
 const SAFE_SCORE = 80;
-const ROOT = path.resolve("data/imports/zelenoe-yabloko-images");
+const DEFAULT_ROOT = path.resolve("data/imports/zelenoe-yabloko-images");
 
 function arg(name: string, fallback: string | null = null): string | null {
   const i = process.argv.indexOf(`--${name}`);
   if (i >= 0 && process.argv[i + 1]) return process.argv[i + 1]!;
   return fallback;
 }
+
+const ROOT = path.resolve(arg("root", DEFAULT_ROOT)!);
 
 type Card = {
   source_index: number;
@@ -64,6 +67,8 @@ type Card = {
   proposed_sku: string;
   below_500: boolean;
   download_status: string;
+  carbonation?: string;
+  source_category_slug?: string;
 };
 
 type Decision = {
@@ -207,6 +212,32 @@ function sugar_ok(card: Card, tinda: TindaProductImageTarget | null): {
   }
   // asymmetric: one known — not safe for auto approve existing
   return { ok: false, note: "sugar_asymmetric" };
+}
+
+function carbonation_ok(
+  card: Card,
+  tinda: TindaProductImageTarget | null,
+): { ok: boolean; note: string; required: boolean } {
+  const source =
+    (card.carbonation as "sparkling" | "still" | "unknown" | undefined) ||
+    detect_carbonation(card.source_name, card.source_category_slug);
+  // Only enforce when we know source carbonation (water pipeline).
+  if (source === "unknown") {
+    return { ok: true, note: "carbonation_not_required", required: false };
+  }
+  if (!tinda) {
+    return { ok: true, note: `carbonation_source_${source}`, required: true };
+  }
+  const target = detect_carbonation(
+    `${tinda.name || ""} ${tinda.brand || ""}`,
+    null,
+  );
+  if (target === "unknown") {
+    return { ok: false, note: "carbonation_tinda_unknown", required: true };
+  }
+  return source === target
+    ? { ok: true, note: `carbonation_${source}`, required: true }
+    : { ok: false, note: `carbonation_mismatch_${source}_vs_${target}`, required: true };
 }
 
 function find_tinda(
@@ -376,6 +407,7 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
     const p = package_ok(card, tinda);
     const f = flavor_ok(card, tinda);
     const s = sugar_ok(card, tinda);
+    const c = carbonation_ok(card, tinda);
     const score = card.match_score ?? 0;
 
     if (b) matched.push("brand");
@@ -388,6 +420,10 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
     else mismatches.push(f.note);
     if (s.ok) matched.push(s.note);
     else mismatches.push(s.note);
+    if (c.required) {
+      if (c.ok) matched.push(c.note);
+      else mismatches.push(c.note);
+    }
     if (score >= SAFE_SCORE) matched.push(`score_${score}`);
     else mismatches.push(`score_low_${score}`);
     matched.push("size_ge_500", "image_opens", "no_watermark_detected");
@@ -404,6 +440,7 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
       p &&
       f.ok &&
       s.ok &&
+      (!c.required || c.ok) &&
       score >= SAFE_SCORE &&
       !!tinda &&
       rivals === 0 &&

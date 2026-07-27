@@ -103,7 +103,32 @@ node scripts/zelenoe-yabloko/apply-existing-images.mjs \
 
 После записи новых файлов в volume может потребоваться `docker restart app-app-1` (Next.js подхватывает `public/uploads` при старте).
 
-## Import 26 approved_new products (production)
+## Вода питьевая / минеральная (локальный сбор)
+
+Категории на сайте:
+- https://zelenoeyabloko.ru/catalog/voda-gazirovannaia
+- https://zelenoeyabloko.ru/catalog/voda-negazirovannaia
+
+Отдельного раздела «минеральная» нет — минеральные SKU внутри этих двух.
+
+```bash
+npm run zy:scrape-water
+npm run external-images:review -- \
+  --products data/imports/tinda_active_products.snapshot.json \
+  --candidates data/imports/zelenoe-yabloko-water/candidates.flat.json \
+  --out data/imports/zelenoe-yabloko-water/images-review.xlsx --skip-probe
+npm run zelenoe-images:download-all -- \
+  --candidates data/imports/zelenoe-yabloko-water/candidates.json \
+  --review data/imports/zelenoe-yabloko-water/images-review.xlsx \
+  --out-dir data/imports/zelenoe-yabloko-water
+npm run zelenoe-images:gallery -- \
+  --out-dir data/imports/zelenoe-yabloko-water \
+  --candidates data/imports/zelenoe-yabloko-water/candidates.json \
+  --review data/imports/zelenoe-yabloko-water/images-review.xlsx
+npm run zelenoe-images:auto-review -- --root data/imports/zelenoe-yabloko-water
+```
+
+Артефакты: `data/imports/zelenoe-yabloko-water/` (candidates, original/, previews/, manifest, gallery, review-decisions). Production не менять.
 
 Source: `data/imports/zelenoe-yabloko-images/approved-new-products.xlsx` (JSON parity used in container).
 

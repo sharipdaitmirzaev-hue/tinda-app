@@ -24,13 +24,57 @@ const KNOWN_BRANDS: Array<{ match: RegExp; brand: string }> = [
   { match: /\bдобрый\b/i, brand: "Добрый" },
   { match: /\bказбеги\b/i, brand: "Казбеги" },
   { match: /\bденеб\b/i, brand: "Денеб" },
-  { match: /\bборжоми\b/i, brand: "Боржоми" },
+  { match: /\bборжоми\b|\bborjomi\b/i, brand: "Боржоми" },
   { match: /\bтбилиссимо\b/i, brand: "Тбилиссимо" },
   { match: /\bрич\b|\brich\b/i, brand: "Rich" },
   { match: /\bsprite\b|\bспрайт\b/i, brand: "Sprite" },
   { match: /\bfanta\b|\bфанта\b/i, brand: "Fanta" },
   { match: /\bla\s*imon|лаймон/i, brand: "Laimon Fresh" },
+  // Water brands
+  { match: /\bаква\s*минерале\b|\baqua\s*minerale\b/i, brand: "Аква Минерале" },
+  { match: /\bаква\s*панна\b|\baqua\s*panna\b/i, brand: "Аква Панна" },
+  { match: /\bархыз\b/i, brand: "Архыз" },
+  { match: /\bнарзан\b/i, brand: "Нарзан" },
+  { match: /\bессентуки\b/i, brand: "Ессентуки" },
+  { match: /\bнабеглави\b/i, brand: "Набеглави" },
+  { match: /\bсерноводск/i, brand: "Серноводская" },
+  { match: /\bшишкин\s*лес\b/i, brand: "Шишкин Лес" },
+  { match: /\bродники\s*кавказа\b/i, brand: "Родники Кавказа" },
+  { match: /\bродниковая\s*свежесть\b/i, brand: "Родниковая Свежесть" },
+  { match: /\bтри\s*горянки\b/i, brand: "Три Горянки" },
+  { match: /\bлегенда\s*байкала\b/i, brand: "Легенда Байкала" },
+  { match: /\bмевер\b/i, brand: "Мевер" },
+  { match: /\bkubay\b|\bкубай\b/i, brand: "Кубай" },
+  { match: /\bsabr\b/i, brand: "Sabr" },
+  { match: /\bgorji\b|\bгоджи\b/i, brand: "Gorji" },
+  { match: /\bdonat\b/i, brand: "Donat" },
+  { match: /\bdoctor\s*bormental\b/i, brand: "Doctor Bormental" },
+  { match: /\bdoctor\s*wasser\b/i, brand: "DoctorWasser" },
+  { match: /\bнагутск/i, brand: "Нагутская" },
+  { match: /\bнагутти\b/i, brand: "Нагутти" },
+  { match: /\bаллея\s*источников\b/i, brand: "Аллея Источников" },
+  { match: /\bрецепт\s*от\s*природы\b/i, brand: "Рецепт от природы" },
+  { match: /\birib\b|\bириб\b/i, brand: "Ириб" },
 ];
+
+/** sparkling | still | unknown — for water category matching */
+export function detect_carbonation(
+  text: string,
+  category_hint?: string | null,
+): "sparkling" | "still" | "unknown" {
+  const hint = String(category_hint || "").toLowerCase();
+  if (hint.includes("negaz") || hint.includes("still")) return "still";
+  if (hint.includes("gazirov") && !hint.includes("napitk")) return "sparkling";
+  if (hint === "sparkling" || hint === "still") return hint;
+
+  const t = lower(text);
+  if (/(не\s*газ|без\s*газ|negaz|still|без газа)/.test(t)) return "still";
+  if (/(газир|с\s*газ|\bгаз\b|sparkling|borjomi|нарзан|ессентук)/.test(t)) {
+    // bare "газ" at end of water titles is sparkling; avoid soft drinks category noise
+    return "sparkling";
+  }
+  return "unknown";
+}
 
 export type ParsedZyName = {
   source_name: string;
@@ -68,6 +112,16 @@ function detect_package(name: string): {
 function detect_brand(name: string): string {
   for (const row of KNOWN_BRANDS) {
     if (row.match.test(name)) return row.brand;
+  }
+  // Water titles often start with «Вода …»
+  const water = name.match(/^вода\s+(.+)$/i);
+  if (water) {
+    const rest = water[1]!.trim();
+    for (const row of KNOWN_BRANDS) {
+      if (row.match.test(rest)) return row.brand;
+    }
+    const token = rest.split(/\s+/)[0] || "UNKNOWN";
+    return token.replace(/[!,.]+$/g, "");
   }
   // Fallback: first meaningful token after «Напиток …»
   const cleaned = name

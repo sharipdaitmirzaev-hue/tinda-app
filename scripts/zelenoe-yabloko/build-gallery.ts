@@ -115,9 +115,12 @@ function main() {
   const manifest = JSON.parse(readFileSync(manifest_path, "utf8")) as {
     items: ManifestItem[];
   };
-  const candidates = JSON.parse(readFileSync(candidates_path, "utf8")) as Array<
-    Record<string, unknown>
-  >;
+  const candidates_raw = JSON.parse(readFileSync(candidates_path, "utf8"));
+  const candidates = (
+    Array.isArray(candidates_raw)
+      ? candidates_raw
+      : candidates_raw.candidates || []
+  ) as Array<Record<string, unknown>>;
   const cand_by_url = new Map(
     candidates.map((c) => [String(c.candidate_image_url || ""), c]),
   );
@@ -200,6 +203,8 @@ function main() {
       proposed_sku,
       below_500,
       download_status: item.download_status,
+      carbonation: String(cand?.carbonation || ""),
+      source_category_slug: String(cand?.source_category_slug || ""),
       review_status: "pending",
       review_comment: "",
     };
