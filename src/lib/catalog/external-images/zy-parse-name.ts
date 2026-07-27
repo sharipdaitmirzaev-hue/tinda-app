@@ -23,10 +23,23 @@ const KNOWN_BRANDS: Array<{ match: RegExp; brand: string }> = [
   { match: /\bкола\s+от\s+мартина\b/i, brand: "Кола от Мартина" },
   { match: /\bдобрый\b/i, brand: "Добрый" },
   { match: /\bказбеги\b/i, brand: "Казбеги" },
-  { match: /\bденеб\b/i, brand: "Денеб" },
+  // Tea / kvass lines before manufacturer «Денеб» (Cyrillic \\b is unreliable)
+  { match: /приморск/i, brand: "Приморский" },
+  { match: /капитанск\w*\s*бочк/i, brand: "Капитанская бочка" },
+  { match: /очаковск/i, brand: "Очаковский" },
+  { match: /вятск/i, brand: "Вятский" },
+  { match: /лидск/i, brand: "Лидский" },
+  { match: /монастырск/i, brand: "Монастырский" },
+  { match: /янтарн/i, brand: "Янтарный" },
+  { match: /сулакск/i, brand: "Сулакский" },
+  { match: /денеб/i, brand: "Денеб" },
   { match: /\bборжоми\b|\bborjomi\b/i, brand: "Боржоми" },
   { match: /\bтбилиссимо\b/i, brand: "Тбилиссимо" },
-  { match: /\bрич\b|\brich\b/i, brand: "Rich" },
+  { match: /\brich\b|\bрич\b/i, brand: "Rich" },
+  { match: /ice\s*bar|айс\s*бар/i, brand: "ICE BAR" },
+  { match: /lipton|липтон/i, brand: "Lipton" },
+  { match: /nestea|нести/i, brand: "Nestea" },
+  { match: /fuze\s*tea|фьюз/i, brand: "FuzeTea" },
   { match: /\bsprite\b|\bспрайт\b/i, brand: "Sprite" },
   { match: /\bfanta\b|\bфанта\b/i, brand: "Fanta" },
   { match: /\bla\s*imon|лаймон/i, brand: "Laimon Fresh" },
@@ -417,6 +430,34 @@ export function detect_juice_product_type(name: string): JuiceProductType {
     return "juice_drink";
   }
   if (/базил|basil\s*seed|вину|vinut/.test(t)) return "juice_drink";
+  return "unknown";
+}
+
+export type TeaKvassProductType =
+  | "iced_tea"
+  | "tea_drink"
+  | "kombucha"
+  | "kvass"
+  | "kvass_drink"
+  | "unknown";
+
+export function detect_tea_kvass_product_type(
+  name: string,
+  category_slug?: string | null,
+): TeaKvassProductType {
+  const t = lower(name);
+  if (/комбуч|kombucha/.test(t)) return "kombucha";
+  if (/квасн\w*\s*напит|напиток\s*квасн/.test(t)) return "kvass_drink";
+  if (/квас/.test(t)) return "kvass";
+  if (/холодн\w*\s*чай|чай\s*холодн|ice\s*tea|iced\s*tea|ice\s*bar/.test(t)) {
+    return "iced_tea";
+  }
+  if (/чайн\w*\s*напит|напиток\s*.*чай|tea\s*drink/.test(t)) {
+    return "tea_drink";
+  }
+  const slug = String(category_slug || "").toLowerCase();
+  if (slug === "kvas") return "kvass";
+  if (slug === "xolodnye-cai") return "iced_tea";
   return "unknown";
 }
 

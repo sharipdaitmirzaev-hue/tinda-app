@@ -110,13 +110,16 @@ const CATEGORY_MODE = (() => {
   if (/zelenoe-yabloko-energy/i.test(ROOT)) return "energy";
   if (/zelenoe-yabloko-water/i.test(ROOT)) return "water";
   if (/zelenoe-yabloko-juice/i.test(ROOT)) return "juice";
+  if (/zelenoe-yabloko-tea-kvass/i.test(ROOT)) return "tea-kvass";
   return "soft-drinks";
 })();
 
-/** Soft-drinks auto-review excludes energy; energy/juice modes keep their products. */
+/** Soft-drinks auto-review excludes energy; energy/juice/tea-kvass modes keep their products. */
 const EXCLUDED =
-  CATEGORY_MODE === "energy" || CATEGORY_MODE === "juice"
-    ? /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|бакалея|чипсы|снек|йогурт|молоко|хлеб)|(?<!град)вино(?!град)/i
+  CATEGORY_MODE === "energy" ||
+  CATEGORY_MODE === "juice" ||
+  CATEGORY_MODE === "tea-kvass"
+    ? /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|бакалея|чипсы|снек|йогурт|молоко)|(?<!град)вино(?!град)/i
     : /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)|(?<!град)вино(?!град)/i;
 
 const ENERGY_HINT =
@@ -124,6 +127,17 @@ const ENERGY_HINT =
 
 const JUICE_HINT =
   /(сок|нектар|морс|сокосодерж|вода\s*и\s*сок|juice|nectar)/i;
+
+const TEA_KVASS_HINT =
+  /(холодн\w*\s*чай|чай\s*холодн|ice\s*tea|iced\s*tea|ice\s*bar|комбуч|kombucha|чайн\w*\s*напит|квас)/i;
+
+const TEA_KVASS_TYPES = [
+  "iced_tea",
+  "tea_drink",
+  "kombucha",
+  "kvass",
+  "kvass_drink",
+] as const;
 
 function category_ok_for_new(card: Card): { ok: boolean; note: string } {
   if (CATEGORY_MODE === "energy") {
@@ -149,6 +163,20 @@ function category_ok_for_new(card: Card): { ok: boolean; note: string } {
       return { ok: true, note: "category_juice_name" };
     }
     return { ok: false, note: "category_not_juice" };
+  }
+  if (CATEGORY_MODE === "tea-kvass") {
+    const slug = String(card.source_category_slug || "");
+    const ptype = String(card.product_type || "");
+    if (/xolodnye-cai|kvas|bezalkogolnye/i.test(slug)) {
+      return { ok: true, note: "category_tea_kvass_slug" };
+    }
+    if ((TEA_KVASS_TYPES as readonly string[]).includes(ptype)) {
+      return { ok: true, note: `category_product_type_${ptype}` };
+    }
+    if (TEA_KVASS_HINT.test(card.source_name)) {
+      return { ok: true, note: "category_tea_kvass_name" };
+    }
+    return { ok: false, note: "category_not_tea_kvass" };
   }
   return { ok: true, note: "category_not_required" };
 }
@@ -580,11 +608,24 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
       if (card.has_pulp === false) matched.push("clarified");
     }
 
+    if (CATEGORY_MODE === "tea-kvass") {
+      const ptype = String(card.product_type || "");
+      if (!(TEA_KVASS_TYPES as readonly string[]).includes(ptype)) {
+        mismatches.push("product_type_undetermined");
+      } else {
+        matched.push(`product_type_${ptype}`);
+      }
+    }
+
     const product_type_ok =
-      CATEGORY_MODE !== "juice" ||
-      ["juice", "nectar", "mors", "juice_drink"].includes(
-        String(card.product_type || ""),
-      );
+      (CATEGORY_MODE !== "juice" ||
+        ["juice", "nectar", "mors", "juice_drink"].includes(
+          String(card.product_type || ""),
+        )) &&
+      (CATEGORY_MODE !== "tea-kvass" ||
+        (TEA_KVASS_TYPES as readonly string[]).includes(
+          String(card.product_type || ""),
+        ));
 
     const all_ok =
       brand &&

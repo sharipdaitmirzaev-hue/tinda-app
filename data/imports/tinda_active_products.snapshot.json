@@ -8,9 +8,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_284235001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3dfa7229-d583-4a32-95a2-8562506e6452",
@@ -21,9 +20,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_284233001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e489d6dc-695a-4fbb-95fc-57686afc008c",
@@ -34,9 +32,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_150285001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f3c1c99f-4e2c-402f-9a9d-f8ed70f28453",
@@ -47,9 +44,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_150284001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "62f37d18-5d25-4c72-bc6f-ae6b5812dbcd",
@@ -60,9 +56,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_115832001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "39a601ac-a04f-48e7-a8e6-b474c47aeaa9",
@@ -73,9 +68,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_116477001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "138088ae-9da0-4f7b-b202-dcccebc13f5e",
@@ -86,9 +80,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_355012001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "64831dcb-86bd-4c9d-83b8-34ea00830b89",
@@ -99,9 +92,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_161260001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "26d7be83-99e3-4ab8-ab7f-72c4249e44e8",
@@ -112,9 +104,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_116929001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "43f7c3a9-c342-44b5-9f0e-0a40c5090cf2",
@@ -125,9 +116,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_319661001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0bd2d7c5-d97e-4873-85bc-3ecf1ee2611a",
@@ -138,9 +128,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_116029001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d5292d31-2809-43ac-8828-b3f907c57753",
@@ -151,9 +140,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_568078001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a6a228b3-c320-4cfd-8031-d09c8c5ed61d",
@@ -164,9 +152,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_568079001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "43baccf8-0def-4916-8518-793fee79f90f",
@@ -177,9 +164,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_135873001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "dcfed2ca-4813-4503-92b0-9b0ab983af8a",
@@ -190,9 +176,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_568071001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c430f280-e6bf-44be-9156-f2e600f8d6df",
@@ -203,9 +188,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_568070001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "12576651-5dff-4c73-9a67-41f8c06cb281",
@@ -216,9 +200,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_355013001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f6c36a8a-f7c7-4f12-bb49-715b8184b33d",
@@ -229,9 +212,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_319654001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "40a41d8e-c8df-4283-b266-04b99474c239",
@@ -242,9 +224,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_568072001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9ca0c34e-3e60-4fcf-a1f5-5802cc51aec2",
@@ -255,9 +236,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_288902001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "15a16344-284f-45ac-8165-5aadb5e26f29",
@@ -268,9 +248,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_288886001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "ae9ceb7c-3710-4f1f-aab4-b48139a57e0a",
@@ -281,9 +260,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_115846001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "5ebee15f-0473-4133-86dc-5823e59f4b39",
@@ -294,9 +272,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_246674001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "4ea2d70a-ef21-4659-bae0-0a5eeead45b2",
@@ -307,9 +284,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_157453001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "850e77e7-4e6d-4647-9afb-0252676370b9",
@@ -320,9 +296,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_157455001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "ea6b5184-5f5f-44d9-8812-c332c0dac560",
@@ -333,9 +308,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_157454001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "106931e4-7305-4c5c-b1ce-ff65aa0810a3",
@@ -346,9 +320,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_319657001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7efbc203-b8f2-4970-bb03-1ab0b0964b10",
@@ -359,9 +332,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_302738001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7ec2c639-7cd9-4f6d-9e73-645a7adfc4a0",
@@ -372,9 +344,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_151553001003_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0279bc73-6f48-47e3-974b-6cbb783c38d8",
@@ -385,9 +356,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_309928001004_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3c76e548-cf58-44f8-b282-1a5e72f30c52",
@@ -398,9 +368,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_568028001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "5a980445-dae4-4338-8e8a-531682cf1655",
@@ -411,9 +380,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_195267001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f83f05dd-2ad6-4d92-b76c-cb40b43d2e77",
@@ -424,9 +392,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_406827001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "36a2ff8f-f63a-412d-8e47-816f19df8f56",
@@ -437,9 +404,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_406806001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "206fe5ff-77c5-42ba-90ca-91c1cb8a2cf4",
@@ -450,9 +416,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_142075001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0bef03a6-b953-4795-9499-c8a7e8958e2f",
@@ -463,9 +428,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154880001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0d1da435-4873-49b3-afd6-c9eacda9dcd7",
@@ -476,9 +440,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_298974001001_00.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "5f590a13-66d9-4faa-9adf-7cbf92413708",
@@ -489,9 +452,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154874001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "b74918ee-71af-4444-94f4-86655ecce2f8",
@@ -502,9 +464,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/b74918ee-71af-4444-94f4-86655ecce2f8/a03ba849-a2ed-4ae3-a5fe-64c732a2f282.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c429ccc5-9c0d-4b1a-a9c9-4906bed2db57",
@@ -515,9 +476,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170928001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e1aed98d-e9b2-44c3-ba58-c62024064110",
@@ -528,9 +488,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154874001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7ee8e117-23d2-4afe-8abe-9dc13d9a9d28",
@@ -541,9 +500,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/7ee8e117-23d2-4afe-8abe-9dc13d9a9d28/5b1e82d1-e5c0-4967-b008-c64ce53a0700.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "266e5ed6-23d0-49aa-aaed-5ccea8ac1884",
@@ -554,9 +512,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_198922001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "dba41420-36f5-406e-a491-bf5420484a23",
@@ -567,9 +524,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/dba41420-36f5-406e-a491-bf5420484a23/eef5f7d8-4f34-4445-a63a-40b345c85a01.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "09f9b503-9bbe-4284-9698-f78dd3eab5b3",
@@ -580,9 +536,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154815001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "49db7058-c29b-469c-a358-fd3304004119",
@@ -593,9 +548,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170930001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "79765e0f-7d2d-464b-a023-f5ad3536d673",
@@ -606,9 +560,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/79765e0f-7d2d-464b-a023-f5ad3536d673/0c81f931-4d57-4da7-bbb7-c3f6ce7bd7db.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "148fb6e2-e67a-4fec-97c0-736b35a53b14",
@@ -619,9 +572,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154815001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d186606c-39f6-45eb-9f22-8839c7233f1b",
@@ -632,9 +584,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_198925001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "2ec5e0ae-4939-48ae-8b3a-9991334b4d52",
@@ -645,9 +596,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_182895001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "838ab2d6-1129-425d-b04f-cba46abeb054",
@@ -658,9 +608,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_182896001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "74b1dbfb-cec9-40ab-9b52-cf36cc56a72a",
@@ -671,9 +620,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_194231001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "101c1dd5-3106-4368-aaa6-c17029d01e38",
@@ -684,9 +632,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_194232001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "38d08a28-d7ab-405b-afc6-3899caaa5943",
@@ -697,9 +644,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_205168001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "98b90f7d-2769-4574-bfce-d69d39a8361b",
@@ -710,9 +656,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_205179001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1a6268ef-4133-4055-85c4-1f5688739057",
@@ -723,9 +668,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154809001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a56ce31e-5f4f-4444-8956-465f95439c37",
@@ -736,9 +680,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154813001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a2838f5c-e4b9-45c2-8a6c-703c9184aa9d",
@@ -749,9 +692,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154810001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3b74d252-9623-49e1-906a-88193348f76a",
@@ -762,9 +704,8 @@
     "package_type": "жестяная банка",
     "image_url": "/uploads/products/3b74d252-9623-49e1-906a-88193348f76a/8b3e7192-d8a2-48b1-a1cb-9c7befc12871.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "4c7e6249-dd61-48a7-bf00-c363d138b7a5",
@@ -775,9 +716,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154811001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "98d92f28-1149-48fd-b13b-f8e8819200bc",
@@ -788,9 +728,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154810001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7e2483a9-ae50-433f-95a7-04cd52b7bdd6",
@@ -801,9 +740,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154852001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f3b2d6e7-f9ee-4f24-96c8-859a2c302d78",
@@ -814,9 +752,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154863001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d989866c-7531-4853-b668-ac9623438546",
@@ -827,9 +764,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154854001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "79c2bb23-6ead-41fc-a9c3-91d4533540d0",
@@ -840,9 +776,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/79c2bb23-6ead-41fc-a9c3-91d4533540d0/582a3eab-6c42-4a09-98df-aade1c66a7d0.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7347a600-bf20-43cd-8657-4f169aa335ac",
@@ -853,9 +788,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154854001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "04959b74-3bad-4e8b-ae78-afbe788867e2",
@@ -866,9 +800,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/04959b74-3bad-4e8b-ae78-afbe788867e2/36ed6e67-3653-4b4a-9a39-1696fd940bfc.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3553a13d-4604-486b-8a43-c46bd103338d",
@@ -879,9 +812,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_405724001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "24e04d38-b6bc-42f6-83d4-2483a534802d",
@@ -892,9 +824,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_405723001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a42eb456-450b-470c-96f8-34c5100007e2",
@@ -905,9 +836,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_305382001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7fa7771b-bdfb-41d3-943b-baab65dad12d",
@@ -918,9 +848,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_565588001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c814f548-1abe-4bc3-87a5-216a6c91e97c",
@@ -931,9 +860,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170845001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "81ea36a3-c3a4-45f7-bc75-bdfb72e13dc6",
@@ -944,9 +872,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_286041001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1b96e6de-f3df-4304-a474-4138feaa6381",
@@ -957,9 +884,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_179835001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "25931f7b-be6a-4596-ac79-1e4009cc505c",
@@ -970,9 +896,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170847001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "94ac8166-5bc4-4da0-b5ff-6858e69cd283",
@@ -983,9 +908,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_145405001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "54b10005-c599-47c8-840f-5bd71bebe1df",
@@ -996,9 +920,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_145403001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "52ba6bb2-9a00-4d5b-b3ba-72738f57f060",
@@ -1009,9 +932,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_242764001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "2d928e7c-26f4-4a2e-8c80-b0a0d6ce5b6f",
@@ -1022,9 +944,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_164155001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "14fa0075-28eb-4daa-8734-56882cc04c5a",
@@ -1035,9 +956,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_179827001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a9fc0e67-a15b-4272-ae6f-72a74239a9c2",
@@ -1048,9 +968,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_164156001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "797669a1-8835-459a-aaf3-ec185f7dbcbf",
@@ -1061,9 +980,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170839001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "86b63e7e-2cb2-4052-9d3b-d4183f66ae7f",
@@ -1074,9 +992,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_286042001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "b87c3df3-8b47-4b8d-944a-393d9acef6b1",
@@ -1087,9 +1004,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_195997001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6b29b5b8-95a9-42a6-993e-560499eb0a38",
@@ -1100,9 +1016,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_195268001002_00.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "593dc7f7-05bf-4a99-ad91-40341948d5f8",
@@ -1113,9 +1028,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_369231001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "edd1d1cc-1c7c-4abd-a900-a3ffbea04a7b",
@@ -1126,9 +1040,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_567844001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "314a3219-04d8-4b6e-aad1-e4c9f0ad4726",
@@ -1139,9 +1052,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_567847001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "4bf5ab02-be80-4f17-add2-6eb915510bbe",
@@ -1152,9 +1064,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/4bf5ab02-be80-4f17-add2-6eb915510bbe/7d5e0adf-8858-41dc-9ab9-dee777b3474f.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9da74915-3747-4e5b-89cd-6a9e43fe5fc4",
@@ -1165,9 +1076,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/9da74915-3747-4e5b-89cd-6a9e43fe5fc4/8fa2a2f2-4669-4a68-b8b5-79f0b6283fce.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9ea42589-92b5-45cb-bf7f-c0b976ead401",
@@ -1178,9 +1088,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170854001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6642e654-cf17-4e43-9377-e7016297f299",
@@ -1191,9 +1100,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170968001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1420e3e6-2b6e-48cd-883b-a57494f084bd",
@@ -1204,9 +1112,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_322756001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9d77f7fa-925e-4a8e-a5b8-dc399383ac22",
@@ -1217,9 +1124,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_322730001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1a1f6a60-ece1-4d74-b39a-63432e450c63",
@@ -1230,9 +1136,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_143353001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c84d5ed9-ff24-44d7-a142-0f24bd087744",
@@ -1243,9 +1148,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_143354001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7e534edf-7af0-4203-8cc4-a754d9587911",
@@ -1256,9 +1160,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_143356001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c0eabc02-9204-40fe-8f7c-150628731014",
@@ -1269,9 +1172,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_143360001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "b28b66b1-2dfb-4494-8916-6975a108f450",
@@ -1282,9 +1184,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_566604001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0581a741-a00f-4916-8942-2b2f0a091cc7",
@@ -1295,9 +1196,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_566608001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a9599d7f-08b5-4f11-9925-64a73863dc6c",
@@ -1308,9 +1208,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_566607001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3fd8db5d-fb43-4e3a-94e3-353943649f0c",
@@ -1321,9 +1220,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_164158001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "97b6a2bc-2c20-4444-95eb-50230da5634f",
@@ -1334,9 +1232,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_186092001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "ef4038a2-98ed-423a-9e26-bc2692e5c2bf",
@@ -1347,9 +1244,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_199697001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9981e56a-a665-46a9-86fb-2b9bf3a90c89",
@@ -1360,9 +1256,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_271520001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d9ab636f-9ca9-42d9-b913-2bcdfcca3f13",
@@ -1373,9 +1268,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_271521001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "2b7b3353-cb43-4fe8-9ad9-b497b7b14b2a",
@@ -1386,9 +1280,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_199696001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d58e7451-5658-40dd-8c68-55de9b9c52d6",
@@ -1399,9 +1292,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_297883001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "b0d87190-7f01-4cd5-b113-0fd4ac17bf90",
@@ -1412,9 +1304,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_297885001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f9c1c23d-26f0-49d4-8088-cedc23f40a89",
@@ -1425,9 +1316,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_326370001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "4cd16258-491a-444f-b49e-f176c0c6a6e8",
@@ -1438,9 +1328,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_326372001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d6e896ce-6a9f-42fd-8cac-fef70f828e19",
@@ -1451,9 +1340,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_326373001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "548648ed-76d8-424d-839f-38dd6d7fd904",
@@ -1464,9 +1352,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_326374001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "2e7c5ab0-9d17-4230-822f-4830f0a570da",
@@ -1477,9 +1364,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_326371001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f813cee0-1f0f-4493-90c2-f88b87f44a76",
@@ -1490,9 +1376,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_405726001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "14a24402-d61b-4d1c-a09d-73f446e94800",
@@ -1503,9 +1388,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_405727001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "454c0eb9-6bb4-4478-98f8-a98b4a056f07",
@@ -1516,9 +1400,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_405781001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "819ecaa2-db99-4a76-8f99-22021614af4e",
@@ -1529,9 +1412,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154884001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "8eda9792-5a96-4da0-9459-b1ddc0a30f29",
@@ -1542,9 +1424,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154884001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e8553edc-32c7-4d00-b1d1-492b9e0e65fe",
@@ -1555,9 +1436,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_355004001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "078fdccb-8754-4fcb-aa22-56848b915d81",
@@ -1568,9 +1448,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154882001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "fe54f458-bd75-4b91-abf2-172368e8812f",
@@ -1581,9 +1460,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154883001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "50f66695-eb3c-430e-8e13-13b54314b4ff",
@@ -1594,9 +1472,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_566341001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "866f8e86-8b42-4a09-ae2b-daa463c00e36",
@@ -1607,9 +1484,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154882001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a486d5d6-afd8-457d-940b-8c570c060f96",
@@ -1620,9 +1496,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154881001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "64eddd27-e799-4ee5-b336-9fb4ab118151",
@@ -1633,9 +1508,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154881001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9465fe62-4539-464b-8cd9-959e2e10c293",
@@ -1646,9 +1520,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_566340001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "558d0b4b-781e-4464-aab7-0bd7b6a1446f",
@@ -1659,9 +1532,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_355003001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f2238690-6a7a-4402-b8f7-8a9c48d9cf3e",
@@ -1672,9 +1544,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154889001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6a9a8032-ced9-4f23-b6c4-d5668dbc2220",
@@ -1685,9 +1556,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_182893001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "fe30defe-d04b-465c-81e3-216386b404a0",
@@ -1698,9 +1568,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154885001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f2908d0a-13e8-4409-92d2-01ed28cc4048",
@@ -1711,9 +1580,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154890001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9c6e2cbe-067a-4fa5-a9f3-a9fb1048669b",
@@ -1724,9 +1592,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154885001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "4867868a-e198-4051-aa7a-ae5d76d1b512",
@@ -1737,9 +1604,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154890001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "376b122e-a4cd-4cb9-9a66-41566f9a3de4",
@@ -1750,9 +1616,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_172608001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "30a31ce0-454a-417e-a928-c49df58ee323",
@@ -1763,9 +1628,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_172604001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f18b63ac-8595-4ea2-a7d3-2fc913128cb2",
@@ -1776,9 +1640,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_172605001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "98d73a58-f389-4d3f-b34a-1f14e72aa38d",
@@ -1789,9 +1652,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_172609001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9c20720e-1a7e-48b3-907e-6ef9431315f9",
@@ -1802,9 +1664,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_183695001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c494b2a0-528c-4e8b-bbbe-cfd516763a02",
@@ -1815,9 +1676,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_183681001002_00.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1cc3cd61-39ba-4012-8e05-5c4a13cc4c70",
@@ -1828,9 +1688,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_186095001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6943814c-2320-465a-82ff-d73a7ea189b0",
@@ -1841,9 +1700,8 @@
     "package_type": "жестяная банка",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_255693001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "54847a5e-0ca3-43ad-b9be-67eb1c163a34",
@@ -1854,9 +1712,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_205265001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e33bf05b-944c-4da9-820a-309e52e65a7c",
@@ -1867,9 +1724,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_354797001006_00.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c32ec02f-0468-4fe0-a8a4-93c58f3f9310",
@@ -1880,9 +1736,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_201069001004_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1b5d9b9c-5764-417f-920b-62ddcff78966",
@@ -1893,9 +1748,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_407098001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1329e871-dac8-450a-92e5-862dadc802ce",
@@ -1906,9 +1760,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_142095001002_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d5481efb-7059-46f1-9437-6cb79a57e30b",
@@ -1919,9 +1772,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_276987001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "010994d6-812f-42f7-a3be-240062566ee5",
@@ -1932,9 +1784,8 @@
     "package_type": "ПЭТ",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_565822001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "654ddd82-6cb5-4af1-b044-f7b4290eec65",
@@ -1945,9 +1796,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_288289001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "470e30a6-cafd-4e4d-8992-41c99ae90874",
@@ -1958,9 +1808,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_288290001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "aa5cab01-1191-407e-b972-f1fdf499676b",
@@ -1971,9 +1820,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_288291001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "ee893871-6d01-476a-8544-8e61e187565b",
@@ -1984,9 +1832,8 @@
     "package_type": "стекло",
     "image_url": "https://cdn.metro-cc.ru/ru/ru_pim_288293001001_01.png",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "412b9c37-3878-4693-851e-d1f8c408a36a",
@@ -1997,9 +1844,8 @@
     "package_type": "банка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 1450,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "28575050-977d-4095-b04e-d302d6424388",
@@ -2010,9 +1856,8 @@
     "package_type": "тетрапак",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 780,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "79dc66a7-0e21-4ea4-ac3b-3f1a46d48db1",
@@ -2023,9 +1868,8 @@
     "package_type": "тетрапак",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 820,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "0398d5b3-caed-4d9f-a4cc-64aac6efddad",
@@ -2036,9 +1880,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 540,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "f4e651d9-898e-4c7d-a8c7-405dc950ec41",
@@ -2049,9 +1892,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 390,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "9dd46566-4943-40e9-a377-aaaf3831ea41",
@@ -2062,9 +1904,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "on_request",
-    "price_amount": null,
-    "availability": "in_stock",
-    "is_active": false
+    "is_active": false,
+    "has_price": false
   },
   {
     "id": "8d21f33d-3c86-4a89-9e60-a1ea8a618c57",
@@ -2075,9 +1916,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 690,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "ad1cf23f-36ad-4490-9f46-b6095cfb1e0b",
@@ -2088,9 +1928,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 560,
-    "availability": "out_of_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "811d9184-3c20-42e8-b928-3f10063633e2",
@@ -2101,9 +1940,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": false
+    "is_active": false,
+    "has_price": false
   },
   {
     "id": "a3d89cc5-94dd-49db-bb16-f166d78f0067",
@@ -2114,9 +1952,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 480,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "2363f1ec-1fa9-4431-9da1-1cf0784075a1",
@@ -2127,9 +1964,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 240,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "6617471d-5a94-47c2-af38-ce250d2c5dd0",
@@ -2140,9 +1976,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 310,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "5af7db16-4127-4420-8410-214ce7b08bf6",
@@ -2153,9 +1988,8 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 360,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   },
   {
     "id": "77538e5c-917c-41b1-aafc-dd3ab4a97137",
@@ -2166,9 +2000,140 @@
     "package_type": "бутылка",
     "image_url": null,
     "sales_status": "orderable",
-    "price_amount": 420,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
+  },
+  {
+    "id": "6ac70eb6-c49f-4f3c-83dd-e79c3e779698",
+    "sku": "ZY-AGUSHA-200-CARTON-001",
+    "name": "Нектар Агуша 200мл Яблоко персик с мякотью",
+    "brand": "Агуша",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/6ac70eb6-c49f-4f3c-83dd-e79c3e779698/019d1585-be41-489b-8364-662e0d346c27.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f3a54edb-e5c3-456c-9849-66b9222423c4",
+    "sku": "ZY-AGUSHA-200-CARTON-002",
+    "name": "Нектар Агуша 200мл Яблоко осветленный",
+    "brand": "Агуша",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/f3a54edb-e5c3-456c-9849-66b9222423c4/e38cf9cb-4e15-4f3c-9713-6e6a1bc96eb6.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "9ac69ec0-1737-4b4f-af5d-2c7ab548590b",
+    "sku": "ZY-AGUSHA-200-CARTON-003",
+    "name": "Нектар Агуша 200мл Груша осветленный",
+    "brand": "Агуша",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/9ac69ec0-1737-4b4f-af5d-2c7ab548590b/696c93c9-4f4d-48c2-bc11-037f3feefcc5.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "556605ab-f9c2-4719-821c-10e95a31f4cd",
+    "sku": "ZY-AGUSHA-200-CARTON-004",
+    "name": "Нектар Агуша 200мл Яблоко с мякотью",
+    "brand": "Агуша",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/556605ab-f9c2-4719-821c-10e95a31f4cd/c6eedb80-5dfc-4d91-95df-c1bb865bf515.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "3f576995-3121-4da4-b6dc-42fe1ecc45b4",
+    "sku": "ZY-AGUSHA-200-CARTON-005",
+    "name": "Нектар Агуша 200мл Яблоко-Вишня осветленный",
+    "brand": "Агуша",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/3f576995-3121-4da4-b6dc-42fe1ecc45b4/36683e0a-e552-45af-a6b7-07190c054c8d.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "9fb80433-0e90-4669-a97b-08ad6f3a1076",
+    "sku": "ZY-AGUSHA-200-CARTON-006",
+    "name": "Нектар Агуша 200мл Яблоко манго банан с мякотью",
+    "brand": "Агуша",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/9fb80433-0e90-4669-a97b-08ad6f3a1076/93f77084-d34a-443a-89ca-2f9a2f5c1f3b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f3d84512-2b26-4a73-82e8-51130a3ae6fc",
+    "sku": "ZY-AGUSHA-200-CARTON-007",
+    "name": "Нектар Агуша 200мл Яблоко-Шиповник осветленный",
+    "brand": "Агуша",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/f3d84512-2b26-4a73-82e8-51130a3ae6fc/ed13b84a-d8a6-44fc-83e7-7024b8ca597d.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "73a21ca9-e7ae-43ad-97a7-559fd4da5439",
+    "sku": "ZY-AGUSHA-300-PET-001",
+    "name": "Напиток Агуша Вода и сок Яблоко п/бут 0,3л",
+    "brand": "Агуша",
+    "volume_text": "300 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/73a21ca9-e7ae-43ad-97a7-559fd4da5439/d5b94e4b-80c0-4c93-add7-85ee9fccd142.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "bff73222-ca7d-44a1-a2f2-7a8321b00456",
+    "sku": "ZY-AGUSHA-300-PET-002",
+    "name": "Напиток Агуша Вода и сок Яблоко виноград п/бут 0,3л",
+    "brand": "Агуша",
+    "volume_text": "300 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/bff73222-ca7d-44a1-a2f2-7a8321b00456/598eee0b-3bc1-4b06-96e5-0d465f403abd.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "589d85d3-8ffd-4aca-a2cd-0cd57815b748",
+    "sku": "ZY-AGUSHA-300-PET-003",
+    "name": "Напиток Агуша Вода и сок Яблоко вишня п/бут 0,3л",
+    "brand": "Агуша",
+    "volume_text": "300 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/589d85d3-8ffd-4aca-a2cd-0cd57815b748/36e8ff6b-e15f-4c1f-9190-2a40b4a19de9.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "6ad16565-5fc9-421d-a262-f4cf689084d4",
+    "sku": "ZY-AGUSHA-300-PET-004",
+    "name": "Напиток Агуша Вода и сок Садовые ягоды п/бут 0,3л",
+    "brand": "Агуша",
+    "volume_text": "300 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/6ad16565-5fc9-421d-a262-f4cf689084d4/772506ea-fb92-4eef-9050-a6d14c03d9b3.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a16318f5-0be3-40f2-9159-8cdef2e5016c",
@@ -2179,9 +2144,8 @@
     "package_type": null,
     "image_url": "/uploads/products/a16318f5-0be3-40f2-9159-8cdef2e5016c/7dece37a-fa06-45f4-ae43-cf23bdef6078.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6febfdce-8fcb-4d33-b090-3077e183be10",
@@ -2192,9 +2156,8 @@
     "package_type": null,
     "image_url": "/uploads/products/6febfdce-8fcb-4d33-b090-3077e183be10/27e2fe2e-16ad-4cfc-908e-0ec4cf913807.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "48a82938-d683-4de5-be47-386cdb9f2fe4",
@@ -2205,9 +2168,8 @@
     "package_type": null,
     "image_url": "/uploads/products/48a82938-d683-4de5-be47-386cdb9f2fe4/ac72e4d4-db3d-4dde-845d-dc21a13d8333.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "fc46fb04-93ed-40eb-b7e3-310242a4bed3",
@@ -2218,9 +2180,8 @@
     "package_type": null,
     "image_url": "/uploads/products/fc46fb04-93ed-40eb-b7e3-310242a4bed3/ad868939-aa1a-4749-903b-670b69e8e1aa.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "03a9764b-8407-4f1a-bd1a-af56a1b15ff9",
@@ -2231,9 +2192,8 @@
     "package_type": null,
     "image_url": "/uploads/products/03a9764b-8407-4f1a-bd1a-af56a1b15ff9/b6e49892-51b3-45b5-8d77-3380523af0d9.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d3110af6-eab4-4ddd-8b38-22f87d025f74",
@@ -2244,9 +2204,8 @@
     "package_type": null,
     "image_url": "/uploads/products/d3110af6-eab4-4ddd-8b38-22f87d025f74/09634ea7-9d0a-48d9-bd35-bd699b2b99cc.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e3a2f642-829c-4a02-bc44-7e734b937c5a",
@@ -2257,9 +2216,8 @@
     "package_type": null,
     "image_url": "/uploads/products/e3a2f642-829c-4a02-bc44-7e734b937c5a/5ea93557-6afe-40de-81cb-74a49734e472.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e61e24df-99f7-42e6-ae81-386fe52c6c14",
@@ -2270,9 +2228,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/e61e24df-99f7-42e6-ae81-386fe52c6c14/67fca6f3-440b-47e3-979e-fddcbc740d7b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d2871e22-673f-48c3-b00a-6f527ded77af",
@@ -2283,9 +2240,8 @@
     "package_type": null,
     "image_url": "/uploads/products/d2871e22-673f-48c3-b00a-6f527ded77af/de78304e-de4f-4331-8601-72c382687142.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6986f7e3-dc41-4c5e-8840-702a67823822",
@@ -2296,9 +2252,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/6986f7e3-dc41-4c5e-8840-702a67823822/77a38477-a6fd-41fa-9ca0-05632d0173fb.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "4525c23a-4462-4431-99c1-2b468d22cd39",
@@ -2309,9 +2264,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/4525c23a-4462-4431-99c1-2b468d22cd39/ad3ae405-116d-4bed-8047-4cfcd762b71e.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "ae64a0df-e563-4be0-9b09-5612b78f343c",
@@ -2322,9 +2276,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/ae64a0df-e563-4be0-9b09-5612b78f343c/1e700c52-d1cd-4f80-94bc-49579e4729fc.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "361106ae-0165-4fcf-a5c1-9b123d7c4bf9",
@@ -2335,9 +2288,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/361106ae-0165-4fcf-a5c1-9b123d7c4bf9/1247c44c-664c-4b66-9126-43ec87d07c07.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "b048ac4c-9b7d-4822-9adf-5c09a293d5b7",
@@ -2348,9 +2300,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/b048ac4c-9b7d-4822-9adf-5c09a293d5b7/6023dc3e-3066-4cdf-862a-c0d2b633e76c.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c2698b0e-d292-4bc8-910d-82e6a25c456e",
@@ -2361,9 +2312,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/c2698b0e-d292-4bc8-910d-82e6a25c456e/db6a0829-7970-4f49-b03f-39cbdd81379b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a956e7fa-86fa-4b64-a28a-c2f69fee0f8a",
@@ -2374,9 +2324,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/a956e7fa-86fa-4b64-a28a-c2f69fee0f8a/70e8527f-c335-4d99-866d-5abd98998080.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7cac9d17-66b6-4961-bab2-eb5cda59eff5",
@@ -2387,9 +2336,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/7cac9d17-66b6-4961-bab2-eb5cda59eff5/e5d1b35d-739b-4105-98bd-463b1c4390f3.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c7ce66d8-f6ed-4848-ac42-616eb7e2d543",
@@ -2400,9 +2348,92 @@
     "package_type": "банка",
     "image_url": "/uploads/products/c7ce66d8-f6ed-4848-ac42-616eb7e2d543/5e0a8db1-9f01-4023-96cc-fb726af67fef.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "a160211e-0130-497f-a307-740489f774ba",
+    "sku": "ZY-DARYKUBANI-200-CARTON-001",
+    "name": "Сок Дары Кубани 0,2л яблочный прямого отжима",
+    "brand": "Дары Кубани",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/a160211e-0130-497f-a307-740489f774ba/69a3e3d5-723d-4451-807c-aaaac917ad4c.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "a4b1db82-f954-43e0-b907-7327c33d0a30",
+    "sku": "ZY-DARYKUBANI-200-CARTON-002",
+    "name": "Сок Дары Кубани 0,2л яблочно-виноградный осветл",
+    "brand": "Дары Кубани",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/a4b1db82-f954-43e0-b907-7327c33d0a30/952df5d1-dd90-43b3-808d-b45192447a2c.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "535d1b1c-5b0e-4993-a8f0-0f14dd51c97f",
+    "sku": "ZY-DARYKUBANI-200-CARTON-003",
+    "name": "Нектар Дары Кубани 0,2л Яблочный",
+    "brand": "Дары Кубани",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/535d1b1c-5b0e-4993-a8f0-0f14dd51c97f/a70d21ec-1479-4664-965f-45db6893e9ca.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "38afe445-5ef1-4c9f-a719-f2e8a55c85e9",
+    "sku": "ZY-DARYKUBANI-200-CARTON-005",
+    "name": "Сок Дары Кубани 0,2л яблочно-шиповниковый осветл",
+    "brand": "Дары Кубани",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/38afe445-5ef1-4c9f-a719-f2e8a55c85e9/72910485-f263-4058-a893-4ffe898cd174.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "9e1ac831-d1c9-4c9e-b6e4-94f45f2ae760",
+    "sku": "ZY-DARYKUBANI-200-CARTON-006",
+    "name": "Нектар Дары Кубани 0,2л Яблоко персик",
+    "brand": "Дары Кубани",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/9e1ac831-d1c9-4c9e-b6e4-94f45f2ae760/b2837ffe-f151-43c7-a260-87ca04587d42.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "77397aa5-151d-44ed-a439-60940b3b35ba",
+    "sku": "ZY-DARYKUBANI-200-CARTON-007",
+    "name": "Нектар Дары Кубани Банан с мякотью 0,2л",
+    "brand": "Дары Кубани",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/77397aa5-151d-44ed-a439-60940b3b35ba/1aea8407-874f-4b93-8753-f55eef1fe5cb.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "0c3132b5-412c-488b-ae1a-45d4426dfc1c",
+    "sku": "ZY-DARYKUBANI-200-CARTON-008",
+    "name": "Нектар Дары Кубани 0,2л Яблоко вишня",
+    "brand": "Дары Кубани",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/0c3132b5-412c-488b-ae1a-45d4426dfc1c/f86daf5a-18e6-4151-ba34-d981386e948c.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1cd0d99f-f08a-429a-8295-5f8b29839c26",
@@ -2413,9 +2444,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/1cd0d99f-f08a-429a-8295-5f8b29839c26/eb367c77-04d6-455c-9c40-4ad1d9e0c6ae.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f66e382a-1368-408f-b019-1923319c8385",
@@ -2426,9 +2456,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/f66e382a-1368-408f-b019-1923319c8385/e0f5f346-1a96-409a-802b-303812072303.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e10ba4f4-1fd7-4342-842f-0f4c4e184fb8",
@@ -2439,9 +2468,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/e10ba4f4-1fd7-4342-842f-0f4c4e184fb8/98fdbdae-3c98-4fbb-9925-b17dd89a76fb.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "8ecb68ea-0b0b-47f7-b4c3-87f20715e811",
@@ -2452,9 +2480,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/8ecb68ea-0b0b-47f7-b4c3-87f20715e811/e2de58b6-be8d-420a-83e8-97cbc6a3ffea.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a8dc5395-a20c-4352-af44-e241c03dfc16",
@@ -2465,9 +2492,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/a8dc5395-a20c-4352-af44-e241c03dfc16/e12a72df-8da5-42fb-82bf-448ce6a92cde.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "dc8402f2-a0ab-467f-bf76-3da6da53de05",
@@ -2478,9 +2504,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/dc8402f2-a0ab-467f-bf76-3da6da53de05/b7414783-997f-4ff7-80f5-fbe3ccac243a.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "d0193bec-3f34-4270-990b-8c8c27951780",
@@ -2491,9 +2516,8 @@
     "package_type": null,
     "image_url": "/uploads/products/d0193bec-3f34-4270-990b-8c8c27951780/2fcc5fd4-a1d8-4fb5-9739-0707e05904ae.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0f0ee004-f6d2-4568-8600-3a483447a5d7",
@@ -2504,9 +2528,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/0f0ee004-f6d2-4568-8600-3a483447a5d7/f405e613-7388-4b1d-9b1d-ff34d941ebc3.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0c2733c4-e0a7-4bb5-b222-38c1d1a64fc3",
@@ -2517,9 +2540,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/0c2733c4-e0a7-4bb5-b222-38c1d1a64fc3/e9b4b036-8ee7-4a8d-bf31-feb8f865f207.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "845faf16-9527-4b58-9a2a-ae6512a8a6d4",
@@ -2530,9 +2552,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/845faf16-9527-4b58-9a2a-ae6512a8a6d4/8bbedf5b-c998-4358-8f38-357064612d02.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "101f5fcc-8df4-47a5-9e47-60a202c1e74f",
@@ -2543,9 +2564,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/101f5fcc-8df4-47a5-9e47-60a202c1e74f/d80934d2-4bc0-4715-a31e-ff206244cd4d.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "54679085-e927-4df1-9866-b7165abae9dc",
@@ -2556,9 +2576,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/54679085-e927-4df1-9866-b7165abae9dc/b3602fec-db1f-4477-87d7-07b598209c9b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0064d530-0b8a-4c5f-99c5-d17e09968298",
@@ -2569,9 +2588,176 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/0064d530-0b8a-4c5f-99c5-d17e09968298/eb7691bd-a419-4f0f-96c8-106b97a5bac2.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "8629ffc5-bb60-4e19-8fa7-3752557cfaf0",
+    "sku": "ZY-DOBRYI-1000-CARTON-001",
+    "name": "Нектар Добрый 1л Мультифрукт",
+    "brand": "Добрый",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/8629ffc5-bb60-4e19-8fa7-3752557cfaf0/4e9e599e-7760-4266-85b7-8d15be749a36.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "1a508bcd-4c28-4466-bf94-c4ffcfe809ed",
+    "sku": "ZY-DOBRYI-1000-CARTON-002",
+    "name": "Нектар Добрый 1л Яблоко",
+    "brand": "Добрый",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/1a508bcd-4c28-4466-bf94-c4ffcfe809ed/04e06bf5-bd17-4834-bc02-8855ef04f166.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "8b52d0e7-b5b3-4572-b3ca-188e0453b782",
+    "sku": "ZY-DOBRYI-1000-CARTON-004",
+    "name": "Нектар Добрый 1л Ананас Яблоко",
+    "brand": "Добрый",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/8b52d0e7-b5b3-4572-b3ca-188e0453b782/f219a46d-d793-48cb-b92b-2f756b04f337.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "32e7dc39-ed47-4aef-b0a2-37b12c341ab9",
+    "sku": "ZY-DOBRYI-1000-CARTON-005",
+    "name": "Нектар Добрый 1л Яблоко персик",
+    "brand": "Добрый",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/32e7dc39-ed47-4aef-b0a2-37b12c341ab9/e009fd73-93d6-48b7-bacf-39d5ce89929a.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "0f457c28-6af7-4495-921d-b8f6147c0b11",
+    "sku": "ZY-DOBRYI-1000-CARTON-008",
+    "name": "Нектар Добрый 1л Виноград",
+    "brand": "Добрый",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/0f457c28-6af7-4495-921d-b8f6147c0b11/0eea7686-8233-45bf-9148-ba10844c9e47.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f9b1a902-2558-4e4c-90f5-18c257f682fe",
+    "sku": "ZY-DOBRYI-1000-CARTON-009",
+    "name": "Нектар Добрый 1л Томат",
+    "brand": "Добрый",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/f9b1a902-2558-4e4c-90f5-18c257f682fe/97773fc5-9fac-46df-b563-facd2e20db9e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "28b9c7d2-4780-480a-84ff-d93e24f261a6",
+    "sku": "ZY-DOBRYI-200-CARTON-001",
+    "name": "Нектар Добрый 0,2л Мультифрукт",
+    "brand": "Добрый",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/28b9c7d2-4780-480a-84ff-d93e24f261a6/0f9a1c99-1a42-4eb2-8b76-5ebd314ebb85.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c236eac6-60f9-4e2d-ab6b-aa2ad9565c5a",
+    "sku": "ZY-DOBRYI-200-CARTON-002",
+    "name": "Нектар Добрый 0,2л Яблоко персик",
+    "brand": "Добрый",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/c236eac6-60f9-4e2d-ab6b-aa2ad9565c5a/b81e0b3b-6d1f-4c3c-b39c-b62ac3cb2140.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "4c9b29e9-b0c1-4580-aba2-097126f417ae",
+    "sku": "ZY-DOBRYI-200-CARTON-003",
+    "name": "Нектар Добрый 0,2л Яблоко",
+    "brand": "Добрый",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/4c9b29e9-b0c1-4580-aba2-097126f417ae/78d5475b-cf86-428a-bb76-a5ab8a20f645.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "524f8efb-2369-4652-bef5-88485592d375",
+    "sku": "ZY-DOBRYI-2000-CARTON-001",
+    "name": "Нектар Добрый 2л Мультифрукт",
+    "brand": "Добрый",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/524f8efb-2369-4652-bef5-88485592d375/0af9bfa0-e554-4b8f-8d2c-a61e4e099ac7.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "0bd55bac-327a-4c83-ae9f-7d333b71a2c1",
+    "sku": "ZY-DOBRYI-2000-CARTON-002",
+    "name": "Нектар Добрый 2л Яблоко",
+    "brand": "Добрый",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/0bd55bac-327a-4c83-ae9f-7d333b71a2c1/3d818849-e84e-412f-acba-c035e6248103.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "aa8f8968-75ea-4a99-b044-3914c4440e85",
+    "sku": "ZY-DOBRYI-2000-CARTON-003",
+    "name": "Нектар Добрый 2л Яблоко персик",
+    "brand": "Добрый",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/aa8f8968-75ea-4a99-b044-3914c4440e85/d08d492d-f9cd-42f5-8126-b2901b0fa0b8.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "57194b16-c251-4983-a694-5d89554fcb09",
+    "sku": "ZY-DOBRYI-2000-CARTON-004",
+    "name": "Нектар Добрый 2л Томат",
+    "brand": "Добрый",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/57194b16-c251-4983-a694-5d89554fcb09/2d8ca237-5d22-4dab-a72a-b427ff0070d3.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "106766c3-3249-4911-8918-d68878340ffe",
+    "sku": "ZY-DOBRYI-450-PET-002",
+    "name": "Напиток Добрый Палпи пл/б 0,45л ананас манго",
+    "brand": "Добрый",
+    "volume_text": "450 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/106766c3-3249-4911-8918-d68878340ffe/0d4b936a-d0e6-4d16-93eb-700d6a2a8535.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3aa5e0eb-aacb-4e31-8bc3-040ce742a8c3",
@@ -2582,9 +2768,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/3aa5e0eb-aacb-4e31-8bc3-040ce742a8c3/e8af2d22-e362-4c3f-962a-12badce264ac.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "893c7080-795a-4917-975d-d71e9664db9b",
@@ -2595,9 +2780,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/893c7080-795a-4917-975d-d71e9664db9b/52fb790c-50b7-4a6d-bdb8-38cdfff6ded7.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "09f06e32-c671-41a3-b71f-beefaf86c9b8",
@@ -2608,9 +2792,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/09f06e32-c671-41a3-b71f-beefaf86c9b8/dafd122c-396a-4f61-914d-93bcb7768111.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "288a7444-c1aa-4798-bf01-2c09b8a99b7b",
@@ -2621,9 +2804,128 @@
     "package_type": "банка",
     "image_url": "/uploads/products/288a7444-c1aa-4798-bf01-2c09b8a99b7b/5e35e626-964f-4118-a80f-5411aa7eda86.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "31c62dea-b0bf-43af-8022-d8dd697a3cb4",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-001",
+    "name": "Сок ФрутоНяня 200мл яблоко осветленный",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/31c62dea-b0bf-43af-8022-d8dd697a3cb4/0999b1b0-5e08-4920-8576-65adadddb0fc.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f2f204cd-481b-4171-aace-cf230223500a",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-002",
+    "name": "Сок ФрутоНяня 200мл груша освет",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/f2f204cd-481b-4171-aace-cf230223500a/8950dc4b-1e03-431b-8627-ce2ae3920714.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "ce68a50b-9246-4d06-b3e7-64ad577d8983",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-003",
+    "name": "Сок ФрутоНяня 200мл Мультифруктовый с мякотью",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/ce68a50b-9246-4d06-b3e7-64ad577d8983/9bfaf8ce-b580-4790-bc0c-f208ad860bfb.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "1a0a8478-ef8b-4d7a-a48c-c468851dd01f",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-004",
+    "name": "Сок ФрутоНяня 200мл яблоко вишня осветленный",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/1a0a8478-ef8b-4d7a-a48c-c468851dd01f/95adf402-3188-414e-b409-fcc30cd5e801.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "e66c2828-a6f5-411b-b7e1-da33c44276c3",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-005",
+    "name": "Сок ФрутоНяня 200мл яблоко черн смородина",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/e66c2828-a6f5-411b-b7e1-da33c44276c3/0df423aa-c265-4a00-968a-cffb1cbfecc1.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "184c64f3-3dec-4908-b97c-75377a5c6947",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-006",
+    "name": "Сок ФрутоНяня 200мл с мякотью яблоко персик",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/184c64f3-3dec-4908-b97c-75377a5c6947/6a26f8bc-a62d-4d43-94c1-9cb9d291020b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "fd53a570-976f-4085-829b-9ec15e1c8eeb",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-007",
+    "name": "Нектар ФрутоНяня 200мл с мякотью банан",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/fd53a570-976f-4085-829b-9ec15e1c8eeb/efe982df-dc0d-4b59-a45e-07574b44a8c4.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "33ef695d-2356-4249-8707-f2e4e74a7c61",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-008",
+    "name": "Сок ФрутоНяня 200мл с мякотью яблоко груша",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/33ef695d-2356-4249-8707-f2e4e74a7c61/d562f036-c1b6-4343-ad18-80bcc6a24039.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "43531143-062d-42d3-8de8-c1afce12063f",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-010",
+    "name": "Морс ФрутоНяня из клюквы черники и вишни 0,2л",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/43531143-062d-42d3-8de8-c1afce12063f/b6a1583c-a5c6-45ab-b5b0-cc4907c4aa02.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "7432137c-87b7-48dd-be2a-d916f6046d99",
+    "sku": "ZY-FRUTONYANYA-200-CARTON-011",
+    "name": "Сок ФрутоНяня 200мл яблоко шиповник осветл",
+    "brand": "ФрутоНяня",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/7432137c-87b7-48dd-be2a-d916f6046d99/b9bf8f63-92de-4597-b113-88781a2ad927.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "9f66939c-f9bf-4fe8-9ce5-fc183e0e09fe",
@@ -2634,9 +2936,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/9f66939c-f9bf-4fe8-9ce5-fc183e0e09fe/91600b9e-fc60-4314-9809-49fd043822a3.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1a0d02a1-65be-4519-96cd-a1838d2ad2bd",
@@ -2647,9 +2948,68 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/1a0d02a1-65be-4519-96cd-a1838d2ad2bd/ba802aab-c26a-435b-80be-eb5bda250aa2.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "32f0cca4-bf08-4901-bb3f-88ebedf0caaf",
+    "sku": "ZY-GUNIB-750-GLASS-001",
+    "name": "Сок Гуниб ст/б 0,75л Абрикосовый",
+    "brand": "Гуниб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/32f0cca4-bf08-4901-bb3f-88ebedf0caaf/9c2655f7-01f6-46ad-b8ac-daac5c831aa7.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "99fc01e2-0f83-43bd-bcc6-23859d1413cd",
+    "sku": "ZY-GUNIB-750-GLASS-002",
+    "name": "Сок Гуниб ст/б 0,75л Персик",
+    "brand": "Гуниб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/99fc01e2-0f83-43bd-bcc6-23859d1413cd/66249308-2409-4fe8-8bee-72ec852b7345.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "29b0f46b-24c7-4e71-9693-03ce49fd4ecd",
+    "sku": "ZY-GUNIB-750-GLASS-003",
+    "name": "Сок Гуниб ст/б 0,75л Мультифрукт",
+    "brand": "Гуниб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/29b0f46b-24c7-4e71-9693-03ce49fd4ecd/e2f70b86-93f8-4701-b38a-14815c175a93.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b1413c8f-0db3-483e-872b-7ba8a98390d9",
+    "sku": "ZY-GUNIB-750-GLASS-004",
+    "name": "Сок Гуниб ст/б 0,75л Виноградный",
+    "brand": "Гуниб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/b1413c8f-0db3-483e-872b-7ba8a98390d9/fda02501-a031-4aae-b08c-02066c224771.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "6060a91b-7a0b-4919-b02f-f507712b2f6a",
+    "sku": "ZY-IRIB-330-GLASS-001",
+    "name": "Сок Ириб ст/б 0,33л Яблочный 100%",
+    "brand": "Ириб",
+    "volume_text": "330 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/6060a91b-7a0b-4919-b02f-f507712b2f6a/019278bc-3603-44ee-a068-8cd99ee714da.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "18834bff-c577-480e-8817-b1a44e01f31b",
@@ -2660,9 +3020,212 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/18834bff-c577-480e-8817-b1a44e01f31b/a688e9f9-84c1-473d-8a3e-3a22dadd7bab.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "cf2c5a75-a9af-408e-8d1d-9c4e76f31906",
+    "sku": "ZY-IRIB-750-GLASS-001",
+    "name": "Сок Ириб ст/б 0,75л Гранатовый 100%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/cf2c5a75-a9af-408e-8d1d-9c4e76f31906/b16a34b6-a0fc-4024-a525-5bb3f21b4507.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "4a48893a-5c54-4b40-8409-7fafd5878bd6",
+    "sku": "ZY-IRIB-750-GLASS-002",
+    "name": "Нектар Ириб ст/б 0,75л Абрикосовый",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/4a48893a-5c54-4b40-8409-7fafd5878bd6/40526631-9698-4c61-928e-5da8c4e25bf8.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "96f0130c-9d09-41a8-a24f-7476397ece27",
+    "sku": "ZY-IRIB-750-GLASS-004",
+    "name": "Нектар Ириб ст/б 0,75л Вишневый 50%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/96f0130c-9d09-41a8-a24f-7476397ece27/49addbae-f96b-406d-a805-f4230f26f9b2.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f3f8ea32-6f95-4fac-9ccc-6c6a8a4dab4d",
+    "sku": "ZY-IRIB-750-GLASS-005",
+    "name": "Сок Ириб ст/б 0,75л Яблочный 100%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/f3f8ea32-6f95-4fac-9ccc-6c6a8a4dab4d/5a6913c5-ad04-451a-aae3-8f827f183571.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "ecfa94b7-fca3-48ac-89cd-393f2419347d",
+    "sku": "ZY-IRIB-750-GLASS-006",
+    "name": "Нектар Ириб ст/б 0,75л Персиковый 50%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/ecfa94b7-fca3-48ac-89cd-393f2419347d/5964e7ac-82c3-43d0-8c84-16ca823cbec3.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "25afb80e-53f2-4003-aeeb-83ccc16887c1",
+    "sku": "ZY-IRIB-750-GLASS-007",
+    "name": "Сок Ириб ст/б 0,75л Апельсиновый 100%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/25afb80e-53f2-4003-aeeb-83ccc16887c1/d3f9a75d-053b-4a6e-8c89-1678426eaab0.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "444d222a-b689-4fc9-a288-d22b8472fa3e",
+    "sku": "ZY-IRIB-750-GLASS-008",
+    "name": "Сок Ириб ст/б 0,75л виноградный красный 100%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/444d222a-b689-4fc9-a288-d22b8472fa3e/7ae0ffc7-89cb-4be8-a51c-c53f32ae8f62.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c66bd5f3-e8e3-4da0-ad15-8525f17ded62",
+    "sku": "ZY-IRIB-750-GLASS-009",
+    "name": "Сок Ириб ст/б 0,75л Ананасовый 100%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/c66bd5f3-e8e3-4da0-ad15-8525f17ded62/e6f7f03a-0301-493a-a65d-95ec92be986c.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "0b8df1b0-ca93-45da-8d2b-e230afee6403",
+    "sku": "ZY-IRIB-750-GLASS-011",
+    "name": "Сок Ириб ст/б 0,75л Томатный 100%",
+    "brand": "Ириб",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/0b8df1b0-ca93-45da-8d2b-e230afee6403/a516146c-412c-4aeb-9d68-690f353fd5e7.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "217c61eb-28e5-4795-897a-34ec9d2f7bf4",
+    "sku": "ZY-J7-850-PET-001",
+    "name": "Морс J7 0,85л пэт Клюква Черника Ежевика",
+    "brand": "J7",
+    "volume_text": "850 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/217c61eb-28e5-4795-897a-34ec9d2f7bf4/8d9b8900-3c02-49c0-b7f4-fab3676e5603.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "e8e35f54-7b99-4f36-8591-ac0bbb9d75e1",
+    "sku": "ZY-J7-850-PET-002",
+    "name": "Сок J7 0,85л пэт Манго",
+    "brand": "J7",
+    "volume_text": "850 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/e8e35f54-7b99-4f36-8591-ac0bbb9d75e1/a24b17bd-a6ed-49d2-b325-d9042e005215.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "fa230d7d-e07d-459d-b3a8-b4babacc4f38",
+    "sku": "ZY-J7-970-CARTON-001",
+    "name": "Сок J7 0,97л Апельсин с мякотью",
+    "brand": "J7",
+    "volume_text": "970 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/fa230d7d-e07d-459d-b3a8-b4babacc4f38/0ff43211-3757-4133-926e-3b0580c1c9bf.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b0ccc249-7423-4657-8605-0d37fb091adf",
+    "sku": "ZY-J7-970-CARTON-002",
+    "name": "Сок J7 0,97л Яблоко зеленое",
+    "brand": "J7",
+    "volume_text": "970 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/b0ccc249-7423-4657-8605-0d37fb091adf/5923d6fa-6fc9-40b2-acb1-96189964c815.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "596d1728-4557-4bd8-bc1f-aef928c47458",
+    "sku": "ZY-J7-970-CARTON-003",
+    "name": "Сок J7 0,97л Ананас с мякотью",
+    "brand": "J7",
+    "volume_text": "970 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/596d1728-4557-4bd8-bc1f-aef928c47458/5d4ee636-6702-4e93-9614-a7d20511cf5e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "e8bb10e0-fc5c-4595-829f-2c7b8b1480a9",
+    "sku": "ZY-J7-970-CARTON-004",
+    "name": "Сок J7 0,97л Мультифрукт",
+    "brand": "J7",
+    "volume_text": "970 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/e8bb10e0-fc5c-4595-829f-2c7b8b1480a9/37cbd74d-19ef-40ba-9f6b-b27b07b92202.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "1cb1341b-dd92-43ee-b8ff-7253fb0e9c4a",
+    "sku": "ZY-J7-970-CARTON-005",
+    "name": "Сок J7 0,97л Персик с мякотью",
+    "brand": "J7",
+    "volume_text": "970 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/1cb1341b-dd92-43ee-b8ff-7253fb0e9c4a/858e53f5-53bf-4e13-9fe8-0b71807edb30.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "ab44373e-7ddc-432b-8ded-191429142f02",
+    "sku": "ZY-J7-970-CARTON-006",
+    "name": "Сок J7 0,97л Вишня",
+    "brand": "J7",
+    "volume_text": "970 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/ab44373e-7ddc-432b-8ded-191429142f02/a906ac87-b3e3-4970-84ab-3eefcad39c61.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "754988be-5945-4d2c-9cb8-05ce50b53a21",
@@ -2673,9 +3236,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/754988be-5945-4d2c-9cb8-05ce50b53a21/cf049c61-efa9-4df6-a5d4-434faa5e2546.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "86ad3620-27eb-43e8-bcbf-329c00e08a17",
@@ -2686,9 +3248,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/86ad3620-27eb-43e8-bcbf-329c00e08a17/3915cc90-efbe-45eb-a2b7-290010f8452f.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "733bdd94-2a00-4cbc-9cd3-4c51a7d6f61f",
@@ -2699,9 +3260,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/733bdd94-2a00-4cbc-9cd3-4c51a7d6f61f/19c9970e-92ad-475b-8b5f-c6a7900e4206.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "cddd6e6e-f9e3-4604-8882-317c85849811",
@@ -2712,9 +3272,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/cddd6e6e-f9e3-4604-8882-317c85849811/a6aca50e-de11-4e19-a384-90fb6a6d9a4b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "16f75a4e-ca27-4e32-a46c-4bf9c5e462ca",
@@ -2725,9 +3284,152 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/16f75a4e-ca27-4e32-a46c-4bf9c5e462ca/d3023f33-105a-428f-83c9-8494d8b7210b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "cbb5f36b-8cf6-4460-bbff-a90c88f079f6",
+    "sku": "ZY-KIKUNI-3000-GLASS-001",
+    "name": "Нектар Кикуни абрикосовый с мякотью ст/б 3л",
+    "brand": "Кикуни",
+    "volume_text": "3 л",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/cbb5f36b-8cf6-4460-bbff-a90c88f079f6/bc47c764-73a8-4bd7-8ad1-20a3583ca2ba.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "1a06ee26-e024-44ce-90f7-37deacdab010",
+    "sku": "ZY-KIKUNI-3000-GLASS-002",
+    "name": "Сок Кикуни томатный ст/б 3л",
+    "brand": "Кикуни",
+    "volume_text": "3 л",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/1a06ee26-e024-44ce-90f7-37deacdab010/8b6c6653-566d-4a14-8484-8e25ceab2249.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "100b6ca1-6350-41a8-a6cf-2c1d40d715f6",
+    "sku": "ZY-KIKUNI-500-GLASS-001",
+    "name": "Нектар Кикуни персиковый с мякотью ст/б 0.5л",
+    "brand": "Кикуни",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/100b6ca1-6350-41a8-a6cf-2c1d40d715f6/91455db2-df91-4fbf-8839-ec1523094846.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b2b4b881-838f-49f2-a917-e464f18f7487",
+    "sku": "ZY-KIKUNI-500-GLASS-002",
+    "name": "Нектар Кикуни яблочный с мякотью ст/б 0,5л",
+    "brand": "Кикуни",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/b2b4b881-838f-49f2-a917-e464f18f7487/3c4e5b0b-50b6-4c6d-b8f8-75e4450d8e37.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "1402c5e3-dff3-4a5f-b333-fb308ee02dc9",
+    "sku": "ZY-KIKUNI-500-GLASS-003",
+    "name": "Нектар Кикуни абрикосовый с мякотью ст/б 0,5л",
+    "brand": "Кикуни",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/1402c5e3-dff3-4a5f-b333-fb308ee02dc9/5e59c0ed-bd7f-4c2b-941b-17017948c60e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "8c9649bd-979c-48e9-820c-17c67bbf7421",
+    "sku": "ZY-KIKUNI-500-GLASS-004",
+    "name": "Сок Кикуни томатный ст/б 0,5л",
+    "brand": "Кикуни",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/8c9649bd-979c-48e9-820c-17c67bbf7421/9700cf77-aede-4280-86df-2415ca14c43d.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "6fe0c5e4-a989-4ac2-9f70-207a370353d7",
+    "sku": "ZY-KIKUNI-500-GLASS-005",
+    "name": "Нектар Кикуни яблочно абрикосовый с мякотью ст/б 0,5л",
+    "brand": "Кикуни",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/6fe0c5e4-a989-4ac2-9f70-207a370353d7/78327d24-9612-4374-94bf-06b7b42858c0.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "2699bc2a-0a01-47e6-9915-e079d2dd24db",
+    "sku": "ZY-KIKUNI-750-GLASS-001",
+    "name": "Нектар Кикуни ст/б 0,75л абрикосовый с мякотью",
+    "brand": "Кикуни",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/2699bc2a-0a01-47e6-9915-e079d2dd24db/4d117d56-9c8b-4c06-bf4f-450c019ff44e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c63663ed-aab7-4401-a1c6-6e7fe20b868c",
+    "sku": "ZY-KIKUNI-750-GLASS-002",
+    "name": "Нектар Кикуни ст/б 0,75л персиковый с мякотью",
+    "brand": "Кикуни",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/c63663ed-aab7-4401-a1c6-6e7fe20b868c/0c2df441-f410-4217-a252-21f6d87b5ed0.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d8efe32a-dcda-432c-b4e3-7867aec002c5",
+    "sku": "ZY-KIKUNI-750-GLASS-003",
+    "name": "Сок Кикуни ст/б 0,75л виноградный",
+    "brand": "Кикуни",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/d8efe32a-dcda-432c-b4e3-7867aec002c5/0ada1cee-83ee-4d45-9b29-0f2524c2e06c.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f5f056b1-f28e-44a3-aaf7-1f0218ff024d",
+    "sku": "ZY-KIKUNI-750-GLASS-004",
+    "name": "Нектар Кикуни ст/б 0,75л яблочный с мякотью",
+    "brand": "Кикуни",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/f5f056b1-f28e-44a3-aaf7-1f0218ff024d/cf390f78-eb6e-444c-804d-74fcd4c4111f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "91ee4cd5-dfde-414b-91bb-85faeea9f320",
+    "sku": "ZY-KIKUNI-750-GLASS-005",
+    "name": "Сок Кикуни томатный с солью ст/б 0.75л",
+    "brand": "Кикуни",
+    "volume_text": "750 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/91ee4cd5-dfde-414b-91bb-85faeea9f320/6157d9ee-e243-41ca-a4b6-61222bceaee3.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7faa6705-d244-4ec3-839e-68055fb9e492",
@@ -2738,9 +3440,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/7faa6705-d244-4ec3-839e-68055fb9e492/6c900b24-36c2-44c3-824b-b9f1430f94d5.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c3274afc-88ff-4114-944b-0ef0354a4561",
@@ -2751,9 +3452,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/c3274afc-88ff-4114-944b-0ef0354a4561/a77e83e2-e646-412b-a998-0631f756fb98.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "79e75264-1d17-438c-8167-b8e1b6a5e2f6",
@@ -2764,9 +3464,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/79e75264-1d17-438c-8167-b8e1b6a5e2f6/3a5ce622-1f0a-45f2-99ab-b04873c85004.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "de9ebbe5-67e4-4532-a8ac-fe720d1512a9",
@@ -2777,9 +3476,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/de9ebbe5-67e4-4532-a8ac-fe720d1512a9/8eab0b0a-8eef-4576-9666-94a1ba6625d0.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "20e0bf8c-2afe-4fa7-88d8-e17b99360022",
@@ -2790,9 +3488,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/20e0bf8c-2afe-4fa7-88d8-e17b99360022/aae97e2c-b6a2-460f-aa60-57f36fa6ae13.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "bbc071ca-b4e2-4934-8396-bc77a50fa0a0",
@@ -2803,9 +3500,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/bbc071ca-b4e2-4934-8396-bc77a50fa0a0/ab5acf27-fba6-4a96-986a-15060c51a76a.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "eae69caf-8844-45ec-b9a5-7ab686877c97",
@@ -2816,9 +3512,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/eae69caf-8844-45ec-b9a5-7ab686877c97/b08ebf48-ad28-4547-91aa-17305d0e4a01.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "af15485a-29dd-4fac-8e35-a9d78c9228a1",
@@ -2829,9 +3524,188 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/af15485a-29dd-4fac-8e35-a9d78c9228a1/9f69fdeb-4ba6-4e44-9f6e-d12a9f561012.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "42527e9f-c2e0-4e29-8fda-f9b1bf708c0a",
+    "sku": "ZY-LYUBIMYI-1930-CARTON-001",
+    "name": "Нектар Любимый 1,93л Вишневая Черешня",
+    "brand": "Любимый",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/42527e9f-c2e0-4e29-8fda-f9b1bf708c0a/873ff874-e455-47c6-a0c1-256a85ea00fb.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "297f460b-cb02-4df2-bcbe-33fd376dc95c",
+    "sku": "ZY-LYUBIMYI-1930-CARTON-002",
+    "name": "Нектар Любимый 1,93л Яблоко",
+    "brand": "Любимый",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/297f460b-cb02-4df2-bcbe-33fd376dc95c/a6d7dd95-8f44-4b3c-9421-a3410e9fd842.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "7a662661-b110-4882-b506-8c2f6d882032",
+    "sku": "ZY-LYUBIMYI-200-CARTON-001",
+    "name": "Нектар Любимый 0,2л яблоко",
+    "brand": "Любимый",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/7a662661-b110-4882-b506-8c2f6d882032/be7db1ba-e4a1-498c-a482-2a8fa64533ef.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "e372ac52-f2df-4fe6-97c6-b25c117f0759",
+    "sku": "ZY-LYUBIMYI-950-CARTON-001",
+    "name": "Нектар Любимый 0,95л Апельсин манго мандарин",
+    "brand": "Любимый",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/e372ac52-f2df-4fe6-97c6-b25c117f0759/6e646c25-6940-4ae5-9c69-9e3aecedbeb3.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "7f996ffa-ca5b-42d0-9f63-5d2d06b44d9f",
+    "sku": "ZY-LYUBIMYI-950-CARTON-002",
+    "name": "Нектар Любимый 0,95л Вишневая черешня",
+    "brand": "Любимый",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/7f996ffa-ca5b-42d0-9f63-5d2d06b44d9f/e6d8af46-dd93-4b3f-bc02-10d243fa6ed3.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b3177c47-70e2-4845-bcfc-b5bbab6bbe88",
+    "sku": "ZY-LYUBIMYI-950-CARTON-003",
+    "name": "Нектар Любимый 0,95л Персик",
+    "brand": "Любимый",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/b3177c47-70e2-4845-bcfc-b5bbab6bbe88/3002f2b6-bbb6-49bc-baaf-4a565bd2f036.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "525c9bd6-3c2e-4378-8587-3fc6126d0b50",
+    "sku": "ZY-LYUBIMYI-950-CARTON-004",
+    "name": "Нектар Любимый 0,95л Тропический микс",
+    "brand": "Любимый",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/525c9bd6-3c2e-4378-8587-3fc6126d0b50/dfe29ba5-a8e5-4a49-a09b-f0d44ff70de1.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "5af1784a-fba1-447b-b0a7-2dacd5bc9f42",
+    "sku": "ZY-LYUBIMYI-950-CARTON-005",
+    "name": "Нектар Любимый 0,95л Яблоко",
+    "brand": "Любимый",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/5af1784a-fba1-447b-b0a7-2dacd5bc9f42/7d8e74ad-ec0d-4c22-b4cc-72f301845722.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "3cbdd00b-ff7a-4b19-b22e-c25c5576849d",
+    "sku": "ZY-MALENKOESCHASTE-200-CARTON-001",
+    "name": "Нектар Маленькое Счастье Фиксики Фрути Яблоко-Банан 0,2л",
+    "brand": "Маленькое Счастье",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/3cbdd00b-ff7a-4b19-b22e-c25c5576849d/f73041df-6af8-4d90-84cb-e61d13a5426a.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "e681baeb-33bd-4760-8ea1-de6e356ba1d0",
+    "sku": "ZY-MALENKOESCHASTE-200-CARTON-002",
+    "name": "Нектар Маленькое счастье Маши и Медведь Яблоко 0,2л",
+    "brand": "Маленькое Счастье",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/e681baeb-33bd-4760-8ea1-de6e356ba1d0/01887849-ee50-4a31-a1f4-da4174d997cb.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "4515a705-905a-4315-921d-fd1f8bb45654",
+    "sku": "ZY-MALENKOESCHASTE-200-CARTON-003",
+    "name": "Нектар Маленькое Счастье Фиксики Фрути Яблоко 0,2л",
+    "brand": "Маленькое Счастье",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/4515a705-905a-4315-921d-fd1f8bb45654/c34be474-1f66-44dc-acc7-434cdcfdff54.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "aa383bad-8cb1-437b-81a9-53d10aa0845c",
+    "sku": "ZY-MALENKOESCHASTE-200-CARTON-004",
+    "name": "Нектар Маленькое Счастье Фиксики Фрути Яблоко-Груша 0,2л",
+    "brand": "Маленькое Счастье",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/aa383bad-8cb1-437b-81a9-53d10aa0845c/8e3597fe-4dbe-49b3-a00d-9b69ec24a55e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "2e1da936-4787-45c5-b416-277cfbd2e8ea",
+    "sku": "ZY-MALENKOESCHASTE-200-CARTON-005",
+    "name": "Нектар Маленькое счастье Маши и Медведь Яблоко-Виноград 0,2л",
+    "brand": "Маленькое Счастье",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/2e1da936-4787-45c5-b416-277cfbd2e8ea/ed20abee-3433-4d8b-ba13-f747d954732a.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "bab32b47-d7b7-473a-8da0-5e7b38f25acf",
+    "sku": "ZY-MALENKOESCHASTE-200-CARTON-006",
+    "name": "Нектар Маленькое счастье Маши и Медведь Яблоко Банан 0,2л",
+    "brand": "Маленькое Счастье",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/bab32b47-d7b7-473a-8da0-5e7b38f25acf/3c5cd9ef-d8b6-485b-b7b0-34ecbe88a160.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f3e20502-1d32-4bfd-8848-ba5e7f28b99b",
+    "sku": "ZY-MALENKOESCHASTE-200-CARTON-007",
+    "name": "Нектар Маленькое счастье Маши и Медведь Мультифрукт 0,2л",
+    "brand": "Маленькое Счастье",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/f3e20502-1d32-4bfd-8848-ba5e7f28b99b/ac73290d-1e48-41aa-8c59-41f09cd765c2.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "bd645495-79ee-4803-8893-7bc17789398f",
@@ -2842,9 +3716,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/bd645495-79ee-4803-8893-7bc17789398f/90836c1a-6109-4a39-906f-1aa9735db7b8.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1ae90852-59f5-4b49-b42b-1259072b0923",
@@ -2855,9 +3728,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/1ae90852-59f5-4b49-b42b-1259072b0923/45eb300e-b4ed-4582-887f-aa2d4597a8f0.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c21dabbd-d83f-4cca-adf5-fd28e3a1a9e0",
@@ -2868,9 +3740,8 @@
     "package_type": null,
     "image_url": "/uploads/products/c21dabbd-d83f-4cca-adf5-fd28e3a1a9e0/129aef5b-751b-483d-8db0-d1f49994def5.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0c84248f-cb53-41b5-8f9d-6851f0bb1033",
@@ -2881,9 +3752,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/0c84248f-cb53-41b5-8f9d-6851f0bb1033/5f2c8c97-42d5-4087-b6b4-74a0a80e8731.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "541da164-7376-447e-ad31-4bc0ca3a47f9",
@@ -2894,9 +3764,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/541da164-7376-447e-ad31-4bc0ca3a47f9/281cd9a5-f78f-4218-9e81-bdbcec54fae6.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "46fb9fc0-13f7-44ac-a73f-abdac8900e0b",
@@ -2907,9 +3776,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/46fb9fc0-13f7-44ac-a73f-abdac8900e0b/cf1db9dc-a0d9-4afe-a024-9fa3693c4e2c.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "bd57f079-740f-4722-9038-fb3f84ce62c1",
@@ -2920,9 +3788,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/bd57f079-740f-4722-9038-fb3f84ce62c1/624189eb-e0a2-4bfb-b0f0-14b15d96802f.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "2e247ab0-49a3-4688-a4e6-e7fb06c13645",
@@ -2933,9 +3800,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/2e247ab0-49a3-4688-a4e6-e7fb06c13645/747f2a3f-ae16-431e-9ba3-bdefd3a7f0fe.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "a8f8eeeb-218c-4bfc-bb7b-c39e7d8ad547",
@@ -2946,9 +3812,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/a8f8eeeb-218c-4bfc-bb7b-c39e7d8ad547/d0c8a6e7-f015-4ec4-a26c-efbb7cc43fd4.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "dea0787b-575a-400d-81e8-4f4b3e2b2ddb",
@@ -2959,9 +3824,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/dea0787b-575a-400d-81e8-4f4b3e2b2ddb/90019ffe-b570-41e0-be27-f4c8585ab360.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "8c867aee-8203-4b6b-9278-185668a0faa5",
@@ -2972,9 +3836,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/8c867aee-8203-4b6b-9278-185668a0faa5/3dddb55b-38dc-41d1-8d90-36afcf3e4a0b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "8575776d-f686-4ccd-bfc3-d2789b5bed4f",
@@ -2985,9 +3848,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/8575776d-f686-4ccd-bfc3-d2789b5bed4f/f4e049fb-55a0-4820-967b-e9605e56112d.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "aee46add-182f-4dac-a938-09a0ae4194e3",
@@ -2998,9 +3860,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/aee46add-182f-4dac-a938-09a0ae4194e3/5d996341-8779-451e-a643-bda6b7452f8c.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "864ed24a-3bbd-4229-acf4-b9e7f6c48479",
@@ -3011,9 +3872,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/864ed24a-3bbd-4229-acf4-b9e7f6c48479/efeb84a3-4c1f-4c7c-b2f1-ccf98d69afe1.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "cb9e507c-46b4-48e7-bc48-76a34053db51",
@@ -3024,9 +3884,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/cb9e507c-46b4-48e7-bc48-76a34053db51/14ef1a98-ca9d-42c3-a41e-c02855f8b86b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "249fa4fa-62ea-41e1-898e-6eee7632788a",
@@ -3037,9 +3896,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/249fa4fa-62ea-41e1-898e-6eee7632788a/8a9e0eb6-edec-45ef-b976-de1013567b89.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6b523449-50a0-48ea-a7dc-aff26874bbab",
@@ -3050,9 +3908,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/6b523449-50a0-48ea-a7dc-aff26874bbab/32be7e70-ee1f-4903-95f5-f27c2bb37f56.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "8585883e-4cb2-4368-a5c5-fc5c5b7db8b8",
@@ -3063,9 +3920,164 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/8585883e-4cb2-4368-a5c5-fc5c5b7db8b8/8242705a-3911-41fb-9a5c-91b5e24edd7a.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "3b449aeb-f67c-4980-8b13-dedd2a2cb694",
+    "sku": "ZY-MOI-1930-CARTON-001",
+    "name": "Нектар Мой 1,93л Тропические фрукты",
+    "brand": "Мой",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/3b449aeb-f67c-4980-8b13-dedd2a2cb694/2786e051-8897-4f98-b817-b1ad3eafb97a.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d6c90fb2-fbb9-4e09-8826-5b24c33a6626",
+    "sku": "ZY-MOI-1930-CARTON-002",
+    "name": "Нектар Мой 1,93л Вишня яблоко",
+    "brand": "Мой",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d6c90fb2-fbb9-4e09-8826-5b24c33a6626/010d56df-e85f-43eb-acf1-77a6e55ac32b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "54459f50-ede0-4fbc-a135-2664f4deef50",
+    "sku": "ZY-MOI-1930-CARTON-003",
+    "name": "Нектар Мой 1,93л Персик яблоко",
+    "brand": "Мой",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/54459f50-ede0-4fbc-a135-2664f4deef50/69141ed6-d14b-4df8-b26e-2bed0b9cb2bb.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d007227a-319e-4cf2-8224-6331793dc337",
+    "sku": "ZY-MOI-200-CARTON-001",
+    "name": "Нектар Мой 0,2л Яблочный из зел яблок",
+    "brand": "Мой",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d007227a-319e-4cf2-8224-6331793dc337/af30163b-decd-4526-85af-3654a302c385.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "70fc73a7-941f-4693-96bc-86327b7070a7",
+    "sku": "ZY-MOI-200-CARTON-002",
+    "name": "Нектар Мой 0,2л Ананасовый",
+    "brand": "Мой",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/70fc73a7-941f-4693-96bc-86327b7070a7/3929f24b-0e2b-43b3-bb77-876fbe713f99.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "8d7fbca6-7357-404b-afc1-6a544ffb8a6c",
+    "sku": "ZY-MOI-200-CARTON-003",
+    "name": "Нектар Мой 0,2л Персиковый",
+    "brand": "Мой",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/8d7fbca6-7357-404b-afc1-6a544ffb8a6c/6ee8188c-8815-4377-8912-de11696df180.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "a87f4fc6-c730-492e-b994-214a03f5c204",
+    "sku": "ZY-MOI-200-CARTON-004",
+    "name": "Нектар Мой 0,2л мультифрукт",
+    "brand": "Мой",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/a87f4fc6-c730-492e-b994-214a03f5c204/4190f2b8-2ce1-4147-9512-f052ae1c6bb2.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "31d610b9-83c7-4e85-afcb-190c989b5d49",
+    "sku": "ZY-MOI-950-CARTON-001",
+    "name": "Нектар Мой 0,95л Ананас",
+    "brand": "Мой",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/31d610b9-83c7-4e85-afcb-190c989b5d49/774d6648-c6f5-42b7-b6b0-73605fdf881e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d78fd9ba-f0e8-4fc4-bac2-13775ca4e4d9",
+    "sku": "ZY-MOI-950-CARTON-002",
+    "name": "Нектар Мой 0,95л Персик яблоко",
+    "brand": "Мой",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d78fd9ba-f0e8-4fc4-bac2-13775ca4e4d9/adea3536-b023-4cb9-ad97-5c7a0103fdf1.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "2618c563-6903-4015-9bac-c07bae429c4c",
+    "sku": "ZY-MOI-950-CARTON-003",
+    "name": "Нектар Мой 0,95л Апельсин",
+    "brand": "Мой",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/2618c563-6903-4015-9bac-c07bae429c4c/bd54e919-0914-4c85-944d-5ad43e751d22.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "17c2d4a8-ecd2-4dca-8d08-a907f5888ba2",
+    "sku": "ZY-MOI-950-CARTON-004",
+    "name": "Нектар Мой 0,95л Бананово Клубничный",
+    "brand": "Мой",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/17c2d4a8-ecd2-4dca-8d08-a907f5888ba2/757541a7-7c62-48b6-8e69-0386409508b9.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "81a1b4cd-fbe4-4dc7-a5a3-4cac246ad5b2",
+    "sku": "ZY-MOI-950-CARTON-005",
+    "name": "Нектар Мой 0,95л Томат",
+    "brand": "Мой",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/81a1b4cd-fbe4-4dc7-a5a3-4cac246ad5b2/c6d3453d-41a1-4c4b-9660-da341503816c.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "dd018932-4501-4a72-8258-ba15b892235d",
+    "sku": "ZY-MOI-950-CARTON-006",
+    "name": "Нектар Мой 0,95л Вишня яблоко",
+    "brand": "Мой",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/dd018932-4501-4a72-8258-ba15b892235d/20533d2f-12a5-4be5-b6d3-b3b86c223715.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "63738062-958e-447c-80d5-52d918c05948",
@@ -3076,9 +4088,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/63738062-958e-447c-80d5-52d918c05948/312203f3-7876-421b-bc41-7c42feb3626b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "15ae473a-fbc7-4f1e-8048-51a9a18974b7",
@@ -3089,9 +4100,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/15ae473a-fbc7-4f1e-8048-51a9a18974b7/0de576da-69da-45ff-a0b2-a9c3c74562b1.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0a37bda4-3a76-42dd-a8a5-aa961d8c59a1",
@@ -3102,9 +4112,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/0a37bda4-3a76-42dd-a8a5-aa961d8c59a1/cdb9c7fc-eab4-46e7-8989-1e33095bc9a0.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3f44a9c8-eb7f-4e93-bdbf-8eb7a91f9a8c",
@@ -3115,9 +4124,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/3f44a9c8-eb7f-4e93-bdbf-8eb7a91f9a8c/b1742b19-1edc-4810-9b19-36e8e5173a09.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "955ada77-73a3-4638-93b2-2c6f0f5b8bb9",
@@ -3128,9 +4136,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/955ada77-73a3-4638-93b2-2c6f0f5b8bb9/df5d3944-ea50-476d-a67b-9c3d34e99e58.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e8f175a4-9e4d-4333-bb48-6a3cd58fc107",
@@ -3141,9 +4148,56 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/e8f175a4-9e4d-4333-bb48-6a3cd58fc107/00cd615a-9117-499a-b82a-525ecd9aa6ef.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d53f4840-94e5-494e-b235-5582d93d2a8b",
+    "sku": "ZY-RICH-1000-CARTON-001",
+    "name": "Сок Рич 1л Персик",
+    "brand": "Рич",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d53f4840-94e5-494e-b235-5582d93d2a8b/0fdc68eb-0847-425e-aca4-8c080f720ad0.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "90cc58c0-c9cf-4fe6-9dd2-8d8b312ea157",
+    "sku": "ZY-RICH-1000-CARTON-002",
+    "name": "Сок Рич 1л Вишня",
+    "brand": "Рич",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/90cc58c0-c9cf-4fe6-9dd2-8d8b312ea157/5e14a998-c2f2-4c1b-89b0-1d24378d24ce.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "5dd2ea70-f808-4e8e-afb6-e24ae62fe7d1",
+    "sku": "ZY-RICH-1000-CARTON-003",
+    "name": "Сок Рич 1л Яблоко",
+    "brand": "Рич",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/5dd2ea70-f808-4e8e-afb6-e24ae62fe7d1/a9e402f9-0bcd-4c6b-9559-92e14b069769.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "ee7a2523-07bf-4000-98c9-7a90e7cf0fa6",
+    "sku": "ZY-RICH-1000-CARTON-004",
+    "name": "Сок Рич 1л Мультифрукт",
+    "brand": "Рич",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/ee7a2523-07bf-4000-98c9-7a90e7cf0fa6/681e3ac6-a9f7-4d10-9eab-557118555be5.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "03454113-eb59-4b53-90ea-012e2ed25acd",
@@ -3154,9 +4208,8 @@
     "package_type": null,
     "image_url": "/uploads/products/03454113-eb59-4b53-90ea-012e2ed25acd/27385b3c-b85c-43cc-a4a0-f11b55eff991.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "ae2d5e5a-00cf-4360-a97a-c9ee06fec392",
@@ -3167,9 +4220,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/ae2d5e5a-00cf-4360-a97a-c9ee06fec392/d479794c-fa44-46dc-a970-459ef1106919.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1ab9ee12-44f5-44b6-902d-ad7362e3c29d",
@@ -3180,9 +4232,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/1ab9ee12-44f5-44b6-902d-ad7362e3c29d/83c29f04-6584-4d46-9a2b-91b1e220142b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "23d90037-5013-4da7-9398-9e0b41881c98",
@@ -3193,9 +4244,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/23d90037-5013-4da7-9398-9e0b41881c98/6ad834a5-35a7-470b-8a94-41e7c3be6cde.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "6620cf16-df45-4250-8c4f-7eb3708693d5",
@@ -3206,9 +4256,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/6620cf16-df45-4250-8c4f-7eb3708693d5/692c3179-8ba3-49ad-a6a9-e5ba2ae08e32.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "0e57fe27-49af-4809-b4cd-a2e3c8329d6c",
@@ -3219,9 +4268,8 @@
     "package_type": "банка",
     "image_url": "/uploads/products/0e57fe27-49af-4809-b4cd-a2e3c8329d6c/3edfca62-7a9f-4a65-8d56-faf76930dda3.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "acb40596-ed9f-4ee0-8472-83180e9efb5b",
@@ -3232,9 +4280,56 @@
     "package_type": "банка",
     "image_url": "/uploads/products/acb40596-ed9f-4ee0-8472-83180e9efb5b/2bc2a9dc-2e9a-4405-bf08-77834c7a5aaf.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "7fbf7e25-4e08-4edf-8ab8-ad323c1d4375",
+    "sku": "ZY-RUSBERRIES-500-PET-001",
+    "name": "Морс Rusberries натуральный Ягодный пл/б 0,5л Клюква",
+    "brand": "Rusberries",
+    "volume_text": "500 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/7fbf7e25-4e08-4edf-8ab8-ad323c1d4375/9acb75e3-2fdb-4ce7-8161-70e8f4b6c920.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c189d2aa-dfbf-478a-bd64-888e4e653e08",
+    "sku": "ZY-RUSBERRIES-500-PET-002",
+    "name": "Морс Rusberries натуральный Ягодный пл/б 0,5л Малина Клюква",
+    "brand": "Rusberries",
+    "volume_text": "500 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/c189d2aa-dfbf-478a-bd64-888e4e653e08/9c36ea7f-dd10-4a36-85a6-a571440ed910.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "68e82835-c588-4548-8fe1-ee91d6809ca5",
+    "sku": "ZY-RUSBERRIES-500-PET-003",
+    "name": "Морс Rusberries натуральный Ягодный пл/б 0,5л Лесной Сбор",
+    "brand": "Rusberries",
+    "volume_text": "500 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/68e82835-c588-4548-8fe1-ee91d6809ca5/17e9ffd5-6084-41ce-a1dc-f8df5b81caf1.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b6250c54-779b-4200-a0c2-b60a19a7de72",
+    "sku": "ZY-RUSBERRIES-500-PET-004",
+    "name": "Морс Rusberries натуральный Ягодный пл/б 0,5л Брусника",
+    "brand": "Rusberries",
+    "volume_text": "500 мл",
+    "package_type": "ПЭТ",
+    "image_url": "/uploads/products/b6250c54-779b-4200-a0c2-b60a19a7de72/ec11dccb-61a5-4dca-8064-249de3855521.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "3b01a41f-be22-4000-9026-475afd444609",
@@ -3245,9 +4340,104 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/3b01a41f-be22-4000-9026-475afd444609/3b8ae0ef-e5da-4d69-8420-4f8ef35763ea.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "3a482ae1-8f46-45bf-ac76-fe66cdbc1f3e",
+    "sku": "ZY-SADYPRIDONYA-200-CARTON-001",
+    "name": "Нектар Сады Придонья IL Primo Мультифрукт 0,2л",
+    "brand": "Сады Придонья",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/3a482ae1-8f46-45bf-ac76-fe66cdbc1f3e/f123b9cb-5f99-49ad-a5ae-3a32e39e3c93.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "497ca332-9187-4aae-951c-17a83f516c86",
+    "sku": "ZY-SADYPRIDONYA-200-CARTON-002",
+    "name": "Нектар Сады Придонья IL Primo Яблоко 0,2л",
+    "brand": "Сады Придонья",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/497ca332-9187-4aae-951c-17a83f516c86/9f421c78-4783-4faf-9396-248a8b2415ed.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "fc3b3d3a-ec64-4a73-a51c-2f76afb732dd",
+    "sku": "ZY-SADYPRIDONYA-200-CARTON-003",
+    "name": "Сок Сады Придонья 0,2л яблоко из зеленых яблок",
+    "brand": "Сады Придонья",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/fc3b3d3a-ec64-4a73-a51c-2f76afb732dd/55ed68e1-3b2d-4b4d-b657-4816819a8d98.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "644bd293-74a3-4b8f-bb47-8e30fff9bf26",
+    "sku": "ZY-SADYPRIDONYA-200-CARTON-004",
+    "name": "Нектар Сады Придонья IL Primo Вишня 0,2л",
+    "brand": "Сады Придонья",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/644bd293-74a3-4b8f-bb47-8e30fff9bf26/e693309f-56e8-4a80-8413-d0f310a161f5.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "275aa298-4809-412f-a92c-6645a2336a8d",
+    "sku": "ZY-SADYPRIDONYA-200-CARTON-005",
+    "name": "Нектар Сады Придонья IL Primo Ананас 0,2л",
+    "brand": "Сады Придонья",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/275aa298-4809-412f-a92c-6645a2336a8d/b3428914-4708-4e03-b803-09a1dbcec46f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c3a543d2-da26-4efb-a567-ee94f05a64ab",
+    "sku": "ZY-SADYPRIDONYA-200-CARTON-006",
+    "name": "Нектар Сады Придонья IL Primo Грейпфрут 0,2л",
+    "brand": "Сады Придонья",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/c3a543d2-da26-4efb-a567-ee94f05a64ab/b2db3d5b-260e-4412-846d-cb342f197772.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b759a7c0-b562-4c13-945b-16644f04054f",
+    "sku": "ZY-SADYPRIDONYA-200-CARTON-007",
+    "name": "Сок Сады Придонья 0,2л мультифруктовый",
+    "brand": "Сады Придонья",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/b759a7c0-b562-4c13-945b-16644f04054f/919b7d5e-283a-42b1-ae91-3ce2f746f95f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c03c5661-3c2a-456b-822b-a297a2065c1b",
+    "sku": "ZY-SANTAL-1000-CARTON-001",
+    "name": "Сок Сантал апельсиновый 1л",
+    "brand": "Сантал",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/c03c5661-3c2a-456b-822b-a297a2065c1b/f9aadabf-0956-469e-86d7-04159ff3f19e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "758112e9-7ad4-4357-b0b4-b535dd25f182",
@@ -3258,9 +4448,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/758112e9-7ad4-4357-b0b4-b535dd25f182/f5c10c69-4465-442e-9dbd-face7c10234b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7c01b426-7574-4d3d-a26a-ebc2f593a08a",
@@ -3271,9 +4460,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/7c01b426-7574-4d3d-a26a-ebc2f593a08a/fe90d82b-cfca-415a-a6e9-ad06ccb5bd99.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "b4338b2c-83c8-4ec5-8af0-649778339110",
@@ -3284,9 +4472,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/b4338b2c-83c8-4ec5-8af0-649778339110/45b0a1f4-f8e1-40a6-bf1d-2f3da508850d.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "95dd3fe7-7cbc-4df8-b5f2-adf2fc210c3f",
@@ -3297,9 +4484,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/95dd3fe7-7cbc-4df8-b5f2-adf2fc210c3f/8feb946d-3084-40cd-bfeb-2ad1534bf4d3.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "cf694a6f-1f41-49ca-bc78-20bb6bacbc82",
@@ -3310,9 +4496,308 @@
     "package_type": null,
     "image_url": "/uploads/products/cf694a6f-1f41-49ca-bc78-20bb6bacbc82/07f9d1e2-97be-4793-a365-1efef9957d3b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "01973d2b-94fa-470a-8077-073aa09a8f34",
+    "sku": "ZY-SILBESI-500-GLASS-001",
+    "name": "Сок Сильбеси гранатовый ст/б 0,5л",
+    "brand": "Сильбеси",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/01973d2b-94fa-470a-8077-073aa09a8f34/0dbcad96-f6c8-48e2-a4af-c78b36199801.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "415e34ae-584c-4519-8e02-36515817180e",
+    "sku": "ZY-SILBESI-500-GLASS-002",
+    "name": "Нектар Сильбеси абрикосовый с мякотью ст/б 0,5л",
+    "brand": "Сильбеси",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/415e34ae-584c-4519-8e02-36515817180e/ffc39b46-e0a3-4924-9e76-a6683be1e77b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "8556442e-9a4d-4c85-b15f-d0a647557433",
+    "sku": "ZY-SILBESI-500-GLASS-003",
+    "name": "Сок Сильбеси мультифрукт ст/б 0,5л",
+    "brand": "Сильбеси",
+    "volume_text": "500 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/8556442e-9a4d-4c85-b15f-d0a647557433/de258918-5a3b-454d-9c7c-a652f16a934d.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "23099663-578b-425b-a760-f0dc0b518c58",
+    "sku": "ZY-SIS-1600-CARTON-001",
+    "name": "Нектар SIS Апельсин 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/23099663-578b-425b-a760-f0dc0b518c58/397fe91d-6c14-454e-bd7a-7b2b87fe835a.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "af6d19d2-7f8a-4737-9a1d-fed16d50290b",
+    "sku": "ZY-SIS-1600-CARTON-002",
+    "name": "Нектар SIS Вишня 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/af6d19d2-7f8a-4737-9a1d-fed16d50290b/eea9106b-dd05-47cb-9586-affebb81f28b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d5215d2b-5972-48ee-99ae-f26383cd92e5",
+    "sku": "ZY-SIS-1600-CARTON-003",
+    "name": "Нектар SIS клубнично-банановый 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d5215d2b-5972-48ee-99ae-f26383cd92e5/646eb90e-7425-4153-8a79-664d14e0e786.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "22aa8707-fa8f-4a73-9607-3ad0972f1452",
+    "sku": "ZY-SIS-1600-CARTON-004",
+    "name": "Нектар SIS Гранат 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/22aa8707-fa8f-4a73-9607-3ad0972f1452/98a6eb0c-86f7-4354-b12d-5a0b1c60e381.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "cf888379-fa94-467a-a699-a19902e48a9e",
+    "sku": "ZY-SIS-1600-CARTON-005",
+    "name": "Нектар SIS Мультифрукт 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/cf888379-fa94-467a-a699-a19902e48a9e/77b15569-8180-4cae-9881-b246336f05d9.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d33bb82a-a606-4127-a184-83d6b0b1b02a",
+    "sku": "ZY-SIS-1600-CARTON-006",
+    "name": "Нектар SIS Манго 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d33bb82a-a606-4127-a184-83d6b0b1b02a/c0ecdecc-ea46-4453-82c8-6c38503d926c.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "88313566-aaa5-4dff-ace5-22a260b24af0",
+    "sku": "ZY-SIS-1600-CARTON-007",
+    "name": "Нектар SIS Яблоко 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/88313566-aaa5-4dff-ace5-22a260b24af0/d1c68678-b9f7-4e2c-85d6-8a680aa6f8cf.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "21fe14e5-2eab-4d5d-9312-2e5dbb4a59f9",
+    "sku": "ZY-SIS-1600-CARTON-008",
+    "name": "Нектар SIS Персик 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/21fe14e5-2eab-4d5d-9312-2e5dbb4a59f9/30738cbe-ecc0-4bee-bd9d-700baef0edd1.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "434fdc56-1ae6-41d4-99d0-ece73ee9a9a7",
+    "sku": "ZY-SIS-1600-CARTON-009",
+    "name": "Нектар SIS черная смородина 1.6л",
+    "brand": "SIS",
+    "volume_text": "1,6 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/434fdc56-1ae6-41d4-99d0-ece73ee9a9a7/cbbc6e12-a95c-4e9a-a988-f19e0db2a911.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "272069e3-c2e7-459c-871d-e11c72056a86",
+    "sku": "ZY-SOCHNAYADOLINA-1930-CARTON-001",
+    "name": "Нектар Сочная долина 1,93л Мультифрукт",
+    "brand": "Сочная долина",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/272069e3-c2e7-459c-871d-e11c72056a86/a0030619-8d2d-495d-be2e-325e3fcb4c8b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d0790807-317e-4131-805b-db1147e164c7",
+    "sku": "ZY-SOCHNAYADOLINA-1930-CARTON-002",
+    "name": "Нектар Сочная долина 1,93л Яблочный",
+    "brand": "Сочная долина",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d0790807-317e-4131-805b-db1147e164c7/e369ecc0-7a95-43cb-8b08-304dcc446478.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "f25fc19b-2b05-4f37-a167-e5083af687f7",
+    "sku": "ZY-SOCHNAYADOLINA-1930-CARTON-003",
+    "name": "Нектар Сочная долина 1,93л Апельсин манго",
+    "brand": "Сочная долина",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/f25fc19b-2b05-4f37-a167-e5083af687f7/872d0e18-60a3-47d9-967e-dc541c9c858b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "84950560-9ba8-42ef-a15b-cd4c94425359",
+    "sku": "ZY-SOCHNAYADOLINA-1930-CARTON-004",
+    "name": "Нектар Сочная долина 1,93л Персик-яблоко",
+    "brand": "Сочная долина",
+    "volume_text": "1,93 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/84950560-9ba8-42ef-a15b-cd4c94425359/513a1165-37ea-4fd8-9c80-52b42b87b6cf.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "5b57f17a-8e6f-49cf-9ed0-e167c50c5e19",
+    "sku": "ZY-SOCHNAYADOLINA-200-CARTON-005",
+    "name": "Нектар Сочная долина 0,2л яблоко-вишня",
+    "brand": "Сочная долина",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/5b57f17a-8e6f-49cf-9ed0-e167c50c5e19/ed8e41c5-670a-4da6-8742-4e14dc953174.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "a3e77de2-4729-49f5-89f4-c6dcb763294e",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-001",
+    "name": "Нектар Сочная долина 0,95л мультифрукт",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/a3e77de2-4729-49f5-89f4-c6dcb763294e/7bf541f4-00bf-470e-9ed1-c9fcc1fc8f40.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "ce302cdb-7d3f-442c-a8ca-9a8e6386c7bd",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-002",
+    "name": "Нектар Сочная долина 0,95л смесь из ягод фруктов",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/ce302cdb-7d3f-442c-a8ca-9a8e6386c7bd/d22cad88-a265-422c-8368-00c350541f62.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c168ee72-1d40-47e9-afb2-11cc5049b694",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-003",
+    "name": "Нектар Сочная долина 0,95л Клубника земляника",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/c168ee72-1d40-47e9-afb2-11cc5049b694/3db5a1ce-fdee-4710-a6ca-c24409867a42.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "e04df748-765c-40ee-b9f6-69215e3609f0",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-004",
+    "name": "Нектар Сочная долина 0,95л яблочный",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/e04df748-765c-40ee-b9f6-69215e3609f0/a4efeb33-6bda-408f-b0cc-1004adf83f1e.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "5da95c84-0346-4806-967f-f69df6d6e5fc",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-006",
+    "name": "Нектар Сочная долина 0,95л персик яблоко",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/5da95c84-0346-4806-967f-f69df6d6e5fc/7ceafe79-81d0-4a69-aa4e-149c4490800b.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b0196b60-8cce-4ee0-a437-0cb99bc80649",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-007",
+    "name": "Нектар Сочная долина 0,95л Апельсин манго",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/b0196b60-8cce-4ee0-a437-0cb99bc80649/9412b9f8-121b-4631-8c74-2c265d3844c5.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "5ffd9593-d86b-42b1-a895-5341f6eb8f06",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-008",
+    "name": "Нектар Сочная долина 0,95л яблоко вишня черешня",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/5ffd9593-d86b-42b1-a895-5341f6eb8f06/e0df7533-9353-485b-ac73-494b23fc3dc5.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "998901d3-7b87-408e-9421-659a5712db6b",
+    "sku": "ZY-SOCHNAYADOLINA-950-CARTON-009",
+    "name": "Нектар Сочная долина 0,95л Виноградный микс",
+    "brand": "Сочная долина",
+    "volume_text": "950 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/998901d3-7b87-408e-9421-659a5712db6b/8975a467-4574-4a30-8819-168d0945b0f6.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "7698b384-fb23-49b0-8940-9990b286eced",
@@ -3323,9 +4808,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/7698b384-fb23-49b0-8940-9990b286eced/09ac345e-f337-4d63-8123-3c4e8de7f94a.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "e466a6de-472d-48a4-9714-93dd6e3ab733",
@@ -3336,9 +4820,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/e466a6de-472d-48a4-9714-93dd6e3ab733/2dc35a14-3370-4f06-9361-9d5e1eec11bf.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "f983fca7-b503-4e66-b468-0d0b51c263a1",
@@ -3349,9 +4832,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/f983fca7-b503-4e66-b468-0d0b51c263a1/22685ba4-a24b-4cde-a700-529596354313.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "72b68543-6420-40e7-8958-147cc62b6afa",
@@ -3362,9 +4844,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/72b68543-6420-40e7-8958-147cc62b6afa/813cbcee-aa6a-4f48-a47a-4acc0b4c4500.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "29386caa-6855-451d-a857-23294aca928f",
@@ -3375,9 +4856,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/29386caa-6855-451d-a857-23294aca928f/2602fe88-95d8-41b9-b986-327f3d016a38.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "27742b08-b8bb-4755-9449-2e95e3a46351",
@@ -3388,9 +4868,8 @@
     "package_type": "стекло",
     "image_url": "/uploads/products/27742b08-b8bb-4755-9449-2e95e3a46351/65b0906e-0d85-4ad5-940d-786c63774252.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "1f5faafb-5a9a-4289-b99e-903e248dd68f",
@@ -3401,9 +4880,8 @@
     "package_type": "ПЭТ",
     "image_url": "/uploads/products/1f5faafb-5a9a-4289-b99e-903e248dd68f/020dc149-ae6c-44bd-b2c8-ac963862f77c.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "445d4243-de10-498f-900a-c202bcd75c8a",
@@ -3414,9 +4892,392 @@
     "package_type": null,
     "image_url": "/uploads/products/445d4243-de10-498f-900a-c202bcd75c8a/8caab11a-e498-4897-afa0-6cf9c60bc67b.webp",
     "sales_status": "showcase",
-    "price_amount": null,
-    "availability": "on_order",
-    "is_active": true
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "6f41129f-d362-4966-8bbd-77d2d5997770",
+    "sku": "ZY-VIKO-1000-CARTON-001",
+    "name": "Сок Вико 1л апельсиновый",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/6f41129f-d362-4966-8bbd-77d2d5997770/cafae3d1-2293-4f6c-95da-713a0af8593a.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "dc5bdae0-ee10-408b-9e33-06c9a7efe579",
+    "sku": "ZY-VIKO-1000-CARTON-002",
+    "name": "Сок Вико 1л ананасовый",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/dc5bdae0-ee10-408b-9e33-06c9a7efe579/e3a5e035-9fb3-46c5-91d0-552fbbcda901.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "884b8f79-b0d0-4664-bb92-da78187ef04c",
+    "sku": "ZY-VIKO-1000-CARTON-003",
+    "name": "Сок Вико 1л вишневый",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/884b8f79-b0d0-4664-bb92-da78187ef04c/d9264fbb-a6e8-4aac-9bb8-05c2c27d1429.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "424d4c2a-a97e-4de6-9369-bb330dfcc003",
+    "sku": "ZY-VIKO-1000-CARTON-004",
+    "name": "Сок Вико 1л Мультифрукт",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/424d4c2a-a97e-4de6-9369-bb330dfcc003/ca1b3d20-2c49-40f3-9687-6e902db60e85.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "3128842a-38be-4f4d-b19a-aedf850da40d",
+    "sku": "ZY-VIKO-1000-CARTON-005",
+    "name": "Сок Вико 1л зеленое яблоко",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/3128842a-38be-4f4d-b19a-aedf850da40d/8363ab97-0a4d-42e6-ac14-6cc98838ce2f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "3eee236e-49e6-45c4-93ce-12306cd76746",
+    "sku": "ZY-VIKO-1000-CARTON-006",
+    "name": "Сок Вико 1л Гранатовый",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/3eee236e-49e6-45c4-93ce-12306cd76746/a4f0f1cc-608e-4f76-95f0-47f19eeae845.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "844ae23c-5b7d-45a5-adab-c691a7c0ec19",
+    "sku": "ZY-VIKO-1000-CARTON-007",
+    "name": "Сок Вико 1л персиковый",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/844ae23c-5b7d-45a5-adab-c691a7c0ec19/d9d1c737-3a96-47c1-ae1e-31c9c5d7ecd2.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "a0dbd07c-763e-4add-886c-913c82db1694",
+    "sku": "ZY-VIKO-1000-CARTON-008",
+    "name": "Сок Вико 1л виноградно яблочный",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/a0dbd07c-763e-4add-886c-913c82db1694/9f25fc7f-3dcb-44b4-b7b8-02c016bcd6df.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "cd11f09e-fbeb-4761-917a-cb9ad1f8d33d",
+    "sku": "ZY-VIKO-1000-CARTON-009",
+    "name": "Сок Вико 1л Апельсин манго",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/cd11f09e-fbeb-4761-917a-cb9ad1f8d33d/110ce97a-ff8a-4d1f-9a32-0045a072d4a5.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "b1d4c7f7-81bc-4e55-8370-974bf9897cff",
+    "sku": "ZY-VIKO-1000-CARTON-010",
+    "name": "Сок Вико 1л виноградный черный",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/b1d4c7f7-81bc-4e55-8370-974bf9897cff/48388874-da63-4639-8bcc-1a4b6388ad9f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "4cc5d64a-0771-4c4f-8f22-6db6878ffd22",
+    "sku": "ZY-VIKO-1000-CARTON-011",
+    "name": "Сок Вико 1л томатный",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/4cc5d64a-0771-4c4f-8f22-6db6878ffd22/b3d9ed8e-aa7e-4694-9007-fb21538cec8f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "614b6a64-8fdc-4d48-b9c1-be2b4c789982",
+    "sku": "ZY-VIKO-1000-CARTON-012",
+    "name": "Нектар Вико 1л абрикос",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/614b6a64-8fdc-4d48-b9c1-be2b4c789982/3b4815f0-bcaa-4737-8668-cbf6bbcd24d1.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c1757905-ef87-4375-8429-aec5ca11c2e5",
+    "sku": "ZY-VIKO-1000-CARTON-013",
+    "name": "Нектар Вико 1л банановый",
+    "brand": "Вико",
+    "volume_text": "1 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/c1757905-ef87-4375-8429-aec5ca11c2e5/34a805ae-a7aa-40ca-be74-63b4965c3cf7.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "7b13c1ca-65bc-40c7-95b5-0c73c377094f",
+    "sku": "ZY-VIKO-200-CARTON-001",
+    "name": "Сок Вико 0,2л апельсиновый",
+    "brand": "Вико",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/7b13c1ca-65bc-40c7-95b5-0c73c377094f/e3441432-f942-430a-9788-dfe1f20925a4.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "1252f1d0-114b-4f3c-8b38-f1a82e32d977",
+    "sku": "ZY-VIKO-200-CARTON-002",
+    "name": "Сок Вико 0,2л зеленое яблоко",
+    "brand": "Вико",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/1252f1d0-114b-4f3c-8b38-f1a82e32d977/47d0a342-cfc6-4ef3-9829-42c23b7d6716.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "698b5db1-4433-47f8-8a94-fd266ed021b6",
+    "sku": "ZY-VIKO-200-CARTON-003",
+    "name": "Сок Вико 0,2л персиковый",
+    "brand": "Вико",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/698b5db1-4433-47f8-8a94-fd266ed021b6/09fe9f6d-f8c5-4b47-b27c-ad656fd85ff8.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "4d360a65-4ace-4301-977c-289992a5efbd",
+    "sku": "ZY-VIKO-200-CARTON-004",
+    "name": "Сок Вико 0,2л вишневый",
+    "brand": "Вико",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/4d360a65-4ace-4301-977c-289992a5efbd/f84965b6-1770-4101-bc41-cbba40eaa7e9.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "d99596f9-3bd0-4a74-acf9-a287a86d44b4",
+    "sku": "ZY-VIKO-200-CARTON-005",
+    "name": "Сок Вико 0,2л Мультифрукт",
+    "brand": "Вико",
+    "volume_text": "200 мл",
+    "package_type": "картон",
+    "image_url": "/uploads/products/d99596f9-3bd0-4a74-acf9-a287a86d44b4/78eedba3-083e-49cd-9685-b88f25f6f16f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "6f4a1d48-2c5a-4480-9a51-d84009b4f971",
+    "sku": "ZY-VIKO-2000-CARTON-001",
+    "name": "Сок Вико 2л яблоко",
+    "brand": "Вико",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/6f4a1d48-2c5a-4480-9a51-d84009b4f971/10d553a2-c453-41f6-89d2-e625451272ba.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "16bc2375-b1fe-44dc-b130-aeed8a198e5e",
+    "sku": "ZY-VIKO-2000-CARTON-002",
+    "name": "Сок Вико 2л мультифрукт",
+    "brand": "Вико",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/16bc2375-b1fe-44dc-b130-aeed8a198e5e/6f65b396-beb8-4f0a-9d0b-913119daa3b1.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "6b27b933-69a4-485c-ad97-d107cae7b50f",
+    "sku": "ZY-VIKO-2000-CARTON-003",
+    "name": "Сок Вико 2л персик",
+    "brand": "Вико",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/6b27b933-69a4-485c-ad97-d107cae7b50f/9c75bd63-9ad4-4b90-bbf7-1e9a4db8690f.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "48cecfc6-a592-45d5-9365-e49a2968b78d",
+    "sku": "ZY-VIKO-2000-CARTON-004",
+    "name": "Нектар Вико 2л вишневый",
+    "brand": "Вико",
+    "volume_text": "2 л",
+    "package_type": "картон",
+    "image_url": "/uploads/products/48cecfc6-a592-45d5-9365-e49a2968b78d/871633a2-402a-4174-8622-070949a20b36.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "32281c06-4354-4dee-9e56-2405faf0f972",
+    "sku": "ZY-YAN-930-GLASS-001",
+    "name": "Нектар Yan ст/б 930мл Апельсин БЕЗ САХАРА",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/32281c06-4354-4dee-9e56-2405faf0f972/61adea64-54bc-4eaf-b6ac-822c494b8900.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "eee3cd05-96d8-41c6-8f6f-a56cab02c466",
+    "sku": "ZY-YAN-930-GLASS-002",
+    "name": "Нектар Yan ст/б 930мл Манго БЕЗ САХАРА",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/eee3cd05-96d8-41c6-8f6f-a56cab02c466/f905dfed-3cb2-482c-85f0-79c51a5b3a33.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "399b86be-d910-4cad-98ee-7c0f12613432",
+    "sku": "ZY-YAN-930-GLASS-003",
+    "name": "Нектар Yan ст/б 930мл Зеленый апельсин и лайм",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/399b86be-d910-4cad-98ee-7c0f12613432/32a1db4d-14b6-47c5-947d-99e2adcbb048.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "8bf0df03-ebeb-465a-916c-072abfd5a2f1",
+    "sku": "ZY-YAN-930-GLASS-004",
+    "name": "Нектар Yan ст/б 930мл Красный апельсин",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/8bf0df03-ebeb-465a-916c-072abfd5a2f1/07159b75-e10a-404f-a757-59a0e2a7e9ce.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "32453d8f-afb9-464f-9e49-c4c81df9adc8",
+    "sku": "ZY-YAN-930-GLASS-005",
+    "name": "Нектар Yan ст/б 930мл Тропический БЕЗ САХАРА",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/32453d8f-afb9-464f-9e49-c4c81df9adc8/9c137f38-54c4-45c8-abcb-388058b5a038.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "52a616b6-e28a-48f9-81f9-e193f68a0732",
+    "sku": "ZY-YAN-930-GLASS-006",
+    "name": "Нектар Yan ст/б 930мл Гранат яблоко прямой отжим БЕЗ САХАРА",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/52a616b6-e28a-48f9-81f9-e193f68a0732/f3e81982-9f14-4c34-8995-39aed14d595a.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "4674c209-4fde-4ca3-b368-30b11d9edc36",
+    "sku": "ZY-YAN-930-GLASS-007",
+    "name": "Нектар Yan ст/б 930мл Зеленое яблоко",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/4674c209-4fde-4ca3-b368-30b11d9edc36/32d9da75-32bc-49ce-b2e2-479636b0c6e2.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c79d97a1-afab-4773-94a1-1ca9d1cab134",
+    "sku": "ZY-YAN-930-GLASS-008",
+    "name": "Нектар Yan ст/б 930мл Яблоко БЕЗ САХАРА",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/c79d97a1-afab-4773-94a1-1ca9d1cab134/5aebba1a-8f30-41b0-80dc-44f331a3ffa8.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "c5822598-b1e3-45c3-8356-5a7b68bc3f7a",
+    "sku": "ZY-YAN-930-GLASS-009",
+    "name": "Нектар Yan ст/б 930мл Вишня",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/c5822598-b1e3-45c3-8356-5a7b68bc3f7a/58d484e4-9987-4f28-9822-93b1504921e0.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
+  },
+  {
+    "id": "30cc207f-2a5b-480b-a194-6ab3d60a2316",
+    "sku": "ZY-YAN-930-GLASS-010",
+    "name": "Нектар Yan ст/б 930мл Персик БЕЗ САХАРА",
+    "brand": "Yan",
+    "volume_text": "930 мл",
+    "package_type": "стекло",
+    "image_url": "/uploads/products/30cc207f-2a5b-480b-a194-6ab3d60a2316/1cffeec6-597a-42cb-ac6f-eb154e4933a6.webp",
+    "sales_status": "showcase",
+    "is_active": true,
+    "has_price": false
   },
   {
     "id": "c3bce895-29f4-4344-a798-5b287b8b4d8e",
@@ -3427,8 +5288,7 @@
     "package_type": null,
     "image_url": "/uploads/products/c3bce895-29f4-4344-a798-5b287b8b4d8e/83a646d6-77f5-43dd-9a76-6f1d0ae0c874.webp",
     "sales_status": "orderable",
-    "price_amount": 2028,
-    "availability": "in_stock",
-    "is_active": true
+    "is_active": true,
+    "has_price": true
   }
 ]

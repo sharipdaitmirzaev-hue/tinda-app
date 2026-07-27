@@ -178,6 +178,35 @@ npm run zelenoe-images:auto-review -- --root data/imports/zelenoe-yabloko-juice 
 
 Артефакты: `data/imports/zelenoe-yabloko-juice/`. Production / VPS / БД не менять.
 
+## Холодный чай и квас (локальный сбор)
+
+Категории:
+- https://zelenoeyabloko.ru/catalog/xolodnye-cai (`category_id=249`)
+- https://zelenoeyabloko.ru/catalog/kvas (`category_id=48`)
+- https://zelenoeyabloko.ru/catalog/bezalkogolnye-napitki (`category_id=49`, только холодный чай ICE BAR)
+
+Комбуча и «квасной напиток» в этих категориях не найдены.
+
+```bash
+npm run zy:scrape-tea-kvass
+npm run external-images:review -- \
+  --products data/imports/tinda_active_products.snapshot.json \
+  --candidates data/imports/zelenoe-yabloko-tea-kvass/candidates.flat.json \
+  --out data/imports/zelenoe-yabloko-tea-kvass/images-review.xlsx --skip-probe
+npm run zelenoe-images:download-all -- \
+  --candidates data/imports/zelenoe-yabloko-tea-kvass/candidates.json \
+  --review data/imports/zelenoe-yabloko-tea-kvass/images-review.xlsx \
+  --out-dir data/imports/zelenoe-yabloko-tea-kvass
+npm run zelenoe-images:gallery -- \
+  --out-dir data/imports/zelenoe-yabloko-tea-kvass \
+  --candidates data/imports/zelenoe-yabloko-tea-kvass/candidates.json \
+  --review data/imports/zelenoe-yabloko-tea-kvass/images-review.xlsx
+npm run zelenoe-images:auto-review -- \
+  --root data/imports/zelenoe-yabloko-tea-kvass --category tea-kvass
+```
+
+Артефакты: `data/imports/zelenoe-yabloko-tea-kvass/`. Production / VPS / БД не менять. Импорт не выполнять.
+
 Source: `data/imports/zelenoe-yabloko-images/approved-new-products.xlsx` (JSON parity used in container).
 
 ```bash
