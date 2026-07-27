@@ -1,0 +1,21 @@
+{
+  "total": 408,
+  "ready": 0,
+  "structure_ok_except_price": 253,
+  "needs_review": 389,
+  "excluded": 19,
+  "undefined_package_material": 150,
+  "units_unknown": 198,
+  "probable_duplicate_groups": 181,
+  "probable_duplicate_rows": 365,
+  "image_problems": 0,
+  "image_broken": 0,
+  "image_review": 0,
+  "test_batch": 50,
+  "test_batch_categories": {
+    "limonady": 18,
+    "gazirovannye-napitki": 10,
+    "kola": 18,
+    "toniki": 4
+  }
+}

@@ -15,6 +15,7 @@
     "db:studio": "prisma studio",
     "db:verify-clean": "node scripts/verify-clean-deploy.mjs",
     "import:metro-gazirovannye-draft": "node scripts/metro-gazirovannye-draft.mjs",
+    "import:metro-cleanup-review": "node scripts/metro-cleanup-review.mjs",
     "postinstall": "prisma generate",
     "test": "vitest run",
     "test:watch": "vitest",
