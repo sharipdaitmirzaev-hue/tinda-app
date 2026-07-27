@@ -9,6 +9,7 @@ import {
 import { check_qty } from "@/lib/quantity";
 import { format_date_only, parse_date_only, today_date_key } from "@/lib/dates";
 import {
+  assert_non_negative_money,
   calc_line_total,
   money_round,
   money_to_number,
@@ -106,6 +107,15 @@ function build_order_item_money(
 ) {
   const unit_price = money_round(product.price_amount);
   const line_total = calc_line_total(unit_price, qty);
+  assert_non_negative_money(unit_price, "unit_price");
+  assert_non_negative_money(line_total, "line_total");
+  if (unit_price.lte(0)) {
+    throw new AppError(
+      400,
+      "validation_error",
+      "Некорректная цена товара для заказа",
+    );
+  }
   return {
     unit_price,
     currency: product.price_currency || "RUB",
@@ -117,6 +127,9 @@ function build_order_totals(line_totals: Array<Decimal | string | number>) {
   const subtotal = sum_money(line_totals);
   const delivery_total = money_round(0);
   const total = sum_money([subtotal, delivery_total]);
+  assert_non_negative_money(subtotal, "subtotal");
+  assert_non_negative_money(delivery_total, "delivery_total");
+  assert_non_negative_money(total, "total");
   return { subtotal, delivery_total, total };
 }
 

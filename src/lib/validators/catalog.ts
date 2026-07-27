@@ -85,20 +85,29 @@ export const product_create_schema = product_fields_schema
     is_active: z.boolean().default(true),
     price_currency: z.literal("RUB").default("RUB"),
   })
-  .refine((data) => !data.is_active || data.price_amount !== undefined, {
-    message: "Укажите цену для активного товара",
+  .refine((data) => !data.is_active || data.price_amount > 0, {
+    message: "Цена активного товара должна быть больше нуля",
     path: ["price_amount"],
   });
 
 export const product_update_schema = product_fields_schema
   .partial()
   .superRefine((data, ctx) => {
-    // When is_active becomes true without price_amount, the service checks the
-    // existing product row. Only validate an explicitly provided amount here.
     if (data.price_amount !== undefined && data.price_amount < 0) {
       ctx.addIssue({
         code: "custom",
         message: "Цена не может быть отрицательной",
+        path: ["price_amount"],
+      });
+    }
+    if (
+      data.is_active === true &&
+      data.price_amount !== undefined &&
+      data.price_amount <= 0
+    ) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Цена активного товара должна быть больше нуля",
         path: ["price_amount"],
       });
     }

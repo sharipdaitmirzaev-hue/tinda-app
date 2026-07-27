@@ -16,6 +16,7 @@ import {
 } from "@/lib/catalog/product-serializers";
 import {
   assert_non_negative_price,
+  assert_positive_price_for_active,
   money_round,
   type MoneyInput,
 } from "@/lib/money";
@@ -42,12 +43,17 @@ function assert_valid_price_amount(amount: MoneyInput, label = "Цена") {
   }
 }
 
-/** Active products must have a non-negative price (create/update/activate). */
+/** Active products must have price_amount > 0. */
 function assert_price_when_active(input: {
   is_active: boolean;
   price_amount: MoneyInput | null | undefined;
 }) {
-  if (!input.is_active) return;
+  if (!input.is_active) {
+    if (input.price_amount !== null && input.price_amount !== undefined) {
+      assert_valid_price_amount(input.price_amount);
+    }
+    return;
+  }
   if (input.price_amount === null || input.price_amount === undefined) {
     throw new AppError(
       400,
@@ -55,7 +61,15 @@ function assert_price_when_active(input: {
       "Укажите цену для активного товара",
     );
   }
-  assert_valid_price_amount(input.price_amount);
+  try {
+    assert_positive_price_for_active(input.price_amount);
+  } catch (error) {
+    throw new AppError(
+      400,
+      "validation_error",
+      error instanceof Error ? error.message : "Укажите цену больше нуля",
+    );
+  }
 }
 
 function sort_to_order(

@@ -152,6 +152,8 @@ describe("orders E1.9", () => {
           availability: data.availability ?? "in_stock",
           is_active: data.is_active ?? true,
           image_url: null,
+          price_amount: 150,
+          price_currency: "RUB",
         },
       });
       cleanup_product_ids.push(product.id);

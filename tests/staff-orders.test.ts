@@ -161,6 +161,8 @@ describe("staff orders E1.11", () => {
           allow_piece_sale: false,
           availability: "in_stock",
           is_active: true,
+          price_amount: 120,
+          price_currency: "RUB",
         },
       });
       cleanup_product_ids.push(product.id);

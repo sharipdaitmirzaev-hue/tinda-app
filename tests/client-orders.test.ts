@@ -106,6 +106,8 @@ describe("client orders E1.10", () => {
           allow_piece_sale: false,
           availability: data.availability ?? "in_stock",
           is_active: data.is_active ?? true,
+          price_amount: 110,
+          price_currency: "RUB",
         },
       });
       cleanup_product_ids.push(product.id);

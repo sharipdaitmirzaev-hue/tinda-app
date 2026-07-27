@@ -83,13 +83,13 @@ export async function import_product_prices_from_workbook(
     }
 
     const price = parse_price_amount(price_raw);
-    if (price === null) {
+    if (price === null || price.lte(0)) {
       results.push({
         row: row_number,
         sku,
         price_amount: price_raw || null,
         ok: false,
-        error: "Пустая или неправильная цена (price_amount)",
+        error: "Пустая или неправильная цена (price_amount должен быть > 0)",
       });
       continue;
     }

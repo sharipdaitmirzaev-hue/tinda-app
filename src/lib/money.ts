@@ -34,3 +34,19 @@ export function assert_non_negative_price(amount: MoneyInput, label = "Цена"
     throw new Error(`${label} не может быть отрицательной`);
   }
 }
+
+/** Money fields that must never go below zero (prices and order totals). */
+export function assert_non_negative_money(amount: MoneyInput, label: string) {
+  assert_non_negative_price(amount, label);
+}
+
+/** Active catalog products require a strictly positive wholesale price. */
+export function assert_positive_price_for_active(
+  amount: MoneyInput,
+  label = "Цена",
+) {
+  const value = to_decimal(amount);
+  if (value.lte(0)) {
+    throw new Error(`${label} активного товара должна быть больше нуля`);
+  }
+}
