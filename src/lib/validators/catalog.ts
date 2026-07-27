@@ -182,29 +182,20 @@ export const staff_products_query_schema = z.object({
 
 export const catalog_products_query_schema = z.object({
   q: z.string().trim().max(200).optional(),
+  /** Category UUID or slug. Prefer over legacy category_id. */
+  category: z.string().trim().min(1).max(150).optional(),
   category_id: z.string().uuid().optional(),
+  brand: z.string().trim().min(1).max(150).optional(),
+  volume: z.string().trim().min(1).max(100).optional(),
+  package_type: z.string().trim().min(1).max(100).optional(),
   availability: z.enum(AVAILABILITY_VALUES).optional(),
   sales_status: z.enum(SALES_STATUS_VALUES).optional(),
-  is_promo: z
-    .enum(["true", "false"])
-    .optional()
-    .transform((value) =>
-      value === undefined ? undefined : value === "true",
-    ),
-  is_new: z
-    .enum(["true", "false"])
-    .optional()
-    .transform((value) =>
-      value === undefined ? undefined : value === "true",
-    ),
-  is_hit: z
-    .enum(["true", "false"])
-    .optional()
-    .transform((value) =>
-      value === undefined ? undefined : value === "true",
-    ),
+  is_promo: optional_bool_query,
+  is_new: optional_bool_query,
+  is_hit: optional_bool_query,
+  has_price: optional_bool_query,
   page: z.coerce.number().int().min(1).default(1),
-  page_size: z.coerce.number().int().min(1).max(100).default(20),
+  page_size: z.coerce.number().int().min(1).max(100).default(24),
   sort: z.enum(PRODUCT_SORT_OPTIONS).default("name_asc"),
 });
 

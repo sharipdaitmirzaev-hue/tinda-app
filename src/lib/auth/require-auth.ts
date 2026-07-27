@@ -78,7 +78,7 @@ export async function require_client_area(): Promise<AuthUserPayload> {
 
 /**
  * Public catalog pages: guests and any client status may browse.
- * Staff are redirected to the staff product list. Guests return null.
+ * Catalog editors may browse public cards (edit deep-link). Guests return null.
  */
 export async function require_public_catalog(): Promise<AuthUserPayload | null> {
   const payload = await get_current_auth_payload();
