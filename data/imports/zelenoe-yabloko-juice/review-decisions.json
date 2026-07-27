@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-27T15:41:24.725Z",
+  "generated_at": "2026-07-27T15:41:36.726Z",
   "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
   "counts": {
     "approved_existing": 0,
-    "approved_new": 46,
-    "needs_review": 165,
-    "rejected": 19
+    "approved_new": 50,
+    "needs_review": 171,
+    "rejected": 9
   },
   "approved_existing_skus": [],
   "needs_review_brief": [
@@ -285,6 +285,16 @@
       ]
     },
     {
+      "source_index": 41,
+      "source_name": "Сок Вико 1л виноградно яблочный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 44,
       "source_name": "Сок Вико 2л персик",
       "match_status": "new_product",
@@ -441,6 +451,16 @@
     {
       "source_index": 64,
       "source_name": "Нектар Вико 2л вишневый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 65,
+      "source_name": "Нектар Добрый 1л Виноград",
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
@@ -629,6 +649,16 @@
     {
       "source_index": 93,
       "source_name": "Сок J7 0,97л Ананас с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 94,
+      "source_name": "Сок Вико 1л виноградный черный",
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
@@ -1094,6 +1124,16 @@
       ]
     },
     {
+      "source_index": 164,
+      "source_name": "Нектар Сочная долина 0,95л Виноградный микс",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 165,
       "source_name": "Нектар Сочная долина 0,95л гранат ананас яблоко",
       "match_status": "new_product",
@@ -1378,6 +1418,16 @@
       ]
     },
     {
+      "source_index": 201,
+      "source_name": "Сок Дары Кубани 0,2л яблочно-виноградный осветл",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 202,
       "source_name": "Нектар Дары Кубани 0,2л Яблочный",
       "match_status": "new_product",
@@ -1581,6 +1631,16 @@
     {
       "source_index": 223,
       "source_name": "Нектар Агуша 200мл Яблоко-Вишня осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 224,
+      "source_name": "Нектар Маленькое счастье Маши и Медведь Яблоко-Виноград 0,2л",
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
@@ -2762,14 +2822,24 @@
       "height": 600,
       "sha256": "343f55652b0a2ea36f59809365d5ea24071e60f0e8c0418f0ab5f5c1ae8b64da",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "approved_new",
+      "review_comment": "Авто: new_product, атрибуты распознаны, нет near-дубля в ТИНДА, фото≥500. proposed_sku=ZY-IRIB-750-GLASS-008. Товар ещё не создан — только кандидат.",
+      "auto_review_confidence": 0.78,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "package_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_juice"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [],
+      "decision_reason": "approved_new_clean_candidate"
     },
     {
       "source_index": 34,
@@ -3045,14 +3115,26 @@
       "height": 550,
       "sha256": "edff6d097c21cf58db10b5d34fb235acac064aa2b1dfdf7fc2e2bf387ac33665",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "needs_review",
+      "review_comment": "Авто: new_product, нужна ручная проверка (package_missing, package_undetermined)",
+      "auto_review_confidence": 0.58,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_juice"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ],
+      "decision_reason": "needs_review_new_incomplete"
     },
     {
       "source_index": 42,
@@ -3829,14 +3911,26 @@
       "height": 1024,
       "sha256": "9ca38ccd357b9fbd3cd7c7716c1458ba3c293135e847b5ccef48ca04f9e4b073",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "needs_review",
+      "review_comment": "Авто: new_product, нужна ручная проверка (package_missing, package_undetermined)",
+      "auto_review_confidence": 0.58,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_nectar"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ],
+      "decision_reason": "needs_review_new_incomplete"
     },
     {
       "source_index": 66,
@@ -4815,14 +4909,26 @@
       "height": 550,
       "sha256": "b61fa37ed78b41b5c181bdd015f74c485ebc3a2913fc8746b921c594209aaff3",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "needs_review",
+      "review_comment": "Авто: new_product, нужна ручная проверка (package_missing, package_undetermined)",
+      "auto_review_confidence": 0.58,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_juice"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ],
+      "decision_reason": "needs_review_new_incomplete"
     },
     {
       "source_index": 95,
@@ -5896,14 +6002,24 @@
       "height": 1024,
       "sha256": "a569aac3200de6ef0954eda0813a5666e14fedf1a73734e20a657456379c9aed",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "approved_new",
+      "review_comment": "Авто: new_product, атрибуты распознаны, нет near-дубля в ТИНДА, фото≥500. proposed_sku=ZY-KIKUNI-750-GLASS-003. Товар ещё не создан — только кандидат.",
+      "auto_review_confidence": 0.78,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "package_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_juice"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [],
+      "decision_reason": "approved_new_clean_candidate"
     },
     {
       "source_index": 126,
@@ -6533,14 +6649,24 @@
       "height": 1024,
       "sha256": "36e1b844e980a46f13287d21805a31829c0ee2be8b0b7ec08a57f724c20e8c99",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "approved_new",
+      "review_comment": "Авто: new_product, атрибуты распознаны, нет near-дубля в ТИНДА, фото≥500. proposed_sku=ZY-GUNIB-750-GLASS-004. Товар ещё не создан — только кандидат.",
+      "auto_review_confidence": 0.78,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "package_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_juice"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [],
+      "decision_reason": "approved_new_clean_candidate"
     },
     {
       "source_index": 144,
@@ -7270,14 +7396,26 @@
       "height": 500,
       "sha256": "a666029fa9b507705aa173ba5d14af0024afc14c38e23ffb70c153448483bdaf",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "needs_review",
+      "review_comment": "Авто: new_product, нужна ручная проверка (package_missing, package_undetermined)",
+      "auto_review_confidence": 0.58,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_nectar"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ],
+      "decision_reason": "needs_review_new_incomplete"
     },
     {
       "source_index": 165,
@@ -8342,14 +8480,25 @@
       "height": 650,
       "sha256": "cc97d96bc8859cbeab503e651f103b9121affa1921b0db0bd8f8370992f73b34",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "approved_new",
+      "review_comment": "Авто: new_product, атрибуты распознаны, нет near-дубля в ТИНДА, фото≥500. proposed_sku=ZY-AGUSHA-300-PET-002. Товар ещё не создан — только кандидат.",
+      "auto_review_confidence": 0.78,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "package_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_juice_drink",
+        "kids_line"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [],
+      "decision_reason": "approved_new_clean_candidate"
     },
     {
       "source_index": 196,
@@ -8543,14 +8692,28 @@
       "height": 1023,
       "sha256": "e8474dcc138b06adbb6a8bcccbb72e333f0955e18909846d79b0125294bc5ec7",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "needs_review",
+      "review_comment": "Авто: new_product, нужна ручная проверка (package_missing, package_undetermined)",
+      "auto_review_confidence": 0.58,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_juice",
+        "kids_line",
+        "clarified"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ],
+      "decision_reason": "needs_review_new_incomplete"
     },
     {
       "source_index": 202,
@@ -9400,14 +9563,27 @@
       "height": 1023,
       "sha256": "5ee601cf8d0286d84c78cc46491b76504cd3ecf75ae5d7398dc1fe82e630d482",
       "auto_reviewed": true,
-      "review_status": "rejected",
-      "review_comment": "Авто: excluded-категория / не целевой напиток",
-      "auto_review_confidence": 0.85,
-      "matched_features": [],
-      "mismatches": [
-        "excluded_category"
+      "review_status": "needs_review",
+      "review_comment": "Авто: new_product, нужна ручная проверка (package_missing, package_undetermined)",
+      "auto_review_confidence": 0.58,
+      "matched_features": [
+        "brand_parsed",
+        "name_present",
+        "flavor_present",
+        "volume_parsed",
+        "size_ge_500",
+        "image_opens",
+        "no_watermark_detected",
+        "no_tinda_near_match",
+        "category_juice_slug",
+        "product_type_nectar",
+        "kids_line"
       ],
-      "decision_reason": "rejected_excluded_category"
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ],
+      "decision_reason": "needs_review_new_incomplete"
     },
     {
       "source_index": 225,

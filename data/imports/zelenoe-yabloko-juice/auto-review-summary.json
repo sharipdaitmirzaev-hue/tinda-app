@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-27T15:41:24.725Z",
+  "generated_at": "2026-07-27T15:41:36.726Z",
   "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
   "counts": {
     "approved_existing": 0,
-    "approved_new": 46,
-    "needs_review": 165,
-    "rejected": 19
+    "approved_new": 50,
+    "needs_review": 171,
+    "rejected": 9
   },
   "approved_existing_skus": [],
   "needs_review_brief": [
@@ -285,6 +285,16 @@
       ]
     },
     {
+      "source_index": 41,
+      "source_name": "Сок Вико 1л виноградно яблочный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 44,
       "source_name": "Сок Вико 2л персик",
       "match_status": "new_product",
@@ -441,6 +451,16 @@
     {
       "source_index": 64,
       "source_name": "Нектар Вико 2л вишневый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 65,
+      "source_name": "Нектар Добрый 1л Виноград",
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
@@ -629,6 +649,16 @@
     {
       "source_index": 93,
       "source_name": "Сок J7 0,97л Ананас с мякотью",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 94,
+      "source_name": "Сок Вико 1л виноградный черный",
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [
@@ -1094,6 +1124,16 @@
       ]
     },
     {
+      "source_index": 164,
+      "source_name": "Нектар Сочная долина 0,95л Виноградный микс",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 165,
       "source_name": "Нектар Сочная долина 0,95л гранат ананас яблоко",
       "match_status": "new_product",
@@ -1378,6 +1418,16 @@
       ]
     },
     {
+      "source_index": 201,
+      "source_name": "Сок Дары Кубани 0,2л яблочно-виноградный осветл",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
       "source_index": 202,
       "source_name": "Нектар Дары Кубани 0,2л Яблочный",
       "match_status": "new_product",
@@ -1581,6 +1631,16 @@
     {
       "source_index": 223,
       "source_name": "Нектар Агуша 200мл Яблоко-Вишня осветленный",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 224,
+      "source_name": "Нектар Маленькое счастье Маши и Медведь Яблоко-Виноград 0,2л",
       "match_status": "new_product",
       "reason": "needs_review_new_incomplete",
       "mismatches": [

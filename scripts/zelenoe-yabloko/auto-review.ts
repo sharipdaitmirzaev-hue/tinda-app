@@ -116,8 +116,8 @@ const CATEGORY_MODE = (() => {
 /** Soft-drinks auto-review excludes energy; energy/juice modes keep their products. */
 const EXCLUDED =
   CATEGORY_MODE === "energy" || CATEGORY_MODE === "juice"
-    ? /(пиво|вино|водк|алкогол|виски|коньяк|шампан|сидр|бакалея|чипсы|снек|йогурт|молоко|хлеб)/i
-    : /(пиво|вино|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)/i;
+    ? /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|бакалея|чипсы|снек|йогурт|молоко|хлеб)|(?<!град)вино(?!град)/i
+    : /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)|(?<!град)вино(?!град)/i;
 
 const ENERGY_HINT =
   /(энергет|energy\s*drink|\bburn\b|\bберн\b|red\s*bull|monster|adrenaline|flash|drive\s*me|gorilla|tornado|lit\s*energy|jaguar|battery)/i;
