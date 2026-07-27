@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
 import { ProductStatusBadges } from "@/components/catalog/product-status-badges";
 import {
@@ -38,7 +38,16 @@ export type CatalogProduct = {
   price?: { amount: number; currency: string; unit: string } | null;
 };
 
-export function CatalogProductCard({ product }: { product: CatalogProduct }) {
+export function CatalogProductCard({
+  product,
+  on_quick_view,
+}: {
+  product: CatalogProduct;
+  on_quick_view?: (
+    product_id: string,
+    trigger: HTMLButtonElement | null,
+  ) => void;
+}) {
   const viewer = useCatalogViewer();
   const can_edit = useCanEditCatalog();
   const { add_from_catalog, toast, pending } = useAddToServerCart();
@@ -46,6 +55,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
   const guest = viewer === "guest";
   const sales_status = product.sales_status || "showcase";
   const can_cart = Boolean(approved && product.can_add_to_cart);
+  const quick_view_ref = useRef<HTMLButtonElement>(null);
   const [interest, set_interest] = useState<"interest" | "price_request" | null>(
     null,
   );
@@ -181,7 +191,27 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           >
             Подробнее
           </Link>
-          {action}
+          {action || on_quick_view ? (
+            <div className="flex flex-wrap items-stretch gap-2">
+              {action ? (
+                <div className="min-w-0 flex-1 [&>button]:w-full">{action}</div>
+              ) : null}
+              {on_quick_view ? (
+                <button
+                  ref={quick_view_ref}
+                  type="button"
+                  data-testid="quick-view-button"
+                  onClick={() =>
+                    on_quick_view(product.id, quick_view_ref.current)
+                  }
+                  className="min-h-10 shrink-0 rounded-md border border-slate-300 px-2 py-2 text-xs text-slate-800 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700 sm:px-3 sm:text-sm"
+                >
+                  <span className="sm:hidden">Просмотр</span>
+                  <span className="hidden sm:inline">Быстрый просмотр</span>
+                </button>
+              ) : null}
+            </div>
+          ) : null}
           {can_edit ? (
             <Link
               href={`/staff/products/${product.id}`}

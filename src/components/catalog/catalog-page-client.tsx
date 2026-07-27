@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -19,7 +20,19 @@ import {
   CATALOG_SORT_LABELS,
 } from "@/lib/catalog/constants";
 import { clampCatalogPage } from "@/lib/catalog/pagination";
+import {
+  buildCatalogHrefWithQuickView,
+  readQuickViewId,
+} from "@/lib/catalog/quick-view-url";
 import { useCatalogViewer } from "@/components/catalog/catalog-viewer-context";
+
+const CatalogQuickView = dynamic(
+  () =>
+    import("@/components/catalog/catalog-quick-view").then(
+      (mod) => mod.CatalogQuickView,
+    ),
+  { ssr: false },
+);
 
 type CategoryNode = {
   id: string;
@@ -81,6 +94,7 @@ export function CatalogPageClient() {
   const sort = search_params.get("sort") || "name_asc";
   const page = Number(search_params.get("page") || "1");
   const page_size = Number(search_params.get("page_size") || "24");
+  const quick_view_id = readQuickViewId(search_params);
 
   const [categories, set_categories] = useState<CategoryNode[]>([]);
   const [items, set_items] = useState<CatalogProduct[]>([]);
@@ -98,6 +112,7 @@ export function CatalogPageClient() {
   const [filters_open, set_filters_open] = useState(false);
   const catalog_top_ref = useRef<HTMLElement | null>(null);
   const prev_page_ref = useRef(page);
+  const quick_view_return_focus_ref = useRef<HTMLElement | null>(null);
 
   const flat_categories = useMemo(
     () => flatten_categories(categories),
@@ -243,6 +258,22 @@ export function CatalogPageClient() {
     set_filters_open(false);
     router.push("/catalog");
   }
+
+  const open_quick_view = useCallback(
+    (product_id: string, trigger: HTMLButtonElement | null) => {
+      quick_view_return_focus_ref.current = trigger;
+      router.push(buildCatalogHrefWithQuickView(search_params, product_id), {
+        scroll: false,
+      });
+    },
+    [router, search_params],
+  );
+
+  const close_quick_view = useCallback(() => {
+    router.push(buildCatalogHrefWithQuickView(search_params, null), {
+      scroll: false,
+    });
+  }, [router, search_params]);
 
   const filter_controls = (
     <div className="space-y-3">
@@ -535,7 +566,11 @@ export function CatalogPageClient() {
 
             <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3 xl:grid-cols-4">
               {items.map((product) => (
-                <CatalogProductCard key={product.id} product={product} />
+                <CatalogProductCard
+                  key={product.id}
+                  product={product}
+                  on_quick_view={open_quick_view}
+                />
               ))}
             </div>
 
@@ -586,6 +621,15 @@ export function CatalogPageClient() {
             {filter_controls}
           </div>
         </div>
+      ) : null}
+
+      {quick_view_id ? (
+        <CatalogQuickView
+          product_id={quick_view_id}
+          on_close={close_quick_view}
+          return_focus_el={quick_view_return_focus_ref.current}
+          has_product_page
+        />
       ) : null}
     </div>
   );
