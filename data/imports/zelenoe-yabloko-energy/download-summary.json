@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-27T15:21:54.830Z",
+  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-energy/candidates.json",
+  "candidates_count": 5,
+  "urls_processed": 5,
+  "downloaded_ok": 5,
+  "errors": 0,
+  "duplicates_sha256": 0,
+  "below_500": 0,
+  "total_original_bytes": 367614,
+  "original_dir": "/workspace/data/imports/zelenoe-yabloko-energy/original",
+  "preview_dir": "/workspace/data/imports/zelenoe-yabloko-energy/previews",
+  "manifest_path": "/workspace/data/imports/zelenoe-yabloko-energy/manifest.json",
+  "gallery_path": "/workspace/data/imports/zelenoe-yabloko-energy/gallery.html",
+  "production_changed": false,
+  "images_uploaded": false,
+  "image_url_changed": false
+}

@@ -1,0 +1,907 @@
+{
+  "generated_at": "2026-07-27T20:09:56.790Z",
+  "mode": "apply",
+  "backup_path": "/var/backups/tinda/tinda-pre-remaining-drinks-categories-20260727T200904Z.dump",
+  "source": "/app/tmp/zelenoe-rd-apply/approved-new-import-batch.json",
+  "uploads_root": "/app/public/uploads",
+  "expected_rows": 9,
+  "row_count": 9,
+  "note": "Create-only import of approved_new Zelenoe remaining drinks (Barbican/Vast/Angry Animal). May create bezalkogolnye-napitki + solodovye-napitki if missing. Never creates toniki. No schema change. package_requires_review has no DB column — SKU list recorded below. Existing products untouched.",
+  "package_requires_review": true,
+  "package_requires_review_detail": {
+    "field_in_schema": false,
+    "flag_value": true,
+    "skus": [
+      "ZY-BARBICAN-330-GLASS-001",
+      "ZY-BARBICAN-330-GLASS-002",
+      "ZY-BARBICAN-330-GLASS-003",
+      "ZY-BARBICAN-330-GLASS-004",
+      "ZY-BARBICAN-330-GLASS-005",
+      "ZY-BARBICAN-330-GLASS-006",
+      "ZY-BARBICAN-330-GLASS-007",
+      "ZY-VAST-330-CAN-001",
+      "ZY-ANGRYANIMAL-700-PET-001"
+    ],
+    "count": 9,
+    "note": "Transport packaging (units_per_package) requires clarification; units_per_package forced to 1."
+  },
+  "categories_ensure": {
+    "ensured": true,
+    "created": [
+      {
+        "id": "48e25a59-ac17-47f7-8606-90987217b672",
+        "slug": "bezalkogolnye-napitki",
+        "name": "Безалкогольные напитки",
+        "is_active": true,
+        "parent_id": null,
+        "sort_order": 7
+      },
+      {
+        "id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "slug": "solodovye-napitki",
+        "name": "Солодовые напитки",
+        "is_active": true,
+        "parent_id": null,
+        "sort_order": 8
+      }
+    ],
+    "already_existed": [],
+    "skipped_toniki": true,
+    "note": "Categories created during preview --ensure-categories; apply found them already existed.",
+    "apply_phase": {
+      "ensured": true,
+      "created": [],
+      "already_existed": [
+        {
+          "id": "48e25a59-ac17-47f7-8606-90987217b672",
+          "slug": "bezalkogolnye-napitki",
+          "name": "Безалкогольные напитки",
+          "is_active": true
+        },
+        {
+          "id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+          "slug": "solodovye-napitki",
+          "name": "Солодовые напитки",
+          "is_active": true
+        }
+      ],
+      "skipped_toniki": true,
+      "note": "Only bezalkogolnye-napitki and solodovye-napitki may be created. toniki must already exist."
+    }
+  },
+  "category_mapping": {
+    "malt_drink": "solodovye-napitki",
+    "non_alcoholic_drink": "bezalkogolnye-napitki",
+    "tonic_drink": "toniki"
+  },
+  "category_fallbacks": {
+    "malt_drink": [
+      "solodovye-napitki"
+    ],
+    "non_alcoholic_drink": [
+      "bezalkogolnye-napitki"
+    ],
+    "tonic_drink": [
+      "toniki"
+    ]
+  },
+  "categories": {
+    "solodovye-napitki": {
+      "id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "slug": "solodovye-napitki",
+      "name": "Солодовые напитки",
+      "is_active": true,
+      "parent_id": null
+    },
+    "bezalkogolnye-napitki": {
+      "id": "48e25a59-ac17-47f7-8606-90987217b672",
+      "slug": "bezalkogolnye-napitki",
+      "name": "Безалкогольные напитки",
+      "is_active": true,
+      "parent_id": null
+    },
+    "toniki": {
+      "id": "4b7107be-e187-4e10-805a-13e801d9f484",
+      "slug": "toniki",
+      "name": "Тоники",
+      "is_active": true,
+      "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+    }
+  },
+  "category_structure": {
+    "relevant": [
+      {
+        "id": "48e25a59-ac17-47f7-8606-90987217b672",
+        "slug": "bezalkogolnye-napitki",
+        "name": "Безалкогольные напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "slug": "energeticheskie-napitki",
+        "name": "Энергетические напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71",
+        "slug": "gazirovannye-napitki",
+        "name": "Газированные напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "464d40db-1b2c-46ff-aa01-5634578c2a83",
+        "slug": "gazirovka",
+        "name": "Газировка",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "88192b93-0ce7-4b67-b6a5-9cb208a17bbb",
+        "slug": "kholodnyy-chay",
+        "name": "Холодный чай",
+        "is_active": true,
+        "parent_id": "1a87141a-5d11-4809-9596-441c87567bd2"
+      },
+      {
+        "id": "1a87141a-5d11-4809-9596-441c87567bd2",
+        "slug": "kholodnyy-chay-i-kofe",
+        "name": "Холодный чай и кофе",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "e1f3f5b4-7b79-4652-8989-82d30cff34a1",
+        "slug": "kvas",
+        "name": "Квас",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "9527dec2-5a87-4a6b-b4c5-b8001d13d351",
+        "slug": "sokosoderzhashchie-napitki",
+        "name": "Сокосодержащие напитки",
+        "is_active": true,
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b"
+      },
+      {
+        "id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "slug": "solodovye-napitki",
+        "name": "Солодовые напитки",
+        "is_active": true,
+        "parent_id": null
+      },
+      {
+        "id": "4b7107be-e187-4e10-805a-13e801d9f484",
+        "slug": "toniki",
+        "name": "Тоники",
+        "is_active": true,
+        "parent_id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+      },
+      {
+        "id": "81730d5f-f669-4ea0-b6af-e0f7d645a8fa",
+        "slug": "voda-gazirovannaya",
+        "name": "Газированная вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      },
+      {
+        "id": "977a592b-8d39-4bac-afe4-a7d17687657d",
+        "slug": "voda-negazirovannaya",
+        "name": "Негазированная вода",
+        "is_active": true,
+        "parent_id": "c92083fe-33e7-4d86-a15d-3ce1f130572d"
+      }
+    ]
+  },
+  "product_type_distribution": {
+    "malt_drink": 7,
+    "non_alcoholic_drink": 1,
+    "tonic_drink": 1
+  },
+  "category_distribution": {
+    "solodovye-napitki": 7,
+    "bezalkogolnye-napitki": 1,
+    "toniki": 1
+  },
+  "preview_checks": {
+    "candidate_count": 9,
+    "expected": 9,
+    "unique_proposed_sku": 9,
+    "batch_internal_sku_dupes": 0,
+    "brand_defined": true,
+    "flavor_defined": true,
+    "volume_defined": true,
+    "package_defined": true,
+    "product_type_defined": true,
+    "preview_ok": 9,
+    "preview_failed": 0,
+    "all_images_readable": true,
+    "all_mime_allowed": true
+  },
+  "counts": {
+    "preview_ok": null,
+    "preview_failed": null,
+    "created": 9,
+    "skipped": 0,
+    "failed": 0,
+    "images_uploaded": 9
+  },
+  "created_by_product_type": {
+    "malt_drink": 7,
+    "non_alcoholic_drink": 1,
+    "tonic_drink": 1
+  },
+  "created_by_category": {
+    "solodovye-napitki": 7,
+    "bezalkogolnye-napitki": 1,
+    "toniki": 1
+  },
+  "before": {
+    "products_total": 446,
+    "showcase_active": 431,
+    "orderable_active": 13,
+    "no_price": 431,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "after": {
+    "products_total": 455,
+    "showcase_active": 440,
+    "orderable_active": 13,
+    "no_price": 440,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "guards": {
+    "orders_unchanged": true,
+    "order_items_unchanged": true,
+    "clients_unchanged": true,
+    "interest_unchanged": true,
+    "orderable_active_unchanged": true,
+    "orderable_price_drift": [],
+    "products_delta": 9,
+    "all_new_image_urls_local": true
+  },
+  "created_skus": [
+    "ZY-BARBICAN-330-GLASS-001",
+    "ZY-BARBICAN-330-GLASS-002",
+    "ZY-BARBICAN-330-GLASS-003",
+    "ZY-BARBICAN-330-GLASS-004",
+    "ZY-BARBICAN-330-GLASS-005",
+    "ZY-BARBICAN-330-GLASS-006",
+    "ZY-BARBICAN-330-GLASS-007",
+    "ZY-VAST-330-CAN-001",
+    "ZY-ANGRYANIMAL-700-PET-001"
+  ],
+  "items": [
+    {
+      "row": 2,
+      "source_index": 3,
+      "source_name": "Напиток Barbican Malt ячмень ст 330мл",
+      "brand": "Barbican",
+      "flavor": "classic",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "product_type": "malt_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/28253",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/03_barbican_napitok-barbican-malt-yachmen-st-330ml_330ml.webp",
+      "proposed_sku": "ZY-BARBICAN-330-GLASS-001",
+      "category_slug": "solodovye-napitki",
+      "category_slug_candidates": [
+        "solodovye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "499aad7e4cb967c769c420364cfd289ae36e2a9d091f984556d0c53198ad5306",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/03_barbican_napitok-barbican-malt-yachmen-st-330ml_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 12494,
+      "image_sha256": "499aad7e4cb967c769c420364cfd289ae36e2a9d091f984556d0c53198ad5306",
+      "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "69ec9217-5099-4d7f-8fb2-65337eb971cd",
+      "image_url": "/uploads/products/69ec9217-5099-4d7f-8fb2-65337eb971cd/2208fc69-821c-4129-af5d-a4fd6ce3f5dc.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.214Z",
+      "db": {
+        "id": "69ec9217-5099-4d7f-8fb2-65337eb971cd",
+        "sku": "ZY-BARBICAN-330-GLASS-001",
+        "name": "Напиток Barbican Malt ячмень ст 330мл",
+        "brand": "Barbican",
+        "image_url": "/uploads/products/69ec9217-5099-4d7f-8fb2-65337eb971cd/2208fc69-821c-4129-af5d-a4fd6ce3f5dc.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "volume_text": "330 мл",
+        "package_type": "стекло"
+      }
+    },
+    {
+      "row": 3,
+      "source_index": 4,
+      "source_name": "Напиток Barbican ананас ст 330мл",
+      "brand": "Barbican",
+      "flavor": "ананас",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "product_type": "malt_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/28248",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/04_barbican_napitok-barbican-ananas-st-330ml_330ml.webp",
+      "proposed_sku": "ZY-BARBICAN-330-GLASS-002",
+      "category_slug": "solodovye-napitki",
+      "category_slug_candidates": [
+        "solodovye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "ef6ffc10355395f6dffb59f7d17e856d467dfe0be12fa45950fe5dd2b2bc93f9",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/04_barbican_napitok-barbican-ananas-st-330ml_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 39450,
+      "image_sha256": "ef6ffc10355395f6dffb59f7d17e856d467dfe0be12fa45950fe5dd2b2bc93f9",
+      "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "3a52b7df-add3-473e-b60b-f44af5ba420c",
+      "image_url": "/uploads/products/3a52b7df-add3-473e-b60b-f44af5ba420c/e884c394-4a96-4348-a6f1-7170990ca99c.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.309Z",
+      "db": {
+        "id": "3a52b7df-add3-473e-b60b-f44af5ba420c",
+        "sku": "ZY-BARBICAN-330-GLASS-002",
+        "name": "Напиток Barbican ананас ст 330мл",
+        "brand": "Barbican",
+        "image_url": "/uploads/products/3a52b7df-add3-473e-b60b-f44af5ba420c/e884c394-4a96-4348-a6f1-7170990ca99c.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "volume_text": "330 мл",
+        "package_type": "стекло"
+      }
+    },
+    {
+      "row": 4,
+      "source_index": 5,
+      "source_name": "Напиток Barbican персик ст 330мл",
+      "brand": "Barbican",
+      "flavor": "персик",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "product_type": "malt_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/28254",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/05_barbican_napitok-barbican-persik-st-330ml_330ml.webp",
+      "proposed_sku": "ZY-BARBICAN-330-GLASS-003",
+      "category_slug": "solodovye-napitki",
+      "category_slug_candidates": [
+        "solodovye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "118ed25b95e951f8fefe6372815f821c87db949ba4e53f9bc49f69f8f52ab261",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/05_barbican_napitok-barbican-persik-st-330ml_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 15376,
+      "image_sha256": "118ed25b95e951f8fefe6372815f821c87db949ba4e53f9bc49f69f8f52ab261",
+      "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "64b8d923-09b3-4af8-ade5-1df350947448",
+      "image_url": "/uploads/products/64b8d923-09b3-4af8-ade5-1df350947448/70bb24bb-c129-4bc5-b909-dd0dba19e73a.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.340Z",
+      "db": {
+        "id": "64b8d923-09b3-4af8-ade5-1df350947448",
+        "sku": "ZY-BARBICAN-330-GLASS-003",
+        "name": "Напиток Barbican персик ст 330мл",
+        "brand": "Barbican",
+        "image_url": "/uploads/products/64b8d923-09b3-4af8-ade5-1df350947448/70bb24bb-c129-4bc5-b909-dd0dba19e73a.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "volume_text": "330 мл",
+        "package_type": "стекло"
+      }
+    },
+    {
+      "row": 5,
+      "source_index": 6,
+      "source_name": "Напиток Barbican яблоко ст 330мл",
+      "brand": "Barbican",
+      "flavor": "яблоко",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "product_type": "malt_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/28255",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/06_barbican_napitok-barbican-yabloko-st-330ml_330ml.webp",
+      "proposed_sku": "ZY-BARBICAN-330-GLASS-004",
+      "category_slug": "solodovye-napitki",
+      "category_slug_candidates": [
+        "solodovye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "18d555d0bbd299dd1eef1f2a39d62a8f8f5716004963c658d2a56618abdc9c61",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/06_barbican_napitok-barbican-yabloko-st-330ml_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 14844,
+      "image_sha256": "18d555d0bbd299dd1eef1f2a39d62a8f8f5716004963c658d2a56618abdc9c61",
+      "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "b92626a6-d17c-4be3-8901-ed6eedca4f39",
+      "image_url": "/uploads/products/b92626a6-d17c-4be3-8901-ed6eedca4f39/4d30289d-cef8-4355-9838-b61426b653f1.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.370Z",
+      "db": {
+        "id": "b92626a6-d17c-4be3-8901-ed6eedca4f39",
+        "sku": "ZY-BARBICAN-330-GLASS-004",
+        "name": "Напиток Barbican яблоко ст 330мл",
+        "brand": "Barbican",
+        "image_url": "/uploads/products/b92626a6-d17c-4be3-8901-ed6eedca4f39/4d30289d-cef8-4355-9838-b61426b653f1.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "volume_text": "330 мл",
+        "package_type": "стекло"
+      }
+    },
+    {
+      "row": 6,
+      "source_index": 7,
+      "source_name": "Напиток Barbican гранат ст 330мл",
+      "brand": "Barbican",
+      "flavor": "гранат",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "product_type": "malt_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/28249",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/07_barbican_napitok-barbican-granat-st-330ml_330ml.webp",
+      "proposed_sku": "ZY-BARBICAN-330-GLASS-005",
+      "category_slug": "solodovye-napitki",
+      "category_slug_candidates": [
+        "solodovye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "46ff7399755cda416609e578ee1ade458dfbdccff3a8f557f468936f6f9d67f0",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/07_barbican_napitok-barbican-granat-st-330ml_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 39624,
+      "image_sha256": "46ff7399755cda416609e578ee1ade458dfbdccff3a8f557f468936f6f9d67f0",
+      "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "2a4fa60d-1e48-4706-b4bb-276d9930b0d8",
+      "image_url": "/uploads/products/2a4fa60d-1e48-4706-b4bb-276d9930b0d8/b0fb3002-7f94-4f21-9130-3d1c1aa20497.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.466Z",
+      "db": {
+        "id": "2a4fa60d-1e48-4706-b4bb-276d9930b0d8",
+        "sku": "ZY-BARBICAN-330-GLASS-005",
+        "name": "Напиток Barbican гранат ст 330мл",
+        "brand": "Barbican",
+        "image_url": "/uploads/products/2a4fa60d-1e48-4706-b4bb-276d9930b0d8/b0fb3002-7f94-4f21-9130-3d1c1aa20497.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "volume_text": "330 мл",
+        "package_type": "стекло"
+      }
+    },
+    {
+      "row": 7,
+      "source_index": 9,
+      "source_name": "Напиток Barbican малина ст 330мл",
+      "brand": "Barbican",
+      "flavor": "малина",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "product_type": "malt_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/28252",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/09_barbican_napitok-barbican-malina-st-330ml_330ml.webp",
+      "proposed_sku": "ZY-BARBICAN-330-GLASS-006",
+      "category_slug": "solodovye-napitki",
+      "category_slug_candidates": [
+        "solodovye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "58f45932e8c58d8d0fcf53400f179c7c53bd98a3ef4356aa87535c482e9c8c66",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/09_barbican_napitok-barbican-malina-st-330ml_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 35484,
+      "image_sha256": "58f45932e8c58d8d0fcf53400f179c7c53bd98a3ef4356aa87535c482e9c8c66",
+      "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "1c7e6447-f6b9-4f34-97d5-d9feafadce05",
+      "image_url": "/uploads/products/1c7e6447-f6b9-4f34-97d5-d9feafadce05/d5c42a98-c4dd-443e-bcfc-874d7b23fd02.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.557Z",
+      "db": {
+        "id": "1c7e6447-f6b9-4f34-97d5-d9feafadce05",
+        "sku": "ZY-BARBICAN-330-GLASS-006",
+        "name": "Напиток Barbican малина ст 330мл",
+        "brand": "Barbican",
+        "image_url": "/uploads/products/1c7e6447-f6b9-4f34-97d5-d9feafadce05/d5c42a98-c4dd-443e-bcfc-874d7b23fd02.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "volume_text": "330 мл",
+        "package_type": "стекло"
+      }
+    },
+    {
+      "row": 8,
+      "source_index": 11,
+      "source_name": "Напиток Barbican лимон ст 330мл",
+      "brand": "Barbican",
+      "flavor": "лимон",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "стекло",
+      "package_norm": "glass",
+      "product_type": "malt_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/28251",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/11_barbican_napitok-barbican-limon-st-330ml_330ml.webp",
+      "proposed_sku": "ZY-BARBICAN-330-GLASS-007",
+      "category_slug": "solodovye-napitki",
+      "category_slug_candidates": [
+        "solodovye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "7647eec9b0e8ee87ba8d952e58e00cc1cdd419aa97fa5216341d84110c063e28",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/11_barbican_napitok-barbican-limon-st-330ml_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 30842,
+      "image_sha256": "7647eec9b0e8ee87ba8d952e58e00cc1cdd419aa97fa5216341d84110c063e28",
+      "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "616ee187-897d-4aa1-ad72-f8ebcf043199",
+      "image_url": "/uploads/products/616ee187-897d-4aa1-ad72-f8ebcf043199/f409bd0e-1254-4e15-80f5-f7d447a99e72.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.614Z",
+      "db": {
+        "id": "616ee187-897d-4aa1-ad72-f8ebcf043199",
+        "sku": "ZY-BARBICAN-330-GLASS-007",
+        "name": "Напиток Barbican лимон ст 330мл",
+        "brand": "Barbican",
+        "image_url": "/uploads/products/616ee187-897d-4aa1-ad72-f8ebcf043199/f409bd0e-1254-4e15-80f5-f7d447a99e72.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "8e8d04e4-d3af-4448-bc58-bde0594dc772",
+        "volume_text": "330 мл",
+        "package_type": "стекло"
+      }
+    },
+    {
+      "row": 9,
+      "source_index": 12,
+      "source_name": "Напиток Vast безалкогольный ж/б 330мл Манго",
+      "brand": "Vast",
+      "flavor": "манго",
+      "volume_text": "330 мл",
+      "volume_ml": 330,
+      "package_type": "банка",
+      "package_norm": "can",
+      "product_type": "non_alcoholic_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/23571",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/12_vast_napitok-vast-bezalkogolnyi-zhb-330ml-mango_330ml.webp",
+      "proposed_sku": "ZY-VAST-330-CAN-001",
+      "category_slug": "bezalkogolnye-napitki",
+      "category_slug_candidates": [
+        "bezalkogolnye-napitki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "6dee4a42439cc5c65d64b2928fef8497fe933bd0f801917e06a9905eb047becd",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/12_vast_napitok-vast-bezalkogolnyi-zhb-330ml-mango_330ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 15170,
+      "image_sha256": "6dee4a42439cc5c65d64b2928fef8497fe933bd0f801917e06a9905eb047becd",
+      "category_id": "48e25a59-ac17-47f7-8606-90987217b672",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "7e195a08-5f44-45cb-aeee-bd62e95f782c",
+      "image_url": "/uploads/products/7e195a08-5f44-45cb-aeee-bd62e95f782c/f6d5a842-90c3-467a-8e2f-9fc045d0b5ef.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.646Z",
+      "db": {
+        "id": "7e195a08-5f44-45cb-aeee-bd62e95f782c",
+        "sku": "ZY-VAST-330-CAN-001",
+        "name": "Напиток Vast безалкогольный ж/б 330мл Манго",
+        "brand": "Vast",
+        "image_url": "/uploads/products/7e195a08-5f44-45cb-aeee-bd62e95f782c/f6d5a842-90c3-467a-8e2f-9fc045d0b5ef.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "48e25a59-ac17-47f7-8606-90987217b672",
+        "volume_text": "330 мл",
+        "package_type": "банка"
+      }
+    },
+    {
+      "row": 10,
+      "source_index": 16,
+      "source_name": "Спортивный напиток Angry Animal L-Карнитин Лимон 0,7л пэт",
+      "brand": "Angry Animal",
+      "flavor": "l карнитин лимон",
+      "volume_text": "700 мл",
+      "volume_ml": 700,
+      "package_type": "ПЭТ",
+      "package_norm": "pet",
+      "product_type": "tonic_drink",
+      "source_product_url": "https://zelenoeyabloko.ru/product/39209",
+      "local_image_path": "/app/tmp/zelenoe-rd-apply/original/16_angry-animal_sportivnyi-napitok-angry-animal-l-karnitin-limon_700ml.webp",
+      "proposed_sku": "ZY-ANGRYANIMAL-700-PET-001",
+      "category_slug": "toniki",
+      "category_slug_candidates": [
+        "toniki"
+      ],
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "5f92a54126d616aef53fd0db260b52a63824dcfd13ac5da2b9f948a2f45bc194",
+      "resolved_image_path": "/app/tmp/zelenoe-rd-apply/original/16_angry-animal_sportivnyi-napitok-angry-animal-l-karnitin-limon_700ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 43120,
+      "image_sha256": "5f92a54126d616aef53fd0db260b52a63824dcfd13ac5da2b9f948a2f45bc194",
+      "category_id": "4b7107be-e187-4e10-805a-13e801d9f484",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "beab1cde-294c-4dc2-9cd9-edcce78062f8",
+      "image_url": "/uploads/products/beab1cde-294c-4dc2-9cd9-edcce78062f8/11fe2438-ede3-4194-9e5e-12eab7bd80e2.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T20:09:56.783Z",
+      "db": {
+        "id": "beab1cde-294c-4dc2-9cd9-edcce78062f8",
+        "sku": "ZY-ANGRYANIMAL-700-PET-001",
+        "name": "Спортивный напиток Angry Animal L-Карнитин Лимон 0,7л пэт",
+        "brand": "Angry Animal",
+        "image_url": "/uploads/products/beab1cde-294c-4dc2-9cd9-edcce78062f8/11fe2438-ede3-4194-9e5e-12eab7bd80e2.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "4b7107be-e187-4e10-805a-13e801d9f484",
+        "volume_text": "700 мл",
+        "package_type": "ПЭТ"
+      }
+    }
+  ],
+  "preview_phase": {
+    "mode": "preview",
+    "preview_checks": {
+      "candidate_count": 9,
+      "expected": 9,
+      "unique_proposed_sku": 9,
+      "batch_internal_sku_dupes": 0,
+      "brand_defined": true,
+      "flavor_defined": true,
+      "volume_defined": true,
+      "package_defined": true,
+      "product_type_defined": true,
+      "preview_ok": 9,
+      "preview_failed": 0,
+      "all_images_readable": true,
+      "all_mime_allowed": true
+    },
+    "counts": {
+      "preview_ok": 9,
+      "preview_failed": 0,
+      "created": 0,
+      "skipped": 0,
+      "failed": 0,
+      "images_uploaded": 0
+    }
+  },
+  "verification": {
+    "products_total": 455,
+    "showcase_active": 440,
+    "orderable_active": 13,
+    "no_price": 440,
+    "orders": 3,
+    "order_items": 5,
+    "interest_requests": 4,
+    "clients": 3,
+    "all_9_showcase": true,
+    "all_9_null_price": true,
+    "all_9_on_order": true,
+    "all_9_active": true,
+    "all_9_units_1": true,
+    "all_9_local_webp_image_url": true,
+    "guest_catalog_contains_all_9": true,
+    "guest_catalog_total": 453,
+    "image_http_after_restart": "200 image/webp",
+    "cart_showcase_rejected_by_rule": "is_product_orderable_for_cart requires sales_status=orderable and price_amount>0",
+    "health": {
+      "ok": true,
+      "database": "ok"
+    },
+    "containers": [
+      "app healthy",
+      "db healthy"
+    ],
+    "package_requires_review": true
+  }
+}

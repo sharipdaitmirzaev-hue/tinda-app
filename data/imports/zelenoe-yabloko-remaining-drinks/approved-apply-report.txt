@@ -1,0 +1,45 @@
+TINDA Zelenoe remaining-drinks approved_new import report
+generated_at: 2026-07-27T20:05:03.295Z
+mode: preview_stopped
+reason: required_categories_missing
+backup: (not set)
+rows: 9 (expected 9)
+package_requires_review: true
+
+Missing category assignments:
+- Barbican / Напиток Barbican Malt ячмень ст 330мл (product_type=malt_drink); tried: solodovye-napitki, solodovye-napitki, bezalkogolnye-napitki
+- Barbican / Напиток Barbican ананас ст 330мл (product_type=malt_drink); tried: solodovye-napitki, solodovye-napitki, bezalkogolnye-napitki
+- Barbican / Напиток Barbican персик ст 330мл (product_type=malt_drink); tried: solodovye-napitki, solodovye-napitki, bezalkogolnye-napitki
+- Barbican / Напиток Barbican яблоко ст 330мл (product_type=malt_drink); tried: solodovye-napitki, solodovye-napitki, bezalkogolnye-napitki
+- Barbican / Напиток Barbican гранат ст 330мл (product_type=malt_drink); tried: solodovye-napitki, solodovye-napitki, bezalkogolnye-napitki
+- Barbican / Напиток Barbican малина ст 330мл (product_type=malt_drink); tried: solodovye-napitki, solodovye-napitki, bezalkogolnye-napitki
+- Barbican / Напиток Barbican лимон ст 330мл (product_type=malt_drink); tried: solodovye-napitki, solodovye-napitki, bezalkogolnye-napitki
+- Vast / Напиток Vast безалкогольный ж/б 330мл Манго (product_type=non_alcoholic_drink); tried: bezalkogolnye-napitki, bezalkogolnye-napitki
+
+Current TINDA categories:
+- detskie-soki | Детские соки | active=true | parent=43915e70-b50f-40a8-9499-113a9858864b
+- energeticheskie-napitki | Энергетические напитки | active=true | parent=-
+- gazirovannye-napitki | Газированные напитки | active=true | parent=-
+- gazirovka | Газировка | active=true | parent=a98cf12f-e064-4b67-93ef-0a9fdb47bb71
+- kholodnyy-chay | Холодный чай | active=true | parent=1a87141a-5d11-4809-9596-441c87567bd2
+- kholodnyy-chay-i-kofe | Холодный чай и кофе | active=true | parent=-
+- kholodnyy-kofe | Холодный кофе | active=true | parent=1a87141a-5d11-4809-9596-441c87567bd2
+- kisel | Кисель | active=true | parent=43915e70-b50f-40a8-9499-113a9858864b
+- kola | Кола | active=true | parent=a98cf12f-e064-4b67-93ef-0a9fdb47bb71
+- kompot | Компот | active=true | parent=43915e70-b50f-40a8-9499-113a9858864b
+- kvas | Квас | active=true | parent=-
+- limonady | Лимонады | active=true | parent=a98cf12f-e064-4b67-93ef-0a9fdb47bb71
+- mors | Морс | active=true | parent=43915e70-b50f-40a8-9499-113a9858864b
+- nektar | Нектар | active=true | parent=43915e70-b50f-40a8-9499-113a9858864b
+- sok | Сок | active=true | parent=43915e70-b50f-40a8-9499-113a9858864b
+- soki-morsy-nektary | Соки, морсы и нектары | active=true | parent=-
+- sokosoderzhashchie-napitki | Сокосодержащие напитки | active=true | parent=43915e70-b50f-40a8-9499-113a9858864b
+- toniki | Тоники | active=true | parent=a98cf12f-e064-4b67-93ef-0a9fdb47bb71
+- voda | Вода | active=true | parent=-
+- voda-gazirovannaya | Газированная вода | active=true | parent=c92083fe-33e7-4d86-a15d-3ce1f130572d
+- voda-lechebno-stolovaya | Лечебно-столовая вода | active=true | parent=c92083fe-33e7-4d86-a15d-3ce1f130572d
+- voda-mineralnaya | Минеральная вода | active=true | parent=c92083fe-33e7-4d86-a15d-3ce1f130572d
+- voda-negazirovannaya | Негазированная вода | active=true | parent=c92083fe-33e7-4d86-a15d-3ce1f130572d
+- voda-pitevaya | Питьевая вода | active=true | parent=c92083fe-33e7-4d86-a15d-3ce1f130572d
+
+No products created. No seed. No schema change.
