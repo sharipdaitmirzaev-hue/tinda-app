@@ -30,6 +30,28 @@ npm run external-images:review -- \
 
 Листы: Точные совпадения / Требует проверки / Новые товары / Конфликты / Не найдено / Инструкция.
 
+## 3. Файл на ручное одобрение
+
+```bash
+npm run zy:build-approval
+```
+
+→ `data/imports/zelenoe_yabloko_gazirovannye_images_approval.xlsx`  
+Только `exact_match` + `recommended_approve`, `review_status=pending`.
+
+После ручной отметки `approved`:
+
+```bash
+npm run external-images:download -- \
+  --review data/imports/zelenoe_yabloko_gazirovannye_images_approval.xlsx \
+  --status approved
+
+npm run external-images:prepare -- \
+  --review data/imports/zelenoe_yabloko_gazirovannye_images_approval.xlsx
+```
+
+Staging WebP: `data/imports/external-product-images/staging/`
+
 ## После ручного подтверждения
 
 Скачивание фото — только локально через `npm run external-images:download` (не на VPS).
