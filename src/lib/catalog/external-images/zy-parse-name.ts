@@ -30,6 +30,24 @@ const KNOWN_BRANDS: Array<{ match: RegExp; brand: string }> = [
   { match: /\bsprite\b|\bспрайт\b/i, brand: "Sprite" },
   { match: /\bfanta\b|\bфанта\b/i, brand: "Fanta" },
   { match: /\bla\s*imon|лаймон/i, brand: "Laimon Fresh" },
+  // Energy drink brands (avoid \b with Cyrillic — JS word boundaries are ASCII-only)
+  { match: /burn|берн/i, brand: "Burn" },
+  { match: /red\s*bull|ред\s*булл/i, brand: "Red Bull" },
+  { match: /monster|монстер/i, brand: "Monster" },
+  { match: /adrenaline(\s*rush)?|адреналин(\s*раш)?/i, brand: "Adrenaline Rush" },
+  { match: /flash(\s*up)?|флэш(\s*ап)?|флеш(\s*ап)?/i, brand: "Flash Up" },
+  { match: /drive\s*me|драйв\s*ми/i, brand: "Drive Me" },
+  { match: /gorilla|горилла/i, brand: "Gorilla" },
+  { match: /tornado|торнадо/i, brand: "Tornado" },
+  { match: /battery|баттери/i, brand: "Battery" },
+  { match: /lit\s*energy|лит\s*энерджи/i, brand: "Lit Energy" },
+  { match: /coolcola|cool\s*cola/i, brand: "CoolCola" },
+  { match: /(?<![a-zа-я])revo(?![a-zа-я])|рево/i, brand: "Revo" },
+  { match: /black\s*monster/i, brand: "Black Monster" },
+  { match: /jaguar|ягуар/i, brand: "Jaguar" },
+  { match: /bizon|бизон/i, brand: "Bizon" },
+  { match: /genom|геном/i, brand: "Genom" },
+  { match: /tornado\s*energy/i, brand: "Tornado" },
   // Water brands
   { match: /\bаква\s*минерале\b|\baqua\s*minerale\b/i, brand: "Аква Минерале" },
   { match: /\bаква\s*панна\b|\baqua\s*panna\b/i, brand: "Аква Панна" },
@@ -123,11 +141,18 @@ function detect_brand(name: string): string {
     const token = rest.split(/\s+/)[0] || "UNKNOWN";
     return token.replace(/[!,.]+$/g, "");
   }
-  // Fallback: first meaningful token after «Напиток …»
+  // Fallback: first meaningful token after «Напиток …» / «энергетический …»
   const cleaned = name
     .replace(/^напиток\s+(газир(?:ованный|ованный|)\s*)?/i, "")
     .replace(/^газир(?:ованный)?\s+/i, "")
+    .replace(/\bэнергетическ(?:ий|ие|ая)?\b/gi, " ")
+    .replace(/\benergy\s*drink\b/gi, " ")
+    .replace(/\s+/g, " ")
     .trim();
+  // Re-check known brands on cleaned title (Cyrillic \b is unreliable).
+  for (const row of KNOWN_BRANDS) {
+    if (row.match.test(cleaned) || row.match.test(name)) return row.brand;
+  }
   const token = cleaned.split(/\s+/)[0] || "UNKNOWN";
   return token.replace(/[!,.]+$/g, "");
 }

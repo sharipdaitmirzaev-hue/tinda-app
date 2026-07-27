@@ -130,6 +130,29 @@ npm run zelenoe-images:auto-review -- --root data/imports/zelenoe-yabloko-water
 
 Артефакты: `data/imports/zelenoe-yabloko-water/` (candidates, original/, previews/, manifest, gallery, review-decisions). Production не менять.
 
+## Энергетические напитки (локальный сбор)
+
+Категория: https://zelenoeyabloko.ru/catalog/energeticeskie-napitki
+
+```bash
+npm run zy:scrape-energy
+npm run external-images:review -- \
+  --products data/imports/tinda_active_products.snapshot.json \
+  --candidates data/imports/zelenoe-yabloko-energy/candidates.flat.json \
+  --out data/imports/zelenoe-yabloko-energy/images-review.xlsx --skip-probe
+npm run zelenoe-images:download-all -- \
+  --candidates data/imports/zelenoe-yabloko-energy/candidates.json \
+  --review data/imports/zelenoe-yabloko-energy/images-review.xlsx \
+  --out-dir data/imports/zelenoe-yabloko-energy
+npm run zelenoe-images:gallery -- \
+  --out-dir data/imports/zelenoe-yabloko-energy \
+  --candidates data/imports/zelenoe-yabloko-energy/candidates.json \
+  --review data/imports/zelenoe-yabloko-energy/images-review.xlsx
+npm run zelenoe-images:auto-review -- --root data/imports/zelenoe-yabloko-energy --category energy
+```
+
+Артефакты: `data/imports/zelenoe-yabloko-energy/`. Production / VPS / БД не менять.
+
 Source: `data/imports/zelenoe-yabloko-images/approved-new-products.xlsx` (JSON parity used in container).
 
 ```bash

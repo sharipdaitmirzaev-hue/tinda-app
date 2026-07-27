@@ -100,8 +100,36 @@ type Decision = {
   decision_reason: string;
 };
 
+const CATEGORY_MODE = (() => {
+  const explicit = arg("category", null);
+  if (explicit) return explicit;
+  if (/zelenoe-yabloko-energy/i.test(ROOT)) return "energy";
+  if (/zelenoe-yabloko-water/i.test(ROOT)) return "water";
+  return "soft-drinks";
+})();
+
+/** Soft-drinks auto-review excludes energy; energy mode does the opposite. */
 const EXCLUDED =
-  /(пиво|вино|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)/i;
+  CATEGORY_MODE === "energy"
+    ? /(пиво|вино|водк|алкогол|виски|коньяк|шампан|сидр|бакалея|чипсы|снек|йогурт|молоко|хлеб)/i
+    : /(пиво|вино|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)/i;
+
+const ENERGY_HINT =
+  /(энергет|energy\s*drink|\bburn\b|\bберн\b|red\s*bull|monster|adrenaline|flash|drive\s*me|gorilla|tornado|lit\s*energy|jaguar|battery)/i;
+
+function category_ok_for_new(card: Card): { ok: boolean; note: string } {
+  if (CATEGORY_MODE !== "energy") {
+    return { ok: true, note: "category_not_required" };
+  }
+  const slug = String(card.source_category_slug || "");
+  if (/energet/i.test(slug)) {
+    return { ok: true, note: "category_energy_slug" };
+  }
+  if (ENERGY_HINT.test(card.source_name)) {
+    return { ok: true, note: "category_energy_name" };
+  }
+  return { ok: false, note: "category_not_energy" };
+}
 
 function clean_flavor(raw: string): string {
   return String(raw || "")
@@ -497,12 +525,24 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
     const sugar = sugar_free_flag(card.source_name);
     if (sugar != null) matched.push(sugar ? "marked_sugar_free" : "marked_regular");
 
+    const cat = category_ok_for_new(card);
+    if (cat.ok) matched.push(cat.note);
+    else mismatches.push(cat.note);
+
+    // Contested zero / flavor / package → needs_review
+    if (!pkg) mismatches.push("package_undetermined");
+    if (!fl.ok) mismatches.push("flavor_contested");
+    if (sugar == null && /(zero|зеро|без\s*сахара)/i.test(card.source_name)) {
+      mismatches.push("sugar_free_contested");
+    }
+
     const all_ok =
       brand &&
       name_ok &&
       fl.ok &&
       volume &&
       pkg &&
+      cat.ok &&
       !dup.hit &&
       size_ok(card) &&
       image_ok(card) &&
