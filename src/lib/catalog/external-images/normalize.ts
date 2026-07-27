@@ -58,18 +58,26 @@ export function translit(value: unknown): string {
 
 /** Parse volume text to milliliters, or null. */
 export function parse_volume_ml(raw: unknown): number | null {
-  const text = lower(raw).replace(",", ".");
+  const text = lower(raw).replace(/,/g, ".");
   if (!text) return null;
-  let m = text.match(/^(\d+(?:\.\d+)?)\s*л$/i);
+  let m = text.match(/^(\d+(?:\.\d+)?)\s*л(?:\s|$)/i);
   if (m) return Math.round(Number(m[1]) * 1000);
-  m = text.match(/^(\d+(?:\.\d+)?)\s*мл$/i);
+  m = text.match(/^(\d+(?:\.\d+)?)\s*мл(?:\s|$)/i);
   if (m) return Math.round(Number(m[1]));
-  m = text.match(/(\d+(?:\.\d+)?)\s*(л|мл|l|ml)\b/i);
-  if (!m) return null;
-  const amount = Number(m[1]);
-  const unit = m[2].toLowerCase();
-  if (unit === "л" || unit === "l") return Math.round(amount * 1000);
-  return Math.round(amount);
+  m = text.match(/(\d+(?:\.\d+)?)\s*(мл|ml)(?=[^\d]|$)/i);
+  if (m) {
+    const amount = Number(m[1]);
+    // Retail typos like "0,33мл" almost always mean 0.33 л
+    if (amount > 0 && amount < 10) return Math.round(amount * 1000);
+    return Math.round(amount);
+  }
+  m = text.match(/(\d+(?:\.\d+)?)\s*(л|l)(?=[^\dа-яa-z]|$)/i);
+  if (m) {
+    const amount = Number(m[1]);
+    const unit = m[2].toLowerCase();
+    if (unit === "л" || unit === "l") return Math.round(amount * 1000);
+  }
+  return null;
 }
 
 export function normalize_package(raw: unknown): string {
@@ -85,7 +93,7 @@ export function normalize_package(raw: unknown): string {
 export function sugar_free_flag(text: unknown): boolean | null {
   const t = lower(text);
   if (!t) return null;
-  if (/(без сахара|zero|sugar[\s-]?free|no sugar|0 калорий)/.test(t)) {
+  if (/(без сахара|зеро|zero|sugar[\s-]?free|no sugar|0 калорий)/.test(t)) {
     return true;
   }
   if (/(classic|original|обычн)/.test(t) && !/(zero|без сахара)/.test(t)) {
