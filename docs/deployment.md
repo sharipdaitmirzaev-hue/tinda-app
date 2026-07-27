@@ -69,6 +69,20 @@ curl -sS http://127.0.0.1:3000/api/v1/health
 
 Ожидаемый ответ: `{"ok":true,"database":"ok"}`.
 
+Миграции (рекомендуется one-shot на малых VPS; в `.env` `RUN_MIGRATIONS_ON_START=false`):
+
+```bash
+set -a; source .env; set +a
+NET=$(docker inspect "$(docker compose -f docker-compose.production.yml ps -q app)" \
+  -f '{{range $k,$v := .NetworkSettings.Networks}}{{$k}}{{end}}')
+docker run --rm --network "$NET" \
+  -e DATABASE_URL="postgresql://tinda:${POSTGRES_PASSWORD}@db:5432/tinda?schema=public" \
+  -v "$PWD/prisma:/app/prisma" -w /app node:22-bookworm-slim \
+  bash -lc 'apt-get update -qq && apt-get install -y -qq openssl >/dev/null \
+    && npm install prisma@6.19.0 --no-save --omit=dev \
+    && npx prisma migrate deploy'
+```
+
 Seed (только осознанно, один раз):
 
 ```bash
@@ -78,9 +92,13 @@ docker compose -f docker-compose.production.yml exec \
   app npm run db:seed
 ```
 
+На standalone-образе seed через `npm run db:seed` может требовать отдельный one-shot контейнер с исходниками — см. актуальную команду у команды поддержки/агента.
+
 ## 10. Nginx
 
-Скопируйте `deploy/nginx/tinda.conf.example` в `/etc/nginx/sites-available/tinda`, замените домен, включите сайт.
+С доменом: скопируйте `deploy/nginx/tinda.conf.example`.
+
+Без домена (временно по IP / HTTP): proxy на `127.0.0.1:3000`, `server_name` = IP, без SSL redirect.
 
 ## 11. SSL (Let's Encrypt)
 
