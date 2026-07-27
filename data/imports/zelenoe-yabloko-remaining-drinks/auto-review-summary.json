@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-07-27T19:55:51.505Z",
+  "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
+  "counts": {
+    "approved_existing": 0,
+    "approved_new": 9,
+    "needs_review": 7,
+    "rejected": 0
+  },
+  "approved_existing_skus": [],
+  "needs_review_brief": [
+    {
+      "source_index": 1,
+      "source_name": "Компот Bagdan из фейхоа 1л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 2,
+      "source_name": "Компот Bagdan из граната 1л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 8,
+      "source_name": "Напиток Черноголовка Байкал пл/б 2л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "near_tinda:DRINK-CHERNOGOLOVKA-2000-PET-016:no_match:75",
+        "misclassified_likely_soft_drink_gazirovka"
+      ]
+    },
+    {
+      "source_index": 10,
+      "source_name": "Вино безалкогольное Carl Jung Cabernet Sauvignon красное ст/б 0,75л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "na_wine_needs_review"
+      ]
+    },
+    {
+      "source_index": 13,
+      "source_name": "Вино безалкогольное Carl Jung Merlot красное ст/б 0,75л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "na_wine_needs_review"
+      ]
+    },
+    {
+      "source_index": 14,
+      "source_name": "Вино безалкогольное Carl Jung красное Selection rot ст/б 0,75л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "na_wine_needs_review"
+      ]
+    },
+    {
+      "source_index": 15,
+      "source_name": "Вино безалкогольное Carl Jung белое Riesling ст/б 0,75л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "na_wine_needs_review"
+      ]
+    }
+  ]
+}

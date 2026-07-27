@@ -11,11 +11,23 @@ export async function GET(request: Request) {
     const url = new URL(request.url);
     const query = catalog_products_query_schema.parse({
       q: url.searchParams.get("q") ?? undefined,
+      category:
+        url.searchParams.get("category") ??
+        url.searchParams.get("category_slug") ??
+        undefined,
       category_id: url.searchParams.get("category_id") ?? undefined,
+      brand: url.searchParams.get("brand") ?? undefined,
+      volume:
+        url.searchParams.get("volume") ??
+        url.searchParams.get("volume_text") ??
+        undefined,
+      package_type: url.searchParams.get("package_type") ?? undefined,
       availability: url.searchParams.get("availability") ?? undefined,
+      sales_status: url.searchParams.get("sales_status") ?? undefined,
       is_promo: url.searchParams.get("is_promo") ?? undefined,
       is_new: url.searchParams.get("is_new") ?? undefined,
       is_hit: url.searchParams.get("is_hit") ?? undefined,
+      has_price: url.searchParams.get("has_price") ?? undefined,
       page: url.searchParams.get("page") ?? undefined,
       page_size: url.searchParams.get("page_size") ?? undefined,
       sort: url.searchParams.get("sort") ?? undefined,

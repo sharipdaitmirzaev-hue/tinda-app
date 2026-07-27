@@ -1,0 +1,94 @@
+TINDA Zelenoe JUICE/NECTAR/MORS approved_new import report
+generated_at: 2026-07-27T15:47:35.453Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-zelenoe-juice-approved-20260727T154709Z.dump
+source: /app/data/imports/zelenoe-yabloko-juice/approved-new-import-batch.json
+rows: 50 (expected 50)
+categories present: sok=true, nektar=true, mors=true
+product_type: {"juice":18,"nectar":22,"mors":5,"juice_drink":5}
+category_missing: 5 (ZY-DOBRYI-450-PET-002, ZY-AGUSHA-300-PET-001, ZY-AGUSHA-300-PET-002, ZY-AGUSHA-300-PET-003, ZY-AGUSHA-300-PET-004)
+package_requires_review: true
+created: 45
+skipped: 5
+failed: 0
+images_uploaded: 45
+created_by_product_type: {"juice":18,"nectar":22,"mors":5}
+created_by_category: {"sok":18,"nektar":22,"mors":5}
+products_total: 264 -> 309
+showcase_active: 249 -> 294
+orderable_active: 13 -> 13
+no_price: 249 -> 294
+orders: 3->3; order_items: 5->5
+package_requires_review SKUs (50): ZY-IRIB-750-GLASS-001, ZY-IRIB-750-GLASS-002, ZY-IRIB-750-GLASS-004, ZY-KIKUNI-3000-GLASS-001, ZY-J7-850-PET-001, ZY-IRIB-750-GLASS-005, ZY-IRIB-750-GLASS-006, ZY-GUNIB-750-GLASS-001, ZY-IRIB-750-GLASS-007, ZY-IRIB-750-GLASS-008, ZY-YAN-930-GLASS-001, ZY-YAN-930-GLASS-002, ZY-IRIB-750-GLASS-009, ZY-YAN-930-GLASS-003, ZY-RUSBERRIES-500-PET-001, ZY-YAN-930-GLASS-004, ZY-YAN-930-GLASS-005, ZY-KIKUNI-750-GLASS-001, ZY-GUNIB-750-GLASS-002, ZY-GUNIB-750-GLASS-003, ZY-KIKUNI-500-GLASS-001, ZY-YAN-930-GLASS-006, ZY-SILBESI-500-GLASS-001, ZY-IRIB-750-GLASS-011, ZY-J7-850-PET-002, ZY-KIKUNI-500-GLASS-002, ZY-RUSBERRIES-500-PET-002, ZY-DOBRYI-450-PET-002, ZY-YAN-930-GLASS-007, ZY-IRIB-330-GLASS-001, ZY-YAN-930-GLASS-008, ZY-KIKUNI-500-GLASS-003, ZY-KIKUNI-500-GLASS-004, ZY-KIKUNI-750-GLASS-002, ZY-KIKUNI-750-GLASS-003, ZY-RUSBERRIES-500-PET-003, ZY-YAN-930-GLASS-009, ZY-YAN-930-GLASS-010, ZY-GUNIB-750-GLASS-004, ZY-RUSBERRIES-500-PET-004, ZY-KIKUNI-500-GLASS-005, ZY-KIKUNI-3000-GLASS-002, ZY-SILBESI-500-GLASS-002, ZY-SILBESI-500-GLASS-003, ZY-KIKUNI-750-GLASS-004, ZY-KIKUNI-750-GLASS-005, ZY-AGUSHA-300-PET-001, ZY-AGUSHA-300-PET-002, ZY-AGUSHA-300-PET-003, ZY-AGUSHA-300-PET-004
+
+SKU | status | product_type | category | product_id | image_url | error
+ZY-IRIB-750-GLASS-001 | created | juice | sok | cf2c5a75-a9af-408e-8d1d-9c4e76f31906 | /uploads/products/cf2c5a75-a9af-408e-8d1d-9c4e76f31906/b16a34b6-a0fc-4024-a525-5bb3f21b4507.webp | -
+ZY-IRIB-750-GLASS-002 | created | nectar | nektar | 4a48893a-5c54-4b40-8409-7fafd5878bd6 | /uploads/products/4a48893a-5c54-4b40-8409-7fafd5878bd6/40526631-9698-4c61-928e-5da8c4e25bf8.webp | -
+ZY-IRIB-750-GLASS-004 | created | nectar | nektar | 96f0130c-9d09-41a8-a24f-7476397ece27 | /uploads/products/96f0130c-9d09-41a8-a24f-7476397ece27/49addbae-f96b-406d-a805-f4230f26f9b2.webp | -
+ZY-KIKUNI-3000-GLASS-001 | created | nectar | nektar | cbb5f36b-8cf6-4460-bbff-a90c88f079f6 | /uploads/products/cbb5f36b-8cf6-4460-bbff-a90c88f079f6/bc47c764-73a8-4bd7-8ad1-20a3583ca2ba.webp | -
+ZY-J7-850-PET-001 | created | mors | mors | 217c61eb-28e5-4795-897a-34ec9d2f7bf4 | /uploads/products/217c61eb-28e5-4795-897a-34ec9d2f7bf4/8d9b8900-3c02-49c0-b7f4-fab3676e5603.webp | -
+ZY-IRIB-750-GLASS-005 | created | juice | sok | f3f8ea32-6f95-4fac-9ccc-6c6a8a4dab4d | /uploads/products/f3f8ea32-6f95-4fac-9ccc-6c6a8a4dab4d/5a6913c5-ad04-451a-aae3-8f827f183571.webp | -
+ZY-IRIB-750-GLASS-006 | created | nectar | nektar | ecfa94b7-fca3-48ac-89cd-393f2419347d | /uploads/products/ecfa94b7-fca3-48ac-89cd-393f2419347d/5964e7ac-82c3-43d0-8c84-16ca823cbec3.webp | -
+ZY-GUNIB-750-GLASS-001 | created | juice | sok | 32f0cca4-bf08-4901-bb3f-88ebedf0caaf | /uploads/products/32f0cca4-bf08-4901-bb3f-88ebedf0caaf/9c2655f7-01f6-46ad-b8ac-daac5c831aa7.webp | -
+ZY-IRIB-750-GLASS-007 | created | juice | sok | 25afb80e-53f2-4003-aeeb-83ccc16887c1 | /uploads/products/25afb80e-53f2-4003-aeeb-83ccc16887c1/d3f9a75d-053b-4a6e-8c89-1678426eaab0.webp | -
+ZY-IRIB-750-GLASS-008 | created | juice | sok | 444d222a-b689-4fc9-a288-d22b8472fa3e | /uploads/products/444d222a-b689-4fc9-a288-d22b8472fa3e/7ae0ffc7-89cb-4be8-a51c-c53f32ae8f62.webp | -
+ZY-YAN-930-GLASS-001 | created | nectar | nektar | 32281c06-4354-4dee-9e56-2405faf0f972 | /uploads/products/32281c06-4354-4dee-9e56-2405faf0f972/61adea64-54bc-4eaf-b6ac-822c494b8900.webp | -
+ZY-YAN-930-GLASS-002 | created | nectar | nektar | eee3cd05-96d8-41c6-8f6f-a56cab02c466 | /uploads/products/eee3cd05-96d8-41c6-8f6f-a56cab02c466/f905dfed-3cb2-482c-85f0-79c51a5b3a33.webp | -
+ZY-IRIB-750-GLASS-009 | created | juice | sok | c66bd5f3-e8e3-4da0-ad15-8525f17ded62 | /uploads/products/c66bd5f3-e8e3-4da0-ad15-8525f17ded62/e6f7f03a-0301-493a-a65d-95ec92be986c.webp | -
+ZY-YAN-930-GLASS-003 | created | nectar | nektar | 399b86be-d910-4cad-98ee-7c0f12613432 | /uploads/products/399b86be-d910-4cad-98ee-7c0f12613432/32a1db4d-14b6-47c5-947d-99e2adcbb048.webp | -
+ZY-RUSBERRIES-500-PET-001 | created | mors | mors | 7fbf7e25-4e08-4edf-8ab8-ad323c1d4375 | /uploads/products/7fbf7e25-4e08-4edf-8ab8-ad323c1d4375/9acb75e3-2fdb-4ce7-8161-70e8f4b6c920.webp | -
+ZY-YAN-930-GLASS-004 | created | nectar | nektar | 8bf0df03-ebeb-465a-916c-072abfd5a2f1 | /uploads/products/8bf0df03-ebeb-465a-916c-072abfd5a2f1/07159b75-e10a-404f-a757-59a0e2a7e9ce.webp | -
+ZY-YAN-930-GLASS-005 | created | nectar | nektar | 32453d8f-afb9-464f-9e49-c4c81df9adc8 | /uploads/products/32453d8f-afb9-464f-9e49-c4c81df9adc8/9c137f38-54c4-45c8-abcb-388058b5a038.webp | -
+ZY-KIKUNI-750-GLASS-001 | created | nectar | nektar | 2699bc2a-0a01-47e6-9915-e079d2dd24db | /uploads/products/2699bc2a-0a01-47e6-9915-e079d2dd24db/4d117d56-9c8b-4c06-bf4f-450c019ff44e.webp | -
+ZY-GUNIB-750-GLASS-002 | created | juice | sok | 99fc01e2-0f83-43bd-bcc6-23859d1413cd | /uploads/products/99fc01e2-0f83-43bd-bcc6-23859d1413cd/66249308-2409-4fe8-8bee-72ec852b7345.webp | -
+ZY-GUNIB-750-GLASS-003 | created | juice | sok | 29b0f46b-24c7-4e71-9693-03ce49fd4ecd | /uploads/products/29b0f46b-24c7-4e71-9693-03ce49fd4ecd/e2f70b86-93f8-4701-b38a-14815c175a93.webp | -
+ZY-KIKUNI-500-GLASS-001 | created | nectar | nektar | 100b6ca1-6350-41a8-a6cf-2c1d40d715f6 | /uploads/products/100b6ca1-6350-41a8-a6cf-2c1d40d715f6/91455db2-df91-4fbf-8839-ec1523094846.webp | -
+ZY-YAN-930-GLASS-006 | created | nectar | nektar | 52a616b6-e28a-48f9-81f9-e193f68a0732 | /uploads/products/52a616b6-e28a-48f9-81f9-e193f68a0732/f3e81982-9f14-4c34-8995-39aed14d595a.webp | -
+ZY-SILBESI-500-GLASS-001 | created | juice | sok | 01973d2b-94fa-470a-8077-073aa09a8f34 | /uploads/products/01973d2b-94fa-470a-8077-073aa09a8f34/0dbcad96-f6c8-48e2-a4af-c78b36199801.webp | -
+ZY-IRIB-750-GLASS-011 | created | juice | sok | 0b8df1b0-ca93-45da-8d2b-e230afee6403 | /uploads/products/0b8df1b0-ca93-45da-8d2b-e230afee6403/a516146c-412c-4aeb-9d68-690f353fd5e7.webp | -
+ZY-J7-850-PET-002 | created | juice | sok | e8e35f54-7b99-4f36-8591-ac0bbb9d75e1 | /uploads/products/e8e35f54-7b99-4f36-8591-ac0bbb9d75e1/a24b17bd-a6ed-49d2-b325-d9042e005215.webp | -
+ZY-KIKUNI-500-GLASS-002 | created | nectar | nektar | b2b4b881-838f-49f2-a917-e464f18f7487 | /uploads/products/b2b4b881-838f-49f2-a917-e464f18f7487/3c4e5b0b-50b6-4c6d-b8f8-75e4450d8e37.webp | -
+ZY-RUSBERRIES-500-PET-002 | created | mors | mors | c189d2aa-dfbf-478a-bd64-888e4e653e08 | /uploads/products/c189d2aa-dfbf-478a-bd64-888e4e653e08/9c36ea7f-dd10-4a36-85a6-a571440ed910.webp | -
+ZY-DOBRYI-450-PET-002 | skipped | juice_drink | - | - | - | category_missing
+ZY-YAN-930-GLASS-007 | created | nectar | nektar | 4674c209-4fde-4ca3-b368-30b11d9edc36 | /uploads/products/4674c209-4fde-4ca3-b368-30b11d9edc36/32d9da75-32bc-49ce-b2e2-479636b0c6e2.webp | -
+ZY-IRIB-330-GLASS-001 | created | juice | sok | 6060a91b-7a0b-4919-b02f-f507712b2f6a | /uploads/products/6060a91b-7a0b-4919-b02f-f507712b2f6a/019278bc-3603-44ee-a068-8cd99ee714da.webp | -
+ZY-YAN-930-GLASS-008 | created | nectar | nektar | c79d97a1-afab-4773-94a1-1ca9d1cab134 | /uploads/products/c79d97a1-afab-4773-94a1-1ca9d1cab134/5aebba1a-8f30-41b0-80dc-44f331a3ffa8.webp | -
+ZY-KIKUNI-500-GLASS-003 | created | nectar | nektar | 1402c5e3-dff3-4a5f-b333-fb308ee02dc9 | /uploads/products/1402c5e3-dff3-4a5f-b333-fb308ee02dc9/5e59c0ed-bd7f-4c2b-941b-17017948c60e.webp | -
+ZY-KIKUNI-500-GLASS-004 | created | juice | sok | 8c9649bd-979c-48e9-820c-17c67bbf7421 | /uploads/products/8c9649bd-979c-48e9-820c-17c67bbf7421/9700cf77-aede-4280-86df-2415ca14c43d.webp | -
+ZY-KIKUNI-750-GLASS-002 | created | nectar | nektar | c63663ed-aab7-4401-a1c6-6e7fe20b868c | /uploads/products/c63663ed-aab7-4401-a1c6-6e7fe20b868c/0c2df441-f410-4217-a252-21f6d87b5ed0.webp | -
+ZY-KIKUNI-750-GLASS-003 | created | juice | sok | d8efe32a-dcda-432c-b4e3-7867aec002c5 | /uploads/products/d8efe32a-dcda-432c-b4e3-7867aec002c5/0ada1cee-83ee-4d45-9b29-0f2524c2e06c.webp | -
+ZY-RUSBERRIES-500-PET-003 | created | mors | mors | 68e82835-c588-4548-8fe1-ee91d6809ca5 | /uploads/products/68e82835-c588-4548-8fe1-ee91d6809ca5/17e9ffd5-6084-41ce-a1dc-f8df5b81caf1.webp | -
+ZY-YAN-930-GLASS-009 | created | nectar | nektar | c5822598-b1e3-45c3-8356-5a7b68bc3f7a | /uploads/products/c5822598-b1e3-45c3-8356-5a7b68bc3f7a/58d484e4-9987-4f28-9822-93b1504921e0.webp | -
+ZY-YAN-930-GLASS-010 | created | nectar | nektar | 30cc207f-2a5b-480b-a194-6ab3d60a2316 | /uploads/products/30cc207f-2a5b-480b-a194-6ab3d60a2316/1cffeec6-597a-42cb-ac6f-eb154e4933a6.webp | -
+ZY-GUNIB-750-GLASS-004 | created | juice | sok | b1413c8f-0db3-483e-872b-7ba8a98390d9 | /uploads/products/b1413c8f-0db3-483e-872b-7ba8a98390d9/fda02501-a031-4aae-b08c-02066c224771.webp | -
+ZY-RUSBERRIES-500-PET-004 | created | mors | mors | b6250c54-779b-4200-a0c2-b60a19a7de72 | /uploads/products/b6250c54-779b-4200-a0c2-b60a19a7de72/ec11dccb-61a5-4dca-8064-249de3855521.webp | -
+ZY-KIKUNI-500-GLASS-005 | created | nectar | nektar | 6fe0c5e4-a989-4ac2-9f70-207a370353d7 | /uploads/products/6fe0c5e4-a989-4ac2-9f70-207a370353d7/78327d24-9612-4374-94bf-06b7b42858c0.webp | -
+ZY-KIKUNI-3000-GLASS-002 | created | juice | sok | 1a06ee26-e024-44ce-90f7-37deacdab010 | /uploads/products/1a06ee26-e024-44ce-90f7-37deacdab010/8b6c6653-566d-4a14-8484-8e25ceab2249.webp | -
+ZY-SILBESI-500-GLASS-002 | created | nectar | nektar | 415e34ae-584c-4519-8e02-36515817180e | /uploads/products/415e34ae-584c-4519-8e02-36515817180e/ffc39b46-e0a3-4924-9e76-a6683be1e77b.webp | -
+ZY-SILBESI-500-GLASS-003 | created | juice | sok | 8556442e-9a4d-4c85-b15f-d0a647557433 | /uploads/products/8556442e-9a4d-4c85-b15f-d0a647557433/de258918-5a3b-454d-9c7c-a652f16a934d.webp | -
+ZY-KIKUNI-750-GLASS-004 | created | nectar | nektar | f5f056b1-f28e-44a3-aaf7-1f0218ff024d | /uploads/products/f5f056b1-f28e-44a3-aaf7-1f0218ff024d/cf390f78-eb6e-444c-804d-74fcd4c4111f.webp | -
+ZY-KIKUNI-750-GLASS-005 | created | juice | sok | 91ee4cd5-dfde-414b-91bb-85faeea9f320 | /uploads/products/91ee4cd5-dfde-414b-91bb-85faeea9f320/6157d9ee-e243-41ca-a4b6-61222bceaee3.webp | -
+ZY-AGUSHA-300-PET-001 | skipped | juice_drink | - | - | - | category_missing
+ZY-AGUSHA-300-PET-002 | skipped | juice_drink | - | - | - | category_missing
+ZY-AGUSHA-300-PET-003 | skipped | juice_drink | - | - | - | category_missing
+ZY-AGUSHA-300-PET-004 | skipped | juice_drink | - | - | - | category_missing
+
+--- post-import verification ---
+health: ok database=ok
+containers: app-app-1 healthy, app-db-1 healthy
+created: 45 skipped: 5 failed: 0 images_uploaded: 45
+category_missing: 5 (juice_drink / no детские соки / no сокосодержащие)
+by_product_type: juice=18 nectar=22 mors=5 juice_drink_skipped=5
+by_category: sok=18 nektar=22 mors=5
+guest_catalog: ok
+approved_catalog: ok
+interest: works (cleaned up)
+cart_showcase: rejected (400)
+orderable_prices: unchanged (13)
+orders: 3 / order_items: 5
+products_total: 309
+showcase_active: 294
+orderable_active: 13
+no_price: 294
+package_requires_review: true
+backup: /var/backups/tinda/tinda-pre-zelenoe-juice-approved-20260727T154709Z.dump

@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-07-27T19:56:27.598Z",
+  "note": "LOCAL DRAFT ONLY. Production / VPS / DB / image_url / prices / seed not changed. Nothing imported. Stopped after local preparation.",
+  "categories": [
+    {
+      "id": 46,
+      "slug": "kompoty",
+      "url": "https://zelenoeyabloko.ru/catalog/kompoty",
+      "title": "Компоты",
+      "api_total": 2,
+      "collected": 2
+    },
+    {
+      "id": 49,
+      "slug": "bezalkogolnye-napitki",
+      "url": "https://zelenoeyabloko.ru/catalog/bezalkogolnye-napitki",
+      "title": "Безалкогольные напитки",
+      "api_total": 17,
+      "collected": 13
+    },
+    {
+      "id": 250,
+      "slug": "toniziruiushhie-napitki",
+      "url": "https://zelenoeyabloko.ru/catalog/toniziruiushhie-napitki",
+      "title": "Тонизирующие напитки",
+      "api_total": 1,
+      "collected": 1
+    }
+  ],
+  "pages_processed": 3,
+  "pages_by_category": {
+    "kompoty": 1,
+    "bezalkogolnye-napitki": 1,
+    "toniziruiushhie-napitki": 1
+  },
+  "found_raw": 16,
+  "found": 16,
+  "unique": 16,
+  "skipped_count": 4,
+  "skipped_by_reason": {
+    "excluded_ice_bar_tea_kvass": 4
+  },
+  "skipped_sample": [
+    {
+      "reason": "excluded_ice_bar_tea_kvass",
+      "name": "Чай холодный ICE BAR Персик 1,25л",
+      "id": "12585"
+    },
+    {
+      "reason": "excluded_ice_bar_tea_kvass",
+      "name": "Чай холодный ICE BAR Лесные Ягоды 1,25л",
+      "id": "12581"
+    },
+    {
+      "reason": "excluded_ice_bar_tea_kvass",
+      "name": "Чай холодный ICE BAR Персик 0,5л",
+      "id": "12584"
+    },
+    {
+      "reason": "excluded_ice_bar_tea_kvass",
+      "name": "Чай холодный ICE BAR Лесные Ягоды 0,5л",
+      "id": "12580"
+    }
+  ],
+  "internal_duplicates_skipped": 0,
+  "by_product_type": {
+    "compote": 2,
+    "malt_drink": 7,
+    "non_alcoholic_drink": 6,
+    "tonic_drink": 1,
+    "other": 0,
+    "unknown": 0
+  },
+  "counts_report": {
+    "categories": [
+      {
+        "id": 46,
+        "slug": "kompoty",
+        "url": "https://zelenoeyabloko.ru/catalog/kompoty",
+        "title": "Компоты",
+        "api_total": 2,
+        "collected": 2
+      },
+      {
+        "id": 49,
+        "slug": "bezalkogolnye-napitki",
+        "url": "https://zelenoeyabloko.ru/catalog/bezalkogolnye-napitki",
+        "title": "Безалкогольные напитки",
+        "api_total": 17,
+        "collected": 13
+      },
+      {
+        "id": 250,
+        "slug": "toniziruiushhie-napitki",
+        "url": "https://zelenoeyabloko.ru/catalog/toniziruiushhie-napitki",
+        "title": "Тонизирующие напитки",
+        "api_total": 1,
+        "collected": 1
+      }
+    ],
+    "found": 16,
+    "already_in_tinda_exact": 0,
+    "already_in_tinda_probable": 0,
+    "new_product": 16,
+    "approved_new": 9,
+    "needs_review": 7,
+    "rejected": 0,
+    "approved_existing": 0,
+    "compotes": 2,
+    "malt_drinks": 7,
+    "tonics": 1,
+    "other_non_alcoholic_drinks": 6,
+    "other": 0,
+    "unknown_type": 0
+  },
+  "match_status": {
+    "exact_match": 0,
+    "probable_match": 0,
+    "new_product": 16,
+    "conflict": 0,
+    "unknown": 0
+  },
+  "auto_review": {
+    "approved_existing": 0,
+    "approved_new": 9,
+    "needs_review": 7,
+    "rejected": 0
+  },
+  "highlights": {
+    "barbican": 7,
+    "vast": 1,
+    "malt_drink": 7,
+    "na_cocktail": 0,
+    "tonic": 1,
+    "functional": 1,
+    "misclassified": 1,
+    "na_wine": 4,
+    "misclassified_items": [
+      {
+        "source_name": "Напиток Черноголовка Байкал пл/б 2л",
+        "hint": "likely_soft_drink_gazirovka"
+      }
+    ],
+    "barbican_items": [
+      "Напиток Barbican Malt ячмень ст 330мл",
+      "Напиток Barbican ананас ст 330мл",
+      "Напиток Barbican персик ст 330мл",
+      "Напиток Barbican яблоко ст 330мл",
+      "Напиток Barbican гранат ст 330мл",
+      "Напиток Barbican малина ст 330мл",
+      "Напиток Barbican лимон ст 330мл"
+    ],
+    "vast_items": [
+      "Напиток Vast безалкогольный ж/б 330мл Манго"
+    ]
+  },
+  "unknown_package": 2,
+  "unknown_product_type": 0,
+  "download": {
+    "urls_processed": 16,
+    "downloaded_ok": 16,
+    "errors": 0,
+    "duplicates_sha256": 0,
+    "below_500": 0
+  },
+  "tinda_products_compared": 444,
+  "scrape_errors": [],
+  "needs_review_reasons": {
+    "needs_review_new_incomplete": 7
+  },
+  "rejected_reasons": {},
+  "artifacts": {
+    "candidates": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/candidates.json",
+    "candidates_flat": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/candidates.flat.json",
+    "original": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original",
+    "previews": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/previews",
+    "manifest": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/manifest.json",
+    "gallery": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/gallery.html",
+    "gallery_data": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/gallery-data.json",
+    "images_review": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/images-review.xlsx",
+    "review_decisions": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/review-decisions.json",
+    "review_decisions_xlsx": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/review-decisions.xlsx",
+    "collection_summary": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/collection-summary.json",
+    "tinda_snapshot": "/workspace/data/imports/tinda_active_products.snapshot.json"
+  },
+  "match_status_note": "Сопоставление с ТИНДА (444 active): все 16 кандидатов — new_product (exact/probable/conflict = 0). 4 ICE BAR из bezalkogolnye исключены (уже в tea-kvass)."
+}

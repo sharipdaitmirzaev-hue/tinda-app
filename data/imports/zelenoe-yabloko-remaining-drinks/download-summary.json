@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-27T19:55:50.501Z",
+  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/candidates.json",
+  "candidates_count": 16,
+  "urls_processed": 16,
+  "downloaded_ok": 16,
+  "errors": 0,
+  "duplicates_sha256": 0,
+  "below_500": 0,
+  "total_original_bytes": 373072,
+  "original_dir": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/original",
+  "preview_dir": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/previews",
+  "manifest_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/manifest.json",
+  "gallery_path": "/workspace/data/imports/zelenoe-yabloko-remaining-drinks/gallery.html",
+  "production_changed": false,
+  "images_uploaded": false,
+  "image_url_changed": false
+}

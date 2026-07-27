@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-07-27T17:03:07.813Z",
+  "note": "LOCAL DRAFT ONLY. Production / VPS / DB / image_url / prices / seed not changed. Nothing imported.",
+  "categories": [
+    {
+      "id": 249,
+      "slug": "xolodnye-cai",
+      "url": "https://zelenoeyabloko.ru/catalog/xolodnye-cai",
+      "title": "Холодные чаи",
+      "api_total": 3,
+      "collected": 3
+    },
+    {
+      "id": 48,
+      "slug": "kvas",
+      "url": "https://zelenoeyabloko.ru/catalog/kvas",
+      "title": "Квас",
+      "api_total": 13,
+      "collected": 13
+    },
+    {
+      "id": 49,
+      "slug": "bezalkogolnye-napitki",
+      "url": "https://zelenoeyabloko.ru/catalog/bezalkogolnye-napitki",
+      "title": "Безалкогольные напитки (только холодный чай)",
+      "api_total": 17,
+      "collected": 4
+    }
+  ],
+  "note_categories": "Холодные чаи (249), Квас (48), плюс 4 холодных чая ICE BAR из Безалкогольные напитки (49). Комбуча и квасные напитки на сайте в этих категориях не найдены.",
+  "pages_processed": 7,
+  "pages_by_category": {
+    "xolodnye-cai": 3,
+    "kvas": 2,
+    "bezalkogolnye-napitki": 2
+  },
+  "found": 20,
+  "unique": 20,
+  "internal_duplicates_skipped": 0,
+  "by_product_type": {
+    "iced_tea": 7,
+    "tea_drink": 0,
+    "kombucha": 0,
+    "kvass": 13,
+    "kvass_drink": 0,
+    "unknown": 0
+  },
+  "match_status": {
+    "exact_match": 0,
+    "probable_match": 0,
+    "new_product": 19,
+    "conflict": 0,
+    "unknown": 1
+  },
+  "auto_review": {
+    "approved_existing": 0,
+    "approved_new": 5,
+    "needs_review": 12,
+    "rejected": 3
+  },
+  "images_below_500": 1,
+  "unknown_package": 11,
+  "unknown_product_type": 0,
+  "download": {
+    "urls_processed": 20,
+    "downloaded_ok": 18,
+    "errors": 2,
+    "duplicates_sha256": 0,
+    "below_500": 1,
+    "error_details": [
+      {
+        "source_name": "Квас Вятский хлебный ж/б 0,5л",
+        "error_message": "not_jpeg_png_webp"
+      },
+      {
+        "source_name": "Квас Янтарный пэт 0,5л",
+        "error_message": "empty_candidate_image_url"
+      }
+    ]
+  },
+  "proposed_sku_unique": true,
+  "proposed_sku_count": 20,
+  "proposed_sku_conflicts_with_tinda": [],
+  "tinda_products_compared": 441,
+  "sugar_free_true": 0,
+  "scrape_errors": [],
+  "skipped_non_tea_kvass_from_mixed_category": 13,
+  "needs_review_reasons": {
+    "needs_review_new_incomplete": 12
+  },
+  "rejected_reasons": {
+    "rejected_placeholder": 1,
+    "rejected_bad_image": 2
+  },
+  "artifacts": {
+    "candidates": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/candidates.json",
+    "candidates_flat": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/candidates.flat.json",
+    "original": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/original",
+    "previews": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/previews",
+    "manifest": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/manifest.json",
+    "gallery": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/gallery.html",
+    "gallery_data": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/gallery-data.json",
+    "images_review": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/images-review.xlsx",
+    "review_decisions": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/review-decisions.json",
+    "review_decisions_xlsx": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/review-decisions.xlsx",
+    "collection_summary": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/collection-summary.json",
+    "tinda_snapshot": "/workspace/data/imports/tinda_active_products.snapshot.json"
+  },
+  "match_status_note": "Сопоставление с ТИНДА (441): images-review дал new_product=20; у 1 товара без URL картинки gallery пометил unknown."
+}
