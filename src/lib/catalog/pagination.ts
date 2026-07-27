@@ -113,14 +113,14 @@ export const CATALOG_FILTER_QUERY_KEYS = [
  * Empty / null values are omitted. page=1 may still be set explicitly.
  */
 export function buildCatalogPageHref(
-  searchParams: URLSearchParams | Record<string, string | null | undefined>,
+  searchParams: Pick<URLSearchParams, "get"> | Record<string, string | null | undefined>,
   page: number,
 ): string {
   const source =
-    searchParams instanceof URLSearchParams
-      ? searchParams
+    typeof (searchParams as URLSearchParams).get === "function"
+      ? (searchParams as Pick<URLSearchParams, "get">)
       : new URLSearchParams(
-          Object.entries(searchParams)
+          Object.entries(searchParams as Record<string, string | null | undefined>)
             .filter(([, v]) => v != null && String(v) !== "")
             .map(([k, v]) => [k, String(v)]),
         );

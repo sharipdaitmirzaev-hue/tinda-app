@@ -13,7 +13,7 @@ export type CatalogPaginationProps = {
   page_size: number;
   total: number;
   total_pages: number;
-  search_params: URLSearchParams;
+  search_params: Pick<URLSearchParams, "get">;
   /** Visual density: top bar is slightly more compact on desktop. */
   placement?: "top" | "bottom";
   /** Show mobile «Показать ещё» (next page) under the pager. */
