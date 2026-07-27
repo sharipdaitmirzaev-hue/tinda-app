@@ -27,7 +27,8 @@
     "zy:build-approval": "tsx scripts/zelenoe-yabloko/build-approval.ts",
     "zelenoe-images:download-all": "tsx scripts/zelenoe-yabloko/download-all-images.ts",
     "zelenoe-images:gallery": "tsx scripts/zelenoe-yabloko/build-gallery.ts",
-    "zelenoe-images:serve": "tsx scripts/zelenoe-yabloko/gallery-server.ts"
+    "zelenoe-images:serve": "tsx scripts/zelenoe-yabloko/gallery-server.ts",
+    "zelenoe-images:auto-review": "tsx scripts/zelenoe-yabloko/auto-review.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",

@@ -318,20 +318,22 @@ a.src:hover{text-decoration:underline}
 const LS_KEY = "zy_gallery_decisions_v1";
 const FILTERS = [
   ["all","Все"],
+  ["auto_approved","Одобрено автоматически"],
+  ["needs_review","Требует ручной проверки"],
+  ["rejected","Отклонено автоматически"],
+  ["new_product","Новые товары"],
+  ["approved_existing","Существующие товары"],
   ["exact_match","exact_match"],
   ["probable_match","probable_match"],
-  ["new_product","new_product"],
   ["conflict","conflict"],
   ["below_500","меньше 500×500"],
-  ["approved_existing","approved_existing"],
-  ["approved_new","approved_new"],
-  ["rejected","rejected"],
   ["pending","pending"],
 ];
 const REVIEW_OPTS = [
   ["pending","pending — ещё не проверено"],
   ["approved_existing","approved_existing — для существующего товара"],
   ["approved_new","approved_new — для нового товара"],
+  ["needs_review","needs_review — нужна ручная проверка"],
   ["rejected","rejected — не использовать"],
 ];
 
@@ -384,17 +386,23 @@ function buildDecisionRows(){
 }
 function updateStatus(){
   const rows = buildDecisionRows();
-  const counts = {pending:0,approved_existing:0,approved_new:0,rejected:0};
+  const counts = {pending:0,approved_existing:0,approved_new:0,needs_review:0,rejected:0};
   for (const r of rows) counts[r.review_status] = (counts[r.review_status]||0)+1;
   const ms = DATA.stats || {};
   document.getElementById("status").textContent =
-    \`Карточек: \${rows.length}. match: exact=\${ms.exact_match||0}, probable=\${ms.probable_match||0}, new=\${ms.new_product||0}, conflict=\${ms.conflict||0}, unknown=\${ms.unknown||0}. Решения: pending=\${counts.pending||0}, approved_existing=\${counts.approved_existing||0}, approved_new=\${counts.approved_new||0}, rejected=\${counts.rejected||0}.\`;
+    \`Карточек: \${rows.length}. match: exact=\${ms.exact_match||0}, probable=\${ms.probable_match||0}, new=\${ms.new_product||0}, conflict=\${ms.conflict||0}. Решения: approved_existing=\${counts.approved_existing||0}, approved_new=\${counts.approved_new||0}, needs_review=\${counts.needs_review||0}, rejected=\${counts.rejected||0}, pending=\${counts.pending||0}.\`;
 }
 function cardMatchesFilter(card, filter){
   const d = getDec(card);
   if(filter==="all") return true;
   if(filter==="below_500") return !!card.below_500;
-  if(["approved_existing","approved_new","rejected","pending"].includes(filter)) return d.review_status===filter;
+  if(filter==="auto_approved") return d.review_status==="approved_existing" || d.review_status==="approved_new";
+  if(filter==="approved_existing") return d.review_status==="approved_existing";
+  if(filter==="needs_review") return d.review_status==="needs_review";
+  if(filter==="rejected") return d.review_status==="rejected";
+  if(filter==="pending") return d.review_status==="pending";
+  if(filter==="new_product") return card.match_status==="new_product";
+  if(filter==="below_500") return !!card.below_500;
   return card.match_status===filter;
 }
 function applyFilter(){
