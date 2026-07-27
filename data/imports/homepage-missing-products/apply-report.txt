@@ -1,0 +1,32 @@
+homepage-missing-products import apply
+generated_at: 2026-07-27T20:54:35.678Z
+backup: /var/backups/tinda/tinda-pre-homepage-missing-products-20260727T205413Z.dump
+source: /app/data/imports/homepage-missing-products/approved-new-import-batch.json
+rows: 4 (expected 4)
+preview_ok/failed: 4/0
+created/skipped/failed: 4/0/0
+images_uploaded: 4
+package_requires_review: true
+products_total: 455 -> 459
+showcase_active: 440 -> 444
+orderable_active: 13 -> 13
+no_price: 440 -> 444
+guard orders/items/clients/interest unchanged: true/true/true/true
+orderable_price_drift: 0
+
+SKUs:
+  created      ZY-COCACOLAZERO-330-GLASS-001  kola  /uploads/products/6d7a2ec3-66eb-4561-b227-ab4268f53e87/f36d04bb-1b7b-4390-87a2-adcf01c64307.webp  
+  created      ZY-SPRITE-2000-PET-001  gazirovannye-napitki  /uploads/products/a357764c-0f35-4e76-b642-fd06f3406b72/bddc7dd1-a03a-490f-bd54-1e91ae63a0f0.webp  
+  created      ZY-ADRENALINE-250-CAN-001  energeticheskie-napitki  /uploads/products/577cdd10-3646-41e9-aa3e-bd4c15a16180/708ed9e7-e5dc-40be-8f39-bdade51fe6e2.webp  
+  created      ZY-ADRENALINE-449-CAN-001  energeticheskie-napitki  /uploads/products/085d3428-297b-4e4b-8949-d299c7c6d559/11d3b16b-c4c0-45c3-8a33-9639562be5b8.webp
+
+post_deploy:
+  products_total: 459
+  showcase_active: 444
+  orderable_active: 13
+  no_price: 444
+  health: ok
+  containers: app-app-1 healthy, app-db-1 healthy
+  homepage_order_prefix: DRINK-COCACOLA-330-GLASS-105, ZY-COCACOLAZERO-330-GLASS-001, ZY-SPRITE-2000-PET-001, ... ZY-ADRENALINE-250, ZY-ADRENALINE-449
+  adrenaline_330_absent: true
+  lint/typecheck/test/build: pass/pass/203/pass
