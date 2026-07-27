@@ -1,7 +1,11 @@
 import { createHmac, randomBytes } from "crypto";
 import { cookies } from "next/headers";
 import { prisma } from "@/lib/db";
-import { assert_security_env, get_session_secret } from "@/lib/security/env";
+import {
+  assert_security_env,
+  get_app_url,
+  get_session_secret,
+} from "@/lib/security/env";
 
 export const SESSION_COOKIE_NAME = "tinda_session";
 const SESSION_DAYS = 14;
@@ -11,10 +15,18 @@ function hash_token(token: string): string {
   return createHmac("sha256", get_session_secret()).update(token).digest("hex");
 }
 
+/** Secure cookies only when the public app URL is HTTPS (HTTP-by-IP deploys need Secure=false). */
+function cookie_secure(): boolean {
+  const override = process.env.COOKIE_SECURE?.trim().toLowerCase();
+  if (override === "true") return true;
+  if (override === "false") return false;
+  return get_app_url().startsWith("https://");
+}
+
 function session_cookie_options(expires: Date) {
   return {
     httpOnly: true as const,
-    secure: process.env.NODE_ENV === "production",
+    secure: cookie_secure(),
     sameSite: "lax" as const,
     path: "/",
     expires,
