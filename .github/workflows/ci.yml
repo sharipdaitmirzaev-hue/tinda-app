@@ -1,0 +1,127 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: tinda
+          POSTGRES_PASSWORD: tinda
+          POSTGRES_DB: tinda
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U tinda -d tinda"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://tinda:tinda@localhost:5432/tinda?schema=public
+      SESSION_SECRET: ci-test-session-secret-at-least-32-chars
+      APP_URL: http://localhost:3000
+      STORAGE_DRIVER: memory
+      NODE_ENV: test
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Prisma generate
+        run: npx prisma generate
+
+      - name: Migrate
+        run: npx prisma migrate deploy
+
+      - name: Seed
+        run: npm run db:seed
+        env:
+          SEED_PASSWORD: ChangeMe123!
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Unit / integration tests
+        run: npm test
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_ENV: production
+          SESSION_SECRET: ci-build-session-secret-at-least-32-chars-long
+          APP_URL: http://localhost:3000
+          STORAGE_DRIVER: local
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: quality
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: tinda
+          POSTGRES_PASSWORD: tinda
+          POSTGRES_DB: tinda_e2e
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U tinda -d tinda_e2e"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DATABASE_URL: postgresql://tinda:tinda@localhost:5432/tinda_e2e?schema=public
+      SESSION_SECRET: e2e-test-session-secret-at-least-32-chars
+      APP_URL: http://127.0.0.1:3000
+      STORAGE_DRIVER: local
+      SEED_PASSWORD: ChangeMe123!
+      NODE_ENV: test
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Prisma + seed
+        run: |
+          npx prisma generate
+          npx prisma migrate deploy
+          npm run db:seed
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Build app for E2E
+        run: npm run build
+        env:
+          NODE_ENV: production
+          SESSION_SECRET: e2e-test-session-secret-at-least-32-chars
+          APP_URL: http://127.0.0.1:3000
+          STORAGE_DRIVER: local
+
+      - name: E2E
+        run: npm run test:e2e

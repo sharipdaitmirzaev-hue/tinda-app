@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --brand: #0f766e;
+  --brand-hover: #0d9488;
+  --brand-muted: #ccfbf1;
+  --border: #e2e8f0;
+  --muted: #64748b;
+  --danger: #b91c1c;
+  --danger-bg: #fef2f2;
+  --warning: #b45309;
+  --warning-bg: #fffbeb;
+  --success: #047857;
+  --success-bg: #ecfdf5;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+  --shadow-md: 0 4px 16px rgb(15 23 42 / 0.08);
+  --container: 72rem;
+  --focus-ring: 0 0 0 3px rgb(15 118 110 / 0.35);
+}
+
+@layer base {
+  body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+  }
+}
+
+@layer components {
+  .ui-container {
+    @apply mx-auto w-full max-w-6xl px-4;
+  }
+
+  .ui-card {
+    @apply rounded-lg border border-slate-200 bg-white shadow-sm;
+  }
+
+  .ui-btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .ui-btn-primary {
+    @apply ui-btn bg-teal-700 text-white hover:bg-teal-800;
+  }
+
+  .ui-btn-secondary {
+    @apply ui-btn border border-slate-300 bg-white text-slate-800 hover:bg-slate-50;
+  }
+
+  .ui-btn-danger {
+    @apply ui-btn border border-amber-300 bg-amber-50 text-amber-900 hover:bg-amber-100;
+  }
+
+  .ui-input {
+    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400;
+  }
+
+  .ui-label {
+    @apply mb-1 block text-sm font-medium text-slate-800;
+  }
+
+  .ui-status {
+    @apply inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium;
+  }
+
+  .ui-status-new {
+    @apply ui-status bg-sky-50 text-sky-900;
+  }
+
+  .ui-status-confirmed {
+    @apply ui-status bg-teal-50 text-teal-900;
+  }
+
+  .ui-status-delivered {
+    @apply ui-status bg-emerald-50 text-emerald-900;
+  }
+
+  .ui-status-cancelled {
+    @apply ui-status bg-slate-100 text-slate-700;
+  }
+
+  .ui-status-pending {
+    @apply ui-status bg-amber-50 text-amber-900;
+  }
+
+  .ui-status-approved {
+    @apply ui-status bg-teal-50 text-teal-900;
+  }
+
+  .ui-status-rejected {
+    @apply ui-status bg-red-50 text-red-800;
+  }
+
+  .ui-status-blocked {
+    @apply ui-status bg-rose-50 text-rose-900;
+  }
+}

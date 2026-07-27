@@ -1,0 +1,266 @@
+// ТИНДА Э1 — схема PostgreSQL
+// Имена полей: snake_case (совпадают с API JSON)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model roles {
+  id         String       @id @default(uuid()) @db.Uuid
+  code       String       @unique @db.VarChar(50)
+  name       String       @db.VarChar(100)
+  user_roles user_roles[]
+}
+
+model users {
+  id                          String                       @id @default(uuid()) @db.Uuid
+  email                       String                       @unique @db.VarChar(255)
+  phone                       String?                      @db.VarChar(32)
+  password_hash               String                       @db.VarChar(255)
+  full_name                   String                       @db.VarChar(255)
+  is_active                   Boolean                      @default(true)
+  created_at                  DateTime                     @default(now()) @db.Timestamptz(6)
+  updated_at                  DateTime                     @updatedAt @db.Timestamptz(6)
+  user_roles                  user_roles[]
+  employee_profile            employee_profiles?
+  client                      clients?                     @relation("client_user")
+  managed_clients             clients[]                    @relation("client_manager")
+  sessions                    sessions[]
+  orders_created              orders[]                     @relation("order_created_by")
+  orders_managed              orders[]                     @relation("order_manager")
+  order_status_changes        order_status_history[]
+  order_idempotency_keys      order_idempotency_keys[]
+}
+
+model user_roles {
+  user_id String @db.Uuid
+  role_id String @db.Uuid
+  user    users  @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  role    roles  @relation(fields: [role_id], references: [id], onDelete: Cascade)
+
+  @@id([user_id, role_id])
+}
+
+model employee_profiles {
+  user_id              String   @id @db.Uuid
+  can_view_all_clients Boolean  @default(false)
+  can_edit_catalog     Boolean  @default(false)
+  created_at           DateTime @default(now()) @db.Timestamptz(6)
+  user                 users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+}
+
+model cities {
+  id         String    @id @default(uuid()) @db.Uuid
+  name       String    @db.VarChar(120)
+  region     String    @default("Республика Дагестан") @db.VarChar(120)
+  is_active  Boolean   @default(true)
+  sort_order Int       @default(0)
+  clients    clients[]
+  orders     orders[]
+
+  @@unique([name, region])
+}
+
+model clients {
+  id              String    @id @default(uuid()) @db.Uuid
+  user_id         String    @unique @db.Uuid
+  company_name    String    @db.VarChar(200)
+  inn             String    @unique @db.VarChar(12)
+  kpp             String?   @db.VarChar(9)
+  legal_name      String?   @db.VarChar(255)
+  legal_address   String?
+  city_id         String    @db.Uuid
+  client_type     String?   @db.VarChar(50)
+  status          String    @db.VarChar(20)
+  manager_id      String?   @db.Uuid
+  contact_name    String    @db.VarChar(255)
+  phone           String    @db.VarChar(32)
+  extra_phone     String?   @db.VarChar(32)
+  email           String    @db.VarChar(255)
+  comment         String?
+  address         String
+  pdn_accepted_at DateTime  @db.Timestamptz(6)
+  rejected_reason String?
+  approved_at     DateTime? @db.Timestamptz(6)
+  created_at      DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at      DateTime  @updatedAt @db.Timestamptz(6)
+  user            users     @relation("client_user", fields: [user_id], references: [id], onDelete: Cascade)
+  manager         users?    @relation("client_manager", fields: [manager_id], references: [id], onDelete: SetNull)
+  city            cities    @relation(fields: [city_id], references: [id])
+  cart            carts?
+  orders          orders[]
+
+  @@index([status])
+  @@index([manager_id])
+  @@index([city_id])
+}
+
+model categories {
+  id         String       @id @default(uuid()) @db.Uuid
+  parent_id  String?      @db.Uuid
+  name       String       @db.VarChar(150)
+  slug       String       @unique @db.VarChar(150)
+  sort_order Int          @default(0)
+  is_active  Boolean      @default(true)
+  created_at DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at DateTime     @updatedAt @db.Timestamptz(6)
+  parent     categories?  @relation("category_tree", fields: [parent_id], references: [id])
+  children   categories[] @relation("category_tree")
+  products   products[]
+
+  @@index([parent_id])
+  @@index([is_active, sort_order])
+}
+
+model products {
+  id                 String       @id @default(uuid()) @db.Uuid
+  sku                String       @unique @db.VarChar(64)
+  name               String       @db.VarChar(255)
+  brand              String?      @db.VarChar(150)
+  category_id        String       @db.Uuid
+  volume_text        String?      @db.VarChar(100)
+  package_type       String?      @db.VarChar(100)
+  units_per_package  Int          @default(1)
+  sale_unit          String       @db.VarChar(30)
+  min_order_qty      Int          @default(1)
+  allow_piece_sale   Boolean      @default(false)
+  description        String?
+  availability       String       @db.VarChar(20)
+  is_promo           Boolean      @default(false)
+  is_new             Boolean      @default(false)
+  is_hit             Boolean      @default(false)
+  image_url          String?
+  is_active          Boolean      @default(true)
+  created_at         DateTime     @default(now()) @db.Timestamptz(6)
+  updated_at         DateTime     @updatedAt @db.Timestamptz(6)
+  category           categories   @relation(fields: [category_id], references: [id])
+  cart_items         cart_items[]
+  order_items        order_items[]
+
+  @@index([category_id])
+  @@index([is_active, availability])
+  @@index([name])
+}
+
+model carts {
+  id         String       @id @default(uuid()) @db.Uuid
+  client_id  String       @unique @db.Uuid
+  updated_at DateTime     @updatedAt @db.Timestamptz(6)
+  client     clients      @relation(fields: [client_id], references: [id], onDelete: Cascade)
+  items      cart_items[]
+}
+
+model cart_items {
+  id         String   @id @default(uuid()) @db.Uuid
+  cart_id    String   @db.Uuid
+  product_id String   @db.Uuid
+  qty        Int
+  cart       carts    @relation(fields: [cart_id], references: [id], onDelete: Cascade)
+  product    products @relation(fields: [product_id], references: [id])
+
+  @@unique([cart_id, product_id])
+}
+
+model orders {
+  id                     String                   @id @default(uuid()) @db.Uuid
+  number                 String                   @unique @db.VarChar(32)
+  client_id              String                   @db.Uuid
+  manager_id             String?                  @db.Uuid
+  created_by_user_id     String                   @db.Uuid
+  status                 String                   @db.VarChar(30)
+  city_id                String                   @db.Uuid
+  address_snapshot       String
+  contact_name           String                   @db.VarChar(255)
+  contact_phone          String                   @db.VarChar(32)
+  desired_delivery_date  DateTime                 @db.Date
+  payment_method         String                   @db.VarChar(30)
+  is_urgent              Boolean                  @default(false)
+  client_comment         String?
+  manager_comment        String?
+  cancel_reason          String?
+  confirmed_at           DateTime?                @db.Timestamptz(6)
+  delivered_at           DateTime?                @db.Timestamptz(6)
+  cancelled_at           DateTime?                @db.Timestamptz(6)
+  created_at             DateTime                 @default(now()) @db.Timestamptz(6)
+  updated_at             DateTime                 @updatedAt @db.Timestamptz(6)
+  client                 clients                  @relation(fields: [client_id], references: [id])
+  manager                users?                   @relation("order_manager", fields: [manager_id], references: [id], onDelete: SetNull)
+  created_by             users                    @relation("order_created_by", fields: [created_by_user_id], references: [id])
+  city                   cities                   @relation(fields: [city_id], references: [id])
+  items                  order_items[]
+  status_history         order_status_history[]
+  idempotency_keys       order_idempotency_keys[]
+
+  @@index([client_id, created_at])
+  @@index([manager_id, status])
+  @@index([status, created_at])
+}
+
+model order_number_counters {
+  date_key String @id @db.VarChar(8)
+  last_seq Int
+}
+
+model order_idempotency_keys {
+  id         String   @id @default(uuid()) @db.Uuid
+  user_id    String   @db.Uuid
+  key        String   @db.VarChar(64)
+  order_id   String   @db.Uuid
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  user       users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  order      orders   @relation(fields: [order_id], references: [id], onDelete: Cascade)
+
+  @@unique([user_id, key])
+  @@index([order_id])
+}
+
+model order_items {
+  id            String    @id @default(uuid()) @db.Uuid
+  order_id      String    @db.Uuid
+  product_id    String?   @db.Uuid
+  product_name  String    @db.VarChar(255)
+  product_sku   String    @db.VarChar(64)
+  package_info  String?   @db.VarChar(255)
+  sale_unit     String    @db.VarChar(30)
+  qty           Int
+  order         orders    @relation(fields: [order_id], references: [id])
+  product       products? @relation(fields: [product_id], references: [id], onDelete: SetNull)
+
+  @@index([order_id])
+}
+
+model order_status_history {
+  id                  String   @id @default(uuid()) @db.Uuid
+  order_id            String   @db.Uuid
+  from_status         String?  @db.VarChar(30)
+  to_status           String   @db.VarChar(30)
+  changed_by_user_id  String   @db.Uuid
+  comment             String?
+  created_at          DateTime @default(now()) @db.Timestamptz(6)
+  order               orders   @relation(fields: [order_id], references: [id], onDelete: Cascade)
+  changed_by          users    @relation(fields: [changed_by_user_id], references: [id])
+
+  @@index([order_id, created_at])
+}
+
+model settings {
+  key   String @id @db.VarChar(100)
+  value Json
+}
+
+model sessions {
+  id          String   @id @default(uuid()) @db.Uuid
+  user_id     String   @db.Uuid
+  token_hash  String   @unique @db.VarChar(255)
+  expires_at  DateTime @db.Timestamptz(6)
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+  user        users    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@index([expires_at])
+}
