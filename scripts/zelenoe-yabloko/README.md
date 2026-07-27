@@ -60,8 +60,15 @@ Staging WebP: `data/imports/external-product-images/staging/`
 
 ```bash
 npm run zelenoe-images:download-all
+npm run zelenoe-images:gallery
+npm run zelenoe-images:serve
 ```
 
-→ `data/imports/zelenoe-yabloko-images/{original,previews,manifest.json,gallery.html}`
+Открыть: http://127.0.0.1:8765/gallery.html
+
+В галерее:
+- выбрать `approved_existing` / `approved_new` / `rejected` / `pending`
+- **Сохранить решения** → `review-decisions.json` + `review-decisions.xlsx`
+- фильтры по match_status и статусу решения
 
 Без approval.xlsx, без staging, без production.

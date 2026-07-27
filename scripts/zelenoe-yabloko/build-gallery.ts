@@ -1,4 +1,252 @@
-<!DOCTYPE html>
+#!/usr/bin/env node
+/**
+ * Build interactive local review gallery for Zelenoe Yabloko images.
+ *
+ * Does NOT change production / VPS / DB / image_url.
+ */
+import { createRequire } from "node:module";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import path from "node:path";
+import process from "node:process";
+import {
+  build_zy_sku,
+  parse_zy_product_name,
+} from "../../src/lib/catalog/external-images/zy-parse-name";
+import {
+  normalize_package,
+  parse_volume_ml,
+} from "../../src/lib/catalog/external-images/normalize";
+
+const require = createRequire(import.meta.url);
+const XLSX = require("xlsx");
+
+function arg(name: string, fallback: string | null = null): string | null {
+  const i = process.argv.indexOf(`--${name}`);
+  if (i >= 0 && process.argv[i + 1]) return process.argv[i + 1]!;
+  return fallback;
+}
+
+type ManifestItem = {
+  source_index: number;
+  source_name: string;
+  brand: string;
+  flavor: string;
+  volume_text: string;
+  package_type: string;
+  source_product_url: string;
+  candidate_image_url: string;
+  local_original_path: string;
+  local_preview_path: string;
+  mime_type: string;
+  extension: string;
+  width: number | null;
+  height: number | null;
+  file_size: number | null;
+  sha256: string;
+  match_status: string;
+  tinda_sku: string;
+  download_status: string;
+  error_message: string;
+  duplicate_of: string;
+};
+
+type ReviewRow = Record<string, unknown>;
+
+function load_review_by_url(review_path: string): Map<string, ReviewRow> {
+  const map = new Map<string, ReviewRow>();
+  if (!existsSync(review_path)) return map;
+  const wb = XLSX.readFile(review_path);
+  const priority: Record<string, number> = {
+    exact_match: 4,
+    conflict: 3,
+    probable_match: 2,
+    new_product: 1,
+    no_match: 0,
+  };
+  for (const name of wb.SheetNames) {
+    if (name === "Инструкция") continue;
+    const rows = XLSX.utils.sheet_to_json(wb.Sheets[name], {
+      defval: "",
+    }) as ReviewRow[];
+    for (const r of rows) {
+      const url = String(r.candidate_image_url || "").trim();
+      if (!url) continue;
+      let status = String(r.match_status || "");
+      if (name === "Новые товары") status = "new_product";
+      const prev = map.get(url);
+      const prev_status = String(prev?.match_status || "");
+      if (
+        !prev ||
+        (priority[status] ?? -1) > (priority[prev_status] ?? -1)
+      ) {
+        map.set(url, { ...r, match_status: status });
+      }
+    }
+  }
+  return map;
+}
+
+function rel_preview(abs: string, root: string): string {
+  if (!abs) return "";
+  const base = path.basename(abs);
+  if (abs.includes(`${path.sep}previews${path.sep}`) || abs.includes("/previews/")) {
+    return `previews/${base}`;
+  }
+  if (abs.includes(`${path.sep}original${path.sep}`) || abs.includes("/original/")) {
+    return `original/${base}`;
+  }
+  // fallback
+  const rel = path.relative(root, abs);
+  return rel.split(path.sep).join("/");
+}
+
+function main() {
+  const root = path.resolve(
+    arg("out-dir", "data/imports/zelenoe-yabloko-images")!,
+  );
+  const manifest_path = path.join(root, "manifest.json");
+  const candidates_path = path.resolve(
+    arg("candidates", "data/imports/zelenoe_yabloko_gazirovannye_candidates.json")!,
+  );
+  const review_path = path.resolve(
+    arg("review", "data/imports/zelenoe_yabloko_gazirovannye_images_review.xlsx")!,
+  );
+
+  const manifest = JSON.parse(readFileSync(manifest_path, "utf8")) as {
+    items: ManifestItem[];
+  };
+  const candidates = JSON.parse(readFileSync(candidates_path, "utf8")) as Array<
+    Record<string, unknown>
+  >;
+  const cand_by_url = new Map(
+    candidates.map((c) => [String(c.candidate_image_url || ""), c]),
+  );
+  const review_by_url = load_review_by_url(review_path);
+
+  const seq_by_prefix = new Map<string, number>();
+  const cards = manifest.items.map((item) => {
+    const rev = review_by_url.get(item.candidate_image_url);
+    const cand = cand_by_url.get(item.candidate_image_url);
+    const match_status =
+      String(rev?.match_status || item.match_status || "unknown");
+    const tinda_volume = String(rev?.tinda_volume || "");
+    const tinda_name = String(rev?.tinda_name || "");
+    const comment = String(rev?.review_comment || "");
+    const volume_match = (() => {
+      if (match_status === "new_product") return null;
+      if (comment.includes("volume_exact") || comment.includes("volume_near")) {
+        return true;
+      }
+      if (comment.includes("volume_mismatch")) return false;
+      const a = parse_volume_ml(item.volume_text);
+      const b = parse_volume_ml(tinda_volume);
+      if (a == null || b == null) return null;
+      return a === b;
+    })();
+    const package_match = (() => {
+      if (match_status === "new_product") return null;
+      if (comment.includes("package_exact")) return true;
+      if (comment.includes("package_mismatch")) return false;
+      const a = normalize_package(item.package_type);
+      const b = normalize_package(tinda_name);
+      if (!a || !b) return null;
+      return a === b;
+    })();
+
+    const parsed = parse_zy_product_name(item.source_name);
+    const prefix = `${parsed.brand}|${parsed.volume_ml}|${parsed.package_code}`;
+    const seq = (seq_by_prefix.get(prefix) || 0) + 1;
+    seq_by_prefix.set(prefix, seq);
+    const proposed_sku = build_zy_sku(
+      parsed.brand,
+      parsed.volume_ml,
+      parsed.package_code,
+      seq,
+    );
+
+    const below_500 =
+      (item.width != null && item.width < 500) ||
+      (item.height != null && item.height < 500);
+
+    return {
+      source_index: item.source_index,
+      source_name: item.source_name,
+      brand: item.brand,
+      flavor: item.flavor,
+      volume_text: item.volume_text,
+      package_type: item.package_type,
+      source_product_url: item.source_product_url,
+      candidate_image_url: item.candidate_image_url,
+      local_original_path: item.local_original_path,
+      preview_path: rel_preview(item.local_preview_path, root),
+      original_path: rel_preview(item.local_original_path, root),
+      mime_type: item.mime_type,
+      extension: item.extension,
+      width: item.width,
+      height: item.height,
+      file_size: item.file_size,
+      sha256: item.sha256,
+      match_status,
+      match_score: Number(rev?.match_score || 0) || null,
+      tinda_product_id: String(rev?.tinda_product_id || ""),
+      tinda_sku: String(rev?.tinda_sku || item.tinda_sku || ""),
+      tinda_name: tinda_name,
+      tinda_volume,
+      current_image_url: String(rev?.current_image_url || ""),
+      volume_match,
+      package_match,
+      source_price_reference:
+        cand?.source_price_reference ?? rev?.source_price_reference ?? "",
+      proposed_sku,
+      below_500,
+      download_status: item.download_status,
+      review_status: "pending",
+      review_comment: "",
+    };
+  });
+
+  const stats = cards.reduce(
+    (acc, c) => {
+      acc[c.match_status] = (acc[c.match_status] || 0) + 1;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
+
+  const data = {
+    generated_at: new Date().toISOString(),
+    title: "Зелёное яблоко — локальный review",
+    cards,
+    stats,
+    decisions_url: "./review-decisions.json",
+    note: "Local review only. No production changes.",
+  };
+
+  mkdirSync(root, { recursive: true });
+  writeFileSync(
+    path.join(root, "gallery-data.json"),
+    JSON.stringify(data, null, 2),
+  );
+
+  const html = build_html();
+  writeFileSync(path.join(root, "gallery.html"), html);
+
+  console.log(
+    JSON.stringify(
+      {
+        gallery: path.join(root, "gallery.html"),
+        data: path.join(root, "gallery-data.json"),
+        cards: cards.length,
+        stats,
+      },
+      null,
+      2,
+    ),
+  );
+}
+
+function build_html(): string {
+  return `<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
@@ -140,7 +388,7 @@ function updateStatus(){
   for (const r of rows) counts[r.review_status] = (counts[r.review_status]||0)+1;
   const ms = DATA.stats || {};
   document.getElementById("status").textContent =
-    `Карточек: ${rows.length}. match: exact=${ms.exact_match||0}, probable=${ms.probable_match||0}, new=${ms.new_product||0}, conflict=${ms.conflict||0}, unknown=${ms.unknown||0}. Решения: pending=${counts.pending||0}, approved_existing=${counts.approved_existing||0}, approved_new=${counts.approved_new||0}, rejected=${counts.rejected||0}.`;
+    \`Карточек: \${rows.length}. match: exact=\${ms.exact_match||0}, probable=\${ms.probable_match||0}, new=\${ms.new_product||0}, conflict=\${ms.conflict||0}, unknown=\${ms.unknown||0}. Решения: pending=\${counts.pending||0}, approved_existing=\${counts.approved_existing||0}, approved_new=\${counts.approved_new||0}, rejected=\${counts.rejected||0}.\`;
 }
 function cardMatchesFilter(card, filter){
   const d = getDec(card);
@@ -160,7 +408,7 @@ function applyFilter(){
 function renderFilters(){
   const box = document.getElementById("filters");
   box.innerHTML = FILTERS.map(([id,label]) =>
-    `<button type="button" data-filter="${id}" class="${id===activeFilter?"active":""}">${esc(label)}</button>`
+    \`<button type="button" data-filter="\${id}" class="\${id===activeFilter?"active":""}">\${esc(label)}</button>\`
   ).join("");
   box.onclick = (e)=>{
     const b = e.target.closest("button");
@@ -176,47 +424,47 @@ function renderCard(c){
   const imgNew = c.preview_path || c.original_path || "";
   let media = "";
   if(isCompare){
-    media = `<div class="compare">
-      <div class="shot-wrap shot"><div class="lbl">ТИНДА сейчас</div>${c.current_image_url?`<img src="${esc(c.current_image_url)}" alt="current" loading="lazy" referrerpolicy="no-referrer" />`:`<span>нет фото</span>`}</div>
-      <div class="shot-wrap shot"><div class="lbl">Зелёное яблоко</div>${imgNew?`<img src="${esc(imgNew)}" alt="candidate" loading="lazy" />`:`<span>нет фото</span>`}</div>
+    media = \`<div class="compare">
+      <div class="shot-wrap shot"><div class="lbl">ТИНДА сейчас</div>\${c.current_image_url?\`<img src="\${esc(c.current_image_url)}" alt="current" loading="lazy" referrerpolicy="no-referrer" />\`:\`<span>нет фото</span>\`}</div>
+      <div class="shot-wrap shot"><div class="lbl">Зелёное яблоко</div>\${imgNew?\`<img src="\${esc(imgNew)}" alt="candidate" loading="lazy" />\`:\`<span>нет фото</span>\`}</div>
     </div>
     <div class="meta">
-      <div><dt>SKU</dt><dd>${esc(c.tinda_sku||"—")}</dd></div>
-      <div><dt>ТИНДА</dt><dd>${esc(c.tinda_name||"—")}</dd></div>
-      <div><dt>match_score</dt><dd>${c.match_score??"—"}</dd></div>
-      <div><dt>объём</dt><dd>${yn(c.volume_match)} (${esc(c.volume_text)} / ${esc(c.tinda_volume||"—")})</dd></div>
-      <div><dt>упаковка</dt><dd>${yn(c.package_match)} (${esc(c.package_type)})</dd></div>
-    </div>`;
+      <div><dt>SKU</dt><dd>\${esc(c.tinda_sku||"—")}</dd></div>
+      <div><dt>ТИНДА</dt><dd>\${esc(c.tinda_name||"—")}</dd></div>
+      <div><dt>match_score</dt><dd>\${c.match_score??"—"}</dd></div>
+      <div><dt>объём</dt><dd>\${yn(c.volume_match)} (\${esc(c.volume_text)} / \${esc(c.tinda_volume||"—")})</dd></div>
+      <div><dt>упаковка</dt><dd>\${yn(c.package_match)} (\${esc(c.package_type)})</dd></div>
+    </div>\`;
   } else {
     // new_product / unknown
-    media = `<div class="single">${imgNew?`<img src="${esc(imgNew)}" alt="candidate" loading="lazy" />`:`<span>нет фото</span>`}</div>
+    media = \`<div class="single">\${imgNew?\`<img src="\${esc(imgNew)}" alt="candidate" loading="lazy" />\`:\`<span>нет фото</span>\`}</div>
     <div class="warn">Товар ещё не создан в ТИНДА. Не импортировать автоматически.</div>
     <div class="meta">
-      <div><dt>source_name</dt><dd>${esc(c.source_name)}</dd></div>
-      <div><dt>бренд</dt><dd>${esc(c.brand)}</dd></div>
-      <div><dt>вкус</dt><dd>${esc(c.flavor||"—")}</dd></div>
-      <div><dt>объём</dt><dd>${esc(c.volume_text||"—")}</dd></div>
-      <div><dt>упаковка</dt><dd>${esc(c.package_type||"—")}</dd></div>
-      <div><dt>цена источника</dt><dd>${esc(c.source_price_reference||"—")} <em>(справочно)</em></dd></div>
-      <div><dt>proposed SKU</dt><dd>${esc(c.proposed_sku)}</dd></div>
-    </div>`;
+      <div><dt>source_name</dt><dd>\${esc(c.source_name)}</dd></div>
+      <div><dt>бренд</dt><dd>\${esc(c.brand)}</dd></div>
+      <div><dt>вкус</dt><dd>\${esc(c.flavor||"—")}</dd></div>
+      <div><dt>объём</dt><dd>\${esc(c.volume_text||"—")}</dd></div>
+      <div><dt>упаковка</dt><dd>\${esc(c.package_type||"—")}</dd></div>
+      <div><dt>цена источника</dt><dd>\${esc(c.source_price_reference||"—")} <em>(справочно)</em></dd></div>
+      <div><dt>proposed SKU</dt><dd>\${esc(c.proposed_sku)}</dd></div>
+    </div>\`;
   }
   const choices = REVIEW_OPTS.map(([v,label]) =>
-    `<label><input type="radio" name="rev-${c.source_index}" value="${v}" ${d.review_status===v?"checked":""}/> ${esc(label)}</label>`
+    \`<label><input type="radio" name="rev-\${c.source_index}" value="\${v}" \${d.review_status===v?"checked":""}/> \${esc(label)}</label>\`
   ).join("");
-  return `<article class="card" data-index="${c.source_index}" data-match="${esc(c.match_status)}">
-    ${media}
-    <h2>${esc(c.source_name)}</h2>
+  return \`<article class="card" data-index="\${c.source_index}" data-match="\${esc(c.match_status)}">
+    \${media}
+    <h2>\${esc(c.source_name)}</h2>
     <div class="meta">
-      <div><dt>match_status</dt><dd><span class="badge">${esc(c.match_status)}</span></dd></div>
-      <div><dt>размер</dt><dd>${c.width&&c.height?`${c.width}×${c.height}`:"—"}${c.below_500?" · &lt;500":""}</dd></div>
+      <div><dt>match_status</dt><dd><span class="badge">\${esc(c.match_status)}</span></dd></div>
+      <div><dt>размер</dt><dd>\${c.width&&c.height?\`\${c.width}×\${c.height}\`:"—"}\${c.below_500?" · &lt;500":""}</dd></div>
     </div>
-    <div class="choices">${choices}</div>
+    <div class="choices">\${choices}</div>
     <label style="font-size:.82rem;color:var(--muted)">review_comment
-      <textarea data-comment="${c.source_index}" placeholder="Комментарий...">${esc(d.review_comment)}</textarea>
+      <textarea data-comment="\${c.source_index}" placeholder="Комментарий...">\${esc(d.review_comment)}</textarea>
     </label>
-    <a class="src" href="${esc(c.source_product_url)}" target="_blank" rel="noopener">Карточка источника</a>
-  </article>`;
+    <a class="src" href="\${esc(c.source_product_url)}" target="_blank" rel="noopener">Карточка источника</a>
+  </article>\`;
 }
 function render(){
   document.getElementById("grid").innerHTML = DATA.cards.map(renderCard).join("");
@@ -294,13 +542,13 @@ async function init(){
   document.getElementById("btn-save").onclick = async ()=>{
     try{
       const r = await saveToServer();
-      alert("Сохранено:\n"+r.json_path+"\n"+r.xlsx_path);
+      alert("Сохранено:\\n"+r.json_path+"\\n"+r.xlsx_path);
       updateStatus();
     }catch(e){
       // fallback: download JSON if server unavailable
       const items = buildDecisionRows();
       downloadBlob("review-decisions.json", new Blob([JSON.stringify({generated_at:new Date().toISOString(),items},null,2)],{type:"application/json"}));
-      alert("Сервер сохранения недоступен. JSON скачан в браузер. Запустите: npm run zelenoe-images:serve\n"+e.message);
+      alert("Сервер сохранения недоступен. JSON скачан в браузер. Запустите: npm run zelenoe-images:serve\\n"+e.message);
     }
   };
   document.getElementById("btn-json").onclick = async ()=>{
@@ -318,7 +566,7 @@ async function init(){
       await saveToServer();
       window.location.href = "/api/decisions.xlsx";
     }catch(e){
-      alert("Для Excel нужен локальный сервер: npm run zelenoe-images:serve\n"+e.message);
+      alert("Для Excel нужен локальный сервер: npm run zelenoe-images:serve\\n"+e.message);
     }
   };
 }
@@ -327,4 +575,7 @@ init().catch(e=>{
 });
 </script>
 </body>
-</html>
+</html>`;
+}
+
+main();
