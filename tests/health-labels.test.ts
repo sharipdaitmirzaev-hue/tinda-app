@@ -39,6 +39,6 @@ describe("health and UI labels E1.14", () => {
 
     expect(AVAILABILITY_LABELS.in_stock).toBe("В наличии");
     expect(AVAILABILITY_LABELS.on_order).toBe("Под заказ");
-    expect(AVAILABILITY_LABELS.out_of_stock).toBe("Временно нет");
+    expect(AVAILABILITY_LABELS.out_of_stock).toBe("Нет в наличии");
   });
 });

@@ -1,0 +1,32 @@
+TINDA Zelenoe existing images apply report
+generated_at: 2026-07-27T14:40:58.508Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-zelenoe-existing-images-20260727T143856Z.dump
+uploads_root: /app/public/uploads
+planned: 9
+dry_run_ok: 9
+dry_run_failed: 0
+uploaded: 9
+applied: 9
+skipped: 0
+failed: 0
+orders: 3 (items 5) unchanged=true
+field_drift_count: 0
+images_http_webp_ok: 9/9
+guest_catalog_matched: 9/9
+approved_catalog_matched: 9/9
+sales_status: all showcase (unchanged)
+prices: null (unchanged)
+health: ok
+containers: app-app-1 healthy, app-db-1 healthy
+
+SKU | status | old_image_url | new_image_url | error
+DRINK-DOBRYI-1000-PET-192 | applied | https://cdn.metro-cc.ru/ru/ru_pim_154876001001_01.png | /uploads/products/7ee8e117-23d2-4afe-8abe-9dc13d9a9d28/5b1e82d1-e5c0-4967-b008-c64ce53a0700.webp | -
+DRINK-DOBRYI-1500-PET-177 | applied | https://cdn.metro-cc.ru/ru/ru_pim_154816001001_01.png | /uploads/products/79765e0f-7d2d-464b-a023-f5ad3536d673/0c81f931-4d57-4da7-bbb7-c3f6ce7bd7db.webp | -
+DRINK-DOBRYI-500-PET-196 | applied | https://cdn.metro-cc.ru/ru/ru_pim_154856001001_01.png | /uploads/products/04959b74-3bad-4e8b-ae78-afbe788867e2/36ed6e67-3653-4b4a-9a39-1696fd940bfc.webp | -
+DRINK-DOBRYI-1500-PET-060 | applied | https://cdn.metro-cc.ru/ru/ru_pim_154817001001_01.png | /uploads/products/dba41420-36f5-406e-a491-bf5420484a23/eef5f7d8-4f34-4445-a63a-40b345c85a01.webp | -
+DRINK-DOBRYI-500-PET-129 | applied | https://cdn.metro-cc.ru/ru/ru_pim_154860001001_01.png | /uploads/products/79c2bb23-6ead-41fc-a9c3-91d4533540d0/582a3eab-6c42-4a09-98df-aade1c66a7d0.webp | -
+DRINK-FRUSTYLE-1500-PET-066 | applied | https://cdn.metro-cc.ru/ru/ru_pim_170844001001_01.png | /uploads/products/4bf5ab02-be80-4f17-add2-6eb915510bbe/7d5e0adf-8858-41dc-9ab9-dee777b3474f.webp | -
+DRINK-FRUSTYLE-1500-PET-145 | applied | https://cdn.metro-cc.ru/ru/ru_pim_170846001001_01.png | /uploads/products/9da74915-3747-4e5b-89cd-6a9e43fe5fc4/8fa2a2f2-4669-4a68-b8b5-79f0b6283fce.webp | -
+DRINK-DOBRYI-1000-PET-094 | applied | https://cdn.metro-cc.ru/ru/ru_pim_154878001002_01.png | /uploads/products/b74918ee-71af-4444-94f4-86655ecce2f8/a03ba849-a2ed-4ae3-a5fe-64c732a2f282.webp | -
+DRINK-DOBRYI-330-CAN-018 | applied | https://cdn.metro-cc.ru/ru/ru_pim_154812001001_01.png | /uploads/products/3b74d252-9623-49e1-906a-88193348f76a/8b3e7192-d8a2-48b1-a1cb-9c7befc12871.webp | -

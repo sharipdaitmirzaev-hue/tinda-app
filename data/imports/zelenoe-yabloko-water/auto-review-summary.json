@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-07-27T15:04:07.704Z",
+  "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
+  "counts": {
+    "approved_existing": 0,
+    "approved_new": 65,
+    "needs_review": 3,
+    "rejected": 2
+  },
+  "approved_existing_skus": [],
+  "needs_review_brief": [
+    {
+      "source_index": 1,
+      "source_name": "Вода мин Doctor Bormental с газом ст/б 0,45",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "volume_missing"
+      ]
+    },
+    {
+      "source_index": 18,
+      "source_name": "Вода мин Нагутская-26 газир ст/б 0,5л",
+      "match_status": "new_product",
+      "reason": "needs_review_small_image",
+      "mismatches": [
+        "below_500"
+      ]
+    },
+    {
+      "source_index": 49,
+      "source_name": "Вода Родники Кавказа негаз 0,6л",
+      "match_status": "new_product",
+      "reason": "needs_review_small_image",
+      "mismatches": [
+        "below_500"
+      ]
+    }
+  ]
+}

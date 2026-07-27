@@ -7,26 +7,41 @@ export type CatalogViewerMode =
   | "pending"
   | "rejected"
   | "blocked"
-  | "approved";
+  | "approved"
+  | "staff";
 
-const CatalogViewerContext = createContext<CatalogViewerMode>("guest");
+type CatalogViewerContextValue = {
+  mode: CatalogViewerMode;
+  can_edit_catalog: boolean;
+};
+
+const CatalogViewerContext = createContext<CatalogViewerContextValue>({
+  mode: "guest",
+  can_edit_catalog: false,
+});
 
 export function CatalogViewerProvider({
   mode,
+  can_edit_catalog = false,
   children,
 }: {
   mode: CatalogViewerMode;
+  can_edit_catalog?: boolean;
   children: React.ReactNode;
 }) {
   return (
-    <CatalogViewerContext.Provider value={mode}>
+    <CatalogViewerContext.Provider value={{ mode, can_edit_catalog }}>
       {children}
     </CatalogViewerContext.Provider>
   );
 }
 
 export function useCatalogViewer(): CatalogViewerMode {
-  return useContext(CatalogViewerContext);
+  return useContext(CatalogViewerContext).mode;
+}
+
+export function useCanEditCatalog(): boolean {
+  return useContext(CatalogViewerContext).can_edit_catalog;
 }
 
 export function format_rub_price(amount: number, unit: string): string {

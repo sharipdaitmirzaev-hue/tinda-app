@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
+import { ProductStatusBadges } from "@/components/catalog/product-status-badges";
 import {
   format_rub_price,
+  useCanEditCatalog,
   useCatalogViewer,
 } from "@/components/catalog/catalog-viewer-context";
-import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
 import { useAddToServerCart } from "@/hooks/useServerCart";
 import { Toast } from "@/components/catalog/toast";
 import { ProductInterestForm } from "@/components/catalog/product-interest-form";
@@ -17,6 +18,8 @@ export type CatalogProduct = {
   sku: string;
   name: string;
   brand: string | null;
+  category_id?: string;
+  category_name?: string | null;
   volume_text: string | null;
   package_type: string | null;
   units_per_package: number;
@@ -37,6 +40,7 @@ export type CatalogProduct = {
 
 export function CatalogProductCard({ product }: { product: CatalogProduct }) {
   const viewer = useCatalogViewer();
+  const can_edit = useCanEditCatalog();
   const { add_from_catalog, toast, pending } = useAddToServerCart();
   const approved = viewer === "approved";
   const guest = viewer === "guest";
@@ -45,10 +49,6 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
   const [interest, set_interest] = useState<"interest" | "price_request" | null>(
     null,
   );
-  const availability_label =
-    product.availability_label ??
-    AVAILABILITY_LABELS[product.availability as Availability] ??
-    product.availability;
 
   function on_add() {
     if (!can_cart || pending) return;
@@ -62,7 +62,11 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
   }
 
   let price_block: React.ReactNode = null;
-  if (guest || viewer === "pending") {
+  if (viewer === "staff") {
+    price_block = (
+      <p className="mt-2 text-xs text-slate-500">Просмотр для staff</p>
+    );
+  } else if (guest || viewer === "pending") {
     price_block = (
       <p className="mt-2 text-xs text-slate-500">
         Войдите или зарегистрируйтесь, чтобы узнать условия поставки
@@ -71,7 +75,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
   } else if (approved) {
     if (product.availability === "out_of_stock") {
       price_block = (
-        <p className="mt-2 text-xs font-medium text-red-700">Временно нет</p>
+        <p className="mt-2 text-xs font-medium text-red-700">Нет в наличии</p>
       );
     } else if (sales_status === "orderable" && product.price) {
       price_block = (
@@ -79,7 +83,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           {format_rub_price(product.price.amount, product.price.unit)}
           {product.availability === "on_order" ? (
             <span className="mt-1 block text-xs font-normal text-amber-700">
-              Поставка под заказ
+              Под заказ
             </span>
           ) : null}
         </p>
@@ -92,9 +96,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
       );
     } else {
       price_block = (
-        <p className="mt-2 text-xs font-medium text-slate-700">
-          Товар представлен в каталоге
-        </p>
+        <p className="mt-2 text-xs font-medium text-slate-700">Витрина</p>
       );
     }
   }
@@ -105,7 +107,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
       action = (
         <button
           type="button"
-          className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
+          className="min-h-10 rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
           onClick={() => set_interest("interest")}
         >
           Сообщить об интересе
@@ -117,7 +119,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           type="button"
           disabled={pending}
           onClick={on_add}
-          className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+          className="min-h-10 rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
         >
           {pending ? "Добавляем…" : "В корзину"}
         </button>
@@ -126,7 +128,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
       action = (
         <button
           type="button"
-          className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800"
+          className="min-h-10 rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800"
           onClick={() => set_interest("price_request")}
         >
           Запросить цену
@@ -136,7 +138,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
       action = (
         <button
           type="button"
-          className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
+          className="min-h-10 rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
           onClick={() => set_interest("interest")}
         >
           Интересует товар
@@ -151,26 +153,10 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
         <ProductImage
           src={product.image_url}
           alt={product.name}
-          className="mb-3 h-32 w-full"
+          className="mb-3 aspect-square w-full"
         />
-        <div className="mb-2 flex flex-wrap gap-1 text-[10px] font-medium uppercase tracking-wide">
-          {product.is_promo ? (
-            <span className="rounded bg-rose-100 px-1.5 py-0.5 text-rose-800">
-              Акция
-            </span>
-          ) : null}
-          {product.is_new ? (
-            <span className="rounded bg-sky-100 px-1.5 py-0.5 text-sky-800">
-              Новинка
-            </span>
-          ) : null}
-          {product.is_hit ? (
-            <span className="rounded bg-amber-100 px-1.5 py-0.5 text-amber-900">
-              Хит
-            </span>
-          ) : null}
-        </div>
-        <h3 className="line-clamp-2 text-sm font-semibold text-slate-900">
+        <ProductStatusBadges product={product} />
+        <h3 className="mt-2 line-clamp-2 text-sm font-semibold text-slate-900">
           {product.name}
         </h3>
         <p className="mt-1 text-xs text-slate-500">
@@ -181,31 +167,29 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
             .filter(Boolean)
             .join(" · ") || "—"}
         </p>
-        <p className="text-xs text-slate-600">
-          {product.units_per_package} шт. в упаковке · {product.sale_unit}
-        </p>
-        <p
-          className={`mt-2 text-xs font-medium ${
-            product.availability === "out_of_stock"
-              ? "text-red-700"
-              : product.availability === "on_order"
-                ? "text-amber-700"
-                : "text-teal-800"
-          }`}
-        >
-          {availability_label}
-        </p>
+        {product.category_name ? (
+          <p className="text-xs text-slate-500">{product.category_name}</p>
+        ) : null}
+        <p className="text-xs text-slate-500">Арт. {product.sku}</p>
 
         {price_block}
 
         <div className="mt-auto flex flex-col gap-2 pt-3">
           <Link
             href={`/catalog/products/${product.id}`}
-            className="rounded-md border border-slate-300 px-3 py-2 text-center text-sm text-slate-800"
+            className="min-h-10 rounded-md border border-slate-300 px-3 py-2 text-center text-sm text-slate-800"
           >
             Подробнее
           </Link>
           {action}
+          {can_edit ? (
+            <Link
+              href={`/staff/products/${product.id}`}
+              className="min-h-10 rounded-md bg-slate-900 px-3 py-2 text-center text-sm text-white"
+            >
+              Редактировать
+            </Link>
+          ) : null}
         </div>
       </article>
       <Toast message={toast} />
