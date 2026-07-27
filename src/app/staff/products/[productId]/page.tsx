@@ -45,6 +45,7 @@ export default async function EditProductPage({ params }: PageProps) {
             is_hit: product.is_hit,
             image_url: product.image_url ?? "",
             is_active: product.is_active,
+            price_amount: String(product.price_amount),
           }}
         />
       </div>

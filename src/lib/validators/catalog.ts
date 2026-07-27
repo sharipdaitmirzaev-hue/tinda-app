@@ -28,6 +28,7 @@ const price_amount_schema = z.coerce
   .finite("Укажите корректную цену")
   .min(0, "Цена не может быть отрицательной");
 
+/** Fields without defaults — safe to `.partial()` for PATCH. */
 const product_fields_schema = z.object({
   sku: z.string().trim().min(1, "Укажите артикул").max(64),
   name: z.string().trim().min(1, "Укажите название товара").max(255),
@@ -46,14 +47,14 @@ const product_fields_schema = z.object({
     .number()
     .int()
     .min(1, "Минимальный заказ должен быть не меньше 1"),
-  allow_piece_sale: z.boolean().default(false),
+  allow_piece_sale: z.boolean(),
   description: z.string().trim().max(5000).nullable().optional(),
   availability: z.enum(AVAILABILITY_VALUES, {
     error: "Выберите статус наличия",
   }),
-  is_promo: z.boolean().default(false),
-  is_new: z.boolean().default(false),
-  is_hit: z.boolean().default(false),
+  is_promo: z.boolean(),
+  is_new: z.boolean(),
+  is_hit: z.boolean(),
   image_url: z
     .union([
       z.literal(""),
@@ -70,18 +71,24 @@ const product_fields_schema = z.object({
     ])
     .optional()
     .transform((value) => (value === "" || value === undefined ? null : value)),
-  is_active: z.boolean().default(true),
+  is_active: z.boolean(),
   price_amount: price_amount_schema,
-  price_currency: z.literal("RUB").default("RUB").optional(),
+  price_currency: z.literal("RUB"),
 });
 
-export const product_create_schema = product_fields_schema.refine(
-  (data) => !data.is_active || data.price_amount !== undefined,
-  {
+export const product_create_schema = product_fields_schema
+  .extend({
+    allow_piece_sale: z.boolean().default(false),
+    is_promo: z.boolean().default(false),
+    is_new: z.boolean().default(false),
+    is_hit: z.boolean().default(false),
+    is_active: z.boolean().default(true),
+    price_currency: z.literal("RUB").default("RUB"),
+  })
+  .refine((data) => !data.is_active || data.price_amount !== undefined, {
     message: "Укажите цену для активного товара",
     path: ["price_amount"],
-  },
-);
+  });
 
 export const product_update_schema = product_fields_schema
   .partial()

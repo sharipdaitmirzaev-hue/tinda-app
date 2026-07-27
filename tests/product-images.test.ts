@@ -161,6 +161,7 @@ describe("product images and catalog soft-delete E1.12", () => {
       min_order_qty: 1,
       availability: "in_stock",
       is_active: true,
+      price_amount: 200,
     });
     cleanup_product_ids.push(product.product.id);
     product_id = product.product.id;
@@ -499,23 +500,36 @@ describe("product images and catalog soft-delete E1.12", () => {
     });
   });
 
-  it("prices did not appear on product payloads", async () => {
+  it("staff and approved clients see wholesale price; public catalog does not", async () => {
     const updated = await update_product(director_payload, product_id, {
       name: `Фото товар ${suffix}`,
     });
-    expect(updated.product).not.toHaveProperty("price");
-    expect(updated.product).not.toHaveProperty("price_rub");
-    expect(updated.product).not.toHaveProperty("price_cents");
-    expect(JSON.stringify(updated.product)).not.toMatch(/price/i);
+    expect(updated.product).toHaveProperty("price");
+    expect(updated.product).toHaveProperty("price_amount");
+    expect(updated.product).not.toHaveProperty("purchase_price");
+    expect(updated.product).not.toHaveProperty("cost_price");
 
-    const list = await list_catalog_products(approved_client, {
+    const approved_list = await list_catalog_products(approved_client, {
       page: 1,
       page_size: 5,
       sort: "name_asc",
       q: suffix,
     });
-    for (const item of list.items) {
+    for (const item of approved_list.items) {
+      expect(item).toHaveProperty("price");
+      expect(item).not.toHaveProperty("price_amount");
+      expect(item).not.toHaveProperty("purchase_price");
+    }
+
+    const public_list = await list_catalog_products(null, {
+      page: 1,
+      page_size: 5,
+      sort: "name_asc",
+      q: suffix,
+    });
+    for (const item of public_list.items) {
       expect(item).not.toHaveProperty("price");
+      expect(item).not.toHaveProperty("price_amount");
       expect(JSON.stringify(item)).not.toMatch(/price/i);
     }
   });

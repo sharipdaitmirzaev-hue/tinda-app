@@ -211,6 +211,7 @@ describe("catalog E1.5", () => {
       sale_unit: "упаковка",
       min_order_qty: 6,
       availability: "in_stock",
+      price_amount: 100,
     });
     cleanup_product_ids.push(created.product.id);
 
@@ -223,6 +224,7 @@ describe("catalog E1.5", () => {
         sale_unit: "упаковка",
         min_order_qty: 6,
         availability: "in_stock",
+        price_amount: 100,
       }),
     ).rejects.toMatchObject({ message: "Артикул уже используется" });
 
@@ -235,6 +237,7 @@ describe("catalog E1.5", () => {
         sale_unit: "упаковка",
         min_order_qty: 1,
         availability: "in_stock",
+        price_amount: 100,
       }),
     ).rejects.toMatchObject({ code: "validation_error" });
   });
@@ -264,6 +267,7 @@ describe("catalog E1.5", () => {
       min_order_qty: 1,
       availability: "in_stock",
       is_active: true,
+      price_amount: 150,
     });
     const inactive_product = await create_product(director_payload, {
       sku: `INA-${suffix}`,
@@ -274,6 +278,7 @@ describe("catalog E1.5", () => {
       min_order_qty: 1,
       availability: "in_stock",
       is_active: false,
+      price_amount: 150,
     });
     const product_in_inactive_category = await create_product(director_payload, {
       sku: `INC-${suffix}`,
@@ -284,6 +289,7 @@ describe("catalog E1.5", () => {
       min_order_qty: 1,
       availability: "in_stock",
       is_active: true,
+      price_amount: 150,
     });
     cleanup_product_ids.push(
       active_product.product.id,
@@ -307,23 +313,34 @@ describe("catalog E1.5", () => {
     ).rejects.toMatchObject({ code: "not_found" });
   });
 
-  it("approved client can list products; pending cannot", async () => {
+  it("approved client sees prices; pending and guests browse without prices", async () => {
     const list = await list_catalog_products(approved_client, {
       page: 1,
       page_size: 20,
       sort: "name_asc",
     });
     expect(list.total).toBeGreaterThan(0);
+    expect(list.items.some((item) => "price" in item)).toBe(true);
 
-    await expect(
-      list_catalog_products(pending_client, {
-        page: 1,
-        page_size: 20,
-        sort: "name_asc",
-      }),
-    ).rejects.toMatchObject({
-      code: "forbidden",
-      message: "Доступно после подтверждения заявки",
+    const pending_list = await list_catalog_products(pending_client, {
+      page: 1,
+      page_size: 20,
+      sort: "name_asc",
     });
+    expect(pending_list.total).toBeGreaterThan(0);
+    for (const item of pending_list.items) {
+      expect(item).not.toHaveProperty("price");
+      expect(item).not.toHaveProperty("price_amount");
+    }
+
+    const guest_list = await list_catalog_products(null, {
+      page: 1,
+      page_size: 20,
+      sort: "name_asc",
+    });
+    expect(guest_list.total).toBeGreaterThan(0);
+    for (const item of guest_list.items) {
+      expect(item).not.toHaveProperty("price");
+    }
   });
 });

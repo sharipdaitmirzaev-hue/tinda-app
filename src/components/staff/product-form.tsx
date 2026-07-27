@@ -32,6 +32,7 @@ type ProductFormValues = {
   is_hit: boolean;
   image_url: string;
   is_active: boolean;
+  price_amount: string;
 };
 
 const empty_form: ProductFormValues = {
@@ -52,6 +53,7 @@ const empty_form: ProductFormValues = {
   is_hit: false,
   image_url: "",
   is_active: true,
+  price_amount: "0",
 };
 
 type Props = {
@@ -159,6 +161,8 @@ export function ProductForm({ product_id, initial }: Props) {
       is_hit: form.is_hit,
       image_url: use_manual_url ? form.image_url || null : undefined,
       is_active: form.is_active,
+      price_amount: Number(form.price_amount),
+      price_currency: "RUB" as const,
     };
 
     try {
@@ -495,6 +499,17 @@ export function ProductForm({ product_id, initial }: Props) {
             min={1}
             value={form.min_order_qty}
             onChange={(e) => set_field("min_order_qty", e.target.value)}
+            className="w-full rounded-md border px-3 py-2"
+          />
+        </Field>
+        <Field label="Цена, ₽" required>
+          <input
+            required
+            type="number"
+            min={0}
+            step="0.01"
+            value={form.price_amount}
+            onChange={(e) => set_field("price_amount", e.target.value)}
             className="w-full rounded-md border px-3 py-2"
           />
         </Field>

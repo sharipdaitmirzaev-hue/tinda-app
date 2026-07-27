@@ -14,7 +14,11 @@ import {
   serialize_public_product_detail,
   serialize_staff_product,
 } from "@/lib/catalog/product-serializers";
-import { assert_non_negative_price, money_round, to_decimal } from "@/lib/money";
+import {
+  assert_non_negative_price,
+  money_round,
+  type MoneyInput,
+} from "@/lib/money";
 import {
   delete_product_image,
   extract_product_image_storage_key,
@@ -26,10 +30,7 @@ function empty_to_null(value: string | null | undefined): string | null {
   return value.trim();
 }
 
-function assert_valid_price_amount(
-  amount: Parameters<typeof to_decimal>[0],
-  label = "Цена",
-) {
+function assert_valid_price_amount(amount: MoneyInput, label = "Цена") {
   try {
     assert_non_negative_price(amount, label);
   } catch (error) {
@@ -44,7 +45,7 @@ function assert_valid_price_amount(
 /** Active products must have a non-negative price (create/update/activate). */
 function assert_price_when_active(input: {
   is_active: boolean;
-  price_amount: Parameters<typeof to_decimal>[0] | null | undefined;
+  price_amount: MoneyInput | null | undefined;
 }) {
   if (!input.is_active) return;
   if (input.price_amount === null || input.price_amount === undefined) {
