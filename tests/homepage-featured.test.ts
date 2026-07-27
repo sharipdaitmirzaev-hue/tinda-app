@@ -162,6 +162,27 @@ describe("homepage featured resolve", () => {
       STILL_WATER_CATEGORY_SLUG,
     );
   });
+
+  it("places Zero, Sprite 2L, and Adrenaline small-before-large in featured order", () => {
+    const skus = HOMEPAGE_FEATURED_ENTRIES.filter((e) => e.type === "sku").map(
+      (e) => e.sku,
+    );
+    expect(skus[0]).toBe("DRINK-COCACOLA-330-GLASS-105");
+    expect(skus[1]).toBe("ZY-COCACOLAZERO-330-GLASS-001");
+    expect(skus[2]).toBe("ZY-SPRITE-2000-PET-001");
+    expect(skus.indexOf("ZY-ADRENALINE-250-CAN-001")).toBeLessThan(
+      skus.indexOf("ZY-ADRENALINE-449-CAN-001"),
+    );
+    expect(skus).not.toContain("ZY-ADRENALINE-330-CAN-001");
+    const adrLarge = HOMEPAGE_FEATURED_ENTRIES.findIndex(
+      (e) => e.type === "sku" && e.sku === "ZY-ADRENALINE-449-CAN-001",
+    );
+    const still = HOMEPAGE_FEATURED_ENTRIES.findIndex(
+      (e) => e.type === "category" && e.group === "still_water",
+    );
+    expect(adrLarge).toBeGreaterThan(-1);
+    expect(still).toBeGreaterThan(adrLarge);
+  });
 });
 
 describe("homepage featured pricing and cart gates", () => {

@@ -47,12 +47,15 @@ export type HomepageFeaturedEntry =
     };
 
 /**
- * Display order (missing required SKUs omitted — see preview report).
- * Coca-Cola Zero glass 0.33 / Sprite 2L PET / Adrenaline — not in DB.
+ * Display order for «Популярные товары».
+ * Missing/inactive SKUs are omitted at resolve time.
  * Borjomi: both glass volumes listed (no silent single pick).
+ * Adrenaline 0.33 is intentionally not listed.
  */
 export const HOMEPAGE_FEATURED_ENTRIES: HomepageFeaturedEntry[] = [
   { type: "sku", sku: "DRINK-COCACOLA-330-GLASS-105", group: "coca_cola" },
+  { type: "sku", sku: "ZY-COCACOLAZERO-330-GLASS-001", group: "coca_cola_zero" },
+  { type: "sku", sku: "ZY-SPRITE-2000-PET-001", group: "sprite" },
   { type: "sku", sku: "ZY-BORZHOMI-500-GLASS-001", group: "borjomi" },
   { type: "sku", sku: "ZY-BORZHOMI-330-GLASS-001", group: "borjomi" },
   { type: "sku", sku: "ZY-MIN-500-GLASS-001", group: "rychal" },
@@ -69,6 +72,8 @@ export const HOMEPAGE_FEATURED_ENTRIES: HomepageFeaturedEntry[] = [
   { type: "sku", sku: "ZY-VIKO-1000-CARTON-005", group: "viko" },
   { type: "sku", sku: "ZY-VIKO-1000-CARTON-007", group: "viko" },
   { type: "sku", sku: "ZY-VIKO-1000-CARTON-011", group: "viko" },
+  { type: "sku", sku: "ZY-ADRENALINE-250-CAN-001", group: "adrenaline_small" },
+  { type: "sku", sku: "ZY-ADRENALINE-449-CAN-001", group: "adrenaline_large" },
   {
     type: "category",
     slug: STILL_WATER_CATEGORY_SLUG,
