@@ -1,6 +1,6 @@
 {
   "generated_at": "2026-07-27T14:31:44.862Z",
-  "note": "LOCAL STAGING ONLY. Do not upload to VPS. Do not change image_url. Do not delete old photos.",
+  "note": "Applied to production: only image_url updated for listed products. Old external URLs not deleted.",
   "staging_dir": "/workspace/data/imports/zelenoe-yabloko-images/staging-existing",
   "selected": 9,
   "staged_ok": 9,
@@ -19,10 +19,14 @@
       "file_size": 35752,
       "sha256": "dacd5c4400444222bdb95a8ad098be070b6914bf1855b7403128d804b99cf5dd",
       "upload_target_path": "products/7ee8e117-23d2-4afe-8abe-9dc13d9a9d28/5b1e82d1-e5c0-4967-b008-c64ce53a0700.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 9,
-      "match_score": 90
+      "match_score": 90,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/7ee8e117-23d2-4afe-8abe-9dc13d9a9d28/5b1e82d1-e5c0-4967-b008-c64ce53a0700.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "79765e0f-7d2d-464b-a023-f5ad3536d673",
@@ -37,10 +41,14 @@
       "file_size": 8236,
       "sha256": "f7c4b482e9583d2f1d05d292cd415f0689b57b191e0b21ba29beca634299da43",
       "upload_target_path": "products/79765e0f-7d2d-464b-a023-f5ad3536d673/0c81f931-4d57-4da7-bbb7-c3f6ce7bd7db.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 10,
-      "match_score": 90
+      "match_score": 90,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/79765e0f-7d2d-464b-a023-f5ad3536d673/0c81f931-4d57-4da7-bbb7-c3f6ce7bd7db.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "04959b74-3bad-4e8b-ae78-afbe788867e2",
@@ -55,10 +63,14 @@
       "file_size": 24386,
       "sha256": "7e522a5cfb50e3b901db72494a8db1b2113a3b662d05035f8cca53ac4565be56",
       "upload_target_path": "products/04959b74-3bad-4e8b-ae78-afbe788867e2/36ed6e67-3653-4b4a-9a39-1696fd940bfc.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 11,
-      "match_score": 90
+      "match_score": 90,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/04959b74-3bad-4e8b-ae78-afbe788867e2/36ed6e67-3653-4b4a-9a39-1696fd940bfc.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "dba41420-36f5-406e-a491-bf5420484a23",
@@ -73,10 +85,14 @@
       "file_size": 34790,
       "sha256": "0db2bad26d59e4aa439c5711e7ffa1bb7e187e077111e1a826ae029cd9647cec",
       "upload_target_path": "products/dba41420-36f5-406e-a491-bf5420484a23/eef5f7d8-4f34-4445-a63a-40b345c85a01.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 12,
-      "match_score": 83
+      "match_score": 83,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/dba41420-36f5-406e-a491-bf5420484a23/eef5f7d8-4f34-4445-a63a-40b345c85a01.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "79c2bb23-6ead-41fc-a9c3-91d4533540d0",
@@ -91,10 +107,14 @@
       "file_size": 10238,
       "sha256": "72550bf19ab83ada1cfc7b33ef7232ca3ffa1dae075560f248c19b9288a1e304",
       "upload_target_path": "products/79c2bb23-6ead-41fc-a9c3-91d4533540d0/582a3eab-6c42-4a09-98df-aade1c66a7d0.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 33,
-      "match_score": 83
+      "match_score": 83,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/79c2bb23-6ead-41fc-a9c3-91d4533540d0/582a3eab-6c42-4a09-98df-aade1c66a7d0.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "4bf5ab02-be80-4f17-add2-6eb915510bbe",
@@ -109,10 +129,14 @@
       "file_size": 25350,
       "sha256": "4128396bd718bf87966a66112e5dfa008f7afefbdc59b1c189e14e209c5478c1",
       "upload_target_path": "products/4bf5ab02-be80-4f17-add2-6eb915510bbe/7d5e0adf-8858-41dc-9ab9-dee777b3474f.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 39,
-      "match_score": 83
+      "match_score": 83,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/4bf5ab02-be80-4f17-add2-6eb915510bbe/7d5e0adf-8858-41dc-9ab9-dee777b3474f.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "9da74915-3747-4e5b-89cd-6a9e43fe5fc4",
@@ -127,10 +151,14 @@
       "file_size": 25360,
       "sha256": "a53c348607ea172ea31d9411aaa159d0d22714429fbb1b16090c9addc2b10614",
       "upload_target_path": "products/9da74915-3747-4e5b-89cd-6a9e43fe5fc4/8fa2a2f2-4669-4a68-b8b5-79f0b6283fce.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 40,
-      "match_score": 83
+      "match_score": 83,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/9da74915-3747-4e5b-89cd-6a9e43fe5fc4/8fa2a2f2-4669-4a68-b8b5-79f0b6283fce.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "b74918ee-71af-4444-94f4-86655ecce2f8",
@@ -145,10 +173,14 @@
       "file_size": 16044,
       "sha256": "af02015ddeba4a7c13262eb032d6a1ff2d9f9b1370c1d890910bf89ce1e2e1ca",
       "upload_target_path": "products/b74918ee-71af-4444-94f4-86655ecce2f8/a03ba849-a2ed-4ae3-a5fe-64c732a2f282.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 42,
-      "match_score": 83
+      "match_score": 83,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/b74918ee-71af-4444-94f4-86655ecce2f8/a03ba849-a2ed-4ae3-a5fe-64c732a2f282.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     },
     {
       "product_id": "3b74d252-9623-49e1-906a-88193348f76a",
@@ -163,10 +195,16 @@
       "file_size": 38298,
       "sha256": "5bf65be196ead970a706f2f2a8f129bae76b4d3b0e680765ce846e56bb125517",
       "upload_target_path": "products/3b74d252-9623-49e1-906a-88193348f76a/8b3e7192-d8a2-48b1-a1cb-9c7befc12871.webp",
-      "apply_status": "pending",
+      "apply_status": "applied",
       "validation_errors": [],
       "source_index": 43,
-      "match_score": 83
+      "match_score": 83,
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "new_image_url": "/uploads/products/3b74d252-9623-49e1-906a-88193348f76a/8b3e7192-d8a2-48b1-a1cb-9c7befc12871.webp",
+      "upload_result": "uploaded",
+      "error_message": null
     }
-  ]
+  ],
+  "applied_at": "2026-07-27T14:40:58.508Z",
+  "apply_mode": "apply"
 }

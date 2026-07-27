@@ -66,9 +66,39 @@ npm run zelenoe-images:serve
 
 Открыть: http://127.0.0.1:8765/gallery.html
 
+Авто-проверка:
+
+```bash
+npm run zelenoe-images:auto-review
+```
+
+Обновляет `review-decisions.json` / `.xlsx` (без production).
+
 В галерее:
-- выбрать `approved_existing` / `approved_new` / `rejected` / `pending`
-- **Сохранить решения** → `review-decisions.json` + `review-decisions.xlsx`
-- фильтры по match_status и статусу решения
+- выбрать `approved_existing` / `approved_new` / `needs_review` / `rejected` / `pending`
+- фильтры: Одобрено автоматически / Требует ручной проверки / Отклонено / Новые / Существующие
+- **Сохранить решения** → JSON + Excel
 
 Без approval.xlsx, без staging, без production.
+
+## Apply 9 existing images (production)
+
+После staging `approved_existing`:
+
+1. Backup БД → `/var/backups/tinda/tinda-pre-zelenoe-existing-images-YYYYMMDDTHHMMSSZ.dump`
+2. Dry-run / apply внутри `app-app-1` (local product-images storage → `/uploads/products/{id}/{uuid}.webp`):
+
+```bash
+node scripts/zelenoe-yabloko/apply-existing-images.mjs \
+  --plan data/imports/zelenoe-yabloko-images/existing-image-update-plan.json \
+  --staging data/imports/zelenoe-yabloko-images/staging-existing \
+  --dry-run
+
+node scripts/zelenoe-yabloko/apply-existing-images.mjs \
+  --plan ... --staging ... --apply \
+  --report-json data/imports/zelenoe-yabloko-images/existing-image-apply-report.json
+```
+
+Меняется **только** `image_url`. 26 новых товаров не импортируются. Старые внешние URL физически не удаляются.
+
+После записи новых файлов в volume может потребоваться `docker restart app-app-1` (Next.js подхватывает `public/uploads` при старте).

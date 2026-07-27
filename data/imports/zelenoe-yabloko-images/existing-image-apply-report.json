@@ -1,0 +1,262 @@
+{
+  "generated_at": "2026-07-27T14:40:58.508Z",
+  "mode": "apply",
+  "backup_path": "/var/backups/tinda/tinda-pre-zelenoe-existing-images-20260727T143856Z.dump",
+  "plan_path": "/app/tmp/zelenoe-apply/existing-image-update-plan.json",
+  "staging_dir": "/app/tmp/zelenoe-apply/staging-existing",
+  "uploads_root": "/app/public/uploads",
+  "note": "Finalize after successful uploads+DB updates; plan write recovered from EACCES.",
+  "counts": {
+    "planned": 9,
+    "uploaded": 9,
+    "applied": 9,
+    "skipped": 0,
+    "failed": 0
+  },
+  "orders_before": {
+    "orders": 3,
+    "order_items": 5
+  },
+  "orders_after": {
+    "orders": 3,
+    "order_items": 5
+  },
+  "orders_unchanged": true,
+  "field_drift": [],
+  "prices_snapshot": [
+    {
+      "sku": "DRINK-DOBRYI-1000-PET-094",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Добрый Лимон-лайм, 1 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/b74918ee-71af-4444-94f4-86655ecce2f8/a03ba849-a2ed-4ae3-a5fe-64c732a2f282.webp"
+    },
+    {
+      "sku": "DRINK-DOBRYI-1000-PET-192",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Добрый Манго-маракуйя, 1 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/7ee8e117-23d2-4afe-8abe-9dc13d9a9d28/5b1e82d1-e5c0-4967-b008-c64ce53a0700.webp"
+    },
+    {
+      "sku": "DRINK-DOBRYI-1500-PET-060",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Добрый Лимон-лайм, 1,5 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/dba41420-36f5-406e-a491-bf5420484a23/eef5f7d8-4f34-4445-a63a-40b345c85a01.webp"
+    },
+    {
+      "sku": "DRINK-DOBRYI-1500-PET-177",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Добрый Манго-маракуйя, 1,5 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/79765e0f-7d2d-464b-a023-f5ad3536d673/0c81f931-4d57-4da7-bbb7-c3f6ce7bd7db.webp"
+    },
+    {
+      "sku": "DRINK-DOBRYI-330-CAN-018",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Добрый Лимон-лайм, 0,33 л, жестяная банка",
+      "is_active": true,
+      "package_type": "жестяная банка",
+      "image_url": "/uploads/products/3b74d252-9623-49e1-906a-88193348f76a/8b3e7192-d8a2-48b1-a1cb-9c7befc12871.webp"
+    },
+    {
+      "sku": "DRINK-DOBRYI-500-PET-129",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Добрый Лимон-лайм, 0,5 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/79c2bb23-6ead-41fc-a9c3-91d4533540d0/582a3eab-6c42-4a09-98df-aade1c66a7d0.webp"
+    },
+    {
+      "sku": "DRINK-DOBRYI-500-PET-196",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Добрый Манго-маракуйя, 0,5 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/04959b74-3bad-4e8b-ae78-afbe788867e2/36ed6e67-3653-4b4a-9a39-1696fd940bfc.webp"
+    },
+    {
+      "sku": "DRINK-FRUSTYLE-1500-PET-066",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Frustyle лимон-лайм, 1,5 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/4bf5ab02-be80-4f17-add2-6eb915510bbe/7d5e0adf-8858-41dc-9ab9-dee777b3474f.webp"
+    },
+    {
+      "sku": "DRINK-FRUSTYLE-1500-PET-145",
+      "price_amount": null,
+      "sales_status": "showcase",
+      "availability": "on_order",
+      "name": "Frustyle апельсин, 1,5 л, ПЭТ",
+      "is_active": true,
+      "package_type": "ПЭТ",
+      "image_url": "/uploads/products/9da74915-3747-4e5b-89cd-6a9e43fe5fc4/8fa2a2f2-4669-4a68-b8b5-79f0b6283fce.webp"
+    }
+  ],
+  "items": [
+    {
+      "product_id": "7ee8e117-23d2-4afe-8abe-9dc13d9a9d28",
+      "sku": "DRINK-DOBRYI-1000-PET-192",
+      "product_name": "Добрый Манго-маракуйя, 1 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154876001001_01.png",
+      "new_image_url": "/uploads/products/7ee8e117-23d2-4afe-8abe-9dc13d9a9d28/5b1e82d1-e5c0-4967-b008-c64ce53a0700.webp",
+      "upload_target_path": "products/7ee8e117-23d2-4afe-8abe-9dc13d9a9d28/5b1e82d1-e5c0-4967-b008-c64ce53a0700.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "79765e0f-7d2d-464b-a023-f5ad3536d673",
+      "sku": "DRINK-DOBRYI-1500-PET-177",
+      "product_name": "Добрый Манго-маракуйя, 1,5 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154816001001_01.png",
+      "new_image_url": "/uploads/products/79765e0f-7d2d-464b-a023-f5ad3536d673/0c81f931-4d57-4da7-bbb7-c3f6ce7bd7db.webp",
+      "upload_target_path": "products/79765e0f-7d2d-464b-a023-f5ad3536d673/0c81f931-4d57-4da7-bbb7-c3f6ce7bd7db.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "04959b74-3bad-4e8b-ae78-afbe788867e2",
+      "sku": "DRINK-DOBRYI-500-PET-196",
+      "product_name": "Добрый Манго-маракуйя, 0,5 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154856001001_01.png",
+      "new_image_url": "/uploads/products/04959b74-3bad-4e8b-ae78-afbe788867e2/36ed6e67-3653-4b4a-9a39-1696fd940bfc.webp",
+      "upload_target_path": "products/04959b74-3bad-4e8b-ae78-afbe788867e2/36ed6e67-3653-4b4a-9a39-1696fd940bfc.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "dba41420-36f5-406e-a491-bf5420484a23",
+      "sku": "DRINK-DOBRYI-1500-PET-060",
+      "product_name": "Добрый Лимон-лайм, 1,5 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154817001001_01.png",
+      "new_image_url": "/uploads/products/dba41420-36f5-406e-a491-bf5420484a23/eef5f7d8-4f34-4445-a63a-40b345c85a01.webp",
+      "upload_target_path": "products/dba41420-36f5-406e-a491-bf5420484a23/eef5f7d8-4f34-4445-a63a-40b345c85a01.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "79c2bb23-6ead-41fc-a9c3-91d4533540d0",
+      "sku": "DRINK-DOBRYI-500-PET-129",
+      "product_name": "Добрый Лимон-лайм, 0,5 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154860001001_01.png",
+      "new_image_url": "/uploads/products/79c2bb23-6ead-41fc-a9c3-91d4533540d0/582a3eab-6c42-4a09-98df-aade1c66a7d0.webp",
+      "upload_target_path": "products/79c2bb23-6ead-41fc-a9c3-91d4533540d0/582a3eab-6c42-4a09-98df-aade1c66a7d0.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "4bf5ab02-be80-4f17-add2-6eb915510bbe",
+      "sku": "DRINK-FRUSTYLE-1500-PET-066",
+      "product_name": "Frustyle лимон-лайм, 1,5 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170844001001_01.png",
+      "new_image_url": "/uploads/products/4bf5ab02-be80-4f17-add2-6eb915510bbe/7d5e0adf-8858-41dc-9ab9-dee777b3474f.webp",
+      "upload_target_path": "products/4bf5ab02-be80-4f17-add2-6eb915510bbe/7d5e0adf-8858-41dc-9ab9-dee777b3474f.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "9da74915-3747-4e5b-89cd-6a9e43fe5fc4",
+      "sku": "DRINK-FRUSTYLE-1500-PET-145",
+      "product_name": "Frustyle апельсин, 1,5 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_170846001001_01.png",
+      "new_image_url": "/uploads/products/9da74915-3747-4e5b-89cd-6a9e43fe5fc4/8fa2a2f2-4669-4a68-b8b5-79f0b6283fce.webp",
+      "upload_target_path": "products/9da74915-3747-4e5b-89cd-6a9e43fe5fc4/8fa2a2f2-4669-4a68-b8b5-79f0b6283fce.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "b74918ee-71af-4444-94f4-86655ecce2f8",
+      "sku": "DRINK-DOBRYI-1000-PET-094",
+      "product_name": "Добрый Лимон-лайм, 1 л, ПЭТ",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154878001002_01.png",
+      "new_image_url": "/uploads/products/b74918ee-71af-4444-94f4-86655ecce2f8/a03ba849-a2ed-4ae3-a5fe-64c732a2f282.webp",
+      "upload_target_path": "products/b74918ee-71af-4444-94f4-86655ecce2f8/a03ba849-a2ed-4ae3-a5fe-64c732a2f282.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    },
+    {
+      "product_id": "3b74d252-9623-49e1-906a-88193348f76a",
+      "sku": "DRINK-DOBRYI-330-CAN-018",
+      "product_name": "Добрый Лимон-лайм, 0,33 л, жестяная банка",
+      "apply_status": "applied",
+      "applied_at": "2026-07-27T14:40:58.508Z",
+      "old_image_url": "https://cdn.metro-cc.ru/ru/ru_pim_154812001001_01.png",
+      "new_image_url": "/uploads/products/3b74d252-9623-49e1-906a-88193348f76a/8b3e7192-d8a2-48b1-a1cb-9c7befc12871.webp",
+      "upload_target_path": "products/3b74d252-9623-49e1-906a-88193348f76a/8b3e7192-d8a2-48b1-a1cb-9c7befc12871.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "validation_errors": []
+    }
+  ],
+  "verification": {
+    "images_http_webp_ok": 9,
+    "guest_catalog_matched": 9,
+    "approved_catalog_matched": 9,
+    "all_showcase": true,
+    "prices_null_unchanged": true,
+    "health": {
+      "ok": true,
+      "database": "ok"
+    },
+    "containers": {
+      "app-app-1": "healthy",
+      "app-db-1": "healthy"
+    },
+    "orders": {
+      "orders": 3,
+      "order_items": 5,
+      "unchanged": true
+    },
+    "note": "After upload, app container restarted once so Next.js picks up new public/uploads files.",
+    "dry_run": {
+      "ok": 9,
+      "failed": 0
+    }
+  }
+}
