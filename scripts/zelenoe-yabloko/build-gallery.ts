@@ -206,6 +206,12 @@ function main() {
       download_status: item.download_status,
       carbonation: String(cand?.carbonation || ""),
       source_category_slug: String(cand?.source_category_slug || ""),
+      product_type: String(cand?.product_type || ""),
+      has_pulp:
+        cand?.has_pulp === true || cand?.has_pulp === false
+          ? cand.has_pulp
+          : null,
+      is_kids_line: Boolean(cand?.is_kids_line),
       sugar_free:
         cand?.sugar_free === true || cand?.sugar_free === false
           ? cand.sugar_free

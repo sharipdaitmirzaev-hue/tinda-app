@@ -48,6 +48,27 @@ const KNOWN_BRANDS: Array<{ match: RegExp; brand: string }> = [
   { match: /bizon|бизон/i, brand: "Bizon" },
   { match: /genom|геном/i, brand: "Genom" },
   { match: /tornado\s*energy/i, brand: "Tornado" },
+  // Juice / nectar / mors brands
+  { match: /фруто\s*няня|фрутоняня/i, brand: "ФрутоНяня" },
+  { match: /агуша/i, brand: "Агуша" },
+  { match: /дары\s*кубани/i, brand: "Дары Кубани" },
+  { match: /малышам/i, brand: "Малышам" },
+  { match: /маленькое\s*счастье/i, brand: "Маленькое Счастье" },
+  { match: /сады\s*придонья/i, brand: "Сады Придонья" },
+  { match: /сочная\s*долина/i, brand: "Сочная долина" },
+  { match: /любимый/i, brand: "Любимый" },
+  { match: /(?<![a-zа-я])вико(?![a-zа-я])/i, brand: "Вико" },
+  { match: /(?<![a-z0-9])j7(?![a-z0-9])/i, brand: "J7" },
+  { match: /(?<![a-zа-я])yan(?![a-zа-я])/i, brand: "Yan" },
+  { match: /(?<![a-zа-я])sis(?![a-zа-я])/i, brand: "SIS" },
+  { match: /rusberries/i, brand: "Rusberries" },
+  { match: /кикуни/i, brand: "Кикуни" },
+  { match: /гуниб/i, brand: "Гуниб" },
+  { match: /сильбеси/i, brand: "Сильбеси" },
+  { match: /сантал|santal/i, brand: "Сантал" },
+  { match: /мой\s*(?:сок|нектар|морс)?/i, brand: "Мой" },
+  { match: /свитч|switch/i, brand: "Switch" },
+  { match: /vinut|вину/i, brand: "Vinut" },
   // Water brands
   { match: /\bаква\s*минерале\b|\baqua\s*minerale\b/i, brand: "Аква Минерале" },
   { match: /\bаква\s*панна\b|\baqua\s*panna\b/i, brand: "Аква Панна" },
@@ -119,11 +140,22 @@ function detect_package(name: string): {
   if (/(ж\s*\/\s*б|жест|алюм|банка|\bcan\b)/.test(t)) {
     return { package_type: "банка", package_code: "CAN" };
   }
+  if (/(тетра|tetra|т\s*\/\s*п|тпак|т-пак|карто|пюр[-]?пак|combibloc|brick)/.test(t)) {
+    return { package_type: "картон", package_code: "CARTON" };
+  }
+  if (/(п\s*\/\s*бут|бут)/.test(t) && /(пэт|pet|пласт)/.test(t)) {
+    return { package_type: "ПЭТ", package_code: "PET" };
+  }
+  if (/п\s*\/\s*бут/.test(t)) {
+    return { package_type: "ПЭТ", package_code: "PET" };
+  }
   const norm = normalize_package(name);
   if (norm === "pet") return { package_type: "ПЭТ", package_code: "PET" };
   if (norm === "glass") return { package_type: "стекло", package_code: "GLASS" };
   if (norm === "can") return { package_type: "банка", package_code: "CAN" };
-  if (norm === "pack") return { package_type: "упаковка", package_code: "PACK" };
+  if (norm === "pack" || norm === "carton") {
+    return { package_type: "картон", package_code: "CARTON" };
+  }
   return { package_type: null, package_code: "UNK" };
 }
 
@@ -141,12 +173,13 @@ function detect_brand(name: string): string {
     const token = rest.split(/\s+/)[0] || "UNKNOWN";
     return token.replace(/[!,.]+$/g, "");
   }
-  // Fallback: first meaningful token after «Напиток …» / «энергетический …»
+  // Fallback: first meaningful token after «Напиток …» / «энергетический …» / juice prefixes
   const cleaned = name
     .replace(/^напиток\s+(газир(?:ованный|ованный|)\s*)?/i, "")
     .replace(/^газир(?:ованный)?\s+/i, "")
-    .replace(/\bэнергетическ(?:ий|ие|ая)?\b/gi, " ")
-    .replace(/\benergy\s*drink\b/gi, " ")
+    .replace(/энергетическ(?:ий|ие|ая)?/gi, " ")
+    .replace(/energy\s*drink/gi, " ")
+    .replace(/^(сок|нектар|морс)\s+/i, "")
     .replace(/\s+/g, " ")
     .trim();
   // Re-check known brands on cleaned title (Cyrillic \b is unreliable).
@@ -155,6 +188,43 @@ function detect_brand(name: string): string {
   }
   const token = cleaned.split(/\s+/)[0] || "UNKNOWN";
   return token.replace(/[!,.]+$/g, "");
+}
+
+export type JuiceProductType = "juice" | "nectar" | "mors" | "juice_drink" | "unknown";
+
+export function detect_juice_product_type(name: string): JuiceProductType {
+  const t = lower(name);
+  if (/нектар/.test(t)) return "nectar";
+  if (/морс/.test(t)) return "mors";
+  if (/сокосодерж|вода\s*и\s*сок|juice\s*drink|палпи|pulpy/.test(t)) {
+    return "juice_drink";
+  }
+  if (/(^|\s)сок(\s|$)|apple\s*juice|orange\s*juice/.test(t)) return "juice";
+  if (
+    /напиток/.test(t) &&
+    /(сок|фрукт|ягод|апельсин|манго|личи|ананас|яблок|персик|виноград|банан|мульти)/.test(
+      t,
+    )
+  ) {
+    return "juice_drink";
+  }
+  if (/базил|basil\s*seed|вину|vinut/.test(t)) return "juice_drink";
+  return "unknown";
+}
+
+export function detect_pulp(name: string): boolean | null {
+  const t = lower(name);
+  if (/с\s*мякот|с\s*мякуш/.test(t)) return true;
+  if (/осветл|без\s*мякот/.test(t)) return false;
+  return null;
+}
+
+export function detect_kids_line(name: string, category_slug?: string | null): boolean {
+  const slug = String(category_slug || "").toLowerCase();
+  if (slug.includes("detsk") || slug === "voda-soki") return true;
+  return /(детск|фруто\s*няня|фрутоняня|агуша|малышам|маленькое\s*счастье|маша\s*и\s*медведь|фиксик)/i.test(
+    name,
+  );
 }
 
 function format_volume_text(ml: number | null, raw: string): string | null {

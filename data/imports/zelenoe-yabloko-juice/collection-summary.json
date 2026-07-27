@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-07-27T15:40:29.132Z",
+  "note": "LOCAL preparation only. No production / VPS / DB / image_url / price / seed changes. Nothing imported.",
+  "categories": [
+    {
+      "id": 45,
+      "slug": "soki-nektary-morsy",
+      "url": "https://zelenoeyabloko.ru/catalog/soki-nektary-morsy",
+      "title": "Соки, нектары, морсы"
+    },
+    {
+      "id": 135,
+      "slug": "voda-soki",
+      "url": "https://zelenoeyabloko.ru/catalog/voda-soki",
+      "title": "Вода, соки (детские) — только juice-like"
+    }
+  ],
+  "note_categories": "Отдельных категорий «соки» / «нектары» / «морсы» / «сокосодержащие» на сайте нет — всё в soki-nektary-morsy; детские — в voda-soki (отфильтрованы только juice-like).",
+  "pages_processed": 6,
+  "pages_by_category": {
+    "soki-nektary-morsy": 4,
+    "voda-soki": 2
+  },
+  "found": 230,
+  "unique": 230,
+  "internal_duplicates_skipped": 0,
+  "by_product_type": {
+    "juice": 84,
+    "nectar": 125,
+    "mors": 12,
+    "juice_drink": 9,
+    "unknown": 0
+  },
+  "match_status": {
+    "exact_match": 0,
+    "probable_match": 3,
+    "new_product": 219,
+    "conflict": 5,
+    "unknown": 3
+  },
+  "auto_review": {
+    "approved_existing": 0,
+    "approved_new": 183,
+    "needs_review": 28,
+    "rejected": 19
+  },
+  "images_below_500": 27,
+  "unknown_package": 163,
+  "unknown_product_type": 0,
+  "download": {
+    "urls_processed": 230,
+    "downloaded_ok": 221,
+    "errors": 8,
+    "duplicates_sha256": 1,
+    "below_500": 19,
+    "note": "8 source CDN images returned PHP warning text instead of WebP (broken conversion on Zelenoe)."
+  },
+  "proposed_sku_unique": true,
+  "proposed_sku_count": 230,
+  "proposed_sku_conflicts_with_tinda": [
+    "ZY-IRIB-500-GLASS-001"
+  ],
+  "tinda_products_compared": 264,
+  "kids_line": 45,
+  "sugar_free_true": 13,
+  "scrape_errors": [],
+  "skipped_non_juice_from_kids_category": 8,
+  "artifacts": {
+    "candidates": "/workspace/data/imports/zelenoe-yabloko-juice/candidates.json",
+    "candidates_flat": "/workspace/data/imports/zelenoe-yabloko-juice/candidates.flat.json",
+    "original": "/workspace/data/imports/zelenoe-yabloko-juice/original",
+    "previews": "/workspace/data/imports/zelenoe-yabloko-juice/previews",
+    "manifest": "/workspace/data/imports/zelenoe-yabloko-juice/manifest.json",
+    "gallery": "/workspace/data/imports/zelenoe-yabloko-juice/gallery.html",
+    "gallery_data": "/workspace/data/imports/zelenoe-yabloko-juice/gallery-data.json",
+    "images_review": "/workspace/data/imports/zelenoe-yabloko-juice/images-review.xlsx",
+    "review_decisions": "/workspace/data/imports/zelenoe-yabloko-juice/review-decisions.json",
+    "review_decisions_xlsx": "/workspace/data/imports/zelenoe-yabloko-juice/review-decisions.xlsx",
+    "collection_summary": "/workspace/data/imports/zelenoe-yabloko-juice/collection-summary.json",
+    "tinda_snapshot": "/workspace/data/imports/tinda_active_products.snapshot.json"
+  }
+}

@@ -86,6 +86,9 @@ export function normalize_package(raw: unknown): string {
   if (/(пэт|pet|пластик)/.test(t)) return "pet";
   if (/(стекл|glass)/.test(t)) return "glass";
   if (/(жест|алюм|can|банка|ж\s*\/\s*б|жб)/.test(t)) return "can";
+  if (/(тетра|tetra|т\s*\/\s*п|тпак|карто|combibloc|brick|пюр)/.test(t)) {
+    return "carton";
+  }
   if (/(упаков)/.test(t)) return "pack";
   return translit(t).replace(/\s+/g, "");
 }

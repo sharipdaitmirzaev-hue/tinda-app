@@ -69,6 +69,10 @@ type Card = {
   download_status: string;
   carbonation?: string;
   source_category_slug?: string;
+  product_type?: string;
+  has_pulp?: boolean | null;
+  is_kids_line?: boolean;
+  sugar_free?: boolean | null;
 };
 
 type Decision = {
@@ -105,30 +109,48 @@ const CATEGORY_MODE = (() => {
   if (explicit) return explicit;
   if (/zelenoe-yabloko-energy/i.test(ROOT)) return "energy";
   if (/zelenoe-yabloko-water/i.test(ROOT)) return "water";
+  if (/zelenoe-yabloko-juice/i.test(ROOT)) return "juice";
   return "soft-drinks";
 })();
 
-/** Soft-drinks auto-review excludes energy; energy mode does the opposite. */
+/** Soft-drinks auto-review excludes energy; energy/juice modes keep their products. */
 const EXCLUDED =
-  CATEGORY_MODE === "energy"
+  CATEGORY_MODE === "energy" || CATEGORY_MODE === "juice"
     ? /(пиво|вино|водк|алкогол|виски|коньяк|шампан|сидр|бакалея|чипсы|снек|йогурт|молоко|хлеб)/i
     : /(пиво|вино|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)/i;
 
 const ENERGY_HINT =
   /(энергет|energy\s*drink|\bburn\b|\bберн\b|red\s*bull|monster|adrenaline|flash|drive\s*me|gorilla|tornado|lit\s*energy|jaguar|battery)/i;
 
+const JUICE_HINT =
+  /(сок|нектар|морс|сокосодерж|вода\s*и\s*сок|juice|nectar)/i;
+
 function category_ok_for_new(card: Card): { ok: boolean; note: string } {
-  if (CATEGORY_MODE !== "energy") {
-    return { ok: true, note: "category_not_required" };
+  if (CATEGORY_MODE === "energy") {
+    const slug = String(card.source_category_slug || "");
+    if (/energet/i.test(slug)) {
+      return { ok: true, note: "category_energy_slug" };
+    }
+    if (ENERGY_HINT.test(card.source_name)) {
+      return { ok: true, note: "category_energy_name" };
+    }
+    return { ok: false, note: "category_not_energy" };
   }
-  const slug = String(card.source_category_slug || "");
-  if (/energet/i.test(slug)) {
-    return { ok: true, note: "category_energy_slug" };
+  if (CATEGORY_MODE === "juice") {
+    const slug = String(card.source_category_slug || "");
+    const ptype = String((card as { product_type?: string }).product_type || "");
+    if (/soki|nektar|mors|voda-soki/i.test(slug)) {
+      return { ok: true, note: "category_juice_slug" };
+    }
+    if (["juice", "nectar", "mors", "juice_drink"].includes(ptype)) {
+      return { ok: true, note: `category_product_type_${ptype}` };
+    }
+    if (JUICE_HINT.test(card.source_name)) {
+      return { ok: true, note: "category_juice_name" };
+    }
+    return { ok: false, note: "category_not_juice" };
   }
-  if (ENERGY_HINT.test(card.source_name)) {
-    return { ok: true, note: "category_energy_name" };
-  }
-  return { ok: false, note: "category_not_energy" };
+  return { ok: true, note: "category_not_required" };
 }
 
 function clean_flavor(raw: string): string {
@@ -536,6 +558,24 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
       mismatches.push("sugar_free_contested");
     }
 
+    if (CATEGORY_MODE === "juice") {
+      const ptype = String(card.product_type || "");
+      if (!["juice", "nectar", "mors", "juice_drink"].includes(ptype)) {
+        mismatches.push("product_type_undetermined");
+      } else {
+        matched.push(`product_type_${ptype}`);
+      }
+      if (card.is_kids_line) matched.push("kids_line");
+      if (card.has_pulp === true) matched.push("has_pulp");
+      if (card.has_pulp === false) matched.push("clarified");
+    }
+
+    const product_type_ok =
+      CATEGORY_MODE !== "juice" ||
+      ["juice", "nectar", "mors", "juice_drink"].includes(
+        String(card.product_type || ""),
+      );
+
     const all_ok =
       brand &&
       name_ok &&
@@ -543,6 +583,7 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
       volume &&
       pkg &&
       cat.ok &&
+      product_type_ok &&
       !dup.hit &&
       size_ok(card) &&
       image_ok(card) &&
