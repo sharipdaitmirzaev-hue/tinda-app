@@ -28,6 +28,7 @@
     "zy:scrape-energy": "tsx scripts/zelenoe-yabloko/scrape-energy-candidates.ts",
     "zy:scrape-juice": "tsx scripts/zelenoe-yabloko/scrape-juice-candidates.ts",
     "zy:scrape-tea-kvass": "tsx scripts/zelenoe-yabloko/scrape-tea-kvass-candidates.ts",
+    "zy:scrape-remaining-drinks": "tsx scripts/zelenoe-yabloko/scrape-remaining-drinks-candidates.ts",
     "zy:build-approval": "tsx scripts/zelenoe-yabloko/build-approval.ts",
     "zelenoe-images:download-all": "tsx scripts/zelenoe-yabloko/download-all-images.ts",
     "zelenoe-images:gallery": "tsx scripts/zelenoe-yabloko/build-gallery.ts",

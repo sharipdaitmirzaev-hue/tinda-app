@@ -40,6 +40,12 @@ const KNOWN_BRANDS: Array<{ match: RegExp; brand: string }> = [
   { match: /lipton|липтон/i, brand: "Lipton" },
   { match: /nestea|нести/i, brand: "Nestea" },
   { match: /fuze\s*tea|фьюз/i, brand: "FuzeTea" },
+  { match: /barbican/i, brand: "Barbican" },
+  { match: /(?<![a-zа-я])vast(?![a-zа-я])/i, brand: "Vast" },
+  { match: /bagdan|багдан/i, brand: "Bagdan" },
+  { match: /angry\s*animal/i, brand: "Angry Animal" },
+  { match: /carl\s*jung/i, brand: "Carl Jung" },
+  { match: /черноголовк/i, brand: "Черноголовка" },
   { match: /\bsprite\b|\bспрайт\b/i, brand: "Sprite" },
   { match: /\bfanta\b|\bфанта\b/i, brand: "Fanta" },
   { match: /\bla\s*imon|лаймон/i, brand: "Laimon Fresh" },
@@ -238,6 +244,8 @@ export function detect_explicit_juice_package(text: string): JuicePackageType {
 
   if (/(пл\s*\/\s*б|пэт|\bpet\b|пластик|п\s*\/\s*бут)/.test(t)) return "pet";
   if (/(ст\s*\/\s*б|стекл|\bglass\b)/.test(t)) return "glass";
+  // ZY retail shorthand «ст» / «ст.» = стекло (before can — brand Barbican must not win)
+  if (/(?:^|[\s,./(])ст(?:\.|(?=[\s,)/]|$))/u.test(t)) return "glass";
   if (/(ж\s*\/\s*б|жест|алюм|\bcan\b|банка)/.test(t)) return "can";
   if (
     /(тетра|tetra|т\s*\/\s*п|тпак|т-пак|pure[\s-]?pak|пюр[\s-]?пак|combibloc|\bsig\b|brick|carton|картон\w*\s*пак|тетрапак)/.test(
@@ -368,6 +376,13 @@ function detect_package(name: string): {
   if (/п\s*\/\s*бут/.test(lower(name))) {
     return { package_type: "ПЭТ", package_code: "PET" };
   }
+  // Retail shorthand «ст 330мл» / «ст.» / «ст/б» = glass (no \b — Cyrillic)
+  if (
+    /ст\s*\/\s*б/i.test(name) ||
+    /(?:^|[\s,./(])ст(?:\.|(?=[\s,)/]|$))/iu.test(name)
+  ) {
+    return { package_type: "стекло", package_code: "GLASS" };
+  }
   const norm = normalize_package(name);
   if (norm === "pet") return { package_type: "ПЭТ", package_code: "PET" };
   if (norm === "glass") return { package_type: "стекло", package_code: "GLASS" };
@@ -459,6 +474,43 @@ export function detect_tea_kvass_product_type(
   if (slug === "kvas") return "kvass";
   if (slug === "xolodnye-cai") return "iced_tea";
   return "unknown";
+}
+
+export type RemainingDrinkProductType =
+  | "compote"
+  | "malt_drink"
+  | "non_alcoholic_drink"
+  | "tonic_drink"
+  | "other"
+  | "unknown";
+
+export function detect_remaining_drink_product_type(
+  name: string,
+  category_slug?: string | null,
+): RemainingDrinkProductType {
+  const t = lower(name);
+  const slug = String(category_slug || "").toLowerCase();
+
+  if (/компот/.test(t) || slug === "kompoty") return "compote";
+  if (/malt|солодов|ячмен|barbican/.test(t)) return "malt_drink";
+  if (
+    /тоник|tonic|l[\s-]?карнитин|l[\s-]?carnitin|функционал|спортивн\w*\s*напит|энергет|изотон/.test(
+      t,
+    ) ||
+    slug.includes("toniz")
+  ) {
+    return "tonic_drink";
+  }
+  if (
+    /безалкогол|non[\s-]?alcoholic|моктейл|mocktail|коктейл|vast\b|вино\s*безалкогол/.test(
+      t,
+    )
+  ) {
+    return "non_alcoholic_drink";
+  }
+  if (/напиток/.test(t)) return "non_alcoholic_drink";
+  if (slug === "bezalkogolnye-napitki") return "non_alcoholic_drink";
+  return "other";
 }
 
 export function detect_pulp(name: string): boolean | null {

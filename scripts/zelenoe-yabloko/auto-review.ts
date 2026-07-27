@@ -73,6 +73,7 @@ type Card = {
   has_pulp?: boolean | null;
   is_kids_line?: boolean;
   sugar_free?: boolean | null;
+  misclassified_hint?: string | null;
 };
 
 type Decision = {
@@ -111,16 +112,19 @@ const CATEGORY_MODE = (() => {
   if (/zelenoe-yabloko-water/i.test(ROOT)) return "water";
   if (/zelenoe-yabloko-juice/i.test(ROOT)) return "juice";
   if (/zelenoe-yabloko-tea-kvass/i.test(ROOT)) return "tea-kvass";
+  if (/zelenoe-yabloko-remaining-drinks/i.test(ROOT)) return "remaining-drinks";
   return "soft-drinks";
 })();
 
-/** Soft-drinks auto-review excludes energy; energy/juice/tea-kvass modes keep their products. */
+/** Soft-drinks auto-review excludes energy; specialized modes keep their products. */
 const EXCLUDED =
   CATEGORY_MODE === "energy" ||
   CATEGORY_MODE === "juice" ||
   CATEGORY_MODE === "tea-kvass"
     ? /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|бакалея|чипсы|снек|йогурт|молоко)|(?<!град)вино(?!град)/i
-    : /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)|(?<!град)вино(?!град)/i;
+    : CATEGORY_MODE === "remaining-drinks"
+      ? /(пиво|водк|виски|коньяк|шампан|сидр|бакалея|чипсы|снек)/i
+      : /(пиво|водк|алкогол|виски|коньяк|шампан|сидр|energy drink|энергет|бакалея|чипсы|снек)|(?<!град)вино(?!град)/i;
 
 const ENERGY_HINT =
   /(энергет|energy\s*drink|\bburn\b|\bберн\b|red\s*bull|monster|adrenaline|flash|drive\s*me|gorilla|tornado|lit\s*energy|jaguar|battery)/i;
@@ -137,6 +141,13 @@ const TEA_KVASS_TYPES = [
   "kombucha",
   "kvass",
   "kvass_drink",
+] as const;
+
+const REMAINING_TYPES = [
+  "compote",
+  "malt_drink",
+  "non_alcoholic_drink",
+  "tonic_drink",
 ] as const;
 
 function category_ok_for_new(card: Card): { ok: boolean; note: string } {
@@ -177,6 +188,17 @@ function category_ok_for_new(card: Card): { ok: boolean; note: string } {
       return { ok: true, note: "category_tea_kvass_name" };
     }
     return { ok: false, note: "category_not_tea_kvass" };
+  }
+  if (CATEGORY_MODE === "remaining-drinks") {
+    const slug = String(card.source_category_slug || "");
+    const ptype = String(card.product_type || "");
+    if (/kompoty|bezalkogolnye|toniz/i.test(slug)) {
+      return { ok: true, note: "category_remaining_slug" };
+    }
+    if ((REMAINING_TYPES as readonly string[]).includes(ptype)) {
+      return { ok: true, note: `category_product_type_${ptype}` };
+    }
+    return { ok: false, note: "category_not_remaining_drinks" };
   }
   return { ok: true, note: "category_not_required" };
 }
@@ -234,7 +256,7 @@ function package_ok(card: Card, tinda: TindaProductImageTarget | null): boolean 
   const from_name = normalize_package(card.source_name);
   const sp =
     from_field ||
-    (/(пэт|pet|пластик|стекл|glass|жест|алюм|can|банка|ж\s*\/\s*б|тетра|tetra|т\s*\/\s*п|тпак|карто|п\s*\/\s*бут)/i.test(
+    (/(пэт|pet|пластик|стекл|glass|жест|алюм|\bcan\b|банка|ж\s*\/\s*б|тетра|tetra|т\s*\/\s*п|тпак|карто|п\s*\/\s*бут|(?:^|[\s,./(])ст(?:\.|(?=[\s,)/]|$)))/i.test(
       card.source_name || "",
     )
       ? from_name
@@ -453,6 +475,21 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
       decision_reason: "rejected_excluded_category",
     };
   }
+  if (
+    CATEGORY_MODE === "remaining-drinks" &&
+    /(?<!град)вино(?!град)/i.test(card.source_name) &&
+    !/безалкогол/i.test(card.source_name)
+  ) {
+    return {
+      ...base,
+      review_status: "rejected",
+      review_comment: "Авто: алкогольный / винный товар без пометки безалкогольный",
+      auto_review_confidence: 0.9,
+      matched_features: [],
+      mismatches: ["alcohol_like"],
+      decision_reason: "rejected_alcohol",
+    };
+  }
 
   const tinda = find_tinda(products, card.tinda_product_id, card.tinda_sku);
 
@@ -617,6 +654,21 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
       }
     }
 
+    if (CATEGORY_MODE === "remaining-drinks") {
+      const ptype = String(card.product_type || "");
+      if (!(REMAINING_TYPES as readonly string[]).includes(ptype)) {
+        mismatches.push("product_type_undetermined");
+      } else {
+        matched.push(`product_type_${ptype}`);
+      }
+      if (/вино/i.test(card.source_name)) {
+        mismatches.push("na_wine_needs_review");
+      }
+      if (card.misclassified_hint) {
+        mismatches.push(`misclassified_${card.misclassified_hint}`);
+      }
+    }
+
     const product_type_ok =
       (CATEGORY_MODE !== "juice" ||
         ["juice", "nectar", "mors", "juice_drink"].includes(
@@ -625,7 +677,13 @@ function decide(card: Card, products: TindaProductImageTarget[]): Decision {
       (CATEGORY_MODE !== "tea-kvass" ||
         (TEA_KVASS_TYPES as readonly string[]).includes(
           String(card.product_type || ""),
-        ));
+        )) &&
+      (CATEGORY_MODE !== "remaining-drinks" ||
+        ((REMAINING_TYPES as readonly string[]).includes(
+          String(card.product_type || ""),
+        ) &&
+          !/вино/i.test(card.source_name) &&
+          !card.misclassified_hint));
 
     const all_ok =
       brand &&

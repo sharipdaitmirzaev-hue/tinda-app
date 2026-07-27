@@ -87,7 +87,8 @@ export function normalize_package(raw: unknown): string {
   if (t === "other") return "other";
   if (/(пэт|pet|пластик)/.test(t)) return "pet";
   if (/(стекл|glass)/.test(t)) return "glass";
-  if (/(жест|алюм|can|банка|ж\s*\/\s*б|жб)/.test(t)) return "can";
+  // Use \bcan\b — bare "can" falsely matches brand "Barbican"
+  if (/(жест|алюм|\bcan\b|банка|ж\s*\/\s*б|жб)/.test(t)) return "can";
   if (
     /(тетра|tetra|т\s*\/\s*п|тпак|карто|combibloc|brick|пюр|pure[\s-]?pak|sig\b|carton)/.test(
       t,
@@ -165,6 +166,9 @@ export function extract_flavor_hint(
   text = text
     .replace(/\d+[.,]?\d*\s*(л|мл|l|ml)\b/gi, " ")
     .replace(/\b(пэт|стекло|жестяная банка|банка)\b/gi, " ")
+    .replace(/пл\s*\/\s*б|ст\s*\/\s*б|ж\s*\/\s*б/gi, " ")
+    // ZY glass shorthand «ст» / «ст.» (avoid \b — Cyrillic is non-word in JS)
+    .replace(/(?:^|[\s,./(])ст(?:\.|(?=[\s,)/]|$))/giu, " ")
     .replace(/[,\-–—/]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();

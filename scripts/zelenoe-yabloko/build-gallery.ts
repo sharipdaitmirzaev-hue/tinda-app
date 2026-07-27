@@ -234,6 +234,9 @@ function main() {
       carbonation: String(cand?.carbonation || ""),
       source_category_slug: String(cand?.source_category_slug || ""),
       product_type: String(cand?.product_type || ""),
+      misclassified_hint: cand?.misclassified_hint
+        ? String(cand.misclassified_hint)
+        : null,
       has_pulp:
         cand?.has_pulp === true || cand?.has_pulp === false
           ? cand.has_pulp
