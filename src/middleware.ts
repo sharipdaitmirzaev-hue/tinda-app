@@ -35,6 +35,6 @@ export const config = {
     /*
      * Apply to pages and API, skip Next internals and static assets.
      */
-    "/((?!_next/static|_next/image|favicon.ico|uploads/|images/).*)",
+    "/((?!_next/static|_next/image|favicon.ico|favicon.png|sw.js|manifest.webmanifest|icons/|uploads/|images/).*)",
   ],
 };

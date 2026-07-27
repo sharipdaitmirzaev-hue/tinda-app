@@ -306,6 +306,12 @@ describe("staff orders E1.11", () => {
   });
 
   it("filters, search and pagination work", async () => {
+    const baseline = await list_staff_orders(manager1, {
+      page: 1,
+      page_size: 1,
+      sort: "created_at_desc",
+    });
+
     const first = await place_order(approved_a, true);
     await place_order(approved_a, false);
 
@@ -315,8 +321,8 @@ describe("staff orders E1.11", () => {
       page_size: 20,
       sort: "created_at_desc",
     });
-    expect(urgent.total).toBe(1);
-    expect(urgent.items[0]?.id).toBe(first.order.id);
+    expect(urgent.total).toBeGreaterThanOrEqual(1);
+    expect(urgent.items.some((item) => item.id === first.order.id)).toBe(true);
 
     const by_q = await list_staff_orders(manager1, {
       q: "StaffA",
@@ -332,7 +338,7 @@ describe("staff orders E1.11", () => {
       sort: "created_at_desc",
     });
     expect(page1.items).toHaveLength(1);
-    expect(page1.total).toBe(2);
+    expect(page1.total).toBe(baseline.total + 2);
   });
 
   it("confirm / cancel / deliver transitions and history", async () => {

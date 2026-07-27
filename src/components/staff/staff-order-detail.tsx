@@ -188,7 +188,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
   if (!order) return null;
 
   return (
-    <div className="space-y-4 pb-24 lg:pb-0">
+    <div className="space-y-4 pb-safe-nav lg:pb-0">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <Link href="/staff/orders" className="text-sm text-teal-800 underline">

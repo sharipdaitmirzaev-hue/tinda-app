@@ -21,6 +21,9 @@ export function build_content_security_policy(): string {
     `img-src ${img_sources.join(" ")}`,
     "font-src 'self' data:",
     "connect-src 'self'",
+    // PWA service worker
+    "worker-src 'self'",
+    "manifest-src 'self'",
   ];
 
   return directives.join("; ");

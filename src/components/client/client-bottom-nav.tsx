@@ -18,7 +18,10 @@ export function ClientBottomNav() {
   return (
     <nav
       aria-label="Мобильная навигация"
-      className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-2 py-2 md:hidden"
+      className="fixed inset-x-0 bottom-0 z-30 border-t border-slate-200 bg-white px-2 pt-2 md:hidden"
+      style={{
+        paddingBottom: "max(0.5rem, env(safe-area-inset-bottom, 0px))",
+      }}
     >
       <ul className="mx-auto grid max-w-lg grid-cols-4 gap-1">
         {links.map((link) => {

@@ -20,7 +20,7 @@ export default async function CartPage({ searchParams }: Props) {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#f8fafc_0%,#ecfdf5_100%)]">
       <ClientHeader full_name={auth.user.full_name} />
-      <main className="mx-auto max-w-lg px-4 py-6 pb-28">
+      <main className="mx-auto max-w-lg px-4 py-6 pb-safe-nav-lg">
         <CartPageClient notice={notice} />
       </main>
       <ClientBottomNav />

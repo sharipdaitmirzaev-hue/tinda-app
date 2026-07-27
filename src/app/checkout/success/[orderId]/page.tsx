@@ -37,7 +37,7 @@ export default async function CheckoutSuccessPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#f8fafc_0%,#ecfdf5_100%)]">
       <ClientHeader full_name={auth.user.full_name} />
-      <main className="mx-auto max-w-lg px-4 py-8 pb-28">
+      <main className="mx-auto max-w-lg px-4 py-8 pb-safe-nav-lg">
         <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-semibold text-slate-900">
             Заказ отправлен

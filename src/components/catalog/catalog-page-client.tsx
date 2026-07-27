@@ -145,7 +145,7 @@ export function CatalogPageClient() {
   }
 
   return (
-    <div className="mx-auto grid max-w-7xl gap-6 px-4 py-4 pb-24 md:grid-cols-[240px_1fr] md:pb-8">
+    <div className="mx-auto grid max-w-7xl gap-6 px-4 py-4 pb-safe-nav md:grid-cols-[240px_1fr] md:pb-8">
       <aside className="hidden md:block">
         <div className="sticky top-20 rounded-xl border border-slate-200 bg-white p-4">
           <h2 className="mb-3 text-sm font-semibold text-slate-900">Категории</h2>
