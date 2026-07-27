@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-07-27T14:07:22.570Z",
+  "source": "https://zelenoeyabloko.ru/catalog/gazirovannye-napitki",
+  "pages": 2,
+  "found": 48,
+  "unique": 48,
+  "exact_match": 10,
+  "probable_match": 14,
+  "new_product": 28,
+  "conflict": 8,
+  "below_500": 8,
+  "watermark": 0,
+  "recommended_approve": 9,
+  "metro_cdn_current": 44,
+  "better_photo": 9,
+  "candidates_json": "data/imports/zelenoe_yabloko_gazirovannye_candidates.json",
+  "images_review_xlsx": "data/imports/zelenoe_yabloko_gazirovannye_images_review.xlsx",
+  "production_changed": false,
+  "images_downloaded": false,
+  "images_uploaded": false
+}

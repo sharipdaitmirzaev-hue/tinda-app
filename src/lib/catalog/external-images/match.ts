@@ -71,11 +71,15 @@ function sugar_score(tinda_name: string, source_name: string): {
 } {
   const ts = sugar_free_flag(tinda_name);
   const ss = sugar_free_flag(source_name);
-  if (ts == null || ss == null) {
+  if (ts == null && ss == null) {
     return { score: 0, ok: true, reason: "sugar_unknown" };
   }
-  if (ts === ss) return { score: 10, ok: true, reason: "sugar_match" };
-  return { score: -25, ok: false, reason: "sugar_conflict" };
+  if (ts != null && ss != null) {
+    if (ts === ss) return { score: 10, ok: true, reason: "sugar_match" };
+    return { score: -25, ok: false, reason: "sugar_conflict" };
+  }
+  // One side known sugar-free, other unknown — allow probable, block exact
+  return { score: 0, ok: true, reason: "sugar_asymmetric" };
 }
 
 /**
@@ -155,15 +159,30 @@ export function score_candidate_match(
     reasons.push("name_flavor_weak");
   }
 
+  // Exact match requires brand + volume + package + compatible sugar + flavor
+  const flavor_ok =
+    flavor_overlap >= 0.5 ||
+    (best_overlap >= 0.65 && reasons.includes("name_flavor_strong")) ||
+    (flavor_overlap >= 0.35 && name_overlap >= 0.7);
+  const sugar_exact_ok =
+    sugar.reason === "sugar_match" || sugar.reason === "sugar_unknown";
+
   let match_status: MatchStatus = "no_match";
   const core_ok = brand.ok && volume.ok && pkg.ok && sugar.ok;
   if (!sugar.ok) {
     match_status = "no_match";
-  } else if (core_ok && best_overlap >= 0.6 && score >= 80) {
+  } else if (core_ok && flavor_ok && sugar_exact_ok && score >= 80) {
     match_status = "exact_match";
-  } else if (brand.ok && volume.ok && score >= 55 && sugar.ok) {
+    reasons.push("flavor_aligned");
+  } else if (
+    brand.ok &&
+    volume.ok &&
+    sugar.ok &&
+    best_overlap >= 0.35 &&
+    score >= 55
+  ) {
     match_status = "probable_match";
-  } else if (brand.ok && score >= 40) {
+  } else if (brand.ok && best_overlap >= 0.45 && score >= 40) {
     match_status = "probable_match";
   } else {
     match_status = "no_match";
@@ -172,6 +191,13 @@ export function score_candidate_match(
   // Hard reject on volume+package double mismatch
   if (reasons.includes("volume_mismatch") && reasons.includes("package_mismatch")) {
     match_status = "no_match";
+  }
+  if (
+    match_status === "exact_match" &&
+    (!brand.ok || !volume.ok || !pkg.ok || !sugar.ok || !flavor_ok || !sugar_exact_ok)
+  ) {
+    match_status = "probable_match";
+    reasons.push("exact_demoted");
   }
 
   return {
@@ -241,6 +267,7 @@ export function aggregate_product_matches(
 
 /**
  * Detect candidates that strongly match multiple TINDA products.
+ * Only exact hits count — weak probable matches must not create conflicts.
  */
 export function detect_candidate_conflicts(
   aggregates: ProductMatchAggregate[],
@@ -248,8 +275,8 @@ export function detect_candidate_conflicts(
   const by_url = new Map<string, string[]>();
   for (const agg of aggregates) {
     for (const m of agg.matches) {
-      if (m.match_status === "no_match") continue;
-      if (m.match_score < 70) continue;
+      if (m.match_status !== "exact_match") continue;
+      if (m.match_score < 80) continue;
       const url = m.candidate.candidate_image_url;
       const list = by_url.get(url) || [];
       list.push(agg.tinda.sku);

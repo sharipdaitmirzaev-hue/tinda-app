@@ -99,13 +99,16 @@ describe("aggregate_product_matches", () => {
     const c1 = cand({
       source_name: "Coca-Cola Classic 0.33 л ж/б",
       candidate_image_url: "https://a.example/1.jpg",
+      source_flavor: "classic",
     });
     const c2 = cand({
-      source_name: "Coca-Cola Classic 0,33л банка",
+      source_name: "Coca-Cola Classic 0.33 л банка",
       candidate_image_url: "https://b.example/2.jpg",
+      source_flavor: "classic",
       source_priority: 3,
     });
     const agg = aggregate_product_matches(products[0]!, [c1, c2]);
+    expect(agg.matches.filter((m) => m.match_status === "exact_match").length).toBeGreaterThanOrEqual(2);
     expect(agg.final_status).toBe("conflict");
   });
 });

@@ -96,7 +96,7 @@ export function sugar_free_flag(text: unknown): boolean | null {
   if (/(без сахара|зеро|zero|sugar[\s-]?free|no sugar|0 калорий)/.test(t)) {
     return true;
   }
-  if (/(classic|original|обычн)/.test(t) && !/(zero|без сахара)/.test(t)) {
+  if (/(classic|original|обычн|классик)/.test(t) && !/(zero|зеро|без сахара)/.test(t)) {
     return false;
   }
   return null;

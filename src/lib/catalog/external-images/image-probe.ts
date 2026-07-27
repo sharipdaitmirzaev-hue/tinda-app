@@ -121,9 +121,9 @@ async function analyze_pixels(
   }
 
   // Watermark cannot be reliably auto-detected without OCR.
-  // Leave null unless obvious tiny/placeholder.
-  const has_watermark = placeholder_like ? true : null;
-  if (has_watermark) reasons.push("possible_watermark_or_placeholder");
+  // Flat/placeholder images are flagged separately; leave watermark unknown for humans.
+  const has_watermark = null;
+  if (placeholder_like) reasons.push("possible_placeholder");
 
   return {
     has_watermark,
