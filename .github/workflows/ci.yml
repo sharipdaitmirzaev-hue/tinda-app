@@ -91,7 +91,7 @@ jobs:
       DATABASE_URL: postgresql://tinda:tinda@localhost:5432/tinda_e2e?schema=public
       SESSION_SECRET: e2e-test-session-secret-at-least-32-chars
       APP_URL: http://127.0.0.1:3000
-      STORAGE_DRIVER: memory
+      STORAGE_DRIVER: local
       SEED_PASSWORD: ChangeMe123!
       NODE_ENV: test
 

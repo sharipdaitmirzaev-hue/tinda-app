@@ -28,7 +28,7 @@ export default defineConfig({
     env: {
       ...process.env,
       APP_URL: baseURL,
-      STORAGE_DRIVER: process.env.STORAGE_DRIVER || "memory",
+      STORAGE_DRIVER: process.env.STORAGE_DRIVER || (process.env.CI ? "local" : "memory"),
     },
   },
 });
