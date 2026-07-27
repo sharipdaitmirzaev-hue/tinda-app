@@ -55,3 +55,13 @@ Staging WebP: `data/imports/external-product-images/staging/`
 ## После ручного подтверждения
 
 Скачивание фото — только локально через `npm run external-images:download` (не на VPS).
+
+## Локальный архив всех candidates
+
+```bash
+npm run zelenoe-images:download-all
+```
+
+→ `data/imports/zelenoe-yabloko-images/{original,previews,manifest.json,gallery.html}`
+
+Без approval.xlsx, без staging, без production.

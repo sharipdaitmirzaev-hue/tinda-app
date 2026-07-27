@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Зелёное яблоко — локальная галерея кандидатов</title>
+<style>
+  :root { --bg:#f3f1ea; --ink:#1c1a16; --muted:#5c574e; --line:#d9d2c4; --accent:#2f6b3a; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "Segoe UI", "Helvetica Neue", sans-serif; background:
+    radial-gradient(circle at 10% 0%, #e8f0df, transparent 40%),
+    radial-gradient(circle at 90% 10%, #efe6d6, transparent 35%),
+    var(--bg); color: var(--ink); }
+  header { padding: 28px 24px 12px; max-width: 1200px; margin: 0 auto; }
+  header h1 { margin: 0 0 8px; font-size: 1.6rem; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  .grid { max-width: 1200px; margin: 0 auto; padding: 16px 24px 48px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: rgba(255,255,255,0.72); border: 1px solid var(--line); border-radius: 16px;
+    padding: 12px; display: flex; flex-direction: column; gap: 8px; backdrop-filter: blur(4px); }
+  .photo { aspect-ratio: 1; background: #fff; border-radius: 12px; overflow: hidden;
+    display:grid; place-items:center; border: 1px solid var(--line); }
+  .photo img { width:100%; height:100%; object-fit: contain; }
+  .missing { color: var(--muted); font-size: 0.9rem; }
+  h2 { font-size: 0.98rem; line-height: 1.3; margin: 0; min-height: 2.6em; }
+  dl { margin: 0; display: grid; gap: 4px; }
+  dl > div { display: grid; grid-template-columns: 110px 1fr; gap: 6px; font-size: 0.82rem; }
+  dt { color: var(--muted); }
+  dd { margin: 0; word-break: break-word; }
+  .badge { display:inline-block; padding: 1px 8px; border-radius: 999px; background:#e7efe6; color: var(--accent); font-weight: 600; }
+  .pending { color: #8a5a00; font-weight: 600; }
+  a.src { color: var(--accent); font-size: 0.85rem; text-decoration: none; margin-top: auto; }
+  a.src:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Зелёное яблоко — локальная галерея кандидатов</h1>
+  <p>Локальный архив кандидатов «Зелёное яблоко». review_status = pending. Production не изменён.</p>
+</header>
+<main class="grid">
+<article class="card" data-status="unknown">
+  <div class="photo"><img src="previews/01_dobryi_napitok-dobryi-kola-dynya-plb-1l_1l.preview.webp" alt="Напиток Добрый Кола Дыня пл/б 1л" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола Дыня пл/б 1л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола дыня пл б</dd></div>
+    <div><dt>Объём</dt><dd>1 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">unknown</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 54336 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/58079" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/02_kazbegi_napitok-kazbegi-plb-2l-feihoa_2l.preview.webp" alt="Напиток Казбеги пл/б 2л Фейхоа" loading="lazy" /></div>
+  <h2>Напиток Казбеги пл/б 2л Фейхоа</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Казбеги</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б фейхоа</dd></div>
+    <div><dt>Объём</dt><dd>2 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>800×800 / 17834 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-kazbegi-plb-2l-feixoa" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/03_kazbegi_napitok-kazbegi-plb-2l-tarhun_2l.preview.webp" alt="Напиток Казбеги пл/б 2л Тархун" loading="lazy" /></div>
+  <h2>Напиток Казбеги пл/б 2л Тархун</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Казбеги</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б тархун</dd></div>
+    <div><dt>Объём</dt><dd>2 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>600×600 / 14120 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-kazbegi-plb-2l-tarxun" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/04_kazbegi_napitok-kazbegi-plb-2l-saperavi_2l.preview.webp" alt="Напиток Казбеги пл/б 2л Саперави" loading="lazy" /></div>
+  <h2>Напиток Казбеги пл/б 2л Саперави</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Казбеги</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б саперави</dd></div>
+    <div><dt>Объём</dt><dd>2 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>700×700 / 13600 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-kazbegi-plb-2l-saperavi" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/05_kazbegi_napitok-kazbegi-plb-2l-grusha_2l.preview.webp" alt="Напиток Казбеги пл/б 2л Груша" loading="lazy" /></div>
+  <h2>Напиток Казбеги пл/б 2л Груша</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Казбеги</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б груша</dd></div>
+    <div><dt>Объём</dt><dd>2 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>600×600 / 14348 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-kazbegi-plb-2l-grusa" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/06_deneb_napitok-deneb-zhb-045l-feihoa_450ml.preview.webp" alt="Напиток Денеб ж/б 0,45л Фейхоа" loading="lazy" /></div>
+  <h2>Напиток Денеб ж/б 0,45л Фейхоа</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Денеб</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ж б фейхоа</dd></div>
+    <div><dt>Объём</dt><dd>450 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1280×1280 / 30660 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-deneb-zb-045l-feixoa" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="probable_match">
+  <div class="photo"><img src="previews/07_deneb_napitok-deneb-zhb-045l-mohito-klubnika_450ml.preview.webp" alt="Напиток Денеб ж/б 0,45л Мохито Клубника" loading="lazy" /></div>
+  <h2>Напиток Денеб ж/б 0,45л Мохито Клубника</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Денеб</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ж б мохито клубника</dd></div>
+    <div><dt>Объём</dt><dd>450 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">probable_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-MOHITO-450-CAN-171</dd></div>
+    <div><dt>Размер</dt><dd>1280×1280 / 52116 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-deneb-zb-045l-moxito-klubnika" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/08_kinza_napitok-gazirovannyi-kinza-zhb-320ml-limon_320ml.preview.webp" alt="Напиток газированный KINZA ж/б 320мл Лимон" loading="lazy" /></div>
+  <h2>Напиток газированный KINZA ж/б 320мл Лимон</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>KINZA</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газированный ж б лимон</dd></div>
+    <div><dt>Объём</dt><dd>320 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>680×680 / 17514 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazirovannyi-kinza-zb-320ml-limon" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/09_dobryi_napitok-dobryi-mango-marakuiya-1l-pet_1l.preview.webp" alt="Напиток Добрый Манго-Маракуйя 1л пэт" loading="lazy" /></div>
+  <h2>Напиток Добрый Манго-Маракуйя 1л пэт</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток манго маракуйя</dd></div>
+    <div><dt>Объём</dt><dd>1 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-1000-PET-192</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 42010 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-mango-marakuiia-1l-pet" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/10_dobryi_napitok-dobryi-mango-marakuiya-15l-pet_1p5l.preview.webp" alt="Напиток Добрый Манго-Маракуйя 1.5л пэт" loading="lazy" /></div>
+  <h2>Напиток Добрый Манго-Маракуйя 1.5л пэт</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток манго маракуйя</dd></div>
+    <div><dt>Объём</dt><dd>1,5 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-1500-PET-177</dd></div>
+    <div><dt>Размер</dt><dd>680×680 / 9232 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-mango-marakuiia-15l-pet" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/11_dobryi_napitok-dobryi-mango-marakuiya-05l-pet_500ml.preview.webp" alt="Напиток Добрый Манго-Маракуйя 0.5л пэт" loading="lazy" /></div>
+  <h2>Напиток Добрый Манго-Маракуйя 0.5л пэт</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток манго маракуйя</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-500-PET-196</dd></div>
+    <div><dt>Размер</dt><dd>1000×1000 / 28718 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-mango-marakuiia-05l-pet" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/12_dobryi_napitok-dobryi-limon-laim-plb-15l_1p5l.preview.webp" alt="Напиток Добрый Лимон-Лайм пл/б 1,5л" loading="lazy" /></div>
+  <h2>Напиток Добрый Лимон-Лайм пл/б 1,5л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток лимон лайм пл б</dd></div>
+    <div><dt>Объём</dt><dd>1,5 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-1500-PET-060</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 40394 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-limon-laim-plb-15l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="conflict">
+  <div class="photo"><img src="previews/13_dobryi_napitok-dobryi-kola-plb-15l-zero_1p5l.preview.webp" alt="Напиток Добрый Кола пл/б 1,5л Зеро" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола пл/б 1,5л Зеро</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола пл б зеро</dd></div>
+    <div><dt>Объём</dt><dd>1,5 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">conflict</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-1500-PET-148</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 37702 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-kola-plb-15l-zero" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/14_deneb_napitok-deneb-mohito-granat-gaz-zhb-045l_450ml.preview.webp" alt="Напиток Денеб Мохито Гранат газ ж/б 0,45л" loading="lazy" /></div>
+  <h2>Напиток Денеб Мохито Гранат газ ж/б 0,45л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Денеб</dd></div>
+    <div><dt>Вкус</dt><dd>напиток мохито гранат газ ж б</dd></div>
+    <div><dt>Объём</dt><dd>450 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1280×1280 / 37750 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-deneb-moxito-granat-gaz-zb-045l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/15_deneb_napitok-deneb-mohito-gaz-zhb-045l_450ml.preview.webp" alt="Напиток Денеб Мохито газ ж/б 0,45л" loading="lazy" /></div>
+  <h2>Напиток Денеб Мохито газ ж/б 0,45л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Денеб</dd></div>
+    <div><dt>Вкус</dt><dd>напиток мохито газ ж б</dd></div>
+    <div><dt>Объём</dt><dd>450 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1280×1280 / 46762 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-deneb-moxito-gaz-zb-045l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/16_kinza_napitok-gazirovannyi-kinza-zhb-320ml-chernaya-sm_320ml.preview.webp" alt="Напиток газированный KINZA ж/б 320мл Черная смородина" loading="lazy" /></div>
+  <h2>Напиток газированный KINZA ж/б 320мл Черная смородина</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>KINZA</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газированный ж б черная смородина</dd></div>
+    <div><dt>Объём</dt><dd>320 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>500×500 / 10882 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazirovannyi-kinza-zb-320ml-cernaia-smorodina" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="conflict">
+  <div class="photo"><img src="previews/17_rich_napitok-rich-granat-plb-1l_1l.preview.webp" alt="Напиток Рич Гранат пл/б 1л" loading="lazy" /></div>
+  <h2>Напиток Рич Гранат пл/б 1л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Рич</dd></div>
+    <div><dt>Вкус</dt><dd>напиток гранат пл б</dd></div>
+    <div><dt>Объём</dt><dd>1 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">conflict</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-RICH-1000-PET-282</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 45348 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-ric-granat-plb-1l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="probable_match">
+  <div class="photo"><img src="previews/18_evervess_napitok-evervess-plb-1l-kola-zero_1l.preview.webp" alt="Напиток Evervess пл/б 1л Кола Зеро" loading="lazy" /></div>
+  <h2>Напиток Evervess пл/б 1л Кола Зеро</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Evervess</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б кола зеро</dd></div>
+    <div><dt>Объём</dt><dd>1 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">probable_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-EVERVESS-1000-PET-037</dd></div>
+    <div><dt>Размер</dt><dd>636×636 / 10434 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-evervess-plb-1l-kola-zero" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/19_kinza_napitok-gazirovannyi-kinza-oranzh-zhb-320ml_320ml.preview.webp" alt="Напиток газированный KINZA оранж ж/б 320мл" loading="lazy" /></div>
+  <h2>Напиток газированный KINZA оранж ж/б 320мл</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>KINZA</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газированный оранж ж б</dd></div>
+    <div><dt>Объём</dt><dd>320 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>950×950 / 33720 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazirovannyi-kinza-oranz-zb-320ml" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/20_kinza_napitok-gazirovannyi-kinza-kola-granat-zhb-320ml_320ml.preview.webp" alt="Напиток газированный KINZA кола гранат ж/б 320мл" loading="lazy" /></div>
+  <h2>Напиток газированный KINZA кола гранат ж/б 320мл</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>KINZA</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газированный кола гранат ж б</dd></div>
+    <div><dt>Объём</dt><dd>320 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>835×835 / 39920 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazirovannyi-kinza-kola-granat-zb-320ml" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/21_kinza_napitok-gazirovannyi-kinza-kola-zero-zhb-320ml_320ml.preview.webp" alt="Напиток газированный KINZA кола ZERO ж/б 320мл" loading="lazy" /></div>
+  <h2>Напиток газированный KINZA кола ZERO ж/б 320мл</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>KINZA</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газированный кола ж б</dd></div>
+    <div><dt>Объём</dt><dd>320 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>750×750 / 16852 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazirovannyi-kinza-kola-zero-zb-320ml" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/22_borzhomi_napitok-gazir-borzhomi-tarhun-033-zhb_330ml.preview.webp" alt="Напиток газир Боржоми Тархун 0,33 ж/б" loading="lazy" /></div>
+  <h2>Напиток газир Боржоми Тархун 0,33 ж/б</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Боржоми</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газир тархун ж б</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 94644 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazir-borzomi-tarxun-033-zb" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/23_borzhomi_napitok-gazir-borzhomi-grusha-033-zhb_330ml.preview.webp" alt="Напиток газир Боржоми Груша 0,33 ж/б" loading="lazy" /></div>
+  <h2>Напиток газир Боржоми Груша 0,33 ж/б</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Боржоми</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газир груша ж б</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 101770 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazir-borzomi-grusa-033-zb" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="probable_match">
+  <div class="photo"><img src="previews/24_dobryi_napitok-dobryi-kola-stb-033l_330ml.preview.webp" alt="Напиток Добрый Кола ст/б 0,33л" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола ст/б 0,33л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола ст б</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">probable_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-250-GLASS-006</dd></div>
+    <div><dt>Размер</dt><dd>1000×1020 / 24724 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-kola-stb-033l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/25_tbilissimo_napitok-tbilissimo-stb-05l-laim-myata_500ml.preview.webp" alt="Напиток Тбилиссимо ст/б 0,5л Лайм Мята" loading="lazy" /></div>
+  <h2>Напиток Тбилиссимо ст/б 0,5л Лайм Мята</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Тбилиссимо</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ст б лайм мята</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>984×672 / 21304 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-tbilissimo-stb-05l-laim-miata" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/26_kinza_napitok-gazirovannyi-kinza-citrus-zhb-320ml_320ml.preview.webp" alt="Напиток газированный KINZA цитрус ж/б 320мл" loading="lazy" /></div>
+  <h2>Напиток газированный KINZA цитрус ж/б 320мл</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>KINZA</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газированный цитрус ж б</dd></div>
+    <div><dt>Объём</dt><dd>320 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>500×500 / 11032 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazirovannyi-kinza-citrus-zb-320ml" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/27_kinza_napitok-gazirovannyi-kinza-kola-zhb-320ml_320ml.preview.webp" alt="Напиток газированный KINZA кола ж/б 320мл" loading="lazy" /></div>
+  <h2>Напиток газированный KINZA кола ж/б 320мл</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>KINZA</dd></div>
+    <div><dt>Вкус</dt><dd>напиток газированный кола ж б</dd></div>
+    <div><dt>Объём</dt><dd>320 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>800×800 / 22502 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-gazirovannyi-kinza-kola-zb-320ml" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/28_dobryi_napitok-dobryi-kola-pet-03l_300ml.preview.webp" alt="Напиток Добрый Кола пэт 0,3л" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола пэт 0,3л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола</dd></div>
+    <div><dt>Объём</dt><dd>300 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-300-PET-107</dd></div>
+    <div><dt>Размер</dt><dd>800×800 / 19874 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-kola-pet-03l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="probable_match">
+  <div class="photo"><img src="previews/29_dobryi_napitok-dobryi-kola-zero-pet-03l_300ml.preview.webp" alt="Напиток Добрый Кола Зеро пэт 0,3л" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола Зеро пэт 0,3л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола зеро</dd></div>
+    <div><dt>Объём</dt><dd>300 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">probable_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-300-PET-131</dd></div>
+    <div><dt>Размер</dt><dd>800×800 / 31636 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-kola-zero-pet-03l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/30_kola_napitok-kola-ot-martina-klassik-plb-15l_1p5l.preview.webp" alt="Напиток Кола от Мартина классик пл/б 1,5л" loading="lazy" /></div>
+  <h2>Напиток Кола от Мартина классик пл/б 1,5л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Кола</dd></div>
+    <div><dt>Вкус</dt><dd>напиток от мартина классик пл б</dd></div>
+    <div><dt>Объём</dt><dd>1,5 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>900×900 / 18008 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-kola-ot-martina-klassik-plb-15l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="conflict">
+  <div class="photo"><img src="previews/31_dobryi_napitok-dobryi-kola-zero-pet-1l_1l.preview.webp" alt="Напиток Добрый Кола Зеро пэт 1л" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола Зеро пэт 1л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола зеро</dd></div>
+    <div><dt>Объём</dt><dd>1 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">conflict</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-1000-PET-065</dd></div>
+    <div><dt>Размер</dt><dd>418×418 / 6136 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-kola-zero-pet-1l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/32_tbilissimo_napitok-tbilissimo-stb-05l-saperavi_500ml.preview.webp" alt="Напиток Тбилиссимо ст/б 0,5л Саперави" loading="lazy" /></div>
+  <h2>Напиток Тбилиссимо ст/б 0,5л Саперави</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Тбилиссимо</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ст б саперави</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>796×711 / 22462 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-tbilissimo-stb-05l-saperavi" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/33_dobryi_napitok-dobryi-limon-laim-plb-05l_500ml.preview.webp" alt="Напиток Добрый Лимон-Лайм пл/б 0,5л" loading="lazy" /></div>
+  <h2>Напиток Добрый Лимон-Лайм пл/б 0,5л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток лимон лайм пл б</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-500-PET-129</dd></div>
+    <div><dt>Размер</dt><dd>680×680 / 11604 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-limon-laim-plb-05l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/34_tbilissimo_napitok-tbilissimo-stb-05l-feihoa_500ml.preview.webp" alt="Напиток Тбилиссимо ст/б 0,5л Фейхоа" loading="lazy" /></div>
+  <h2>Напиток Тбилиссимо ст/б 0,5л Фейхоа</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Тбилиссимо</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ст б фейхоа</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>672×706 / 20522 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-tbilissimo-stb-05l-feixoa" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/35_tbilissimo_napitok-tbilissimo-stb-05l-tarhun_500ml.preview.webp" alt="Напиток Тбилиссимо ст/б 0,5л Тархун" loading="lazy" /></div>
+  <h2>Напиток Тбилиссимо ст/б 0,5л Тархун</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Тбилиссимо</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ст б тархун</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>851×708 / 22436 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-tbilissimo-stb-05l-tarxun" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/36_dr-pepper_napitok-dr-pepper-zhb-330ml_330ml.preview.webp" alt="Напиток Dr. Pepper ж/б 330мл" loading="lazy" /></div>
+  <h2>Напиток Dr. Pepper ж/б 330мл</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Dr. Pepper</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ж б</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1024×1024 / 36192 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dr-pepper-zb-330ml" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/37_swag_napitok-swag-stb-033ml-sliva_330ml.preview.webp" alt="Напиток SWAG! ст/б 0,33мл Слива" loading="lazy" /></div>
+  <h2>Напиток SWAG! ст/б 0,33мл Слива</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>SWAG</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ! ст б слива</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1024×1024 / 15654 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-swag-stb-033ml-sliva" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/38_swag_napitok-swag-stb-033ml-malina-marakuiya_330ml.preview.webp" alt="Напиток SWAG! ст/б 0,33мл Малина Маракуйя" loading="lazy" /></div>
+  <h2>Напиток SWAG! ст/б 0,33мл Малина Маракуйя</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>SWAG</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ! ст б малина маракуйя</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1024×1024 / 17684 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-swag-stb-033ml-malina-marakuiia" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/39_frustyle_napitok-frustyle-plb-15l-limon-laim_1p5l.preview.webp" alt="Напиток Frustyle пл/б 1,5л Лимон Лайм" loading="lazy" /></div>
+  <h2>Напиток Frustyle пл/б 1,5л Лимон Лайм</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Frustyle</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б лимон лайм</dd></div>
+    <div><dt>Объём</dt><dd>1,5 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-FRUSTYLE-1500-PET-066</dd></div>
+    <div><dt>Размер</dt><dd>1024×1023 / 25684 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-frustyle-plb-15l-limon-laim" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/40_frustyle_napitok-frustyle-plb-15l-apelsin_1p5l.preview.webp" alt="Напиток Frustyle пл/б 1,5л Апельсин" loading="lazy" /></div>
+  <h2>Напиток Frustyle пл/б 1,5л Апельсин</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Frustyle</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б апельсин</dd></div>
+    <div><dt>Объём</dt><dd>1,5 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-FRUSTYLE-1500-PET-145</dd></div>
+    <div><dt>Размер</dt><dd>1024×1023 / 25794 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-frustyle-plb-15l-apelsin" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/41_frustail_napitok-frustail-zhb-033l-limon-laim_330ml.preview.webp" alt="Напиток Фрустайл ж/б 0,33л Лимон Лайм" loading="lazy" /></div>
+  <h2>Напиток Фрустайл ж/б 0,33л Лимон Лайм</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Фрустайл</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ж б лимон лайм</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1024×1023 / 50394 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-frustail-zb-033l-limon-laim" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/42_dobryi_napitok-dobryi-limon-laim-plb-1l_1l.preview.webp" alt="Напиток Добрый Лимон-Лайм пл/б 1л" loading="lazy" /></div>
+  <h2>Напиток Добрый Лимон-Лайм пл/б 1л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток лимон лайм пл б</dd></div>
+    <div><dt>Объём</dt><dd>1 л</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-1000-PET-094</dd></div>
+    <div><dt>Размер</dt><dd>1024×1023 / 16280 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-limon-laim-plb-1l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="exact_match">
+  <div class="photo"><img src="previews/43_dobryi_napitok-dobryi-limon-laim-zhb-033l_330ml.preview.webp" alt="Напиток Добрый Лимон-Лайм ж/б 0.33л" loading="lazy" /></div>
+  <h2>Напиток Добрый Лимон-Лайм ж/б 0.33л</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток лимон лайм ж б</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">exact_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-330-CAN-018</dd></div>
+    <div><dt>Размер</dt><dd>1254×1254 / 43694 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-limon-laim-zb-033l" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/44_koka_napitok-koka-kola-stb-033l-zero_330ml.preview.webp" alt="Напиток Кока Кола ст/б 0,33л Зеро" loading="lazy" /></div>
+  <h2>Напиток Кока Кола ст/б 0,33л Зеро</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Кока</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола ст б зеро</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>200×200 / 4804 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-koka-kola-stb-033l-zero" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="conflict">
+  <div class="photo"><img src="previews/45_dobryi_napitok-dobryi-kola-pet-05l-zero_500ml.preview.webp" alt="Напиток Добрый Кола пэт 0,5л Зеро" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола пэт 0,5л Зеро</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола зеро</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">conflict</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-500-PET-111</dd></div>
+    <div><dt>Размер</dt><dd>1024×1024 / 14142 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-kola-pet-05l-zero" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="probable_match">
+  <div class="photo"><img src="previews/46_dobryi_napitok-dobryi-kola-zhb-033l-zero_330ml.preview.webp" alt="Напиток Добрый Кола ж/б 0,33л Зеро" loading="lazy" /></div>
+  <h2>Напиток Добрый Кола ж/б 0,33л Зеро</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Добрый</dd></div>
+    <div><dt>Вкус</dt><dd>напиток кола ж б зеро</dd></div>
+    <div><dt>Объём</dt><dd>330 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>банка</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">probable_match</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>DRINK-DOBRYI-330-CAN-005</dd></div>
+    <div><dt>Размер</dt><dd>1024×1024 / 17698 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-dobryi-kola-zb-033l-zero" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/47_kazbegi_napitok-kazbegi-stb-05l-limon_500ml.preview.webp" alt="Напиток Казбеги ст/б 0,5л Лимон" loading="lazy" /></div>
+  <h2>Напиток Казбеги ст/б 0,5л Лимон</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Казбеги</dd></div>
+    <div><dt>Вкус</dt><dd>напиток ст б лимон</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>стекло</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>1024×1024 / 21870 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-kazbegi-stb-05l-limon" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+<article class="card" data-status="new_product">
+  <div class="photo"><img src="previews/48_frustail_napitok-frustail-plb-05l-limon-laim_500ml.preview.webp" alt="Напиток Фрустайл пл/б 0.5л Лимон Лайм" loading="lazy" /></div>
+  <h2>Напиток Фрустайл пл/б 0.5л Лимон Лайм</h2>
+  <dl>
+    <div><dt>Бренд</dt><dd>Фрустайл</dd></div>
+    <div><dt>Вкус</dt><dd>напиток пл б лимон лайм</dd></div>
+    <div><dt>Объём</dt><dd>500 мл</dd></div>
+    <div><dt>Упаковка</dt><dd>ПЭТ</dd></div>
+    <div><dt>match_status</dt><dd><span class="badge">new_product</span></dd></div>
+    <div><dt>TINDA SKU</dt><dd>—</dd></div>
+    <div><dt>Размер</dt><dd>225×225 / 3680 B</dd></div>
+    <div><dt>review_status</dt><dd><span class="pending">pending</span></dd></div>
+    <div><dt>download</dt><dd>ok</dd></div>
+  </dl>
+  <a class="src" href="https://zelenoeyabloko.ru/product/napitok-frustail-plb-05l-limon-laim" target="_blank" rel="noopener">Карточка источника</a>
+</article>
+</main>
+</body>
+</html>
