@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-07-27T17:02:23.046Z",
+  "out_xlsx": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/images-review.xlsx",
+  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/candidates.flat.json",
+  "products_file": "/workspace/data/imports/tinda_active_products.snapshot.json",
+  "stats": {
+    "products": 441,
+    "candidates": 20,
+    "exact_match": 0,
+    "probable_match": 0,
+    "conflict": 0,
+    "no_match": 441,
+    "new_product": 20,
+    "no_photo": 14,
+    "watermark": 0,
+    "below_500": 0,
+    "low_quality": 0,
+    "metro_cdn_current": 0,
+    "better_photo": 0,
+    "recommended_approve": 0
+  },
+  "note": "Production not modified. Images not uploaded. image_url not changed. review_status=pending."
+}

@@ -1,0 +1,131 @@
+{
+  "generated_at": "2026-07-27T17:02:41.999Z",
+  "note": "Automatic preliminary review only. No production / VPS / image_url changes.",
+  "counts": {
+    "approved_existing": 0,
+    "approved_new": 5,
+    "needs_review": 12,
+    "rejected": 3
+  },
+  "approved_existing_skus": [],
+  "needs_review_brief": [
+    {
+      "source_index": 1,
+      "source_name": "Чай холодный Rich зеленый Малина 1л пэт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "near_tinda:DRINK-RICH-1000-PET-020:no_match:75"
+      ]
+    },
+    {
+      "source_index": 2,
+      "source_name": "Чай холодный Rich лимон 1л пэт",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "near_tinda:DRINK-RICH-1000-PET-020:no_match:75"
+      ]
+    },
+    {
+      "source_index": 4,
+      "source_name": "Квас Денеб Капитанская бочка 1,5л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 8,
+      "source_name": "Квас Денеб Капитанская бочка со вкусом сливы 1,5л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 9,
+      "source_name": "Квас Приморский Денеб 1,25л сливовый",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 10,
+      "source_name": "Квас Вятский хлебный 1,5л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 11,
+      "source_name": "Квас Вятский хлебный 3л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 12,
+      "source_name": "Квас Монастырский 1,5л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 17,
+      "source_name": "Чай холодный ICE BAR Персик 1,25л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 18,
+      "source_name": "Чай холодный ICE BAR Лесные Ягоды 1,25л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 19,
+      "source_name": "Чай холодный ICE BAR Персик 0,5л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    },
+    {
+      "source_index": 20,
+      "source_name": "Чай холодный ICE BAR Лесные Ягоды 0,5л",
+      "match_status": "new_product",
+      "reason": "needs_review_new_incomplete",
+      "mismatches": [
+        "package_missing",
+        "package_undetermined"
+      ]
+    }
+  ]
+}
