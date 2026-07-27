@@ -7,5 +7,5 @@ export default async function HomePage() {
   if (payload) {
     redirect(get_post_auth_path(payload));
   }
-  redirect("/login");
+  redirect("/catalog");
 }

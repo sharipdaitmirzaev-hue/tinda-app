@@ -8,9 +8,6 @@ import { catalog_products_query_schema } from "@/lib/validators/catalog";
 export async function GET(request: Request) {
   try {
     const payload = await get_current_auth_payload();
-    if (!payload) {
-      return api_error(401, "unauthorized", "Требуется вход в систему");
-    }
     const url = new URL(request.url);
     const query = catalog_products_query_schema.parse({
       q: url.searchParams.get("q") ?? undefined,

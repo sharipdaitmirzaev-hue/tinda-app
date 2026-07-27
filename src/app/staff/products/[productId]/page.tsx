@@ -40,11 +40,16 @@ export default async function EditProductPage({ params }: PageProps) {
             allow_piece_sale: product.allow_piece_sale,
             description: product.description ?? "",
             availability: product.availability,
+            sales_status: product.sales_status || "showcase",
             is_promo: product.is_promo,
             is_new: product.is_new,
             is_hit: product.is_hit,
             image_url: product.image_url ?? "",
             is_active: product.is_active,
+            price_amount:
+              product.price_amount === null || product.price_amount === undefined
+                ? ""
+                : String(product.price_amount),
           }}
         />
       </div>

@@ -6,6 +6,7 @@ import {
   resolve_catalog_editor_access,
   resolve_client_shop_access,
   resolve_pending_page_access,
+  resolve_public_catalog_access,
   resolve_staff_access,
   type AuthUserPayload,
 } from "@/lib/access";
@@ -73,6 +74,19 @@ export async function require_client(): Promise<AuthUserPayload> {
 export async function require_client_area(): Promise<AuthUserPayload> {
   const payload = await get_current_auth_payload();
   return apply_decision(resolve_client_shop_access(payload), payload);
+}
+
+/**
+ * Public catalog pages: guests and any client status may browse.
+ * Staff are redirected to the staff product list. Guests return null.
+ */
+export async function require_public_catalog(): Promise<AuthUserPayload | null> {
+  const payload = await get_current_auth_payload();
+  const decision = resolve_public_catalog_access(payload);
+  if (!decision.allow) {
+    redirect(decision.redirect_to);
+  }
+  return payload;
 }
 
 /** Pending / rejected / blocked status screen. */

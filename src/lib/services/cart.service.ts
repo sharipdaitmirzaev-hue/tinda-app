@@ -1,10 +1,17 @@
+import type { Decimal } from "@prisma/client/runtime/library";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
+import { is_product_orderable_for_cart } from "@/lib/catalog/constants";
 import {
   assert_approved_client,
   type AuthUserPayload,
 } from "@/lib/access";
 import { can_add_to_cart, check_qty } from "@/lib/quantity";
+import {
+  calc_line_total,
+  money_to_number,
+  sum_money,
+} from "@/lib/money";
 import type {
   SerializedCart,
   SerializedCartItem,
@@ -31,10 +38,17 @@ type CartProductRow = {
   availability: string;
   image_url: string | null;
   is_active: boolean;
+  sales_status: string;
+  price_amount: Decimal | string | number | null;
+  price_currency: string;
   category: { is_active: boolean } | null;
 };
 
 function serialize_product(product: CartProductRow): SerializedCartProduct {
+  const amount =
+    product.price_amount === null || product.price_amount === undefined
+      ? 0
+      : money_to_number(product.price_amount);
   return {
     id: product.id,
     sku: product.sku,
@@ -49,6 +63,11 @@ function serialize_product(product: CartProductRow): SerializedCartProduct {
     availability: product.availability,
     image_url: product.image_url,
     is_active: product.is_active,
+    price: {
+      amount: amount,
+      currency: product.price_currency || "RUB",
+      unit: product.sale_unit,
+    },
   };
 }
 
@@ -93,12 +112,33 @@ export function serialize_cart(
 ): SerializedCart {
   const serialized_items: SerializedCartItem[] = items.map((item) => {
     const evaluated = evaluate_cart_item(item.product, item.qty);
+    // Always price from DB product row — never from client input.
+    const priced = is_product_orderable_for_cart({
+      is_active: item.product.is_active,
+      sales_status: item.product.sales_status,
+      price_amount: item.product.price_amount,
+      availability: item.product.availability,
+      category_is_active: item.product.category?.is_active,
+    });
+    const unit_price = priced
+      ? money_to_number(item.product.price_amount as Decimal | string | number)
+      : 0;
+    const line_total = priced
+      ? money_to_number(
+          calc_line_total(item.product.price_amount as Decimal | string | number, item.qty),
+        )
+      : 0;
+    const currency = item.product.price_currency || "RUB";
+
     return {
       product_id: item.product_id,
       qty: item.qty,
       product: serialize_product(item.product),
       qty_error: evaluated.qty_error,
       suggested_qty: evaluated.suggested_qty,
+      unit_price,
+      currency,
+      line_total,
     };
   });
 
@@ -107,11 +147,20 @@ export function serialize_cart(
   const is_ready_to_checkout =
     items_count > 0 && serialized_items.every((item) => item.qty_error === null);
 
+  const subtotal = money_to_number(
+    sum_money(serialized_items.map((item) => item.line_total)),
+  );
+  const delivery_total = 0;
+  const total = money_to_number(sum_money([subtotal, delivery_total]));
+
   return {
     items: serialized_items,
     items_count,
     total_qty,
     is_ready_to_checkout,
+    subtotal,
+    delivery_total,
+    total,
   };
 }
 
@@ -171,6 +220,22 @@ async function load_product_for_mutation(product_id: string): Promise<CartProduc
 
   if (product.availability === "out_of_stock") {
     throw new AppError(400, "validation_error", "Товара временно нет");
+  }
+
+  if (
+    !is_product_orderable_for_cart({
+      is_active: product.is_active,
+      sales_status: product.sales_status,
+      price_amount: product.price_amount,
+      availability: product.availability,
+      category_is_active: product.category?.is_active,
+    })
+  ) {
+    throw new AppError(
+      400,
+      "validation_error",
+      "Товар нельзя добавить в корзину: недоступен для заказа или нет цены",
+    );
   }
 
   return product;

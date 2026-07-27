@@ -1,11 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
-import { can_add_to_cart } from "@/lib/quantity";
+import {
+  format_rub_price,
+  useCatalogViewer,
+} from "@/components/catalog/catalog-viewer-context";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
 import { useAddToServerCart } from "@/hooks/useServerCart";
 import { Toast } from "@/components/catalog/toast";
+import { ProductInterestForm } from "@/components/catalog/product-interest-form";
 
 export type CatalogProduct = {
   id: string;
@@ -20,22 +25,33 @@ export type CatalogProduct = {
   allow_piece_sale: boolean;
   availability: string;
   availability_label?: string;
+  sales_status?: string;
+  sales_status_label?: string;
+  can_add_to_cart?: boolean;
   is_promo: boolean;
   is_new: boolean;
   is_hit: boolean;
   image_url: string | null;
+  price?: { amount: number; currency: string; unit: string } | null;
 };
 
 export function CatalogProductCard({ product }: { product: CatalogProduct }) {
+  const viewer = useCatalogViewer();
   const { add_from_catalog, toast, pending } = useAddToServerCart();
-  const allowed = can_add_to_cart(product);
+  const approved = viewer === "approved";
+  const guest = viewer === "guest";
+  const sales_status = product.sales_status || "showcase";
+  const can_cart = Boolean(approved && product.can_add_to_cart);
+  const [interest, set_interest] = useState<"interest" | "price_request" | null>(
+    null,
+  );
   const availability_label =
     product.availability_label ??
     AVAILABILITY_LABELS[product.availability as Availability] ??
     product.availability;
 
   function on_add() {
-    if (!allowed || pending) return;
+    if (!can_cart || pending) return;
     void add_from_catalog({
       product_id: product.id,
       units_per_package: product.units_per_package,
@@ -43,6 +59,90 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
       allow_piece_sale: product.allow_piece_sale,
       availability: product.availability,
     });
+  }
+
+  let price_block: React.ReactNode = null;
+  if (guest || viewer === "pending") {
+    price_block = (
+      <p className="mt-2 text-xs text-slate-500">
+        Войдите или зарегистрируйтесь, чтобы узнать условия поставки
+      </p>
+    );
+  } else if (approved) {
+    if (product.availability === "out_of_stock") {
+      price_block = (
+        <p className="mt-2 text-xs font-medium text-red-700">Временно нет</p>
+      );
+    } else if (sales_status === "orderable" && product.price) {
+      price_block = (
+        <p className="mt-2 text-sm font-semibold text-slate-900">
+          {format_rub_price(product.price.amount, product.price.unit)}
+          {product.availability === "on_order" ? (
+            <span className="mt-1 block text-xs font-normal text-amber-700">
+              Поставка под заказ
+            </span>
+          ) : null}
+        </p>
+      );
+    } else if (sales_status === "on_request") {
+      price_block = (
+        <p className="mt-2 text-xs font-medium text-slate-700">
+          Цена по запросу
+        </p>
+      );
+    } else {
+      price_block = (
+        <p className="mt-2 text-xs font-medium text-slate-700">
+          Товар представлен в каталоге
+        </p>
+      );
+    }
+  }
+
+  let action: React.ReactNode = null;
+  if (approved) {
+    if (product.availability === "out_of_stock") {
+      action = (
+        <button
+          type="button"
+          className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
+          onClick={() => set_interest("interest")}
+        >
+          Сообщить об интересе
+        </button>
+      );
+    } else if (can_cart) {
+      action = (
+        <button
+          type="button"
+          disabled={pending}
+          onClick={on_add}
+          className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+        >
+          {pending ? "Добавляем…" : "В корзину"}
+        </button>
+      );
+    } else if (sales_status === "on_request") {
+      action = (
+        <button
+          type="button"
+          className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800"
+          onClick={() => set_interest("price_request")}
+        >
+          Запросить цену
+        </button>
+      );
+    } else {
+      action = (
+        <button
+          type="button"
+          className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
+          onClick={() => set_interest("interest")}
+        >
+          Интересует товар
+        </button>
+      );
+    }
   }
 
   return (
@@ -95,6 +195,9 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
         >
           {availability_label}
         </p>
+
+        {price_block}
+
         <div className="mt-auto flex flex-col gap-2 pt-3">
           <Link
             href={`/catalog/products/${product.id}`}
@@ -102,17 +205,22 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           >
             Подробнее
           </Link>
-          <button
-            type="button"
-            disabled={!allowed || pending}
-            onClick={on_add}
-            className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
-          >
-            {pending ? "Добавляем…" : "В корзину"}
-          </button>
+          {action}
         </div>
       </article>
       <Toast message={toast} />
+      {interest ? (
+        <ProductInterestForm
+          product_id={product.id}
+          request_type={interest}
+          title={
+            interest === "price_request"
+              ? "Запросить цену"
+              : "Интересует товар"
+          }
+          on_close={() => set_interest(null)}
+        />
+      ) : null}
     </>
   );
 }

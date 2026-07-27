@@ -3,15 +3,16 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
+import { ProductInterestForm } from "@/components/catalog/product-interest-form";
 import { QuantityStepper } from "@/components/catalog/quantity-stepper";
 import { Toast } from "@/components/catalog/toast";
+import {
+  format_rub_price,
+  useCatalogViewer,
+} from "@/components/catalog/catalog-viewer-context";
 import { useAddToServerCart } from "@/hooks/useServerCart";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
-import {
-  can_add_to_cart,
-  check_qty,
-  get_initial_qty,
-} from "@/lib/quantity";
+import { check_qty, get_initial_qty } from "@/lib/quantity";
 
 type CatalogProductDetail = {
   id: string;
@@ -27,17 +28,28 @@ type CatalogProductDetail = {
   allow_piece_sale: boolean;
   description: string | null;
   availability: string;
+  availability_label?: string;
+  sales_status?: string;
+  sales_status_label?: string;
+  can_add_to_cart?: boolean;
   is_promo: boolean;
   is_new: boolean;
   is_hit: boolean;
   image_url: string | null;
+  price?: { amount: number; currency: string; unit: string } | null;
 };
 
 export function ProductDetailClient({ product_id }: { product_id: string }) {
+  const viewer = useCatalogViewer();
+  const approved = viewer === "approved";
+  const guest = viewer === "guest";
   const [product, set_product] = useState<CatalogProductDetail | null>(null);
   const [loading, set_loading] = useState(true);
   const [error, set_error] = useState<string | null>(null);
   const [qty, set_qty] = useState(1);
+  const [interest, set_interest] = useState<"interest" | "price_request" | null>(
+    null,
+  );
   const { add_with_qty, toast, pending } = useAddToServerCart();
 
   async function load() {
@@ -84,21 +96,22 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
     );
   }
 
+  const sales_status = product.sales_status || "showcase";
+  const can_cart = Boolean(approved && product.can_add_to_cart);
   const quantity_product = {
     units_per_package: product.units_per_package,
     min_order_qty: product.min_order_qty,
     allow_piece_sale: product.allow_piece_sale,
     availability: product.availability,
   };
-
-  const allowed = can_add_to_cart(quantity_product);
   const qty_check = check_qty(quantity_product, qty);
   const availability_label =
+    product.availability_label ??
     AVAILABILITY_LABELS[product.availability as Availability] ??
     product.availability;
 
   function on_add() {
-    if (!product || !allowed || !qty_check.valid || pending) return;
+    if (!product || !can_cart || !qty_check.valid || pending) return;
     void add_with_qty(
       {
         product_id: product.id,
@@ -106,6 +119,53 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
       },
       qty,
     );
+  }
+
+  let price_block: React.ReactNode = null;
+  if (guest || viewer === "pending") {
+    price_block = (
+      <p className="rounded-md bg-slate-50 px-3 py-2 text-sm text-slate-700">
+        Войдите или зарегистрируйтесь, чтобы узнать условия поставки
+      </p>
+    );
+  } else if (viewer === "rejected" || viewer === "blocked") {
+    price_block = (
+      <div className="space-y-2 rounded-md bg-slate-50 px-3 py-2 text-sm text-slate-700">
+        <p>Цена недоступна для вашей заявки.</p>
+        <Link href="/pending" className="font-medium text-teal-800 underline">
+          Перейти к статусу заявки
+        </Link>
+      </div>
+    );
+  } else if (approved) {
+    if (product.availability === "out_of_stock") {
+      price_block = (
+        <p className="text-sm font-medium text-red-700">Временно нет</p>
+      );
+    } else if (sales_status === "orderable" && product.price) {
+      price_block = (
+        <div>
+          <p className="text-xl font-semibold text-slate-900">
+            {format_rub_price(product.price.amount, product.price.unit)}
+          </p>
+          {product.availability === "on_order" ? (
+            <p className="mt-1 text-sm text-amber-700">
+              Товар под заказ. Срок поставки уточнит менеджер.
+            </p>
+          ) : null}
+        </div>
+      );
+    } else if (sales_status === "on_request") {
+      price_block = (
+        <p className="text-sm font-medium text-slate-700">Цена по запросу</p>
+      );
+    } else {
+      price_block = (
+        <p className="text-sm font-medium text-slate-700">
+          Товар представлен в каталоге
+        </p>
+      );
+    }
   }
 
   return (
@@ -194,52 +254,104 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
             {availability_label}
           </p>
 
-          {product.availability === "out_of_stock" ? (
-            <p className="rounded-md bg-red-50 px-3 py-2 text-sm text-red-800">
-              Товара временно нет
-            </p>
-          ) : null}
-
-          {product.availability === "on_order" ? (
-            <p className="rounded-md bg-amber-50 px-3 py-2 text-sm text-amber-900">
-              Товар под заказ. Срок поставки уточнит менеджер.
-            </p>
-          ) : null}
-
           {product.description ? (
             <p className="text-sm text-slate-700">{product.description}</p>
           ) : null}
 
-          <QuantityStepper
-            product={quantity_product}
-            qty={qty}
-            on_change={set_qty}
-          />
+          {price_block}
 
-          <div className="sticky bottom-20 z-10 flex flex-wrap gap-2 bg-white/95 py-2 md:static md:bottom-auto md:bg-transparent md:py-0">
-            <button
-              type="button"
-              disabled={!allowed || !qty_check.valid || pending}
-              onClick={on_add}
-              className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
-            >
-              {pending ? "Добавляем…" : "В корзину"}
-            </button>
+          {guest || viewer === "pending" ? (
+            <div className="flex flex-wrap gap-2">
+              <Link href="/login" className="ui-btn-primary">
+                Войти
+              </Link>
+              <Link href="/register" className="ui-btn-secondary">
+                Зарегистрироваться
+              </Link>
+            </div>
+          ) : null}
+
+          {approved && can_cart ? (
+            <>
+              <QuantityStepper
+                product={quantity_product}
+                qty={qty}
+                on_change={set_qty}
+              />
+              <div className="sticky bottom-20 z-10 flex flex-wrap gap-2 bg-white/95 py-2 md:static md:bottom-auto md:bg-transparent md:py-0">
+                <button
+                  type="button"
+                  disabled={!qty_check.valid || pending}
+                  onClick={on_add}
+                  className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+                >
+                  {pending ? "Добавляем…" : "В корзину"}
+                </button>
+                <Link
+                  href="/catalog"
+                  className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
+                >
+                  Назад в каталог
+                </Link>
+              </div>
+            </>
+          ) : approved ? (
+            <div className="sticky bottom-20 z-10 flex flex-wrap gap-2 bg-white/95 py-2 md:static md:bottom-auto md:bg-transparent md:py-0">
+              {product.availability === "out_of_stock" ? (
+                <button
+                  type="button"
+                  className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
+                  onClick={() => set_interest("interest")}
+                >
+                  Сообщить об интересе
+                </button>
+              ) : sales_status === "on_request" ? (
+                <button
+                  type="button"
+                  className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800"
+                  onClick={() => set_interest("price_request")}
+                >
+                  Запросить цену
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
+                  onClick={() => set_interest("interest")}
+                >
+                  Интересует товар
+                </button>
+              )}
+              <Link
+                href="/catalog"
+                className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
+              >
+                Назад в каталог
+              </Link>
+            </div>
+          ) : (
             <Link
               href="/catalog"
-              className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
+              className="inline-flex rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
             >
               Назад в каталог
             </Link>
-          </div>
-
-          <p className="text-xs text-slate-500">
-            Цены не отображаются. Менеджер подтвердит условия после оформления
-            заказа.
-          </p>
+          )}
         </div>
       </div>
       <Toast message={toast} />
+      {interest ? (
+        <ProductInterestForm
+          product_id={product.id}
+          request_type={interest}
+          title={
+            interest === "price_request"
+              ? "Запросить цену"
+              : "Интересует товар"
+          }
+          on_close={() => set_interest(null)}
+        />
+      ) : null}
     </>
   );
 }

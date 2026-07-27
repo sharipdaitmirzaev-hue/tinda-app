@@ -13,6 +13,12 @@ import {
 } from "@/lib/orders/access";
 import { get_order_status_label } from "@/lib/orders/constants";
 import { format_date_only, parse_date_only } from "@/lib/dates";
+import {
+  calc_line_total,
+  money_round,
+  money_to_number,
+  sum_money,
+} from "@/lib/money";
 import { check_qty } from "@/lib/quantity";
 import {
   PAYMENT_METHOD_LABELS,
@@ -24,6 +30,7 @@ import {
   type UpdateStaffOrderInput,
 } from "@/lib/validators/orders";
 import { build_package_info } from "@/lib/orders/package-info";
+import type { Decimal } from "@prisma/client/runtime/library";
 
 const STATUS_NEW = "new";
 const STATUS_CONFIRMED = "confirmed";
@@ -87,6 +94,9 @@ export function serialize_staff_order_list_item(order: {
   status: string;
   is_urgent: boolean;
   desired_delivery_date: Date;
+  subtotal: Decimal | string | number;
+  delivery_total: Decimal | string | number;
+  total: Decimal | string | number;
   client: { company_name: string; inn: string };
   manager: { id: string; full_name: string } | null;
   city: { id: string; name: string };
@@ -108,6 +118,9 @@ export function serialize_staff_order_list_item(order: {
     city: order.city,
     items_count: order.items.length,
     total_qty: order.items.reduce((sum, item) => sum + item.qty, 0),
+    subtotal: money_to_number(order.subtotal),
+    delivery_total: money_to_number(order.delivery_total),
+    total: money_to_number(order.total),
   };
 }
 
@@ -157,6 +170,9 @@ export function serialize_staff_order_details(order: StaffOrderFull) {
       can_assign_manager: true,
       items_count: order.items.length,
       total_qty: order.items.reduce((sum, item) => sum + item.qty, 0),
+      subtotal: money_to_number(order.subtotal),
+      delivery_total: money_to_number(order.delivery_total),
+      total: money_to_number(order.total),
       items: order.items.map((item) => ({
         id: item.id,
         product_id: item.product_id,
@@ -165,6 +181,9 @@ export function serialize_staff_order_details(order: StaffOrderFull) {
         package_info: item.package_info,
         sale_unit: item.sale_unit,
         qty: item.qty,
+        unit_price: money_to_number(item.unit_price),
+        currency: item.currency || "RUB",
+        line_total: money_to_number(item.line_total),
         image_url: item.product?.image_url ?? null,
       })),
       status_history: order.status_history.map((row) => ({
@@ -420,6 +439,30 @@ export async function update_staff_order(
 
     const resolved_items = await load_products_for_staff_update(tx, input.items);
 
+    // Snapshot prices from current products — never from client payload.
+    const order_item_rows = resolved_items.map(({ product, qty }) => {
+      if (product.price_amount === null || product.price_amount === undefined) {
+        throw new AppError(400, "validation_error", "Некорректная цена товара для заказа");
+      }
+      const unit_price = money_round(product.price_amount);
+      const line_total = calc_line_total(unit_price, qty);
+      return {
+        order_id,
+        product_id: product.id,
+        product_name: product.name,
+        product_sku: product.sku,
+        package_info: build_package_info(product),
+        sale_unit: product.sale_unit,
+        qty,
+        unit_price,
+        currency: product.price_currency || "RUB",
+        line_total,
+      };
+    });
+    const subtotal = sum_money(order_item_rows.map((row) => row.line_total));
+    const delivery_total = money_round(0);
+    const total = sum_money([subtotal, delivery_total]);
+
     await tx.orders.update({
       where: { id: order_id },
       data: {
@@ -431,20 +474,15 @@ export async function update_staff_order(
         is_urgent: input.is_urgent,
         client_comment: input.client_comment,
         manager_comment: input.manager_comment,
+        subtotal,
+        delivery_total,
+        total,
       },
     });
 
     await tx.order_items.deleteMany({ where: { order_id } });
     await tx.order_items.createMany({
-      data: resolved_items.map(({ product, qty }) => ({
-        order_id,
-        product_id: product.id,
-        product_name: product.name,
-        product_sku: product.sku,
-        package_info: build_package_info(product),
-        sale_unit: product.sale_unit,
-        qty,
-      })),
+      data: order_item_rows,
     });
 
     return tx.orders.findUniqueOrThrow({

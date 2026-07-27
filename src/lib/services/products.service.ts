@@ -2,12 +2,24 @@ import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
 import {
-  assert_approved_client,
   assert_catalog_editor,
+  can_see_client_prices,
   type AuthUserPayload,
 } from "@/lib/access";
 import type { ProductSort } from "@/lib/catalog/constants";
-import { AVAILABILITY_LABELS } from "@/lib/catalog/constants";
+import {
+  serialize_approved_client_product,
+  serialize_approved_client_product_detail,
+  serialize_public_product,
+  serialize_public_product_detail,
+  serialize_staff_product,
+} from "@/lib/catalog/product-serializers";
+import {
+  assert_non_negative_price,
+  assert_positive_price_if_set,
+  money_round,
+  type MoneyInput,
+} from "@/lib/money";
 import {
   delete_product_image,
   extract_product_image_storage_key,
@@ -19,55 +31,44 @@ function empty_to_null(value: string | null | undefined): string | null {
   return value.trim();
 }
 
-function map_product(product: {
-  id: string;
-  sku: string;
-  name: string;
-  brand: string | null;
-  category_id: string;
-  volume_text: string | null;
-  package_type: string | null;
-  units_per_package: number;
-  sale_unit: string;
-  min_order_qty: number;
-  allow_piece_sale: boolean;
-  description: string | null;
-  availability: string;
-  is_promo: boolean;
-  is_new: boolean;
-  is_hit: boolean;
-  image_url: string | null;
-  is_active: boolean;
-  created_at: Date;
-  updated_at: Date;
-  category?: { id: string; name: string; is_active: boolean };
+function assert_valid_price_amount(amount: MoneyInput, label = "Цена") {
+  try {
+    assert_non_negative_price(amount, label);
+    assert_positive_price_if_set(amount, label);
+  } catch (error) {
+    throw new AppError(
+      400,
+      "validation_error",
+      error instanceof Error ? error.message : `${label} указана некорректно`,
+    );
+  }
+}
+
+/** Validate sales_status + price. Active products may have null price (showcase). */
+function assert_sales_status_price(input: {
+  sales_status: string;
+  price_amount: MoneyInput | null | undefined;
 }) {
-  const availability = product.availability as keyof typeof AVAILABILITY_LABELS;
-  return {
-    id: product.id,
-    sku: product.sku,
-    name: product.name,
-    brand: product.brand,
-    category_id: product.category_id,
-    category_name: product.category?.name ?? null,
-    volume_text: product.volume_text,
-    package_type: product.package_type,
-    units_per_package: product.units_per_package,
-    sale_unit: product.sale_unit,
-    min_order_qty: product.min_order_qty,
-    allow_piece_sale: product.allow_piece_sale,
-    description: product.description,
-    availability: product.availability,
-    availability_label: AVAILABILITY_LABELS[availability] ?? product.availability,
-    is_promo: product.is_promo,
-    is_new: product.is_new,
-    is_hit: product.is_hit,
-    image_url: product.image_url,
-    is_active: product.is_active,
-    created_at: product.created_at.toISOString(),
-    updated_at: product.updated_at.toISOString(),
-    step: product.allow_piece_sale ? 1 : product.units_per_package,
-  };
+  const price = input.price_amount;
+  if (price !== null && price !== undefined) {
+    assert_valid_price_amount(price);
+  }
+  if (input.sales_status === "orderable") {
+    if (price === null || price === undefined) {
+      throw new AppError(
+        400,
+        "validation_error",
+        "Для режима «Доступен для заказа» укажите цену больше нуля",
+      );
+    }
+  }
+}
+
+function normalize_price_for_db(
+  price_amount: number | null | undefined,
+): ReturnType<typeof money_round> | null {
+  if (price_amount === null || price_amount === undefined) return null;
+  return money_round(price_amount);
 }
 
 function sort_to_order(
@@ -90,12 +91,31 @@ function sort_to_order(
   }
 }
 
+function map_catalog_list_item(
+  payload: AuthUserPayload | null,
+  product: Parameters<typeof serialize_public_product>[0],
+) {
+  return can_see_client_prices(payload)
+    ? serialize_approved_client_product(product)
+    : serialize_public_product(product);
+}
+
+function map_catalog_detail(
+  payload: AuthUserPayload | null,
+  product: Parameters<typeof serialize_public_product_detail>[0],
+) {
+  return can_see_client_prices(payload)
+    ? serialize_approved_client_product_detail(product)
+    : serialize_public_product_detail(product);
+}
+
 export async function list_staff_products(
   payload: AuthUserPayload,
   params: {
     q?: string;
     category_id?: string;
     availability?: string;
+    sales_status?: string;
     is_active?: boolean;
     is_promo?: boolean;
     is_new?: boolean;
@@ -110,6 +130,7 @@ export async function list_staff_products(
   const where: Prisma.productsWhereInput = {};
   if (params.category_id) where.category_id = params.category_id;
   if (params.availability) where.availability = params.availability;
+  if (params.sales_status) where.sales_status = params.sales_status;
   if (params.is_active !== undefined) where.is_active = params.is_active;
   if (params.is_promo !== undefined) where.is_promo = params.is_promo;
   if (params.is_new !== undefined) where.is_new = params.is_new;
@@ -138,7 +159,7 @@ export async function list_staff_products(
   ]);
 
   return {
-    items: items.map(map_product),
+    items: items.map(serialize_staff_product),
     page: params.page,
     page_size: params.page_size,
     total,
@@ -159,7 +180,7 @@ export async function get_staff_product(
   if (!product) {
     throw new AppError(404, "not_found", "Товар не найден");
   }
-  return { product: map_product(product) };
+  return { product: serialize_staff_product(product) };
 }
 
 async function assert_category_exists(category_id: string) {
@@ -192,6 +213,9 @@ export async function create_product(
     is_hit?: boolean;
     image_url?: string | null;
     is_active?: boolean;
+    sales_status?: string;
+    price_amount?: number | null;
+    price_currency?: "RUB";
   },
 ) {
   assert_catalog_editor(payload);
@@ -204,6 +228,13 @@ export async function create_product(
       "units_per_package и min_order_qty должны быть не меньше 1",
     );
   }
+
+  const is_active = input.is_active ?? true;
+  const sales_status = input.sales_status ?? "showcase";
+  assert_sales_status_price({
+    sales_status,
+    price_amount: input.price_amount,
+  });
 
   const existing = await prisma.products.findUnique({
     where: { sku: input.sku.trim() },
@@ -226,18 +257,21 @@ export async function create_product(
       allow_piece_sale: input.allow_piece_sale ?? false,
       description: empty_to_null(input.description),
       availability: input.availability,
+      sales_status,
       is_promo: input.is_promo ?? false,
       is_new: input.is_new ?? false,
       is_hit: input.is_hit ?? false,
       image_url: empty_to_null(input.image_url),
-      is_active: input.is_active ?? true,
+      is_active,
+      price_amount: normalize_price_for_db(input.price_amount),
+      price_currency: input.price_currency ?? "RUB",
     },
     include: {
       category: { select: { id: true, name: true, is_active: true } },
     },
   });
 
-  return { product: map_product(product), message: "Товар создан" };
+  return { product: serialize_staff_product(product), message: "Товар создан" };
 }
 
 export async function update_product(
@@ -261,6 +295,9 @@ export async function update_product(
     is_hit: boolean;
     image_url: string | null;
     is_active: boolean;
+    sales_status: string;
+    price_amount: number | null;
+    price_currency: "RUB";
   }>,
 ) {
   assert_catalog_editor(payload);
@@ -290,6 +327,15 @@ export async function update_product(
       "Минимальный заказ должен быть не меньше 1",
     );
   }
+
+  const next_sales_status =
+    input.sales_status !== undefined ? input.sales_status : current.sales_status;
+  const next_price =
+    input.price_amount !== undefined ? input.price_amount : current.price_amount;
+  assert_sales_status_price({
+    sales_status: next_sales_status,
+    price_amount: next_price,
+  });
 
   if (input.sku && input.sku.trim() !== current.sku) {
     const existing = await prisma.products.findUnique({
@@ -331,6 +377,9 @@ export async function update_product(
       ...(input.availability !== undefined
         ? { availability: input.availability }
         : {}),
+      ...(input.sales_status !== undefined
+        ? { sales_status: input.sales_status }
+        : {}),
       ...(input.is_promo !== undefined ? { is_promo: input.is_promo } : {}),
       ...(input.is_new !== undefined ? { is_new: input.is_new } : {}),
       ...(input.is_hit !== undefined ? { is_hit: input.is_hit } : {}),
@@ -338,13 +387,19 @@ export async function update_product(
         ? { image_url: empty_to_null(input.image_url) }
         : {}),
       ...(input.is_active !== undefined ? { is_active: input.is_active } : {}),
+      ...(input.price_amount !== undefined
+        ? { price_amount: normalize_price_for_db(input.price_amount) }
+        : {}),
+      ...(input.price_currency !== undefined
+        ? { price_currency: input.price_currency }
+        : {}),
     },
     include: {
       category: { select: { id: true, name: true, is_active: true } },
     },
   });
 
-  return { product: map_product(product), message: "Товар сохранён" };
+  return { product: serialize_staff_product(product), message: "Товар сохранён" };
 }
 
 export async function activate_product(
@@ -458,11 +513,12 @@ export async function remove_product_image(
 }
 
 export async function list_catalog_products(
-  payload: AuthUserPayload,
+  payload: AuthUserPayload | null,
   params: {
     q?: string;
     category_id?: string;
     availability?: string;
+    sales_status?: string;
     is_promo?: boolean;
     is_new?: boolean;
     is_hit?: boolean;
@@ -471,8 +527,6 @@ export async function list_catalog_products(
     sort: ProductSort;
   },
 ) {
-  assert_approved_client(payload);
-
   const where: Prisma.productsWhereInput = {
     is_active: true,
     category: { is_active: true },
@@ -482,6 +536,7 @@ export async function list_catalog_products(
     where.category_id = params.category_id;
   }
   if (params.availability) where.availability = params.availability;
+  if (params.sales_status) where.sales_status = params.sales_status;
   if (params.is_promo !== undefined) where.is_promo = params.is_promo;
   if (params.is_new !== undefined) where.is_new = params.is_new;
   if (params.is_hit !== undefined) where.is_hit = params.is_hit;
@@ -509,61 +564,17 @@ export async function list_catalog_products(
   ]);
 
   return {
-    items: items.map(map_product),
+    items: items.map((product) => map_catalog_list_item(payload, product)),
     page: params.page,
     page_size: params.page_size,
     total,
   };
 }
 
-function map_catalog_product_detail(product: {
-  id: string;
-  sku: string;
-  name: string;
-  brand: string | null;
-  volume_text: string | null;
-  package_type: string | null;
-  units_per_package: number;
-  sale_unit: string;
-  min_order_qty: number;
-  allow_piece_sale: boolean;
-  description: string | null;
-  availability: string;
-  is_promo: boolean;
-  is_new: boolean;
-  is_hit: boolean;
-  image_url: string | null;
-  category?: { id: string; name: string } | null;
-}) {
-  return {
-    id: product.id,
-    sku: product.sku,
-    name: product.name,
-    brand: product.brand,
-    category: product.category
-      ? { id: product.category.id, name: product.category.name }
-      : null,
-    volume_text: product.volume_text,
-    package_type: product.package_type,
-    units_per_package: product.units_per_package,
-    sale_unit: product.sale_unit,
-    min_order_qty: product.min_order_qty,
-    allow_piece_sale: product.allow_piece_sale,
-    description: product.description,
-    availability: product.availability,
-    is_promo: product.is_promo,
-    is_new: product.is_new,
-    is_hit: product.is_hit,
-    image_url: product.image_url,
-  };
-}
-
 export async function get_catalog_product(
-  payload: AuthUserPayload,
+  payload: AuthUserPayload | null,
   product_id: string,
 ) {
-  assert_approved_client(payload);
-
   const product = await prisma.products.findFirst({
     where: {
       id: product_id,
@@ -579,15 +590,22 @@ export async function get_catalog_product(
     throw new AppError(404, "not_found", "Товар не найден");
   }
 
-  return { product: map_catalog_product_detail(product) };
+  return { product: map_catalog_detail(payload, product) };
 }
 
-export async function list_catalog_categories_for_client(
-  payload: AuthUserPayload,
+export async function list_public_catalog_categories(
+  payload: AuthUserPayload | null,
 ) {
-  assert_approved_client(payload);
+  void payload;
   const { list_catalog_categories_tree } = await import(
     "@/lib/services/categories.service"
   );
   return list_catalog_categories_tree();
+}
+
+/** @deprecated Use list_public_catalog_categories */
+export async function list_catalog_categories_for_client(
+  payload: AuthUserPayload | null,
+) {
+  return list_public_catalog_categories(payload);
 }

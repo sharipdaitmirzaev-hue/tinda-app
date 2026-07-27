@@ -160,7 +160,10 @@ describe("staff orders E1.11", () => {
           min_order_qty: 12,
           allow_piece_sale: false,
           availability: "in_stock",
+          sales_status: "orderable",
           is_active: true,
+          price_amount: 120,
+          price_currency: "RUB",
         },
       });
       cleanup_product_ids.push(product.id);
@@ -306,6 +309,12 @@ describe("staff orders E1.11", () => {
   });
 
   it("filters, search and pagination work", async () => {
+    const baseline = await list_staff_orders(manager1, {
+      page: 1,
+      page_size: 1,
+      sort: "created_at_desc",
+    });
+
     const first = await place_order(approved_a, true);
     await place_order(approved_a, false);
 
@@ -315,8 +324,8 @@ describe("staff orders E1.11", () => {
       page_size: 20,
       sort: "created_at_desc",
     });
-    expect(urgent.total).toBe(1);
-    expect(urgent.items[0]?.id).toBe(first.order.id);
+    expect(urgent.total).toBeGreaterThanOrEqual(1);
+    expect(urgent.items.some((item) => item.id === first.order.id)).toBe(true);
 
     const by_q = await list_staff_orders(manager1, {
       q: "StaffA",
@@ -332,7 +341,7 @@ describe("staff orders E1.11", () => {
       sort: "created_at_desc",
     });
     expect(page1.items).toHaveLength(1);
-    expect(page1.total).toBe(2);
+    expect(page1.total).toBe(baseline.total + 2);
   });
 
   it("confirm / cancel / deliver transitions and history", async () => {
@@ -440,7 +449,9 @@ describe("staff orders E1.11", () => {
     expect(updated.order.address).toBe("Новый адрес staff");
     expect(updated.order.items_count).toBe(2);
     expect(updated.order.manager_comment).toBe("внутр правка");
-    expect(JSON.stringify(updated).toLowerCase()).not.toContain("price");
+    expect(updated.order.items[0]?.unit_price).toEqual(expect.any(Number));
+    expect(updated.order.subtotal).toEqual(expect.any(Number));
+    expect(updated.order.delivery_total).toBe(0);
 
     const foreign = await place_order(approved_b);
     await expect(

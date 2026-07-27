@@ -200,6 +200,18 @@ describe("catalog UI product visibility E1.6", () => {
     expect(by_brand.items.some((item) => item.brand === "ТИНДА")).toBe(true);
 
     for (const item of by_category.items) {
+      expect(item).toHaveProperty("price");
+      expect(
+        (item as unknown as { price: { currency: string } }).price.currency,
+      ).toBe("RUB");
+    }
+
+    const guest_list = await list_catalog_products(null, {
+      page: 1,
+      page_size: 50,
+      sort: "name_asc",
+    });
+    for (const item of guest_list.items) {
       expect(item).not.toHaveProperty("price");
       expect(JSON.stringify(item).toLowerCase()).not.toContain('"price"');
     }

@@ -96,6 +96,12 @@ export function can_place_orders(payload: AuthUserPayload): boolean {
   );
 }
 
+/** Approved clients see wholesale prices in the public catalog API/UI. */
+export function can_see_client_prices(payload: AuthUserPayload | null): boolean {
+  if (!payload) return false;
+  return can_place_orders(payload);
+}
+
 export function can_access_client_shop(payload: AuthUserPayload): boolean {
   return can_place_orders(payload);
 }
@@ -114,7 +120,20 @@ export function can_access_client(
   return client.manager_id === payload.user.id;
 }
 
-/** /catalog, /cart, /orders, /checkout, /profile */
+/**
+ * Public catalog pages (/catalog, product detail).
+ * Guests and any client status may browse; staff go to staff catalog.
+ */
+export function resolve_public_catalog_access(
+  payload: AuthUserPayload | null,
+): AccessDecision {
+  if (payload && is_staff(payload.user.roles)) {
+    return { allow: false, redirect_to: "/staff/products" };
+  }
+  return { allow: true };
+}
+
+/** /cart, /orders, /checkout, /profile — only approved clients. */
 export function resolve_client_shop_access(
   payload: AuthUserPayload | null,
 ): AccessDecision {

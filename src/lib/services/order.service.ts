@@ -1,12 +1,21 @@
 import { Prisma } from "@prisma/client";
+import type { Decimal } from "@prisma/client/runtime/library";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
+import { is_product_orderable_for_cart } from "@/lib/catalog/constants";
 import {
   assert_approved_client,
   type AuthUserPayload,
 } from "@/lib/access";
 import { check_qty } from "@/lib/quantity";
 import { format_date_only, parse_date_only, today_date_key } from "@/lib/dates";
+import {
+  assert_non_negative_money,
+  calc_line_total,
+  money_round,
+  money_to_number,
+  sum_money,
+} from "@/lib/money";
 import { get_order_status_label } from "@/lib/orders/constants";
 import { build_package_info } from "@/lib/orders/package-info";
 import { PAYMENT_METHOD_LABELS } from "@/lib/validators/orders";
@@ -87,9 +96,51 @@ type CartItemForOrder = {
     allow_piece_sale: boolean;
     availability: string;
     is_active: boolean;
+    sales_status: string;
+    price_amount: Decimal | string | number | null;
+    price_currency: string;
     category: { is_active: boolean } | null;
   };
 };
+
+function build_order_item_money(
+  product: { price_amount: Decimal | string | number | null; price_currency: string },
+  qty: number,
+) {
+  if (product.price_amount === null || product.price_amount === undefined) {
+    throw new AppError(
+      400,
+      "validation_error",
+      "Некорректная цена товара для заказа",
+    );
+  }
+  const unit_price = money_round(product.price_amount);
+  const line_total = calc_line_total(unit_price, qty);
+  assert_non_negative_money(unit_price, "unit_price");
+  assert_non_negative_money(line_total, "line_total");
+  if (unit_price.lte(0)) {
+    throw new AppError(
+      400,
+      "validation_error",
+      "Некорректная цена товара для заказа",
+    );
+  }
+  return {
+    unit_price,
+    currency: product.price_currency || "RUB",
+    line_total,
+  };
+}
+
+function build_order_totals(line_totals: Array<Decimal | string | number>) {
+  const subtotal = sum_money(line_totals);
+  const delivery_total = money_round(0);
+  const total = sum_money([subtotal, delivery_total]);
+  assert_non_negative_money(subtotal, "subtotal");
+  assert_non_negative_money(delivery_total, "delivery_total");
+  assert_non_negative_money(total, "total");
+  return { subtotal, delivery_total, total };
+}
 
 function validate_cart_items_for_order(items: CartItemForOrder[]) {
   if (items.length === 0) {
@@ -102,6 +153,18 @@ function validate_cart_items_for_order(items: CartItemForOrder[]) {
   for (const item of items) {
     const product = item.product;
     const category_inactive = product.category?.is_active === false;
+
+    if (
+      !is_product_orderable_for_cart({
+        is_active: product.is_active,
+        sales_status: (product as { sales_status?: string }).sales_status || "showcase",
+        price_amount: product.price_amount,
+        availability: product.availability,
+        category_is_active: product.category?.is_active,
+      })
+    ) {
+      has_unavailable = true;
+    }
 
     if (!product.is_active || category_inactive) {
       has_unavailable = true;
@@ -205,6 +268,40 @@ export async function create_order_from_cart(
       const items = cart?.items ?? [];
       validate_cart_items_for_order(items);
 
+      // Re-read current product prices from DB inside the transaction.
+      // Never trust client-sent prices (mutations only carry product_id + qty).
+      const product_ids = items.map((item) => item.product_id);
+      const priced_products = await tx.products.findMany({
+        where: { id: { in: product_ids } },
+        select: { id: true, price_amount: true, price_currency: true },
+      });
+      const price_by_id = new Map(
+        priced_products.map((product) => [product.id, product]),
+      );
+
+      const order_item_rows = items.map((item) => {
+        const priced = price_by_id.get(item.product_id);
+        if (!priced) {
+          throw new AppError(400, "validation_error", "Товар не найден");
+        }
+        const money = build_order_item_money(priced, item.qty);
+        return {
+          product_id: item.product_id,
+          product_name: item.product.name,
+          product_sku: item.product.sku,
+          package_info: build_package_info(item.product),
+          sale_unit: item.product.sale_unit,
+          qty: item.qty,
+          unit_price: money.unit_price,
+          currency: money.currency,
+          line_total: money.line_total,
+        };
+      });
+
+      const totals = build_order_totals(
+        order_item_rows.map((row) => row.line_total),
+      );
+
       const number = await generate_order_number(tx);
       const desired_delivery_date = parse_date_only(input.desired_delivery_date);
 
@@ -223,15 +320,11 @@ export async function create_order_from_cart(
           payment_method: input.payment_method,
           is_urgent: input.is_urgent,
           client_comment: input.client_comment,
+          subtotal: totals.subtotal,
+          delivery_total: totals.delivery_total,
+          total: totals.total,
           items: {
-            create: items.map((item) => ({
-              product_id: item.product_id,
-              product_name: item.product.name,
-              product_sku: item.product.sku,
-              package_info: build_package_info(item.product),
-              sale_unit: item.product.sale_unit,
-              qty: item.qty,
-            })),
+            create: order_item_rows,
           },
           status_history: {
             create: {
@@ -311,6 +404,9 @@ export async function get_order_success_details(
       desired_delivery_date: format_date_only(order.desired_delivery_date),
       items_count,
       total_qty,
+      subtotal: money_to_number(order.subtotal),
+      delivery_total: money_to_number(order.delivery_total),
+      total: money_to_number(order.total),
     },
   };
 }
@@ -341,6 +437,9 @@ type OrderListRow = {
   desired_delivery_date: Date;
   is_urgent: boolean;
   address_snapshot: string;
+  subtotal: Decimal | string | number;
+  delivery_total: Decimal | string | number;
+  total: Decimal | string | number;
   items: Array<{ qty: number }>;
 };
 
@@ -361,6 +460,9 @@ type OrderDetailRow = {
   cancelled_at: Date | null;
   confirmed_at: Date | null;
   delivered_at: Date | null;
+  subtotal: Decimal | string | number;
+  delivery_total: Decimal | string | number;
+  total: Decimal | string | number;
   items: Array<{
     id: string;
     product_id: string | null;
@@ -369,6 +471,9 @@ type OrderDetailRow = {
     package_info: string | null;
     sale_unit: string;
     qty: number;
+    unit_price: Decimal | string | number;
+    currency: string;
+    line_total: Decimal | string | number;
     product?: { image_url: string | null } | null;
   }>;
   status_history: Array<{
@@ -394,6 +499,9 @@ export function serialize_client_order_list_item(order: OrderListRow) {
     items_count,
     total_qty,
     address: order.address_snapshot,
+    subtotal: money_to_number(order.subtotal),
+    delivery_total: money_to_number(order.delivery_total),
+    total: money_to_number(order.total),
   };
 }
 
@@ -424,6 +532,9 @@ export function serialize_client_order_details(order: OrderDetailRow) {
       can_cancel: order.status === ORDER_STATUS_NEW,
       items_count: order.items.length,
       total_qty: order.items.reduce((sum, item) => sum + item.qty, 0),
+      subtotal: money_to_number(order.subtotal),
+      delivery_total: money_to_number(order.delivery_total),
+      total: money_to_number(order.total),
       items: order.items.map((item) => ({
         id: item.id,
         product_id: item.product_id,
@@ -432,6 +543,9 @@ export function serialize_client_order_details(order: OrderDetailRow) {
         package_info: item.package_info,
         sale_unit: item.sale_unit,
         qty: item.qty,
+        unit_price: money_to_number(item.unit_price),
+        currency: item.currency || "RUB",
+        line_total: money_to_number(item.line_total),
         image_url: item.product?.image_url ?? null,
       })),
       status_history: order.status_history.map((row) => ({
@@ -624,6 +738,26 @@ export async function update_client_order(
 
     const resolved_items = await load_products_for_order_update(tx, input.items);
 
+    // Snapshot prices from current products — never from client payload.
+    const order_item_rows = resolved_items.map(({ product, qty }) => {
+      const money = build_order_item_money(product, qty);
+      return {
+        order_id,
+        product_id: product.id,
+        product_name: product.name,
+        product_sku: product.sku,
+        package_info: build_package_info(product),
+        sale_unit: product.sale_unit,
+        qty,
+        unit_price: money.unit_price,
+        currency: money.currency,
+        line_total: money.line_total,
+      };
+    });
+    const totals = build_order_totals(
+      order_item_rows.map((row) => row.line_total),
+    );
+
     await tx.orders.update({
       where: { id: order_id },
       data: {
@@ -634,20 +768,15 @@ export async function update_client_order(
         payment_method: input.payment_method,
         is_urgent: input.is_urgent,
         client_comment: input.client_comment,
+        subtotal: totals.subtotal,
+        delivery_total: totals.delivery_total,
+        total: totals.total,
       },
     });
 
     await tx.order_items.deleteMany({ where: { order_id } });
     await tx.order_items.createMany({
-      data: resolved_items.map(({ product, qty }) => ({
-        order_id,
-        product_id: product.id,
-        product_name: product.name,
-        product_sku: product.sku,
-        package_info: build_package_info(product),
-        sale_unit: product.sale_unit,
-        qty,
-      })),
+      data: order_item_rows,
     });
 
     return tx.orders.findFirstOrThrow({

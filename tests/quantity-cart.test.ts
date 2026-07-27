@@ -18,6 +18,7 @@ import { get_catalog_product } from "@/lib/services/products.service";
 import { prisma } from "@/lib/db";
 import { build_auth_payload } from "@/lib/auth/current-user";
 import { hash_password } from "@/lib/auth/password";
+import { collect_forbidden_keys } from "@/lib/security/forbidden-response-keys";
 
 const pack_product = {
   units_per_package: 12,
@@ -176,7 +177,7 @@ describe("temporary cart E1.7", () => {
 });
 
 describe("catalog product API shape E1.7", () => {
-  it("detail payload has no price fields", async () => {
+  it("approved detail payload includes price object", async () => {
     const seed_product = await prisma.products.findFirst({
       where: { sku: "W-001", is_active: true },
     });
@@ -225,7 +226,9 @@ describe("catalog product API shape E1.7", () => {
         [
           "allow_piece_sale",
           "availability",
+          "availability_label",
           "brand",
+          "can_add_to_cart",
           "category",
           "description",
           "id",
@@ -236,13 +239,22 @@ describe("catalog product API shape E1.7", () => {
           "min_order_qty",
           "name",
           "package_type",
+          "price",
           "sale_unit",
+          "sales_status",
+          "sales_status_label",
           "sku",
           "units_per_package",
           "volume_text",
         ].sort(),
       );
-      expect(JSON.stringify(result.product).toLowerCase()).not.toContain("price");
+      expect(
+        (result.product as unknown as { price: { amount: number; currency: string } })
+          .price.currency,
+      ).toBe("RUB");
+      expect(
+        collect_forbidden_keys(result.product, "", { allow_client_price: true }),
+      ).toEqual([]);
     } finally {
       await prisma.clients.deleteMany({ where: { user_id: user.id } });
       await prisma.user_roles.deleteMany({ where: { user_id: user.id } });

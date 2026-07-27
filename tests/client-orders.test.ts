@@ -105,7 +105,10 @@ describe("client orders E1.10", () => {
           min_order_qty: 12,
           allow_piece_sale: false,
           availability: data.availability ?? "in_stock",
+          sales_status: "orderable",
           is_active: data.is_active ?? true,
+          price_amount: 110,
+          price_currency: "RUB",
         },
       });
       cleanup_product_ids.push(product.id);
@@ -272,7 +275,7 @@ describe("client orders E1.10", () => {
     expect(page2.items[0]?.id).toBe(first.order.id);
   });
 
-  it("details use snapshot and omit prices/manager_comment", async () => {
+  it("details use snapshot names and omit manager_comment; include money snapshot", async () => {
     const created = await create_order_for(approved_a);
     await prisma.orders.update({
       where: { id: created.order.id },
@@ -287,9 +290,13 @@ describe("client orders E1.10", () => {
     expect(details.order.items[0]?.product_name).toContain("ClOrd");
     expect(details.order.items[0]?.product_name).not.toBe("Новое имя товара");
     expect(details.order.items[0]?.package_info).toContain("1 л");
+    expect(details.order.items[0]?.unit_price).toEqual(expect.any(Number));
+    expect(details.order.items[0]?.line_total).toEqual(expect.any(Number));
+    expect(details.order.subtotal).toEqual(expect.any(Number));
+    expect(details.order.delivery_total).toBe(0);
+    expect(details.order.total).toBe(details.order.subtotal);
 
     const json = JSON.stringify(details);
-    expect(json.toLowerCase()).not.toContain("price");
     expect(json).not.toContain("manager_comment");
     expect(json).not.toContain("Секрет менеджера");
   });

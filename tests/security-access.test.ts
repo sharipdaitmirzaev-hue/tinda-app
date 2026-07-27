@@ -475,30 +475,48 @@ describe("security and access E1.13", () => {
 
     const client_order = await get_client_order(approved, order_owned_id);
     expect(json_contains_manager_comment(client_order)).toBe(false);
-    expect(collect_forbidden_keys(client_order)).toEqual([]);
+    expect(
+      collect_forbidden_keys(client_order, "", { allow_client_price: true }),
+    ).toEqual([]);
 
     const staff_order = await get_staff_order(director, order_owned_id);
     expect(staff_order.order.manager_comment).toBe(
       "Внутренний комментарий менеджера",
     );
-    expect(collect_forbidden_keys(staff_order)).toEqual([]);
+    expect(
+      collect_forbidden_keys(staff_order, "", { allow_client_price: true }),
+    ).toEqual([]);
 
     const catalog = await list_catalog_products(approved, {
       page: 1,
       page_size: 5,
       sort: "name_asc",
     });
-    expect(collect_forbidden_keys(catalog)).toEqual([]);
-    expect(JSON.stringify(catalog)).not.toMatch(/price/i);
+    expect(
+      collect_forbidden_keys(catalog, "", { allow_client_price: true }),
+    ).toEqual([]);
+    expect(catalog.items.some((item) => "price" in item)).toBe(true);
+
+    const public_catalog = await list_catalog_products(null, {
+      page: 1,
+      page_size: 5,
+      sort: "name_asc",
+    });
+    expect(collect_forbidden_keys(public_catalog)).toEqual([]);
+    expect(JSON.stringify(public_catalog)).not.toMatch(/"price"/);
 
     const cart = await get_cart(approved);
-    expect(collect_forbidden_keys(cart)).toEqual([]);
+    expect(
+      collect_forbidden_keys(cart, "", { allow_client_price: true }),
+    ).toEqual([]);
 
     const client_list = await list_client_orders(
       approved,
       client_orders_query_schema.parse({ page: "1", page_size: "10" }),
     );
-    expect(collect_forbidden_keys(client_list)).toEqual([]);
+    expect(
+      collect_forbidden_keys(client_list, "", { allow_client_price: true }),
+    ).toEqual([]);
   });
 
   it("foreign Origin for mutating API is rejected; allowed Origin works", () => {

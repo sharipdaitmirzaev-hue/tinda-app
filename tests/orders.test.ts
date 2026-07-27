@@ -150,8 +150,11 @@ describe("orders E1.9", () => {
           min_order_qty: 12,
           allow_piece_sale: false,
           availability: data.availability ?? "in_stock",
+          sales_status: "orderable",
           is_active: data.is_active ?? true,
           image_url: null,
+          price_amount: 150,
+          price_currency: "RUB",
         },
       });
       cleanup_product_ids.push(product.id);
@@ -275,6 +278,12 @@ describe("orders E1.9", () => {
 
     const cart = await get_cart(approved_a);
     expect(cart.items_count).toBe(0);
+
+    expect(Number(order.subtotal)).toBeGreaterThanOrEqual(0);
+    expect(Number(order.delivery_total)).toBe(0);
+    expect(Number(order.total)).toBe(Number(order.subtotal));
+    expect(Number(order.items[0]?.unit_price)).toBeGreaterThanOrEqual(0);
+    expect(Number(order.items[0]?.line_total)).toBeGreaterThanOrEqual(0);
 
     const json = JSON.stringify(result);
     expect(json.toLowerCase()).not.toContain("price");

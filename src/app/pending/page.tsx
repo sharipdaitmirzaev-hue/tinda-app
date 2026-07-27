@@ -98,7 +98,8 @@ export default async function PendingPage() {
         ) : null}
 
         <p className="text-xs text-slate-500">
-          Каталог, корзина и заказы недоступны при статусе «{status_label}».
+          Корзина и заказы недоступны при статусе «{status_label}». Каталог
+          можно просматривать без цен.
         </p>
       </div>
     </main>
