@@ -102,3 +102,15 @@ node scripts/zelenoe-yabloko/apply-existing-images.mjs \
 Меняется **только** `image_url`. 26 новых товаров не импортируются. Старые внешние URL физически не удаляются.
 
 После записи новых файлов в volume может потребоваться `docker restart app-app-1` (Next.js подхватывает `public/uploads` при старте).
+
+## Import 26 approved_new products (production)
+
+Source: `data/imports/zelenoe-yabloko-images/approved-new-products.xlsx` (JSON parity used in container).
+
+```bash
+node scripts/zelenoe-yabloko/import-new-products.mjs --source .../approved-new-products.json --preview
+node scripts/zelenoe-yabloko/import-new-products.mjs --source .../approved-new-products.json --apply
+```
+
+Creates showcase products only (`price=NULL`, `on_order`, `units_per_package=1`). Images via local product-images storage. `package_requires_review` has no DB column — SKU list is in the apply report.
+
