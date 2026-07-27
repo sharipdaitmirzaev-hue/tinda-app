@@ -1,0 +1,4 @@
+external-product-images/*
+!external-product-images/README.md
+external_product_images_apply_plan/
+external_product_images_review.report.json

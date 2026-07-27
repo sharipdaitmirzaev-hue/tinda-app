@@ -327,6 +327,13 @@ async function process_product_image(buffer: Buffer): Promise<Buffer> {
   }
 }
 
+/** EXIF rotate, strip metadata via encode, max 1600px, WebP. */
+export async function process_product_image_buffer(
+  buffer: Buffer,
+): Promise<Buffer> {
+  return process_product_image(buffer);
+}
+
 function assert_safe_product_id(product_id: string) {
   if (
     !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
