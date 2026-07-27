@@ -70,11 +70,11 @@ export function LimitedCatalogHeader({
 export function CatalogAccessBanner({ status }: { status: string }) {
   const label = client_status_label(status);
   const message =
-    status === "blocked"
-      ? "Доступ к заказам заблокирован. Каталог доступен только для просмотра."
-      : status === "rejected"
-        ? "Заявка отклонена — цены и заказы недоступны. Каталог можно просматривать."
-        : "Заявка на рассмотрении — цены и заказы откроются после подтверждения.";
+    status === "pending"
+      ? "Цены и оформление заказов станут доступны после подтверждения регистрации"
+      : status === "blocked"
+        ? "Доступ к заказам заблокирован. Каталог доступен только для просмотра."
+        : "Заявка отклонена — цены и заказы недоступны. Каталог можно просматривать.";
 
   return (
     <div
@@ -90,7 +90,7 @@ export function CatalogAccessBanner({ status }: { status: string }) {
           href="/pending"
           className="shrink-0 font-medium text-teal-900 underline-offset-2 hover:underline"
         >
-          Подробнее
+          Статус заявки
         </Link>
       </div>
     </div>

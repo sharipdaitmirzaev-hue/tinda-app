@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { ProductImage } from "@/components/catalog/product-image";
+import {
+  format_rub_price,
+  useCatalogViewer,
+} from "@/components/catalog/catalog-viewer-context";
 import { can_add_to_cart } from "@/lib/quantity";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
 import { useAddToServerCart } from "@/hooks/useServerCart";
@@ -24,11 +28,14 @@ export type CatalogProduct = {
   is_new: boolean;
   is_hit: boolean;
   image_url: string | null;
+  price?: { amount: number; currency: string; unit: string } | null;
 };
 
 export function CatalogProductCard({ product }: { product: CatalogProduct }) {
+  const viewer = useCatalogViewer();
   const { add_from_catalog, toast, pending } = useAddToServerCart();
-  const allowed = can_add_to_cart(product);
+  const approved = viewer === "approved";
+  const allowed = approved && can_add_to_cart(product);
   const availability_label =
     product.availability_label ??
     AVAILABILITY_LABELS[product.availability as Availability] ??
@@ -95,6 +102,15 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
         >
           {availability_label}
         </p>
+
+        {approved && product.price ? (
+          <p className="mt-2 text-sm font-semibold text-slate-900">
+            {format_rub_price(product.price.amount, product.price.unit)}
+          </p>
+        ) : (
+          <p className="mt-2 text-xs text-slate-500">Цена скрыта</p>
+        )}
+
         <div className="mt-auto flex flex-col gap-2 pt-3">
           <Link
             href={`/catalog/products/${product.id}`}
@@ -102,14 +118,16 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           >
             Подробнее
           </Link>
-          <button
-            type="button"
-            disabled={!allowed || pending}
-            onClick={on_add}
-            className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
-          >
-            {pending ? "Добавляем…" : "В корзину"}
-          </button>
+          {approved ? (
+            <button
+              type="button"
+              disabled={!allowed || pending}
+              onClick={on_add}
+              className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+            >
+              {pending ? "Добавляем…" : "В корзину"}
+            </button>
+          ) : null}
         </div>
       </article>
       <Toast message={toast} />

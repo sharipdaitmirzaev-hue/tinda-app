@@ -49,6 +49,10 @@
 }
 
 @layer components {
+  .pb-safe-nav {
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
+  }
+
   .ui-container {
     @apply mx-auto w-full max-w-6xl px-4;
   }

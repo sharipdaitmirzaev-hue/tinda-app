@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
 import { QuantityStepper } from "@/components/catalog/quantity-stepper";
 import { Toast } from "@/components/catalog/toast";
+import {
+  format_rub_price,
+  useCatalogViewer,
+} from "@/components/catalog/catalog-viewer-context";
 import { useAddToServerCart } from "@/hooks/useServerCart";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
 import {
@@ -31,9 +35,12 @@ type CatalogProductDetail = {
   is_new: boolean;
   is_hit: boolean;
   image_url: string | null;
+  price?: { amount: number; currency: string; unit: string } | null;
 };
 
 export function ProductDetailClient({ product_id }: { product_id: string }) {
+  const viewer = useCatalogViewer();
+  const approved = viewer === "approved";
   const [product, set_product] = useState<CatalogProductDetail | null>(null);
   const [loading, set_loading] = useState(true);
   const [error, set_error] = useState<string | null>(null);
@@ -91,7 +98,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
     availability: product.availability,
   };
 
-  const allowed = can_add_to_cart(quantity_product);
+  const allowed = approved && can_add_to_cart(quantity_product);
   const qty_check = check_qty(quantity_product, qty);
   const availability_label =
     AVAILABILITY_LABELS[product.availability as Availability] ??
@@ -210,33 +217,68 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
             <p className="text-sm text-slate-700">{product.description}</p>
           ) : null}
 
-          <QuantityStepper
-            product={quantity_product}
-            qty={qty}
-            on_change={set_qty}
-          />
+          {approved && product.price ? (
+            <p className="text-xl font-semibold text-slate-900">
+              {format_rub_price(product.price.amount, product.price.unit)}
+            </p>
+          ) : viewer === "pending" ? (
+            <p className="rounded-md bg-amber-50 px-3 py-2 text-sm text-amber-950">
+              Ваша заявка рассматривается. После подтверждения откроются цены и
+              заказы
+            </p>
+          ) : viewer === "rejected" || viewer === "blocked" ? (
+            <div className="space-y-2 rounded-md bg-slate-50 px-3 py-2 text-sm text-slate-700">
+              <p>Цена недоступна для вашей заявки.</p>
+              <Link href="/pending" className="font-medium text-teal-800 underline">
+                Перейти к статусу заявки
+              </Link>
+            </div>
+          ) : (
+            <div className="space-y-3 rounded-md bg-slate-50 px-3 py-3 text-sm text-slate-700">
+              <p>Цена доступна после подтверждения регистрации.</p>
+              <div className="flex flex-wrap gap-2">
+                <Link href="/login" className="ui-btn-primary">
+                  Войти, чтобы увидеть цену и сделать заказ
+                </Link>
+                <Link href="/register" className="ui-btn-secondary">
+                  Зарегистрироваться
+                </Link>
+              </div>
+            </div>
+          )}
 
-          <div className="sticky bottom-20 z-10 flex flex-wrap gap-2 bg-white/95 py-2 md:static md:bottom-auto md:bg-transparent md:py-0">
-            <button
-              type="button"
-              disabled={!allowed || !qty_check.valid || pending}
-              onClick={on_add}
-              className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
-            >
-              {pending ? "Добавляем…" : "В корзину"}
-            </button>
+          {approved ? (
+            <>
+              <QuantityStepper
+                product={quantity_product}
+                qty={qty}
+                on_change={set_qty}
+              />
+              <div className="sticky bottom-20 z-10 flex flex-wrap gap-2 bg-white/95 py-2 md:static md:bottom-auto md:bg-transparent md:py-0">
+                <button
+                  type="button"
+                  disabled={!allowed || !qty_check.valid || pending}
+                  onClick={on_add}
+                  className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
+                >
+                  {pending ? "Добавляем…" : "В корзину"}
+                </button>
+                <Link
+                  href="/catalog"
+                  className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
+                >
+                  Назад в каталог
+                </Link>
+              </div>
+            </>
+          ) : (
             <Link
               href="/catalog"
-              className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
+              className="inline-flex rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
             >
               Назад в каталог
             </Link>
-          </div>
-
-          <p className="text-xs text-slate-500">
-            Цены не отображаются. Менеджер подтвердит условия после оформления
-            заказа.
-          </p>
+          )}
         </div>
       </div>
       <Toast message={toast} />

@@ -576,8 +576,9 @@ export async function get_catalog_product(
 }
 
 export async function list_public_catalog_categories(
-  _payload: AuthUserPayload | null,
+  payload: AuthUserPayload | null,
 ) {
+  void payload;
   const { list_catalog_categories_tree } = await import(
     "@/lib/services/categories.service"
   );

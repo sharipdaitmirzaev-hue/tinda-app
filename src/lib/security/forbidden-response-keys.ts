@@ -80,10 +80,11 @@ export function collect_forbidden_keys(
           (FORBIDDEN_PRICE_KEYS as readonly string[]).includes(lower) ||
           lower.includes("price") ||
           lower === "subtotal" ||
-          lower === "total" ||
           lower === "line_total" ||
-          lower === "delivery_total"
+          lower === "delivery_total" ||
+          lower === "unit_price"
         ) {
+          // Note: bare "total" is allowed — catalog pagination uses it.
           found.push(full);
         }
       }

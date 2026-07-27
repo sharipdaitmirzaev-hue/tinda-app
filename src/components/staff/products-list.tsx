@@ -25,6 +25,8 @@ type ProductItem = {
   is_hit: boolean;
   is_active: boolean;
   image_url: string | null;
+  price_amount?: number;
+  price?: { amount: number; currency: string; unit: string } | null;
   updated_at: string;
 };
 
@@ -47,6 +49,8 @@ export function ProductsList() {
   const [total, set_total] = useState(0);
   const [loading, set_loading] = useState(true);
   const [error, set_error] = useState<string | null>(null);
+  const [import_message, set_import_message] = useState<string | null>(null);
+  const [import_pending, set_import_pending] = useState(false);
 
   const q = search_params.get("q") || "";
   const category_id = search_params.get("category_id") || "";
@@ -149,6 +153,38 @@ export function ProductsList() {
     });
   }
 
+  async function on_import_prices(file: File | null) {
+    if (!file) return;
+    set_import_pending(true);
+    set_import_message(null);
+    set_error(null);
+    try {
+      const body = new FormData();
+      body.set("file", file);
+      const response = await fetch("/api/v1/staff/products/import-prices", {
+        method: "POST",
+        body,
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data?.error?.message ?? "Импорт не выполнен");
+      }
+      const failed = Number(data.failed ?? 0);
+      set_import_message(
+        failed > 0
+          ? `${data.message}. Ошибок: ${failed}`
+          : String(data.message ?? "Цены обновлены"),
+      );
+      // reload list
+      router.refresh();
+      update_query({ page: String(page) });
+    } catch (err) {
+      set_error(err instanceof Error ? err.message : "Ошибка импорта");
+    } finally {
+      set_import_pending(false);
+    }
+  }
+
   const total_pages = Math.max(1, Math.ceil(total / page_size));
 
   return (
@@ -158,8 +194,27 @@ export function ProductsList() {
           Товар сохранён
         </p>
       ) : null}
+      {import_message ? (
+        <p className="rounded-md bg-teal-50 px-3 py-2 text-sm text-teal-900">
+          {import_message}
+        </p>
+      ) : null}
 
-      <div className="flex justify-end">
+      <div className="flex flex-wrap items-center justify-end gap-2">
+        <label className="ui-btn-secondary cursor-pointer">
+          {import_pending ? "Импорт…" : "Импорт цен (Excel)"}
+          <input
+            type="file"
+            accept=".xlsx,.xls,.csv"
+            className="hidden"
+            disabled={import_pending}
+            onChange={(event) => {
+              const file = event.target.files?.[0] ?? null;
+              event.target.value = "";
+              void on_import_prices(file);
+            }}
+          />
+        </label>
         <Link
           href="/staff/products/new"
           className="rounded-md bg-teal-700 px-4 py-2 text-sm text-white hover:bg-teal-800"
@@ -339,6 +394,12 @@ export function ProductsList() {
                     <p className="mt-1 text-xs text-slate-600">
                       {item.category_name ?? "—"} · {item.availability_label}
                     </p>
+                    <p className="mt-1 text-sm font-medium text-slate-900">
+                      {(item.price?.amount ?? item.price_amount ?? 0).toLocaleString(
+                        "ru-RU",
+                      )}{" "}
+                      ₽ / {item.sale_unit}
+                    </p>
                     <p className="mt-1">
                       {item.is_active ? (
                         <span className="ui-status-approved">Активен</span>
@@ -363,6 +424,7 @@ export function ProductsList() {
                   <th className="px-3 py-2">Объём</th>
                   <th className="px-3 py-2">Упаковка</th>
                   <th className="px-3 py-2">Наличие</th>
+                  <th className="px-3 py-2">Цена</th>
                   <th className="px-3 py-2">Метки</th>
                   <th className="px-3 py-2">Статус</th>
                   <th className="px-3 py-2">Обновлён</th>
@@ -390,6 +452,12 @@ export function ProductsList() {
                     <td className="px-3 py-2">{item.volume_text ?? "—"}</td>
                     <td className="px-3 py-2">{item.package_type ?? "—"}</td>
                     <td className="px-3 py-2">{item.availability_label}</td>
+                    <td className="px-3 py-2 whitespace-nowrap">
+                      {(item.price?.amount ?? item.price_amount ?? 0).toLocaleString(
+                        "ru-RU",
+                      )}{" "}
+                      ₽
+                    </td>
                     <td className="px-3 py-2 text-xs">
                       {[
                         item.is_promo ? "Акция" : null,
