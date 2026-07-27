@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-27T17:02:40.986Z",
+  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/candidates.json",
+  "candidates_count": 20,
+  "urls_processed": 20,
+  "downloaded_ok": 18,
+  "errors": 2,
+  "duplicates_sha256": 0,
+  "below_500": 1,
+  "total_original_bytes": 492572,
+  "original_dir": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/original",
+  "preview_dir": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/previews",
+  "manifest_path": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/manifest.json",
+  "gallery_path": "/workspace/data/imports/zelenoe-yabloko-tea-kvass/gallery.html",
+  "production_changed": false,
+  "images_uploaded": false,
+  "image_url_changed": false
+}

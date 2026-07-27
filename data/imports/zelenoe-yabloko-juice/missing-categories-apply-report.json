@@ -1,0 +1,555 @@
+{
+  "generated_at": "2026-07-27T15:52:41.414Z",
+  "mode": "apply",
+  "backup_path": "/var/backups/tinda/tinda-pre-juice-missing-categories-20260727T155208Z.dump",
+  "source": "/app/data/imports/zelenoe-yabloko-juice/missing-categories-import-batch.json",
+  "uploads_root": "/app/public/uploads",
+  "expected_rows": 5,
+  "row_count": 5,
+  "note": "Create-only: ensure 2 categories if missing + import 5 previously skipped juice_drink SKUs. No schema/seed. Existing categories/products untouched.",
+  "package_requires_review": true,
+  "package_requires_review_detail": {
+    "field_in_schema": false,
+    "flag_value": true,
+    "skus": [
+      "ZY-DOBRYI-450-PET-002",
+      "ZY-AGUSHA-300-PET-001",
+      "ZY-AGUSHA-300-PET-002",
+      "ZY-AGUSHA-300-PET-003",
+      "ZY-AGUSHA-300-PET-004"
+    ],
+    "count": 5
+  },
+  "categories": {
+    "parent": {
+      "id": "43915e70-b50f-40a8-9499-113a9858864b",
+      "slug": "soki-morsy-nektary",
+      "name": "Соки, морсы и нектары",
+      "is_active": true
+    },
+    "ensure_results": [
+      {
+        "action": "created",
+        "id": "9527dec2-5a87-4a6b-b4c5-b8001d13d351",
+        "slug": "sokosoderzhashchie-napitki",
+        "name": "Сокосодержащие напитки",
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b",
+        "is_active": true,
+        "sort_order": 4
+      },
+      {
+        "action": "created",
+        "id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+        "slug": "detskie-soki",
+        "name": "Детские соки",
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b",
+        "is_active": true,
+        "sort_order": 5
+      }
+    ],
+    "created_count": 2,
+    "already_existed_count": 0,
+    "would_create_count": 0,
+    "created": [
+      {
+        "action": "created",
+        "id": "9527dec2-5a87-4a6b-b4c5-b8001d13d351",
+        "slug": "sokosoderzhashchie-napitki",
+        "name": "Сокосодержащие напитки",
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b",
+        "is_active": true,
+        "sort_order": 4
+      },
+      {
+        "action": "created",
+        "id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+        "slug": "detskie-soki",
+        "name": "Детские соки",
+        "parent_id": "43915e70-b50f-40a8-9499-113a9858864b",
+        "is_active": true,
+        "sort_order": 5
+      }
+    ],
+    "already_existed": []
+  },
+  "category_assignment": {
+    "ZY-DOBRYI-450-PET-002": "sokosoderzhashchie-napitki",
+    "ZY-AGUSHA-300-PET-001": "detskie-soki",
+    "ZY-AGUSHA-300-PET-002": "detskie-soki",
+    "ZY-AGUSHA-300-PET-003": "detskie-soki",
+    "ZY-AGUSHA-300-PET-004": "detskie-soki"
+  },
+  "preview_checks": {
+    "candidate_count": 5,
+    "expected": 5,
+    "expected_skus_match": true,
+    "unique_proposed_sku": 5,
+    "batch_internal_sku_dupes": 0,
+    "all_product_type_juice_drink": true,
+    "preview_ok": 5,
+    "preview_failed": 0,
+    "all_images_readable": true,
+    "all_mime_allowed": true,
+    "all_ge_500": true
+  },
+  "counts": {
+    "preview_ok": null,
+    "preview_failed": null,
+    "created": 5,
+    "skipped": 0,
+    "failed": 0,
+    "images_uploaded": 5,
+    "categories_created": 2,
+    "categories_already_existed": 0
+  },
+  "before": {
+    "products_total": 309,
+    "showcase_active": 294,
+    "orderable_active": 13,
+    "no_price": 294,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "categories_total": 22,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "after": {
+    "products_total": 314,
+    "showcase_active": 299,
+    "orderable_active": 13,
+    "no_price": 299,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "categories_total": 24,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "guards": {
+    "orders_unchanged": true,
+    "order_items_unchanged": true,
+    "clients_unchanged": true,
+    "interest_unchanged": true,
+    "orderable_active_unchanged": true,
+    "orderable_price_drift": [],
+    "products_delta": 5,
+    "categories_delta": 2,
+    "all_new_image_urls_local": true
+  },
+  "created_skus": [
+    "ZY-DOBRYI-450-PET-002",
+    "ZY-AGUSHA-300-PET-001",
+    "ZY-AGUSHA-300-PET-002",
+    "ZY-AGUSHA-300-PET-003",
+    "ZY-AGUSHA-300-PET-004"
+  ],
+  "items": [
+    {
+      "row": 2,
+      "source_index": 112,
+      "source_name": "Напиток Добрый Палпи пл/б 0,45л ананас манго",
+      "brand": "Добрый",
+      "flavor": "палпи пл б ананас манго",
+      "volume_text": "450 мл",
+      "volume_ml": 450,
+      "package_type": "ПЭТ",
+      "product_type": "juice_drink",
+      "is_kids_line": false,
+      "source_product_url": "https://zelenoeyabloko.ru/product/6544",
+      "local_image_path": "/app/tmp/zelenoe-juice/original/112_dobryi_napitok-dobryi-palpi-plb-045l-ananas-mango_450ml.webp",
+      "proposed_sku": "ZY-DOBRYI-450-PET-002",
+      "category_slug": "sokosoderzhashchie-napitki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "aeb8659b5c37656f93acddd7b6819f06fe36740db3bdfc8a3d23e0cfa58ac09f",
+      "resolved_image_path": "/app/tmp/zelenoe-juice/original/112_dobryi_napitok-dobryi-palpi-plb-045l-ananas-mango_450ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 135430,
+      "image_sha256": "aeb8659b5c37656f93acddd7b6819f06fe36740db3bdfc8a3d23e0cfa58ac09f",
+      "image_width": 2000,
+      "image_height": 2000,
+      "category_id": "9527dec2-5a87-4a6b-b4c5-b8001d13d351",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "106766c3-3249-4911-8918-d68878340ffe",
+      "image_url": "/uploads/products/106766c3-3249-4911-8918-d68878340ffe/0d4b936a-d0e6-4d16-93eb-700d6a2a8535.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:52:41.227Z",
+      "db": {
+        "id": "106766c3-3249-4911-8918-d68878340ffe",
+        "sku": "ZY-DOBRYI-450-PET-002",
+        "name": "Напиток Добрый Палпи пл/б 0,45л ананас манго",
+        "brand": "Добрый",
+        "image_url": "/uploads/products/106766c3-3249-4911-8918-d68878340ffe/0d4b936a-d0e6-4d16-93eb-700d6a2a8535.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "9527dec2-5a87-4a6b-b4c5-b8001d13d351",
+        "volume_text": "450 мл",
+        "package_type": "ПЭТ"
+      }
+    },
+    {
+      "row": 3,
+      "source_index": 192,
+      "source_name": "Напиток Агуша Вода и сок Яблоко п/бут 0,3л",
+      "brand": "Агуша",
+      "flavor": "вода и яблоко п бут",
+      "volume_text": "300 мл",
+      "volume_ml": 300,
+      "package_type": "ПЭТ",
+      "product_type": "juice_drink",
+      "is_kids_line": true,
+      "source_product_url": "https://zelenoeyabloko.ru/product/6414",
+      "local_image_path": "/app/tmp/zelenoe-juice/original/192_agusha_napitok-agusha-voda-i-sok-yabloko-pbut-03l_300ml.webp",
+      "proposed_sku": "ZY-AGUSHA-300-PET-001",
+      "category_slug": "detskie-soki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "abe265a5c2709b86539363add97772eace7068395908d07381e402e225c181a2",
+      "resolved_image_path": "/app/tmp/zelenoe-juice/original/192_agusha_napitok-agusha-voda-i-sok-yabloko-pbut-03l_300ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 15620,
+      "image_sha256": "abe265a5c2709b86539363add97772eace7068395908d07381e402e225c181a2",
+      "image_width": 650,
+      "image_height": 650,
+      "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "73a21ca9-e7ae-43ad-97a7-559fd4da5439",
+      "image_url": "/uploads/products/73a21ca9-e7ae-43ad-97a7-559fd4da5439/d5b94e4b-80c0-4c93-add7-85ee9fccd142.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:52:41.272Z",
+      "db": {
+        "id": "73a21ca9-e7ae-43ad-97a7-559fd4da5439",
+        "sku": "ZY-AGUSHA-300-PET-001",
+        "name": "Напиток Агуша Вода и сок Яблоко п/бут 0,3л",
+        "brand": "Агуша",
+        "image_url": "/uploads/products/73a21ca9-e7ae-43ad-97a7-559fd4da5439/d5b94e4b-80c0-4c93-add7-85ee9fccd142.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+        "volume_text": "300 мл",
+        "package_type": "ПЭТ"
+      }
+    },
+    {
+      "row": 4,
+      "source_index": 195,
+      "source_name": "Напиток Агуша Вода и сок Яблоко виноград п/бут 0,3л",
+      "brand": "Агуша",
+      "flavor": "вода и яблоко виноград п бут",
+      "volume_text": "300 мл",
+      "volume_ml": 300,
+      "package_type": "ПЭТ",
+      "product_type": "juice_drink",
+      "is_kids_line": true,
+      "source_product_url": "https://zelenoeyabloko.ru/product/6412",
+      "local_image_path": "/app/tmp/zelenoe-juice/original/195_agusha_napitok-agusha-voda-i-sok-yabloko-vinograd-pbut-_300ml.webp",
+      "proposed_sku": "ZY-AGUSHA-300-PET-002",
+      "category_slug": "detskie-soki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "cc97d96bc8859cbeab503e651f103b9121affa1921b0db0bd8f8370992f73b34",
+      "resolved_image_path": "/app/tmp/zelenoe-juice/original/195_agusha_napitok-agusha-voda-i-sok-yabloko-vinograd-pbut-_300ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 17950,
+      "image_sha256": "cc97d96bc8859cbeab503e651f103b9121affa1921b0db0bd8f8370992f73b34",
+      "image_width": 650,
+      "image_height": 650,
+      "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "bff73222-ca7d-44a1-a2f2-7a8321b00456",
+      "image_url": "/uploads/products/bff73222-ca7d-44a1-a2f2-7a8321b00456/598eee0b-3bc1-4b06-96e5-0d465f403abd.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:52:41.317Z",
+      "db": {
+        "id": "bff73222-ca7d-44a1-a2f2-7a8321b00456",
+        "sku": "ZY-AGUSHA-300-PET-002",
+        "name": "Напиток Агуша Вода и сок Яблоко виноград п/бут 0,3л",
+        "brand": "Агуша",
+        "image_url": "/uploads/products/bff73222-ca7d-44a1-a2f2-7a8321b00456/598eee0b-3bc1-4b06-96e5-0d465f403abd.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+        "volume_text": "300 мл",
+        "package_type": "ПЭТ"
+      }
+    },
+    {
+      "row": 5,
+      "source_index": 196,
+      "source_name": "Напиток Агуша Вода и сок Яблоко вишня п/бут 0,3л",
+      "brand": "Агуша",
+      "flavor": "вода и яблоко вишня п бут",
+      "volume_text": "300 мл",
+      "volume_ml": 300,
+      "package_type": "ПЭТ",
+      "product_type": "juice_drink",
+      "is_kids_line": true,
+      "source_product_url": "https://zelenoeyabloko.ru/product/6413",
+      "local_image_path": "/app/tmp/zelenoe-juice/original/196_agusha_napitok-agusha-voda-i-sok-yabloko-vishnya-pbut-0_300ml.webp",
+      "proposed_sku": "ZY-AGUSHA-300-PET-003",
+      "category_slug": "detskie-soki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "e0c906d3b6c32b6f84c6bf10d445abd0814b172359bf3230e4882a74e6728cff",
+      "resolved_image_path": "/app/tmp/zelenoe-juice/original/196_agusha_napitok-agusha-voda-i-sok-yabloko-vishnya-pbut-0_300ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 13422,
+      "image_sha256": "e0c906d3b6c32b6f84c6bf10d445abd0814b172359bf3230e4882a74e6728cff",
+      "image_width": 500,
+      "image_height": 500,
+      "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "589d85d3-8ffd-4aca-a2cd-0cd57815b748",
+      "image_url": "/uploads/products/589d85d3-8ffd-4aca-a2cd-0cd57815b748/36e8ff6b-e15f-4c1f-9190-2a40b4a19de9.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:52:41.352Z",
+      "db": {
+        "id": "589d85d3-8ffd-4aca-a2cd-0cd57815b748",
+        "sku": "ZY-AGUSHA-300-PET-003",
+        "name": "Напиток Агуша Вода и сок Яблоко вишня п/бут 0,3л",
+        "brand": "Агуша",
+        "image_url": "/uploads/products/589d85d3-8ffd-4aca-a2cd-0cd57815b748/36e8ff6b-e15f-4c1f-9190-2a40b4a19de9.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+        "volume_text": "300 мл",
+        "package_type": "ПЭТ"
+      }
+    },
+    {
+      "row": 6,
+      "source_index": 203,
+      "source_name": "Напиток Агуша Вода и сок Садовые ягоды п/бут 0,3л",
+      "brand": "Агуша",
+      "flavor": "вода и садовые ягоды п бут",
+      "volume_text": "300 мл",
+      "volume_ml": 300,
+      "package_type": "ПЭТ",
+      "product_type": "juice_drink",
+      "is_kids_line": true,
+      "source_product_url": "https://zelenoeyabloko.ru/product/6411",
+      "local_image_path": "/app/tmp/zelenoe-juice/original/203_agusha_napitok-agusha-voda-i-sok-sadovye-yagody-pbut-03_300ml.webp",
+      "proposed_sku": "ZY-AGUSHA-300-PET-004",
+      "category_slug": "detskie-soki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "bde2313ef64033659d32be61469c5447b2edfd424613fbd8749afeddaf91e148",
+      "resolved_image_path": "/app/tmp/zelenoe-juice/original/203_agusha_napitok-agusha-voda-i-sok-sadovye-yagody-pbut-03_300ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 21242,
+      "image_sha256": "bde2313ef64033659d32be61469c5447b2edfd424613fbd8749afeddaf91e148",
+      "image_width": 650,
+      "image_height": 650,
+      "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "6ad16565-5fc9-421d-a262-f4cf689084d4",
+      "image_url": "/uploads/products/6ad16565-5fc9-421d-a262-f4cf689084d4/772506ea-fb92-4eef-9050-a6d14c03d9b3.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:52:41.405Z",
+      "db": {
+        "id": "6ad16565-5fc9-421d-a262-f4cf689084d4",
+        "sku": "ZY-AGUSHA-300-PET-004",
+        "name": "Напиток Агуша Вода и сок Садовые ягоды п/бут 0,3л",
+        "brand": "Агуша",
+        "image_url": "/uploads/products/6ad16565-5fc9-421d-a262-f4cf689084d4/772506ea-fb92-4eef-9050-a6d14c03d9b3.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "6894501c-7ccc-4421-a151-c232d6b990d5",
+        "volume_text": "300 мл",
+        "package_type": "ПЭТ"
+      }
+    }
+  ],
+  "verification": {
+    "generated_at": "2026-07-27T15:53:20.352Z",
+    "health": {
+      "ok": true,
+      "database": "ok"
+    },
+    "containers": {
+      "app-app-1": "healthy",
+      "app-db-1": "healthy"
+    },
+    "categories_created": 2,
+    "categories_already_existed": 0,
+    "created_categories": [
+      {
+        "slug": "sokosoderzhashchie-napitki",
+        "name": "Сокосодержащие напитки"
+      },
+      {
+        "slug": "detskie-soki",
+        "name": "Детские соки"
+      }
+    ],
+    "products": {
+      "created": 5,
+      "skipped": 0,
+      "failed": 0,
+      "images_uploaded": 5
+    },
+    "created_skus": [
+      "ZY-DOBRYI-450-PET-002",
+      "ZY-AGUSHA-300-PET-001",
+      "ZY-AGUSHA-300-PET-002",
+      "ZY-AGUSHA-300-PET-003",
+      "ZY-AGUSHA-300-PET-004"
+    ],
+    "all_five_in_guest_catalog": true,
+    "all_showcase": true,
+    "all_no_price": true,
+    "interest": "works (cleaned up)",
+    "cart_showcase": "rejected (400)",
+    "orderable_prices_unchanged": true,
+    "orders": 3,
+    "order_items": 5,
+    "products_total": 314,
+    "showcase_active": 299,
+    "orderable_active": 13,
+    "no_price": 299,
+    "categories_total": 24,
+    "backup_path": "/var/backups/tinda/tinda-pre-juice-missing-categories-20260727T155208Z.dump"
+  }
+}

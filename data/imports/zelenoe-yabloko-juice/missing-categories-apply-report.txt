@@ -1,0 +1,46 @@
+TINDA juice missing-categories + 5 skipped SKUs import report
+generated_at: 2026-07-27T15:52:41.414Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-juice-missing-categories-20260727T155208Z.dump
+source: /app/data/imports/zelenoe-yabloko-juice/missing-categories-import-batch.json
+rows: 5 (expected 5)
+categories: created=2 already_existed=0 would_create=0
+  category sokosoderzhashchie-napitki: created id=9527dec2-5a87-4a6b-b4c5-b8001d13d351 name=Сокосодержащие напитки
+  category detskie-soki: created id=6894501c-7ccc-4421-a151-c232d6b990d5 name=Детские соки
+package_requires_review: true
+created: 5
+skipped: 0
+failed: 0
+images_uploaded: 5
+products_total: 309 -> 314
+categories_total: 22 -> 24
+showcase_active: 294 -> 299
+orderable_active: 13 -> 13
+no_price: 294 -> 299
+orders: 3->3; order_items: 5->5
+
+SKU | status | category | product_id | image_url | error
+ZY-DOBRYI-450-PET-002 | created | sokosoderzhashchie-napitki | 106766c3-3249-4911-8918-d68878340ffe | /uploads/products/106766c3-3249-4911-8918-d68878340ffe/0d4b936a-d0e6-4d16-93eb-700d6a2a8535.webp | -
+ZY-AGUSHA-300-PET-001 | created | detskie-soki | 73a21ca9-e7ae-43ad-97a7-559fd4da5439 | /uploads/products/73a21ca9-e7ae-43ad-97a7-559fd4da5439/d5b94e4b-80c0-4c93-add7-85ee9fccd142.webp | -
+ZY-AGUSHA-300-PET-002 | created | detskie-soki | bff73222-ca7d-44a1-a2f2-7a8321b00456 | /uploads/products/bff73222-ca7d-44a1-a2f2-7a8321b00456/598eee0b-3bc1-4b06-96e5-0d465f403abd.webp | -
+ZY-AGUSHA-300-PET-003 | created | detskie-soki | 589d85d3-8ffd-4aca-a2cd-0cd57815b748 | /uploads/products/589d85d3-8ffd-4aca-a2cd-0cd57815b748/36e8ff6b-e15f-4c1f-9190-2a40b4a19de9.webp | -
+ZY-AGUSHA-300-PET-004 | created | detskie-soki | 6ad16565-5fc9-421d-a262-f4cf689084d4 | /uploads/products/6ad16565-5fc9-421d-a262-f4cf689084d4/772506ea-fb92-4eef-9050-a6d14c03d9b3.webp | -
+
+--- post-import verification ---
+health: ok database=ok
+containers: app-app-1 healthy, app-db-1 healthy
+categories_created: 2 (sokosoderzhashchie-napitki, detskie-soki)
+categories_already_existed: 0
+created: 5 skipped: 0 failed: 0 images_uploaded: 5
+SKUs: ZY-DOBRYI-450-PET-002, ZY-AGUSHA-300-PET-001, ZY-AGUSHA-300-PET-002, ZY-AGUSHA-300-PET-003, ZY-AGUSHA-300-PET-004
+guest_catalog: all 5 visible
+interest: works (cleaned up)
+cart_showcase: rejected (400)
+orderable_prices: unchanged (13)
+orders: 3 / order_items: 5
+products_total: 314
+showcase_active: 299
+orderable_active: 13
+no_price: 299
+categories_total: 24
+backup: /var/backups/tinda/tinda-pre-juice-missing-categories-20260727T155208Z.dump

@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-07-27T20:56:54.310Z",
+  "note": "Reconstructed from apply-report after container rebuild (preview ran successfully 4/0 before apply).",
+  "mode": "preview",
+  "backup_path": "/var/backups/tinda/tinda-pre-homepage-missing-products-20260727T205413Z.dump",
+  "preview": {
+    "ok": 4,
+    "failed": 0,
+    "candidates_exactly_4": true,
+    "proposed_skus_unique": true,
+    "skus_absent_in_db": true
+  },
+  "expected_skus": [
+    "ZY-COCACOLAZERO-330-GLASS-001",
+    "ZY-SPRITE-2000-PET-001",
+    "ZY-ADRENALINE-250-CAN-001",
+    "ZY-ADRENALINE-449-CAN-001"
+  ],
+  "results": [
+    {
+      "proposed_sku": "ZY-COCACOLAZERO-330-GLASS-001",
+      "brand": "Coca-Cola",
+      "volume_ml": 330,
+      "package_norm": "glass",
+      "category_slug": "kola",
+      "validation_errors": [],
+      "preview_status": "preview_ok"
+    },
+    {
+      "proposed_sku": "ZY-SPRITE-2000-PET-001",
+      "brand": "Sprite",
+      "volume_ml": 2000,
+      "package_norm": "pet",
+      "category_slug": "gazirovannye-napitki",
+      "validation_errors": [],
+      "preview_status": "preview_ok"
+    },
+    {
+      "proposed_sku": "ZY-ADRENALINE-250-CAN-001",
+      "brand": "Adrenaline Rush",
+      "volume_ml": 250,
+      "package_norm": "can",
+      "category_slug": "energeticheskie-napitki",
+      "validation_errors": [],
+      "preview_status": "preview_ok"
+    },
+    {
+      "proposed_sku": "ZY-ADRENALINE-449-CAN-001",
+      "brand": "Adrenaline Rush",
+      "volume_ml": 449,
+      "package_norm": "can",
+      "category_slug": "energeticheskie-napitki",
+      "validation_errors": [],
+      "preview_status": "preview_ok"
+    }
+  ]
+}

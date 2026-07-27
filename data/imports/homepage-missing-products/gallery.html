@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Homepage missing products — local preview</title>
+  <style>
+    :root { --bg:#0f1419; --card:#1a222c; --text:#e8eef5; --muted:#9aa7b5; --ok:#1f7a4c; --bad:#8a2f2f; --warn:#8a6a1f; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, sans-serif; background:linear-gradient(160deg,#0f1419,#182230); color:var(--text); }
+    header { padding:24px 28px; border-bottom:1px solid #2a3542; }
+    h1 { margin:0 0 8px; font-size:22px; }
+    .meta { color:var(--muted); font-size:14px; line-height:1.5; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:18px; padding:22px; }
+    .card { background:var(--card); border:1px solid #2a3542; border-radius:14px; overflow:hidden; display:flex; flex-direction:column; }
+    .card img { width:100%; aspect-ratio:1; object-fit:contain; background:#fff; }
+    .body { padding:14px 16px 18px; font-size:13px; line-height:1.45; }
+    .body h2 { font-size:15px; margin:6px 0 10px; }
+    .badge { display:inline-block; padding:3px 8px; border-radius:999px; font-size:11px; text-transform:uppercase; letter-spacing:.04em; }
+    .approved .badge { background:var(--ok); }
+    .rejected .badge { background:var(--bad); }
+    .review .badge { background:var(--warn); }
+    a { color:#8ec8ff; }
+    .notes { color:var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Популярные товары — отсутствующие позиции (LOCAL PREVIEW)</h1>
+    <div class="meta">
+      Production / VPS / БД / блок главной / цены / seed не менялись. Товары не создавались.<br/>
+      Adrenaline volumes: 0,25 л, 0,33 л, 0,449 л
+      → small=0,25 л, large=0,449 л<br/>
+      Import-ready (approved_new primary): 4
+    </div>
+  </header>
+  <div class="grid">
+    <article class="card approved">
+  <img src="previews/coca-cola-zero-330-glass-napitkiopt.jpg" alt="Coca‑Cola Zero 0,33 л стекло (Грузия)" loading="lazy" />
+  <div class="body">
+    <div class="badge">approved_new</div>
+    <h2>Coca‑Cola Zero 0,33 л стекло (Грузия)</h2>
+    <p><b>Group:</b> coca_cola_zero_033_glass</p>
+    <p><b>Brand:</b> Coca-Cola · <b>Vol:</b> 0,33 л · <b>Pkg:</b> стекло</p>
+    <p><b>Sugar-free:</b> true · <b>Image:</b> 970×546 · image/jpeg</p>
+    <p><b>Match:</b> new_product (exists_zero_can_same_volume_different_package_glass_missing_not_duplicate)</p>
+    <p><b>SKU:</b> ZY-COCACOLAZERO-330-GLASS-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://napitkiopt.ru/coca-cola-koka-kola-zero-zero-0-33-l-steklo-up-15-sht-gruziya/" target="_blank" rel="noreferrer">napitkiopt.ru</a></p>
+    <p><b>Price ref:</b> 2280 ₽ / уп. 15 шт. (справочно, не цена ТИНДА)</p>
+    <p><b>Reasons:</b> auto_approve_rules_passed</p>
+    <p class="notes">Чистое студийное фото одной стеклянной бутылки Zero без watermark.</p>
+  </div>
+</article>
+<article class="card review">
+  <img src="previews/coca-cola-zero-330-glass-dblack.jpg" alt="Coca-Cola Zero диетическая стекло 0,33 л" loading="lazy" />
+  <div class="body">
+    <div class="badge">needs_review</div>
+    <h2>Coca-Cola Zero диетическая стекло 0,33 л</h2>
+    <p><b>Group:</b> coca_cola_zero_033_glass</p>
+    <p><b>Brand:</b> Coca-Cola · <b>Vol:</b> 0,33 л · <b>Pkg:</b> стекло</p>
+    <p><b>Sugar-free:</b> true · <b>Image:</b> 1200×1000 · image/jpeg</p>
+    <p><b>Match:</b> new_product (exists_zero_can_same_volume_different_package_glass_missing_not_duplicate)</p>
+    <p><b>SKU:</b> ZY-COCACOLAZERO-330-GLASS-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://dblack.ru/catalog/bezalkogolnye_napitki/koka-kola-zero-dieticheskaja-steklo-0-33-l/" target="_blank" rel="noreferrer">dblack.ru</a></p>
+    <p><b>Price ref:</b> 2340 ₽ / уп. (справочно, не цена ТИНДА)</p>
+    <p><b>Reasons:</b> promo_badges_on_image</p>
+    <p class="notes">Бутылка корректная, но на изображении промо-бейджи/баннеры — не auto-approve.</p>
+  </div>
+</article>
+<article class="card approved">
+  <img src="previews/sprite-2000-pet-napolke.jpg" alt="Напиток газированный Sprite Беларусь 2 л., ПЭТ" loading="lazy" />
+  <div class="body">
+    <div class="badge">approved_new</div>
+    <h2>Напиток газированный Sprite Беларусь 2 л., ПЭТ</h2>
+    <p><b>Group:</b> sprite_2l_pet</p>
+    <p><b>Brand:</b> Sprite · <b>Vol:</b> 2 л · <b>Pkg:</b> ПЭТ</p>
+    <p><b>Sugar-free:</b> false · <b>Image:</b> 740×740 · image/jpeg</p>
+    <p><b>Match:</b> new_product (sprite_exists_other_volume_package_2l_pet_missing)</p>
+    <p><b>SKU:</b> ZY-SPRITE-2000-PET-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://napolke.ru/catalog/soki_vody_napitki/gazirovannye_napitki_limonady/product/napitok_gazirovanny_j_sprite_belarus_2_l_pe_t-80663334-0b30-4dcb-aab0-ec1126216c43" target="_blank" rel="noreferrer">napolke.ru</a></p>
+    <p><b>Price ref:</b> 166.60 ₽/шт (справочно, не цена ТИНДА)</p>
+    <p><b>Reasons:</b> auto_approve_rules_passed</p>
+    <p class="notes">Одна ПЭТ-бутылка обычного Sprite, без watermark, 740×740.</p>
+  </div>
+</article>
+<article class="card rejected">
+  <img src="previews/sprite-2000-pet-napitkiopt.jpg" alt="Sprite (Спрайт) 2 л. (уп. 6 шт.) КЗ" loading="lazy" />
+  <div class="body">
+    <div class="badge">rejected</div>
+    <h2>Sprite (Спрайт) 2 л. (уп. 6 шт.) КЗ</h2>
+    <p><b>Group:</b> sprite_2l_pet</p>
+    <p><b>Brand:</b> Sprite · <b>Vol:</b> 2 л · <b>Pkg:</b> ПЭТ</p>
+    <p><b>Sugar-free:</b> false · <b>Image:</b> 354×1200 · image/jpeg</p>
+    <p><b>Match:</b> new_product (sprite_exists_other_volume_package_2l_pet_missing)</p>
+    <p><b>SKU:</b> ZY-SPRITE-2000-PET-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://napitkiopt.ru/sprayt-2-l-up-6-sht-rf/" target="_blank" rel="noreferrer">napitkiopt.ru</a></p>
+    <p><b>Price ref:</b> 1490 ₽ / уп. 6 шт. (справочно)</p>
+    <p><b>Reasons:</b> role_alternate_reject, watermark, watermark, image_below_500x500_354x1200</p>
+    <p class="notes">Есть watermark ozon.ru; ширина <500 — reject.</p>
+  </div>
+</article>
+<article class="card approved">
+  <img src="previews/adrenaline-250-can-ofisshop.jpg" alt="Напиток энергетический Adrenaline Rush 0.25л, ж/б" loading="lazy" />
+  <div class="body">
+    <div class="badge">approved_new</div>
+    <h2>Напиток энергетический Adrenaline Rush 0.25л, ж/б</h2>
+    <p><b>Group:</b> adrenaline_rush / small</p>
+    <p><b>Brand:</b> Adrenaline Rush · <b>Vol:</b> 0,25 л · <b>Pkg:</b> жестяная банка</p>
+    <p><b>Sugar-free:</b> false · <b>Image:</b> 600×600 · image/webp</p>
+    <p><b>Match:</b> new_product (no_related_in_tinda)</p>
+    <p><b>SKU:</b> ZY-ADRENALINE-250-CAN-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://ofisshop.ru/catalog/energetiki/napitok_energeticheskiy_adrenaline_rush_025l_zhb_1559495/" target="_blank" rel="noreferrer">ofisshop.ru</a></p>
+    <p><b>Price ref:</b> 118 ₽/шт (справочно, не цена ТИНДА)</p>
+    <p><b>Reasons:</b> auto_approve_rules_passed</p>
+    <p class="notes">Минимальный стандартный объём (маленький). Единичная банка.</p>
+  </div>
+</article>
+<article class="card review">
+  <img src="previews/adrenaline-250-can-barista.jpg" alt="Adrenaline Rush Абсолютная энергия 250 мл ж/б" loading="lazy" />
+  <div class="body">
+    <div class="badge">needs_review</div>
+    <h2>Adrenaline Rush Абсолютная энергия 250 мл ж/б</h2>
+    <p><b>Group:</b> adrenaline_rush / small_alternate</p>
+    <p><b>Brand:</b> Adrenaline Rush · <b>Vol:</b> 0,25 л · <b>Pkg:</b> жестяная банка</p>
+    <p><b>Sugar-free:</b> false · <b>Image:</b> 508×508 · image/jpeg</p>
+    <p><b>Match:</b> new_product (no_related_in_tinda)</p>
+    <p><b>SKU:</b> ZY-ADRENALINE-250-CAN-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://www.barista-ltd.ru/magazin/adrenaline-rush-klassik-250ml.html" target="_blank" rel="noreferrer">barista-ltd.ru</a></p>
+    <p><b>Price ref:</b> 78 ₽/шт (справочно)</p>
+    <p><b>Reasons:</b> alternate_not_auto_primary</p>
+    <p class="notes">Альтернативное фото 250 мл, 508×508.</p>
+  </div>
+</article>
+<article class="card review">
+  <img src="previews/adrenaline-330-can-ofisshop.jpg" alt="Энергетический напиток Adrenaline Rush 330мл" loading="lazy" />
+  <div class="body">
+    <div class="badge">needs_review</div>
+    <h2>Энергетический напиток Adrenaline Rush 330мл</h2>
+    <p><b>Group:</b> adrenaline_rush / mid_preview_only</p>
+    <p><b>Brand:</b> Adrenaline Rush · <b>Vol:</b> 0,33 л · <b>Pkg:</b> жестяная банка</p>
+    <p><b>Sugar-free:</b> false · <b>Image:</b> 1200×1200 · image/webp</p>
+    <p><b>Match:</b> new_product (no_related_in_tinda)</p>
+    <p><b>SKU:</b> ZY-ADRENALINE-330-CAN-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://ofisshop.ru/catalog/energetiki/energeticheskiy_napitok_adrenaline_rush_330ml_1965282/" target="_blank" rel="noreferrer">ofisshop.ru</a></p>
+    <p><b>Price ref:</b> 135 ₽/шт (справочно)</p>
+    <p><b>Reasons:</b> mid_volume_preview_only_not_auto_small_or_large</p>
+    <p class="notes">Промежуточный стандартный объём — только preview всех вариантов, не auto small/large.</p>
+  </div>
+</article>
+<article class="card approved">
+  <img src="previews/adrenaline-449-can-ofisshop.jpg" alt="Энергетический напиток Adrenaline Rush 449мл" loading="lazy" />
+  <div class="body">
+    <div class="badge">approved_new</div>
+    <h2>Энергетический напиток Adrenaline Rush 449мл</h2>
+    <p><b>Group:</b> adrenaline_rush / large</p>
+    <p><b>Brand:</b> Adrenaline Rush · <b>Vol:</b> 0,449 л · <b>Pkg:</b> жестяная банка</p>
+    <p><b>Sugar-free:</b> false · <b>Image:</b> 600×600 · image/webp</p>
+    <p><b>Match:</b> new_product (no_related_in_tinda)</p>
+    <p><b>SKU:</b> ZY-ADRENALINE-449-CAN-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://ofisshop.ru/catalog/energetiki/napitok_energeticheskiy_adrenaline_rush_449ml_1965286/" target="_blank" rel="noreferrer">ofisshop.ru</a></p>
+    <p><b>Price ref:</b> 169 ₽/шт (справочно, не цена ТИНДА)</p>
+    <p><b>Reasons:</b> auto_approve_rules_passed</p>
+    <p class="notes">Максимальный стандартный объём (большой). Единичная банка.</p>
+  </div>
+</article>
+<article class="card review">
+  <img src="previews/adrenaline-449-can-magnit.jpg" alt="Энергетический напиток Adrenaline Rush 449мл" loading="lazy" />
+  <div class="body">
+    <div class="badge">needs_review</div>
+    <h2>Энергетический напиток Adrenaline Rush 449мл</h2>
+    <p><b>Group:</b> adrenaline_rush / large_alternate</p>
+    <p><b>Brand:</b> Adrenaline Rush · <b>Vol:</b> 0,449 л · <b>Pkg:</b> жестяная банка</p>
+    <p><b>Sugar-free:</b> false · <b>Image:</b> 1600×1600 · image/webp</p>
+    <p><b>Match:</b> new_product (no_related_in_tinda)</p>
+    <p><b>SKU:</b> ZY-ADRENALINE-449-CAN-001 · unique=true</p>
+    <p><b>Source:</b> <a href="https://magnit.ru/product/1000275580-napitok_energeticheskiy_adrenaline_rush_449ml" target="_blank" rel="noreferrer">magnit.ru</a></p>
+    <p><b>Price ref:</b> 139.99 ₽ (справочно, не цена ТИНДА)</p>
+    <p><b>Reasons:</b> alternate_not_auto_primary</p>
+    <p class="notes">Альтернатива 1600×1600; объём 0,449 виден на банке.</p>
+  </div>
+</article>
+  </div>
+</body>
+</html>

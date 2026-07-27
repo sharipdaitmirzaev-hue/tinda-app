@@ -1,0 +1,105 @@
+TINDA Zelenoe WATER products import report
+generated_at: 2026-07-27T15:10:59.487Z
+mode: apply
+backup: /var/backups/tinda/tinda-pre-zelenoe-water-20260727T150939Z.dump
+source: /app/tmp/zelenoe-water/approved-new-import-batch.json
+rows: 65 (expected 65)
+categories: voda-gazirovannaya=true, voda-negazirovannaya=true
+carbonation: sparkling=27, still=38
+created: 65
+skipped: 0
+failed: 0
+images_uploaded: 65
+products_total: 194 -> 259
+showcase_active: 179 -> 244
+orderable_active: 13 -> 13
+no_price: 179 -> 244
+orders: 3->3; order_items: 5->5
+package_requires_review: true
+package_requires_review SKUs (13): ZY-ARHYZ-1500-UNK-001, ZY-ARHYZ-500-UNK-001, ZY-AKVA-1000-UNK-001, ZY-AKVA-500-UNK-001, ZY-DENEB-5000-UNK-001, ZY-AKVA-500-UNK-002, ZY-TRI-5000-UNK-001, ZY-SERNOVODSKAYA-5000-UNK-001, ZY-RODNIKI-1500-UNK-001, ZY-MEVER-750-UNK-001, ZY-ARHYZ-330-UNK-001, ZY-AKVA-1000-UNK-002, ZY-AKVA-500-UNK-003
+
+SKU | status | carbonation | category | product_id | image_url | error
+ZY-ARHYZ-1500-UNK-001 | created | sparkling | voda-gazirovannaya | d3110af6-eab4-4ddd-8b38-22f87d025f74 | /uploads/products/d3110af6-eab4-4ddd-8b38-22f87d025f74/09634ea7-9d0a-48d9-bd35-bd699b2b99cc.webp | -
+ZY-SERNOVODSKAYA-500-GLASS-001 | created | sparkling | voda-gazirovannaya | 758112e9-7ad4-4357-b0b4-b535dd25f182 | /uploads/products/758112e9-7ad4-4357-b0b4-b535dd25f182/f5c10c69-4465-442e-9dbd-face7c10234b.webp | -
+ZY-PITEVAYA-1000-PET-001 | created | sparkling | voda-gazirovannaya | 63738062-958e-447c-80d5-52d918c05948 | /uploads/products/63738062-958e-447c-80d5-52d918c05948/312203f3-7876-421b-bc41-7c42feb3626b.webp | -
+ZY-GORJI-500-GLASS-001 | created | sparkling | voda-gazirovannaya | 1a0d02a1-65be-4519-96cd-a1838d2ad2bd | /uploads/products/1a0d02a1-65be-4519-96cd-a1838d2ad2bd/ba802aab-c26a-435b-80be-eb5bda250aa2.webp | -
+ZY-GORJI-1000-PET-001 | created | sparkling | voda-gazirovannaya | 9f66939c-f9bf-4fe8-9ce5-fc183e0e09fe | /uploads/products/9f66939c-f9bf-4fe8-9ce5-fc183e0e09fe/91600b9e-fc60-4314-9809-49fd043822a3.webp | -
+ZY-MINERALNAYA-500-GLASS-001 | created | sparkling | voda-gazirovannaya | 8585883e-4cb2-4368-a5c5-fc5c5b7db8b8 | /uploads/products/8585883e-4cb2-4368-a5c5-fc5c5b7db8b8/8242705a-3911-41fb-9a5c-91b5e24edd7a.webp | -
+ZY-BORZHOMI-500-GLASS-001 | created | sparkling | voda-gazirovannaya | 361106ae-0165-4fcf-a5c1-9b123d7c4bf9 | /uploads/products/361106ae-0165-4fcf-a5c1-9b123d7c4bf9/1247c44c-664c-4b66-9126-43ec87d07c07.webp | -
+ZY-BORZHOMI-330-GLASS-001 | created | sparkling | voda-gazirovannaya | ae64a0df-e563-4be0-9b09-5612b78f343c | /uploads/products/ae64a0df-e563-4be0-9b09-5612b78f343c/1e700c52-d1cd-4f80-94bc-49579e4729fc.webp | -
+ZY-MIN-500-GLASS-001 | created | sparkling | voda-gazirovannaya | 8c867aee-8203-4b6b-9278-185668a0faa5 | /uploads/products/8c867aee-8203-4b6b-9278-185668a0faa5/3dddb55b-38dc-41d1-8d90-36afcf3e4a0b.webp | -
+ZY-MIN-1000-PET-001 | created | sparkling | voda-gazirovannaya | 0c84248f-cb53-41b5-8f9d-6851f0bb1033 | /uploads/products/0c84248f-cb53-41b5-8f9d-6851f0bb1033/5f2c8c97-42d5-4087-b6b4-74a0a80e8731.webp | -
+ZY-MIN-750-PET-001 | created | sparkling | voda-gazirovannaya | 6b523449-50a0-48ea-a7dc-aff26874bbab | /uploads/products/6b523449-50a0-48ea-a7dc-aff26874bbab/32be7e70-ee1f-4903-95f5-f27c2bb37f56.webp | -
+ZY-MIN-450-GLASS-001 | created | sparkling | voda-gazirovannaya | a8f8eeeb-218c-4bfc-bb7b-c39e7d8ad547 | /uploads/products/a8f8eeeb-218c-4bfc-bb7b-c39e7d8ad547/d0c8a6e7-f015-4ec4-a26c-efbb7cc43fd4.webp | -
+ZY-MIN-1500-PET-001 | created | sparkling | voda-gazirovannaya | bd57f079-740f-4722-9038-fb3f84ce62c1 | /uploads/products/bd57f079-740f-4722-9038-fb3f84ce62c1/624189eb-e0a2-4bfb-b0f0-14b15d96802f.webp | -
+ZY-MIN-500-GLASS-002 | created | sparkling | voda-gazirovannaya | 8575776d-f686-4ccd-bfc3-d2789b5bed4f | /uploads/products/8575776d-f686-4ccd-bfc3-d2789b5bed4f/f4e049fb-55a0-4820-967b-e9605e56112d.webp | -
+ZY-MIN-1000-PET-002 | created | sparkling | voda-gazirovannaya | 541da164-7376-447e-ad31-4bc0ca3a47f9 | /uploads/products/541da164-7376-447e-ad31-4bc0ca3a47f9/281cd9a5-f78f-4218-9e81-bdbcec54fae6.webp | -
+ZY-MIN-1500-PET-002 | created | sparkling | voda-gazirovannaya | 2e247ab0-49a3-4688-a4e6-e7fb06c13645 | /uploads/products/2e247ab0-49a3-4688-a4e6-e7fb06c13645/747f2a3f-ae16-431e-9ba3-bdefd3a7f0fe.webp | -
+ZY-MIN-450-GLASS-002 | created | sparkling | voda-gazirovannaya | dea0787b-575a-400d-81e8-4f4b3e2b2ddb | /uploads/products/dea0787b-575a-400d-81e8-4f4b3e2b2ddb/90019ffe-b570-41e0-be27-f4c8585ab360.webp | -
+ZY-MIN-1000-PET-003 | created | sparkling | voda-gazirovannaya | 46fb9fc0-13f7-44ac-a73f-abdac8900e0b | /uploads/products/46fb9fc0-13f7-44ac-a73f-abdac8900e0b/cf1db9dc-a0d9-4afe-a024-9fa3693c4e2c.webp | -
+ZY-DOCTORWASSER-500-GLASS-001 | created | sparkling | voda-gazirovannaya | 3aa5e0eb-aacb-4e31-8bc3-040ce742a8c3 | /uploads/products/3aa5e0eb-aacb-4e31-8bc3-040ce742a8c3/e8af2d22-e362-4c3f-962a-12badce264ac.webp | -
+ZY-MIN-500-GLASS-004 | created | sparkling | voda-gazirovannaya | aee46add-182f-4dac-a938-09a0ae4194e3 | /uploads/products/aee46add-182f-4dac-a938-09a0ae4194e3/5d996341-8779-451e-a643-bda6b7452f8c.webp | -
+ZY-IRIB-500-GLASS-001 | created | sparkling | voda-gazirovannaya | 18834bff-c577-480e-8817-b1a44e01f31b | /uploads/products/18834bff-c577-480e-8817-b1a44e01f31b/a688e9f9-84c1-473d-8a3e-3a22dadd7bab.webp | -
+ZY-DENEB-1500-PET-001 | created | sparkling | voda-gazirovannaya | 1cd0d99f-f08a-429a-8295-5f8b29839c26 | /uploads/products/1cd0d99f-f08a-429a-8295-5f8b29839c26/eb367c77-04d6-455c-9c40-4ad1d9e0c6ae.webp | -
+ZY-DENEB-600-PET-001 | created | sparkling | voda-gazirovannaya | 0f0ee004-f6d2-4568-8600-3a483447a5d7 | /uploads/products/0f0ee004-f6d2-4568-8600-3a483447a5d7/f405e613-7388-4b1d-9b1d-ff34d941ebc3.webp | -
+ZY-ARHYZ-500-UNK-001 | created | sparkling | voda-gazirovannaya | d2871e22-673f-48c3-b00a-6f527ded77af | /uploads/products/d2871e22-673f-48c3-b00a-6f527ded77af/de78304e-de4f-4331-8601-72c382687142.webp | -
+ZY-AKVA-1000-UNK-001 | created | sparkling | voda-gazirovannaya | a16318f5-0be3-40f2-9159-8cdef2e5016c | /uploads/products/a16318f5-0be3-40f2-9159-8cdef2e5016c/7dece37a-fa06-45f4-ae43-cf23bdef6078.webp | -
+ZY-AKVA-500-UNK-001 | created | sparkling | voda-gazirovannaya | 48a82938-d683-4de5-be47-386cdb9f2fe4 | /uploads/products/48a82938-d683-4de5-be47-386cdb9f2fe4/ac72e4d4-db3d-4dde-845d-dc21a13d8333.webp | -
+ZY-DONAT-500-PET-001 | created | sparkling | voda-gazirovannaya | 893c7080-795a-4917-975d-d71e9664db9b | /uploads/products/893c7080-795a-4917-975d-d71e9664db9b/52fb790c-50b7-4a6d-bdb8-38cdfff6ded7.webp | -
+ZY-SABR-330-PET-001 | created | still | voda-negazirovannaya | 3b01a41f-be22-4000-9026-475afd444609 | /uploads/products/3b01a41f-be22-4000-9026-475afd444609/3b8ae0ef-e5da-4d69-8420-4f8ef35763ea.webp | -
+ZY-DENEB-5000-UNK-001 | created | still | voda-negazirovannaya | d0193bec-3f34-4270-990b-8c8c27951780 | /uploads/products/d0193bec-3f34-4270-990b-8c8c27951780/2fcc5fd4-a1d8-4fb5-9739-0707e05904ae.webp | -
+ZY-MIN-500-GLASS-005 | created | still | voda-negazirovannaya | 864ed24a-3bbd-4229-acf4-b9e7f6c48479 | /uploads/products/864ed24a-3bbd-4229-acf4-b9e7f6c48479/efeb84a3-4c1f-4c7c-b2f1-ccf98d69afe1.webp | -
+ZY-SERNOVODSKAYA-500-PET-001 | created | still | voda-negazirovannaya | b4338b2c-83c8-4ec5-8af0-649778339110 | /uploads/products/b4338b2c-83c8-4ec5-8af0-649778339110/45b0a1f4-f8e1-40a6-bf1d-2f3da508850d.webp | -
+ZY-AKVA-500-UNK-002 | created | still | voda-negazirovannaya | fc46fb04-93ed-40eb-b7e3-310242a4bed3 | /uploads/products/fc46fb04-93ed-40eb-b7e3-310242a4bed3/ad868939-aa1a-4749-903b-670b69e8e1aa.webp | -
+ZY-MIN-500-PET-001 | created | still | voda-negazirovannaya | cb9e507c-46b4-48e7-bc48-76a34053db51 | /uploads/products/cb9e507c-46b4-48e7-bc48-76a34053db51/14ef1a98-ca9d-42c3-a41e-c02855f8b86b.webp | -
+ZY-TRI-500-PET-001 | created | still | voda-negazirovannaya | 1f5faafb-5a9a-4289-b99e-903e248dd68f | /uploads/products/1f5faafb-5a9a-4289-b99e-903e248dd68f/020dc149-ae6c-44bd-b2c8-ac963862f77c.webp | -
+ZY-TRI-5000-UNK-001 | created | still | voda-negazirovannaya | 445d4243-de10-498f-900a-c202bcd75c8a | /uploads/products/445d4243-de10-498f-900a-c202bcd75c8a/8caab11a-e498-4897-afa0-6cf9c60bc67b.webp | -
+ZY-SERNOVODSKAYA-500-PET-002 | created | still | voda-negazirovannaya | 95dd3fe7-7cbc-4df8-b5f2-adf2fc210c3f | /uploads/products/95dd3fe7-7cbc-4df8-b5f2-adf2fc210c3f/8feb946d-3084-40cd-bfeb-2ad1534bf4d3.webp | -
+ZY-SERNOVODSKAYA-5000-UNK-001 | created | still | voda-negazirovannaya | cf694a6f-1f41-49ca-bc78-20bb6bacbc82 | /uploads/products/cf694a6f-1f41-49ca-bc78-20bb6bacbc82/07f9d1e2-97be-4793-a365-1efef9957d3b.webp | -
+ZY-SERNOVODSKAYA-500-GLASS-002 | created | still | voda-negazirovannaya | 7c01b426-7574-4d3d-a26a-ebc2f593a08a | /uploads/products/7c01b426-7574-4d3d-a26a-ebc2f593a08a/fe90d82b-cfca-415a-a6e9-ad06ccb5bd99.webp | -
+ZY-RODNIKOVAYA-500-GLASS-001 | created | still | voda-negazirovannaya | 1ab9ee12-44f5-44b6-902d-ad7362e3c29d | /uploads/products/1ab9ee12-44f5-44b6-902d-ad7362e3c29d/83c29f04-6584-4d46-9a2b-91b1e220142b.webp | -
+ZY-RODNIKOVAYA-600-CAN-001 | created | still | voda-negazirovannaya | 23d90037-5013-4da7-9398-9e0b41881c98 | /uploads/products/23d90037-5013-4da7-9398-9e0b41881c98/6ad834a5-35a7-470b-8a94-41e7c3be6cde.webp | -
+ZY-RODNIKOVAYA-600-CAN-002 | created | still | voda-negazirovannaya | 6620cf16-df45-4250-8c4f-7eb3708693d5 | /uploads/products/6620cf16-df45-4250-8c4f-7eb3708693d5/692c3179-8ba3-49ad-a6a9-e5ba2ae08e32.webp | -
+ZY-RODNIKOVAYA-1500-CAN-001 | created | still | voda-negazirovannaya | ae2d5e5a-00cf-4360-a97a-c9ee06fec392 | /uploads/products/ae2d5e5a-00cf-4360-a97a-c9ee06fec392/d479794c-fa44-46dc-a970-459ef1106919.webp | -
+ZY-RODNIKOVAYA-600-CAN-003 | created | still | voda-negazirovannaya | 0e57fe27-49af-4809-b4cd-a2e3c8329d6c | /uploads/products/0e57fe27-49af-4809-b4cd-a2e3c8329d6c/3edfca62-7a9f-4a65-8d56-faf76930dda3.webp | -
+ZY-RODNIKOVAYA-600-CAN-004 | created | still | voda-negazirovannaya | acb40596-ed9f-4ee0-8472-83180e9efb5b | /uploads/products/acb40596-ed9f-4ee0-8472-83180e9efb5b/2bc2a9dc-2e9a-4405-bf08-77834c7a5aaf.webp | -
+ZY-RODNIKI-1500-UNK-001 | created | still | voda-negazirovannaya | 03454113-eb59-4b53-90ea-012e2ed25acd | /uploads/products/03454113-eb59-4b53-90ea-012e2ed25acd/27385b3c-b85c-43cc-a4a0-f11b55eff991.webp | -
+ZY-PITEVAYA-1000-PET-002 | created | still | voda-negazirovannaya | 15ae473a-fbc7-4f1e-8048-51a9a18974b7 | /uploads/products/15ae473a-fbc7-4f1e-8048-51a9a18974b7/0de576da-69da-45ff-a0b2-a9c3c74562b1.webp | -
+ZY-PITEVAYA-650-PET-001 | created | still | voda-negazirovannaya | 955ada77-73a3-4638-93b2-2c6f0f5b8bb9 | /uploads/products/955ada77-73a3-4638-93b2-2c6f0f5b8bb9/df5d3944-ea50-476d-a67b-9c3d34e99e58.webp | -
+ZY-PITEVAYA-1000-PET-003 | created | still | voda-negazirovannaya | 0a37bda4-3a76-42dd-a8a5-aa961d8c59a1 | /uploads/products/0a37bda4-3a76-42dd-a8a5-aa961d8c59a1/cdb9c7fc-eab4-46e7-8989-1e33095bc9a0.webp | -
+ZY-PITEVAYA-650-PET-002 | created | still | voda-negazirovannaya | e8f175a4-9e4d-4333-bb48-6a3cd58fc107 | /uploads/products/e8f175a4-9e4d-4333-bb48-6a3cd58fc107/00cd615a-9117-499a-b82a-525ecd9aa6ef.webp | -
+ZY-PITEVAYA-400-PET-001 | created | still | voda-negazirovannaya | 3f44a9c8-eb7f-4e93-bdbf-8eb7a91f9a8c | /uploads/products/3f44a9c8-eb7f-4e93-bdbf-8eb7a91f9a8c/b1742b19-1edc-4810-9b19-36e8e5173a09.webp | -
+ZY-MIN-550-PET-001 | created | still | voda-negazirovannaya | 249fa4fa-62ea-41e1-898e-6eee7632788a | /uploads/products/249fa4fa-62ea-41e1-898e-6eee7632788a/8a9e0eb6-edec-45ef-b976-de1013567b89.webp | -
+ZY-MEVER-500-GLASS-001 | created | still | voda-negazirovannaya | 1ae90852-59f5-4b49-b42b-1259072b0923 | /uploads/products/1ae90852-59f5-4b49-b42b-1259072b0923/45eb300e-b4ed-4582-887f-aa2d4597a8f0.webp | -
+ZY-MEVER-750-UNK-001 | created | still | voda-negazirovannaya | c21dabbd-d83f-4cca-adf5-fd28e3a1a9e0 | /uploads/products/c21dabbd-d83f-4cca-adf5-fd28e3a1a9e0/129aef5b-751b-483d-8db0-d1f49994def5.webp | -
+ZY-MEVER-1500-PET-001 | created | still | voda-negazirovannaya | bd645495-79ee-4803-8893-7bc17789398f | /uploads/products/bd645495-79ee-4803-8893-7bc17789398f/90836c1a-6109-4a39-906f-1aa9735db7b8.webp | -
+ZY-DENEB-500-GLASS-001 | created | still | voda-negazirovannaya | dc8402f2-a0ab-467f-bf76-3da6da53de05 | /uploads/products/dc8402f2-a0ab-467f-bf76-3da6da53de05/b7414783-997f-4ff7-80f5-fbe3ccac243a.webp | -
+ZY-DENEB-600-PET-002 | created | still | voda-negazirovannaya | 0c2733c4-e0a7-4bb5-b222-38c1d1a64fc3 | /uploads/products/0c2733c4-e0a7-4bb5-b222-38c1d1a64fc3/e9b4b036-8ee7-4a8d-bf31-feb8f865f207.webp | -
+ZY-DENEB-600-PET-003 | created | still | voda-negazirovannaya | 845faf16-9527-4b58-9a2a-ae6512a8a6d4 | /uploads/products/845faf16-9527-4b58-9a2a-ae6512a8a6d4/8bbedf5b-c998-4358-8f38-357064612d02.webp | -
+ZY-DENEB-600-PET-004 | created | still | voda-negazirovannaya | 101f5fcc-8df4-47a5-9e47-60a202c1e74f | /uploads/products/101f5fcc-8df4-47a5-9e47-60a202c1e74f/d80934d2-4bc0-4715-a31e-ff206244cd4d.webp | -
+ZY-DENEB-600-PET-005 | created | still | voda-negazirovannaya | 54679085-e927-4df1-9866-b7165abae9dc | /uploads/products/54679085-e927-4df1-9866-b7165abae9dc/b3602fec-db1f-4477-87d7-07b598209c9b.webp | -
+ZY-DENEB-600-PET-006 | created | still | voda-negazirovannaya | 0064d530-0b8a-4c5f-99c5-d17e09968298 | /uploads/products/0064d530-0b8a-4c5f-99c5-d17e09968298/eb7691bd-a419-4f0f-96c8-106b97a5bac2.webp | -
+ZY-DENEB-1500-PET-002 | created | still | voda-negazirovannaya | f66e382a-1368-408f-b019-1923319c8385 | /uploads/products/f66e382a-1368-408f-b019-1923319c8385/e0f5f346-1a96-409a-802b-303812072303.webp | -
+ZY-ARHYZ-500-GLASS-001 | created | still | voda-negazirovannaya | e61e24df-99f7-42e6-ae81-386fe52c6c14 | /uploads/products/e61e24df-99f7-42e6-ae81-386fe52c6c14/67fca6f3-440b-47e3-979e-fddcbc740d7b.webp | -
+ZY-ARHYZ-330-UNK-001 | created | still | voda-negazirovannaya | e3a2f642-829c-4a02-bc44-7e734b937c5a | /uploads/products/e3a2f642-829c-4a02-bc44-7e734b937c5a/5ea93557-6afe-40de-81cb-74a49734e472.webp | -
+ZY-AKVA-1000-UNK-002 | created | still | voda-negazirovannaya | 6febfdce-8fcb-4d33-b090-3077e183be10 | /uploads/products/6febfdce-8fcb-4d33-b090-3077e183be10/27e2fe2e-16ad-4cfc-908e-0ec4cf913807.webp | -
+ZY-AKVA-500-UNK-003 | created | still | voda-negazirovannaya | 03a9764b-8407-4f1a-bd1a-af56a1b15ff9 | /uploads/products/03a9764b-8407-4f1a-bd1a-af56a1b15ff9/b6e49892-51b3-45b5-8d77-3380523af0d9.webp | -
+
+--- post-import verification ---
+health: ok database=ok
+containers: app-app-1 healthy, app-db-1 healthy
+catalog_guest_total: 257
+catalog_approved_total: 257
+voda-gazirovannaya: 27
+voda-negazirovannaya: 38
+cart_showcase: rejected (400 validation_error)
+interest: works (cleaned up test request)
+orderable_prices: unchanged (13)
+orders: 3
+order_items: 5
+products_total: 259
+showcase_active: 244
+orderable_active: 13
+no_price: 244
+created: 65 skipped: 0 failed: 0 images_uploaded: 65
+package_requires_review: true (13 SKUs)
