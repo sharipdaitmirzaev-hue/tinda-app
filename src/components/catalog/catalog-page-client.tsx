@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   CatalogProductCard,
   type CatalogProduct,
 } from "@/components/catalog/catalog-product-card";
+import { CatalogPagination } from "@/components/catalog/catalog-pagination";
 import {
   EmptyBlock,
   ErrorBlock,
@@ -17,6 +18,7 @@ import {
   CATALOG_QUICK_CATEGORIES,
   CATALOG_SORT_LABELS,
 } from "@/lib/catalog/constants";
+import { clampCatalogPage } from "@/lib/catalog/pagination";
 import { useCatalogViewer } from "@/components/catalog/catalog-viewer-context";
 
 type CategoryNode = {
@@ -94,6 +96,8 @@ export function CatalogPageClient() {
   const [error, set_error] = useState<string | null>(null);
   const [search_input, set_search_input] = useState(q);
   const [filters_open, set_filters_open] = useState(false);
+  const catalog_top_ref = useRef<HTMLElement | null>(null);
+  const prev_page_ref = useRef(page);
 
   const flat_categories = useMemo(
     () => flatten_categories(categories),
@@ -205,6 +209,22 @@ export function CatalogPageClient() {
   useEffect(() => {
     void load_products();
   }, [load_products]);
+
+  // If filters shrink the result set, clamp page into a valid range.
+  useEffect(() => {
+    if (loading) return;
+    const clamped = clampCatalogPage(page, total_pages, total);
+    if (clamped !== page) {
+      update_params({ page: String(clamped) }, false);
+    }
+  }, [loading, page, total, total_pages, update_params]);
+
+  // Scroll to catalog top when the page number changes (Link scroll + fallback).
+  useEffect(() => {
+    if (prev_page_ref.current === page) return;
+    prev_page_ref.current = page;
+    catalog_top_ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [page]);
 
   const has_filters = Boolean(
     q ||
@@ -382,7 +402,7 @@ export function CatalogPageClient() {
         </div>
       </aside>
 
-      <section className="space-y-4">
+      <section ref={catalog_top_ref} className="space-y-4 scroll-mt-20">
         <div className="rounded-xl border border-slate-200 bg-white p-3 sm:p-4">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end">
             <label className="block min-w-0 flex-1 text-sm">
@@ -503,52 +523,32 @@ export function CatalogPageClient() {
 
         {!loading && items.length > 0 ? (
           <>
+            <CatalogPagination
+              placement="top"
+              page={page}
+              page_size={page_size}
+              total={total}
+              total_pages={total_pages}
+              search_params={search_params}
+              disabled={loading}
+            />
+
             <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3 xl:grid-cols-4">
               {items.map((product) => (
                 <CatalogProductCard key={product.id} product={product} />
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-slate-600">
-              <span>
-                Найдено: {total}. Страница {Math.max(page, 1)}
-                {total_pages > 0 ? ` из ${total_pages}` : null}
-              </span>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  type="button"
-                  disabled={page <= 1 || loading}
-                  onClick={() =>
-                    update_params({ page: String(page - 1) }, false)
-                  }
-                  className="min-h-10 rounded-md border px-3 py-1.5 disabled:opacity-40"
-                >
-                  Назад
-                </button>
-                <button
-                  type="button"
-                  disabled={page >= total_pages || loading}
-                  onClick={() =>
-                    update_params({ page: String(page + 1) }, false)
-                  }
-                  className="hidden min-h-10 rounded-md border px-3 py-1.5 disabled:opacity-40 md:inline-flex"
-                >
-                  Далее
-                </button>
-                {page < total_pages ? (
-                  <button
-                    type="button"
-                    disabled={loading}
-                    onClick={() =>
-                      update_params({ page: String(page + 1) }, false)
-                    }
-                    className="min-h-10 rounded-md bg-teal-700 px-3 py-1.5 text-white md:hidden"
-                  >
-                    Показать ещё
-                  </button>
-                ) : null}
-              </div>
-            </div>
+            <CatalogPagination
+              placement="bottom"
+              page={page}
+              page_size={page_size}
+              total={total}
+              total_pages={total_pages}
+              search_params={search_params}
+              disabled={loading}
+              show_load_more
+            />
           </>
         ) : null}
 
