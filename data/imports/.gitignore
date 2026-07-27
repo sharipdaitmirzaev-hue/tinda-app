@@ -1,0 +1,12 @@
+external-product-images/*
+!external-product-images/README.md
+external_product_images_apply_plan/
+external_product_images_review.report.json
+zelenoe_yabloko_gazirovannye_review.report.json
+zelenoe_yabloko_gazirovannye_images_review.report.json
+zelenoe_yabloko_gazirovannye_images_approval.report.json
+zelenoe_yabloko_gazirovannye_candidates.progress.json
+zelenoe_yabloko_gazirovannye_images_review.progress.json
+zelenoe-yabloko-images/original/
+zelenoe-yabloko-images/previews/
+zelenoe-yabloko-images/staging-existing/

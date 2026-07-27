@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-07-27T15:02:01.566Z",
+  "out_xlsx": "/workspace/data/imports/zelenoe-yabloko-water/images-review.xlsx",
+  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-water/candidates.flat.json",
+  "products_file": "/workspace/data/imports/tinda_active_products.snapshot.json",
+  "stats": {
+    "products": 192,
+    "candidates": 70,
+    "exact_match": 0,
+    "probable_match": 0,
+    "conflict": 0,
+    "no_match": 192,
+    "new_product": 70,
+    "no_photo": 12,
+    "watermark": 0,
+    "below_500": 0,
+    "low_quality": 0,
+    "metro_cdn_current": 0,
+    "better_photo": 0,
+    "recommended_approve": 0
+  },
+  "note": "Production not modified. Images not uploaded. image_url not changed. review_status=pending."
+}

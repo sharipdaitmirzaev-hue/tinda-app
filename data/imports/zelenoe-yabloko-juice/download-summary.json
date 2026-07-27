@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-27T15:39:22.959Z",
+  "candidates_file": "/workspace/data/imports/zelenoe-yabloko-juice/candidates.json",
+  "candidates_count": 230,
+  "urls_processed": 230,
+  "downloaded_ok": 221,
+  "errors": 8,
+  "duplicates_sha256": 1,
+  "below_500": 19,
+  "total_original_bytes": 7123314,
+  "original_dir": "/workspace/data/imports/zelenoe-yabloko-juice/original",
+  "preview_dir": "/workspace/data/imports/zelenoe-yabloko-juice/previews",
+  "manifest_path": "/workspace/data/imports/zelenoe-yabloko-juice/manifest.json",
+  "gallery_path": "/workspace/data/imports/zelenoe-yabloko-juice/gallery.html",
+  "production_changed": false,
+  "images_uploaded": false,
+  "image_url_changed": false
+}

@@ -1,0 +1,487 @@
+{
+  "generated_at": "2026-07-27T15:25:55.896Z",
+  "mode": "apply",
+  "backup_path": "/var/backups/tinda/tinda-pre-zelenoe-energy-20260727T152548Z.dump",
+  "source": "/app/tmp/zelenoe-energy/approved-new-import-batch.json",
+  "uploads_root": "/app/public/uploads",
+  "expected_rows": 5,
+  "row_count": 5,
+  "note": "Create-only import of approved_new Zelenoe ENERGY products. No schema change. package_requires_review has no DB column — SKU list recorded below.",
+  "package_requires_review": true,
+  "package_requires_review_detail": {
+    "field_in_schema": false,
+    "flag_value": true,
+    "skus": [
+      "ZY-BURN-449-CAN-001",
+      "ZY-BURN-449-CAN-002",
+      "ZY-BURN-449-CAN-003",
+      "ZY-BURN-449-CAN-004",
+      "ZY-BURN-449-CAN-005"
+    ],
+    "count": 5,
+    "note": "Transport packaging (units_per_package) requires clarification; units_per_package forced to 1."
+  },
+  "category": {
+    "id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+    "slug": "energeticheskie-napitki",
+    "name": "Энергетические напитки",
+    "is_active": true,
+    "parent_id": null
+  },
+  "category_structure": {
+    "energeticheskie_napitki": {
+      "id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "slug": "energeticheskie-napitki",
+      "name": "Энергетические напитки",
+      "is_active": true,
+      "parent_id": null
+    },
+    "energyish": [
+      {
+        "id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "slug": "energeticheskie-napitki",
+        "name": "Энергетические напитки",
+        "is_active": true,
+        "parent_id": null
+      }
+    ]
+  },
+  "preview_checks": {
+    "candidate_count": 5,
+    "expected": 5,
+    "unique_proposed_sku": 5,
+    "unique_flavors": 5,
+    "batch_internal_sku_dupes": 0,
+    "all_brand_burn": true,
+    "all_volume_449": true,
+    "all_package_can": true,
+    "preview_ok": 5,
+    "preview_failed": 0,
+    "all_images_readable": true,
+    "all_mime_allowed": true
+  },
+  "counts": {
+    "preview_ok": null,
+    "preview_failed": null,
+    "created": 5,
+    "skipped": 0,
+    "failed": 0,
+    "images_uploaded": 5
+  },
+  "before": {
+    "products_total": 259,
+    "showcase_active": 244,
+    "orderable_active": 13,
+    "no_price": 244,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "after": {
+    "products_total": 264,
+    "showcase_active": 249,
+    "orderable_active": 13,
+    "no_price": 249,
+    "orders": 3,
+    "order_items": 5,
+    "clients": 3,
+    "interest": 4,
+    "orderable_priced": [
+      {
+        "sku": "E-001",
+        "price_amount": "1450"
+      },
+      {
+        "sku": "J-001",
+        "price_amount": "780"
+      },
+      {
+        "sku": "J-002",
+        "price_amount": "820"
+      },
+      {
+        "sku": "J-003",
+        "price_amount": "540"
+      },
+      {
+        "sku": "K-001",
+        "price_amount": "390"
+      },
+      {
+        "sku": "S-001",
+        "price_amount": "690"
+      },
+      {
+        "sku": "S-002",
+        "price_amount": "560"
+      },
+      {
+        "sku": "T-001",
+        "price_amount": "480"
+      },
+      {
+        "sku": "W-001",
+        "price_amount": "240"
+      },
+      {
+        "sku": "W-002",
+        "price_amount": "310"
+      },
+      {
+        "sku": "W-003",
+        "price_amount": "360"
+      },
+      {
+        "sku": "W-004",
+        "price_amount": "420"
+      },
+      {
+        "sku": "в-1",
+        "price_amount": "2028"
+      }
+    ]
+  },
+  "guards": {
+    "orders_unchanged": true,
+    "order_items_unchanged": true,
+    "clients_unchanged": true,
+    "interest_unchanged": true,
+    "orderable_active_unchanged": true,
+    "orderable_price_drift": [],
+    "products_delta": 5,
+    "all_new_image_urls_local": true
+  },
+  "created_skus": [
+    "ZY-BURN-449-CAN-001",
+    "ZY-BURN-449-CAN-002",
+    "ZY-BURN-449-CAN-003",
+    "ZY-BURN-449-CAN-004",
+    "ZY-BURN-449-CAN-005"
+  ],
+  "items": [
+    {
+      "row": 2,
+      "source_index": 1,
+      "source_name": "Напиток энергетический Берн ж/б 0,449л",
+      "brand": "Burn",
+      "flavor": "classic",
+      "volume_text": "449 мл",
+      "volume_ml": 449,
+      "package_type": "банка",
+      "package_norm": "can",
+      "source_product_url": "https://zelenoeyabloko.ru/product/6786",
+      "local_image_path": "/workspace/data/imports/zelenoe-yabloko-energy/original/01_burn_napitok-energeticheskii-bern-zhb-0449l_449ml.webp",
+      "proposed_sku": "ZY-BURN-449-CAN-001",
+      "category_slug": "energeticheskie-napitki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "2b823559ce55d0000a8a27b6d69661802507e96a30244b02a965395533a4fc58",
+      "resolved_image_path": "/app/tmp/zelenoe-energy/original/01_burn_napitok-energeticheskii-bern-zhb-0449l_449ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 80344,
+      "image_sha256": "2b823559ce55d0000a8a27b6d69661802507e96a30244b02a965395533a4fc58",
+      "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "b048ac4c-9b7d-4822-9adf-5c09a293d5b7",
+      "image_url": "/uploads/products/b048ac4c-9b7d-4822-9adf-5c09a293d5b7/6023dc3e-3066-4cdf-862a-c0d2b633e76c.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:25:55.335Z",
+      "db": {
+        "id": "b048ac4c-9b7d-4822-9adf-5c09a293d5b7",
+        "sku": "ZY-BURN-449-CAN-001",
+        "name": "Напиток энергетический Берн ж/б 0,449л",
+        "brand": "Burn",
+        "image_url": "/uploads/products/b048ac4c-9b7d-4822-9adf-5c09a293d5b7/6023dc3e-3066-4cdf-862a-c0d2b633e76c.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "volume_text": "449 мл",
+        "package_type": "банка"
+      }
+    },
+    {
+      "row": 3,
+      "source_index": 2,
+      "source_name": "Напиток энергетический Берн Тропический Микс ж/б 0,449л",
+      "brand": "Burn",
+      "flavor": "тропический микс",
+      "volume_text": "449 мл",
+      "volume_ml": 449,
+      "package_type": "банка",
+      "package_norm": "can",
+      "source_product_url": "https://zelenoeyabloko.ru/product/50481",
+      "local_image_path": "/workspace/data/imports/zelenoe-yabloko-energy/original/02_burn_napitok-energeticheskii-bern-tropicheskii-miks-z_449ml.webp",
+      "proposed_sku": "ZY-BURN-449-CAN-002",
+      "category_slug": "energeticheskie-napitki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "d7f8a1768737eebc8813ee9c2195790f2edb8aff07e89582e4f12f8a7df8ad92",
+      "resolved_image_path": "/app/tmp/zelenoe-energy/original/02_burn_napitok-energeticheskii-bern-tropicheskii-miks-z_449ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 69782,
+      "image_sha256": "d7f8a1768737eebc8813ee9c2195790f2edb8aff07e89582e4f12f8a7df8ad92",
+      "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "c2698b0e-d292-4bc8-910d-82e6a25c456e",
+      "image_url": "/uploads/products/c2698b0e-d292-4bc8-910d-82e6a25c456e/db6a0829-7970-4f49-b03f-39cbdd81379b.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:25:55.481Z",
+      "db": {
+        "id": "c2698b0e-d292-4bc8-910d-82e6a25c456e",
+        "sku": "ZY-BURN-449-CAN-002",
+        "name": "Напиток энергетический Берн Тропический Микс ж/б 0,449л",
+        "brand": "Burn",
+        "image_url": "/uploads/products/c2698b0e-d292-4bc8-910d-82e6a25c456e/db6a0829-7970-4f49-b03f-39cbdd81379b.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "volume_text": "449 мл",
+        "package_type": "банка"
+      }
+    },
+    {
+      "row": 4,
+      "source_index": 3,
+      "source_name": "Напиток энергетический Берн Apple Kiwi ж/б 0,449л",
+      "brand": "Burn",
+      "flavor": "apple kiwi",
+      "volume_text": "449 мл",
+      "volume_ml": 449,
+      "package_type": "банка",
+      "package_norm": "can",
+      "source_product_url": "https://zelenoeyabloko.ru/product/6783",
+      "local_image_path": "/workspace/data/imports/zelenoe-yabloko-energy/original/03_burn_napitok-energeticheskii-bern-apple-kiwi-zhb-0449_449ml.webp",
+      "proposed_sku": "ZY-BURN-449-CAN-003",
+      "category_slug": "energeticheskie-napitki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "86806977f8d7002eee31b91ac1ba0c95b27e8333938e09fd1179c2439dee6e92",
+      "resolved_image_path": "/app/tmp/zelenoe-energy/original/03_burn_napitok-energeticheskii-bern-apple-kiwi-zhb-0449_449ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 69262,
+      "image_sha256": "86806977f8d7002eee31b91ac1ba0c95b27e8333938e09fd1179c2439dee6e92",
+      "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "a956e7fa-86fa-4b64-a28a-c2f69fee0f8a",
+      "image_url": "/uploads/products/a956e7fa-86fa-4b64-a28a-c2f69fee0f8a/70e8527f-c335-4d99-866d-5abd98998080.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:25:55.613Z",
+      "db": {
+        "id": "a956e7fa-86fa-4b64-a28a-c2f69fee0f8a",
+        "sku": "ZY-BURN-449-CAN-003",
+        "name": "Напиток энергетический Берн Apple Kiwi ж/б 0,449л",
+        "brand": "Burn",
+        "image_url": "/uploads/products/a956e7fa-86fa-4b64-a28a-c2f69fee0f8a/70e8527f-c335-4d99-866d-5abd98998080.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "volume_text": "449 мл",
+        "package_type": "банка"
+      }
+    },
+    {
+      "row": 5,
+      "source_index": 4,
+      "source_name": "Напиток энергетический Берн Apple Апельсин микс ж/б 0,449л",
+      "brand": "Burn",
+      "flavor": "apple апельсин микс",
+      "volume_text": "449 мл",
+      "volume_ml": 449,
+      "package_type": "банка",
+      "package_norm": "can",
+      "source_product_url": "https://zelenoeyabloko.ru/product/50485",
+      "local_image_path": "/workspace/data/imports/zelenoe-yabloko-energy/original/04_burn_napitok-energeticheskii-bern-apple-apelsin-miks-_449ml.webp",
+      "proposed_sku": "ZY-BURN-449-CAN-004",
+      "category_slug": "energeticheskie-napitki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "3ed705311433f5c5198c8c8687a64011e654c78e9292cbad3ed69462d4d5eaed",
+      "resolved_image_path": "/app/tmp/zelenoe-energy/original/04_burn_napitok-energeticheskii-bern-apple-apelsin-miks-_449ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 84008,
+      "image_sha256": "3ed705311433f5c5198c8c8687a64011e654c78e9292cbad3ed69462d4d5eaed",
+      "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "7cac9d17-66b6-4961-bab2-eb5cda59eff5",
+      "image_url": "/uploads/products/7cac9d17-66b6-4961-bab2-eb5cda59eff5/e5d1b35d-739b-4105-98bd-463b1c4390f3.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:25:55.752Z",
+      "db": {
+        "id": "7cac9d17-66b6-4961-bab2-eb5cda59eff5",
+        "sku": "ZY-BURN-449-CAN-004",
+        "name": "Напиток энергетический Берн Apple Апельсин микс ж/б 0,449л",
+        "brand": "Burn",
+        "image_url": "/uploads/products/7cac9d17-66b6-4961-bab2-eb5cda59eff5/e5d1b35d-739b-4105-98bd-463b1c4390f3.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "volume_text": "449 мл",
+        "package_type": "банка"
+      }
+    },
+    {
+      "row": 6,
+      "source_index": 5,
+      "source_name": "Напиток энергетический Берн Гуава ж/б 0,449л",
+      "brand": "Burn",
+      "flavor": "гуава",
+      "volume_text": "449 мл",
+      "volume_ml": 449,
+      "package_type": "банка",
+      "package_norm": "can",
+      "source_product_url": "https://zelenoeyabloko.ru/product/37700",
+      "local_image_path": "/workspace/data/imports/zelenoe-yabloko-energy/original/05_burn_napitok-energeticheskii-bern-guava-zhb-0449l_449ml.webp",
+      "proposed_sku": "ZY-BURN-449-CAN-005",
+      "category_slug": "energeticheskie-napitki",
+      "units_per_package": 1,
+      "package_requires_review": true,
+      "expected_sha256": "1373b13071301d025465bfb9940d49f2bd083b7cfef0a91871ab229d5fe55206",
+      "resolved_image_path": "/app/tmp/zelenoe-energy/original/05_burn_napitok-energeticheskii-bern-guava-zhb-0449l_449ml.webp",
+      "image_readable": true,
+      "image_mime": "image/webp",
+      "image_size": 64218,
+      "image_sha256": "1373b13071301d025465bfb9940d49f2bd083b7cfef0a91871ab229d5fe55206",
+      "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+      "preview_ok": true,
+      "validation_errors": [],
+      "apply_status": "created",
+      "product_id": "c7ce66d8-f6ed-4848-ac42-616eb7e2d543",
+      "image_url": "/uploads/products/c7ce66d8-f6ed-4848-ac42-616eb7e2d543/5e0a8db1-9f01-4023-96cc-fb726af67fef.webp",
+      "upload_result": "uploaded",
+      "error_message": null,
+      "created_at": "2026-07-27T15:25:55.889Z",
+      "db": {
+        "id": "c7ce66d8-f6ed-4848-ac42-616eb7e2d543",
+        "sku": "ZY-BURN-449-CAN-005",
+        "name": "Напиток энергетический Берн Гуава ж/б 0,449л",
+        "brand": "Burn",
+        "image_url": "/uploads/products/c7ce66d8-f6ed-4848-ac42-616eb7e2d543/5e0a8db1-9f01-4023-96cc-fb726af67fef.webp",
+        "sales_status": "showcase",
+        "price_amount": null,
+        "availability": "on_order",
+        "units_per_package": 1,
+        "is_active": true,
+        "category_id": "a3f3ce9e-00db-4cb4-961d-54e48343b03d",
+        "volume_text": "449 мл",
+        "package_type": "банка"
+      }
+    }
+  ],
+  "post_import_verification": {
+    "verified_at": "2026-07-27T15:26:37.221Z",
+    "health": {
+      "ok": true,
+      "database": "ok"
+    },
+    "containers": {
+      "app-app-1": "running healthy",
+      "app-db-1": "running healthy"
+    },
+    "category": {
+      "slug": "energeticheskie-napitki",
+      "catalog_total": 6
+    },
+    "guest_catalog_zy_burn": 5,
+    "cart_showcase_rejected": {
+      "http": 400,
+      "code": "validation_error"
+    },
+    "interest_works": true,
+    "interest_count_restored": 4,
+    "orderable_prices_unchanged": true,
+    "orders": 3,
+    "order_items": 5,
+    "products_total": 264,
+    "showcase_active": 249,
+    "orderable_active": 13,
+    "no_price": 249,
+    "created": 5,
+    "skipped": 0,
+    "failed": 0,
+    "images_uploaded": 5,
+    "package_requires_review": true
+  }
+}

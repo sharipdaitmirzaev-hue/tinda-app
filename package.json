@@ -18,7 +18,22 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "external-images:review": "tsx scripts/external-product-images/build-review.ts",
+    "external-images:download": "tsx scripts/external-product-images/download-confirmed.ts",
+    "external-images:prepare": "tsx scripts/external-product-images/prepare-apply-plan.ts",
+    "zy:gazirovannye-review": "tsx scripts/zelenoe-yabloko/build-gazirovannye-review.ts",
+    "zy:scrape-candidates": "tsx scripts/zelenoe-yabloko/scrape-candidates.ts",
+    "zy:scrape-water": "tsx scripts/zelenoe-yabloko/scrape-water-candidates.ts",
+    "zy:scrape-energy": "tsx scripts/zelenoe-yabloko/scrape-energy-candidates.ts",
+    "zy:scrape-juice": "tsx scripts/zelenoe-yabloko/scrape-juice-candidates.ts",
+    "zy:build-approval": "tsx scripts/zelenoe-yabloko/build-approval.ts",
+    "zelenoe-images:download-all": "tsx scripts/zelenoe-yabloko/download-all-images.ts",
+    "zelenoe-images:gallery": "tsx scripts/zelenoe-yabloko/build-gallery.ts",
+    "zelenoe-images:serve": "tsx scripts/zelenoe-yabloko/gallery-server.ts",
+    "zelenoe-images:auto-review": "tsx scripts/zelenoe-yabloko/auto-review.ts",
+    "zelenoe-images:prepare-approved": "tsx scripts/zelenoe-yabloko/prepare-approved.ts",
+    "zy:second-pass-juice": "tsx scripts/zelenoe-yabloko/second-pass-juice-review.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",
