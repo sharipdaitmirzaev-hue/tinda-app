@@ -160,6 +160,7 @@ describe("product images and catalog soft-delete E1.12", () => {
       sale_unit: "шт",
       min_order_qty: 1,
       availability: "in_stock",
+      sales_status: "orderable",
       is_active: true,
       price_amount: 200,
     });

@@ -105,6 +105,7 @@ describe("client orders E1.10", () => {
           min_order_qty: 12,
           allow_piece_sale: false,
           availability: data.availability ?? "in_stock",
+          sales_status: "orderable",
           is_active: data.is_active ?? true,
           price_amount: 110,
           price_currency: "RUB",

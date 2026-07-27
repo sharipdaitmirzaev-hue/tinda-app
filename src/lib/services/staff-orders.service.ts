@@ -441,6 +441,9 @@ export async function update_staff_order(
 
     // Snapshot prices from current products — never from client payload.
     const order_item_rows = resolved_items.map(({ product, qty }) => {
+      if (product.price_amount === null || product.price_amount === undefined) {
+        throw new AppError(400, "validation_error", "Некорректная цена товара для заказа");
+      }
       const unit_price = money_round(product.price_amount);
       const line_total = calc_line_total(unit_price, qty);
       return {

@@ -266,6 +266,7 @@ describe("catalog E1.5", () => {
       sale_unit: "шт",
       min_order_qty: 1,
       availability: "in_stock",
+      sales_status: "orderable",
       is_active: true,
       price_amount: 150,
     });
@@ -277,6 +278,7 @@ describe("catalog E1.5", () => {
       sale_unit: "шт",
       min_order_qty: 1,
       availability: "in_stock",
+      sales_status: "orderable",
       is_active: false,
       price_amount: 150,
     });
@@ -288,6 +290,7 @@ describe("catalog E1.5", () => {
       sale_unit: "шт",
       min_order_qty: 1,
       availability: "in_stock",
+      sales_status: "orderable",
       is_active: true,
       price_amount: 150,
     });

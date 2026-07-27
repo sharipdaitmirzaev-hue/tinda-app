@@ -20,6 +20,7 @@ export function StaffNav({
   const links = [
     { href: "/staff/orders", label: "Заказы" },
     { href: "/staff/registration-requests", label: "Заявки клиентов" },
+    { href: "/staff/product-interest", label: "Спрос по товарам" },
     ...(can_edit_catalog
       ? [
           { href: "/staff/categories", label: "Категории" },

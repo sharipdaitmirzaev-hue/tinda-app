@@ -2,6 +2,7 @@ import { Prisma } from "@prisma/client";
 import type { Decimal } from "@prisma/client/runtime/library";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
+import { is_product_orderable_for_cart } from "@/lib/catalog/constants";
 import {
   assert_approved_client,
   type AuthUserPayload,
@@ -95,16 +96,24 @@ type CartItemForOrder = {
     allow_piece_sale: boolean;
     availability: string;
     is_active: boolean;
-    price_amount: Decimal | string | number;
+    sales_status: string;
+    price_amount: Decimal | string | number | null;
     price_currency: string;
     category: { is_active: boolean } | null;
   };
 };
 
 function build_order_item_money(
-  product: { price_amount: Decimal | string | number; price_currency: string },
+  product: { price_amount: Decimal | string | number | null; price_currency: string },
   qty: number,
 ) {
+  if (product.price_amount === null || product.price_amount === undefined) {
+    throw new AppError(
+      400,
+      "validation_error",
+      "Некорректная цена товара для заказа",
+    );
+  }
   const unit_price = money_round(product.price_amount);
   const line_total = calc_line_total(unit_price, qty);
   assert_non_negative_money(unit_price, "unit_price");
@@ -144,6 +153,18 @@ function validate_cart_items_for_order(items: CartItemForOrder[]) {
   for (const item of items) {
     const product = item.product;
     const category_inactive = product.category?.is_active === false;
+
+    if (
+      !is_product_orderable_for_cart({
+        is_active: product.is_active,
+        sales_status: (product as { sales_status?: string }).sales_status || "showcase",
+        price_amount: product.price_amount,
+        availability: product.availability,
+        category_is_active: product.category?.is_active,
+      })
+    ) {
+      has_unavailable = true;
+    }
 
     if (!product.is_active || category_inactive) {
       has_unavailable = true;

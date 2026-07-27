@@ -4,11 +4,13 @@ import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
 import { assert_catalog_editor, type AuthUserPayload } from "@/lib/access";
 import { money_round, to_decimal } from "@/lib/money";
+import { SALES_STATUS_VALUES } from "@/lib/catalog/constants";
 
 export type PriceImportRowResult = {
   row: number;
   sku: string | null;
   price_amount: string | null;
+  sales_status: string | null;
   ok: boolean;
   error: string | null;
 };
@@ -20,16 +22,17 @@ function cell_to_string(value: unknown): string {
   return String(value).trim();
 }
 
-function parse_price_amount(raw: string): Decimal | null {
+function parse_price_amount(raw: string): Decimal | null | "invalid" {
   if (!raw) return null;
   const normalized = raw.replace(/\s+/g, "").replace(",", ".");
   if (!normalized) return null;
   try {
     const value = to_decimal(normalized);
-    if (!value.isFinite() || value.isNeg()) return null;
+    if (!value.isFinite() || value.isNeg()) return "invalid";
+    if (value.lte(0)) return "invalid";
     return money_round(value);
   } catch {
-    return null;
+    return "invalid";
   }
 }
 
@@ -64,32 +67,81 @@ export async function import_product_prices_from_workbook(
   let updated = 0;
 
   for (let index = 0; index < rows.length; index += 1) {
-    const row_number = index + 2; // header is row 1
+    const row_number = index + 2;
     const row = rows[index] ?? {};
     const sku = cell_to_string(row.sku ?? row.SKU ?? row.Sku);
     const price_raw = cell_to_string(
       row.price_amount ?? row.PRICE_AMOUNT ?? row.Price_amount ?? row.price,
     );
+    const sales_raw = cell_to_string(
+      row.sales_status ?? row.SALES_STATUS ?? row.Sales_status,
+    ).toLowerCase();
 
     if (!sku) {
       results.push({
         row: row_number,
         sku: null,
         price_amount: price_raw || null,
+        sales_status: sales_raw || null,
         ok: false,
         error: "Не указан sku",
       });
       continue;
     }
 
+    // Never accept metro_price as TINDA price (only when a value is present)
+    const metro_raw = cell_to_string(row.metro_price ?? row.METRO_PRICE);
+    if (!price_raw && metro_raw) {
+      results.push({
+        row: row_number,
+        sku,
+        price_amount: null,
+        sales_status: sales_raw || null,
+        ok: false,
+        error: "metro_price нельзя использовать как price_amount ТИНДА",
+      });
+      continue;
+    }
+
     const price = parse_price_amount(price_raw);
-    if (price === null || price.lte(0)) {
+    if (price === "invalid") {
       results.push({
         row: row_number,
         sku,
         price_amount: price_raw || null,
+        sales_status: sales_raw || null,
         ok: false,
-        error: "Пустая или неправильная цена (price_amount должен быть > 0)",
+        error: "Некорректная цена (должна быть > 0 или пусто)",
+      });
+      continue;
+    }
+
+    const sales_status =
+      sales_raw ||
+      (price ? "orderable" : "showcase");
+    if (
+      sales_raw &&
+      !(SALES_STATUS_VALUES as readonly string[]).includes(sales_raw)
+    ) {
+      results.push({
+        row: row_number,
+        sku,
+        price_amount: price_raw || null,
+        sales_status: sales_raw,
+        ok: false,
+        error: "Некорректный sales_status (showcase|on_request|orderable)",
+      });
+      continue;
+    }
+
+    if (sales_status === "orderable" && (price === null || price.lte(0))) {
+      results.push({
+        row: row_number,
+        sku,
+        price_amount: price_raw || null,
+        sales_status,
+        ok: false,
+        error: "Для orderable нужна price_amount > 0",
       });
       continue;
     }
@@ -99,7 +151,8 @@ export async function import_product_prices_from_workbook(
       results.push({
         row: row_number,
         sku,
-        price_amount: price.toString(),
+        price_amount: price ? price.toString() : null,
+        sales_status,
         ok: false,
         error: "Товар с таким sku не найден",
       });
@@ -111,13 +164,15 @@ export async function import_product_prices_from_workbook(
       data: {
         price_amount: price,
         price_currency: "RUB",
+        sales_status,
       },
     });
     updated += 1;
     results.push({
       row: row_number,
       sku,
-      price_amount: price.toString(),
+      price_amount: price ? price.toString() : null,
+      sales_status,
       ok: true,
       error: null,
     });
@@ -127,6 +182,6 @@ export async function import_product_prices_from_workbook(
     updated,
     failed: results.filter((row) => !row.ok).length,
     results,
-    message: `Обновлено цен: ${updated}`,
+    message: `Обновлено строк: ${updated}`,
   };
 }

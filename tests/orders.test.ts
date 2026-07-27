@@ -150,6 +150,7 @@ describe("orders E1.9", () => {
           min_order_qty: 12,
           allow_piece_sale: false,
           availability: data.availability ?? "in_stock",
+          sales_status: "orderable",
           is_active: data.is_active ?? true,
           image_url: null,
           price_amount: 150,

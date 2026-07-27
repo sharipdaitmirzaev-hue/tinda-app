@@ -35,6 +35,7 @@ model users {
   orders_managed              orders[]                     @relation("order_manager")
   order_status_changes        order_status_history[]
   order_idempotency_keys      order_idempotency_keys[]
+  assigned_interest_requests  product_interest_requests[]  @relation("interest_assigned_manager")
 }
 
 model user_roles {
@@ -94,6 +95,7 @@ model clients {
   city            cities    @relation(fields: [city_id], references: [id])
   cart            carts?
   orders          orders[]
+  interest_requests product_interest_requests[]
 
   @@index([status])
   @@index([manager_id])
@@ -131,23 +133,51 @@ model products {
   allow_piece_sale   Boolean      @default(false)
   description        String?
   availability       String       @db.VarChar(20)
+  /// showcase | on_request | orderable — sales mode (independent of is_active).
+  sales_status       String       @default("showcase") @db.VarChar(20)
   is_promo           Boolean      @default(false)
   is_new             Boolean      @default(false)
   is_hit             Boolean      @default(false)
   image_url          String?
   is_active          Boolean      @default(true)
-  /// Wholesale unit price for approved clients (Decimal, never float in app logic).
-  price_amount       Decimal      @default(0) @db.Decimal(12, 2)
+  /// Wholesale unit price for orderable products. NULL = no price (not zero).
+  price_amount       Decimal?     @db.Decimal(12, 2)
   price_currency     String       @default("RUB") @db.VarChar(3)
   created_at         DateTime     @default(now()) @db.Timestamptz(6)
   updated_at         DateTime     @updatedAt @db.Timestamptz(6)
   category           categories   @relation(fields: [category_id], references: [id])
   cart_items         cart_items[]
   order_items        order_items[]
+  interest_requests  product_interest_requests[]
 
   @@index([category_id])
   @@index([is_active, availability])
+  @@index([is_active, sales_status])
+  @@index([sales_status])
   @@index([name])
+}
+
+model product_interest_requests {
+  id                  String    @id @default(uuid()) @db.Uuid
+  product_id          String    @db.Uuid
+  client_id           String    @db.Uuid
+  requested_qty       Int?
+  /// interest | price_request
+  request_type        String    @db.VarChar(30)
+  comment             String?
+  /// new | contacted | closed
+  status              String    @default("new") @db.VarChar(20)
+  assigned_manager_id String?   @db.Uuid
+  created_at          DateTime  @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime  @updatedAt @db.Timestamptz(6)
+  product             products  @relation(fields: [product_id], references: [id], onDelete: Cascade)
+  client              clients   @relation(fields: [client_id], references: [id], onDelete: Cascade)
+  assigned_manager    users?    @relation("interest_assigned_manager", fields: [assigned_manager_id], references: [id], onDelete: SetNull)
+
+  @@index([status, created_at])
+  @@index([product_id])
+  @@index([client_id])
+  @@index([assigned_manager_id])
 }
 
 model carts {

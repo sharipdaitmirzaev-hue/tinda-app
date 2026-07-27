@@ -1,6 +1,7 @@
 import type { Decimal } from "@prisma/client/runtime/library";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
+import { is_product_orderable_for_cart } from "@/lib/catalog/constants";
 import {
   assert_approved_client,
   type AuthUserPayload,
@@ -37,12 +38,17 @@ type CartProductRow = {
   availability: string;
   image_url: string | null;
   is_active: boolean;
-  price_amount: Decimal | string | number;
+  sales_status: string;
+  price_amount: Decimal | string | number | null;
   price_currency: string;
   category: { is_active: boolean } | null;
 };
 
 function serialize_product(product: CartProductRow): SerializedCartProduct {
+  const amount =
+    product.price_amount === null || product.price_amount === undefined
+      ? 0
+      : money_to_number(product.price_amount);
   return {
     id: product.id,
     sku: product.sku,
@@ -58,7 +64,7 @@ function serialize_product(product: CartProductRow): SerializedCartProduct {
     image_url: product.image_url,
     is_active: product.is_active,
     price: {
-      amount: money_to_number(product.price_amount),
+      amount: amount,
       currency: product.price_currency || "RUB",
       unit: product.sale_unit,
     },
@@ -107,10 +113,21 @@ export function serialize_cart(
   const serialized_items: SerializedCartItem[] = items.map((item) => {
     const evaluated = evaluate_cart_item(item.product, item.qty);
     // Always price from DB product row — never from client input.
-    const unit_price = money_to_number(item.product.price_amount);
-    const line_total = money_to_number(
-      calc_line_total(item.product.price_amount, item.qty),
-    );
+    const priced = is_product_orderable_for_cart({
+      is_active: item.product.is_active,
+      sales_status: item.product.sales_status,
+      price_amount: item.product.price_amount,
+      availability: item.product.availability,
+      category_is_active: item.product.category?.is_active,
+    });
+    const unit_price = priced
+      ? money_to_number(item.product.price_amount as Decimal | string | number)
+      : 0;
+    const line_total = priced
+      ? money_to_number(
+          calc_line_total(item.product.price_amount as Decimal | string | number, item.qty),
+        )
+      : 0;
     const currency = item.product.price_currency || "RUB";
 
     return {
@@ -203,6 +220,22 @@ async function load_product_for_mutation(product_id: string): Promise<CartProduc
 
   if (product.availability === "out_of_stock") {
     throw new AppError(400, "validation_error", "Товара временно нет");
+  }
+
+  if (
+    !is_product_orderable_for_cart({
+      is_active: product.is_active,
+      sales_status: product.sales_status,
+      price_amount: product.price_amount,
+      availability: product.availability,
+      category_is_active: product.category?.is_active,
+    })
+  ) {
+    throw new AppError(
+      400,
+      "validation_error",
+      "Товар нельзя добавить в корзину: недоступен для заказа или нет цены",
+    );
   }
 
   return product;

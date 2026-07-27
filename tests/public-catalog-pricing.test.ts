@@ -131,6 +131,7 @@ describe("public catalog pricing", () => {
         min_order_qty: 6,
         allow_piece_sale: false,
         availability: "in_stock",
+        sales_status: "orderable",
         is_active: true,
         price_amount: 100.5,
         price_currency: "RUB",
@@ -149,6 +150,7 @@ describe("public catalog pricing", () => {
         sale_unit: "шт",
         min_order_qty: 1,
         availability: "in_stock",
+        sales_status: "orderable",
         is_active: false,
         price_amount: 50,
         price_currency: "RUB",
@@ -216,7 +218,7 @@ describe("public catalog pricing", () => {
 
     const staff_payload = serialize_staff_product(product);
     expect(staff_payload.price_amount).toBe(100.5);
-    expect(staff_payload.price.amount).toBe(100.5);
+    expect(staff_payload.price?.amount).toBe(100.5);
   });
 
   it("guest/pending/rejected/blocked catalog API has no price; approved has price", async () => {
@@ -354,6 +356,7 @@ describe("public catalog pricing", () => {
         sale_unit: "шт",
         min_order_qty: 1,
         availability: "in_stock",
+        sales_status: "orderable",
         is_active: true,
         price_amount: 10,
         price_currency: "RUB",
@@ -362,23 +365,23 @@ describe("public catalog pricing", () => {
     cleanup_product_ids.push(other.id);
 
     const sheet = XLSX.utils.json_to_sheet([
-      { sku: other.sku, price_amount: 55.25 },
       { sku: other.sku, price_amount: "" },
       { sku: "MISSING-SKU", price_amount: 12 },
       { sku: other.sku, price_amount: -3 },
+      { sku: other.sku, price_amount: 55.25, sales_status: "orderable" },
     ]);
     const book = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(book, sheet, "prices");
     const buffer = XLSX.write(book, { type: "buffer", bookType: "xlsx" }) as Buffer;
 
     const result = await import_product_prices_from_workbook(director, buffer);
-    expect(result.updated).toBe(1);
-    expect(result.failed).toBe(3);
+    expect(result.updated).toBe(2);
+    expect(result.failed).toBe(2);
 
     const refreshed = await prisma.products.findUniqueOrThrow({
       where: { id: other.id },
     });
-    expect(money_to_number(refreshed.price_amount)).toBe(55.25);
+    expect(money_to_number(refreshed.price_amount!)).toBe(55.25);
   });
 
   it("get_cart after mutations still reads DB price", async () => {

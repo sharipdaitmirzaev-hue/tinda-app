@@ -16,7 +16,7 @@ import {
 } from "@/lib/catalog/product-serializers";
 import {
   assert_non_negative_price,
-  assert_positive_price_for_active,
+  assert_positive_price_if_set,
   money_round,
   type MoneyInput,
 } from "@/lib/money";
@@ -34,6 +34,7 @@ function empty_to_null(value: string | null | undefined): string | null {
 function assert_valid_price_amount(amount: MoneyInput, label = "Цена") {
   try {
     assert_non_negative_price(amount, label);
+    assert_positive_price_if_set(amount, label);
   } catch (error) {
     throw new AppError(
       400,
@@ -43,33 +44,31 @@ function assert_valid_price_amount(amount: MoneyInput, label = "Цена") {
   }
 }
 
-/** Active products must have price_amount > 0. */
-function assert_price_when_active(input: {
-  is_active: boolean;
+/** Validate sales_status + price. Active products may have null price (showcase). */
+function assert_sales_status_price(input: {
+  sales_status: string;
   price_amount: MoneyInput | null | undefined;
 }) {
-  if (!input.is_active) {
-    if (input.price_amount !== null && input.price_amount !== undefined) {
-      assert_valid_price_amount(input.price_amount);
+  const price = input.price_amount;
+  if (price !== null && price !== undefined) {
+    assert_valid_price_amount(price);
+  }
+  if (input.sales_status === "orderable") {
+    if (price === null || price === undefined) {
+      throw new AppError(
+        400,
+        "validation_error",
+        "Для режима «Доступен для заказа» укажите цену больше нуля",
+      );
     }
-    return;
   }
-  if (input.price_amount === null || input.price_amount === undefined) {
-    throw new AppError(
-      400,
-      "validation_error",
-      "Укажите цену для активного товара",
-    );
-  }
-  try {
-    assert_positive_price_for_active(input.price_amount);
-  } catch (error) {
-    throw new AppError(
-      400,
-      "validation_error",
-      error instanceof Error ? error.message : "Укажите цену больше нуля",
-    );
-  }
+}
+
+function normalize_price_for_db(
+  price_amount: number | null | undefined,
+): ReturnType<typeof money_round> | null {
+  if (price_amount === null || price_amount === undefined) return null;
+  return money_round(price_amount);
 }
 
 function sort_to_order(
@@ -116,6 +115,7 @@ export async function list_staff_products(
     q?: string;
     category_id?: string;
     availability?: string;
+    sales_status?: string;
     is_active?: boolean;
     is_promo?: boolean;
     is_new?: boolean;
@@ -130,6 +130,7 @@ export async function list_staff_products(
   const where: Prisma.productsWhereInput = {};
   if (params.category_id) where.category_id = params.category_id;
   if (params.availability) where.availability = params.availability;
+  if (params.sales_status) where.sales_status = params.sales_status;
   if (params.is_active !== undefined) where.is_active = params.is_active;
   if (params.is_promo !== undefined) where.is_promo = params.is_promo;
   if (params.is_new !== undefined) where.is_new = params.is_new;
@@ -212,7 +213,8 @@ export async function create_product(
     is_hit?: boolean;
     image_url?: string | null;
     is_active?: boolean;
-    price_amount: number;
+    sales_status?: string;
+    price_amount?: number | null;
     price_currency?: "RUB";
   },
 ) {
@@ -228,11 +230,11 @@ export async function create_product(
   }
 
   const is_active = input.is_active ?? true;
-  assert_price_when_active({
-    is_active,
+  const sales_status = input.sales_status ?? "showcase";
+  assert_sales_status_price({
+    sales_status,
     price_amount: input.price_amount,
   });
-  assert_valid_price_amount(input.price_amount);
 
   const existing = await prisma.products.findUnique({
     where: { sku: input.sku.trim() },
@@ -255,12 +257,13 @@ export async function create_product(
       allow_piece_sale: input.allow_piece_sale ?? false,
       description: empty_to_null(input.description),
       availability: input.availability,
+      sales_status,
       is_promo: input.is_promo ?? false,
       is_new: input.is_new ?? false,
       is_hit: input.is_hit ?? false,
       image_url: empty_to_null(input.image_url),
       is_active,
-      price_amount: money_round(input.price_amount),
+      price_amount: normalize_price_for_db(input.price_amount),
       price_currency: input.price_currency ?? "RUB",
     },
     include: {
@@ -292,7 +295,8 @@ export async function update_product(
     is_hit: boolean;
     image_url: string | null;
     is_active: boolean;
-    price_amount: number;
+    sales_status: string;
+    price_amount: number | null;
     price_currency: "RUB";
   }>,
 ) {
@@ -324,18 +328,13 @@ export async function update_product(
     );
   }
 
-  if (input.price_amount !== undefined) {
-    assert_valid_price_amount(input.price_amount);
-  }
-
-  const next_is_active =
-    input.is_active !== undefined ? input.is_active : current.is_active;
-  assert_price_when_active({
-    is_active: next_is_active,
-    price_amount:
-      input.price_amount !== undefined
-        ? input.price_amount
-        : current.price_amount,
+  const next_sales_status =
+    input.sales_status !== undefined ? input.sales_status : current.sales_status;
+  const next_price =
+    input.price_amount !== undefined ? input.price_amount : current.price_amount;
+  assert_sales_status_price({
+    sales_status: next_sales_status,
+    price_amount: next_price,
   });
 
   if (input.sku && input.sku.trim() !== current.sku) {
@@ -378,6 +377,9 @@ export async function update_product(
       ...(input.availability !== undefined
         ? { availability: input.availability }
         : {}),
+      ...(input.sales_status !== undefined
+        ? { sales_status: input.sales_status }
+        : {}),
       ...(input.is_promo !== undefined ? { is_promo: input.is_promo } : {}),
       ...(input.is_new !== undefined ? { is_new: input.is_new } : {}),
       ...(input.is_hit !== undefined ? { is_hit: input.is_hit } : {}),
@@ -386,7 +388,7 @@ export async function update_product(
         : {}),
       ...(input.is_active !== undefined ? { is_active: input.is_active } : {}),
       ...(input.price_amount !== undefined
-        ? { price_amount: money_round(input.price_amount) }
+        ? { price_amount: normalize_price_for_db(input.price_amount) }
         : {}),
       ...(input.price_currency !== undefined
         ? { price_currency: input.price_currency }
@@ -516,6 +518,7 @@ export async function list_catalog_products(
     q?: string;
     category_id?: string;
     availability?: string;
+    sales_status?: string;
     is_promo?: boolean;
     is_new?: boolean;
     is_hit?: boolean;
@@ -533,6 +536,7 @@ export async function list_catalog_products(
     where.category_id = params.category_id;
   }
   if (params.availability) where.availability = params.availability;
+  if (params.sales_status) where.sales_status = params.sales_status;
   if (params.is_promo !== undefined) where.is_promo = params.is_promo;
   if (params.is_new !== undefined) where.is_new = params.is_new;
   if (params.is_hit !== undefined) where.is_hit = params.is_hit;

@@ -226,7 +226,9 @@ describe("catalog product API shape E1.7", () => {
         [
           "allow_piece_sale",
           "availability",
+          "availability_label",
           "brand",
+          "can_add_to_cart",
           "category",
           "description",
           "id",
@@ -239,6 +241,8 @@ describe("catalog product API shape E1.7", () => {
           "package_type",
           "price",
           "sale_unit",
+          "sales_status",
+          "sales_status_label",
           "sku",
           "units_per_package",
           "volume_text",

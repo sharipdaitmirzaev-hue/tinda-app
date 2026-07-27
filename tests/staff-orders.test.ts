@@ -160,6 +160,7 @@ describe("staff orders E1.11", () => {
           min_order_qty: 12,
           allow_piece_sale: false,
           availability: "in_stock",
+          sales_status: "orderable",
           is_active: true,
           price_amount: 120,
           price_currency: "RUB",

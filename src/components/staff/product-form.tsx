@@ -27,12 +27,13 @@ type ProductFormValues = {
   allow_piece_sale: boolean;
   description: string;
   availability: string;
+  sales_status: string;
   is_promo: boolean;
   is_new: boolean;
   is_hit: boolean;
   image_url: string;
   is_active: boolean;
-  price_amount: string;
+  price_amount: string; // empty = null
 };
 
 const empty_form: ProductFormValues = {
@@ -48,12 +49,13 @@ const empty_form: ProductFormValues = {
   allow_piece_sale: false,
   description: "",
   availability: "in_stock",
+  sales_status: "showcase",
   is_promo: false,
   is_new: false,
   is_hit: false,
   image_url: "",
   is_active: true,
-  price_amount: "0",
+  price_amount: "",
 };
 
 type Props = {
@@ -156,12 +158,13 @@ export function ProductForm({ product_id, initial }: Props) {
       allow_piece_sale: form.allow_piece_sale,
       description: form.description || null,
       availability: form.availability,
+      sales_status: form.sales_status,
       is_promo: form.is_promo,
       is_new: form.is_new,
       is_hit: form.is_hit,
       image_url: use_manual_url ? form.image_url || null : undefined,
       is_active: form.is_active,
-      price_amount: Number(form.price_amount),
+      price_amount: form.price_amount.trim() === "" ? null : Number(form.price_amount),
       price_currency: "RUB" as const,
     };
 
@@ -502,15 +505,58 @@ export function ProductForm({ product_id, initial }: Props) {
             className="w-full rounded-md border px-3 py-2"
           />
         </Field>
-        <Field label="Цена, ₽" required>
-          <input
+        <Field label="Режим продажи" required>
+          <select
             required
+            value={form.sales_status}
+            onChange={(e) => set_field("sales_status", e.target.value)}
+            className="w-full rounded-md border px-3 py-2"
+          >
+            <option value="showcase">Витрина</option>
+            <option value="on_request">Цена по запросу</option>
+            <option value="orderable">Доступен для заказа</option>
+          </select>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <button
+              type="button"
+              className="rounded border border-slate-300 px-2 py-1 text-xs"
+              onClick={() => set_field("sales_status", "orderable")}
+            >
+              Открыть продажи
+            </button>
+            <button
+              type="button"
+              className="rounded border border-slate-300 px-2 py-1 text-xs"
+              onClick={() => set_field("sales_status", "showcase")}
+            >
+              Перевести в витрину
+            </button>
+            <button
+              type="button"
+              className="rounded border border-slate-300 px-2 py-1 text-xs"
+              onClick={() => set_field("sales_status", "on_request")}
+            >
+              Цена по запросу
+            </button>
+          </div>
+        </Field>
+        <Field
+          label={
+            form.sales_status === "orderable"
+              ? "Цена, ₽ (обязательна)"
+              : "Цена, ₽ (необязательна)"
+          }
+          required={form.sales_status === "orderable"}
+        >
+          <input
+            required={form.sales_status === "orderable"}
             type="number"
             min={0}
             step="0.01"
             value={form.price_amount}
             onChange={(e) => set_field("price_amount", e.target.value)}
             className="w-full rounded-md border px-3 py-2"
+            placeholder="Пусто = без цены"
           />
         </Field>
         <Field label="Наличие" required>

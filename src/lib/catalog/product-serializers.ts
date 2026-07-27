@@ -1,6 +1,11 @@
 import type { Decimal } from "@prisma/client/runtime/library";
 import { money_to_number } from "@/lib/money";
-import { AVAILABILITY_LABELS } from "@/lib/catalog/constants";
+import {
+  AVAILABILITY_LABELS,
+  SALES_STATUS_LABELS,
+  type SalesStatus,
+  is_product_orderable_for_cart,
+} from "@/lib/catalog/constants";
 
 export type ProductPricePayload = {
   amount: number;
@@ -22,12 +27,13 @@ export type ProductRowForSerialize = {
   allow_piece_sale: boolean;
   description: string | null;
   availability: string;
+  sales_status: string;
   is_promo: boolean;
   is_new: boolean;
   is_hit: boolean;
   image_url: string | null;
   is_active: boolean;
-  price_amount: Decimal | string | number;
+  price_amount: Decimal | string | number | null;
   price_currency: string;
   created_at: Date;
   updated_at: Date;
@@ -50,6 +56,19 @@ const FINANCIAL_FIELD_DENYLIST = [
   "amount",
 ] as const;
 
+function sales_status_label(status: string): string {
+  return (
+    SALES_STATUS_LABELS[status as SalesStatus] ?? status
+  );
+}
+
+function has_positive_price(product: ProductRowForSerialize): boolean {
+  if (product.price_amount === null || product.price_amount === undefined) {
+    return false;
+  }
+  return Number(product.price_amount) > 0;
+}
+
 function base_public_fields(product: ProductRowForSerialize) {
   const availability = product.availability as keyof typeof AVAILABILITY_LABELS;
   return {
@@ -69,20 +88,30 @@ function base_public_fields(product: ProductRowForSerialize) {
     availability: product.availability,
     availability_label:
       AVAILABILITY_LABELS[availability] ?? product.availability,
+    sales_status: product.sales_status,
+    sales_status_label: sales_status_label(product.sales_status),
     is_promo: product.is_promo,
     is_new: product.is_new,
     is_hit: product.is_hit,
     image_url: product.image_url,
     is_active: product.is_active,
+    can_add_to_cart: is_product_orderable_for_cart({
+      is_active: product.is_active,
+      sales_status: product.sales_status,
+      price_amount: product.price_amount,
+      availability: product.availability,
+      category_is_active: product.category?.is_active,
+    }),
     created_at: product.created_at.toISOString(),
     updated_at: product.updated_at.toISOString(),
     step: product.allow_piece_sale ? 1 : product.units_per_package,
   };
 }
 
-function build_price(product: ProductRowForSerialize): ProductPricePayload {
+function build_price(product: ProductRowForSerialize): ProductPricePayload | null {
+  if (!has_positive_price(product)) return null;
   return {
-    amount: money_to_number(product.price_amount),
+    amount: money_to_number(product.price_amount as Decimal | string | number),
     currency: "RUB",
     unit: product.sale_unit,
   };
@@ -93,22 +122,31 @@ export function serialize_public_product(product: ProductRowForSerialize) {
   return base_public_fields(product);
 }
 
-/** Approved client catalog payload — includes wholesale unit price only. */
+/**
+ * Approved client catalog payload.
+ * Price only when sales_status=orderable and price_amount > 0.
+ */
 export function serialize_approved_client_product(
   product: ProductRowForSerialize,
 ) {
+  const base = base_public_fields(product);
+  const show_price =
+    product.sales_status === "orderable" && has_positive_price(product);
   return {
-    ...base_public_fields(product),
-    price: build_price(product),
+    ...base,
+    ...(show_price ? { price: build_price(product) } : {}),
   };
 }
 
-/** Staff catalog payload — list/edit fields including price. */
+/** Staff catalog payload — list/edit fields including nullable price. */
 export function serialize_staff_product(product: ProductRowForSerialize) {
+  const price = build_price(product);
   return {
     ...base_public_fields(product),
-    price: build_price(product),
-    price_amount: money_to_number(product.price_amount),
+    ...(price ? { price } : {}),
+    price_amount: has_positive_price(product)
+      ? money_to_number(product.price_amount as Decimal | string | number)
+      : null,
     price_currency: product.price_currency || "RUB",
   };
 }
@@ -131,19 +169,30 @@ export function serialize_public_product_detail(product: ProductRowForSerialize)
     allow_piece_sale: base.allow_piece_sale,
     description: base.description,
     availability: base.availability,
+    availability_label: base.availability_label,
+    sales_status: base.sales_status,
+    sales_status_label: base.sales_status_label,
+    can_add_to_cart: base.can_add_to_cart,
     is_promo: base.is_promo,
     is_new: base.is_new,
     is_hit: base.is_hit,
     image_url: base.image_url,
+    guest_hint:
+      "Войдите или зарегистрируйтесь, чтобы узнать условия поставки",
   };
 }
 
 export function serialize_approved_client_product_detail(
   product: ProductRowForSerialize,
 ) {
+  const base = serialize_public_product_detail(product);
+  const { guest_hint: _ignored, ...rest } = base;
+  void _ignored;
+  const show_price =
+    product.sales_status === "orderable" && has_positive_price(product);
   return {
-    ...serialize_public_product_detail(product),
-    price: build_price(product),
+    ...rest,
+    ...(show_price ? { price: build_price(product) } : {}),
   };
 }
 
