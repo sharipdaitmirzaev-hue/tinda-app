@@ -27,10 +27,17 @@
 }
 
 @layer base {
+  html {
+    /* iPhone notch / home indicator when installed as PWA */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) 0
+      env(safe-area-inset-left, 0px);
+  }
+
   body {
     color: var(--foreground);
     background: var(--background);
     font-family: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+    min-height: 100dvh;
   }
 
   :focus-visible {
@@ -49,6 +56,15 @@
 }
 
 @layer components {
+  /* Clearance for fixed bottom nav + iOS home indicator */
+  .pb-safe-nav {
+    padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .pb-safe-nav-lg {
+    padding-bottom: calc(7rem + env(safe-area-inset-bottom, 0px));
+  }
+
   .ui-container {
     @apply mx-auto w-full max-w-6xl px-4;
   }

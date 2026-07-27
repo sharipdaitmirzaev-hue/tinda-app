@@ -15,7 +15,7 @@ export default async function ProfilePage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <ClientHeader full_name={auth!.user.full_name} />
-      <main className="mx-auto max-w-lg px-4 py-8 pb-24">
+      <main className="mx-auto max-w-lg px-4 py-8 pb-safe-nav">
         <div className="rounded-xl border bg-white p-5 shadow-sm">
           <h1 className="text-2xl font-semibold">Профиль</h1>
           <p className="mt-2 text-slate-600">{auth!.user.full_name}</p>

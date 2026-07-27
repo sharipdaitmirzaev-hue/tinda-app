@@ -10,7 +10,7 @@ export default async function CatalogLayout({
   const auth = await require_client_area();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-teal-50/40 pb-24 md:pb-8">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-teal-50/40 pb-safe-nav md:pb-8">
       <ClientHeader full_name={auth.user.full_name} />
       {children}
       <ClientBottomNav />
