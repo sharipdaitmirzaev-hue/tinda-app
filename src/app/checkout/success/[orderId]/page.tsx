@@ -51,7 +51,7 @@ export default async function CheckoutSuccessPage({ params }: Props) {
 
           <p className="mt-4 text-sm leading-relaxed text-slate-700">
             Менеджер проверит наличие товаров и свяжется с вами для подтверждения
-            условий заказа
+            условий заказа.
           </p>
 
           <dl className="mt-6 space-y-2 text-sm text-slate-700">
