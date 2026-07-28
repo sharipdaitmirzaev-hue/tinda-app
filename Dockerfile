@@ -19,7 +19,15 @@ ENV NODE_ENV=production
 # Build-time placeholders only (runtime secrets come from compose/env).
 ENV DATABASE_URL="postgresql://tinda:tinda@postgres:5432/tinda?schema=public"
 ENV SESSION_SECRET="docker-build-session-secret-placeholder-32chars"
-ENV APP_URL="http://localhost:3000"
+# Public URL baked into metadata/robots/sitemap at build time (override via --build-arg).
+ARG APP_URL=https://tindamarket.ru
+ENV APP_URL=${APP_URL}
+ENV SITE_URL=${APP_URL}
+ENV BASE_URL=${APP_URL}
+ENV NEXTAUTH_URL=${APP_URL}
+ENV NEXT_PUBLIC_APP_URL=${APP_URL}
+ENV SITE_NAME="ТИНДА Маркет"
+ENV SITE_DESCRIPTION="Оптовый каталог напитков и продуктов для магазинов, кафе, ресторанов и мероприятий."
 ENV STORAGE_DRIVER="local"
 RUN npx prisma generate && npm run build
 

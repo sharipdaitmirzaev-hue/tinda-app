@@ -1,27 +1,76 @@
-# Пример Nginx для ТИНДА (HTTPS termination + reverse proxy).
-# Подставьте свой домен и пути к сертификатам Let's Encrypt.
+# Nginx for ТИНДА Маркет (HTTPS termination + reverse proxy).
+# Primary: tindamarket.ru
+# Legacy: tindagrupp.ru / .online → permanent redirect to primary.
 
 upstream tinda_app {
   server 127.0.0.1:3000;
   keepalive 32;
 }
 
+# HTTP: ACME + force HTTPS
 server {
-  listen 80;
-  server_name app.example.com;
-  return 301 https://$host$request_uri;
+  listen 80 default_server;
+  listen [::]:80 default_server;
+  server_name tindamarket.ru www.tindamarket.ru
+               tindagrupp.ru www.tindagrupp.ru
+               tindagrupp.online www.tindagrupp.online
+               134.0.116.84 _;
+
+  location ^~ /.well-known/acme-challenge/ {
+    root /var/www/certbot;
+    default_type "text/plain";
+    allow all;
+  }
+
+  location / {
+    return 301 https://tindamarket.ru$request_uri;
+  }
 }
 
+# HTTPS: www primary → apex
 server {
-  listen 443 ssl http2;
-  server_name app.example.com;
+  listen 443 ssl;
+  listen [::]:443 ssl;
+  http2 on;
+  server_name www.tindamarket.ru;
 
-  ssl_certificate     /etc/letsencrypt/live/app.example.com/fullchain.pem;
-  ssl_certificate_key /etc/letsencrypt/live/app.example.com/privkey.pem;
+  ssl_certificate /etc/letsencrypt/live/tindamarket.ru/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/tindamarket.ru/privkey.pem;
+  include /etc/letsencrypt/options-ssl-nginx.conf;
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
-  client_max_body_size 8m;
+  return 301 https://tindamarket.ru$request_uri;
+}
 
-  # App already sets many security headers; keep proxy minimal to avoid conflicts.
+# HTTPS: legacy domains → primary (keep path + query)
+server {
+  listen 443 ssl;
+  listen [::]:443 ssl;
+  http2 on;
+  server_name tindagrupp.ru www.tindagrupp.ru
+               tindagrupp.online www.tindagrupp.online;
+
+  ssl_certificate /etc/letsencrypt/live/tindagrupp.ru/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/tindagrupp.ru/privkey.pem;
+  include /etc/letsencrypt/options-ssl-nginx.conf;
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+  return 301 https://tindamarket.ru$request_uri;
+}
+
+# Primary HTTPS site
+server {
+  listen 443 ssl;
+  listen [::]:443 ssl;
+  http2 on;
+  server_name tindamarket.ru;
+
+  ssl_certificate /etc/letsencrypt/live/tindamarket.ru/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/tindamarket.ru/privkey.pem;
+  include /etc/letsencrypt/options-ssl-nginx.conf;
+  ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+  client_max_body_size 25m;
   add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
 
   location /api/v1/health {
@@ -30,7 +79,7 @@ server {
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Proto https;
   }
 
   location /uploads/ {
@@ -39,7 +88,7 @@ server {
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Proto https;
     expires 7d;
     access_log off;
   }
@@ -52,7 +101,8 @@ server {
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Proto https;
+    proxy_set_header X-Forwarded-Host $host;
     proxy_read_timeout 60s;
   }
 }

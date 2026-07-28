@@ -26,8 +26,31 @@ export function get_session_secret(): string {
   return secret;
 }
 
+/**
+ * Public site origin. Prefer APP_URL; accept aliases used in production/deploy.
+ * Trailing slash is stripped.
+ */
 export function get_app_url(): string {
-  return (process.env.APP_URL || "http://localhost:3000").replace(/\/$/, "");
+  const raw =
+    process.env.APP_URL?.trim() ||
+    process.env.SITE_URL?.trim() ||
+    process.env.NEXT_PUBLIC_APP_URL?.trim() ||
+    process.env.BASE_URL?.trim() ||
+    process.env.NEXTAUTH_URL?.trim() ||
+    "http://localhost:3000";
+  return raw.replace(/\/$/, "");
+}
+
+/** Public brand name (logo text stays «ТИНДА»). */
+export function get_site_name(): string {
+  return (process.env.SITE_NAME?.trim() || "ТИНДА Маркет").replace(/\s+/g, " ");
+}
+
+export function get_site_tagline(): string {
+  return (
+    process.env.SITE_DESCRIPTION?.trim() ||
+    "Оптовый каталог напитков и продуктов для магазинов, кафе, ресторанов и мероприятий."
+  );
 }
 
 export function get_storage_public_origin(): string | null {
