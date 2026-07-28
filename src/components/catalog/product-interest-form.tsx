@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { UI_GENERIC_ERROR } from "@/lib/i18n/ui-copy";
 
 type Props = {
   product_id: string;
@@ -51,7 +52,7 @@ export function ProductInterestForm({
             : "Запрос отправлен. Менеджер свяжется с вами"),
       );
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_pending(false);
     }

@@ -8,6 +8,10 @@ import {
   useCatalogViewer,
 } from "@/components/catalog/catalog-viewer-context";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
+import {
+  UI_ADDING_TO_ORDER,
+  UI_ADD_TO_ORDER,
+} from "@/lib/i18n/ui-copy";
 import { useAddToServerCart } from "@/hooks/useServerCart";
 import { Toast } from "@/components/catalog/toast";
 import { ProductInterestForm } from "@/components/catalog/product-interest-form";
@@ -79,7 +83,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           {format_rub_price(product.price.amount, product.price.unit)}
           {product.availability === "on_order" ? (
             <span className="mt-1 block text-xs font-normal text-amber-700">
-              Поставка под заказ
+              Под заказ
             </span>
           ) : null}
         </p>
@@ -93,7 +97,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
     } else {
       price_block = (
         <p className="mt-2 text-xs font-medium text-slate-700">
-          Товар представлен в каталоге
+          Витрина
         </p>
       );
     }
@@ -108,7 +112,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
           onClick={() => set_interest("interest")}
         >
-          Сообщить об интересе
+          Интересует товар
         </button>
       );
     } else if (can_cart) {
@@ -119,7 +123,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           onClick={on_add}
           className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
         >
-          {pending ? "Добавляем…" : "В корзину"}
+          {pending ? UI_ADDING_TO_ORDER : UI_ADD_TO_ORDER}
         </button>
       );
     } else if (sales_status === "on_request") {

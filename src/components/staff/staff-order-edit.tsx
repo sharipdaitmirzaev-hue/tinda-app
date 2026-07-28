@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
+import { UI_GENERIC_ERROR, UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
 import {
   check_qty,
   decrease_qty,
@@ -109,7 +110,7 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
       }
       set_items(next_items);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
     } finally {
       set_loading(false);
     }
@@ -213,7 +214,7 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
       }
       router.replace(`/staff/orders/${order_id}`);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка сохранения");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
       set_saving(false);
     }
   }

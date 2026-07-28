@@ -17,7 +17,7 @@ export function money_to_number(value: MoneyInput): number {
 
 export function calc_line_total(unit_price: MoneyInput, qty: number): Decimal {
   if (!Number.isInteger(qty) || qty < 0) {
-    throw new Error("qty must be a non-negative integer");
+    throw new Error("Количество должно быть целым неотрицательным числом");
   }
   return money_round(to_decimal(unit_price).mul(qty));
 }

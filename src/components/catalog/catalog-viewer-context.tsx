@@ -31,9 +31,8 @@ export function useCatalogViewer(): CatalogViewerMode {
 
 export function format_rub_price(amount: number, unit: string): string {
   const formatted = new Intl.NumberFormat("ru-RU", {
-    style: "currency",
-    currency: "RUB",
     maximumFractionDigits: 2,
+    minimumFractionDigits: 0,
   }).format(amount);
-  return `${formatted} / ${unit}`;
+  return `${formatted} ₽ / ${unit}`;
 }

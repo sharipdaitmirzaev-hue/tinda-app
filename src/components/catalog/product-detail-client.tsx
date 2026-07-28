@@ -12,6 +12,11 @@ import {
 } from "@/components/catalog/catalog-viewer-context";
 import { useAddToServerCart } from "@/hooks/useServerCart";
 import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
+import {
+  UI_ADDING_TO_ORDER,
+  UI_ADD_TO_ORDER,
+  UI_LOAD_ERROR,
+} from "@/lib/i18n/ui-copy";
 import { check_qty, get_initial_qty } from "@/lib/quantity";
 
 type CatalogProductDetail = {
@@ -65,7 +70,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
       set_product(next);
       set_qty(get_initial_qty(next));
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
       set_product(null);
     } finally {
       set_loading(false);
@@ -150,7 +155,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
           </p>
           {product.availability === "on_order" ? (
             <p className="mt-1 text-sm text-amber-700">
-              Товар под заказ. Срок поставки уточнит менеджер.
+              Под заказ. Срок поставки уточнит менеджер.
             </p>
           ) : null}
         </div>
@@ -162,7 +167,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
     } else {
       price_block = (
         <p className="text-sm font-medium text-slate-700">
-          Товар представлен в каталоге
+          Витрина
         </p>
       );
     }
@@ -285,7 +290,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
                   onClick={on_add}
                   className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
                 >
-                  {pending ? "Добавляем…" : "В корзину"}
+                  {pending ? UI_ADDING_TO_ORDER : UI_ADD_TO_ORDER}
                 </button>
                 <Link
                   href="/catalog"
@@ -303,7 +308,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
                   className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
                   onClick={() => set_interest("interest")}
                 >
-                  Сообщить об интересе
+                  Интересует товар
                 </button>
               ) : sales_status === "on_request" ? (
                 <button

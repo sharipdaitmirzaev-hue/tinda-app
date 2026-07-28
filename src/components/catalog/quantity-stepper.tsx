@@ -60,7 +60,8 @@ export function QuantityStepper({ product, qty, on_change }: Props) {
       </div>
 
       <p className="text-xs text-slate-500">
-        Заказ кратно {step}. Минимальное количество заказа: {product.min_order_qty}.
+        Количество кратно {step}. Минимальное количество заказа:{" "}
+        {product.min_order_qty}.
         {product.allow_piece_sale
           ? " Доступна продажа поштучно."
           : " Количество должно соответствовать упаковке."}

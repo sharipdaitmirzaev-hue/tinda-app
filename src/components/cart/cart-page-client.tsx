@@ -413,7 +413,7 @@ export function CartPageClient({ notice = null }: { notice?: string | null }) {
               href="/catalog"
               className="rounded-md border border-slate-300 px-4 py-3 text-center text-sm text-slate-800"
             >
-              Продолжить покупки
+              Вернуться в каталог
             </Link>
             {!confirm_clear ? (
               <button

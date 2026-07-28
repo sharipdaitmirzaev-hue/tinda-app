@@ -22,7 +22,7 @@ test("сценарий 1: регистрация → pending → approve → к�
   await page.getByLabel("Эл. почта").fill(client_email);
   await page.getByLabel("Пароль", { exact: true }).fill(client_password);
   await page.getByLabel("Подтверждение пароля").fill(client_password);
-  await page.getByText(/согласен на обработку персональных данных/i).click();
+  await page.getByText(/соглашаюсь на обработку персональных данных/i).click();
   await page.getByRole("button", { name: "Отправить заявку" }).click();
   await expect(page).toHaveURL(/\/pending/);
   await expect(
@@ -48,7 +48,7 @@ test("сценарий 1: регистрация → pending → approve → к�
 test("сценарий 2: корзина → checkout → успех → история", async ({ page }) => {
   await login(page, client_email, client_password);
   await page.goto("/catalog");
-  await page.getByRole("button", { name: "В корзину" }).first().click();
+  await page.getByRole("button", { name: "Добавить в заказ" }).first().click();
   await page.goto("/cart");
   await page.getByRole("link", { name: /оформить заказ/i }).click();
   await expect(page).toHaveURL(/\/checkout/);

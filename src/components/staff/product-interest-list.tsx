@@ -7,6 +7,7 @@ import {
   type InterestRequestStatus,
   type InterestRequestType,
 } from "@/lib/catalog/constants";
+import { UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
 
 type InterestRow = {
   id: string;
@@ -64,7 +65,7 @@ export function ProductInterestList() {
       set_items(data.items || []);
       set_analytics(data.analytics || null);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
     } finally {
       set_loading(false);
     }
@@ -137,7 +138,7 @@ export function ProductInterestList() {
             <table className="min-w-full text-left text-sm">
               <thead className="border-b text-slate-600">
                 <tr>
-                  <th className="py-2 pr-3">SKU</th>
+                  <th className="py-2 pr-3">Артикул</th>
                   <th className="py-2 pr-3">Товар</th>
                   <th className="py-2 pr-3">Запросов</th>
                   <th className="py-2 pr-3">Клиентов</th>

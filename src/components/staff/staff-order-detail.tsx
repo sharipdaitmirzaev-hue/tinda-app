@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
+import { UI_LOAD_ERROR, UI_GENERIC_ERROR } from "@/lib/i18n/ui-copy";
 
 type StaffOrder = {
   id: string;
@@ -96,7 +97,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
       set_is_director(Boolean(data.is_director));
       set_assign_manager_id(data.order.manager?.id ?? "");
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
       set_order(null);
     } finally {
       set_loading(false);
@@ -130,7 +131,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
       set_message(data.message ?? "Готово");
       close();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_busy(false);
     }
@@ -155,7 +156,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
       set_order(data.order);
       set_message(data.message ?? "Менеджер заказа обновлён");
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_busy(false);
     }
@@ -520,7 +521,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
                       set_order(data.order);
                       set_message(data.message);
                     } catch (err) {
-                      set_error(err instanceof Error ? err.message : "Ошибка");
+                      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
                     } finally {
                       set_busy(false);
                     }

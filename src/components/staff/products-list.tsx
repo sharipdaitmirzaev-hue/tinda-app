@@ -4,6 +4,12 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
+import {
+  UI_EMPTY_SEARCH_HINT,
+  UI_EMPTY_SEARCH_TITLE,
+  UI_GENERIC_ERROR,
+  UI_LOAD_ERROR,
+} from "@/lib/i18n/ui-copy";
 
 type CategoryFlat = { id: string; name: string };
 type ProductItem = {
@@ -103,7 +109,7 @@ export function ProductsList() {
         }
       } catch (err) {
         if (!cancelled) {
-          set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+          set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
         }
       } finally {
         if (!cancelled) set_loading(false);
@@ -179,7 +185,7 @@ export function ProductsList() {
       router.refresh();
       update_query({ page: String(page) });
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка импорта");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_import_pending(false);
     }
@@ -368,7 +374,7 @@ export function ProductsList() {
           is_promo ||
           is_new ||
           is_hit
-            ? "Нет результатов поиска"
+            ? `${UI_EMPTY_SEARCH_TITLE}. ${UI_EMPTY_SEARCH_HINT}`
             : "Товаров пока нет"}
         </p>
       ) : null}

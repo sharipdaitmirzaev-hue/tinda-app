@@ -11,6 +11,7 @@ import {
 } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
 import { SALE_UNITS } from "@/lib/catalog/constants";
+import { UI_GENERIC_ERROR, UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
 
 type CategoryFlat = { id: string; name: string };
 
@@ -201,7 +202,7 @@ export function ProductForm({ product_id, initial }: Props) {
       router.push("/staff/products?flash=saved");
       router.refresh();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка сохранения");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_loading(false);
       set_uploading(false);
@@ -220,7 +221,7 @@ export function ProductForm({ product_id, initial }: Props) {
       set_message("Изображение обновлено");
       router.refresh();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
     } finally {
       set_uploading(false);
     }
@@ -245,7 +246,7 @@ export function ProductForm({ product_id, initial }: Props) {
       set_message("Изображение удалено");
       router.refresh();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка удаления");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_uploading(false);
     }
@@ -276,7 +277,7 @@ export function ProductForm({ product_id, initial }: Props) {
       set_message("Товар деактивирован");
       router.refresh();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_loading(false);
     }
@@ -300,7 +301,7 @@ export function ProductForm({ product_id, initial }: Props) {
       set_message("Товар активирован");
       router.refresh();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_loading(false);
     }

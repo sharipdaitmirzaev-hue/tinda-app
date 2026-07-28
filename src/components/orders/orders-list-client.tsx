@@ -9,6 +9,7 @@ import {
   ErrorBlock,
   LoadingBlock,
 } from "@/components/ui/state-blocks";
+import { UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
 
 type OrderListItem = {
   id: string;
@@ -82,7 +83,7 @@ export function OrdersListClient() {
         }
       } catch (err) {
         if (!cancelled) {
-          set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+          set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
           set_items([]);
           set_total(0);
         }

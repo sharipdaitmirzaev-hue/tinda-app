@@ -54,7 +54,7 @@ export const register_schema = z
     email: z
       .string()
       .trim()
-      .email("Укажите корректный email")
+      .email("Укажите корректный адрес эл. почты")
       .max(255),
     address: z
       .string()
@@ -77,7 +77,7 @@ export const register_schema = z
   });
 
 export const login_schema = z.object({
-  login: z.string().trim().min(1, "Укажите email или телефон"),
+  login: z.string().trim().min(1, "Укажите эл. почту или телефон"),
   password: z.string().min(1, "Укажите пароль"),
 });
 

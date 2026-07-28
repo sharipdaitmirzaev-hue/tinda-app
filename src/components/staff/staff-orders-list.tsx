@@ -10,6 +10,7 @@ import {
   ErrorBlock,
   LoadingBlock,
 } from "@/components/ui/state-blocks";
+import { UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
 
 type OrderItem = {
   id: string;
@@ -122,7 +123,7 @@ export function StaffOrdersList({ is_director }: { is_director: boolean }) {
         }
       } catch (err) {
         if (!cancelled) {
-          set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+          set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
           set_items([]);
           set_total(0);
         }
