@@ -7,7 +7,10 @@ import {
   type InterestRequestStatus,
   type InterestRequestType,
 } from "@/lib/catalog/constants";
-import { UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
+import {
+  UI_CLOSE,
+  UI_LOAD_ERROR,
+} from "@/lib/i18n/ui-copy";
 
 type InterestRow = {
   id: string;
@@ -236,7 +239,7 @@ export function ProductInterestList() {
                       className="rounded border border-slate-300 px-2 py-1 text-xs"
                       onClick={() => void set_request_status(row.id, "closed")}
                     >
-                      Закрыть
+                      {UI_CLOSE}
                     </button>
                   </div>
                 </div>

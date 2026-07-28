@@ -1,5 +1,18 @@
 "use client";
 
+import {
+  UI_CANCEL,
+  UI_CART_EMPTY,
+  UI_CLOSE,
+  UI_NO_BRAND,
+  UI_OUT_OF_STOCK,
+  UI_PRODUCT_UNAVAILABLE,
+  UI_QTY_DECREASE,
+  UI_QTY_INCREASE,
+  UI_QTY_LABEL,
+  UI_RETRY,
+} from "@/lib/i18n/ui-copy";
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
@@ -27,8 +40,8 @@ import {
 
 function qty_error_message(item: SerializedCartItem): string | null {
   if (!item.qty_error) return null;
-  if (item.qty_error === "out_of_stock") return "Товара временно нет";
-  if (item.qty_error === "inactive") return "Товар недоступен";
+  if (item.qty_error === "out_of_stock") return UI_OUT_OF_STOCK;
+  if (item.qty_error === "inactive") return UI_PRODUCT_UNAVAILABLE;
 
   const check = check_qty(
     {
@@ -114,7 +127,7 @@ function CartItemRow({
           >
             {product.name}
           </Link>
-          <p className="text-sm text-slate-600">{product.brand || "Без бренда"}</p>
+          <p className="text-sm text-slate-600">{product.brand || UI_NO_BRAND}</p>
           <p className="text-xs text-slate-500">Артикул: {product.sku}</p>
           <p className="text-xs text-slate-600">
             {[product.volume_text, product.package_type]
@@ -145,7 +158,7 @@ function CartItemRow({
             disabled={qty_disabled}
             onClick={() => apply_qty(decrease_qty(quantity_product, item.qty))}
             className="h-10 w-10 rounded-md border border-slate-300 text-lg disabled:opacity-40"
-            aria-label="Уменьшить количество"
+            aria-label={UI_QTY_DECREASE}
           >
             −
           </button>
@@ -163,14 +176,14 @@ function CartItemRow({
               }
             }}
             className="h-10 w-24 rounded-md border border-slate-300 px-2 text-center disabled:bg-slate-50"
-            aria-label="Количество"
+            aria-label={UI_QTY_LABEL}
           />
           <button
             type="button"
             disabled={qty_disabled}
             onClick={() => apply_qty(increase_qty(quantity_product, item.qty))}
             className="h-10 w-10 rounded-md border border-slate-300 text-lg disabled:opacity-40"
-            aria-label="Увеличить количество"
+            aria-label={UI_QTY_INCREASE}
           >
             +
           </button>
@@ -227,7 +240,7 @@ function CartItemRow({
               onClick={() => set_confirm_remove(false)}
               className="rounded-md border border-slate-300 bg-white px-3 py-1.5 disabled:opacity-40"
             >
-              Отмена
+              {UI_CANCEL}
             </button>
           </div>
         )}
@@ -314,7 +327,7 @@ export function CartPageClient({ notice = null }: { notice?: string | null }) {
           </div>
         ) : null}
         <EmptyBlock
-          title="Корзина пуста"
+          title={UI_CART_EMPTY}
           description="Добавьте товары из каталога"
           action={
             <Link href="/catalog" className="ui-btn-primary">
@@ -343,7 +356,7 @@ export function CartPageClient({ notice = null }: { notice?: string | null }) {
               className="mt-1 underline"
               onClick={() => set_banner(null)}
             >
-              Закрыть
+              {UI_CLOSE}
             </button>
           </div>
         ) : null}
@@ -356,7 +369,7 @@ export function CartPageClient({ notice = null }: { notice?: string | null }) {
               onClick={() => void refresh_server_cart()}
               className="ml-3 underline"
             >
-              Повторить
+              {UI_RETRY}
             </button>
           </div>
         ) : null}
@@ -442,7 +455,7 @@ export function CartPageClient({ notice = null }: { notice?: string | null }) {
                     onClick={() => set_confirm_clear(false)}
                     className="rounded-md border border-slate-300 bg-white px-3 py-2 disabled:opacity-40"
                   >
-                    Отмена
+                    {UI_CANCEL}
                   </button>
                 </div>
               </div>

@@ -10,7 +10,11 @@ import {
   ErrorBlock,
   LoadingBlock,
 } from "@/components/ui/state-blocks";
-import { UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
+import {
+  UI_LOADING_ORDERS,
+  UI_LOAD_ERROR,
+  UI_LOAD_ORDERS_ERROR,
+} from "@/lib/i18n/ui-copy";
 
 type OrderItem = {
   id: string;
@@ -115,7 +119,7 @@ export function StaffOrdersList({ is_director }: { is_director: boolean }) {
         );
         const data = await response.json();
         if (!response.ok) {
-          throw new Error(data?.error?.message ?? "Не удалось загрузить заказы");
+          throw new Error(data?.error?.message ?? UI_LOAD_ORDERS_ERROR);
         }
         if (!cancelled) {
           set_items(data.items ?? []);
@@ -319,7 +323,7 @@ export function StaffOrdersList({ is_director }: { is_director: boolean }) {
         </div>
       ) : null}
 
-      {loading ? <LoadingBlock label="Загрузка заказов…" /> : null}
+      {loading ? <LoadingBlock label={UI_LOADING_ORDERS} /> : null}
 
       {error ? (
         <ErrorBlock

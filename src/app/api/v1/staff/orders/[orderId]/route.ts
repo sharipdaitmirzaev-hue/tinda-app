@@ -1,3 +1,7 @@
+import {
+  UI_LOAD_ORDER_ERROR,
+  UI_SAVE_ORDER_ERROR,
+} from "@/lib/i18n/ui-copy";
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { get_current_auth_payload } from "@/lib/auth/current-user";
@@ -33,7 +37,7 @@ export async function GET(_request: Request, { params }: Params) {
       return api_error(error.status, error.code, error.message);
     }
     console.error("get staff order error", error);
-    return api_error(500, "internal_error", "Не удалось загрузить заказ");
+    return api_error(500, "internal_error", UI_LOAD_ORDER_ERROR);
   }
 }
 
@@ -62,6 +66,6 @@ export async function PATCH(request: Request, { params }: Params) {
       return api_error(error.status, error.code, error.message);
     }
     console.error("update staff order error", error);
-    return api_error(500, "internal_error", "Не удалось сохранить заказ");
+    return api_error(500, "internal_error", UI_SAVE_ORDER_ERROR);
   }
 }

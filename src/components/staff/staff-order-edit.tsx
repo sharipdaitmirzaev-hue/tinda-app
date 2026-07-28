@@ -3,7 +3,19 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
-import { UI_GENERIC_ERROR, UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
+import {
+  UI_CANCEL,
+  UI_FIND_PRODUCTS_ERROR,
+  UI_GENERIC_ERROR,
+  UI_INVALID_QTY,
+  UI_LOAD_ERROR,
+  UI_LOAD_ORDER_ERROR,
+  UI_ORDER_NEEDS_ITEMS,
+  UI_PRODUCT_ALREADY_IN_ORDER,
+  UI_SAVE,
+  UI_SAVE_ORDER_ERROR,
+  UI_SAVING,
+} from "@/lib/i18n/ui-copy";
 import {
   check_qty,
   decrease_qty,
@@ -65,7 +77,7 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
       const response = await fetch(`/api/v1/staff/orders/${order_id}`);
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось загрузить заказ");
+        throw new Error(data?.error?.message ?? UI_LOAD_ORDER_ERROR);
       }
       const order = data.order;
       if (!order.can_edit) {
@@ -135,7 +147,7 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
     const response = await fetch(`/api/v1/staff/products?${params.toString()}`);
     const data = await response.json();
     if (!response.ok) {
-      set_error(data?.error?.message ?? "Не удалось найти товары");
+      set_error(data?.error?.message ?? UI_FIND_PRODUCTS_ERROR);
       return;
     }
     set_search_hits(data.items ?? []);
@@ -143,7 +155,7 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
 
   function add_product(product: ProductHit) {
     if (items.some((item) => item.product_id === product.id)) {
-      set_error("Товар уже добавлен в заказ");
+      set_error(UI_PRODUCT_ALREADY_IN_ORDER);
       return;
     }
     const quantity: QuantityProduct = {
@@ -172,14 +184,14 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
     event.preventDefault();
     if (saving) return;
     if (items.length === 0) {
-      set_error("Добавьте хотя бы один товар в заказ");
+      set_error(UI_ORDER_NEEDS_ITEMS);
       return;
     }
     for (const item of items) {
       const check = check_qty(item.quantity, item.qty);
       if (!check.valid) {
         set_error(
-          `${item.product_name}: ${check.message ?? "Некорректное количество"}`,
+          `${item.product_name}: ${check.message ?? UI_INVALID_QTY}`,
         );
         return;
       }
@@ -210,7 +222,7 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
       });
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось сохранить заказ");
+        throw new Error(data?.error?.message ?? UI_SAVE_ORDER_ERROR);
       }
       router.replace(`/staff/orders/${order_id}`);
     } catch (err) {
@@ -472,13 +484,13 @@ export function StaffOrderEdit({ order_id }: { order_id: string }) {
           disabled={saving || items.length === 0}
           className="rounded-md bg-teal-700 px-4 py-3 text-sm text-white disabled:bg-slate-300"
         >
-          {saving ? "Сохраняем…" : "Сохранить"}
+          {saving ? UI_SAVING : UI_SAVE}
         </button>
         <Link
           href={`/staff/orders/${order_id}`}
           className="rounded-md border px-4 py-3 text-sm"
         >
-          Отмена
+          {UI_CANCEL}
         </Link>
       </div>
     </form>

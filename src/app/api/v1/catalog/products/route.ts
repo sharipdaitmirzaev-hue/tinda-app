@@ -1,3 +1,6 @@
+import {
+  UI_LOAD_PRODUCTS_ERROR,
+} from "@/lib/i18n/ui-copy";
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
 import { get_current_auth_payload } from "@/lib/auth/current-user";
@@ -35,6 +38,6 @@ export async function GET(request: Request) {
       return api_error(error.status, error.code, error.message);
     }
     console.error("catalog products error", error);
-    return api_error(500, "internal_error", "Не удалось загрузить товары");
+    return api_error(500, "internal_error", UI_LOAD_PRODUCTS_ERROR);
   }
 }

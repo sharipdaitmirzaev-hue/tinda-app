@@ -5,6 +5,9 @@
  */
 
 import {
+  UI_OUT_OF_STOCK,
+} from "@/lib/i18n/ui-copy";
+import {
   can_add_to_cart,
   check_qty,
   get_initial_qty,
@@ -173,7 +176,7 @@ export function add_to_temporary_cart(
   ensure_hydrated();
 
   if (!can_add_to_cart(product)) {
-    return { ok: false, message: "Товара временно нет" };
+    return { ok: false, message: UI_OUT_OF_STOCK };
   }
 
   const mode = options?.mode ?? "initial_or_step";
@@ -199,7 +202,7 @@ export function add_to_temporary_cart(
   const final_qty = check.valid ? next_qty : check.suggested_qty;
   const normalized = normalize_cart_qty(product, final_qty);
   if (normalized === null) {
-    return { ok: false, message: "Товара временно нет" };
+    return { ok: false, message: UI_OUT_OF_STOCK };
   }
 
   const item: TemporaryCartItem = {

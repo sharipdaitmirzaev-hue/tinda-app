@@ -4,7 +4,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
-import { UI_GENERIC_ERROR, UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
+import {
+  UI_CANCELLING,
+  UI_GENERIC_ERROR,
+  UI_LOAD_ERROR,
+  UI_LOAD_ORDER_ERROR,
+  UI_RETRY,
+} from "@/lib/i18n/ui-copy";
 
 type OrderDetails = {
   id: string;
@@ -76,7 +82,7 @@ export function OrderDetailClient({ order_id }: { order_id: string }) {
       });
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось загрузить заказ");
+        throw new Error(data?.error?.message ?? UI_LOAD_ORDER_ERROR);
       }
       set_order(data.order);
     } catch (err) {
@@ -138,7 +144,7 @@ export function OrderDetailClient({ order_id }: { order_id: string }) {
           onClick={() => void load()}
           className="mt-2 rounded-md bg-red-700 px-3 py-1.5 text-white"
         >
-          Повторить
+          {UI_RETRY}
         </button>
         <button
           type="button"
@@ -226,7 +232,7 @@ export function OrderDetailClient({ order_id }: { order_id: string }) {
               onClick={() => void on_cancel()}
               className="rounded-md bg-red-700 px-4 py-2 text-sm text-white disabled:opacity-40"
             >
-              {cancelling ? "Отменяем…" : "Отменить"}
+              {cancelling ? UI_CANCELLING : "Отменить"}
             </button>
             <button
               type="button"

@@ -1,6 +1,12 @@
 "use client";
 
 import {
+  UI_QTY_DECREASE,
+  UI_QTY_INCREASE,
+  UI_QTY_LABEL,
+} from "@/lib/i18n/ui-copy";
+
+import {
   check_qty,
   decrease_qty,
   get_min_allowed_qty,
@@ -28,7 +34,7 @@ export function QuantityStepper({ product, qty, on_change }: Props) {
           className="h-11 w-11 rounded-md border border-slate-300 text-lg disabled:opacity-40"
           disabled={qty <= min_allowed_qty}
           onClick={() => on_change(decrease_qty(product, qty))}
-          aria-label="Уменьшить количество"
+          aria-label={UI_QTY_DECREASE}
         >
           −
         </button>
@@ -46,14 +52,14 @@ export function QuantityStepper({ product, qty, on_change }: Props) {
             }
             on_change(Number(value));
           }}
-          aria-label="Количество"
+          aria-label={UI_QTY_LABEL}
           className="h-11 w-28 rounded-md border border-slate-300 px-2 text-center"
         />
         <button
           type="button"
           className="h-11 w-11 rounded-md border border-slate-300 text-lg"
           onClick={() => on_change(increase_qty(product, qty))}
-          aria-label="Увеличить количество"
+          aria-label={UI_QTY_INCREASE}
         >
           +
         </button>

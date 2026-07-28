@@ -3,7 +3,16 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
-import { UI_LOAD_ERROR, UI_GENERIC_ERROR } from "@/lib/i18n/ui-copy";
+import {
+  UI_CANCEL,
+  UI_CANCELLING,
+  UI_CLOSE,
+  UI_GENERIC_ERROR,
+  UI_LOAD_ERROR,
+  UI_LOAD_ORDER_ERROR,
+  UI_RETRY,
+  UI_SAVING,
+} from "@/lib/i18n/ui-copy";
 
 type StaffOrder = {
   id: string;
@@ -90,7 +99,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
       const response = await fetch(`/api/v1/staff/orders/${order_id}`);
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось загрузить заказ");
+        throw new Error(data?.error?.message ?? UI_LOAD_ORDER_ERROR);
       }
       set_order(data.order);
       set_managers(data.managers ?? []);
@@ -180,7 +189,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
           onClick={() => void load()}
           className="mt-2 rounded-md bg-red-700 px-3 py-1.5 text-white"
         >
-          Повторить
+          {UI_RETRY}
         </button>
       </div>
     );
@@ -284,7 +293,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
               }
               className="rounded-md bg-teal-700 px-4 py-2 text-sm text-white"
             >
-              {busy ? "Сохраняем…" : "Подтвердить"}
+              {busy ? UI_SAVING : "Подтвердить"}
             </button>
             <button
               type="button"
@@ -292,7 +301,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
               onClick={() => set_confirm_open(false)}
               className="rounded-md border px-4 py-2 text-sm"
             >
-              Отмена
+              {UI_CANCEL}
             </button>
           </div>
         </div>
@@ -338,7 +347,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
               }
               className="rounded-md bg-red-700 px-4 py-2 text-sm text-white disabled:opacity-40"
             >
-              {busy ? "Отменяем…" : "Отменить заказ"}
+              {busy ? UI_CANCELLING : "Отменить заказ"}
             </button>
             <button
               type="button"
@@ -346,7 +355,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
               onClick={() => set_cancel_open(false)}
               className="rounded-md border px-4 py-2 text-sm"
             >
-              Закрыть
+              {UI_CLOSE}
             </button>
           </div>
         </div>
@@ -382,7 +391,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
               }
               className="rounded-md bg-teal-700 px-4 py-2 text-sm text-white"
             >
-              {busy ? "Сохраняем…" : "Да, доставлен"}
+              {busy ? UI_SAVING : "Да, доставлен"}
             </button>
             <button
               type="button"
@@ -390,7 +399,7 @@ export function StaffOrderDetail({ order_id }: { order_id: string }) {
               onClick={() => set_deliver_open(false)}
               className="rounded-md border px-4 py-2 text-sm"
             >
-              Отмена
+              {UI_CANCEL}
             </button>
           </div>
         </div>

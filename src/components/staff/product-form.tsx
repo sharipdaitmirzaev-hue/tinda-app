@@ -11,7 +11,12 @@ import {
 } from "react";
 import { ProductImage } from "@/components/catalog/product-image";
 import { SALE_UNITS } from "@/lib/catalog/constants";
-import { UI_GENERIC_ERROR, UI_LOAD_ERROR } from "@/lib/i18n/ui-copy";
+import {
+  UI_GENERIC_ERROR,
+  UI_LOAD_ERROR,
+  UI_SAVE,
+  UI_SAVING,
+} from "@/lib/i18n/ui-copy";
 
 type CategoryFlat = { id: string; name: string };
 
@@ -665,7 +670,7 @@ export function ProductForm({ product_id, initial }: Props) {
           disabled={loading || uploading}
           className="rounded-md bg-teal-700 px-4 py-2 text-sm text-white disabled:opacity-60"
         >
-          {loading || uploading ? "Сохранение…" : "Сохранить"}
+          {loading || uploading ? UI_SAVING : UI_SAVE}
         </button>
         {product_id && form.is_active ? (
           <button

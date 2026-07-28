@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { UI_GENERIC_ERROR } from "@/lib/i18n/ui-copy";
+import {
+  UI_CLOSE,
+  UI_GENERIC_ERROR,
+  UI_SUBMITTING,
+} from "@/lib/i18n/ui-copy";
 
 type Props = {
   product_id: string;
@@ -68,7 +72,7 @@ export function ProductInterestForm({
             className="text-sm text-slate-500"
             onClick={on_close}
           >
-            Закрыть
+            {UI_CLOSE}
           </button>
         </div>
 
@@ -100,7 +104,7 @@ export function ProductInterestForm({
               disabled={pending}
               className="w-full rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:bg-slate-300"
             >
-              {pending ? "Отправка…" : "Отправить запрос"}
+              {pending ? UI_SUBMITTING : "Отправить запрос"}
             </button>
           </form>
         )}

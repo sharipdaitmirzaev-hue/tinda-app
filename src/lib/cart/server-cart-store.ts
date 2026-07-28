@@ -4,6 +4,9 @@
  */
 
 import {
+  UI_OUT_OF_STOCK,
+} from "@/lib/i18n/ui-copy";
+import {
   can_add_to_cart,
   get_initial_qty,
   get_order_step,
@@ -363,7 +366,7 @@ export async function add_from_catalog_card(
   product: AddableCartProduct,
 ): Promise<SerializedCart> {
   if (!can_add_to_cart(product)) {
-    throw new Error("Товара временно нет");
+    throw new Error(UI_OUT_OF_STOCK);
   }
   if (!state.cart) {
     await bootstrap_server_cart();
@@ -383,7 +386,7 @@ export async function add_from_product_detail(
   qty: number,
 ): Promise<SerializedCart> {
   if (!can_add_to_cart(product)) {
-    throw new Error("Товара временно нет");
+    throw new Error(UI_OUT_OF_STOCK);
   }
   return add_server_cart_item(product.product_id, qty);
 }

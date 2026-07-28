@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  UI_OFFLINE_ERROR,
+  UI_SUBMITTING,
+} from "@/lib/i18n/ui-copy";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
@@ -73,7 +78,7 @@ export function RegisterForm() {
       router.replace(data.redirect_to ?? "/pending");
       router.refresh();
     } catch {
-      set_error("Нет соединения. Проверьте интернет.");
+      set_error(UI_OFFLINE_ERROR);
     } finally {
       set_loading(false);
     }
@@ -182,7 +187,7 @@ export function RegisterForm() {
         disabled={loading}
         className="w-full rounded-md bg-teal-700 px-4 py-2.5 text-white hover:bg-teal-800 disabled:opacity-60"
       >
-        {loading ? "Отправка…" : "Отправить заявку"}
+        {loading ? UI_SUBMITTING : "Отправить заявку"}
       </button>
 
       <p className="text-center text-sm text-slate-600">

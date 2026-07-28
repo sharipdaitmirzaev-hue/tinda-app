@@ -1,5 +1,9 @@
 "use client";
 
+import {
+  UI_CANCEL,
+} from "@/lib/i18n/ui-copy";
+
 import { FormEvent, useEffect, useId, useRef, useState } from "react";
 
 type Props = {
@@ -116,7 +120,7 @@ export function RejectRequestModal({
               disabled={loading}
               className="ui-btn-secondary"
             >
-              Отмена
+              {UI_CANCEL}
             </button>
             <button
               type="submit"

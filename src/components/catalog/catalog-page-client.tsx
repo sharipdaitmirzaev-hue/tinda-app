@@ -14,6 +14,7 @@ import {
   UI_EMPTY_SEARCH_HINT,
   UI_EMPTY_SEARCH_TITLE,
   UI_LOAD_ERROR,
+  UI_LOAD_PRODUCTS_ERROR,
 } from "@/lib/i18n/ui-copy";
 
 type CategoryNode = {
@@ -115,7 +116,7 @@ export function CatalogPageClient() {
       const response = await fetch(`/api/v1/catalog/products?${params}`);
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось загрузить товары");
+        throw new Error(data?.error?.message ?? UI_LOAD_PRODUCTS_ERROR);
       }
       set_items(data.items ?? []);
       set_total(data.total ?? 0);

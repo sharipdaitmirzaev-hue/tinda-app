@@ -8,6 +8,11 @@ import {
 } from "@/lib/access";
 import type { ProductSort } from "@/lib/catalog/constants";
 import {
+  normalize_product_name,
+  normalize_volume_text,
+  product_dedupe_key,
+} from "@/lib/catalog/product-text-normalize";
+import {
   serialize_approved_client_product,
   serialize_approved_client_product_detail,
   serialize_public_product,
@@ -243,14 +248,48 @@ export async function create_product(
     throw new AppError(409, "conflict", "Артикул уже используется");
   }
 
+  const name = normalize_product_name(input.name);
+  const volume_text = normalize_volume_text(empty_to_null(input.volume_text));
+  const brand = empty_to_null(input.brand);
+  const package_type = empty_to_null(input.package_type);
+
+  const near_dupes = await prisma.products.findMany({
+    select: {
+      id: true,
+      sku: true,
+      name: true,
+      brand: true,
+      volume_text: true,
+      package_type: true,
+      units_per_package: true,
+    },
+  });
+  const create_key = product_dedupe_key({
+    name,
+    brand,
+    volume_text,
+    package_type,
+    units_per_package: input.units_per_package,
+  });
+  const collision = near_dupes.find(
+    (row) => product_dedupe_key(row) === create_key,
+  );
+  if (collision) {
+    throw new AppError(
+      409,
+      "conflict",
+      `Похожий товар уже есть в каталоге (артикул ${collision.sku}). Проверьте название, объём и упаковку`,
+    );
+  }
+
   const product = await prisma.products.create({
     data: {
       sku: input.sku.trim(),
-      name: input.name.trim(),
-      brand: empty_to_null(input.brand),
+      name,
+      brand,
       category_id: input.category_id,
-      volume_text: empty_to_null(input.volume_text),
-      package_type: empty_to_null(input.package_type),
+      volume_text,
+      package_type,
       units_per_package: input.units_per_package,
       sale_unit: input.sale_unit,
       min_order_qty: input.min_order_qty,
@@ -346,21 +385,64 @@ export async function update_product(
     }
   }
 
+  const next_name =
+    input.name !== undefined
+      ? normalize_product_name(input.name)
+      : normalize_product_name(current.name);
+  const next_volume =
+    input.volume_text !== undefined
+      ? normalize_volume_text(empty_to_null(input.volume_text))
+      : normalize_volume_text(current.volume_text);
+  const next_brand =
+    input.brand !== undefined ? empty_to_null(input.brand) : current.brand;
+  const next_package =
+    input.package_type !== undefined
+      ? empty_to_null(input.package_type)
+      : current.package_type;
+  const next_upp =
+    input.units_per_package !== undefined
+      ? input.units_per_package
+      : current.units_per_package;
+
+  const update_key = product_dedupe_key({
+    name: next_name,
+    brand: next_brand,
+    volume_text: next_volume,
+    package_type: next_package,
+    units_per_package: next_upp,
+  });
+  const siblings = await prisma.products.findMany({
+    where: { id: { not: product_id } },
+    select: {
+      id: true,
+      sku: true,
+      name: true,
+      brand: true,
+      volume_text: true,
+      package_type: true,
+      units_per_package: true,
+    },
+  });
+  const collision = siblings.find((row) => product_dedupe_key(row) === update_key);
+  if (collision) {
+    throw new AppError(
+      409,
+      "conflict",
+      `Похожий товар уже есть в каталоге (артикул ${collision.sku}). Проверьте название, объём и упаковку`,
+    );
+  }
+
   const product = await prisma.products.update({
     where: { id: product_id },
     data: {
       ...(input.sku !== undefined ? { sku: input.sku.trim() } : {}),
-      ...(input.name !== undefined ? { name: input.name.trim() } : {}),
-      ...(input.brand !== undefined ? { brand: empty_to_null(input.brand) } : {}),
+      name: next_name,
+      brand: next_brand,
       ...(input.category_id !== undefined
         ? { category_id: input.category_id }
         : {}),
-      ...(input.volume_text !== undefined
-        ? { volume_text: empty_to_null(input.volume_text) }
-        : {}),
-      ...(input.package_type !== undefined
-        ? { package_type: empty_to_null(input.package_type) }
-        : {}),
+      volume_text: next_volume,
+      package_type: next_package,
       ...(input.units_per_package !== undefined
         ? { units_per_package: input.units_per_package }
         : {}),

@@ -9,6 +9,7 @@ import {
   UI_EMPTY_SEARCH_TITLE,
   UI_GENERIC_ERROR,
   UI_LOAD_ERROR,
+  UI_LOAD_PRODUCTS_ERROR,
 } from "@/lib/i18n/ui-copy";
 
 type CategoryFlat = { id: string; name: string };
@@ -101,7 +102,7 @@ export function ProductsList() {
         );
         const data = await response.json();
         if (!response.ok) {
-          throw new Error(data?.error?.message ?? "Не удалось загрузить товары");
+          throw new Error(data?.error?.message ?? UI_LOAD_PRODUCTS_ERROR);
         }
         if (!cancelled) {
           set_items(data.items ?? []);

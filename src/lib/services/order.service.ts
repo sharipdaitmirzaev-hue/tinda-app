@@ -1,3 +1,10 @@
+import {
+  UI_CART_EMPTY,
+  UI_INVALID_QTY,
+  UI_ORDER_NEEDS_ITEMS,
+  UI_OUT_OF_STOCK,
+  UI_PRODUCT_UNAVAILABLE,
+} from "@/lib/i18n/ui-copy";
 import { Prisma } from "@prisma/client";
 import type { Decimal } from "@prisma/client/runtime/library";
 import { prisma } from "@/lib/db";
@@ -144,7 +151,7 @@ function build_order_totals(line_totals: Array<Decimal | string | number>) {
 
 function validate_cart_items_for_order(items: CartItemForOrder[]) {
   if (items.length === 0) {
-    throw new AppError(400, "validation_error", "Корзина пуста");
+    throw new AppError(400, "validation_error", UI_CART_EMPTY);
   }
 
   let has_unavailable = false;
@@ -663,13 +670,13 @@ async function load_products_for_order_update(
       throw new AppError(400, "validation_error", "Товар не найден");
     }
     if (!product.is_active) {
-      throw new AppError(400, "validation_error", "Товар недоступен");
+      throw new AppError(400, "validation_error", UI_PRODUCT_UNAVAILABLE);
     }
     if (!product.category?.is_active) {
       throw new AppError(400, "validation_error", "Категория товара недоступна");
     }
     if (product.availability === "out_of_stock") {
-      throw new AppError(400, "validation_error", "Товара временно нет");
+      throw new AppError(400, "validation_error", UI_OUT_OF_STOCK);
     }
 
     const check = check_qty(
@@ -686,7 +693,7 @@ async function load_products_for_order_update(
       throw new AppError(
         400,
         "validation_error",
-        check.message ?? "Некорректное количество",
+        check.message ?? UI_INVALID_QTY,
       );
     }
 
@@ -732,7 +739,7 @@ export async function update_client_order(
       throw new AppError(
         400,
         "validation_error",
-        "Добавьте хотя бы один товар в заказ",
+        UI_ORDER_NEEDS_ITEMS,
       );
     }
 

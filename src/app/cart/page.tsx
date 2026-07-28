@@ -1,3 +1,6 @@
+import {
+  UI_CART_EMPTY,
+} from "@/lib/i18n/ui-copy";
 import { CartPageClient } from "@/components/cart/cart-page-client";
 import { ClientBottomNav } from "@/components/client/client-bottom-nav";
 import { ClientHeader } from "@/components/client/client-header";
@@ -12,7 +15,7 @@ export default async function CartPage({ searchParams }: Props) {
   const params = await searchParams;
   const notice =
     params.notice === "empty"
-      ? "Корзина пуста"
+      ? UI_CART_EMPTY
       : params.notice === "errors"
         ? "Исправьте ошибки в корзине перед оформлением заказа"
         : null;

@@ -1,5 +1,9 @@
 "use client";
 
+import {
+  UI_WHOLESALE_CATALOG,
+} from "@/lib/i18n/ui-copy";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogoutButton } from "@/components/auth/logout-button";
@@ -24,7 +28,7 @@ export function ClientHeader({ full_name }: { full_name?: string }) {
             ТИНДА
           </p>
           <p className="truncate text-sm text-slate-600">
-            {full_name ? `Здравствуйте, ${full_name}` : "Оптовый каталог"}
+            {full_name ? `Здравствуйте, ${full_name}` : UI_WHOLESALE_CATALOG}
           </p>
         </Link>
         <nav
