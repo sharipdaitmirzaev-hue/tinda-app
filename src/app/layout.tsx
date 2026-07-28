@@ -20,9 +20,6 @@ export const metadata: Metadata = {
   },
   description: site_description,
   applicationName: site_name,
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "ru_RU",
