@@ -1,3 +1,8 @@
+import {
+  UI_INVALID_QTY,
+  UI_OUT_OF_STOCK,
+  UI_PRODUCT_UNAVAILABLE,
+} from "@/lib/i18n/ui-copy";
 import type { Decimal } from "@prisma/client/runtime/library";
 import { prisma } from "@/lib/db";
 import { AppError } from "@/lib/http/errors";
@@ -211,7 +216,7 @@ async function load_product_for_mutation(product_id: string): Promise<CartProduc
   }
 
   if (!product.is_active) {
-    throw new AppError(400, "validation_error", "Товар недоступен");
+    throw new AppError(400, "validation_error", UI_PRODUCT_UNAVAILABLE);
   }
 
   if (!product.category?.is_active) {
@@ -219,7 +224,7 @@ async function load_product_for_mutation(product_id: string): Promise<CartProduc
   }
 
   if (product.availability === "out_of_stock") {
-    throw new AppError(400, "validation_error", "Товара временно нет");
+    throw new AppError(400, "validation_error", UI_OUT_OF_STOCK);
   }
 
   if (
@@ -257,7 +262,7 @@ function assert_qty_for_product(product: CartProductRow, qty: number) {
     throw new AppError(
       400,
       "validation_error",
-      check.message ?? "Некорректное количество",
+      check.message ?? UI_INVALID_QTY,
     );
   }
 
@@ -268,7 +273,7 @@ function assert_qty_for_product(product: CartProductRow, qty: number) {
     availability: product.availability,
     is_active: product.is_active,
   })) {
-    throw new AppError(400, "validation_error", "Товара временно нет");
+    throw new AppError(400, "validation_error", UI_OUT_OF_STOCK);
   }
 }
 

@@ -9,6 +9,11 @@ import {
   ErrorBlock,
   LoadingBlock,
 } from "@/components/ui/state-blocks";
+import {
+  UI_LOADING_ORDERS,
+  UI_LOAD_ERROR,
+  UI_LOAD_ORDERS_ERROR,
+} from "@/lib/i18n/ui-copy";
 
 type OrderListItem = {
   id: string;
@@ -74,7 +79,7 @@ export function OrdersListClient() {
         );
         const data = await response.json();
         if (!response.ok) {
-          throw new Error(data?.error?.message ?? "Не удалось загрузить заказы");
+          throw new Error(data?.error?.message ?? UI_LOAD_ORDERS_ERROR);
         }
         if (!cancelled) {
           set_items(data.items ?? []);
@@ -82,7 +87,7 @@ export function OrdersListClient() {
         }
       } catch (err) {
         if (!cancelled) {
-          set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+          set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
           set_items([]);
           set_total(0);
         }
@@ -187,7 +192,7 @@ export function OrdersListClient() {
         </div>
       </form>
 
-      {loading ? <LoadingBlock label="Загрузка заказов…" /> : null}
+      {loading ? <LoadingBlock label={UI_LOADING_ORDERS} /> : null}
 
       {error ? (
         <ErrorBlock

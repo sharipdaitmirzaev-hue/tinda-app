@@ -1,3 +1,7 @@
+import {
+  UI_OUT_OF_STOCK,
+  UI_PRODUCT_UNAVAILABLE,
+} from "@/lib/i18n/ui-copy";
 export type QuantityProduct = {
   units_per_package: number;
   min_order_qty: number;
@@ -74,7 +78,7 @@ export function check_qty(product: QuantityProduct, qty: number): QuantityCheck 
       min_allowed_qty,
       suggested_qty,
       qty_error: "inactive",
-      message: "Товар недоступен",
+      message: UI_PRODUCT_UNAVAILABLE,
     };
   }
 
@@ -85,7 +89,7 @@ export function check_qty(product: QuantityProduct, qty: number): QuantityCheck 
       min_allowed_qty,
       suggested_qty,
       qty_error: "out_of_stock",
-      message: "Товара временно нет",
+      message: UI_OUT_OF_STOCK,
     };
   }
 

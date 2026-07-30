@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
+import { UI_ADDED_TO_ORDER } from "@/lib/i18n/ui-copy";
 import {
   add_from_catalog_card,
   add_from_product_detail,
@@ -76,7 +77,7 @@ export function useAddToServerCart() {
     set_pending(true);
     try {
       await add_from_catalog_card(product);
-      set_toast("Товар добавлен в корзину");
+      set_toast(UI_ADDED_TO_ORDER);
       return { ok: true as const };
     } catch (error) {
       const message =
@@ -93,7 +94,7 @@ export function useAddToServerCart() {
     set_pending(true);
     try {
       await add_from_product_detail(product, qty);
-      set_toast("Товар добавлен в корзину");
+      set_toast(UI_ADDED_TO_ORDER);
       return { ok: true as const };
     } catch (error) {
       const message =

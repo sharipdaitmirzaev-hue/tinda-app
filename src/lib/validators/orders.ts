@@ -1,3 +1,7 @@
+import {
+  UI_ORDER_NEEDS_ITEMS,
+  UI_PRODUCT_ALREADY_IN_ORDER,
+} from "@/lib/i18n/ui-copy";
 import { z } from "zod";
 import { today_date_key } from "@/lib/dates";
 import { normalize_ru_phone } from "@/lib/phone";
@@ -101,7 +105,7 @@ export const update_client_order_schema = z
     ...delivery_fields,
     items: z
       .array(order_item_input_schema)
-      .min(1, "Добавьте хотя бы один товар в заказ"),
+      .min(1, UI_ORDER_NEEDS_ITEMS),
   })
   .superRefine((data, ctx) => {
     refine_delivery_and_phone(data, ctx);
@@ -112,7 +116,7 @@ export const update_client_order_schema = z
         ctx.addIssue({
           code: "custom",
           path: ["items", index, "product_id"],
-          message: "Товар уже добавлен в заказ",
+          message: UI_PRODUCT_ALREADY_IN_ORDER,
         });
       }
       seen.add(item.product_id);
@@ -208,7 +212,7 @@ export const update_staff_order_schema = z
     manager_comment: optional_comment,
     items: z
       .array(order_item_input_schema)
-      .min(1, "Добавьте хотя бы один товар в заказ"),
+      .min(1, UI_ORDER_NEEDS_ITEMS),
   })
   .superRefine((data, ctx) => {
     refine_delivery_and_phone(data, ctx, { allow_past_date: true });
@@ -219,7 +223,7 @@ export const update_staff_order_schema = z
         ctx.addIssue({
           code: "custom",
           path: ["items", index, "product_id"],
-          message: "Товар уже добавлен в заказ",
+          message: UI_PRODUCT_ALREADY_IN_ORDER,
         });
       }
       seen.add(item.product_id);

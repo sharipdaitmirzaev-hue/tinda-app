@@ -7,7 +7,14 @@ import {
   format_rub_price,
   useCatalogViewer,
 } from "@/components/catalog/catalog-viewer-context";
-import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
+import { AVAILABILITY_LABELS, SALES_STATUS_LABELS, type Availability } from "@/lib/catalog/constants";
+import {
+  UI_ADDING_TO_ORDER,
+  UI_ADD_TO_ORDER,
+  UI_INTEREST_IN_PRODUCT,
+  UI_NO_BRAND,
+  UI_REQUEST_PRICE,
+} from "@/lib/i18n/ui-copy";
 import { useAddToServerCart } from "@/hooks/useServerCart";
 import { Toast } from "@/components/catalog/toast";
 import { ProductInterestForm } from "@/components/catalog/product-interest-form";
@@ -71,7 +78,9 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
   } else if (approved) {
     if (product.availability === "out_of_stock") {
       price_block = (
-        <p className="mt-2 text-xs font-medium text-red-700">Временно нет</p>
+        <p className="mt-2 text-xs font-medium text-red-700">
+          {AVAILABILITY_LABELS.out_of_stock}
+        </p>
       );
     } else if (sales_status === "orderable" && product.price) {
       price_block = (
@@ -79,7 +88,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           {format_rub_price(product.price.amount, product.price.unit)}
           {product.availability === "on_order" ? (
             <span className="mt-1 block text-xs font-normal text-amber-700">
-              Поставка под заказ
+              {AVAILABILITY_LABELS.on_order}
             </span>
           ) : null}
         </p>
@@ -87,13 +96,13 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
     } else if (sales_status === "on_request") {
       price_block = (
         <p className="mt-2 text-xs font-medium text-slate-700">
-          Цена по запросу
+          {SALES_STATUS_LABELS.on_request}
         </p>
       );
     } else {
       price_block = (
         <p className="mt-2 text-xs font-medium text-slate-700">
-          Товар представлен в каталоге
+          {SALES_STATUS_LABELS.showcase}
         </p>
       );
     }
@@ -108,7 +117,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
           onClick={() => set_interest("interest")}
         >
-          Сообщить об интересе
+          {UI_INTEREST_IN_PRODUCT}
         </button>
       );
     } else if (can_cart) {
@@ -119,7 +128,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           onClick={on_add}
           className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
         >
-          {pending ? "Добавляем…" : "В корзину"}
+          {pending ? UI_ADDING_TO_ORDER : UI_ADD_TO_ORDER}
         </button>
       );
     } else if (sales_status === "on_request") {
@@ -129,7 +138,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           className="rounded-md bg-teal-700 px-3 py-2 text-sm text-white hover:bg-teal-800"
           onClick={() => set_interest("price_request")}
         >
-          Запросить цену
+          {UI_REQUEST_PRICE}
         </button>
       );
     } else {
@@ -139,7 +148,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-800"
           onClick={() => set_interest("interest")}
         >
-          Интересует товар
+          {UI_INTEREST_IN_PRODUCT}
         </button>
       );
     }
@@ -174,7 +183,7 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           {product.name}
         </h3>
         <p className="mt-1 text-xs text-slate-500">
-          {product.brand || "Без бренда"}
+          {product.brand || UI_NO_BRAND}
         </p>
         <p className="mt-2 text-xs text-slate-600">
           {[product.volume_text, product.package_type]
@@ -215,8 +224,8 @@ export function CatalogProductCard({ product }: { product: CatalogProduct }) {
           request_type={interest}
           title={
             interest === "price_request"
-              ? "Запросить цену"
-              : "Интересует товар"
+              ? UI_REQUEST_PRICE
+              : UI_INTEREST_IN_PRODUCT
           }
           on_close={() => set_interest(null)}
         />

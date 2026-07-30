@@ -1,3 +1,6 @@
+import {
+  UI_INTEREST_IN_PRODUCT,
+} from "@/lib/i18n/ui-copy";
 export const SALE_UNITS = [
   "шт",
   "упаковка",
@@ -41,7 +44,7 @@ export type InterestRequestType = (typeof INTEREST_REQUEST_TYPES)[number];
 
 export const INTEREST_REQUEST_TYPE_LABELS: Record<InterestRequestType, string> =
   {
-    interest: "Интересует товар",
+    interest: UI_INTEREST_IN_PRODUCT,
     price_request: "Запрос цены",
   };
 

@@ -11,7 +11,17 @@ import {
   useCatalogViewer,
 } from "@/components/catalog/catalog-viewer-context";
 import { useAddToServerCart } from "@/hooks/useServerCart";
-import { AVAILABILITY_LABELS, type Availability } from "@/lib/catalog/constants";
+import { AVAILABILITY_LABELS, SALES_STATUS_LABELS, type Availability } from "@/lib/catalog/constants";
+import {
+  UI_ADDING_TO_ORDER,
+  UI_ADD_TO_ORDER,
+  UI_BACK_TO_CATALOG,
+  UI_INTEREST_IN_PRODUCT,
+  UI_LOAD_ERROR,
+  UI_NO_BRAND,
+  UI_REQUEST_PRICE,
+  UI_RETRY,
+} from "@/lib/i18n/ui-copy";
 import { check_qty, get_initial_qty } from "@/lib/quantity";
 
 type CatalogProductDetail = {
@@ -65,7 +75,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
       set_product(next);
       set_qty(get_initial_qty(next));
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
       set_product(null);
     } finally {
       set_loading(false);
@@ -90,7 +100,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
           onClick={load}
           className="mt-2 rounded-md bg-red-700 px-3 py-1.5 text-white"
         >
-          Повторить
+          {UI_RETRY}
         </button>
       </div>
     );
@@ -140,7 +150,9 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
   } else if (approved) {
     if (product.availability === "out_of_stock") {
       price_block = (
-        <p className="text-sm font-medium text-red-700">Временно нет</p>
+        <p className="text-sm font-medium text-red-700">
+          {AVAILABILITY_LABELS.out_of_stock}
+        </p>
       );
     } else if (sales_status === "orderable" && product.price) {
       price_block = (
@@ -150,19 +162,21 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
           </p>
           {product.availability === "on_order" ? (
             <p className="mt-1 text-sm text-amber-700">
-              Товар под заказ. Срок поставки уточнит менеджер.
+              {AVAILABILITY_LABELS.on_order}. Срок поставки уточнит менеджер.
             </p>
           ) : null}
         </div>
       );
     } else if (sales_status === "on_request") {
       price_block = (
-        <p className="text-sm font-medium text-slate-700">Цена по запросу</p>
+        <p className="text-sm font-medium text-slate-700">
+          {SALES_STATUS_LABELS.on_request}
+        </p>
       );
     } else {
       price_block = (
         <p className="text-sm font-medium text-slate-700">
-          Товар представлен в каталоге
+          {SALES_STATUS_LABELS.showcase}
         </p>
       );
     }
@@ -182,7 +196,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
         <div className="space-y-4 pb-4">
           <div>
             <Link href="/catalog" className="text-sm text-teal-800 underline">
-              ← Назад в каталог
+              ← {UI_BACK_TO_CATALOG}
             </Link>
             <div className="mt-2 flex flex-wrap gap-1 text-[11px] font-medium uppercase">
               {product.is_promo ? (
@@ -204,7 +218,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
             <h1 className="mt-2 text-2xl font-semibold text-slate-900">
               {product.name}
             </h1>
-            <p className="text-slate-600">{product.brand || "Без бренда"}</p>
+            <p className="text-slate-600">{product.brand || UI_NO_BRAND}</p>
           </div>
 
           <dl className="grid grid-cols-2 gap-3 text-sm">
@@ -285,7 +299,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
                   onClick={on_add}
                   className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800 disabled:cursor-not-allowed disabled:bg-slate-300"
                 >
-                  {pending ? "Добавляем…" : "В корзину"}
+                  {pending ? UI_ADDING_TO_ORDER : UI_ADD_TO_ORDER}
                 </button>
                 <Link
                   href="/catalog"
@@ -303,7 +317,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
                   className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
                   onClick={() => set_interest("interest")}
                 >
-                  Сообщить об интересе
+                  {UI_INTEREST_IN_PRODUCT}
                 </button>
               ) : sales_status === "on_request" ? (
                 <button
@@ -311,7 +325,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
                   className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white hover:bg-teal-800"
                   onClick={() => set_interest("price_request")}
                 >
-                  Запросить цену
+                  {UI_REQUEST_PRICE}
                 </button>
               ) : (
                 <button
@@ -319,7 +333,7 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
                   className="rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-800"
                   onClick={() => set_interest("interest")}
                 >
-                  Интересует товар
+                  {UI_INTEREST_IN_PRODUCT}
                 </button>
               )}
               <Link
@@ -346,8 +360,8 @@ export function ProductDetailClient({ product_id }: { product_id: string }) {
           request_type={interest}
           title={
             interest === "price_request"
-              ? "Запросить цену"
-              : "Интересует товар"
+              ? UI_REQUEST_PRICE
+              : UI_INTEREST_IN_PRODUCT
           }
           on_close={() => set_interest(null)}
         />

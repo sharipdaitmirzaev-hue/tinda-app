@@ -1,5 +1,9 @@
 "use client";
 
+import {
+  UI_OFFLINE_ERROR,
+} from "@/lib/i18n/ui-copy";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
@@ -32,7 +36,7 @@ export function LoginForm() {
       router.replace(data.redirect_to ?? "/");
       router.refresh();
     } catch {
-      set_error("Нет соединения. Проверьте интернет.");
+      set_error(UI_OFFLINE_ERROR);
     } finally {
       set_loading(false);
     }

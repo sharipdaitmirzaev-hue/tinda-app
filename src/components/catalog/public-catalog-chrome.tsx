@@ -1,3 +1,6 @@
+import {
+  UI_WHOLESALE_CATALOG,
+} from "@/lib/i18n/ui-copy";
 import Link from "next/link";
 import { LogoutButton } from "@/components/auth/logout-button";
 import { client_status_label } from "@/lib/i18n/labels";
@@ -10,7 +13,7 @@ export function PublicCatalogHeader() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-800">
             ТИНДА
           </p>
-          <p className="truncate text-sm text-slate-600">Оптовый каталог</p>
+          <p className="truncate text-sm text-slate-600">{UI_WHOLESALE_CATALOG}</p>
         </Link>
         <nav className="flex items-center gap-2" aria-label="Гостевая навигация">
           <Link
@@ -44,7 +47,7 @@ export function LimitedCatalogHeader({
             ТИНДА
           </p>
           <p className="truncate text-sm text-slate-600">
-            {full_name ? `Здравствуйте, ${full_name}` : "Оптовый каталог"}
+            {full_name ? `Здравствуйте, ${full_name}` : UI_WHOLESALE_CATALOG}
           </p>
         </Link>
         <nav className="flex items-center gap-2" aria-label="Навигация">

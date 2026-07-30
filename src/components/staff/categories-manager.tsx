@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { UI_LOAD_ERROR, UI_GENERIC_ERROR } from "@/lib/i18n/ui-copy";
 
 type CategoryFlat = {
   id: string;
@@ -133,7 +134,7 @@ export function CategoriesManager() {
       set_tree(data.items ?? []);
       set_flat(data.flat ?? []);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
     } finally {
       set_loading(false);
     }
@@ -237,7 +238,7 @@ export function CategoriesManager() {
         });
       }
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка сохранения");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     }
   }
 
@@ -264,7 +265,7 @@ export function CategoriesManager() {
       set_message(data.message ?? "Категория сохранена");
       await load();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     }
   }
 

@@ -5,6 +5,11 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { client_status_label } from "@/lib/i18n/labels";
 import { EmptyBlock, ErrorBlock, LoadingBlock } from "@/components/ui/state-blocks";
+import {
+  UI_EMPTY_SEARCH_HINT,
+  UI_EMPTY_SEARCH_TITLE,
+  UI_LOAD_ERROR,
+} from "@/lib/i18n/ui-copy";
 
 type CityItem = { id: string; name: string; region: string };
 
@@ -72,7 +77,7 @@ export function RegistrationRequestsList() {
         }
       } catch (err) {
         if (!cancelled) {
-          set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+          set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
           set_items([]);
           set_total(0);
         }
@@ -181,11 +186,12 @@ export function RegistrationRequestsList() {
         <EmptyBlock
           title={
             q || city_id
-              ? "Нет результатов поиска"
+              ? UI_EMPTY_SEARCH_TITLE
               : status === "rejected"
                 ? "Отклонённых заявок нет"
                 : "Новых заявок пока нет"
           }
+          description={q || city_id ? UI_EMPTY_SEARCH_HINT : undefined}
         />
       ) : null}
 

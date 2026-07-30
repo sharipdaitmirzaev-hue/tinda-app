@@ -4,11 +4,18 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { CatalogProductCard, type CatalogProduct } from "@/components/catalog/catalog-product-card";
+import { useCatalogViewer } from "@/components/catalog/catalog-viewer-context";
 import {
   EmptyBlock,
   ErrorBlock,
   LoadingBlock,
 } from "@/components/ui/state-blocks";
+import {
+  UI_EMPTY_SEARCH_HINT,
+  UI_EMPTY_SEARCH_TITLE,
+  UI_LOAD_ERROR,
+  UI_LOAD_PRODUCTS_ERROR,
+} from "@/lib/i18n/ui-copy";
 
 type CategoryNode = {
   id: string;
@@ -30,6 +37,8 @@ function flatten_categories(nodes: CategoryNode[], depth = 0): Array<CategoryNod
 export function CatalogPageClient() {
   const router = useRouter();
   const search_params = useSearchParams();
+  const viewer = useCatalogViewer();
+  const approved = viewer === "approved";
 
   const q = search_params.get("q") || "";
   const category_id = search_params.get("category_id") || "";
@@ -107,12 +116,12 @@ export function CatalogPageClient() {
       const response = await fetch(`/api/v1/catalog/products?${params}`);
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось загрузить товары");
+        throw new Error(data?.error?.message ?? UI_LOAD_PRODUCTS_ERROR);
       }
       set_items(data.items ?? []);
       set_total(data.total ?? 0);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
       set_items([]);
       set_total(0);
     } finally {
@@ -323,7 +332,12 @@ export function CatalogPageClient() {
 
         {!loading && !error && items.length === 0 ? (
           <EmptyBlock
-            title={has_filters ? "Товары не найдены" : "Каталог пока пуст"}
+            title={has_filters ? UI_EMPTY_SEARCH_TITLE : "Каталог пока пуст"}
+            description={
+              has_filters
+                ? UI_EMPTY_SEARCH_HINT
+                : "Скоро здесь появятся товары для заказа."
+            }
             action={
               has_filters ? (
                 <button
@@ -387,13 +401,14 @@ export function CatalogPageClient() {
           </>
         ) : null}
 
-        <p className="text-xs text-slate-500">
-          Цены в каталоге не отображаются. Условия подтвердит менеджер после
-          заказа.{" "}
-          <Link href="/cart" className="text-teal-800 underline">
-            Перейти в корзину
-          </Link>
-        </p>
+        {!approved ? (
+          <p className="text-xs text-slate-500">
+            Цены в каталоге скрыты. Условия поставки подтвердит менеджер.{" "}
+            <Link href="/cart" className="text-teal-800 underline">
+              Перейти в корзину
+            </Link>
+          </p>
+        ) : null}
       </section>
     </div>
   );

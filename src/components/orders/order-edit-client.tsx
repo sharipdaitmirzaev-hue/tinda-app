@@ -4,6 +4,18 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import {
+  UI_CANCEL,
+  UI_FIND_PRODUCTS_ERROR,
+  UI_GENERIC_ERROR,
+  UI_INVALID_QTY,
+  UI_LOAD_ERROR,
+  UI_LOAD_ORDER_ERROR,
+  UI_ORDER_NEEDS_ITEMS,
+  UI_PRODUCT_ALREADY_IN_ORDER,
+  UI_SAVE_ORDER_ERROR,
+  UI_SAVING,
+} from "@/lib/i18n/ui-copy";
+import {
   check_qty,
   decrease_qty,
   get_initial_qty,
@@ -68,7 +80,7 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
       });
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось загрузить заказ");
+        throw new Error(data?.error?.message ?? UI_LOAD_ORDER_ERROR);
       }
       const order = data.order;
       if (!order.can_edit) {
@@ -118,7 +130,7 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
       }
       set_items(next_items);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка загрузки");
+      set_error(err instanceof Error ? err.message : UI_LOAD_ERROR);
     } finally {
       set_loading(false);
     }
@@ -147,11 +159,11 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
       );
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось найти товары");
+        throw new Error(data?.error?.message ?? UI_FIND_PRODUCTS_ERROR);
       }
       set_search_hits(data.items ?? []);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка поиска");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_searching(false);
     }
@@ -159,7 +171,7 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
 
   function add_product(product: CatalogHit) {
     if (items.some((item) => item.product_id === product.id)) {
-      set_error("Товар уже добавлен в заказ");
+      set_error(UI_PRODUCT_ALREADY_IN_ORDER);
       return;
     }
     const quantity: QuantityProduct = {
@@ -196,7 +208,7 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
     event.preventDefault();
     if (saving) return;
     if (items.length === 0) {
-      set_error("Добавьте хотя бы один товар в заказ");
+      set_error(UI_ORDER_NEEDS_ITEMS);
       return;
     }
 
@@ -204,7 +216,7 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
       const check = check_qty(item.quantity, item.qty);
       if (!check.valid) {
         set_error(
-          `${item.product_name}: ${check.message ?? "Некорректное количество"}`,
+          `${item.product_name}: ${check.message ?? UI_INVALID_QTY}`,
         );
         return;
       }
@@ -233,11 +245,11 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
       });
       const data = await response.json();
       if (!response.ok) {
-        throw new Error(data?.error?.message ?? "Не удалось сохранить заказ");
+        throw new Error(data?.error?.message ?? UI_SAVE_ORDER_ERROR);
       }
       router.replace(`/orders/${order_id}`);
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка сохранения");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
       set_saving(false);
     }
   }
@@ -485,13 +497,13 @@ export function OrderEditClient({ order_id }: { order_id: string }) {
           disabled={saving || items.length === 0}
           className="rounded-md bg-teal-700 px-4 py-3 text-sm font-medium text-white disabled:cursor-not-allowed disabled:bg-slate-300"
         >
-          {saving ? "Сохраняем…" : "Сохранить изменения"}
+          {saving ? UI_SAVING : "Сохранить изменения"}
         </button>
         <Link
           href={`/orders/${order_id}`}
           className="rounded-md border border-slate-300 px-4 py-3 text-sm"
         >
-          Отмена
+          {UI_CANCEL}
         </Link>
       </div>
     </form>

@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  UI_CLOSE,
+  UI_URGENT_ORDER,
+} from "@/lib/i18n/ui-copy";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
@@ -112,7 +117,7 @@ export function CheckoutForm({ cart, prefill }: Props) {
               className="mt-2 underline"
               onClick={() => set_error(null)}
             >
-              Закрыть
+              {UI_CLOSE}
             </button>
           </div>
         ) : null}
@@ -204,7 +209,7 @@ export function CheckoutForm({ cart, prefill }: Props) {
             disabled={submitting}
             onChange={(e) => set_is_urgent(e.target.checked)}
           />
-          <span>Срочный заказ</span>
+          <span>{UI_URGENT_ORDER}</span>
         </label>
 
         <label className="block space-y-1 text-sm">

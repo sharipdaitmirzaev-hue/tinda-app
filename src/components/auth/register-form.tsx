@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  UI_OFFLINE_ERROR,
+  UI_SUBMITTING,
+} from "@/lib/i18n/ui-copy";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
@@ -20,15 +25,40 @@ const CLIENT_TYPES = [
 export function RegisterForm() {
   const router = useRouter();
   const [cities, set_cities] = useState<CityItem[]>([]);
+  const [cities_loading, set_cities_loading] = useState(true);
+  const [cities_error, set_cities_error] = useState<string | null>(null);
   const [error, set_error] = useState<string | null>(null);
   const [loading, set_loading] = useState(false);
   const [pdn_accepted, set_pdn_accepted] = useState(false);
 
   useEffect(() => {
+    let cancelled = false;
+    set_cities_loading(true);
+    set_cities_error(null);
     fetch("/api/v1/cities")
-      .then((res) => res.json())
-      .then((data) => set_cities(data.items ?? []))
-      .catch(() => set_cities([]));
+      .then(async (res) => {
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data?.error?.message ?? "Не удалось загрузить города");
+        }
+        if (!cancelled) {
+          set_cities(data.items ?? []);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          set_cities([]);
+          set_cities_error(
+            err instanceof Error ? err.message : "Не удалось загрузить города",
+          );
+        }
+      })
+      .finally(() => {
+        if (!cancelled) set_cities_loading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   async function on_submit(event: FormEvent<HTMLFormElement>) {
@@ -73,7 +103,7 @@ export function RegisterForm() {
       router.replace(data.redirect_to ?? "/pending");
       router.refresh();
     } catch {
-      set_error("Нет соединения. Проверьте интернет.");
+      set_error(UI_OFFLINE_ERROR);
     } finally {
       set_loading(false);
     }
@@ -96,11 +126,12 @@ export function RegisterForm() {
             id="city_id"
             name="city_id"
             required
-            className="w-full rounded-md border border-slate-300 px-3 py-2"
+            disabled={cities_loading || cities.length === 0}
+            className="w-full rounded-md border border-slate-300 px-3 py-2 disabled:bg-slate-50"
             defaultValue=""
           >
             <option value="" disabled>
-              Выберите город
+              {cities_loading ? "Загрузка городов…" : "Выберите город"}
             </option>
             {cities.map((city) => (
               <option key={city.id} value={city.id}>
@@ -108,6 +139,9 @@ export function RegisterForm() {
               </option>
             ))}
           </select>
+          {cities_error ? (
+            <p className="mt-1 text-xs text-red-700">{cities_error}</p>
+          ) : null}
         </div>
         <div>
           <label className="mb-1 block text-sm font-medium" htmlFor="client_type">
@@ -165,7 +199,7 @@ export function RegisterForm() {
             className="mt-1"
           />
           <span>
-            Согласен на обработку персональных данных. Без согласия заявка не
+            Соглашаюсь на обработку персональных данных. Без согласия заявка не
             будет принята.
           </span>
         </label>
@@ -182,7 +216,7 @@ export function RegisterForm() {
         disabled={loading}
         className="w-full rounded-md bg-teal-700 px-4 py-2.5 text-white hover:bg-teal-800 disabled:opacity-60"
       >
-        {loading ? "Отправка…" : "Отправить заявку"}
+        {loading ? UI_SUBMITTING : "Отправить заявку"}
       </button>
 
       <p className="text-center text-sm text-slate-600">

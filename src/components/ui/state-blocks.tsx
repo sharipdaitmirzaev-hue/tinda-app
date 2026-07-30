@@ -1,5 +1,7 @@
 "use client";
 
+import { UI_RETRY } from "@/lib/i18n/ui-copy";
+
 export function LoadingBlock({ label = "Загрузка…" }: { label?: string }) {
   return (
     <div
@@ -54,7 +56,7 @@ export function ErrorBlock({
           onClick={on_retry}
           className="ui-btn-secondary mt-3"
         >
-          Повторить
+          {UI_RETRY}
         </button>
       ) : null}
     </div>

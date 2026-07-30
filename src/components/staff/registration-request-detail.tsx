@@ -5,6 +5,10 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { RejectRequestModal } from "@/components/staff/reject-request-modal";
 import { client_status_label } from "@/lib/i18n/labels";
+import {
+  UI_GENERIC_ERROR,
+  UI_SAVING,
+} from "@/lib/i18n/ui-copy";
 
 type ManagerOption = {
   id: string;
@@ -82,7 +86,7 @@ export function RegistrationRequestDetail({
       router.push("/staff/registration-requests?flash=approved");
       router.refresh();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка подтверждения");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_loading(false);
     }
@@ -111,7 +115,7 @@ export function RegistrationRequestDetail({
       router.push("/staff/registration-requests?status=rejected&flash=rejected");
       router.refresh();
     } catch (err) {
-      set_error(err instanceof Error ? err.message : "Ошибка отклонения");
+      set_error(err instanceof Error ? err.message : UI_GENERIC_ERROR);
     } finally {
       set_loading(false);
     }
@@ -210,7 +214,7 @@ export function RegistrationRequestDetail({
               disabled={loading}
               className="rounded-md bg-teal-700 px-4 py-2 text-sm text-white hover:bg-teal-800 disabled:opacity-60"
             >
-              {loading ? "Сохранение…" : "Подтвердить клиента"}
+              {loading ? UI_SAVING : "Подтвердить клиента"}
             </button>
             <button
               type="button"
