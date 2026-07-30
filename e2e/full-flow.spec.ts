@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { login, unique_inn } from "./helpers";
+import { login, select_first_city, unique_inn } from "./helpers";
 
 test.describe.configure({ mode: "serial" });
 
@@ -15,7 +15,7 @@ test("сценарий 1: регистрация → pending → approve → к�
   await page.goto("/register");
   await page.getByLabel("Название компании / точки").fill(`E2E Компания ${suffix}`);
   await page.getByLabel("ИНН", { exact: true }).fill(unique_inn());
-  await page.locator("#city_id").selectOption({ index: 1 });
+  await select_first_city(page);
   await page.getByLabel("Адрес точки / доставки").fill("Махачкала, тест");
   await page.getByLabel("Контактное лицо").fill("E2E Клиент");
   await page.getByLabel("Телефон", { exact: true }).fill("+79281234567");
