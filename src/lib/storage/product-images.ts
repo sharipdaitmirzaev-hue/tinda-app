@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from "crypto";
-import { mkdir, unlink, writeFile } from "fs/promises";
+import { chown, mkdir, unlink, writeFile } from "fs/promises";
 import path from "path";
 import {
   DeleteObjectCommand,
@@ -8,6 +8,10 @@ import {
 } from "@aws-sdk/client-s3";
 import sharp from "sharp";
 import { AppError } from "@/lib/http/errors";
+
+/** Runtime user inside the production app image (Dockerfile `nextjs`). */
+export const DEFAULT_UPLOADS_UID = 1001;
+export const DEFAULT_UPLOADS_GID = 1001;
 
 export const PRODUCT_IMAGE_MAX_BYTES = 5 * 1024 * 1024;
 export const PRODUCT_IMAGE_MAX_SIDE = 1600;
@@ -42,20 +46,98 @@ function get_driver_name(): StorageDriverName {
   return "local";
 }
 
-function local_uploads_root(): string {
+export function local_uploads_root(): string {
+  const from_env = process.env.UPLOADS_DIR?.trim();
+  if (from_env) {
+    return path.resolve(from_env);
+  }
   return path.join(process.cwd(), "public", "uploads");
+}
+
+export function get_uploads_owner(): { uid: number; gid: number } {
+  const uid_raw = Number.parseInt(
+    process.env.UPLOADS_UID || String(DEFAULT_UPLOADS_UID),
+    10,
+  );
+  const gid_raw = Number.parseInt(
+    process.env.UPLOADS_GID || String(DEFAULT_UPLOADS_GID),
+    10,
+  );
+  return {
+    uid: Number.isFinite(uid_raw) ? uid_raw : DEFAULT_UPLOADS_UID,
+    gid: Number.isFinite(gid_raw) ? gid_raw : DEFAULT_UPLOADS_GID,
+  };
+}
+
+/** True when the process can chown files (typically root in one-shot import containers). */
+export function process_can_chown_uploads(): boolean {
+  return typeof process.getuid === "function" && process.getuid() === 0;
+}
+
+/**
+ * Resolve a storage key under the local uploads root, rejecting path traversal.
+ * Returns null when the key escapes the root.
+ */
+export function resolve_local_upload_path(storage_key: string): string | null {
+  const normalized_root = path.resolve(local_uploads_root());
+  const normalized_target = path.resolve(
+    path.join(normalized_root, storage_key),
+  );
+  if (
+    normalized_target !== normalized_root &&
+    !normalized_target.startsWith(normalized_root + path.sep)
+  ) {
+    return null;
+  }
+  return normalized_target;
+}
+
+/**
+ * When running as root, chown the file and parent dirs under the uploads root
+ * to the app user (default 1001:1001) so the Next.js process can manage them
+ * and imports do not leave root-owned files requiring a manual host chown.
+ */
+export async function ensure_local_upload_ownership(
+  absolute_path: string,
+): Promise<{ adjusted: boolean; uid: number; gid: number }> {
+  const { uid, gid } = get_uploads_owner();
+  if (!process_can_chown_uploads()) {
+    return { adjusted: false, uid, gid };
+  }
+
+  const normalized_root = path.resolve(local_uploads_root());
+  let current = path.resolve(absolute_path);
+  if (
+    current !== normalized_root &&
+    !current.startsWith(normalized_root + path.sep)
+  ) {
+    return { adjusted: false, uid, gid };
+  }
+
+  while (true) {
+    await chown(current, uid, gid);
+    if (current === normalized_root) {
+      break;
+    }
+    const parent = path.dirname(current);
+    if (
+      parent === current ||
+      (parent !== normalized_root &&
+        !parent.startsWith(normalized_root + path.sep))
+    ) {
+      break;
+    }
+    current = parent;
+  }
+
+  return { adjusted: true, uid, gid };
 }
 
 function create_local_driver(): ProductImageStorageDriver {
   return {
     async put(storage_key, body) {
-      const absolute = path.join(local_uploads_root(), storage_key);
-      const normalized_root = path.resolve(local_uploads_root());
-      const normalized_target = path.resolve(absolute);
-      if (
-        normalized_target !== normalized_root &&
-        !normalized_target.startsWith(normalized_root + path.sep)
-      ) {
+      const normalized_target = resolve_local_upload_path(storage_key);
+      if (!normalized_target) {
         throw new AppError(
           400,
           "validation_error",
@@ -64,15 +146,11 @@ function create_local_driver(): ProductImageStorageDriver {
       }
       await mkdir(path.dirname(normalized_target), { recursive: true });
       await writeFile(normalized_target, body);
+      await ensure_local_upload_ownership(normalized_target);
     },
     async delete(storage_key) {
-      const absolute = path.join(local_uploads_root(), storage_key);
-      const normalized_root = path.resolve(local_uploads_root());
-      const normalized_target = path.resolve(absolute);
-      if (
-        normalized_target !== normalized_root &&
-        !normalized_target.startsWith(normalized_root + path.sep)
-      ) {
+      const normalized_target = resolve_local_upload_path(storage_key);
+      if (!normalized_target) {
         return;
       }
       try {

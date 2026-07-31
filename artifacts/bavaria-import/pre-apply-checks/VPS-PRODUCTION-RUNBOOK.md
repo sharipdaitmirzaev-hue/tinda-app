@@ -386,12 +386,30 @@ npm run import:bavaria:apply -- \
 
 ---
 
-## Post-apply: права на uploads + restart
+## Post-apply: uploads (ownership + видимость)
 
-Одноразовый `docker run` (root) пишет файлы в volume как `root:root`. Next.js отдаёт
-новые файлы из `public/uploads` только после рестарта процесса.
+Историческая проблема (apply 2026-07-31): one-shot `docker run` от root оставлял
+файлы `root:root`, а standalone Next отдавал `public/uploads` только из кэша на старте.
 
-После apply с загрузкой картинок:
+**После деплоя PR uploads-ownership** (ветка `cursor/uploads-ownership-restart-ad60`):
+
+1. `src/lib/storage/product-images.ts` при записи от root делает `chown` → **1001:1001**
+   (`UPLOADS_UID` / `UPLOADS_GID`, по умолчанию 1001).
+2. Rewrite `/uploads/*` → `/api/uploads/*` читает файлы с диска **без рестарта**.
+
+Рекомендуемый apply-контейнер (дополнительно к chown в коде):
+
+```bash
+docker run --rm --user 1001:1001 \
+  --network app_default \
+  --env-file "$ENV_FILE" \
+  -v /opt/tinda/bavaria-pr18-worktree:/workspace \
+  -v /opt/tinda/app/backups:/backups:ro \
+  -v app_tinda_uploads:/workspace/public/uploads \
+  ...
+```
+
+Если деплой PR ещё **не** выкатан, безопасный ручной fallback:
 
 ```bash
 chown -R 1001:1001 "$(docker volume inspect app_tinda_uploads --format '{{.Mountpoint}}')"
@@ -399,3 +417,5 @@ cd /opt/tinda/app
 docker compose -f docker-compose.production.yml restart app
 # дождаться healthy, затем проверить sample image_url → HTTP 200
 ```
+
+**Не деплоить uploads-PR на production без отдельного подтверждения оператора.**
