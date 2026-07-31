@@ -61,7 +61,5 @@ artifacts/bavaria-import/**/http-cache/
 artifacts/bavaria-import/**/renders/
 artifacts/bavaria-import/**/renders-small/
 
-# Local DB dumps and product upload blobs from agent rehearsal
+# Local DB dumps from agent/VPS rehearsal (never commit)
 /backups/
-/public/uploads/products/**
-!/public/uploads/products/.gitkeep
