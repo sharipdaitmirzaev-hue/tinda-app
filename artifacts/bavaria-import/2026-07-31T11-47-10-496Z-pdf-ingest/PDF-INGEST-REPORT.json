@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-07-31T11:47:10.496418+00:00",
+  "pdf_found": true,
+  "pdf_path": "/workspace/artifacts/bavaria-import/pdf-source/BAVARIA-CATALOG-2026.pdf",
+  "expected_pages": 40,
+  "ok": true,
+  "error": null,
+  "size_bytes": 2774757,
+  "sha256": "e93756ed45acecb1335e562aa4f9d455899c0b846fb9bb1bc6b3f33af436da93",
+  "canonical_path": "artifacts/bavaria-import/pdf-source/BAVARIA-CATALOG-2026.pdf",
+  "page_count": 40
+}

@@ -56,3 +56,7 @@ next-env.d.ts
 
 # Bavaria import HTTP cache (regenerable)
 artifacts/bavaria-import/**/http-cache/
+
+# Bavaria PDF page raster renders (regenerable via import:bavaria:pdf-ingest)
+artifacts/bavaria-import/**/renders/
+artifacts/bavaria-import/**/renders-small/

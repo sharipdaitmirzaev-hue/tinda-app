@@ -1,0 +1,322 @@
+[
+  {
+    "page": 1,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-01.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-01.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 2,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-02.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-02.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 3,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-03.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-03.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 4,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-04.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-04.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 5,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-05.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-05.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 6,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-06.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-06.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 7,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-07.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-07.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 8,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-08.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-08.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 9,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-09.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-09.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 10,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-10.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-10.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 11,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-11.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 12,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-12.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-12.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 13,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-13.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-13.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 14,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-14.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-14.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 15,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-15.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 16,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-16.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-16.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 17,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-17.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-17.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 18,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-18.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-18.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 19,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-19.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-19.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 20,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-20.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-20.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 21,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-21.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-21.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 22,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-22.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-22.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 23,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-23.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-23.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 24,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-24.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 25,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-25.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-25.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 26,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-26.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-26.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 27,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-27.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-27.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 28,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-28.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-28.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 29,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-29.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-29.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 30,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-30.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-30.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 31,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-31.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-31.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 32,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-32.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-32.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 33,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-33.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-33.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 34,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-34.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-34.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 35,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-35.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-35.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 36,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-36.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-36.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 37,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-37.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-37.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 38,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-38.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-38.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 39,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-39.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-39.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  },
+  {
+    "page": 40,
+    "text_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/pages/page-40.txt",
+    "render_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-40.png",
+    "text_chars": 0,
+    "text_preview": "",
+    "has_extractable_text": false
+  }
+]
