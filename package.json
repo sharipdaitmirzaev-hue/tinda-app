@@ -21,7 +21,8 @@
     "test:e2e:ui": "playwright test --ui",
     "import:bavaria:discover": "tsx scripts/import-bavaria.ts discover",
     "import:bavaria:dry-run": "tsx scripts/import-bavaria.ts dry-run",
-    "import:bavaria:apply": "tsx scripts/import-bavaria.ts apply"
+    "import:bavaria:apply": "tsx scripts/import-bavaria.ts apply",
+    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-review.py"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",

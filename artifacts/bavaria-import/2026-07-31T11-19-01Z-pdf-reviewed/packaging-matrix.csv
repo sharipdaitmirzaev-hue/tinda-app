@@ -1,0 +1,19 @@
+line,taste,glass_0_5_l,glass_0_45_l,pet_0_5_l,pet_1_2_l,pet_1_5_l,evidence,confidence
+Бавария Premium,Груша,yes,,,yes,,PDF tastes p.Premium-section; website assortment for yes cells,high
+Бавария Premium,Гранат,yes,,,yes,,PDF tastes p.Premium-section; website assortment for yes cells,high
+Бавария Premium,Апельсин,yes,,,pending,,PDF tastes p.Premium-section; website assortment for yes cells,high
+Бавария Premium,Тархун,yes,,,yes,,PDF tastes p.Premium-section; website assortment for yes cells,high
+Бавария Premium,Фейхоа,yes,,,yes,,PDF tastes p.Premium-section; website assortment for yes cells,high
+Бавария Premium,Вишня,yes,,,yes,,PDF tastes p.Premium-section; website assortment for yes cells,high
+Бавария Premium,Виноград,pending,,,pending,,PDF tastes p.Premium-section; website assortment for yes cells,medium
+Бавария (обычные сладкие газированные),Тархун,,pending,yes,,yes,"PDF taste list (brief); website assortment for PET yes cells; glass 0,45 л — только после визуального PDF",high
+Бавария (обычные сладкие газированные),Груша,,pending,yes,,yes,"PDF taste list (brief); website assortment for PET yes cells; glass 0,45 л — только после визуального PDF",high
+Бавария (обычные сладкие газированные),Питахайя,,pending,pending,,yes,"PDF taste list (brief); website assortment for PET yes cells; glass 0,45 л — только после визуального PDF",high
+Бавария (обычные сладкие газированные),Апельсин,,pending,pending,,yes,"PDF taste list (brief); website assortment for PET yes cells; glass 0,45 л — только после визуального PDF",high
+Бавария (обычные сладкие газированные),Кола,,pending,yes,,yes,"PDF taste list (brief); website assortment for PET yes cells; glass 0,45 л — только после визуального PDF",high
+Бавария (обычные сладкие газированные),Мохито,,pending,pending,,yes,"PDF taste list (brief); website assortment for PET yes cells; glass 0,45 л — только после визуального PDF",high
+Бавария (обычные сладкие газированные),Яблоко,,pending,pending,,pending,"PDF taste list (brief); website assortment for PET yes cells; glass 0,45 л — только после визуального PDF",medium
+Лимнада,Барбарис,,,yes,,yes,PDF tastes p.Limnada-section; website assortment lines,high
+Лимнада,Дюшес,,,yes,,yes,PDF tastes p.Limnada-section; website assortment lines,high
+Лимнада,Ананас,,,no,,yes,PDF tastes p.Limnada-section; website assortment lines,high
+Лимнада,Крем-сода,,,yes,,yes,PDF tastes p.Limnada-section; website assortment lines,high

@@ -1,0 +1,8 @@
+line,sku,volume,package,alcohol_mark,page_number,status,notes
+Светлое,BAVARIA-BAVARIYA-SVETLOE-450-GLASS,"0,45 л",стекло,0% алк.,NA-beer-section,APPROVED,Пиктограммы/упаковки на странице безалкогольного пива; 0% алк.
+Светлое,BAVARIA-BAVARIYA-SVETLOE-450-CAN,"0,45 л",банка,0% алк.,NA-beer-section,APPROVED,"Пиктограммы/упаковки на странице безалкогольного пива; 0% алк.; банка подтверждена PDF, exact-изображение этой тары с сайта отсутствует"
+Эльф,BAVARIA-BAVARIYA-ELF-450-GLASS,"0,45 л",стекло,0% алк.,NA-beer-section,APPROVED,Пиктограммы/упаковки на странице безалкогольного пива; 0% алк.
+Эльф,BAVARIA-BAVARIYA-ELF-450-CAN,"0,45 л",банка,0% алк.,NA-beer-section,APPROVED,"Пиктограммы/упаковки на странице безалкогольного пива; 0% алк.; банка подтверждена PDF, exact-изображение этой тары с сайта отсутствует"
+Gallagher,BAVARIA-BAVARIYA-GALLAGHER-450-GLASS,"0,45 л",стекло,0% алк.,NA-beer-section,APPROVED,Фасовки подтверждены на странице безалкогольного пива; не путать с алкогольным лагером
+Gallagher,BAVARIA-BAVARIYA-GALLAGHER-450-CAN,"0,45 л",банка,0% алк.,NA-beer-section,APPROVED,Фасовки подтверждены на странице безалкогольного пива; не путать с алкогольным лагером
+Nordisch Bier,,"0,45 л",UNCONFIRMED,0% алк.,NA-beer-section,MANUAL_REVIEW,Package icon not visually confirmed in this environment

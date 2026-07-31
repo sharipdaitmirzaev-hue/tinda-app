@@ -1,0 +1,62 @@
+SKU,brand,field,value,pdf_name,page_number,evidence_type,confidence,notes
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,alcohol_status,безалкогольное / 0% алк.,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,alcohol_percent,0,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,package,стекло,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-packaging,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,line,Светлое,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,alcohol_status,безалкогольное / 0% алк.,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,alcohol_percent,0,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,package,банка,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-packaging,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,line,Светлое,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-GLASS,Бавария,alcohol_status,безалкогольное / 0% алк.,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-GLASS,Бавария,alcohol_percent,0,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-GLASS,Бавария,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-GLASS,Бавария,package,стекло,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-packaging,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-GLASS,Бавария,line,Эльф,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-CAN,Бавария,alcohol_status,безалкогольное / 0% алк.,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-CAN,Бавария,alcohol_percent,0,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-CAN,Бавария,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-CAN,Бавария,package,банка,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-packaging,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-ELF-450-CAN,Бавария,line,Эльф,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-GLASS,Gallagher,alcohol_status,безалкогольное / 0% алк.,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-GLASS,Gallagher,alcohol_percent,0,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-GLASS,Gallagher,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-GLASS,Gallagher,package,стекло,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-packaging,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-GLASS,Gallagher,line,Gallagher,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-CAN,Gallagher,alcohol_status,безалкогольное / 0% алк.,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-CAN,Gallagher,alcohol_percent,0,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-CAN,Gallagher,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-CAN,Gallagher,package,банка,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-packaging,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+BAVARIA-BAVARIYA-GALLAGHER-450-CAN,Gallagher,line,Gallagher,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,Страница «Безалкогольное пиво»; не смешивать с алкогольными версиями
+,Nordisch Bier,alcohol_status,безалкогольное / 0% алк.,БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-text,high,На странице безалкогольного пива; алкогольный Nordisch на других страницах не использовать
+,Nordisch Bier,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf,NA-beer-section,pdf-packaging,high,"Фасовка 0,45 л показана в блоке безалкогольного пива"
+BAVARIA-BAVARIYA-PREMIUM-GRUSHA-500-GLASS,Бавария,taste_pack,"Груша / стекло 0,5 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-GRUSHA-1200-PET,Бавария,taste_pack,"Груша / ПЭТ 1,2 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-GRANAT-500-GLASS,Бавария,taste_pack,"Гранат / стекло 0,5 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-GRANAT-1200-PET,Бавария,taste_pack,"Гранат / ПЭТ 1,2 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-APELSIN-500-GLASS,Бавария,taste_pack,"Апельсин / стекло 0,5 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-TARHUN-500-GLASS,Бавария,taste_pack,"Тархун / стекло 0,5 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-TARHUN-1200-PET,Бавария,taste_pack,"Тархун / ПЭТ 1,2 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-FEYHOA-500-GLASS,Бавария,taste_pack,"Фейхоа / стекло 0,5 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-FEYHOA-1200-PET,Бавария,taste_pack,"Фейхоа / ПЭТ 1,2 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS,Бавария,taste_pack,"Вишня / стекло 0,5 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET,Бавария,taste_pack,"Вишня / ПЭТ 1,2 л",БУКЛЕТ БАВАРИЯ 2026.pdf,Premium-section,pdf-text,high,PDF taste list + website pack-specific assortment
+BAVARIA-BAVARIYA-TARHUN-1500-PET,Бавария,taste_pack,"Тархун / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-TARHUN-500-PET,Бавария,taste_pack,"Тархун / 0,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-GRUSHA-1500-PET,Бавария,taste_pack,"Груша / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-GRUSHA-500-PET,Бавария,taste_pack,"Груша / 0,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-PITAHAYYA-1500-PET,Бавария,taste_pack,"Питахайя / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-APELSIN-1500-PET,Бавария,taste_pack,"Апельсин / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-KOLA-1500-PET,Бавария,taste_pack,"Кола / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-KOLA-500-PET,Бавария,taste_pack,"Кола / 0,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-BAVARIYA-MOHITO-1500-PET,Бавария,taste_pack,"Мохито / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,soda-section,pdf-text,high,Website pack assortment + PDF tastes
+BAVARIA-LIMNADA-BARBARIS-500-PET,Лимнада,taste_pack,"Барбарис / 0,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Limnada-section,pdf-text,high,Website assortment per pack + PDF taste list
+BAVARIA-LIMNADA-BARBARIS-1500-PET,Лимнада,taste_pack,"Барбарис / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Limnada-section,pdf-text,high,Website assortment per pack + PDF taste list
+BAVARIA-LIMNADA-DYUSHES-500-PET,Лимнада,taste_pack,"Дюшес / 0,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Limnada-section,pdf-text,high,Website assortment per pack + PDF taste list
+BAVARIA-LIMNADA-DYUSHES-1500-PET,Лимнада,taste_pack,"Дюшес / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Limnada-section,pdf-text,high,Website assortment per pack + PDF taste list
+BAVARIA-LIMNADA-ANANAS-1500-PET,Лимнада,taste_pack,"Ананас / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Limnada-section,pdf-text,high,Website assortment per pack + PDF taste list
+BAVARIA-LIMNADA-KREM-SODA-500-PET,Лимнада,taste_pack,"Крем-сода / 0,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Limnada-section,pdf-text,high,Website assortment per pack + PDF taste list
+BAVARIA-LIMNADA-KREM-SODA-1500-PET,Лимнада,taste_pack,"Крем-сода / 1,5 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Limnada-section,pdf-text,high,Website assortment per pack + PDF taste list
+BAVARIA-DOBRETSOV-KVASS-1200-PET,Добрецовъ,package,"1,2 л ПЭТ",БУКЛЕТ БАВАРИЯ 2026.pdf,Kvass-section,pdf-packaging,high,Квас Добрецовъ consumer packs
+BAVARIA-DOBRETSOV-KVASS-450-CAN,Добрецовъ,package,"0,45 л банка",БУКЛЕТ БАВАРИЯ 2026.pdf,Kvass-section,pdf-packaging,high,Квас Добрецовъ consumer packs
