@@ -660,9 +660,19 @@ const CATEGORY_SLUG_BY_NAME: Record<string, string> = {
   "Холодный чай": "kholodnyy-chay",
   Тоники: "toniki",
   Квас: "kvas",
-  "Безалкогольное пиво": "bezalkogolnoe-pivo",
+  "Безалкогольное пиво": "non-alcoholic-beer",
   "Энергетические напитки": "energeticheskie-napitki",
   Другие: "other",
+};
+
+/** Rename source → target for NA beer category (keep ID, no duplicate). */
+const NA_BEER_CATEGORY = {
+  target_name: "Безалкогольное пиво",
+  target_slug: "non-alcoholic-beer",
+  /** Production currently uses plural; accept singular from brief too. */
+  source_names: ["Солодовый напиток", "Солодовые напитки"] as const,
+  source_slugs: ["solodovyy-napitok", "solodovye-napitki"] as const,
+  forbidden_auto_create_slugs: ["bezalkogolnoe-pivo", "non-alcoholic-beer"] as const,
 };
 
 const FORBIDDEN_APPROVED_SKU_PARTS = [
@@ -673,6 +683,166 @@ const FORBIDDEN_APPROVED_SKU_PARTS = [
   "-30000-KEG",
   "-50000-KEG",
 ];
+
+type ApplyResultMutable = {
+  category_renamed: null | {
+    id: string;
+    from_name: string;
+    from_slug: string;
+    to_name: string;
+    to_slug: string;
+    existing_products_in_category: Array<{ sku: string; name: string }>;
+    existing_product_count: number;
+    existing_products_modified: false;
+  };
+  categories_created: string[];
+};
+
+/**
+ * Rename production category «Солодовый напиток(и)» → «Безалкогольное пиво»
+ * keeping the same UUID. Never creates a duplicate. Stops on slug/name conflicts.
+ * Does not modify existing products in that category (only category row name/slug).
+ */
+async function ensure_na_beer_category_rename(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  prisma: any,
+  result: ApplyResultMutable,
+  apply_out: string,
+): Promise<string> {
+  const target_name = NA_BEER_CATEGORY.target_name;
+  const target_slug = NA_BEER_CATEGORY.target_slug;
+
+  // Already renamed in a previous run?
+  const already = await prisma.categories.findUnique({ where: { slug: target_slug } });
+  if (already) {
+    if (already.name !== target_name) {
+      throw new Error(
+        `CATEGORY CONFLICT: slug "${target_slug}" exists as id=${already.id} name="${already.name}" (expected "${target_name}"). Apply stopped.`,
+      );
+    }
+    const occupants = await prisma.products.findMany({
+      where: { category_id: already.id },
+      select: { sku: true, name: true },
+      orderBy: { sku: "asc" },
+    });
+    result.category_renamed = {
+      id: already.id,
+      from_name: already.name,
+      from_slug: already.slug,
+      to_name: target_name,
+      to_slug: target_slug,
+      existing_products_in_category: occupants,
+      existing_product_count: occupants.length,
+      existing_products_modified: false,
+    };
+    writeFileSync(
+      path.join(apply_out, "na-beer-category-products.json"),
+      JSON.stringify(occupants, null, 2),
+    );
+    return already.id;
+  }
+
+  // Conflict: target name already used under another slug
+  const name_taken = await prisma.categories.findFirst({ where: { name: target_name } });
+  if (name_taken) {
+    throw new Error(
+      `CATEGORY CONFLICT: name "${target_name}" already exists as id=${name_taken.id} slug="${name_taken.slug}". Apply stopped.`,
+    );
+  }
+
+  // Conflict: legacy auto-create slug from earlier apply drafts
+  const legacy = await prisma.categories.findUnique({
+    where: { slug: "bezalkogolnoe-pivo" },
+  });
+  if (legacy) {
+    throw new Error(
+      `CATEGORY CONFLICT: legacy slug "bezalkogolnoe-pivo" exists (id=${legacy.id}, name="${legacy.name}"). Resolve manually before apply. Apply stopped.`,
+    );
+  }
+
+  // Find source category (singular brief name or production plural)
+  let source: { id: string; name: string; slug: string } | null = null;
+  for (const name of NA_BEER_CATEGORY.source_names) {
+    source = await prisma.categories.findFirst({ where: { name } });
+    if (source) break;
+  }
+  if (!source) {
+    for (const slug of NA_BEER_CATEGORY.source_slugs) {
+      source = await prisma.categories.findUnique({ where: { slug } });
+      if (source) break;
+    }
+  }
+  if (!source) {
+    throw new Error(
+      `CATEGORY CONFLICT: source category not found (tried names ${NA_BEER_CATEGORY.source_names.join(
+        " | ",
+      )} and slugs ${NA_BEER_CATEGORY.source_slugs.join(
+        " | ",
+      )}). Apply stopped — will not create a duplicate «Безалкогольное пиво».`,
+    );
+  }
+
+  // Inventory products before rename (do not modify them)
+  const occupants = await prisma.products.findMany({
+    where: { category_id: source.id },
+    select: { sku: true, name: true },
+    orderBy: { sku: "asc" },
+  });
+  writeFileSync(
+    path.join(apply_out, "na-beer-category-products-before.json"),
+    JSON.stringify(
+      {
+        category_id: source.id,
+        category_name: source.name,
+        category_slug: source.slug,
+        products: occupants,
+        note: "Existing product rows are NOT updated; only category name/slug change.",
+      },
+      null,
+      2,
+    ),
+  );
+
+  console.error(
+    JSON.stringify(
+      {
+        na_beer_category_rename: "pending",
+        id: source.id,
+        from_name: source.name,
+        from_slug: source.slug,
+        to_name: target_name,
+        to_slug: target_slug,
+        existing_product_count: occupants.length,
+        existing_skus: occupants.map((p: { sku: string }) => p.sku),
+      },
+      null,
+      2,
+    ),
+  );
+
+  const updated = await prisma.categories.update({
+    where: { id: source.id },
+    data: { name: target_name, slug: target_slug },
+  });
+
+  result.category_renamed = {
+    id: updated.id,
+    from_name: source.name,
+    from_slug: source.slug,
+    to_name: updated.name,
+    to_slug: updated.slug,
+    existing_products_in_category: occupants,
+    existing_product_count: occupants.length,
+    existing_products_modified: false,
+  };
+
+  writeFileSync(
+    path.join(apply_out, "na-beer-category-rename.json"),
+    JSON.stringify(result.category_renamed, null, 2),
+  );
+
+  return updated.id;
+}
 
 async function load_image_buffer(
   row: ApprovedRow,
@@ -945,6 +1115,16 @@ async function cmd_apply() {
     images_missing: [] as string[],
     errors: [] as Array<{ sku: string; error: string }>,
     categories_created: [] as string[],
+    category_renamed: null as null | {
+      id: string;
+      from_name: string;
+      from_slug: string;
+      to_name: string;
+      to_slug: string;
+      existing_products_in_category: Array<{ sku: string; name: string }>;
+      existing_product_count: number;
+      existing_products_modified: false;
+    },
     existing_products_edited: false,
     existing_fingerprint_mismatches: [] as string[],
     category_distribution_created: {} as Record<string, number>,
@@ -988,17 +1168,31 @@ async function cmd_apply() {
       JSON.stringify([...before_map.values()], null, 2),
     );
 
+    // --- NA beer category: rename «Солодовый напиток(и)» → «Безалкогольное пиво» ---
+    const na_beer_category_id = await ensure_na_beer_category_rename(prisma, result, apply_out);
+
     const wanted = new Map<string, { name: string; slug: string }>();
     for (const c of manifest.categories_to_create || []) {
+      // Never auto-create NA beer via categories_to_create — rename path above is mandatory.
+      if (
+        c.slug === NA_BEER_CATEGORY.target_slug ||
+        c.slug === "bezalkogolnoe-pivo" ||
+        c.name === NA_BEER_CATEGORY.target_name
+      ) {
+        continue;
+      }
       wanted.set(c.slug, { name: c.name, slug: c.slug });
     }
     for (const row of approved_rows) {
       const cat = row.category || "Другие";
+      if (cat === NA_BEER_CATEGORY.target_name) continue; // resolved via rename
       const slug = CATEGORY_SLUG_BY_NAME[cat] || "other";
       if (!wanted.has(slug)) wanted.set(slug, { name: cat, slug });
     }
 
     const category_id_by_slug = new Map<string, string>();
+    category_id_by_slug.set(NA_BEER_CATEGORY.target_slug, na_beer_category_id);
+
     for (const c of wanted.values()) {
       const existing = await prisma.categories.findUnique({ where: { slug: c.slug } });
       if (existing) {
@@ -1010,7 +1204,7 @@ async function cmd_apply() {
         category_id_by_slug.set(c.slug, by_name.id);
         continue;
       }
-      if (c.slug === "other" || c.slug === "bezalkogolnoe-pivo") {
+      if (c.slug === "other") {
         const created = await prisma.categories.create({
           data: {
             name: c.name,
@@ -1223,6 +1417,11 @@ async function cmd_apply() {
 - NA beer created: **${finished.non_alcoholic_beer_created}**
 - catalog total after: **${finished.catalog_total_after ?? "—"}**
 - categories created: ${finished.categories_created.join(", ") || "—"}
+- category renamed: ${
+      finished.category_renamed
+        ? `\`${finished.category_renamed.from_name}\` (\`${finished.category_renamed.from_slug}\`) → \`${finished.category_renamed.to_name}\` (\`${finished.category_renamed.to_slug}\`), id=${finished.category_renamed.id}, existing products in category=${finished.category_renamed.existing_product_count} (product rows unmodified)`
+        : "—"
+    }
 - existing products edited: **${finished.existing_products_edited}**
 - fingerprint mismatches: ${finished.existing_fingerprint_mismatches.join(", ") || "—"}
 

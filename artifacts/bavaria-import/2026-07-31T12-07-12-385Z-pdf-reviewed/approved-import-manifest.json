@@ -27,13 +27,17 @@
     "Питьевая вода": 33,
     "Минеральная вода": 3
   },
-  "categories_to_create": [
-    {
-      "name": "Безалкогольное пиво",
-      "slug": "bezalkogolnoe-pivo",
-      "description": "Безалкогольное пиво (≤0,5% об. / 0% алк. по буклету), подтверждённое официальным источником."
-    }
-  ],
+  "categories_to_create": [],
+  "category_rename": {
+    "from_names": ["Солодовый напиток", "Солодовые напитки"],
+    "from_slugs": ["solodovyy-napitok", "solodovye-napitki"],
+    "to_name": "Безалкогольное пиво",
+    "to_slug": "non-alcoholic-beer",
+    "keep_id": true,
+    "create_if_missing": false,
+    "modify_existing_products": false,
+    "description": "Rename existing malt-drink category to NA beer; attach 7 Bavaria NA beer SKUs to same category_id."
+  },
   "checks": {
     "production_db_modified": false,
     "apply_run": false,

@@ -1,0 +1,145 @@
+[
+  {
+    "sku": "W-001",
+    "name": "Вода питьевая негазированная 0.5 л",
+    "brand": "ТИНДА",
+    "category_id": "9b8a56b5-cb2e-4f74-a31d-7b7582f1d426",
+    "price_amount": "240",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.347Z"
+  },
+  {
+    "sku": "W-002",
+    "name": "Вода питьевая негазированная 1.5 л",
+    "brand": "ТИНДА",
+    "category_id": "9b8a56b5-cb2e-4f74-a31d-7b7582f1d426",
+    "price_amount": "310",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.349Z"
+  },
+  {
+    "sku": "W-003",
+    "name": "Вода минеральная газированная 0.5 л",
+    "brand": "Каспий",
+    "category_id": "7ff4c007-d573-49d3-abed-1a4e0f7e36bf",
+    "price_amount": "360",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.351Z"
+  },
+  {
+    "sku": "W-004",
+    "name": "Вода лечебно-столовая 1 л",
+    "brand": "Дагестан",
+    "category_id": "2a186f5f-63f1-4bee-b8d2-a1b333b9a272",
+    "price_amount": "420",
+    "availability": "on_order",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.352Z"
+  },
+  {
+    "sku": "J-001",
+    "name": "Сок яблочный 1 л",
+    "brand": "Сады",
+    "category_id": "1fe27b77-ec09-49b1-b6f9-8bbefb39a2e9",
+    "price_amount": "780",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.354Z"
+  },
+  {
+    "sku": "J-002",
+    "name": "Нектар персиковый 0.95 л",
+    "brand": "Сады",
+    "category_id": "0b1e6147-6d2a-41af-8a04-b3a04cb41e8e",
+    "price_amount": "820",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.355Z"
+  },
+  {
+    "sku": "J-003",
+    "name": "Морс клюквенный 1 л",
+    "brand": "Север",
+    "category_id": "96501c07-b79b-4d18-bac2-3c8913045788",
+    "price_amount": "540",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.357Z"
+  },
+  {
+    "sku": "S-001",
+    "name": "Лимонад классический 0.5 л",
+    "brand": "Буржуа",
+    "category_id": "c9c78f92-6538-4414-b84e-472d5c86aeca",
+    "price_amount": "690",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.359Z"
+  },
+  {
+    "sku": "S-002",
+    "name": "Кола 1 л",
+    "brand": "City Cola",
+    "category_id": "c17ab6b3-b045-4e04-a07e-f0c8b080d84c",
+    "price_amount": "560",
+    "availability": "out_of_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.361Z"
+  },
+  {
+    "sku": "E-001",
+    "name": "Энергетический напиток 0.45 л",
+    "brand": "Pulse",
+    "category_id": "eb380e18-6308-4a48-8099-0f2e817b802f",
+    "price_amount": "1450",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.363Z"
+  },
+  {
+    "sku": "T-001",
+    "name": "Холодный чай лимон 0.5 л",
+    "brand": "IceDay",
+    "category_id": "d05dee2f-697e-45ae-b1bb-f87c75e3d153",
+    "price_amount": "480",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.364Z"
+  },
+  {
+    "sku": "K-001",
+    "name": "Квас традиционный 1.5 л",
+    "brand": "Домашний",
+    "category_id": "9b57c2fc-e555-40d2-8c13-d23b8673d123",
+    "price_amount": "390",
+    "availability": "in_stock",
+    "sales_status": "orderable",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:16:32.366Z"
+  },
+  {
+    "sku": "ZY-BARBICAN-TEST-001",
+    "name": "Barbican test occupant",
+    "brand": "Barbican",
+    "category_id": "1ee46c93-79be-4c2f-8dcf-c4dac17fe2c1",
+    "price_amount": null,
+    "availability": "on_order",
+    "sales_status": "showcase",
+    "image_url": null,
+    "updated_at": "2026-07-31T12:23:03.622Z"
+  }
+]

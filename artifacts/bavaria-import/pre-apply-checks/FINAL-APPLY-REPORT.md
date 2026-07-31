@@ -71,9 +71,15 @@ Manual/rejected/wholesale **не импортированы**.
 | `npm test` | PASS (175/175) с локальным DATABASE_URL |
 | `npm run build` | PASS |
 
+## VPS runbook
+
+См. **`artifacts/bavaria-import/pre-apply-checks/VPS-PRODUCTION-RUNBOOK.md`**.
+
+Категория: rename «Солодовые напитки» → «Безалкогольное пиво» (`non-alcoholic-beer`), keep ID; 7 Bavaria NA beer → эта категория.
+
 ## Что нужно для production
 
-Передать агенту / выполнить на VPS:
+Выполнить на VPS (секрет `DATABASE_URL` не передавать в чат):
 
 ```bash
 # на VPS с production DATABASE_URL
