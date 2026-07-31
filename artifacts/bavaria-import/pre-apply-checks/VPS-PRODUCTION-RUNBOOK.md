@@ -378,16 +378,24 @@ npm run import:bavaria:apply -- \
 
 ## Примечание по категории
 
-На production сейчас:
+**Выполнено на production (2026-07-31):** категория `8e8d04e4-d3af-4448-bc58-bde0594dc772`
+переименована «Солодовые напитки» / `solodovye-napitki` → **«Безалкогольное пиво»** / **`non-alcoholic-beer`**
+(UUID сохранён). Barbican (7) остались на том же `category_id`; добавлены 7 Bavaria NA beer.
 
-- name: **Солодовые напитки**
-- slug: `solodovye-napitki`
-- уже есть товары Barbican (≈7)
+Полный отчёт: `artifacts/bavaria-import/production-apply-2026-07-31/PRODUCTION-APPLY-REPORT.md`.
 
-Apply переименует **эту** категорию (ID сохранится) в:
+---
 
-- name: **Безалкогольное пиво**
-- slug: `non-alcoholic-beer`
+## Post-apply: права на uploads + restart
 
-Barbican останутся в той же `category_id` (строки products не обновляются).  
-7 новых Bavaria NA beer SKU будут созданы с этим же `category_id`.
+Одноразовый `docker run` (root) пишет файлы в volume как `root:root`. Next.js отдаёт
+новые файлы из `public/uploads` только после рестарта процесса.
+
+После apply с загрузкой картинок:
+
+```bash
+chown -R 1001:1001 "$(docker volume inspect app_tinda_uploads --format '{{.Mountpoint}}')"
+cd /opt/tinda/app
+docker compose -f docker-compose.production.yml restart app
+# дождаться healthy, затем проверить sample image_url → HTTP 200
+```
