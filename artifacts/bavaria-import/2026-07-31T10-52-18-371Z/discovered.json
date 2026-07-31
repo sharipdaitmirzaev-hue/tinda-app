@@ -1,0 +1,1009 @@
+{
+  "products": [
+    {
+      "path": "/beer-product/ajva",
+      "url": "https://www.bavaria-group.ru/beer-product/ajva",
+      "slug": "ajva",
+      "categories": [
+        "/beer-category/stm-dla-partnerov"
+      ],
+      "official_name": "«Айва»",
+      "page_title": "«Айва»",
+      "variants": [
+        {
+          "variant_title": "\"Айва\"",
+          "text_html": "\n                                        <p> Стекло\"<span class=\"redactor-invisible-space\" style=\"background-color: initial;\">Premium\" негазированная 0,5 л /</span> ПЭТ-бутылка негазированная  0,5 л <span></span></p>                                    ",
+          "text": "Стекло\" Premium\" негазированная 0,5 л / ПЭТ-бутылка негазированная 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/93_1726236498.png"
+        }
+      ],
+      "html_len": 14744
+    },
+    {
+      "path": "/beer-product/avaral",
+      "url": "https://www.bavaria-group.ru/beer-product/avaral",
+      "slug": "avaral",
+      "categories": [
+        "/beer-category/stm-dla-partnerov"
+      ],
+      "official_name": "«Аварал»",
+      "page_title": "«Аварал»",
+      "variants": [
+        {
+          "variant_title": "\"Аварал\"",
+          "text_html": "\n                                        <p>Стекло 0,45 л</p>                                    ",
+          "text": "Стекло 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/94_1726237103.png"
+        }
+      ],
+      "html_len": 14359
+    },
+    {
+      "path": "/beer-product/bezalkogolnyj-silnogazirovannyj-napitok-dreamix",
+      "url": "https://www.bavaria-group.ru/beer-product/bezalkogolnyj-silnogazirovannyj-napitok-dreamix",
+      "slug": "bezalkogolnyj-silnogazirovannyj-napitok-dreamix",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Безалкогольный сильногазированный напиток «Dreamix»",
+      "page_title": "Безалкогольный сильногазированный напиток «Dreamix»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ- бутылка  0,5 л | ЖБ 0,33 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ- бутылка 0,5 л | ЖБ 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/98_1743082462.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ- бутылка 0,5 л | ЖБ 0,33 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ- бутылка 0,5 л | ЖБ 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/100_1743082523.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ- бутылка 0,5 л | ЖБ 0,33 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ- бутылка 0,5 л | ЖБ 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/101_1743082539.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ- бутылка 0,5 л | ЖБ 0,33 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ- бутылка 0,5 л | ЖБ 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/102_1743082553.jpg"
+        }
+      ],
+      "html_len": 17330
+    },
+    {
+      "path": "/beer-product/black-rocket",
+      "url": "https://www.bavaria-group.ru/beer-product/black-rocket",
+      "slug": "black-rocket",
+      "categories": [
+        "/beer-category/stm-dla-partnerov"
+      ],
+      "official_name": "«BLACK ROCKET»",
+      "page_title": "«BLACK ROCKET»",
+      "variants": [
+        {
+          "variant_title": "BLACK ROCKET",
+          "text_html": "\n                                        <p>ЖБ 0,45 л</p>                                    ",
+          "text": "ЖБ 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/89_1726224339.png"
+        },
+        {
+          "variant_title": "BLACK ROCKET",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 0,5 л </p>                                    ",
+          "text": "ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/90_1726224400.png"
+        }
+      ],
+      "html_len": 15558
+    },
+    {
+      "path": "/beer-product/bojlernoe-pivo",
+      "url": "https://www.bavaria-group.ru/beer-product/bojlernoe-pivo",
+      "slug": "bojlernoe-pivo",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Советская история бойлерного вдохновения",
+      "page_title": "Советская история бойлерного вдохновения",
+      "variants": [
+        {
+          "variant_title": "Бавария «Советская история бойлерного вдохновения» фильтрованное",
+          "text_html": "\n                                        <p>Это светлое пиво, которое разольют в присутствии покупателя особенным способом, позволяющим добиться того самого вкуса из прошлого. Вкус бойлерного пива мягче обычного. Его пена менее пышная, но более стойкая. Такое пиво легко пьется и хорошо утоляет жажду.</p><p>Алкоголь 4,5% об. Экстрактивность начального сусла 12%.</p><p><span class=\"redactor-invisible-space\">КЕГи</span></p>                                    ",
+          "text": "Это светлое пиво, которое разольют в присутствии покупателя особенным способом, позволяющим добиться того самого вкуса из прошлого. Вкус бойлерного пива мягче обычного. Его пена менее пышная, но более стойкая. Такое пиво легко пьется и хорошо утоляет жажду. Алкоголь 4,5% об. Экстрактивность начального сусла 12%. КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/16_1740990107.jpg"
+        }
+      ],
+      "html_len": 14835
+    },
+    {
+      "path": "/beer-product/cola-limited-edition",
+      "url": "https://www.bavaria-group.ru/beer-product/cola-limited-edition",
+      "slug": "cola-limited-edition",
+      "categories": [
+        "/beer-category/stm-dla-partnerov"
+      ],
+      "official_name": "«Cola Limited Edition»",
+      "page_title": "«Cola Limited Edition»",
+      "variants": [
+        {
+          "variant_title": "Cola Limited Edition",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/91_1726224649.png"
+        },
+        {
+          "variant_title": "Cola Limited Edition",
+          "text_html": "\n                                        <p> Стекло 0,45 л</p>                                    ",
+          "text": "Стекло 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/92_1726224683.png"
+        }
+      ],
+      "html_len": 15624
+    },
+    {
+      "path": "/beer-product/dreamix",
+      "url": "https://www.bavaria-group.ru/beer-product/dreamix",
+      "slug": "dreamix",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Безалкогольные сильногазированные напитки \"Dreamix. Toniс\"",
+      "page_title": "Безалкогольные сильногазированные напитки \"Dreamix. Toniс\"",
+      "variants": [
+        {
+          "variant_title": "Dreamix Indian Tonik",
+          "text_html": "\n                                        <p>Dreamix Indian Tonik — это гармония природы и городской ритм в каждом глотке. Светлый янтарный оттенок тоника обещает чистую газировку и изящную гладкость, а мягкая нотка коры индийского дерева добавляет тонкий, но запоминающийся характер. Свежесть цитрусов и зелёные травяные акценты переплетаются с легкой пряной древесной базой, создавая ощущение утреннего бриза над тропическим садом.\r\n</p><p><br>\r\n</p><p><em>Ключевые ноты:</em>\r\n</p><ul>\r\n\t<li><em>Освежающая цитрусовая аэробика: лимон, лайм</em></li>\r\n\t<li><em>Легкая пряная древесная база: корица, кардамон,</em></li>\r\n\t<li><em>индийская кора.</em></li>\r\n\t<li><em>Чистая газированность и длительное послевкусие.</em></li>\r\n</ul><p><br>\r\n</p><p>Dreamix Indian Tonik — для тех, кто любит элегантную текстуру, тонкую пряную глубину и чистоту цитрусовой свежести в каждом глотке.\r\n</p><p> ПЭТ-бутылка 1л | Стекло 0,33л<br></p>                                    ",
+          "text": "Dreamix Indian Tonik — это гармония природы и городской ритм в каждом глотке. Светлый янтарный оттенок тоника обещает чистую газировку и изящную гладкость, а мягкая нотка коры индийского дерева добавляет тонкий, но запоминающийся характер. Свежесть цитрусов и зелёные травяные акценты переплетаются с легкой пряной древесной базой, создавая ощущение утреннего бриза над тропическим садом. Ключевые ноты: Освежающая цитрусовая аэробика: лимон, лайм Легкая пряная древесная база: корица, кардамон, индийская кора. Чистая газированность и длительное послевкусие. Dreamix Indian Tonik — для тех, кто любит элегантную текстуру, тонкую пряную глубину и чистоту цитрусовой свежести в каждом глотке. ПЭТ-бутылка 1л | Стекло 0,33л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/127_1775207748.png"
+        },
+        {
+          "variant_title": "Dreamix Bitter Lemon",
+          "text_html": "\n                                        <p>Dreamix Bitter Lemon — это сияние цитрусовой свежести в каждой капле. Глубокий янтарный оттенок олицетворяет утонченную горечь лимонной кожуры, которая открывается плавно, словно рассвет над морем. Свежие ноты лимона и легкие травяные акценты создают баланс между прохладной яркостью и теплой гармонией. Этот биттер идеально подходит как аперитив к качественным джинам и тоникам, а также как изящный штрих в коктейлях с виски, ромом и ликерами. Добавьте каплю Dreamix Bitter Lemon — и ваш напиток зазвучит громче, чище и намного длиннее на послевкусии.\r\n</p><p><br>\r\n</p><p><em>Ключевые нотки:</em>\r\n</p><ul>\r\n\t<li><em>Лимонная свежесть и тонкая горечь кожуры</em></li>\r\n\t<li><em>Травяные нюансы (розмарин, базилик)</em></li>\r\n\t<li><em>Чистый, стойкий послевкусие с цитрусовой чистотой</em></li>\r\n</ul><p><br>\r\n</p><p>Dreamix Bitter Lemon — для тех, кто ценит элегантную цитрусовую горечь и вдохновляющие коктейльные возможности.<br>\r\n</p><p> ПЭТ-бутылка 1л<span class=\"redactor-invisible-space\"> | </span>Стекло 0,33л<br></p>                                    ",
+          "text": "Dreamix Bitter Lemon — это сияние цитрусовой свежести в каждой капле. Глубокий янтарный оттенок олицетворяет утонченную горечь лимонной кожуры, которая открывается плавно, словно рассвет над морем. Свежие ноты лимона и легкие травяные акценты создают баланс между прохладной яркостью и теплой гармонией. Этот биттер идеально подходит как аперитив к качественным джинам и тоникам, а также как изящный штрих в коктейлях с виски, ромом и ликерами. Добавьте каплю Dreamix Bitter Lemon — и ваш напиток зазвучит громче, чище и намного длиннее на послевкусии. Ключевые нотки: Лимонная свежесть и тонкая горечь кожуры Травяные нюансы (розмарин, базилик) Чистый, стойкий послевкусие с цитрусовой чистотой Dreamix Bitter Lemon — для тех, кто ценит элегантную цитрусовую горечь и вдохновляющие коктейльные возможности. ПЭТ-бутылка 1л | Стекло 0,33л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/128_1775214996.png"
+        }
+      ],
+      "html_len": 16959
+    },
+    {
+      "path": "/beer-product/elf-bezalkogolnoe",
+      "url": "https://www.bavaria-group.ru/beer-product/elf-bezalkogolnoe",
+      "slug": "elf-bezalkogolnoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "«Elf» безалкогольное",
+      "page_title": "«Elf» безалкогольное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Светлое пиво с мягким вкусом. В состав входят: родниковая вода,\r\nсолод светлый ячменный, солод светлый карамельный, хмель ароматный.</p><p>Алкоголь 0,5% об. | Стекло 0,45 л</p>                                    ",
+          "text": "Светлое пиво с мягким вкусом. В состав входят: родниковая вода, солод светлый ячменный, солод светлый карамельный, хмель ароматный. Алкоголь 0,5% об. | Стекло 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/55_1740991309.jpg"
+        }
+      ],
+      "html_len": 15071
+    },
+    {
+      "path": "/beer-product/gornaa-rodnikovaa-voda-tbau-detskaa",
+      "url": "https://www.bavaria-group.ru/beer-product/gornaa-rodnikovaa-voda-tbau-detskaa",
+      "slug": "gornaa-rodnikovaa-voda-tbau-detskaa",
+      "categories": [
+        "/beer-category/gornaa-rodnikovaa-voda-tbau"
+      ],
+      "official_name": "Горная родниковая вода «ТБАУ Детская»",
+      "page_title": "Горная родниковая вода «ТБАУ Детская»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 5 л | ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л<span class=\"redactor-invisible-space\"> спорт-лок | ПЭТ-бутылка 0,33 л<span class=\"redactor-invisible-space\"> спорт-лок</span></span></p>                                    ",
+          "text": "ПЭТ-бутылка 5 л | ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л спорт-лок | ПЭТ-бутылка 0,33 л спорт-лок",
+          "image": "https://www.bavaria-group.ru/files/beer_items/30_1758714960.png"
+        }
+      ],
+      "html_len": 15440
+    },
+    {
+      "path": "/beer-product/gornaa-voda",
+      "url": "https://www.bavaria-group.ru/beer-product/gornaa-voda",
+      "slug": "gornaa-voda",
+      "categories": [
+        "/beer-category/stm-dla-partnerov"
+      ],
+      "official_name": "«Горная вода»",
+      "page_title": "«Горная вода»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 0,5 л</p><p>Sport Lock</p><p>Негазированная / Газированная</p>                                    ",
+          "text": "ПЭТ-бутылка 0,5 л Sport Lock Негазированная / Газированная",
+          "image": "https://www.bavaria-group.ru/files/beer_items/82_1757514706.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Стекло 0,45 л</p><p>Негазированная / Газированная</p>                                    ",
+          "text": "Стекло 0,45 л Негазированная / Газированная",
+          "image": "https://www.bavaria-group.ru/files/beer_items/83_1726217046.png"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л</p><p>Негазированная / Газированная</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л Негазированная / Газированная",
+          "image": "https://www.bavaria-group.ru/files/beer_items/84_1726217054.png"
+        }
+      ],
+      "html_len": 16273
+    },
+    {
+      "path": "/beer-product/holodnyj-caj-mountea",
+      "url": "https://www.bavaria-group.ru/beer-product/holodnyj-caj-mountea",
+      "slug": "holodnyj-caj-mountea",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Холодный чай «Mountea»",
+      "page_title": "Холодный чай «Mountea»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Персик / Лесные ягоды </p><p>ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л </p>                                    ",
+          "text": "Ассортимент: Персик / Лесные ягоды ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/28_1758711718.png"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Лесные ягоды / Персик</p><p>ЖБ 0,33 л</p>                                    ",
+          "text": "Ассортимент: Лесные ягоды / Персик ЖБ 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/67_1758711780.png"
+        }
+      ],
+      "html_len": 15453
+    },
+    {
+      "path": "/beer-product/kola-limited-edition",
+      "url": "https://www.bavaria-group.ru/beer-product/kola-limited-edition",
+      "slug": "kola-limited-edition",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Кола Premium LIMITED EDITION",
+      "page_title": "Кола Premium LIMITED EDITION",
+      "variants": [
+        {
+          "variant_title": "Кола Premium LIMITED EDITION",
+          "text_html": "\n                                        <p> ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0,5 л | <br>Стекло 0.33 л |  А/Б 0,33 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0,5 л | Стекло 0.33 л | А/Б 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/65_1718375901.jpg"
+        }
+      ],
+      "html_len": 14791
+    },
+    {
+      "path": "/beer-product/kola-limited-edition-2",
+      "url": "https://www.bavaria-group.ru/beer-product/kola-limited-edition-2",
+      "slug": "kola-limited-edition-2",
+      "categories": [
+        "/beer-category/stm-dla-partnerov"
+      ],
+      "official_name": "«Cola Limited Edition»",
+      "page_title": "«Cola Limited Edition»",
+      "variants": [
+        {
+          "variant_title": "Cola Limited Edition",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/85_1726218875.png"
+        },
+        {
+          "variant_title": "Cola Limited Edition",
+          "text_html": "\n                                        <p>Стекло 0,45 л </p>                                    ",
+          "text": "Стекло 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/87_1726219041.png"
+        },
+        {
+          "variant_title": "Cola Limited Edition",
+          "text_html": "\n                                        <p>А/Б 0,33 л</p>                                    ",
+          "text": "А/Б 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/88_1726219159.png"
+        }
+      ],
+      "html_len": 16386
+    },
+    {
+      "path": "/beer-product/kola-premium-sugar-free",
+      "url": "https://www.bavaria-group.ru/beer-product/kola-premium-sugar-free",
+      "slug": "kola-premium-sugar-free",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Кола Premium SUGAR FREE",
+      "page_title": "Кола Premium SUGAR FREE",
+      "variants": [
+        {
+          "variant_title": "Кола Premium SUGAR FREE",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 1 л | ПЭТ-бутылка 0,5 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 1 л | ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/125_1765464144.jpg"
+        }
+      ],
+      "html_len": 14993
+    },
+    {
+      "path": "/beer-product/kvas-dobrecov",
+      "url": "https://www.bavaria-group.ru/beer-product/kvas-dobrecov",
+      "slug": "kvas-dobrecov",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Квас «Добрецовъ»",
+      "page_title": "Квас «Добрецовъ»",
+      "variants": [
+        {
+          "variant_title": "Квас «Добрецовъ»",
+          "text_html": "\n                                        <p>ПЭТ-бутылка  2 л | ПЭТ-бутылка 1,4 л | А/Б 0,45 л </p>                                    ",
+          "text": "ПЭТ-бутылка 2 л | ПЭТ-бутылка 1,4 л | А/Б 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/76_1783510510.jpg"
+        }
+      ],
+      "html_len": 14899
+    },
+    {
+      "path": "/beer-product/kvas-dobrecov-bockovoj",
+      "url": "https://www.bavaria-group.ru/beer-product/kvas-dobrecov-bockovoj",
+      "slug": "kvas-dobrecov-bockovoj",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Квас «Добрецовъ Бочковой»",
+      "page_title": "Квас «Добрецовъ Бочковой»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ 2 л</p>                                    ",
+          "text": "ПЭТ 2 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/139_1783501193.png"
+        }
+      ],
+      "html_len": 16357
+    },
+    {
+      "path": "/beer-product/linejka-naturalnyh-napitkov-mountea-botanic",
+      "url": "https://www.bavaria-group.ru/beer-product/linejka-naturalnyh-napitkov-mountea-botanic",
+      "slug": "linejka-naturalnyh-napitkov-mountea-botanic",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Линейка натуральных напитков MOUNTEA botanic",
+      "page_title": "Линейка натуральных напитков MOUNTEA botanic",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Черный чай с лимоном и горной мятой / Зеленый чай с манго и ромашкой / Черный чай с малиной и гибискусом<span class=\"redactor-invisible-space\"></span></p><p>ПЭТ 1,0 л</p>                                    ",
+          "text": "Ассортимент: Черный чай с лимоном и горной мятой / Зеленый чай с манго и ромашкой / Черный чай с малиной и гибискусом ПЭТ 1,0 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/135_1783424099.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Черный чай с лимоном и горной мятой / Зеленый чай с манго и ромашкой / Черный чай с малиной и гибискусом</p><p>ПЭТ 0,5 л</p>                                    ",
+          "text": "Ассортимент: Черный чай с лимоном и горной мятой / Зеленый чай с манго и ромашкой / Черный чай с малиной и гибискусом ПЭТ 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/136_1783424134.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Черный чай с лимоном и горной мятой / Зеленый чай с манго и ромашкой / Черный чай с малиной и гибискусом</p><p>АБ 0,33 л</p>                                    ",
+          "text": "Ассортимент: Черный чай с лимоном и горной мятой / Зеленый чай с манго и ромашкой / Черный чай с малиной и гибискусом АБ 0,33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/137_1783424192.jpg"
+        }
+      ],
+      "html_len": 18565
+    },
+    {
+      "path": "/beer-product/napitok-bezalkogolnyj-silnogazirovannyj-mohito",
+      "url": "https://www.bavaria-group.ru/beer-product/napitok-bezalkogolnyj-silnogazirovannyj-mohito",
+      "slug": "napitok-bezalkogolnyj-silnogazirovannyj-mohito",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Напиток безалкогольный сильногазированный MОХИТО",
+      "page_title": "Напиток безалкогольный сильногазированный MОХИТО",
+      "variants": [
+        {
+          "variant_title": "​ Мохито Клубника-Земляника",
+          "text_html": "\n                                        <p>Когда к классической свежести мяты хочется добавить ярких, сладких эмоций. В этом вкусе спелая садовая клубника и ароматная лесная земляника кружатся в зажигательном танце с бодрящим лаймом. Напиток обладает идеальным балансом ягодной сладости и цитрусовой кислинки, оставляя долгое приятное послевкусие. Насыщенный клубнично-земляничный вкус с деликатной кислинкой лайма и прохладой мяты.</p><p>А/Б 0,45 л<br></p>                                    ",
+          "text": "Когда к классической свежести мяты хочется добавить ярких, сладких эмоций. В этом вкусе спелая садовая клубника и ароматная лесная земляника кружатся в зажигательном танце с бодрящим лаймом. Напиток обладает идеальным балансом ягодной сладости и цитрусовой кислинки, оставляя долгое приятное послевкусие. Насыщенный клубнично-земляничный вкус с деликатной кислинкой лайма и прохладой мяты. А/Б 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/131_1780557583.png"
+        },
+        {
+          "variant_title": "​ Мохито Fresh Lime & Mint (Свежий Лайм & Мята)",
+          "text_html": "\n                                        <p>Максимум цитрусовой энергии для тех, кому нужно перезагрузиться здесь и сейчас. Это каноническое сочетание дикорастущей мяты и экстра-сочного лайма. Напиток мгновенно тонизирует, утоляет жажду в самый жаркий день и дарит мощный заряд бодрости благодаря покалывающим пузырькам. Кристально чистый, умеренно кислый, с выраженным мятным холодком и благородной горчинкой лаймовой цедры.</p><p>А/Б 0,45 л</p>                                    ",
+          "text": "Максимум цитрусовой энергии для тех, кому нужно перезагрузиться здесь и сейчас. Это каноническое сочетание дикорастущей мяты и экстра-сочного лайма. Напиток мгновенно тонизирует, утоляет жажду в самый жаркий день и дарит мощный заряд бодрости благодаря покалывающим пузырькам. Кристально чистый, умеренно кислый, с выраженным мятным холодком и благородной горчинкой лаймовой цедры. А/Б 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/132_1780557699.png"
+        }
+      ],
+      "html_len": 16334
+    },
+    {
+      "path": "/beer-product/new-orange",
+      "url": "https://www.bavaria-group.ru/beer-product/new-orange",
+      "slug": "new-orange",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "New Orange",
+      "page_title": "New Orange",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 0,5л | ПЭТ-бутылка 1л | ПЭТ-бутылка 1,5л</p>                                    ",
+          "text": "ПЭТ-бутылка 0,5л | ПЭТ-бутылка 1л | ПЭТ-бутылка 1,5л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/110_1757078392.png"
+        }
+      ],
+      "html_len": 14570
+    },
+    {
+      "path": "/beer-product/nordisch-bier",
+      "url": "https://www.bavaria-group.ru/beer-product/nordisch-bier",
+      "slug": "nordisch-bier",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Nordisch bier",
+      "page_title": "Nordisch bier",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                                                            ",
+          "text": "",
+          "image": "https://www.bavaria-group.ru/files/beer_items/140_1784905434.jpeg"
+        }
+      ],
+      "html_len": 14629
+    },
+    {
+      "path": "/beer-product/pitevaa-voda-dla-kulerov",
+      "url": "https://www.bavaria-group.ru/beer-product/pitevaa-voda-dla-kulerov",
+      "slug": "pitevaa-voda-dla-kulerov",
+      "categories": [
+        "/beer-category/gornaa-rodnikovaa-voda-tbau"
+      ],
+      "official_name": "Питьевая вода для кулеров",
+      "page_title": "Питьевая вода для кулеров",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>«ТБАУ» негазированная / «ТБАУ Детская»</p><p>Поликарбонатная бутыль 19 л<br></p>                                    ",
+          "text": "Ассортимент: «ТБАУ» негазированная / «ТБАУ Детская» Поликарбонатная бутыль 19 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/33_1716877500.jpg"
+        }
+      ],
+      "html_len": 14900
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-avstrijskoe-svetloe-filtrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-avstrijskoe-svetloe-filtrovannoe",
+      "slug": "pivo-bavaria-avstrijskoe-svetloe-filtrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария «Австрийское» светлое фильтрованное",
+      "page_title": "Пиво Бавария «Австрийское» светлое фильтрованное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это светлое пиво с приятным хмелевым ароматом, оттенком\r\nпшеничного солода во вкусе и мягким послевкусием.</p><p>Алкоголь 4,5% об. Экстрактивность начального сусла 12%.</p><p>Стекло 0,45 л <span class=\"redactor-invisible-space\"></span></p>                                    ",
+          "text": "Это светлое пиво с приятным хмелевым ароматом, оттенком пшеничного солода во вкусе и мягким послевкусием. Алкоголь 4,5% об. Экстрактивность начального сусла 12%. Стекло 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/41_1740990462.jpg"
+        }
+      ],
+      "html_len": 15113
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-belgijskoe-svetloe-filtrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-belgijskoe-svetloe-filtrovannoe",
+      "slug": "pivo-bavaria-belgijskoe-svetloe-filtrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария «Бельгийское» светлое нефильтрованное",
+      "page_title": "Пиво Бавария «Бельгийское» светлое нефильтрованное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это светлое пиво с приятным хмелевым ароматом и мягкими нотками\r\nячменного солода.</p><p>Алкоголь 5,4% об. Экстрактивность начального сусла 15%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л | <span class=\"redactor-invisible-space\">КЕГи</span></p>                                    ",
+          "text": "Это светлое пиво с приятным хмелевым ароматом и мягкими нотками ячменного солода. Алкоголь 5,4% об. Экстрактивность начального сусла 15%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л | КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/45_1740990493.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это светлое пиво с приятным хмелевым ароматом и мягкими нотками\r\nячменного солода.</p><p>Алкоголь 5,4% об. Экстрактивность начального сусла 15%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,5 л | <span class=\"redactor-invisible-space\">КЕГи</span></p>                                    ",
+          "text": "Это светлое пиво с приятным хмелевым ароматом и мягкими нотками ячменного солода. Алкоголь 5,4% об. Экстрактивность начального сусла 15%. ПЭТ-бутылка 1,4 л | Стекло 0,5 л | КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/46_1714058099.png"
+        }
+      ],
+      "html_len": 16040
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-elf-svetloe-filtrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-elf-svetloe-filtrovannoe",
+      "slug": "pivo-bavaria-elf-svetloe-filtrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария «Elf» светлое фильтрованное",
+      "page_title": "Пиво Бавария «Elf» светлое фильтрованное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Светлое пиво традиционного немецкого направления с легким\r\nосвежающим вкусом и насыщенным хмелевым ароматом.</p><p>Алкоголь 4,0% об. Экстрактивность начального сусла 11%.</p><p><span class=\"redactor-invisible-space\"></span></p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л | Ж/Б 0,45 | <span class=\"redactor-invisible-space\">КЕГи</span></p>                                    ",
+          "text": "Светлое пиво традиционного немецкого направления с легким освежающим вкусом и насыщенным хмелевым ароматом. Алкоголь 4,0% об. Экстрактивность начального сусла 11%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л | Ж/Б 0,45 | КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/49_1774617735.jpg"
+        }
+      ],
+      "html_len": 15201
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-prazskoe-svetloe-filtrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-prazskoe-svetloe-filtrovannoe",
+      "slug": "pivo-bavaria-prazskoe-svetloe-filtrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария \"Пражское\" светлое фильтрованное",
+      "page_title": "Пиво Бавария \"Пражское\" светлое фильтрованное",
+      "variants": [
+        {
+          "variant_title": "Пиво Бавария \"Пражское\" светлое фильтрованное",
+          "text_html": "\n                                        <p>Разливное светлое фильтрованное пиво Бавария \"Пражское\" <br></p><p>Алкоголь 4,5% об. Экстрактивность начального сусла 12%.</p><p><span class=\"redactor-invisible-space\">КЕГи</span></p>                                    ",
+          "text": "Разливное светлое фильтрованное пиво Бавария \"Пражское\" Алкоголь 4,5% об. Экстрактивность начального сусла 12%. КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/63_1740990148.jpg"
+        }
+      ],
+      "html_len": 14800
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-svetloe-filtrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-svetloe-filtrovannoe",
+      "slug": "pivo-bavaria-svetloe-filtrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария «светлое» фильтрованное",
+      "page_title": "Пиво Бавария «светлое» фильтрованное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это классическое пиво обладает мягким вкусом и свежим ароматом\r\nсветлого солода.</p><p>Алкоголь 4,5% об. Экстрактивность начального сусла 12%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л |<span class=\"redactor-invisible-space\"> КЕГи</span></p>                                    ",
+          "text": "Это классическое пиво обладает мягким вкусом и свежим ароматом светлого солода. Алкоголь 4,5% об. Экстрактивность начального сусла 12%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л | КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/34_1774617597.jpg"
+        }
+      ],
+      "html_len": 15105
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-svetloe-nefiltrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-svetloe-nefiltrovannoe",
+      "slug": "pivo-bavaria-svetloe-nefiltrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария «светлое» нефильтрованное",
+      "page_title": "Пиво Бавария «светлое» нефильтрованное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это классическое пиво обладает мягким вкусом и легким дрожжевым\r\nароматом.</p><p>Алкоголь 4,5% об. Экстрактивность начального сусла 12%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л</p>                                    ",
+          "text": "Это классическое пиво обладает мягким вкусом и легким дрожжевым ароматом. Алкоголь 4,5% об. Экстрактивность начального сусла 12%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/37_1740990937.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это классическое пиво обладает мягким вкусом и легким дрожжевым\r\nароматом.</p><p>Алкоголь 4,5% об. Экстрактивность начального сусла 12%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л</p>                                    ",
+          "text": "Это классическое пиво обладает мягким вкусом и легким дрожжевым ароматом. Алкоголь 4,5% об. Экстрактивность начального сусла 12%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/38_1740990947.jpg"
+        }
+      ],
+      "html_len": 15877
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-temnoe-filtrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-temnoe-filtrovannoe",
+      "slug": "pivo-bavaria-temnoe-filtrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария «темное» фильтрованное",
+      "page_title": "Пиво Бавария «темное» фильтрованное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это классическое пиво, приготовленное из темных сортов\r\nвысококачественного немецкого солода. Имеет стойкий аромат и ярко выраженный\r\nсладковатый карамельный вкус с легким оттенком жженого солода.</p><p>Алкоголь 4,9% об. Экстрактивность начального сусла 15%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л |<span class=\"redactor-invisible-space\"> КЕГи</span></p>                                    ",
+          "text": "Это классическое пиво, приготовленное из темных сортов высококачественного немецкого солода. Имеет стойкий аромат и ярко выраженный сладковатый карамельный вкус с легким оттенком жженого солода. Алкоголь 4,9% об. Экстрактивность начального сусла 15%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л | КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/39_1740990770.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это классическое пиво, приготовленное из темных сортов\r\nвысококачественного немецкого солода. Имеет стойкий аромат и ярко выраженный\r\nсладковатый карамельный вкус с легким оттенком жженого солода.</p><p>Алкоголь 4,9% об. Экстрактивность начального сусла 15%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л |<span class=\"redactor-invisible-space\"> КЕГи</span></p>                                    ",
+          "text": "Это классическое пиво, приготовленное из темных сортов высококачественного немецкого солода. Имеет стойкий аромат и ярко выраженный сладковатый карамельный вкус с легким оттенком жженого солода. Алкоголь 4,9% об. Экстрактивность начального сусла 15%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л | КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/40_1740990784.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Это классическое пиво, приготовленное из темных сортов высококачественного немецкого солода. Имеет стойкий аромат и ярко выраженный сладковатый карамельный вкус с легким оттенком жженого солода.</p><p>Алкоголь 4,9% об. Экстрактивность начального сусла 15%.</p><p>ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л |<span class=\"redactor-invisible-space\"> КЕГи</span></p>                                    ",
+          "text": "Это классическое пиво, приготовленное из темных сортов высококачественного немецкого солода. Имеет стойкий аромат и ярко выраженный сладковатый карамельный вкус с легким оттенком жженого солода. Алкоголь 4,9% об. Экстрактивность начального сусла 15%. ПЭТ-бутылка 1,4 л | Стекло 0,45 л | ЖБ 0,45 л | КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/56_1740990794.jpg"
+        }
+      ],
+      "html_len": 17315
+    },
+    {
+      "path": "/beer-product/pivo-bavaria-vladikavkazskoe-svetloe-filtrovannoe",
+      "url": "https://www.bavaria-group.ru/beer-product/pivo-bavaria-vladikavkazskoe-svetloe-filtrovannoe",
+      "slug": "pivo-bavaria-vladikavkazskoe-svetloe-filtrovannoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Пиво Бавария \"Владикавказское\" светлое фильтрованное",
+      "page_title": "Пиво Бавария \"Владикавказское\" светлое фильтрованное",
+      "variants": [
+        {
+          "variant_title": "Пиво Бавария \"Владикавказское\" светлое фильтрованное",
+          "text_html": "\n                                        <p>Разливное светлое фильтрованное пиво Бавария \"Владикавказское\"</p><p>Алкоголь 4% об. Экстрактивность начального сусла 11%.</p><p><span class=\"redactor-invisible-space\">КЕГи</span></p>                                    ",
+          "text": "Разливное светлое фильтрованное пиво Бавария \"Владикавказское\" Алкоголь 4% об. Экстрактивность начального сусла 11%. КЕГи",
+          "image": "https://www.bavaria-group.ru/files/beer_items/64_1740989965.jpg"
+        }
+      ],
+      "html_len": 14882
+    },
+    {
+      "path": "/beer-product/silnogazirovannye-bezalkogolnye-napitki-honga",
+      "url": "https://www.bavaria-group.ru/beer-product/silnogazirovannye-bezalkogolnye-napitki-honga",
+      "slug": "silnogazirovannye-bezalkogolnye-napitki-honga",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Сильногазированные безалкогольные напитки \"Хонга\"",
+      "page_title": "Сильногазированные безалкогольные напитки \"Хонга\"",
+      "variants": [
+        {
+          "variant_title": "Ежевика | Черешня | Виноград | Яблоко-шелковица",
+          "text_html": "\n                                        <p>Формат 0,5 л.</p>                                    ",
+          "text": "Формат 0,5 л.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/129_1775745544.jpg"
+        }
+      ],
+      "html_len": 16476
+    },
+    {
+      "path": "/beer-product/silnogazirovannyj-napitok-limnada",
+      "url": "https://www.bavaria-group.ru/beer-product/silnogazirovannyj-napitok-limnada",
+      "slug": "silnogazirovannyj-napitok-limnada",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Сильногазированный напиток «Лимнада»",
+      "page_title": "Сильногазированный напиток «Лимнада»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Ананас / Крем-Сода / Дюшес / Барбарис </p><p>ПЭТ-бутылка 1,5 л </p>                                    ",
+          "text": "Ассортимент: Ананас / Крем-Сода / Дюшес / Барбарис ПЭТ-бутылка 1,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/58_1718608488.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p> Крем-Сода / Дюшес / Барбарис</p><p>ПЭТ-бутылка 0,5 л</p>                                    ",
+          "text": "Ассортимент: Крем-Сода / Дюшес / Барбарис ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/68_1718376439.jpg"
+        }
+      ],
+      "html_len": 15519
+    },
+    {
+      "path": "/beer-product/sladkie-gazirovannye-napitki",
+      "url": "https://www.bavaria-group.ru/beer-product/sladkie-gazirovannye-napitki",
+      "slug": "sladkie-gazirovannye-napitki",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Сладкие газированные напитки",
+      "page_title": "Сладкие газированные напитки",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Груша  / Апельсин / Тархун  / Питахайя / Мохито / Кола </p><p>ПЭТ-бутылка 1,5 л</p>                                    ",
+          "text": "Ассортимент: Груша / Апельсин / Тархун / Питахайя / Мохито / Кола ПЭТ-бутылка 1,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/95_1730364037.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Груша / Тархун / Кола</p><p>ПЭТ-бутылка 0,5 л</p>                                    ",
+          "text": "Ассортимент: Груша / Тархун / Кола ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/97_1730364236.jpg"
+        }
+      ],
+      "html_len": 15620
+    },
+    {
+      "path": "/beer-product/sladkie-gazirovannye-napitki-premium",
+      "url": "https://www.bavaria-group.ru/beer-product/sladkie-gazirovannye-napitki-premium",
+      "slug": "sladkie-gazirovannye-napitki-premium",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Сладкие газированные напитки «Premium»",
+      "page_title": "Сладкие газированные напитки «Premium»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Груша / Тархун / Апельсин / Гранат / Фейхоа/ Вишня</p><p>Стекло 0,5 л </p>                                    ",
+          "text": "Ассортимент: Груша / Тархун / Апельсин / Гранат / Фейхоа/ Вишня Стекло 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/22_1730373939.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Груша / Тархун / Гранат / Фейхоа/ Вишня</p><p>ПЭТ-бутылка 1,2 л</p>                                    ",
+          "text": "Ассортимент: Груша / Тархун / Гранат / Фейхоа/ Вишня ПЭТ-бутылка 1,2 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/126_1772458839.png"
+        }
+      ],
+      "html_len": 15663
+    },
+    {
+      "path": "/beer-product/sladkij-silnogazirovannyj-napitok-cajka",
+      "url": "https://www.bavaria-group.ru/beer-product/sladkij-silnogazirovannyj-napitok-cajka",
+      "slug": "sladkij-silnogazirovannyj-napitok-cajka",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Сладкие газированные напитки линейки «Ретро»",
+      "page_title": "Сладкие газированные напитки линейки «Ретро»",
+      "variants": [
+        {
+          "variant_title": "Сладкий сильногазированный напиток «Южная Чайка»",
+          "text_html": "\n                                        <p>Этот напиток радует гармоничным сочетанием сладкого березового сока и тонких оттенков бузины, создавая ощущение летнего сада. Вкус нежный и освежающий, словно легкий морской бриз, пробуждающий чувства и наполняющий энергией. Он оставляет после себя мягкое послевкусие с нотками природной свежести.</p><p>Стекло 0,45 л. / ПЭТ 0,5 л.</p>                                    ",
+          "text": "Этот напиток радует гармоничным сочетанием сладкого березового сока и тонких оттенков бузины, создавая ощущение летнего сада. Вкус нежный и освежающий, словно легкий морской бриз, пробуждающий чувства и наполняющий энергией. Он оставляет после себя мягкое послевкусие с нотками природной свежести. Стекло 0,45 л. / ПЭТ 0,5 л.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/25_1765459937.jpg"
+        },
+        {
+          "variant_title": "Сладкий сильногазированный напиток «Родные Огоньки»",
+          "text_html": "\n                                        <p>Ассорти вкусов раскрывает богатство ягод и фруктов, напоминая о теплых вечерах у костра. Каждый глоток наполняет ощущением домашнего уюта и радости, словно вспышка ярких огоньков в темноте. Этот напиток — праздник для чувств, объединяющий разнообразие природных ароматов в одном бокале.</p><p>Стекло 0,45 л. / ПЭТ 0,5 л.</p>                                    ",
+          "text": "Ассорти вкусов раскрывает богатство ягод и фруктов, напоминая о теплых вечерах у костра. Каждый глоток наполняет ощущением домашнего уюта и радости, словно вспышка ярких огоньков в темноте. Этот напиток — праздник для чувств, объединяющий разнообразие природных ароматов в одном бокале. Стекло 0,45 л. / ПЭТ 0,5 л.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/113_1765459994.jpg"
+        },
+        {
+          "variant_title": "Сладкий сильногазированный напиток «Заповедная Тайга»",
+          "text_html": "\n                                        <p>Погрузитесь в атмосферу таежных лесов с этим напитком, наполненным ароматами и вкусами женьшеня, элеутерококка и зверобоя. Его вкус словно прогулка по лесной тропинке, где каждая нотка раскрывает богатство дикой природы. Освежающий и насыщенный, благодаря горной-родниковой воде, он переносит вас в сердце заповедных просторов.</p><p>Стекло 0,45 л. </p>                                    ",
+          "text": "Погрузитесь в атмосферу таежных лесов с этим напитком, наполненным ароматами и вкусами женьшеня, элеутерококка и зверобоя. Его вкус словно прогулка по лесной тропинке, где каждая нотка раскрывает богатство дикой природы. Освежающий и насыщенный, благодаря горной-родниковой воде, он переносит вас в сердце заповедных просторов. Стекло 0,45 л.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/114_1763023817.png"
+        }
+      ],
+      "html_len": 17218
+    },
+    {
+      "path": "/beer-product/sokosoderzasij-napitok-f",
+      "url": "https://www.bavaria-group.ru/beer-product/sokosoderzasij-napitok-f",
+      "slug": "sokosoderzasij-napitok-f",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Сокосодержащий напиток «Ф»",
+      "page_title": "Сокосодержащий напиток «Ф»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>Слива / Мультифрукт / Мангостин</p><p>ПЭТ-бутылка 1,5 л </p>                                    ",
+          "text": "Ассортимент: Слива / Мультифрукт / Мангостин ПЭТ-бутылка 1,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/59_1664459231.png"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:<br>Мультифрукт | Мангостин<br>ПЭТ-бутылка 0,5 л </p>                                    ",
+          "text": "Ассортимент: Мультифрукт | Мангостин ПЭТ-бутылка 0,5 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/69_1664459351.png"
+        }
+      ],
+      "html_len": 15115
+    },
+    {
+      "path": "/beer-product/svetloe-bezalkogolnoe",
+      "url": "https://www.bavaria-group.ru/beer-product/svetloe-bezalkogolnoe",
+      "slug": "svetloe-bezalkogolnoe",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "«Светлое» безалкогольное",
+      "page_title": "«Светлое» безалкогольное",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Безалкогольное светлое пиво, имеющее классический\r\nсбалансированный вкус и приятный аромат с тонкими нотками хмеля. В состав\r\nвходят: родниковая вода, солод светлый ячменный, солод светлый карамельный,\r\nхмель.</p><p>Алкоголь 0,5% об.</p><p>Стекло 0,45 л | ЖБ 0,45 л</p>                                    ",
+          "text": "Безалкогольное светлое пиво, имеющее классический сбалансированный вкус и приятный аромат с тонкими нотками хмеля. В состав входят: родниковая вода, солод светлый ячменный, солод светлый карамельный, хмель. Алкоголь 0,5% об. Стекло 0,45 л | ЖБ 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/52_1740991151.jpg"
+        },
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Безалкогольное светлое пиво, имеющее классический\r\nсбалансированный вкус и приятный аромат с тонкими нотками хмеля. В состав\r\nвходят: родниковая вода, солод светлый ячменный, солод светлый карамельный,\r\nхмель.</p><p>Алкоголь 0,5% об.</p><p>Стекло 0,45 л | ЖБ 0,45 л</p>                                    ",
+          "text": "Безалкогольное светлое пиво, имеющее классический сбалансированный вкус и приятный аромат с тонкими нотками хмеля. В состав входят: родниковая вода, солод светлый ячменный, солод светлый карамельный, хмель. Алкоголь 0,5% об. Стекло 0,45 л | ЖБ 0,45 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/53_1740991175.jpg"
+        }
+      ],
+      "html_len": 16160
+    },
+    {
+      "path": "/beer-product/svetlyj-lager-gallagher",
+      "url": "https://www.bavaria-group.ru/beer-product/svetlyj-lager-gallagher",
+      "slug": "svetlyj-lager-gallagher",
+      "categories": [
+        "/beer-category/pivo-i-sidr"
+      ],
+      "official_name": "Светлый лагер Gallagher",
+      "page_title": "Светлый лагер Gallagher",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Легкий светлый лагер Gallagher идеально\r\nподходит к мягким сырам, вяленому мясу и копченой рыбе. Его освежающий вкус и\r\nлегкая горчинка сбалансируют излишне жирные и пряные блюда.<br>Состав: вода питьевая, солод пивоваренный\r\nсветлый ячменный, хмель гранулированный, дрожжи пивные.</p>                                    ",
+          "text": "Легкий светлый лагер Gallagher идеально подходит к мягким сырам, вяленому мясу и копченой рыбе. Его освежающий вкус и легкая горчинка сбалансируют излишне жирные и пряные блюда. Состав: вода питьевая, солод пивоваренный светлый ячменный, хмель гранулированный, дрожжи пивные.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/103_1757317744.png"
+        }
+      ],
+      "html_len": 17012
+    },
+    {
+      "path": "/beer-product/swipe",
+      "url": "https://www.bavaria-group.ru/beer-product/swipe",
+      "slug": "swipe",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Сильногазированный напиток «SWIPE»",
+      "page_title": "Сильногазированный напиток «SWIPE»",
+      "variants": [
+        {
+          "variant_title": "Сильногазированный напиток «SWIPE»",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0. 33 л</p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0. 33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/74_1718376186.jpg"
+        }
+      ],
+      "html_len": 14510
+    },
+    {
+      "path": "/beer-product/tbau",
+      "url": "https://www.bavaria-group.ru/beer-product/tbau",
+      "slug": "tbau",
+      "categories": [
+        "/beer-category/stm-dla-partnerov"
+      ],
+      "official_name": "«ВкусВилл»",
+      "page_title": "«ВкусВилл»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 0,5</p><p>Sport Lock</p><p>Негазированная/Газированная </p>                                    ",
+          "text": "ПЭТ-бутылка 0,5 Sport Lock Негазированная/Газированная",
+          "image": "https://www.bavaria-group.ru/files/beer_items/112_1757512632.jpg"
+        }
+      ],
+      "html_len": 14557
+    },
+    {
+      "path": "/beer-product/vitaminnyj-napitok-rocket-ride",
+      "url": "https://www.bavaria-group.ru/beer-product/vitaminnyj-napitok-rocket-ride",
+      "slug": "vitaminnyj-napitok-rocket-ride",
+      "categories": [
+        "/beer-category/bezalkogolnye-napitki-bavaria"
+      ],
+      "official_name": "Витаминный энергетический напиток Rocket Ride",
+      "page_title": "Витаминный энергетический напиток Rocket Ride",
+      "variants": [
+        {
+          "variant_title": "Rocket Ride Classic",
+          "text_html": "\n                                        <p><i>Неизменная формула энергии. Rocket Ride Classic – это надежный источник бодрости, сочетающий в себе выверенный состав и ставший культовым фирменный вкус. Выбор тех, кто ценит стабильность и эффективность.</i></p>                                    ",
+          "text": "Неизменная формула энергии. Rocket Ride Classic – это надежный источник бодрости, сочетающий в себе выверенный состав и ставший культовым фирменный вкус. Выбор тех, кто ценит стабильность и эффективность.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/105_1757076183.png"
+        },
+        {
+          "variant_title": "Rocket Ride Mango-Apricot",
+          "text_html": "\n                                        <p><i>Rocket Ride Mango-Apricot — это изысканное сочетание тропической сладости манго и деликатной кислинки абрикоса, создающее неповторимую вкусовую симфонию. Откройте для себя новые грани энергии.</i><strong></strong></p>                                    ",
+          "text": "Rocket Ride Mango-Apricot — это изысканное сочетание тропической сладости манго и деликатной кислинки абрикоса, создающее неповторимую вкусовую симфонию. Откройте для себя новые грани энергии.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/106_1757076512.png"
+        },
+        {
+          "variant_title": "Rocket Ride Energy Киви-Яблоко",
+          "text_html": "\n                                        <p><i>Сбалансированное сочетание вкуса и энергии. Rocket Ride Kiwi-Apple – это гармоничный микс яркой кислинки киви и мягкой сладости яблока, обеспечивающий длительный заряд бодрости без излишней приторности. Идеальный спутник для продуктивного дня.</i></p>                                    ",
+          "text": "Сбалансированное сочетание вкуса и энергии. Rocket Ride Kiwi-Apple – это гармоничный микс яркой кислинки киви и мягкой сладости яблока, обеспечивающий длительный заряд бодрости без излишней приторности. Идеальный спутник для продуктивного дня.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/107_1757076818.png"
+        },
+        {
+          "variant_title": "Rocket Ride Energy Дикие Ягоды",
+          "text_html": "\n                                        <p><i>Насыщенный вкус дикой природы в каждой банке. Rocket Ride Wild Berries – это мощный энергетический импульс, воплощенный в сочном букете лесных ягод. Почувствуйте прилив сил и энергии, достойный самых смелых вызовов.</i></p>                                    ",
+          "text": "Насыщенный вкус дикой природы в каждой банке. Rocket Ride Wild Berries – это мощный энергетический импульс, воплощенный в сочном букете лесных ягод. Почувствуйте прилив сил и энергии, достойный самых смелых вызовов.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/108_1757077083.png"
+        },
+        {
+          "variant_title": "Rocket Ride Energy Лайм-Лемонграс",
+          "text_html": "\n                                        <p><i>Экзотическая свежесть и бодрящая энергия. Rocket Ride Lime-Lemongrass – это изысканное сочетание цитрусовой прохлады лайма и тонизирующих нот лемонграсса. Освежите свой разум и тело, откройте для себя новые горизонты энергии.</i></p>                                    ",
+          "text": "Экзотическая свежесть и бодрящая энергия. Rocket Ride Lime-Lemongrass – это изысканное сочетание цитрусовой прохлады лайма и тонизирующих нот лемонграсса. Освежите свой разум и тело, откройте для себя новые горизонты энергии.",
+          "image": "https://www.bavaria-group.ru/files/beer_items/109_1757077306.png"
+        }
+      ],
+      "html_len": 18504
+    },
+    {
+      "path": "/beer-product/zagolovok-produkta",
+      "url": "https://www.bavaria-group.ru/beer-product/zagolovok-produkta",
+      "slug": "zagolovok-produkta",
+      "categories": [
+        "/beer-category/mineralnaa-voda-kazbek-akva"
+      ],
+      "official_name": "Минеральная лечебно-столовая вода «Казбек-Аква»",
+      "page_title": "Минеральная лечебно-столовая вода «Казбек-Аква»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0.33 л<span></span></p>                                    ",
+          "text": "ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0.33 л",
+          "image": "https://www.bavaria-group.ru/files/beer_items/3_1718376836.jpg"
+        }
+      ],
+      "html_len": 16000
+    },
+    {
+      "path": "/beer-product/zagolovok-produkta-2",
+      "url": "https://www.bavaria-group.ru/beer-product/zagolovok-produkta-2",
+      "slug": "zagolovok-produkta-2",
+      "categories": [
+        "/beer-category/gornaa-rodnikovaa-voda-tbau"
+      ],
+      "official_name": "Горная родниковая вода «ТБАУ»",
+      "page_title": "Горная родниковая вода «ТБАУ»",
+      "variants": [
+        {
+          "variant_title": "",
+          "text_html": "\n                                        <p>Ассортимент:</p><p>«ТБАУ» газированная / «ТБАУ» негазированная / «ТБАУ Sport» / «ТБАУ  Premium» <span class=\"redactor-invisible-space\"></span> газированная / <span class=\"redactor-invisible-space\">«ТБАУ  Premium»  негазированная</span><br></p><p>ПЭТ-бутылка 5 л | ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0,5 л | ПЭТ-бутылка 0,5 л<span class=\"redactor-invisible-space\" style=\"background-color: initial;\"> спорт-лок</span></p>                                    ",
+          "text": "Ассортимент: «ТБАУ» газированная / «ТБАУ» негазированная / «ТБАУ Sport» / «ТБАУ Premium» газированная / «ТБАУ Premium» негазированная ПЭТ-бутылка 5 л | ПЭТ-бутылка 1,5 л | ПЭТ-бутылка 0,5 л | Стекло 0,5 л | ПЭТ-бутылка 0,5 л спорт-лок",
+          "image": "https://www.bavaria-group.ru/files/beer_items/4_1758714938.png"
+        }
+      ],
+      "html_len": 16327
+    }
+  ],
+  "source_pages": [
+    {
+      "url": "https://www.bavaria-group.ru/beer-category/bezalkogolnye-napitki-bavaria",
+      "title": "Безалкогольные напитки",
+      "product_count": 18
+    },
+    {
+      "url": "https://www.bavaria-group.ru/beer-category/gornaa-rodnikovaa-voda-tbau",
+      "title": "Горная родниковая вода «ТБАУ»",
+      "product_count": 3
+    },
+    {
+      "url": "https://www.bavaria-group.ru/beer-category/mineralnaa-voda-kazbek-akva",
+      "title": "Минеральная лечебно-столовая вода «Казбек-Аква»",
+      "product_count": 1
+    },
+    {
+      "url": "https://www.bavaria-group.ru/beer-category/pivo-i-sidr",
+      "title": "Пиво и сидр",
+      "product_count": 13
+    },
+    {
+      "url": "https://www.bavaria-group.ru/beer-category/stm-dla-partnerov",
+      "title": "СТМ для партнеров",
+      "product_count": 7
+    }
+  ],
+  "external": [
+    "https://electric-consultants.com/ru",
+    "https://tbauwater.com/",
+    "https://vk.com/gkpdbavaria",
+    "https://www.youtube.com/channel/UCZQ5mVTe9CDPE-fBIdFQsJg/videos?view=0&sort=dd&live_view=500"
+  ]
+}
