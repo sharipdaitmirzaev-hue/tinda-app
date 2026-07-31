@@ -60,3 +60,8 @@ artifacts/bavaria-import/**/http-cache/
 # Bavaria PDF page raster renders (regenerable via import:bavaria:pdf-ingest)
 artifacts/bavaria-import/**/renders/
 artifacts/bavaria-import/**/renders-small/
+
+# Local DB dumps and product upload blobs from agent rehearsal
+/backups/
+/public/uploads/products/**
+!/public/uploads/products/.gitkeep

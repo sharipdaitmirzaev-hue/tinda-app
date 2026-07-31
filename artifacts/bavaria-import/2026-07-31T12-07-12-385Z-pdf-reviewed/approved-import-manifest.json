@@ -45,8 +45,8 @@
     "sales_status": "showcase",
     "is_active": true,
     "price_amount": null,
-    "availability": "in_stock",
-    "note": "apply не запускать без отдельного разрешения"
+    "availability": "on_order",
+    "note": "showcase + null price: заказ недоступен; остаток не утверждается"
   },
   "approved_skus": [
     "BAVARIA-AVARAL-AVARAL-450-GLASS",

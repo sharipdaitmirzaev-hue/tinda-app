@@ -9,6 +9,7 @@
  *
  * Does NOT touch production by default. Never uses --merge. Never edits existing products.
  */
+import { createHash } from "crypto";
 import {
   existsSync,
   mkdirSync,
@@ -40,6 +41,7 @@ import type {
   ExistingCatalogProduct,
   ExistingCategory,
 } from "../src/lib/imports/bavaria/types";
+import { upload_product_image } from "../src/lib/storage/product-images";
 
 const ROOT = process.cwd();
 const ARTIFACTS_ROOT = path.join(ROOT, "artifacts", "bavaria-import");
@@ -614,11 +616,16 @@ ${others.map((p) => `- ${p.proposed_name} (${p.proposed_sku}) — ${p.category_r
 
 function arg_value(flag: string): string | undefined {
   const idx = process.argv.indexOf(flag);
-  if (idx < 0) return undefined;
-  return process.argv[idx + 1];
+  if (idx >= 0) return process.argv[idx + 1];
+  const prefix = `${flag}=`;
+  const inline = process.argv.find((a) => a.startsWith(prefix));
+  if (inline) return inline.slice(prefix.length);
+  return undefined;
 }
 
-function validate_backup(backup_path: string): { ok: true; size: number } | { ok: false; error: string } {
+function validate_backup(
+  backup_path: string,
+): { ok: true; size: number; sha256: string } | { ok: false; error: string } {
   if (!existsSync(backup_path)) {
     return { ok: false, error: `backup file not found: ${backup_path}` };
   }
@@ -633,14 +640,67 @@ function validate_backup(backup_path: string): { ok: true; size: number } | { ok
     head.includes("pg_dump") ||
     head.includes("CREATE TABLE") ||
     head.includes("--") ||
-    st[0] === 0x50; // 'P' of PGDMP custom format sometimes
+    st[0] === 0x50 || // 'P' of PGDMP custom format sometimes
+    st[0] === 0x1f; // gzip
   if (!looks_sql && st.length < 1024) {
     return {
       ok: false,
       error: `backup file looks too small/unreadable as DB dump (${st.length} bytes)`,
     };
   }
-  return { ok: true, size: st.length };
+  const sha256 = createHash("sha256").update(st).digest("hex");
+  return { ok: true, size: st.length, sha256 };
+}
+
+/** Production TINDA category name → preferred slug (name fallback still used). */
+const CATEGORY_SLUG_BY_NAME: Record<string, string> = {
+  "Газированные напитки": "gazirovannye-napitki",
+  "Питьевая вода": "voda-pitevaya",
+  "Минеральная вода": "voda-mineralnaya",
+  "Холодный чай": "kholodnyy-chay",
+  Тоники: "toniki",
+  Квас: "kvas",
+  "Безалкогольное пиво": "bezalkogolnoe-pivo",
+  "Энергетические напитки": "energeticheskie-napitki",
+  Другие: "other",
+};
+
+const FORBIDDEN_APPROVED_SKU_PARTS = [
+  "NORDISCH-NA-450-GLASS",
+  "SPORT-MANUAL",
+  "UNSIGNED",
+  "REJECT-",
+  "-30000-KEG",
+  "-50000-KEG",
+];
+
+async function load_image_buffer(
+  row: ApprovedRow,
+): Promise<{ buffer: Buffer; filename: string } | null> {
+  const local = (row.local_image_path || "").trim();
+  if (local) {
+    const abs = path.isAbsolute(local) ? local : path.join(ROOT, local);
+    if (existsSync(abs)) {
+      return { buffer: readFileSync(abs), filename: path.basename(abs) };
+    }
+  }
+  const url = (row.image_url || "").trim();
+  if (!url || url.startsWith("/uploads/")) return null;
+  try {
+    const res = await fetch(url, {
+      headers: {
+        "User-Agent": "TINDA-ImportBot/1.0 (+https://tindamarket.ru)",
+        Referer: "https://www.bavaria-group.ru/",
+      },
+    });
+    if (!res.ok) return null;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length < 100) return null;
+    const filename = path.basename(new URL(url).pathname) || "image.jpg";
+    return { buffer: buf, filename };
+  } catch {
+    return null;
+  }
 }
 
 type FinalManifest = {
@@ -729,7 +789,7 @@ async function cmd_apply() {
   }
   if (!manifest_path) {
     console.error(
-      "APPLY BLOCKED: pass --manifest <path to approved-import-manifest-final.json>",
+      "APPLY BLOCKED: pass --manifest <path to approved-import-manifest.json>",
     );
     process.exitCode = 2;
     return;
@@ -766,6 +826,13 @@ async function cmd_apply() {
     process.exitCode = 2;
     return;
   }
+  if (manifest.pdf_sha256 !== "e93756ed45acecb1335e562aa4f9d455899c0b846fb9bb1bc6b3f33af436da93") {
+    console.error(
+      `APPLY BLOCKED: unexpected pdf_sha256 ${manifest.pdf_sha256} (expected booklet e93756ed…)`,
+    );
+    process.exitCode = 2;
+    return;
+  }
   if (!manifest.approved_skus?.length) {
     console.error("APPLY BLOCKED: manifest has no approved_skus");
     process.exitCode = 2;
@@ -786,6 +853,13 @@ async function cmd_apply() {
     return;
   }
 
+  // Hard exclusions: never import manual/rejected/wholesale even if listed by mistake
+  const blocklists = ["manual-review.csv", "rejected-products.csv", "wholesale-packaging-review.csv"]
+    .map((name) => path.join(manifest_dir, name))
+    .filter((p) => existsSync(p))
+    .flatMap((p) => parse_csv_rows(readFileSync(p, "utf8")).map((r) => r.proposed_sku));
+  const blocked = new Set(blocklists);
+
   const approved_rows = parse_csv_rows(readFileSync(approved_csv, "utf8")).filter((r) =>
     manifest.approved_skus!.includes(r.proposed_sku),
   );
@@ -795,45 +869,132 @@ async function cmd_apply() {
     return;
   }
 
+  const sku_counts = new Map<string, number>();
+  for (const row of approved_rows) {
+    const sku = row.proposed_sku.trim();
+    sku_counts.set(sku, (sku_counts.get(sku) || 0) + 1);
+    if (!row.proposed_name?.trim() || !row.brand?.trim() || !row.category?.trim()) {
+      console.error(`APPLY BLOCKED: incomplete row ${sku}`);
+      process.exitCode = 2;
+      return;
+    }
+    if (!row.volume?.trim() || !row.package?.trim()) {
+      console.error(`APPLY BLOCKED: missing volume/package for ${sku}`);
+      process.exitCode = 2;
+      return;
+    }
+    if (!row.source_url?.trim()) {
+      console.error(`APPLY BLOCKED: missing source_url for ${sku}`);
+      process.exitCode = 2;
+      return;
+    }
+    if (blocked.has(sku) || FORBIDDEN_APPROVED_SKU_PARTS.some((p) => sku.includes(p))) {
+      console.error(`APPLY BLOCKED: forbidden SKU in approved set: ${sku}`);
+      process.exitCode = 2;
+      return;
+    }
+    if (sku.includes("YABLOKO-450-GLASS") || (sku.endsWith("APELSIN-450-GLASS") && !sku.includes("PREMIUM")) || (sku.includes("KOLA-450-GLASS") && !sku.includes("PREMIUM") && !sku.includes("SF"))) {
+      console.error(`APPLY BLOCKED: manual glass SKU must not be applied: ${sku}`);
+      process.exitCode = 2;
+      return;
+    }
+  }
+  const collisions = [...sku_counts.entries()].filter(([, n]) => n > 1).map(([s]) => s);
+  if (collisions.length) {
+    console.error(`APPLY BLOCKED: SKU collisions: ${collisions.join(", ")}`);
+    process.exitCode = 2;
+    return;
+  }
+
+  const na_count = approved_rows.filter((r) => r.category === "Безалкогольное пиво").length;
+  if (na_count !== 7) {
+    console.error(`APPLY BLOCKED: expected 7 NA beer SKUs, got ${na_count}`);
+    process.exitCode = 2;
+    return;
+  }
+
   const { PrismaClient } = await import("@prisma/client");
   const prisma = new PrismaClient();
   const apply_out = path.join(ARTIFACTS_ROOT, `${stamp()}-apply`);
   ensure_dir(apply_out);
 
+  type Fingerprint = {
+    sku: string;
+    name: string;
+    brand: string | null;
+    category_id: string;
+    price_amount: string | null;
+    availability: string;
+    sales_status: string;
+    image_url: string | null;
+    updated_at: string;
+  };
+
   const result = {
     started_at: new Date().toISOString(),
     backup_path,
     backup_size: backup.size,
+    backup_sha256: backup.sha256,
     manifest_path,
+    approved_csv,
     pdf_sha256: manifest.pdf_sha256,
+    approved_input_count: approved_rows.length,
     created: [] as string[],
     skipped_existing: [] as string[],
+    images_uploaded: [] as string[],
+    images_missing: [] as string[],
     errors: [] as Array<{ sku: string; error: string }>,
     categories_created: [] as string[],
     existing_products_edited: false,
+    existing_fingerprint_mismatches: [] as string[],
+    category_distribution_created: {} as Record<string, number>,
+    non_alcoholic_beer_created: 0,
+    catalog_total_after: null as number | null,
   };
 
   try {
-    // Ensure categories
+    // Snapshot all existing products before writes (detect accidental edits)
+    const before = await prisma.products.findMany({
+      select: {
+        sku: true,
+        name: true,
+        brand: true,
+        category_id: true,
+        price_amount: true,
+        availability: true,
+        sales_status: true,
+        image_url: true,
+        updated_at: true,
+      },
+    });
+    const before_map = new Map<string, Fingerprint>(
+      before.map((p) => [
+        p.sku,
+        {
+          sku: p.sku,
+          name: p.name,
+          brand: p.brand,
+          category_id: p.category_id,
+          price_amount: p.price_amount === null ? null : String(p.price_amount),
+          availability: p.availability,
+          sales_status: p.sales_status,
+          image_url: p.image_url,
+          updated_at: p.updated_at.toISOString(),
+        },
+      ]),
+    );
+    writeFileSync(
+      path.join(apply_out, "existing-products-before.json"),
+      JSON.stringify([...before_map.values()], null, 2),
+    );
+
     const wanted = new Map<string, { name: string; slug: string }>();
     for (const c of manifest.categories_to_create || []) {
       wanted.set(c.slug, { name: c.name, slug: c.slug });
     }
-    // Always ensure NA beer + map from rows
-    const slug_by_category: Record<string, string> = {
-      "Газированные напитки": "gazirovannye-napitki",
-      "Питьевая вода": "pitevaya-voda",
-      "Минеральная вода": "mineralnaya-voda",
-      "Холодный чай": "holodnyy-chay",
-      Тоники: "toniki",
-      Квас: "kvas",
-      "Безалкогольное пиво": "bezalkogolnoe-pivo",
-      "Энергетические напитки": "energeticheskie-napitki",
-      Другие: "other",
-    };
     for (const row of approved_rows) {
       const cat = row.category || "Другие";
-      const slug = slug_by_category[cat] || "other";
+      const slug = CATEGORY_SLUG_BY_NAME[cat] || "other";
       if (!wanted.has(slug)) wanted.set(slug, { name: cat, slug });
     }
 
@@ -844,7 +1005,11 @@ async function cmd_apply() {
         category_id_by_slug.set(c.slug, existing.id);
         continue;
       }
-      // Only create «Другие» and «Безалкогольное пиво» if missing; others must exist or error
+      const by_name = await prisma.categories.findFirst({ where: { name: c.name } });
+      if (by_name) {
+        category_id_by_slug.set(c.slug, by_name.id);
+        continue;
+      }
       if (c.slug === "other" || c.slug === "bezalkogolnoe-pivo") {
         const created = await prisma.categories.create({
           data: {
@@ -857,20 +1022,15 @@ async function cmd_apply() {
         category_id_by_slug.set(c.slug, created.id);
         result.categories_created.push(c.slug);
       } else {
-        // try resolve by name
-        const by_name = await prisma.categories.findFirst({ where: { name: c.name } });
-        if (by_name) {
-          category_id_by_slug.set(c.slug, by_name.id);
-        } else {
-          throw new Error(
-            `Category missing in DB and not auto-creatable: ${c.name} (${c.slug})`,
-          );
-        }
+        throw new Error(
+          `Category missing in DB and not auto-creatable: ${c.name} (${c.slug})`,
+        );
       }
     }
 
     const sales_status = manifest.apply?.sales_status || "showcase";
-    const availability = manifest.apply?.availability || "in_stock";
+    // Do not claim stock levels; showcase + null price already blocks cart.
+    const availability = manifest.apply?.availability || "on_order";
     const is_active = manifest.apply?.is_active ?? true;
 
     for (const row of approved_rows) {
@@ -882,21 +1042,25 @@ async function cmd_apply() {
           continue;
         }
         const cat_name = row.category || "Другие";
-        const slug = slug_by_category[cat_name] || "other";
+        const slug = CATEGORY_SLUG_BY_NAME[cat_name] || "other";
         const category_id = category_id_by_slug.get(slug);
         if (!category_id) {
           throw new Error(`No category id for ${cat_name}`);
         }
         const description = [
-          row.manufacturer ? `Производитель: ${row.manufacturer}` : "Производитель: ГК ПД «Бавария»",
+          row.manufacturer?.trim()
+            ? `Производитель: ${row.manufacturer.trim()}`
+            : "Производитель: ГК ПД «Бавария»",
+          row.brand?.trim() ? `Бренд: ${row.brand.trim()}` : null,
           row.taste ? `Вкус: ${row.taste}` : null,
-          row.source_url ? `Источник: ${row.source_url}` : null,
-          "Импорт: Bavaria non-alcoholic catalog (showcase, без цены)",
+          row.source_url ? `Источник (сайт): ${row.source_url}` : null,
+          `PDF буклет: BAVARIA-CATALOG-2026.pdf sha256=${manifest.pdf_sha256}`,
+          "Импорт: Bavaria non-alcoholic catalog (showcase, без цены, заказ недоступен)",
         ]
           .filter(Boolean)
           .join("\n");
 
-        await prisma.products.create({
+        const created = await prisma.products.create({
           data: {
             sku,
             name: row.proposed_name.trim(),
@@ -914,13 +1078,51 @@ async function cmd_apply() {
             is_active,
             price_amount: null,
             price_currency: "RUB",
-            image_url: row.image_url?.trim() || null,
+            image_url: null,
             is_promo: false,
             is_new: true,
             is_hit: false,
           },
         });
+
+        const img = await load_image_buffer(row);
+        if (img) {
+          try {
+            const stored = await upload_product_image({
+              product_id: created.id,
+              buffer: img.buffer,
+              filename: img.filename,
+            });
+            await prisma.products.update({
+              where: { id: created.id },
+              data: { image_url: stored.image_url },
+            });
+            result.images_uploaded.push(sku);
+          } catch {
+            // Product remains; prefer remote URL fallback over failing the SKU.
+            if ((row.image_url || "").trim()) {
+              await prisma.products.update({
+                where: { id: created.id },
+                data: { image_url: row.image_url!.trim() },
+              });
+            }
+            result.images_missing.push(sku);
+          }
+        } else if ((row.image_url || "").trim()) {
+          await prisma.products.update({
+            where: { id: created.id },
+            data: { image_url: row.image_url!.trim() },
+          });
+          result.images_missing.push(sku);
+        } else {
+          // shared-line without URL is allowed by review; leave null
+          result.images_missing.push(sku);
+        }
+
         result.created.push(sku);
+        result.category_distribution_created[cat_name] =
+          (result.category_distribution_created[cat_name] || 0) + 1;
+        if (cat_name === "Безалкогольное пиво") result.non_alcoholic_beer_created += 1;
       } catch (err) {
         result.errors.push({
           sku,
@@ -928,35 +1130,112 @@ async function cmd_apply() {
         });
       }
     }
+
+    // Verify existing products untouched
+    const after_existing = await prisma.products.findMany({
+      where: { sku: { in: [...before_map.keys()] } },
+      select: {
+        sku: true,
+        name: true,
+        brand: true,
+        category_id: true,
+        price_amount: true,
+        availability: true,
+        sales_status: true,
+        image_url: true,
+        updated_at: true,
+      },
+    });
+    for (const p of after_existing) {
+      const prev = before_map.get(p.sku);
+      if (!prev) continue;
+      const cur: Fingerprint = {
+        sku: p.sku,
+        name: p.name,
+        brand: p.brand,
+        category_id: p.category_id,
+        price_amount: p.price_amount === null ? null : String(p.price_amount),
+        availability: p.availability,
+        sales_status: p.sales_status,
+        image_url: p.image_url,
+        updated_at: p.updated_at.toISOString(),
+      };
+      if (
+        prev.name !== cur.name ||
+        prev.brand !== cur.brand ||
+        prev.category_id !== cur.category_id ||
+        prev.price_amount !== cur.price_amount ||
+        prev.availability !== cur.availability ||
+        prev.sales_status !== cur.sales_status ||
+        prev.image_url !== cur.image_url
+      ) {
+        result.existing_fingerprint_mismatches.push(p.sku);
+        result.existing_products_edited = true;
+      }
+    }
+
+    // Ensure manual/rejected/wholesale SKUs were not created
+    const leaked = await prisma.products.findMany({
+      where: { sku: { in: [...blocked] } },
+      select: { sku: true },
+    });
+    // Only flag if they didn't exist before
+    for (const p of leaked) {
+      if (!before_map.has(p.sku) && blocked.has(p.sku)) {
+        result.errors.push({
+          sku: p.sku,
+          error: "LEAK: manual/rejected/wholesale SKU appeared after apply",
+        });
+      }
+    }
+
+    result.catalog_total_after = await prisma.products.count();
   } finally {
     await prisma.$disconnect();
   }
 
-  result.started_at = result.started_at; // keep
   const finished = {
     ...result,
     finished_at: new Date().toISOString(),
     created_count: result.created.length,
     skipped_count: result.skipped_existing.length,
     error_count: result.errors.length,
+    images_uploaded_count: result.images_uploaded.length,
+    images_missing_count: result.images_missing.length,
   };
   writeFileSync(path.join(apply_out, "apply-result.json"), JSON.stringify(finished, null, 2));
   writeFileSync(
     path.join(apply_out, "APPLY-REPORT.md"),
     `# Bavaria apply report
 
-- backup: \`${backup_path}\` (${backup.size} bytes)
+- backup: \`${backup_path}\`
+- backup size: **${backup.size}** bytes
+- backup SHA-256: \`${backup.sha256}\`
 - manifest: \`${manifest_path}\`
+- approved csv: \`${approved_csv}\`
 - pdf_sha256: \`${manifest.pdf_sha256}\`
+- approved input: **${finished.approved_input_count}**
 - created: **${finished.created_count}**
 - skipped existing: **${finished.skipped_count}**
 - errors: **${finished.error_count}**
+- images uploaded locally: **${finished.images_uploaded_count}**
+- images missing/fallback: **${finished.images_missing_count}**
+- NA beer created: **${finished.non_alcoholic_beer_created}**
+- catalog total after: **${finished.catalog_total_after ?? "—"}**
 - categories created: ${finished.categories_created.join(", ") || "—"}
-- existing products edited: **false**
+- existing products edited: **${finished.existing_products_edited}**
+- fingerprint mismatches: ${finished.existing_fingerprint_mismatches.join(", ") || "—"}
+
+## Category distribution (created)
+
+${Object.entries(finished.category_distribution_created)
+  .map(([k, v]) => `- ${k}: ${v}`)
+  .join("\n") || "- —"}
 `,
   );
   console.log(JSON.stringify(finished, null, 2));
-  if (finished.error_count) process.exitCode = 4;
+  if (finished.existing_products_edited) process.exitCode = 5;
+  else if (finished.error_count) process.exitCode = 4;
 }
 
 async function main() {
