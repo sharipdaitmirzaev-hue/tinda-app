@@ -1,0 +1,8 @@
+{
+  "pdf_found": false,
+  "pdf_path": null,
+  "pages": 0,
+  "rendered_pages": [],
+  "na_beer_page": null,
+  "error": "PDF not found at /mnt/data or workspace pdf-source"
+}

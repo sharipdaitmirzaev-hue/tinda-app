@@ -1,0 +1,12 @@
+{
+  "category_id": "1ee46c93-79be-4c2f-8dcf-c4dac17fe2c1",
+  "category_name": "Солодовые напитки",
+  "category_slug": "solodovye-napitki",
+  "products": [
+    {
+      "sku": "ZY-BARBICAN-TEST-001",
+      "name": "Barbican test occupant"
+    }
+  ],
+  "note": "Existing product rows are NOT updated; only category name/slug change."
+}

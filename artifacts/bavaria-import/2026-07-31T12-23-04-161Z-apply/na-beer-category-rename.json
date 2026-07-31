@@ -1,0 +1,15 @@
+{
+  "id": "1ee46c93-79be-4c2f-8dcf-c4dac17fe2c1",
+  "from_name": "Солодовые напитки",
+  "from_slug": "solodovye-napitki",
+  "to_name": "Безалкогольное пиво",
+  "to_slug": "non-alcoholic-beer",
+  "existing_products_in_category": [
+    {
+      "sku": "ZY-BARBICAN-TEST-001",
+      "name": "Barbican test occupant"
+    }
+  ],
+  "existing_product_count": 1,
+  "existing_products_modified": false
+}

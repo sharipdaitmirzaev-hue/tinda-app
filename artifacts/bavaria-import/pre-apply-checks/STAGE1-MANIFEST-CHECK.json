@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "approved": 164,
+  "manual": 5,
+  "rejected": 9,
+  "wholesale": 2,
+  "na_beer": 7,
+  "sku_collisions": [],
+  "issues": [],
+  "pdf_sha256": "e93756ed45acecb1335e562aa4f9d455899c0b846fb9bb1bc6b3f33af436da93",
+  "database_url_set": false,
+  "apply_ready": false,
+  "manifest": "artifacts/bavaria-import/latest-pdf-reviewed/approved-import-manifest.json"
+}

@@ -1,0 +1,14 @@
+﻿sku,brand,field,value,pdf_name,page_number,evidence_type,confidence,notes
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,alcohol_percent,0.5,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,Карточка «Светлое» безалкогольное
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,package,стекло,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,"Стекло/ЖБ 0,45 л"
+BAVARIA-BAVARIYA-SVETLOE-450-GLASS,Бавария,non_alcoholic_status,confirmed,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,pdf-brief,high,"Страница буклета «Безалкогольное пиво», 0% алк. (бриф пользователя)"
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,alcohol_percent,0.5,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,Карточка «Светлое» безалкогольное
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,package,банка,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,"Стекло/ЖБ 0,45 л"
+BAVARIA-BAVARIYA-SVETLOE-450-CAN,Бавария,non_alcoholic_status,confirmed,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,pdf-brief,high,"Страница буклета «Безалкогольное пиво», 0% алк. (бриф пользователя)"
+BAVARIA-BAVARIYA-ELF-450-GLASS,Бавария,alcohol_percent,0.5,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,Elf безалкогольное
+BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS,Бавария,non_alcoholic_status,0% алк. (brief),БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,pdf-brief,medium,Требуется визуал страницы буклета
+BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN,Бавария,non_alcoholic_status,0% алк. (brief),БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,pdf-brief,medium,Требуется визуал страницы буклета
+BAVARIA-DOBRETSOV-DOBRETSOV-2000-PET,Добрецовъ,volume,2 л,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,"PDF brief lists 1,2 л — not used instead of site 1,4 without visual"
+BAVARIA-DOBRETSOV-DOBRETSOV-1400-PET,Добрецовъ,volume,"1,4 л",БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,"PDF brief lists 1,2 л — not used instead of site 1,4 without visual"
+BAVARIA-DOBRETSOV-DOBRETSOV-450-CAN,Добрецовъ,volume,"0,45 л",БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,"PDF brief lists 1,2 л — not used instead of site 1,4 without visual"
+BAVARIA-DOBRETSOV-DOBRETSOV-BOCHKOVOY-2000-PET,Добрецовъ,volume,2 л,БУКЛЕТ БАВАРИЯ 2026.pdf (file missing),,site-text,high,"PDF brief lists 1,2 л — not used instead of site 1,4 without visual"

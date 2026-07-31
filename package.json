@@ -18,7 +18,13 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "import:bavaria:discover": "tsx scripts/import-bavaria.ts discover",
+    "import:bavaria:dry-run": "tsx scripts/import-bavaria.ts dry-run",
+    "import:bavaria:apply": "tsx scripts/import-bavaria.ts apply",
+    "import:bavaria:preflight": "python3 scripts/bavaria-preflight-apply.py",
+    "import:bavaria:pdf-ingest": "python3 scripts/bavaria-pdf-ingest.py",
+    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-ingest.py && python3 scripts/bavaria-pdf-site-merge.py"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",

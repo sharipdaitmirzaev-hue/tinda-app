@@ -1,0 +1,53 @@
+# PDF ingest report
+
+- created_at: `2026-07-31T11:47:10.496418+00:00`
+- pdf_found: **True**
+- path: `/workspace/artifacts/bavaria-import/pdf-source/BAVARIA-CATALOG-2026.pdf`
+- canonical: `artifacts/bavaria-import/pdf-source/BAVARIA-CATALOG-2026.pdf`
+- size_bytes: **2774757**
+- sha256: `e93756ed45acecb1335e562aa4f9d455899c0b846fb9bb1bc6b3f33af436da93`
+- page_count: **40** (expected 40)
+- ok: **True**
+
+## Pages
+
+- p01: chars=0 extractable=False — 
+- p02: chars=0 extractable=False — 
+- p03: chars=0 extractable=False — 
+- p04: chars=0 extractable=False — 
+- p05: chars=0 extractable=False — 
+- p06: chars=0 extractable=False — 
+- p07: chars=0 extractable=False — 
+- p08: chars=0 extractable=False — 
+- p09: chars=0 extractable=False — 
+- p10: chars=0 extractable=False — 
+- p11: chars=0 extractable=False — 
+- p12: chars=0 extractable=False — 
+- p13: chars=0 extractable=False — 
+- p14: chars=0 extractable=False — 
+- p15: chars=0 extractable=False — 
+- p16: chars=0 extractable=False — 
+- p17: chars=0 extractable=False — 
+- p18: chars=0 extractable=False — 
+- p19: chars=0 extractable=False — 
+- p20: chars=0 extractable=False — 
+- p21: chars=0 extractable=False — 
+- p22: chars=0 extractable=False — 
+- p23: chars=0 extractable=False — 
+- p24: chars=0 extractable=False — 
+- p25: chars=0 extractable=False — 
+- p26: chars=0 extractable=False — 
+- p27: chars=0 extractable=False — 
+- p28: chars=0 extractable=False — 
+- p29: chars=0 extractable=False — 
+- p30: chars=0 extractable=False — 
+- p31: chars=0 extractable=False — 
+- p32: chars=0 extractable=False — 
+- p33: chars=0 extractable=False — 
+- p34: chars=0 extractable=False — 
+- p35: chars=0 extractable=False — 
+- p36: chars=0 extractable=False — 
+- p37: chars=0 extractable=False — 
+- p38: chars=0 extractable=False — 
+- p39: chars=0 extractable=False — 
+- p40: chars=0 extractable=False — 
