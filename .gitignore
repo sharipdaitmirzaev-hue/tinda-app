@@ -66,3 +66,6 @@ artifacts/bavaria-import/image-completion-*/source-downloads/
 
 # Local DB dumps from agent/VPS rehearsal (never commit)
 /backups/
+
+# Regenerable PNG sidecars of Bavaria processed webp
+artifacts/bavaria-import/image-completion-*/processed/*.png

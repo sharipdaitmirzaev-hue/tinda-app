@@ -25,11 +25,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "medium",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Site shows glass; prefer PDF p.11 can crop for unique pack. Glass asset only interim.",
+    "review_status": "confirmed_ready",
+    "notes": "Site shows glass; prefer PDF p.11 can crop for unique pack. Glass asset only interim. | Final crop from pdf_page_11 (pdf_box) | Final crop from pdf_page_11 (pdf_box) | Final crop from pdf_page_11 (pdf_box)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/55_1740991309.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-ELF-450-CAN.webp",
+    "processed_source": "pdf_page_11"
   },
   {
     "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN",
@@ -52,10 +54,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "low",
-    "review_status": "pending_pdf_crop",
-    "notes": "Reject site Gallagher 4% lager (103_…). Crop NA can from PDF p.11 under 0% stamp.",
-    "downloaded_source_paths": []
+    "match_confidence": "medium",
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.11 under 0% NA stamp — not alcoholic site art (103_/140_ forbidden).",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN.webp",
+    "processed_source": "pdf_page_11"
   },
   {
     "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS",
@@ -78,10 +82,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "low",
-    "review_status": "pending_pdf_crop",
-    "notes": "Reject alcoholic site art. Crop NA bottle from PDF p.11.",
-    "downloaded_source_paths": []
+    "match_confidence": "medium",
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.11 under 0% NA stamp — not alcoholic site art (103_/140_ forbidden).",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS.webp",
+    "processed_source": "pdf_page_11"
   },
   {
     "sku": "BAVARIA-BAVARIYA-GRUSHA-450-GLASS",
@@ -108,9 +114,11 @@
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
     "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.15 glass Груша.",
-    "downloaded_source_paths": []
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.15 glass Груша. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GRUSHA-450-GLASS.webp",
+    "processed_source": "pdf_page_15"
   },
   {
     "sku": "BAVARIA-BAVARIYA-KOLA-1500-PET",
@@ -136,11 +144,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop Кола from official 1.5 PET lineup.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop Кола from official 1.5 PET lineup. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/95_1730364037.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-KOLA-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-BAVARIYA-KOLA-500-PET",
@@ -166,11 +176,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop Кола from official 0.5 PET lineup.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop Кола from official 0.5 PET lineup. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/97_1730364236.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-KOLA-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-BAVARIYA-MOHITO-450-GLASS",
@@ -196,9 +208,11 @@
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
     "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.15 glass Мохито.",
-    "downloaded_source_paths": []
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.15 glass Мохито. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-MOHITO-450-GLASS.webp",
+    "processed_source": "pdf_page_15"
   },
   {
     "sku": "BAVARIA-BAVARIYA-NORDISCH-NA-450-CAN",
@@ -222,9 +236,10 @@
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
     "match_confidence": "low",
-    "review_status": "pending_pdf_crop",
-    "notes": "Reject site Nordisch 5% (140_…). PDF p.11 can icon + bottle context.",
-    "downloaded_source_paths": []
+    "review_status": "excluded",
+    "notes": "PDF shows bottle; icon CAN-only — no unique can packshot; alcoholic site art forbidden",
+    "downloaded_source_paths": [],
+    "local_processed_path": null
   },
   {
     "sku": "BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS",
@@ -250,9 +265,11 @@
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
     "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.15 glass Питахайя.",
-    "downloaded_source_paths": []
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.15 glass Питахайя. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS.webp",
+    "processed_source": "pdf_page_15"
   },
   {
     "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET",
@@ -275,10 +292,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "Виноград absent from site PET group; PDF p.14.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "Виноград absent from site PET group; PDF p.14. | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET.webp",
+    "processed_source": "pdf_page_14"
   },
   {
     "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS",
@@ -301,10 +320,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "Виноград absent from site Premium photos; PDF p.14.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "Виноград absent from site Premium photos; PDF p.14. | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS.webp",
+    "processed_source": "pdf_page_14"
   },
   {
     "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET",
@@ -330,11 +351,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop Вишня from Premium PET 1.2 group.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop Вишня from Premium PET 1.2 group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/126_1772458839.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS",
@@ -360,11 +383,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop Вишня from Premium glass group.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop Вишня from Premium glass group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/22_1730373939.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-BAVARIYA-TARHUN-450-GLASS",
@@ -391,9 +416,11 @@
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
     "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.15 glass Тархун.",
-    "downloaded_source_paths": []
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.15 glass Тархун. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-TARHUN-450-GLASS.webp",
+    "processed_source": "pdf_page_15"
   },
   {
     "sku": "BAVARIA-BAVARIYA-YABLOKO-1500-PET",
@@ -417,9 +444,11 @@
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
     "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "Not in site 1.5 group; PDF p.15 Яблоко PET.",
-    "downloaded_source_paths": []
+    "review_status": "confirmed_ready",
+    "notes": "Not in site 1.5 group; PDF p.15 Яблоко PET. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-YABLOKO-1500-PET.webp",
+    "processed_source": "pdf_page_15"
   },
   {
     "sku": "BAVARIA-COLALE-COLA-LE-1500-PET",
@@ -445,11 +474,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 1.5 LIMITED EDITION from official PET pair.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 1.5 LIMITED EDITION from official PET pair. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/91_1726224649.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-COLALE-COLA-LE-330-CAN",
@@ -472,10 +503,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "low",
-    "review_status": "pending_pdf_crop",
-    "notes": "No LE can on site; avoid Premium LE can mix-up.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "No LE can on site; avoid Premium LE can mix-up. | Final crop from pdf_page_18 (pdf_box) | Final crop from pdf_page_18 (pdf_box) | Final crop from pdf_page_18 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-330-CAN.webp",
+    "processed_source": "pdf_page_18"
   },
   {
     "sku": "BAVARIA-COLALE-COLA-LE-450-GLASS",
@@ -501,11 +534,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "low",
-    "review_status": "disputed",
-    "notes": "LE page glass asset face reads Cola CLASSIC — do not auto-apply; prefer PDF p.18 if LE-branded.",
+    "review_status": "excluded",
+    "notes": "Glass face reads CLASSIC on site 92 and PDF p.18 crop — LE correspondence not proven; excluded",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/92_1726224683.png"
-    ]
+    ],
+    "local_processed_path": null,
+    "processed_source": "pdf_page_18"
   },
   {
     "sku": "BAVARIA-COLALE-COLA-LE-500-PET",
@@ -531,11 +566,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.5 LIMITED EDITION from official PET pair.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.5 LIMITED EDITION from official PET pair. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/91_1726224649.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET",
@@ -560,12 +597,14 @@
       "https://www.bavaria-group.ru/files/beer_items/139_1783501193.png"
     ],
     "candidate_source_priority": "official_site",
-    "match_confidence": "medium",
-    "review_status": "disputed",
-    "notes": "Site shows 2L only; reuse 2L art is imperfect for 1.42 — prefer PDF if distinct pack exists.",
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "Distinct 1.42 PET on PDF p.13 (not 2L site art). Included in image-only apply list.",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/139_1783501193.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET.webp",
+    "processed_source": "pdf_page_13"
   },
   {
     "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET",
@@ -591,11 +630,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed",
-    "notes": "Official Бочковой PET 2L unique artwork.",
+    "review_status": "confirmed_ready",
+    "notes": "Official Бочковой PET 2L unique artwork. | Final crop from official_site (site_single) | Final crop from official_site (site_single) | Final crop from official_site (site_single)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/139_1783501193.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DOBRETSOV-HLEBNYY-1420-PET",
@@ -621,11 +662,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "medium",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop mid PET (~1.4L) from official group; confirm volume label.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop mid PET (~1.4L) from official group; confirm volume label. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-1420-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DOBRETSOV-HLEBNYY-2000-PET",
@@ -651,11 +694,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 2L Хлебный from official group.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 2L Хлебный from official group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-2000-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DOBRETSOV-HLEBNYY-450-CAN",
@@ -681,11 +726,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop can from official Хлебный group.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop can from official Хлебный group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-450-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-BITTER-LEMON-330-CAN",
@@ -711,10 +758,12 @@
     ],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.21 Bitter Lemon can; site 128 is glass+PET only.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.21 Bitter Lemon can; site 128 is glass+PET only. | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-BITTER-LEMON-330-CAN.webp",
+    "processed_source": "pdf_page_21"
   },
   {
     "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET",
@@ -740,11 +789,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop PET 1L from Indian Tonic pair.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop PET 1L from Indian Tonic pair. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/127_1775207748.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN",
@@ -767,10 +818,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.21 Indian Tonic can.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.21 Indian Tonic can. | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN.webp",
+    "processed_source": "pdf_page_21"
   },
   {
     "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS",
@@ -796,11 +849,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop glass 0.33 from Indian Tonic pair.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop glass 0.33 from Indian Tonic pair. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/127_1775207748.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET",
@@ -826,11 +881,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Flavor-unique trio; crop 1.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN",
@@ -856,11 +913,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.33 can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET",
@@ -886,11 +945,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET",
@@ -916,11 +977,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Flavor-unique trio; crop 1.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN",
@@ -946,11 +1009,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.33 can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET",
@@ -976,11 +1041,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-MOHITO-1500-PET",
@@ -1006,11 +1073,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Flavor-unique trio; crop 1.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-MOHITO-330-CAN",
@@ -1036,11 +1105,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.33 can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-330-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-MOHITO-500-PET",
@@ -1066,11 +1137,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-TAYGA-1500-PET",
@@ -1096,11 +1169,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Flavor-unique trio; crop 1.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-TAYGA-330-CAN",
@@ -1126,11 +1201,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.33 can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-330-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-DREAMIX-TAYGA-500-PET",
@@ -1156,11 +1233,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop 0.5 PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-LIMNADA-BARBARIS-1500-PET",
@@ -1186,11 +1265,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop Барбарис from 1.5 lineup.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop Барбарис from 1.5 lineup. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/58_1718608488.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-LIMNADA-BARBARIS-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-LIMNADA-BARBARIS-500-PET",
@@ -1216,11 +1297,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop Барбарис from 0.5 lineup.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop Барбарис from 0.5 lineup. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/68_1718376439.jpg"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-LIMNADA-BARBARIS-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET",
@@ -1243,10 +1326,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.24 only; not on site.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.24 only; not on site. | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET.webp",
+    "processed_source": "pdf_page_24"
   },
   {
     "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN",
@@ -1269,10 +1354,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.24 only.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.24 only. | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN.webp",
+    "processed_source": "pdf_page_24"
   },
   {
     "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-500-PET",
@@ -1295,10 +1382,12 @@
     "imaged_sibling_skus": [],
     "candidate_image_urls": [],
     "candidate_source_priority": "official_pdf",
-    "match_confidence": "medium",
-    "review_status": "pending_pdf_crop",
-    "notes": "PDF p.24 only.",
-    "downloaded_source_paths": []
+    "match_confidence": "high",
+    "review_status": "confirmed_ready",
+    "notes": "PDF p.24 only. | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box)",
+    "downloaded_source_paths": [],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-500-PET.webp",
+    "processed_source": "pdf_page_24"
   },
   {
     "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET",
@@ -1326,11 +1415,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop large Лесные ягоды PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop large Лесные ягоды PET. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/28_1758711718.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET",
@@ -1358,11 +1449,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop small Лесные ягоды PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop small Лесные ягоды PET. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/28_1758711718.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-MOUNTEA-PERSIK-330-CAN",
@@ -1391,11 +1484,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop Персик can from official can pair.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop Персик can from official can pair. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/67_1758711780.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-PERSIK-330-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN",
@@ -1421,11 +1516,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Official Classic CAN+PET; crop can.",
+    "review_status": "confirmed_ready",
+    "notes": "Official Classic CAN+PET; crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/105_1757076183.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-500-PET",
@@ -1451,11 +1548,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/105_1757076183.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-CLASSIC-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN",
@@ -1481,11 +1580,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/108_1757077083.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET",
@@ -1511,11 +1612,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/108_1757077083.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN",
@@ -1541,11 +1644,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/107_1757076818.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET",
@@ -1571,11 +1676,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/107_1757076818.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN",
@@ -1601,11 +1708,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/109_1757077306.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET",
@@ -1631,11 +1740,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/109_1757077306.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN",
@@ -1661,11 +1772,13 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop can.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/106_1757076512.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN.webp",
+    "processed_source": "official_site"
   },
   {
     "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET",
@@ -1691,10 +1804,12 @@
     ],
     "candidate_source_priority": "official_site",
     "match_confidence": "high",
-    "review_status": "confirmed_needs_crop",
-    "notes": "Crop PET.",
+    "review_status": "confirmed_ready",
+    "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)",
     "downloaded_source_paths": [
       "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/106_1757076512.png"
-    ]
+    ],
+    "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET.webp",
+    "processed_source": "official_site"
   }
 ]
