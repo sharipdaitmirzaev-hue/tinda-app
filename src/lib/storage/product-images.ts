@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from "crypto";
-import { chown, mkdir, unlink, writeFile } from "fs/promises";
+import { chown, mkdir, realpath, unlink, writeFile } from "fs/promises";
 import path from "path";
 import {
   DeleteObjectCommand,
@@ -12,6 +12,9 @@ import { AppError } from "@/lib/http/errors";
 /** Runtime user inside the production app image (Dockerfile `nextjs`). */
 export const DEFAULT_UPLOADS_UID = 1001;
 export const DEFAULT_UPLOADS_GID = 1001;
+/** Safe defaults for newly created upload dirs/files. */
+export const UPLOADS_DIR_MODE = 0o755;
+export const UPLOADS_FILE_MODE = 0o644;
 
 export const PRODUCT_IMAGE_MAX_BYTES = 5 * 1024 * 1024;
 export const PRODUCT_IMAGE_MAX_SIDE = 1600;
@@ -74,22 +77,69 @@ export function process_can_chown_uploads(): boolean {
   return typeof process.getuid === "function" && process.getuid() === 0;
 }
 
+function is_path_inside_root(target: string, root: string): boolean {
+  const normalized_root = path.resolve(root);
+  const normalized_target = path.resolve(target);
+  return (
+    normalized_target === normalized_root ||
+    normalized_target.startsWith(normalized_root + path.sep)
+  );
+}
+
 /**
  * Resolve a storage key under the local uploads root, rejecting path traversal.
  * Returns null when the key escapes the root.
  */
 export function resolve_local_upload_path(storage_key: string): string | null {
-  const normalized_root = path.resolve(local_uploads_root());
-  const normalized_target = path.resolve(
-    path.join(normalized_root, storage_key),
-  );
+  if (!storage_key || storage_key.includes("\0")) {
+    return null;
+  }
+  // Absolute keys must not bypass the uploads root via path.join semantics.
+  if (path.isAbsolute(storage_key)) {
+    return null;
+  }
+  // Normalize Windows separators and reject empty / traversal segments early.
+  const normalized_key = storage_key.replace(/\\/g, "/");
+  const segments = normalized_key.split("/").filter((s) => s.length > 0);
   if (
-    normalized_target !== normalized_root &&
-    !normalized_target.startsWith(normalized_root + path.sep)
+    segments.length === 0 ||
+    segments.some((s) => s === "." || s === "..")
   ) {
     return null;
   }
+
+  const normalized_root = path.resolve(local_uploads_root());
+  const normalized_target = path.resolve(
+    path.join(normalized_root, ...segments),
+  );
+  if (!is_path_inside_root(normalized_target, normalized_root)) {
+    return null;
+  }
   return normalized_target;
+}
+
+/**
+ * Resolve an existing upload file for HTTP serving.
+ * Uses realpath so symlink escapes outside the uploads root are rejected.
+ */
+export async function resolve_existing_local_upload_file(
+  storage_key: string,
+): Promise<string | null> {
+  const candidate = resolve_local_upload_path(storage_key);
+  if (!candidate) {
+    return null;
+  }
+
+  try {
+    const root_real = await realpath(local_uploads_root());
+    const file_real = await realpath(candidate);
+    if (!is_path_inside_root(file_real, root_real)) {
+      return null;
+    }
+    return file_real;
+  } catch {
+    return null;
+  }
 }
 
 /**
@@ -107,10 +157,7 @@ export async function ensure_local_upload_ownership(
 
   const normalized_root = path.resolve(local_uploads_root());
   let current = path.resolve(absolute_path);
-  if (
-    current !== normalized_root &&
-    !current.startsWith(normalized_root + path.sep)
-  ) {
+  if (!is_path_inside_root(current, normalized_root)) {
     return { adjusted: false, uid, gid };
   }
 
@@ -120,11 +167,7 @@ export async function ensure_local_upload_ownership(
       break;
     }
     const parent = path.dirname(current);
-    if (
-      parent === current ||
-      (parent !== normalized_root &&
-        !parent.startsWith(normalized_root + path.sep))
-    ) {
+    if (parent === current || !is_path_inside_root(parent, normalized_root)) {
       break;
     }
     current = parent;
@@ -144,8 +187,11 @@ function create_local_driver(): ProductImageStorageDriver {
           "Небезопасный путь файла",
         );
       }
-      await mkdir(path.dirname(normalized_target), { recursive: true });
-      await writeFile(normalized_target, body);
+      await mkdir(path.dirname(normalized_target), {
+        recursive: true,
+        mode: UPLOADS_DIR_MODE,
+      });
+      await writeFile(normalized_target, body, { mode: UPLOADS_FILE_MODE });
       await ensure_local_upload_ownership(normalized_target);
     },
     async delete(storage_key) {
