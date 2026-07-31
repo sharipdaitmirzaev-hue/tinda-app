@@ -1,0 +1,38 @@
+﻿line,taste,package,volume_ml,status,proof,confidence
+Premium,Груша,GLASS,500,approved,"site assortment стекло 0,5",high
+Premium,Тархун,GLASS,500,approved,"site assortment стекло 0,5",high
+Premium,Апельсин,GLASS,500,approved,"site assortment стекло 0,5",high
+Premium,Гранат,GLASS,500,approved,"site assortment стекло 0,5",high
+Premium,Фейхоа,GLASS,500,approved,"site assortment стекло 0,5",high
+Premium,Вишня,GLASS,500,approved,"site assortment стекло 0,5",high
+Premium,Груша,PET,1200,approved,"site assortment ПЭТ 1,2",high
+Premium,Тархун,PET,1200,approved,"site assortment ПЭТ 1,2",high
+Premium,Гранат,PET,1200,approved,"site assortment ПЭТ 1,2",high
+Premium,Фейхоа,PET,1200,approved,"site assortment ПЭТ 1,2",high
+Premium,Вишня,PET,1200,approved,"site assortment ПЭТ 1,2",high
+Premium,Апельсин,PET,1200,manual,есть в брифе PDF / нет в site assortment,low
+Premium,Виноград,GLASS,500,manual,есть в брифе PDF / нет в site assortment,low
+Premium,Виноград,PET,1200,manual,есть в брифе PDF / нет в site assortment,low
+Regular,Груша,PET,1500,approved,"site ПЭТ 1,5",high
+Regular,Апельсин,PET,1500,approved,"site ПЭТ 1,5",high
+Regular,Тархун,PET,1500,approved,"site ПЭТ 1,5",high
+Regular,Питахайя,PET,1500,approved,"site ПЭТ 1,5",high
+Regular,Мохито,PET,1500,approved,"site ПЭТ 1,5",high
+Regular,Кола,PET,1500,approved,"site ПЭТ 1,5",high
+Regular,Груша,PET,500,approved,"site ПЭТ 0,5",high
+Regular,Тархун,PET,500,approved,"site ПЭТ 0,5",high
+Regular,Кола,PET,500,approved,"site ПЭТ 0,5",high
+Regular,Тархун,GLASS,450,manual,pdf-brief pack shown; no site taste×glass list,low
+Regular,Груша,GLASS,450,manual,pdf-brief pack shown; no site taste×glass list,low
+Regular,Питахайя,GLASS,450,manual,pdf-brief pack shown; no site taste×glass list,low
+Regular,Апельсин,GLASS,450,manual,pdf-brief pack shown; no site taste×glass list,low
+Regular,Кола,GLASS,450,manual,pdf-brief pack shown; no site taste×glass list,low
+Regular,Мохито,GLASS,450,manual,pdf-brief pack shown; no site taste×glass list,low
+Regular,Яблоко,GLASS,450,manual,pdf-brief pack shown; no site taste×glass list,low
+Limnada,Ананас,PET,1500,approved,"site 1,5",high
+Limnada,Крем-Сода,PET,1500,approved,"site 1,5",high
+Limnada,Дюшес,PET,1500,approved,"site 1,5",high
+Limnada,Барбарис,PET,1500,approved,"site 1,5",high
+Limnada,Крем-Сода,PET,500,approved,"site 0,5 without Ананас",high
+Limnada,Дюшес,PET,500,approved,"site 0,5 without Ананас",high
+Limnada,Барбарис,PET,500,approved,"site 0,5 without Ананас",high
