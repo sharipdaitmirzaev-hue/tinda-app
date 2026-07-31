@@ -24,7 +24,10 @@
     "import:bavaria:apply": "tsx scripts/import-bavaria.ts apply",
     "import:bavaria:preflight": "python3 scripts/bavaria-preflight-apply.py",
     "import:bavaria:pdf-ingest": "python3 scripts/bavaria-pdf-ingest.py",
-    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-ingest.py && python3 scripts/bavaria-pdf-site-merge.py"
+    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-ingest.py && python3 scripts/bavaria-pdf-site-merge.py",
+    "import:daryal:discover": "tsx scripts/import-daryal.ts discover",
+    "import:daryal:dry-run": "tsx scripts/import-daryal.ts dry-run",
+    "import:daryal:apply": "tsx scripts/import-daryal.ts apply"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",
