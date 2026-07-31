@@ -61,6 +61,8 @@ artifacts/bavaria-import/**/http-cache/
 artifacts/bavaria-import/**/renders/
 artifacts/bavaria-import/**/renders-small/
 
+# Bavaria image-completion official source downloads (regenerate via script)
+artifacts/bavaria-import/image-completion-*/source-downloads/
+
 # Local DB dumps from agent/VPS rehearsal (never commit)
 /backups/
-artifacts/bavaria-import/**/pages/
