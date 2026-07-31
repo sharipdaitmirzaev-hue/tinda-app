@@ -63,3 +63,4 @@ artifacts/bavaria-import/**/renders-small/
 
 # Local DB dumps from agent/VPS rehearsal (never commit)
 /backups/
+artifacts/bavaria-import/**/pages/

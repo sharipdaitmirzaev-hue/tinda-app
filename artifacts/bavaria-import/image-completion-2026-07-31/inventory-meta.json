@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-07-31T14:06:58.202337+00:00",
+  "branch": "cursor/bavaria-missing-images-ad60",
+  "production_db_modified": false,
+  "production_apply_executed": false,
+  "prod_without_image": 58,
+  "manual_keep": 5,
+  "manual_promoted": 0,
+  "status_counts": {
+    "confirmed_needs_crop": 39,
+    "pending_pdf_crop": 16,
+    "disputed": 2,
+    "confirmed": 1
+  },
+  "unique_source_urls_downloaded": 23,
+  "manifest_candidates": 40,
+  "image_update_manifest": "image-update-manifest.json"
+}

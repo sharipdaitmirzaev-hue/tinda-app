@@ -1,0 +1,186 @@
+{
+  "https://www.bavaria-group.ru/files/beer_items/55_1740991309.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/55_1740991309.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/55_1740991309.jpg",
+    "bytes": 775339,
+    "sha256": "252418e80c2b75d53ef5e7a1ff4060c5a06b21373c9d493af09424f794c899cb",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/97_1730364236.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/97_1730364236.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/97_1730364236.jpg",
+    "bytes": 1761914,
+    "sha256": "884c87b1b4de115147a717d59ef4fe472647cef388d705aabc20dfdd4b779395",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/95_1730364037.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/95_1730364037.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/95_1730364037.jpg",
+    "bytes": 2319109,
+    "sha256": "1c25068925bcdc13bed83981099e56282a575cfdcfd616537e56975011f02b48",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/22_1730373939.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/22_1730373939.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/22_1730373939.jpg",
+    "bytes": 2338837,
+    "sha256": "ee5a5506b3d8523fbd017fac882802040acd8b5db28ad7a5fba882f52a8827b0",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/126_1772458839.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/126_1772458839.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/126_1772458839.png",
+    "bytes": 1341584,
+    "sha256": "6fc10cd701c7afda3349476ae78b04c19d4fb4e38de955991158270f1598de4a",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/91_1726224649.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/91_1726224649.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/91_1726224649.png",
+    "bytes": 544754,
+    "sha256": "0a8855d2c2ebccf5bebf4a14243854add8ec8c33985414767564ea3530ce6f5b",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/92_1726224683.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/92_1726224683.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/92_1726224683.png",
+    "bytes": 397999,
+    "sha256": "d4f677ab97083e0872db8d21eb7dee00d0de92d8b71031d3f8753e80791ba16d",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/76_1783510510.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/76_1783510510.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg",
+    "bytes": 1805782,
+    "sha256": "bc3d4fd8542345a4a0a5318444aa86a2034c152c327e36c6fb4462a04028cf59",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/139_1783501193.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/139_1783501193.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/139_1783501193.png",
+    "bytes": 891647,
+    "sha256": "d60f05f14390f4a23bab5d823ab56ad7fe202bbb74f8fa3f0aede0dfd62028f9",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/98_1743082462.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/98_1743082462.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg",
+    "bytes": 2088527,
+    "sha256": "a7a3c38178db39f0c9326ff3ba765f8561688c9a699fa3761dfcd9022ac43d0f",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/100_1743082523.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/100_1743082523.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg",
+    "bytes": 2105488,
+    "sha256": "8268247708de8ddf2a1ed6198189f152f9304f2df72c1cc24d2265990a4747e0",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/101_1743082539.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/101_1743082539.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg",
+    "bytes": 2114414,
+    "sha256": "cd4a2403211235ed202673e1c986006f98f9cec41a5add3d012c79d9f59d4774",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/102_1743082553.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/102_1743082553.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg",
+    "bytes": 1708644,
+    "sha256": "bfb1e78ad4c9e8e7f1b72590560bf440fff698858c9a2b5c7b589d50d781b88b",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/127_1775207748.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/127_1775207748.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/127_1775207748.png",
+    "bytes": 677065,
+    "sha256": "5492023dd9cfe7b7c99e8b56ac757d657fe2be93400cd8c46bb98985027d4f76",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/58_1718608488.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/58_1718608488.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/58_1718608488.jpg",
+    "bytes": 1598978,
+    "sha256": "8b15115926f6a26fe17088456da0d1ff6be7f175d0b89ad2d828f9071d5b5e4f",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/68_1718376439.jpg": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/68_1718376439.jpg",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/68_1718376439.jpg",
+    "bytes": 1389120,
+    "sha256": "d345202b88bcc8390e459f4ef1cce379adea6ae1f221f7ee8e1507bff2d4b710",
+    "content_type": "image/jpeg",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/28_1758711718.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/28_1758711718.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/28_1758711718.png",
+    "bytes": 808943,
+    "sha256": "778daae5cd569b28d9299b0cb662fa83da7078ffe06f68a57fd89ffd84a95efb",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/67_1758711780.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/67_1758711780.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/67_1758711780.png",
+    "bytes": 185930,
+    "sha256": "1928e94f1834184de4b59ac4f992afe90e343343fc054e6b75236c99a35d900e",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/105_1757076183.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/105_1757076183.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/105_1757076183.png",
+    "bytes": 187891,
+    "sha256": "084be7852172b8e410a74a4b9b8b9340a947aebe5f1bb2a56c2982adbcfbed12",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/106_1757076512.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/106_1757076512.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/106_1757076512.png",
+    "bytes": 204209,
+    "sha256": "7e3394d63a49af703fd82e1a34fe9f80615fc79bd96c76cf9a4aa6e0cc075b1b",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/107_1757076818.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/107_1757076818.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/107_1757076818.png",
+    "bytes": 193634,
+    "sha256": "c5379649847fbb24aa20b4d2ae2f8d04004cb78052afd90083163c5fd1030c7d",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/108_1757077083.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/108_1757077083.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/108_1757077083.png",
+    "bytes": 201547,
+    "sha256": "545a3a602b25b449cabae2fa3568f27a5b39695a511b4bc7ea2483ce6dbd600a",
+    "content_type": "image/png",
+    "status": "downloaded"
+  },
+  "https://www.bavaria-group.ru/files/beer_items/109_1757077306.png": {
+    "url": "https://www.bavaria-group.ru/files/beer_items/109_1757077306.png",
+    "path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/109_1757077306.png",
+    "bytes": 203481,
+    "sha256": "623556cfa5e68b5c7091817a252905ccd8671fe314e1c37d7b5ed5c3435e18de",
+    "content_type": "image/png",
+    "status": "downloaded"
+  }
+}
