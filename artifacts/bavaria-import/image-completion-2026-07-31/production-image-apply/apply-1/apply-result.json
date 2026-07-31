@@ -1,0 +1,301 @@
+{
+  "started_at": "2026-07-31T14:33:22.929Z",
+  "finished_at": "2026-07-31T14:33:27.867Z",
+  "kind": "image_update_only",
+  "backup_path": "/backups/tinda-prod-bavaria-images-20260731-143119.sql",
+  "backup_size": 363745,
+  "backup_sha256": "48b3ac268452697f81e65efe22ce187f48c7eed958c94937df77d2958823d52e",
+  "manifest_path": "artifacts/bavaria-import/image-completion-2026-07-31/image-update-manifest.json",
+  "expected_count": 56,
+  "updated": [
+    "BAVARIA-BAVARIYA-ELF-450-CAN",
+    "BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN",
+    "BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS",
+    "BAVARIA-BAVARIYA-GRUSHA-450-GLASS",
+    "BAVARIA-BAVARIYA-KOLA-1500-PET",
+    "BAVARIA-BAVARIYA-KOLA-500-PET",
+    "BAVARIA-BAVARIYA-MOHITO-450-GLASS",
+    "BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS",
+    "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET",
+    "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS",
+    "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET",
+    "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS",
+    "BAVARIA-BAVARIYA-TARHUN-450-GLASS",
+    "BAVARIA-BAVARIYA-YABLOKO-1500-PET",
+    "BAVARIA-COLALE-COLA-LE-1500-PET",
+    "BAVARIA-COLALE-COLA-LE-330-CAN",
+    "BAVARIA-COLALE-COLA-LE-500-PET",
+    "BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET",
+    "BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET",
+    "BAVARIA-DOBRETSOV-HLEBNYY-1420-PET",
+    "BAVARIA-DOBRETSOV-HLEBNYY-2000-PET",
+    "BAVARIA-DOBRETSOV-HLEBNYY-450-CAN",
+    "BAVARIA-DREAMIX-BITTER-LEMON-330-CAN",
+    "BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET",
+    "BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN",
+    "BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS",
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET",
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN",
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET",
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET",
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN",
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET",
+    "BAVARIA-DREAMIX-MOHITO-1500-PET",
+    "BAVARIA-DREAMIX-MOHITO-330-CAN",
+    "BAVARIA-DREAMIX-MOHITO-500-PET",
+    "BAVARIA-DREAMIX-TAYGA-1500-PET",
+    "BAVARIA-DREAMIX-TAYGA-330-CAN",
+    "BAVARIA-DREAMIX-TAYGA-500-PET",
+    "BAVARIA-LIMNADA-BARBARIS-1500-PET",
+    "BAVARIA-LIMNADA-BARBARIS-500-PET",
+    "BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET",
+    "BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN",
+    "BAVARIA-MOUNTEA-LAYM-MYATA-500-PET",
+    "BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET",
+    "BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET",
+    "BAVARIA-MOUNTEA-PERSIK-330-CAN",
+    "BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN",
+    "BAVARIA-ROCKET-RIDE-CLASSIC-500-PET",
+    "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN",
+    "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET",
+    "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN",
+    "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET",
+    "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN",
+    "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET",
+    "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN",
+    "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET"
+  ],
+  "skipped": [],
+  "errors": [],
+  "field_changes": {
+    "BAVARIA-BAVARIYA-ELF-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-GRUSHA-450-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-KOLA-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-KOLA-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-MOHITO-450-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-TARHUN-450-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-BAVARIYA-YABLOKO-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-COLALE-COLA-LE-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-COLALE-COLA-LE-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-COLALE-COLA-LE-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DOBRETSOV-HLEBNYY-1420-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DOBRETSOV-HLEBNYY-2000-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DOBRETSOV-HLEBNYY-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-BITTER-LEMON-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-MOHITO-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-MOHITO-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-MOHITO-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-TAYGA-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-TAYGA-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-DREAMIX-TAYGA-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-LIMNADA-BARBARIS-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-LIMNADA-BARBARIS-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-MOUNTEA-LAYM-MYATA-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-MOUNTEA-PERSIK-330-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-CLASSIC-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN": [
+      "image_url"
+    ],
+    "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET": [
+      "image_url"
+    ]
+  },
+  "new_image_urls": {
+    "BAVARIA-BAVARIYA-ELF-450-CAN": "/uploads/products/e86cc021-ba57-4bd8-8cee-3b19e767fa58/1abdf580-dcd8-4cee-b0f6-56df5db60420.webp",
+    "BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN": "/uploads/products/d956c604-185e-4d2b-a623-fc8782947d03/6295554e-94dd-4680-a78e-58eb0c18b138.webp",
+    "BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS": "/uploads/products/38727b0e-6323-4e00-8e56-22f4ffb70652/69eab5df-897e-43f2-ab83-0ea83e711702.webp",
+    "BAVARIA-BAVARIYA-GRUSHA-450-GLASS": "/uploads/products/d7e936c0-7ccc-4cec-8394-3efef5f55ff5/fddd7cbc-1d50-4b4a-b680-c83fc5cca59d.webp",
+    "BAVARIA-BAVARIYA-KOLA-1500-PET": "/uploads/products/c6e41aac-fa99-4ac8-a9af-27bc5d486c9f/cabca68d-b253-4a2e-a962-011e4846f979.webp",
+    "BAVARIA-BAVARIYA-KOLA-500-PET": "/uploads/products/0ffc54a1-f263-442e-9cb9-765792cfe3c7/0fdfe1b0-4ef0-430f-b552-94b6c82c766f.webp",
+    "BAVARIA-BAVARIYA-MOHITO-450-GLASS": "/uploads/products/1d88a06b-059e-4dae-87c9-934847633351/292ea263-29fb-42fb-ab4e-1fd94444f40d.webp",
+    "BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS": "/uploads/products/1201f134-d500-4058-84dd-6f28ef8dec9b/bfbf43b2-619e-4a96-a94d-b4a8e1984db6.webp",
+    "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET": "/uploads/products/c1b1f411-6e2a-49d2-a07c-829b6384ba1f/39303664-4c09-4fc5-8a1c-5e75068306e6.webp",
+    "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS": "/uploads/products/fe06640b-8b8c-4422-a9c8-95d17e40d816/fb557936-485f-44d3-8a0c-c2241bc8b473.webp",
+    "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET": "/uploads/products/6ec1c5d4-ac87-467b-9fa9-168d024bf035/9e632981-ab4e-47cc-9d43-903ea1991068.webp",
+    "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS": "/uploads/products/e955d737-f2f3-4cb0-8035-2ef994933795/56934f08-cf81-43b3-a7a9-ef75400de5a9.webp",
+    "BAVARIA-BAVARIYA-TARHUN-450-GLASS": "/uploads/products/b03eb36c-765b-4483-b564-d1fd257f0534/4b68f179-21dd-4906-9e4f-38e621317322.webp",
+    "BAVARIA-BAVARIYA-YABLOKO-1500-PET": "/uploads/products/38f87fc2-4f1e-4291-ba8d-43400d0953db/04c71b0e-b22c-4570-824f-20ac93a17b5f.webp",
+    "BAVARIA-COLALE-COLA-LE-1500-PET": "/uploads/products/868d4ec8-e72c-4e96-b608-e7ecf9e1d3d3/1676ad4f-a393-4f55-a599-6f1b568d9f55.webp",
+    "BAVARIA-COLALE-COLA-LE-330-CAN": "/uploads/products/e3979f71-e94e-4363-9d3c-531c48189d66/b2e6aa04-04db-40fd-a63f-2b987c93dce3.webp",
+    "BAVARIA-COLALE-COLA-LE-500-PET": "/uploads/products/474b6489-a028-43e4-a3ed-378ab7330e34/8c47c2a9-2750-4e1f-8700-9e965bf8ab74.webp",
+    "BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET": "/uploads/products/0843dad0-0dd1-440a-92f6-b396ae7e2750/870d9022-276f-4662-9bd9-5850f051073b.webp",
+    "BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET": "/uploads/products/451fdf3b-2c19-40fa-b1fd-d15c66501ada/bebc0c0d-9553-4a8d-9104-33b947696518.webp",
+    "BAVARIA-DOBRETSOV-HLEBNYY-1420-PET": "/uploads/products/efa8b42e-a886-4cbf-85a1-41bf898a69d2/9ea92ff4-dfaa-4a80-8a22-b77f66b9b089.webp",
+    "BAVARIA-DOBRETSOV-HLEBNYY-2000-PET": "/uploads/products/fe0ed77d-6cb6-483c-9c79-5a07ca746a01/5d116568-4f4d-46a5-b171-a022eecf9815.webp",
+    "BAVARIA-DOBRETSOV-HLEBNYY-450-CAN": "/uploads/products/18357d33-b0eb-4284-8178-a3408001c39b/e603189e-b3e3-4330-bc47-853de499b802.webp",
+    "BAVARIA-DREAMIX-BITTER-LEMON-330-CAN": "/uploads/products/7d40ed7c-b335-4e39-8946-04781578f7c7/b72b7ece-ab28-4af0-a698-7b1ca4967700.webp",
+    "BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET": "/uploads/products/80cf55ab-1a0f-4750-b23a-816192b3a6f7/986e0ada-818e-440c-886e-39391dd36588.webp",
+    "BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN": "/uploads/products/20e91448-2f8d-4955-b0e6-e09985cdc31d/ae066ad8-261b-4dc9-b7ce-ec60ecc5ea2e.webp",
+    "BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS": "/uploads/products/eb783624-cbba-48b9-9a5a-28b46ba8a9af/84299f31-a927-474a-8a6b-578ca2c78d44.webp",
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET": "/uploads/products/2dcbc116-f153-426b-9b3c-98349ecac2cf/c400798c-795e-472b-83c8-bd18e3e7e1e6.webp",
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN": "/uploads/products/83fe9ae5-aea7-4289-bdec-03c6e68ebd6d/4c170aa1-6e48-4c7f-9a45-20b751957825.webp",
+    "BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET": "/uploads/products/dbdd0de4-df33-46ba-86ea-fd5e057677c4/caccb937-a91a-448e-b57d-39ca046ea0e6.webp",
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET": "/uploads/products/b5f3b0e6-667b-4309-b5b4-b2239dd630ce/c840dba6-32e8-4977-b738-f051884a7041.webp",
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN": "/uploads/products/e67eb4f1-ccc2-4ede-bab2-53f48af1ec57/7c30068f-d377-4c7c-84f5-df1c7c680b61.webp",
+    "BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET": "/uploads/products/65d8c795-9444-4427-bafc-a1f26e292c38/a3f63299-89e7-4cb8-b3f3-82d47b94c204.webp",
+    "BAVARIA-DREAMIX-MOHITO-1500-PET": "/uploads/products/fe68145d-1f98-4180-8382-f4441780257e/e7143fb9-b30a-49a7-aa7c-9dc1fc6d9c33.webp",
+    "BAVARIA-DREAMIX-MOHITO-330-CAN": "/uploads/products/8eecf564-30f8-44e5-beae-6099df4ed648/92f3104f-1fe8-40f0-814d-1c52bffd93cc.webp",
+    "BAVARIA-DREAMIX-MOHITO-500-PET": "/uploads/products/8456dc48-9a10-4dd9-9463-1dcc7c7622bd/cea63a98-4696-4fbe-afce-94f25e1f277d.webp",
+    "BAVARIA-DREAMIX-TAYGA-1500-PET": "/uploads/products/bc85f836-d864-46f6-a30b-bb173fddb0f5/b3815063-23aa-4978-be05-f4739e1e4962.webp",
+    "BAVARIA-DREAMIX-TAYGA-330-CAN": "/uploads/products/21bc870d-87ab-477c-80d9-dbb70607af84/dd3be2aa-854f-4c6e-9508-409037256e53.webp",
+    "BAVARIA-DREAMIX-TAYGA-500-PET": "/uploads/products/ac0c3281-4ab8-4fab-820d-fe36bc876e36/130de6e2-3e8d-47b9-b8cb-a632096650f6.webp",
+    "BAVARIA-LIMNADA-BARBARIS-1500-PET": "/uploads/products/914fba01-978f-4a1f-8490-c7f05a8a1703/764504eb-c38e-4580-bfaa-16eeec7a695c.webp",
+    "BAVARIA-LIMNADA-BARBARIS-500-PET": "/uploads/products/4731fb9f-2bf6-463f-b17e-8aa12e7ba623/e226fcb3-aa4b-44ec-a86a-108ada2aaac9.webp",
+    "BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET": "/uploads/products/50ce6408-374b-4140-9327-07c9f3823aef/0187d52c-aeb6-4262-aeab-de83c54e7f78.webp",
+    "BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN": "/uploads/products/0deef178-8a23-44de-816e-412b2cd704b3/83959a63-220e-43d1-9637-c8c86ce1afc2.webp",
+    "BAVARIA-MOUNTEA-LAYM-MYATA-500-PET": "/uploads/products/7c88ae0b-29c8-495d-a2c1-5da5739d318d/bb65d797-9e51-4add-bde2-4aa37c7ba872.webp",
+    "BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET": "/uploads/products/c0c97954-4335-4d55-9188-67519f433dd3/5edc6504-fd76-4f7f-a43e-d7a872d5bd62.webp",
+    "BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET": "/uploads/products/ce4b8dca-01a3-4a0a-b1e5-35394386a128/2ff2a250-a936-417a-bc3b-3b312eb9010b.webp",
+    "BAVARIA-MOUNTEA-PERSIK-330-CAN": "/uploads/products/c65e0744-912c-4375-ae38-be6fb8034b2c/e533a4e2-afd8-4c53-86f4-1581b9437e78.webp",
+    "BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN": "/uploads/products/4665b5bb-34c6-4ca2-8d29-de42f0beb32e/8b296eff-60de-414d-ba38-57f94b7dff42.webp",
+    "BAVARIA-ROCKET-RIDE-CLASSIC-500-PET": "/uploads/products/d70ddb4a-68db-4679-8510-376003abd2c3/4bc09cd0-00a1-4e93-abaf-9fd73c795c17.webp",
+    "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN": "/uploads/products/42f5c539-4e21-4f70-9b75-c755dc7da7be/6d2e79e9-807b-4082-bed5-15cbd9c912ab.webp",
+    "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET": "/uploads/products/e6acdff9-dd9b-4d04-bdd8-46fcfdf3c649/eb8ab0e1-36ba-482f-82f7-574f09c98ffb.webp",
+    "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN": "/uploads/products/a9112ee1-6cd9-41d0-9d34-5382b61e52ee/fdf97f7b-6c0f-49aa-99d7-0cde0c471919.webp",
+    "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET": "/uploads/products/998fcfa8-387b-46ec-bc16-b405f2090c60/abfd5c84-f57d-428f-b99e-17d4984a8d86.webp",
+    "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN": "/uploads/products/4e36b37e-8295-4f02-8651-3037b12fa1de/50e20124-0baa-4b46-85b7-eaa55d666586.webp",
+    "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET": "/uploads/products/e2450fba-5bc1-43cc-9e53-9780391cb588/29a470c9-2263-46f7-a799-3a0edf3643e0.webp",
+    "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN": "/uploads/products/885ed9a6-b13b-4748-9b8c-389772a521f1/4d8b5c64-8a62-4613-8d71-a2ccd86d2e11.webp",
+    "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET": "/uploads/products/c44309c6-c361-4a25-a3ab-d246dffc260f/f85302df-8f2f-4986-a0f6-24bf9734fc22.webp"
+  },
+  "updated_count": 56,
+  "skipped_count": 0,
+  "error_count": 0
+}

@@ -1,0 +1,1294 @@
+{
+  "results": [
+    {
+      "sku": "BAVARIA-BAVARIYA-ELF-450-CAN",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "source": "pdf_page_11",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-ELF-450-CAN.webp",
+      "bytes": 21286,
+      "sha256": "733751e59a0bf914858eb56886a743b505ef9a9e90c11c8fdcf6543ccb236425",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 21286,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "source": "pdf_page_11",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN.webp",
+      "bytes": 29824,
+      "sha256": "4e83d77f1fc56a586146af67385788ce932de689b68b317eaa3cd07c4b7a4b4e",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 29824,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "source": "pdf_page_11",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS.webp",
+      "bytes": 25188,
+      "sha256": "96fa209277bfec77cac615170b0ea73c622b4a18c3506c3a9330cefea471c4cb",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 25188,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GRUSHA-450-GLASS",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "source": "pdf_page_15",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GRUSHA-450-GLASS.webp",
+      "bytes": 16410,
+      "sha256": "377945a79ffbd6476e273089df149529ca87c9dd8e3f4e21ac425969e2b1f489",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 16410,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-KOLA-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/95_1730364037.jpg",
+      "source": "official_site",
+      "method": "site_equal",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-KOLA-1500-PET.webp",
+      "bytes": 48508,
+      "sha256": "842a791c7a6f8acaabd093fbd6cc429360a673571383c32ed4f3a557ffcf7602",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 48508,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-KOLA-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/97_1730364236.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-KOLA-500-PET.webp",
+      "bytes": 49352,
+      "sha256": "06b1e4a94b7ededf8839e6101114dd151c5fada4d1e4cd36080bab73e4c592e3",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 49352,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-MOHITO-450-GLASS",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "source": "pdf_page_15",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-MOHITO-450-GLASS.webp",
+      "bytes": 22012,
+      "sha256": "e8fc719629b242a9076f4d98f96321c8a802f35830f8e30a1eaaa1547dcac00e",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 22012,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "source": "pdf_page_15",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS.webp",
+      "bytes": 25666,
+      "sha256": "b8640b0c3116a325c2eec0426bd910e425866d4a0945880aaa3c57dd4d47b878",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 25666,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-14.png",
+      "source": "pdf_page_14",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET.webp",
+      "bytes": 25830,
+      "sha256": "d14d8a0a90d2eae4b5e2bf6fc7c088421961e2efc1c1ddcfff530102f3d94382",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 25830,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-14.png",
+      "source": "pdf_page_14",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS.webp",
+      "bytes": 21292,
+      "sha256": "691ae1f57df7bd36b458c5322c53457ac85dadc56cf46adc48d1767de1c67bdd",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 21292,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/126_1772458839.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET.webp",
+      "bytes": 42722,
+      "sha256": "478e7d3d4e543d7c82b82485bb26430fa1b19612ad9e7e2650c9e1a36bd69f9d",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 42722,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/22_1730373939.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS.webp",
+      "bytes": 49638,
+      "sha256": "98258a0d554922761c7b8e7e8d957f85030dc0e7995bb96988e88b7178f65781",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 49638,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-TARHUN-450-GLASS",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "source": "pdf_page_15",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-TARHUN-450-GLASS.webp",
+      "bytes": 32056,
+      "sha256": "4369863ef973ad838a4f679b96dbffdf81c2aaea03ef4fae11f24c82f03910eb",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 32056,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-YABLOKO-1500-PET",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "source": "pdf_page_15",
+      "method": "pdf_box",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-YABLOKO-1500-PET.webp",
+      "bytes": 23530,
+      "sha256": "42b0d91c339aa64ed267c884c9e6ae45efe001b22a0b03d9a22ee258307d73de",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 23530,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/91_1726224649.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-1500-PET.webp",
+      "bytes": 45954,
+      "sha256": "be9d4cb0c6718a90d90ce487b4be0921d3c8582579d7379a039a03ba6ce5afaa",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 45954,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-330-CAN",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-18.png",
+      "source": "pdf_page_18",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-330-CAN.webp",
+      "bytes": 28978,
+      "sha256": "d69367242c52bc6c9e71e78b7058d61b847bebba1df040619a40c6fb4af7cc1d",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 28978,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/91_1726224649.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-500-PET.webp",
+      "bytes": 43148,
+      "sha256": "e4a5d762dcb4dd813159f237600bdd6a88554cf7771151e1f23a875d0d38bfdc",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 43148,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-13.png",
+      "source": "pdf_page_13",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET.webp",
+      "bytes": 27650,
+      "sha256": "a0a35c87d783c7492a8cc5359d8a2b8319fcd044571fba6c3cc6cfd5d89f38c3",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 27650,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/139_1783501193.png",
+      "source": "official_site",
+      "method": "site_single",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET.webp",
+      "bytes": 39056,
+      "sha256": "233b457a8d693b802cf26121a431782d68ae2e5ea262312eb37472f26ebad22f",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 39056,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-1420-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "medium",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-1420-PET.webp",
+      "bytes": 40714,
+      "sha256": "f4a7d795f1ef16dc9ece10b971985f5f7878985a17aa45c13a5fe2f97deb01e6",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 40714,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-2000-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-2000-PET.webp",
+      "bytes": 40668,
+      "sha256": "69a05e1fd1c823d273b8583dc31f2cc1cb08b786c6cd78ddae9dfa1b68b92aec",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 40668,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-450-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-450-CAN.webp",
+      "bytes": 89424,
+      "sha256": "27ad437ddc8572eb00c4b1630f78944221a8aad393862c4be71347761d9f7cf4",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 89424,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-BITTER-LEMON-330-CAN",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-21.png",
+      "source": "pdf_page_21",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-BITTER-LEMON-330-CAN.webp",
+      "bytes": 35644,
+      "sha256": "3e37451b6834889bcac96424432a8666d32274149c5172803988dcf795aaf6ee",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 35644,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/127_1775207748.png",
+      "source": "official_site",
+      "method": "site_equal",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET.webp",
+      "bytes": 28490,
+      "sha256": "39b5efbcc02b3687bc78f13b3886f712f88b33861ef53397924b7e6bc890f034",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 28490,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-21.png",
+      "source": "pdf_page_21",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN.webp",
+      "bytes": 42094,
+      "sha256": "495c0274fc1ff460af2641e3b66142ef5eb4f9fbefdb9a7764a174fdc2df84e4",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 42094,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/127_1775207748.png",
+      "source": "official_site",
+      "method": "site_equal",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS.webp",
+      "bytes": 32002,
+      "sha256": "f9bb78af638b8239c68b4f6847eaf4a8eaa80f17df2256fc49cea84fec8b6e91",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 32002,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET.webp",
+      "bytes": 24866,
+      "sha256": "f093fc3c02660ca419376d6c4b14ce1d2b69da90c0d30555b6eb0442cb35d981",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 24866,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN.webp",
+      "bytes": 20706,
+      "sha256": "0b9fb3887f981a7b596a655fe187f1a339153874e9125b500d4ffc30c906710e",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 20706,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET.webp",
+      "bytes": 18054,
+      "sha256": "10772105bf4484054fad4a28b191e1d1f58ee3ca47af7cd3aad0f72cb3bf05b4",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 18054,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET.webp",
+      "bytes": 29460,
+      "sha256": "aa097073d855901b79d37c1f27842bbcb9d03c52d7ab9a7a42987e15c90491c7",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 29460,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN.webp",
+      "bytes": 17846,
+      "sha256": "7fd802de14ecb57f701eacd6877f88a839ad3c46f150976cc157f9aa97ccc631",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 17846,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET.webp",
+      "bytes": 23540,
+      "sha256": "5bf4879959396da55e3508d278064a325941b202144af9273794f274dab929a3",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 23540,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-1500-PET.webp",
+      "bytes": 22664,
+      "sha256": "23de1272e26e916dd0e2a15eec4ef0c0c74a23f621396dda996a1b3352766ede",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 22664,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-330-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-330-CAN.webp",
+      "bytes": 15356,
+      "sha256": "01a7d7496d7fb5e6e55372103a6b0b3f3c05b7754a709af4450ce6445c2dca24",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 15356,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-500-PET.webp",
+      "bytes": 20504,
+      "sha256": "6ac0a9986bbbba047b0eaffa0240efcd6c31fa3a4c3cfe4965aa313d34588f83",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 20504,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-1500-PET.webp",
+      "bytes": 26342,
+      "sha256": "0b2807953e550aa3874c90380cc0cec16521196c6208b12c6bad3d6de8ef04b7",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 26342,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-330-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-330-CAN.webp",
+      "bytes": 18614,
+      "sha256": "834bb3d9304fac903d274c29469f963442d06c555053e0237b2b64364f1485be",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 18614,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-500-PET.webp",
+      "bytes": 20394,
+      "sha256": "9ef5f68e948e74fa1e2b01f7c2655ab62a58c1f4de9246ef469755d5a5c1d217",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 20394,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-LIMNADA-BARBARIS-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/58_1718608488.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-LIMNADA-BARBARIS-1500-PET.webp",
+      "bytes": 45804,
+      "sha256": "f379dede2ea67cdf14429edb9f4caeebfa6e4b8d337d38065f440fa0a6189b81",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 45804,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-LIMNADA-BARBARIS-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/68_1718376439.jpg",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-LIMNADA-BARBARIS-500-PET.webp",
+      "bytes": 47500,
+      "sha256": "895194ec965afd237c14e18e39e485fd8d5f621a3a7e9099ac46706f83ae467d",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 47500,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "source": "pdf_page_24",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET.webp",
+      "bytes": 29422,
+      "sha256": "7f11705a22c47140acf3cbfddcb5a4c08b53de24b2036640d0e16bb4ae11e87f",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 29422,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "source": "pdf_page_24",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN.webp",
+      "bytes": 29908,
+      "sha256": "eb78d9a5a1ed96fa29b87a29867bd3bcae72fc8b560c1f5e06ecfe2ba313286f",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 29908,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-500-PET",
+      "source_file": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "source": "pdf_page_24",
+      "method": "pdf_box",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-500-PET.webp",
+      "bytes": 22720,
+      "sha256": "0fd7818602121fe141913084b50b3b535a700bf9035b52742f03f449cce073a1",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 22720,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/28_1758711718.png",
+      "source": "official_site",
+      "method": "site_equal",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET.webp",
+      "bytes": 39830,
+      "sha256": "c26ede255a272f3afeae42b75ae87bd5e3c443fb579720acca128b1e84fcef1d",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 39830,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/28_1758711718.png",
+      "source": "official_site",
+      "method": "site_equal",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET.webp",
+      "bytes": 47198,
+      "sha256": "d67737fd6eec29f71edee059b4db7ca385dcab47ba273635738dd528022c2929",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 47198,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-PERSIK-330-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/67_1758711780.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-PERSIK-330-CAN.webp",
+      "bytes": 47742,
+      "sha256": "293a63cb32260f5078a80cf5aedd7d4d3893c41058b80efe106f65e8b618a479",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 47742,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/105_1757076183.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN.webp",
+      "bytes": 51124,
+      "sha256": "25094a01dd6589361ed9fa73b20c6d4bcee24db65547829787fc12b81a4454cc",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 51124,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/105_1757076183.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-CLASSIC-500-PET.webp",
+      "bytes": 37990,
+      "sha256": "a399e8e1dfc3b99f6510032c43966cf2d604362cdb61b4b81c770a7e376c5cd7",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 37990,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/108_1757077083.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN.webp",
+      "bytes": 52248,
+      "sha256": "c2d225b34224b2299597c3b317754f373d5333377a0368006c10b8a9856164ce",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 52248,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/108_1757077083.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET.webp",
+      "bytes": 41676,
+      "sha256": "19726b0f07b7407dc2bd885dad1da7c96d6b07995a53d60fbe8cb97d1f6cd557",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 41676,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/107_1757076818.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN.webp",
+      "bytes": 51640,
+      "sha256": "d9775ef313b6be5c3ecb1b343a00a145cc404335e97b9613c7b6c8d764d0e6a9",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 51640,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/107_1757076818.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET.webp",
+      "bytes": 40170,
+      "sha256": "7b9bdfc791316511706cd3d4bd81604f25fe2e8e828f09ecd1b3fed21ab3a448",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 40170,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/109_1757077306.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN.webp",
+      "bytes": 49770,
+      "sha256": "d0cab46181f568f27443e1248726aa36600ed0bf9e8d103d21a5dab6436daafe",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 49770,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/109_1757077306.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET.webp",
+      "bytes": 41136,
+      "sha256": "5de41c082e53e44f3423ac836cadf3cb475d8df8d7dd2cb8074ead0d49a8d101",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 41136,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/106_1757076512.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN.webp",
+      "bytes": 49784,
+      "sha256": "6d40b956684d492c5a90eaa6c64b2b3a72025ac55bbf5d596d07ec61e0f1b189",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 49784,
+        "notes": []
+      }
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET",
+      "source_file": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/106_1757076512.png",
+      "source": "official_site",
+      "method": "site_segs",
+      "confidence": "high",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET.webp",
+      "bytes": 42340,
+      "sha256": "1fa4f30624e1b8d8cd99030fce9360b83c51680039374aa124fb6334fad3e1d5",
+      "size": [
+        1000,
+        1000
+      ],
+      "mime": "image/webp",
+      "qa": {
+        "ok": true,
+        "mime": "image/webp",
+        "width": 1000,
+        "height": 1000,
+        "bytes": 42340,
+        "notes": []
+      }
+    }
+  ],
+  "errors": [],
+  "qa_dupes": {}
+}

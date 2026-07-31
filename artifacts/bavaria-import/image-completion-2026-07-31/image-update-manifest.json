@@ -1,0 +1,1640 @@
+{
+  "mode": "applied",
+  "kind": "image_update_only",
+  "created_at": "2026-07-31T14:21:36.913808+00:00",
+  "production_apply_executed": true,
+  "item_count": 56,
+  "fields_changed_per_item": [
+    "image_url"
+  ],
+  "confirmation_required_before_apply": true,
+  "items": [
+    {
+      "sku": "BAVARIA-BAVARIYA-ELF-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_11",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/55_1740991309.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-ELF-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "733751e59a0bf914858eb56886a743b505ef9a9e90c11c8fdcf6543ccb236425",
+      "processed_bytes": 21286,
+      "qa_ok": true,
+      "notes": "Site shows glass; prefer PDF p.11 can crop for unique pack. Glass asset only interim. | Final crop from pdf_page_11 (pdf_box) | Final crop from pdf_page_11 (pdf_box) | Final crop from pdf_page_11 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_11",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "4e83d77f1fc56a586146af67385788ce932de689b68b317eaa3cd07c4b7a4b4e",
+      "processed_bytes": 29824,
+      "qa_ok": true,
+      "notes": "PDF p.11 under 0% NA stamp — not alcoholic site art (103_/140_ forbidden)."
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_11",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-11.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "96fa209277bfec77cac615170b0ea73c622b4a18c3506c3a9330cefea471c4cb",
+      "processed_bytes": 25188,
+      "qa_ok": true,
+      "notes": "PDF p.11 under 0% NA stamp — not alcoholic site art (103_/140_ forbidden)."
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GRUSHA-450-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_15",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-GRUSHA-450-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "377945a79ffbd6476e273089df149529ca87c9dd8e3f4e21ac425969e2b1f489",
+      "processed_bytes": 16410,
+      "qa_ok": true,
+      "notes": "PDF p.15 glass Груша. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-KOLA-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/95_1730364037.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/95_1730364037.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-KOLA-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "842a791c7a6f8acaabd093fbd6cc429360a673571383c32ed4f3a557ffcf7602",
+      "processed_bytes": 48508,
+      "qa_ok": true,
+      "notes": "Crop Кола from official 1.5 PET lineup. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-KOLA-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/97_1730364236.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/97_1730364236.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-KOLA-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "06b1e4a94b7ededf8839e6101114dd151c5fada4d1e4cd36080bab73e4c592e3",
+      "processed_bytes": 49352,
+      "qa_ok": true,
+      "notes": "Crop Кола from official 0.5 PET lineup. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-MOHITO-450-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_15",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-MOHITO-450-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "e8fc719629b242a9076f4d98f96321c8a802f35830f8e30a1eaaa1547dcac00e",
+      "processed_bytes": 22012,
+      "qa_ok": true,
+      "notes": "PDF p.15 glass Мохито. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_15",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "b8640b0c3116a325c2eec0426bd910e425866d4a0945880aaa3c57dd4d47b878",
+      "processed_bytes": 25666,
+      "qa_ok": true,
+      "notes": "PDF p.15 glass Питахайя. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_14",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-14.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-14.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "d14d8a0a90d2eae4b5e2bf6fc7c088421961e2efc1c1ddcfff530102f3d94382",
+      "processed_bytes": 25830,
+      "qa_ok": true,
+      "notes": "Виноград absent from site PET group; PDF p.14. | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_14",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-14.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-14.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "691ae1f57df7bd36b458c5322c53457ac85dadc56cf46adc48d1767de1c67bdd",
+      "processed_bytes": 21292,
+      "qa_ok": true,
+      "notes": "Виноград absent from site Premium photos; PDF p.14. | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box) | Final crop from pdf_page_14 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/126_1772458839.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/126_1772458839.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "478e7d3d4e543d7c82b82485bb26430fa1b19612ad9e7e2650c9e1a36bd69f9d",
+      "processed_bytes": 42722,
+      "qa_ok": true,
+      "notes": "Crop Вишня from Premium PET 1.2 group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/22_1730373939.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/22_1730373939.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "98258a0d554922761c7b8e7e8d957f85030dc0e7995bb96988e88b7178f65781",
+      "processed_bytes": 49638,
+      "qa_ok": true,
+      "notes": "Crop Вишня from Premium glass group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-TARHUN-450-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_15",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-TARHUN-450-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "4369863ef973ad838a4f679b96dbffdf81c2aaea03ef4fae11f24c82f03910eb",
+      "processed_bytes": 32056,
+      "qa_ok": true,
+      "notes": "PDF p.15 glass Тархун. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-YABLOKO-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_15",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-15.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-BAVARIYA-YABLOKO-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "42b0d91c339aa64ed267c884c9e6ae45efe001b22a0b03d9a22ee258307d73de",
+      "processed_bytes": 23530,
+      "qa_ok": true,
+      "notes": "Not in site 1.5 group; PDF p.15 Яблоко PET. | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box) | Final crop from pdf_page_15 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/91_1726224649.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/91_1726224649.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "be9d4cb0c6718a90d90ce487b4be0921d3c8582579d7379a039a03ba6ce5afaa",
+      "processed_bytes": 45954,
+      "qa_ok": true,
+      "notes": "Crop 1.5 LIMITED EDITION from official PET pair. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_18",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-18.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-18.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "d69367242c52bc6c9e71e78b7058d61b847bebba1df040619a40c6fb4af7cc1d",
+      "processed_bytes": 28978,
+      "qa_ok": true,
+      "notes": "No LE can on site; avoid Premium LE can mix-up. | Final crop from pdf_page_18 (pdf_box) | Final crop from pdf_page_18 (pdf_box) | Final crop from pdf_page_18 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/91_1726224649.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/91_1726224649.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-COLALE-COLA-LE-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "e4a5d762dcb4dd813159f237600bdd6a88554cf7771151e1f23a875d0d38bfdc",
+      "processed_bytes": 43148,
+      "qa_ok": true,
+      "notes": "Crop 0.5 LIMITED EDITION from official PET pair. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_13",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/139_1783501193.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-13.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "a0a35c87d783c7492a8cc5359d8a2b8319fcd044571fba6c3cc6cfd5d89f38c3",
+      "processed_bytes": 27650,
+      "qa_ok": true,
+      "notes": "Distinct 1.42 PET on PDF p.13 (not 2L site art). Included in image-only apply list."
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/139_1783501193.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/139_1783501193.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "233b457a8d693b802cf26121a431782d68ae2e5ea262312eb37472f26ebad22f",
+      "processed_bytes": 39056,
+      "qa_ok": true,
+      "notes": "Official Бочковой PET 2L unique artwork. | Final crop from official_site (site_single) | Final crop from official_site (site_single) | Final crop from official_site (site_single)"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-1420-PET",
+      "action": "update_image_only",
+      "match_confidence": "medium",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/76_1783510510.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-1420-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "f4a7d795f1ef16dc9ece10b971985f5f7878985a17aa45c13a5fe2f97deb01e6",
+      "processed_bytes": 40714,
+      "qa_ok": true,
+      "notes": "Crop mid PET (~1.4L) from official group; confirm volume label. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-2000-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/76_1783510510.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-2000-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "69a05e1fd1c823d273b8583dc31f2cc1cb08b786c6cd78ddae9dfa1b68b92aec",
+      "processed_bytes": 40668,
+      "qa_ok": true,
+      "notes": "Crop 2L Хлебный from official group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/76_1783510510.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/76_1783510510.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DOBRETSOV-HLEBNYY-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "27ad437ddc8572eb00c4b1630f78944221a8aad393862c4be71347761d9f7cf4",
+      "processed_bytes": 89424,
+      "qa_ok": true,
+      "notes": "Crop can from official Хлебный group. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-BITTER-LEMON-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_21",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-21.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-21.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-BITTER-LEMON-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "3e37451b6834889bcac96424432a8666d32274149c5172803988dcf795aaf6ee",
+      "processed_bytes": 35644,
+      "qa_ok": true,
+      "notes": "PDF p.21 Bitter Lemon can; site 128 is glass+PET only. | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/127_1775207748.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/127_1775207748.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "39b5efbcc02b3687bc78f13b3886f712f88b33861ef53397924b7e6bc890f034",
+      "processed_bytes": 28490,
+      "qa_ok": true,
+      "notes": "Crop PET 1L from Indian Tonic pair. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_21",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-21.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-21.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "495c0274fc1ff460af2641e3b66142ef5eb4f9fbefdb9a7764a174fdc2df84e4",
+      "processed_bytes": 42094,
+      "qa_ok": true,
+      "notes": "PDF p.21 Indian Tonic can. | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box) | Final crop from pdf_page_21 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/127_1775207748.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/127_1775207748.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "f9bb78af638b8239c68b4f6847eaf4a8eaa80f17df2256fc49cea84fec8b6e91",
+      "processed_bytes": 32002,
+      "qa_ok": true,
+      "notes": "Crop glass 0.33 from Indian Tonic pair. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/98_1743082462.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "f093fc3c02660ca419376d6c4b14ce1d2b69da90c0d30555b6eb0442cb35d981",
+      "processed_bytes": 24866,
+      "qa_ok": true,
+      "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/98_1743082462.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "0b9fb3887f981a7b596a655fe187f1a339153874e9125b500d4ffc30c906710e",
+      "processed_bytes": 20706,
+      "qa_ok": true,
+      "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/98_1743082462.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/98_1743082462.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "10772105bf4484054fad4a28b191e1d1f58ee3ca47af7cd3aad0f72cb3bf05b4",
+      "processed_bytes": 18054,
+      "qa_ok": true,
+      "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/100_1743082523.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "aa097073d855901b79d37c1f27842bbcb9d03c52d7ab9a7a42987e15c90491c7",
+      "processed_bytes": 29460,
+      "qa_ok": true,
+      "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/100_1743082523.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "7fd802de14ecb57f701eacd6877f88a839ad3c46f150976cc157f9aa97ccc631",
+      "processed_bytes": 17846,
+      "qa_ok": true,
+      "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/100_1743082523.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/100_1743082523.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "5bf4879959396da55e3508d278064a325941b202144af9273794f274dab929a3",
+      "processed_bytes": 23540,
+      "qa_ok": true,
+      "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/102_1743082553.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "23de1272e26e916dd0e2a15eec4ef0c0c74a23f621396dda996a1b3352766ede",
+      "processed_bytes": 22664,
+      "qa_ok": true,
+      "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/102_1743082553.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "01a7d7496d7fb5e6e55372103a6b0b3f3c05b7754a709af4450ce6445c2dca24",
+      "processed_bytes": 15356,
+      "qa_ok": true,
+      "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/102_1743082553.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/102_1743082553.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-MOHITO-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "6ac0a9986bbbba047b0eaffa0240efcd6c31fa3a4c3cfe4965aa313d34588f83",
+      "processed_bytes": 20504,
+      "qa_ok": true,
+      "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/101_1743082539.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "0b2807953e550aa3874c90380cc0cec16521196c6208b12c6bad3d6de8ef04b7",
+      "processed_bytes": 26342,
+      "qa_ok": true,
+      "notes": "Flavor-unique trio; crop 1.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/101_1743082539.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "834bb3d9304fac903d274c29469f963442d06c555053e0237b2b64364f1485be",
+      "processed_bytes": 18614,
+      "qa_ok": true,
+      "notes": "Crop 0.33 can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/101_1743082539.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/101_1743082539.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-DREAMIX-TAYGA-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "9ef5f68e948e74fa1e2b01f7c2655ab62a58c1f4de9246ef469755d5a5c1d217",
+      "processed_bytes": 20394,
+      "qa_ok": true,
+      "notes": "Crop 0.5 PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-LIMNADA-BARBARIS-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/58_1718608488.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/58_1718608488.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-LIMNADA-BARBARIS-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "f379dede2ea67cdf14429edb9f4caeebfa6e4b8d337d38065f440fa0a6189b81",
+      "processed_bytes": 45804,
+      "qa_ok": true,
+      "notes": "Crop Барбарис from 1.5 lineup. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-LIMNADA-BARBARIS-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/68_1718376439.jpg",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/68_1718376439.jpg",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-LIMNADA-BARBARIS-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "895194ec965afd237c14e18e39e485fd8d5f621a3a7e9099ac46706f83ae467d",
+      "processed_bytes": 47500,
+      "qa_ok": true,
+      "notes": "Crop Барбарис from 0.5 lineup. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_24",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "7f11705a22c47140acf3cbfddcb5a4c08b53de24b2036640d0e16bb4ae11e87f",
+      "processed_bytes": 29422,
+      "qa_ok": true,
+      "notes": "PDF p.24 only; not on site. | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_24",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "eb78d9a5a1ed96fa29b87a29867bd3bcae72fc8b560c1f5e06ecfe2ba313286f",
+      "processed_bytes": 29908,
+      "qa_ok": true,
+      "notes": "PDF p.24 only. | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "pdf_page_24",
+      "source_image_url": "pdf:artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "downloaded_source_path": "artifacts/bavaria-import/2026-07-31T11-47-10-496Z-pdf-ingest/renders/page-24.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LAYM-MYATA-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "0fd7818602121fe141913084b50b3b535a700bf9035b52742f03f449cce073a1",
+      "processed_bytes": 22720,
+      "qa_ok": true,
+      "notes": "PDF p.24 only. | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box) | Final crop from pdf_page_24 (pdf_box)"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/28_1758711718.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/28_1758711718.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "c26ede255a272f3afeae42b75ae87bd5e3c443fb579720acca128b1e84fcef1d",
+      "processed_bytes": 39830,
+      "qa_ok": true,
+      "notes": "Crop large Лесные ягоды PET. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/28_1758711718.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/28_1758711718.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "d67737fd6eec29f71edee059b4db7ca385dcab47ba273635738dd528022c2929",
+      "processed_bytes": 47198,
+      "qa_ok": true,
+      "notes": "Crop small Лесные ягоды PET. | Final crop from official_site (site_equal) | Final crop from official_site (site_equal) | Final crop from official_site (site_equal)"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-PERSIK-330-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/67_1758711780.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/67_1758711780.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-MOUNTEA-PERSIK-330-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "293a63cb32260f5078a80cf5aedd7d4d3893c41058b80efe106f65e8b618a479",
+      "processed_bytes": 47742,
+      "qa_ok": true,
+      "notes": "Crop Персик can from official can pair. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/105_1757076183.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/105_1757076183.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "25094a01dd6589361ed9fa73b20c6d4bcee24db65547829787fc12b81a4454cc",
+      "processed_bytes": 51124,
+      "qa_ok": true,
+      "notes": "Official Classic CAN+PET; crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/105_1757076183.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/105_1757076183.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-CLASSIC-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "a399e8e1dfc3b99f6510032c43966cf2d604362cdb61b4b81c770a7e376c5cd7",
+      "processed_bytes": 37990,
+      "qa_ok": true,
+      "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/108_1757077083.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/108_1757077083.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "c2d225b34224b2299597c3b317754f373d5333377a0368006c10b8a9856164ce",
+      "processed_bytes": 52248,
+      "qa_ok": true,
+      "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/108_1757077083.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/108_1757077083.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "19726b0f07b7407dc2bd885dad1da7c96d6b07995a53d60fbe8cb97d1f6cd557",
+      "processed_bytes": 41676,
+      "qa_ok": true,
+      "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/107_1757076818.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/107_1757076818.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "d9775ef313b6be5c3ecb1b343a00a145cc404335e97b9613c7b6c8d764d0e6a9",
+      "processed_bytes": 51640,
+      "qa_ok": true,
+      "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/107_1757076818.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/107_1757076818.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "7b9bdfc791316511706cd3d4bd81604f25fe2e8e828f09ecd1b3fed21ab3a448",
+      "processed_bytes": 40170,
+      "qa_ok": true,
+      "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/109_1757077306.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/109_1757077306.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "d0cab46181f568f27443e1248726aa36600ed0bf9e8d103d21a5dab6436daafe",
+      "processed_bytes": 49770,
+      "qa_ok": true,
+      "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/109_1757077306.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/109_1757077306.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "5de41c082e53e44f3423ac836cadf3cb475d8df8d7dd2cb8074ead0d49a8d101",
+      "processed_bytes": 41136,
+      "qa_ok": true,
+      "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/106_1757076512.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/106_1757076512.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "6d40b956684d492c5a90eaa6c64b2b3a72025ac55bbf5d596d07ec61e0f1b189",
+      "processed_bytes": 49784,
+      "qa_ok": true,
+      "notes": "Crop can. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET",
+      "action": "update_image_only",
+      "match_confidence": "high",
+      "review_status": "confirmed_ready",
+      "source_priority": "official_site",
+      "source_image_url": "https://www.bavaria-group.ru/files/beer_items/106_1757076512.png",
+      "downloaded_source_path": "artifacts/bavaria-import/image-completion-2026-07-31/source-downloads/106_1757076512.png",
+      "local_processed_path": "artifacts/bavaria-import/image-completion-2026-07-31/processed/BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET.webp",
+      "requires_crop": false,
+      "fields_to_change": [
+        "image_url"
+      ],
+      "fields_forbidden": [
+        "category_id",
+        "price_amount",
+        "sales_status",
+        "is_active",
+        "name",
+        "sku",
+        "orderable",
+        "availability",
+        "category"
+      ],
+      "processed_sha256": "1fa4f30624e1b8d8cd99030fce9360b83c51680039374aa124fb6334fad3e1d5",
+      "processed_bytes": 42340,
+      "qa_ok": true,
+      "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
+    }
+  ],
+  "production_apply_at": "2026-07-31T14:33:22.929Z",
+  "production_apply_updated": 56,
+  "production_apply_idempotent_skipped": 56
+}
