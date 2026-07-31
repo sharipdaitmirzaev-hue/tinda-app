@@ -54,6 +54,8 @@ type Manifest = {
 };
 
 function arg_value(name: string): string | undefined {
+  const eq = process.argv.find((a) => a.startsWith(name + "="));
+  if (eq) return eq.slice(name.length + 1);
   const i = process.argv.indexOf(name);
   if (i < 0) return undefined;
   return process.argv[i + 1];
