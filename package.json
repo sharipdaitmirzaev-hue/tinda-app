@@ -22,7 +22,8 @@
     "import:bavaria:discover": "tsx scripts/import-bavaria.ts discover",
     "import:bavaria:dry-run": "tsx scripts/import-bavaria.ts dry-run",
     "import:bavaria:apply": "tsx scripts/import-bavaria.ts apply",
-    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-review.py"
+    "import:bavaria:pdf-ingest": "python3 scripts/bavaria-pdf-ingest.py",
+    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-ingest.py && python3 scripts/bavaria-pdf-review.py --require-pdf"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",

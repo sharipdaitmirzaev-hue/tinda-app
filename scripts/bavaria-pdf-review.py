@@ -26,12 +26,15 @@ from typing import Any, Optional
 ROOT = Path(__file__).resolve().parents[1]
 DRY_RUN = ROOT / "artifacts/bavaria-import/2026-07-31T10-52-18-371Z"
 PDF_CANDIDATES = [
+    ROOT / "artifacts/bavaria-import/pdf-source/BAVARIA-CATALOG-2026.pdf",
+    ROOT / "artifacts/bavaria-import/pdf-source/БУКЛЕТ БАВАРИЯ 2026.pdf",
     Path("/mnt/data/БУКЛЕТ БАВАРИЯ 2026.pdf"),
     Path("/mnt/data/Буклет Бавария 2026.pdf"),
+    Path("/mnt/data/BAVARIA-CATALOG-2026.pdf"),
     Path("/mnt/data/buklet-bavaria-2026.pdf"),
-    ROOT / "artifacts/bavaria-import/pdf-source/БУКЛЕТ БАВАРИЯ 2026.pdf",
     ROOT / "БУКЛЕТ БАВАРИЯ 2026.pdf",
 ]
+REQUIRE_PDF = "--require-pdf" in sys.argv
 
 CYR_TO_LAT = {
     "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "e",
@@ -1340,6 +1343,30 @@ def row_to_dict(r: Row) -> dict:
 
 def main() -> int:
     pdf = find_pdf()
+    if REQUIRE_PDF and not pdf:
+        print(
+            "FATAL: --require-pdf set but booklet PDF not found.\n"
+            "Copy file to artifacts/bavaria-import/pdf-source/BAVARIA-CATALOG-2026.pdf\n"
+            "or /mnt/data/БУКЛЕТ БАВАРИЯ 2026.pdf, then run:\n"
+            "  npm run import:bavaria:pdf-ingest\n"
+            "  npm run import:bavaria:pdf-review\n"
+            "Brief-only review is not allowed for final import.",
+            file=sys.stderr,
+        )
+        return 2
+    if REQUIRE_PDF and pdf:
+        # Prefer latest ingest metadata when available
+        ingest_latest = ROOT / "artifacts/bavaria-import/latest-pdf-ingest/PDF-INGEST-REPORT.json"
+        if ingest_latest.exists():
+            ingest = json.loads(ingest_latest.read_text(encoding="utf-8"))
+            if not ingest.get("ok"):
+                print(
+                    "FATAL: pdf-ingest report is not ok. Fix PDF (size/pages/open) first.",
+                    file=sys.stderr,
+                )
+                print(json.dumps(ingest, ensure_ascii=False, indent=2), file=sys.stderr)
+                return 3
+
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%S-%f")[:-3] + "Z"
     out = ROOT / "artifacts/bavaria-import" / f"{ts}-pdf-reviewed"
     out.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,18 @@
+{
+  "stage": "final-import-BLOCKED",
+  "created_at": "2026-07-31T11:39:27.542151+00:00",
+  "blocked": true,
+  "blockers": [
+    "PDF booklet not available in agent environment",
+    "DATABASE_URL not set; cannot backup or apply to production"
+  ],
+  "pdf_file_available": false,
+  "pdf_sha256": null,
+  "pdf_page_count": null,
+  "approved_count": 0,
+  "imported_count": 0,
+  "apply_run": false,
+  "production_db_modified": false,
+  "pr2_touched": false,
+  "next_required_path": "artifacts/bavaria-import/pdf-source/BAVARIA-CATALOG-2026.pdf"
+}

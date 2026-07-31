@@ -612,9 +612,109 @@ ${others.map((p) => `- ${p.proposed_name} (${p.proposed_sku}) — ${p.category_r
   console.log(JSON.stringify({ out_dir, ...manifest.checks, proposed_count: proposed_importable.length, by_cat }, null, 2));
 }
 
+function arg_value(flag: string): string | undefined {
+  const idx = process.argv.indexOf(flag);
+  if (idx < 0) return undefined;
+  return process.argv[idx + 1];
+}
+
+function validate_backup(backup_path: string): { ok: true; size: number } | { ok: false; error: string } {
+  if (!existsSync(backup_path)) {
+    return { ok: false, error: `backup file not found: ${backup_path}` };
+  }
+  const st = readFileSync(backup_path);
+  if (!st.length) {
+    return { ok: false, error: `backup file is empty: ${backup_path}` };
+  }
+  // Readable check: first bytes look like pg_dump custom/sql/tar or plain SQL
+  const head = st.subarray(0, Math.min(64, st.length)).toString("utf8");
+  const looks_sql =
+    head.includes("PostgreSQL") ||
+    head.includes("pg_dump") ||
+    head.includes("CREATE TABLE") ||
+    head.includes("--") ||
+    st[0] === 0x50; // 'P' of PGDMP custom format sometimes
+  if (!looks_sql && st.length < 1024) {
+    return {
+      ok: false,
+      error: `backup file looks too small/unreadable as DB dump (${st.length} bytes)`,
+    };
+  }
+  return { ok: true, size: st.length };
+}
+
+type FinalManifest = {
+  stage?: string;
+  pdf_file_available?: boolean;
+  pdf_sha256?: string;
+  approved_skus?: string[];
+  categories_to_create?: Array<{ name: string; slug: string; description?: string }>;
+  apply?: {
+    sales_status?: string;
+    is_active?: boolean;
+    price_amount?: number | null;
+    availability?: string;
+  };
+};
+
+type ApprovedRow = {
+  proposed_sku: string;
+  proposed_name: string;
+  brand?: string;
+  category?: string;
+  volume?: string;
+  package?: string;
+  taste?: string;
+  source_url?: string;
+  image_url?: string;
+  local_image_path?: string;
+  manufacturer?: string;
+  description?: string;
+};
+
+function parse_csv_rows(text: string): ApprovedRow[] {
+  const lines = text.replace(/^\uFEFF/, "").split(/\r?\n/).filter((l) => l.length);
+  if (lines.length < 2) return [];
+  const headers = lines[0].split(",").map((h) => h.trim());
+  const rows: ApprovedRow[] = [];
+  for (let i = 1; i < lines.length; i++) {
+    // minimal CSV parse with quotes
+    const cols: string[] = [];
+    let cur = "";
+    let inq = false;
+    const line = lines[i];
+    for (let c = 0; c < line.length; c++) {
+      const ch = line[c];
+      if (ch === '"') {
+        if (inq && line[c + 1] === '"') {
+          cur += '"';
+          c++;
+        } else inq = !inq;
+        continue;
+      }
+      if (ch === "," && !inq) {
+        cols.push(cur);
+        cur = "";
+        continue;
+      }
+      cur += ch;
+    }
+    cols.push(cur);
+    const obj: Record<string, string> = {};
+    headers.forEach((h, idx) => {
+      obj[h] = (cols[idx] ?? "").trim();
+    });
+    if (!obj.proposed_sku) continue;
+    rows.push(obj as unknown as ApprovedRow);
+  }
+  return rows;
+}
+
 async function cmd_apply() {
   const confirmed = process.argv.includes("--i-understand-and-have-backup");
-  const backup_ok = process.argv.includes("--backup-path");
+  const backup_path = arg_value("--backup-path");
+  const manifest_path = arg_value("--manifest");
+
   if (!confirmed) {
     console.error(
       "APPLY BLOCKED: pass --i-understand-and-have-backup after creating a DB backup.",
@@ -622,8 +722,15 @@ async function cmd_apply() {
     process.exitCode = 2;
     return;
   }
-  if (!backup_ok) {
+  if (!backup_path) {
     console.error("APPLY BLOCKED: pass --backup-path /path/to/dump");
+    process.exitCode = 2;
+    return;
+  }
+  if (!manifest_path) {
+    console.error(
+      "APPLY BLOCKED: pass --manifest <path to approved-import-manifest-final.json>",
+    );
     process.exitCode = 2;
     return;
   }
@@ -632,10 +739,224 @@ async function cmd_apply() {
     process.exitCode = 2;
     return;
   }
-  console.error(
-    "APPLY is implemented as a gated stub in stage 1 and will not write to DB until stage 2 is approved.",
+  if (!process.env.DATABASE_URL) {
+    console.error("APPLY BLOCKED: DATABASE_URL is not set in this environment");
+    process.exitCode = 2;
+    return;
+  }
+
+  const backup = validate_backup(backup_path);
+  if (!backup.ok) {
+    console.error(`APPLY BLOCKED: ${backup.error}`);
+    process.exitCode = 2;
+    return;
+  }
+
+  if (!existsSync(manifest_path)) {
+    console.error(`APPLY BLOCKED: manifest not found: ${manifest_path}`);
+    process.exitCode = 2;
+    return;
+  }
+
+  const manifest = JSON.parse(readFileSync(manifest_path, "utf8")) as FinalManifest;
+  if (manifest.pdf_file_available !== true || !manifest.pdf_sha256) {
+    console.error(
+      "APPLY BLOCKED: manifest must include pdf_file_available=true and pdf_sha256 from real booklet ingest.",
+    );
+    process.exitCode = 2;
+    return;
+  }
+  if (!manifest.approved_skus?.length) {
+    console.error("APPLY BLOCKED: manifest has no approved_skus");
+    process.exitCode = 2;
+    return;
+  }
+
+  const manifest_dir = path.dirname(manifest_path);
+  const approved_csv_candidates = [
+    path.join(manifest_dir, "approved-products-final.csv"),
+    path.join(manifest_dir, "approved-products.csv"),
+  ];
+  const approved_csv = approved_csv_candidates.find((p) => existsSync(p));
+  if (!approved_csv) {
+    console.error(
+      "APPLY BLOCKED: approved-products-final.csv (or approved-products.csv) missing next to manifest",
+    );
+    process.exitCode = 2;
+    return;
+  }
+
+  const approved_rows = parse_csv_rows(readFileSync(approved_csv, "utf8")).filter((r) =>
+    manifest.approved_skus!.includes(r.proposed_sku),
   );
-  process.exitCode = 3;
+  if (!approved_rows.length) {
+    console.error("APPLY BLOCKED: no approved rows matched manifest SKUs");
+    process.exitCode = 2;
+    return;
+  }
+
+  const { PrismaClient } = await import("@prisma/client");
+  const prisma = new PrismaClient();
+  const apply_out = path.join(ARTIFACTS_ROOT, `${stamp()}-apply`);
+  ensure_dir(apply_out);
+
+  const result = {
+    started_at: new Date().toISOString(),
+    backup_path,
+    backup_size: backup.size,
+    manifest_path,
+    pdf_sha256: manifest.pdf_sha256,
+    created: [] as string[],
+    skipped_existing: [] as string[],
+    errors: [] as Array<{ sku: string; error: string }>,
+    categories_created: [] as string[],
+    existing_products_edited: false,
+  };
+
+  try {
+    // Ensure categories
+    const wanted = new Map<string, { name: string; slug: string }>();
+    for (const c of manifest.categories_to_create || []) {
+      wanted.set(c.slug, { name: c.name, slug: c.slug });
+    }
+    // Always ensure NA beer + map from rows
+    const slug_by_category: Record<string, string> = {
+      "Газированные напитки": "gazirovannye-napitki",
+      "Питьевая вода": "pitevaya-voda",
+      "Минеральная вода": "mineralnaya-voda",
+      "Холодный чай": "holodnyy-chay",
+      Тоники: "toniki",
+      Квас: "kvas",
+      "Безалкогольное пиво": "bezalkogolnoe-pivo",
+      "Энергетические напитки": "energeticheskie-napitki",
+      Другие: "other",
+    };
+    for (const row of approved_rows) {
+      const cat = row.category || "Другие";
+      const slug = slug_by_category[cat] || "other";
+      if (!wanted.has(slug)) wanted.set(slug, { name: cat, slug });
+    }
+
+    const category_id_by_slug = new Map<string, string>();
+    for (const c of wanted.values()) {
+      const existing = await prisma.categories.findUnique({ where: { slug: c.slug } });
+      if (existing) {
+        category_id_by_slug.set(c.slug, existing.id);
+        continue;
+      }
+      // Only create «Другие» and «Безалкогольное пиво» if missing; others must exist or error
+      if (c.slug === "other" || c.slug === "bezalkogolnoe-pivo") {
+        const created = await prisma.categories.create({
+          data: {
+            name: c.name,
+            slug: c.slug,
+            sort_order: 900,
+            is_active: true,
+          },
+        });
+        category_id_by_slug.set(c.slug, created.id);
+        result.categories_created.push(c.slug);
+      } else {
+        // try resolve by name
+        const by_name = await prisma.categories.findFirst({ where: { name: c.name } });
+        if (by_name) {
+          category_id_by_slug.set(c.slug, by_name.id);
+        } else {
+          throw new Error(
+            `Category missing in DB and not auto-creatable: ${c.name} (${c.slug})`,
+          );
+        }
+      }
+    }
+
+    const sales_status = manifest.apply?.sales_status || "showcase";
+    const availability = manifest.apply?.availability || "in_stock";
+    const is_active = manifest.apply?.is_active ?? true;
+
+    for (const row of approved_rows) {
+      const sku = row.proposed_sku.trim();
+      try {
+        const existing = await prisma.products.findUnique({ where: { sku } });
+        if (existing) {
+          result.skipped_existing.push(sku);
+          continue;
+        }
+        const cat_name = row.category || "Другие";
+        const slug = slug_by_category[cat_name] || "other";
+        const category_id = category_id_by_slug.get(slug);
+        if (!category_id) {
+          throw new Error(`No category id for ${cat_name}`);
+        }
+        const description = [
+          row.manufacturer ? `Производитель: ${row.manufacturer}` : "Производитель: ГК ПД «Бавария»",
+          row.taste ? `Вкус: ${row.taste}` : null,
+          row.source_url ? `Источник: ${row.source_url}` : null,
+          "Импорт: Bavaria non-alcoholic catalog (showcase, без цены)",
+        ]
+          .filter(Boolean)
+          .join("\n");
+
+        await prisma.products.create({
+          data: {
+            sku,
+            name: row.proposed_name.trim(),
+            brand: row.brand?.trim() || null,
+            category_id,
+            volume_text: row.volume?.trim() || null,
+            package_type: row.package?.trim() || null,
+            units_per_package: 1,
+            sale_unit: "шт",
+            min_order_qty: 1,
+            allow_piece_sale: false,
+            description,
+            availability,
+            sales_status,
+            is_active,
+            price_amount: null,
+            price_currency: "RUB",
+            image_url: row.image_url?.trim() || null,
+            is_promo: false,
+            is_new: true,
+            is_hit: false,
+          },
+        });
+        result.created.push(sku);
+      } catch (err) {
+        result.errors.push({
+          sku,
+          error: err instanceof Error ? err.message : String(err),
+        });
+      }
+    }
+  } finally {
+    await prisma.$disconnect();
+  }
+
+  result.started_at = result.started_at; // keep
+  const finished = {
+    ...result,
+    finished_at: new Date().toISOString(),
+    created_count: result.created.length,
+    skipped_count: result.skipped_existing.length,
+    error_count: result.errors.length,
+  };
+  writeFileSync(path.join(apply_out, "apply-result.json"), JSON.stringify(finished, null, 2));
+  writeFileSync(
+    path.join(apply_out, "APPLY-REPORT.md"),
+    `# Bavaria apply report
+
+- backup: \`${backup_path}\` (${backup.size} bytes)
+- manifest: \`${manifest_path}\`
+- pdf_sha256: \`${manifest.pdf_sha256}\`
+- created: **${finished.created_count}**
+- skipped existing: **${finished.skipped_count}**
+- errors: **${finished.error_count}**
+- categories created: ${finished.categories_created.join(", ") || "—"}
+- existing products edited: **false**
+`,
+  );
+  console.log(JSON.stringify(finished, null, 2));
+  if (finished.error_count) process.exitCode = 4;
 }
 
 async function main() {
