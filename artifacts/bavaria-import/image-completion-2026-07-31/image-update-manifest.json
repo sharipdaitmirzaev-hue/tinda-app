@@ -1,8 +1,8 @@
 {
-  "mode": "dry-run",
+  "mode": "applied",
   "kind": "image_update_only",
   "created_at": "2026-07-31T14:21:36.913808+00:00",
-  "production_apply_executed": false,
+  "production_apply_executed": true,
   "item_count": 56,
   "fields_changed_per_item": [
     "image_url"
@@ -1633,5 +1633,8 @@
       "qa_ok": true,
       "notes": "Crop PET. | Final crop from official_site (site_segs) | Final crop from official_site (site_segs) | Final crop from official_site (site_segs)"
     }
-  ]
+  ],
+  "production_apply_at": "2026-07-31T14:33:22.929Z",
+  "production_apply_updated": 56,
+  "production_apply_idempotent_skipped": 56
 }

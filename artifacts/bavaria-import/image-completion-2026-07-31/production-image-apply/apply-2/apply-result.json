@@ -1,0 +1,243 @@
+{
+  "started_at": "2026-07-31T14:34:36.565Z",
+  "finished_at": "2026-07-31T14:34:36.699Z",
+  "kind": "image_update_only",
+  "backup_path": "/backups/tinda-prod-bavaria-images-20260731-143119.sql",
+  "backup_size": 363745,
+  "backup_sha256": "48b3ac268452697f81e65efe22ce187f48c7eed958c94937df77d2958823d52e",
+  "manifest_path": "artifacts/bavaria-import/image-completion-2026-07-31/image-update-manifest.json",
+  "expected_count": 56,
+  "updated": [],
+  "skipped": [
+    {
+      "sku": "BAVARIA-BAVARIYA-ELF-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GALLAGHER-NA-450-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-GRUSHA-450-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-KOLA-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-KOLA-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-MOHITO-450-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PITAHAYYA-450-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-1200-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VINOGRAD-500-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-1200-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-PREMIUM-VISHNYA-500-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-TARHUN-450-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-BAVARIYA-YABLOKO-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-COLALE-COLA-LE-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-1420-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-BOCHKOVOY-2000-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-1420-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-2000-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DOBRETSOV-HLEBNYY-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-BITTER-LEMON-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-1000-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-INDIAN-TONIK-330-GLASS",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KLYUKVA-APELSIN-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-KOLA-TSITRUS-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-MOHITO-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-DREAMIX-TAYGA-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-LIMNADA-BARBARIS-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-LIMNADA-BARBARIS-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LAYM-MYATA-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-1500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-LESNYE-YAGODY-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-MOUNTEA-PERSIK-330-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-CLASSIC-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-DIKIE-YAGODY-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-KIVI-YABLOKO-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-LAYM-LEMONGRAS-500-PET",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-450-CAN",
+      "reason": "image_url_already_set"
+    },
+    {
+      "sku": "BAVARIA-ROCKET-RIDE-MANGO-APRICOT-500-PET",
+      "reason": "image_url_already_set"
+    }
+  ],
+  "errors": [],
+  "field_changes": {},
+  "new_image_urls": {},
+  "updated_count": 0,
+  "skipped_count": 56,
+  "error_count": 0
+}
