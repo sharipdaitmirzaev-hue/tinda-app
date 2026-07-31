@@ -1,5 +1,5 @@
 import { createHash, randomUUID } from "crypto";
-import { mkdir, unlink, writeFile } from "fs/promises";
+import { chown, mkdir, realpath, unlink, writeFile } from "fs/promises";
 import path from "path";
 import {
   DeleteObjectCommand,
@@ -8,6 +8,13 @@ import {
 } from "@aws-sdk/client-s3";
 import sharp from "sharp";
 import { AppError } from "@/lib/http/errors";
+
+/** Runtime user inside the production app image (Dockerfile `nextjs`). */
+export const DEFAULT_UPLOADS_UID = 1001;
+export const DEFAULT_UPLOADS_GID = 1001;
+/** Safe defaults for newly created upload dirs/files. */
+export const UPLOADS_DIR_MODE = 0o755;
+export const UPLOADS_FILE_MODE = 0o644;
 
 export const PRODUCT_IMAGE_MAX_BYTES = 5 * 1024 * 1024;
 export const PRODUCT_IMAGE_MAX_SIDE = 1600;
@@ -42,37 +49,154 @@ function get_driver_name(): StorageDriverName {
   return "local";
 }
 
-function local_uploads_root(): string {
+export function local_uploads_root(): string {
+  const from_env = process.env.UPLOADS_DIR?.trim();
+  if (from_env) {
+    return path.resolve(from_env);
+  }
   return path.join(process.cwd(), "public", "uploads");
+}
+
+export function get_uploads_owner(): { uid: number; gid: number } {
+  const uid_raw = Number.parseInt(
+    process.env.UPLOADS_UID || String(DEFAULT_UPLOADS_UID),
+    10,
+  );
+  const gid_raw = Number.parseInt(
+    process.env.UPLOADS_GID || String(DEFAULT_UPLOADS_GID),
+    10,
+  );
+  return {
+    uid: Number.isFinite(uid_raw) ? uid_raw : DEFAULT_UPLOADS_UID,
+    gid: Number.isFinite(gid_raw) ? gid_raw : DEFAULT_UPLOADS_GID,
+  };
+}
+
+/** True when the process can chown files (typically root in one-shot import containers). */
+export function process_can_chown_uploads(): boolean {
+  return typeof process.getuid === "function" && process.getuid() === 0;
+}
+
+function is_path_inside_root(target: string, root: string): boolean {
+  const normalized_root = path.resolve(root);
+  const normalized_target = path.resolve(target);
+  return (
+    normalized_target === normalized_root ||
+    normalized_target.startsWith(normalized_root + path.sep)
+  );
+}
+
+/**
+ * Resolve a storage key under the local uploads root, rejecting path traversal.
+ * Returns null when the key escapes the root.
+ */
+export function resolve_local_upload_path(storage_key: string): string | null {
+  if (!storage_key || storage_key.includes("\0")) {
+    return null;
+  }
+  // Absolute keys must not bypass the uploads root via path.join semantics.
+  if (path.isAbsolute(storage_key)) {
+    return null;
+  }
+  // Normalize Windows separators and reject empty / traversal segments early.
+  const normalized_key = storage_key.replace(/\\/g, "/");
+  const segments = normalized_key.split("/").filter((s) => s.length > 0);
+  if (
+    segments.length === 0 ||
+    segments.some((s) => s === "." || s === "..")
+  ) {
+    return null;
+  }
+
+  const normalized_root = path.resolve(local_uploads_root());
+  const normalized_target = path.resolve(
+    path.join(normalized_root, ...segments),
+  );
+  if (!is_path_inside_root(normalized_target, normalized_root)) {
+    return null;
+  }
+  return normalized_target;
+}
+
+/**
+ * Resolve an existing upload file for HTTP serving.
+ * Uses realpath so symlink escapes outside the uploads root are rejected.
+ */
+export async function resolve_existing_local_upload_file(
+  storage_key: string,
+): Promise<string | null> {
+  const candidate = resolve_local_upload_path(storage_key);
+  if (!candidate) {
+    return null;
+  }
+
+  try {
+    const root_real = await realpath(local_uploads_root());
+    const file_real = await realpath(candidate);
+    if (!is_path_inside_root(file_real, root_real)) {
+      return null;
+    }
+    return file_real;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * When running as root, chown the file and parent dirs under the uploads root
+ * to the app user (default 1001:1001) so the Next.js process can manage them
+ * and imports do not leave root-owned files requiring a manual host chown.
+ */
+export async function ensure_local_upload_ownership(
+  absolute_path: string,
+): Promise<{ adjusted: boolean; uid: number; gid: number }> {
+  const { uid, gid } = get_uploads_owner();
+  if (!process_can_chown_uploads()) {
+    return { adjusted: false, uid, gid };
+  }
+
+  const normalized_root = path.resolve(local_uploads_root());
+  let current = path.resolve(absolute_path);
+  if (!is_path_inside_root(current, normalized_root)) {
+    return { adjusted: false, uid, gid };
+  }
+
+  while (true) {
+    await chown(current, uid, gid);
+    if (current === normalized_root) {
+      break;
+    }
+    const parent = path.dirname(current);
+    if (parent === current || !is_path_inside_root(parent, normalized_root)) {
+      break;
+    }
+    current = parent;
+  }
+
+  return { adjusted: true, uid, gid };
 }
 
 function create_local_driver(): ProductImageStorageDriver {
   return {
     async put(storage_key, body) {
-      const absolute = path.join(local_uploads_root(), storage_key);
-      const normalized_root = path.resolve(local_uploads_root());
-      const normalized_target = path.resolve(absolute);
-      if (
-        normalized_target !== normalized_root &&
-        !normalized_target.startsWith(normalized_root + path.sep)
-      ) {
+      const normalized_target = resolve_local_upload_path(storage_key);
+      if (!normalized_target) {
         throw new AppError(
           400,
           "validation_error",
           "Небезопасный путь файла",
         );
       }
-      await mkdir(path.dirname(normalized_target), { recursive: true });
-      await writeFile(normalized_target, body);
+      await mkdir(path.dirname(normalized_target), {
+        recursive: true,
+        mode: UPLOADS_DIR_MODE,
+      });
+      await writeFile(normalized_target, body, { mode: UPLOADS_FILE_MODE });
+      await ensure_local_upload_ownership(normalized_target);
     },
     async delete(storage_key) {
-      const absolute = path.join(local_uploads_root(), storage_key);
-      const normalized_root = path.resolve(local_uploads_root());
-      const normalized_target = path.resolve(absolute);
-      if (
-        normalized_target !== normalized_root &&
-        !normalized_target.startsWith(normalized_root + path.sep)
-      ) {
+      const normalized_target = resolve_local_upload_path(storage_key);
+      if (!normalized_target) {
         return;
       }
       try {
