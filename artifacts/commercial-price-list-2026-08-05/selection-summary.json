@@ -1,0 +1,18 @@
+{
+  "totals": {
+    "всего товаров": 79,
+    "Bavaria (SKU BAVARIA-*)": 34,
+    "Дарьял": 9,
+    "AquAlania": 11,
+    "Viko": 13,
+    "Adrenaline Rush": 2,
+    "Coca-Cola": 5,
+    "Sprite": 2,
+    "воды": 16
+  },
+  "not_found": [
+    "3. Кола ПЭТ 1 л — в production каталоге Coca-Cola 1 л ПЭТ не найдена",
+    "7. Спрайт стекло — в production каталоге Sprite в стекле не найден"
+  ],
+  "count": 79
+}
