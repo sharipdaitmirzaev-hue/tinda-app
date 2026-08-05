@@ -72,19 +72,27 @@ def resolve_stage1() -> Path:
     return dirs[-1]
 
 
-def process_image(src: Path, dest: Path) -> dict:
+def process_image(src: Path, dest: Path, *, allow_upscale_canvas: bool = True) -> dict:
+    """Process official asset to WebP. Never enlarge small originals (Light)."""
     im = Image.open(src)
     im = im.convert("RGBA") if im.mode in ("P", "RGBA") else im.convert("RGB").convert("RGBA")
     w, h = im.size
+    # Downscale only; never enlarge source pixels.
     scale = min(1.0, MAX_SIDE / max(w, h))
     if scale < 1.0:
         im = im.resize((max(1, int(w * scale)), max(1, int(h * scale))), Image.Resampling.LANCZOS)
-    canvas = Image.new("RGBA", (CANVAS, CANVAS), (255, 255, 255, 255))
-    fit = (CANVAS * 0.92) / max(im.size)
-    nw, nh = max(1, int(im.width * fit)), max(1, int(im.height * fit))
-    resized = im.resize((nw, nh), Image.Resampling.LANCZOS)
-    canvas.paste(resized, ((CANVAS - nw) // 2, (CANVAS - nh) // 2), resized)
-    out = canvas.convert("RGB")
+    low_res = max(w, h) < 400
+    if low_res or not allow_upscale_canvas:
+        out = im.convert("RGB")
+    else:
+        canvas = Image.new("RGBA", (CANVAS, CANVAS), (255, 255, 255, 255))
+        fit = (CANVAS * 0.92) / max(im.size)
+        # fit <= 1.0 only (no enlarge)
+        fit = min(fit, 1.0)
+        nw, nh = max(1, int(im.width * fit)), max(1, int(im.height * fit))
+        resized = im.resize((nw, nh), Image.Resampling.LANCZOS) if fit < 1.0 else im
+        canvas.paste(resized, ((CANVAS - nw) // 2, (CANVAS - nh) // 2), resized)
+        out = canvas.convert("RGB")
     dest.parent.mkdir(parents=True, exist_ok=True)
     out.save(dest, "WEBP", quality=90, method=6)
     data = dest.read_bytes()
