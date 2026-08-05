@@ -1,0 +1,13 @@
+{
+  "apply_out": "/workspace/artifacts/daryal-import/2026-08-05T12-09-11-741Z-apply",
+  "created_count": 0,
+  "skipped_count": 22,
+  "error_count": 0,
+  "images_uploaded_count": 0,
+  "existing_products_edited": false,
+  "catalog_total_before": 645,
+  "catalog_total_after": 645,
+  "daryal_count_after": 22,
+  "category_distribution_created": {},
+  "backup_sha256": "3f8cf723d7868f429be08d5b442da46c04c36aae66c38ce673baa710115b02e9"
+}
