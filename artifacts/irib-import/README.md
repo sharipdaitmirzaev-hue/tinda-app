@@ -7,10 +7,15 @@
 
 ```bash
 npm run import:irib:stage1
-# or
-python3 scripts/irib-stage1.py
 ```
 
-Latest: `latest-stage1/` → `2026-08-05T13-53-00-881Z-stage1`
+## Stage 2 final
 
-Apply: `npm run import:irib:apply` (gated; not run in stage 1).
+```bash
+python3 scripts/irib-stage2-final.py
+```
+
+Latest stage1: `latest-stage1/`  
+Latest final: `latest-final/` → `2026-08-05T14-12-48-411Z-final`
+
+Apply (gated, create-only): `npm run import:irib:apply` — not run in this stage.

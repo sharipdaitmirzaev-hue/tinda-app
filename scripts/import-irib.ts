@@ -237,13 +237,14 @@ async function cmd_apply() {
 
   const manifest_dir = path.dirname(manifest_path!);
   const approved_csv_candidates = [
+    path.join(manifest_dir, "approved-new-products.csv"),
     path.join(manifest_dir, "approved-products-final.csv"),
     path.join(manifest_dir, "approved-products.csv"),
   ];
   const approved_csv = approved_csv_candidates.find((p) => existsSync(p));
   if (!approved_csv) {
     console.error(
-      "APPLY BLOCKED: approved-products-final.csv (or approved-products.csv) missing next to manifest",
+      "APPLY BLOCKED: approved-new-products.csv (or approved-products*.csv) missing next to manifest",
     );
     process.exitCode = 2;
     return;
@@ -255,6 +256,8 @@ async function cmd_apply() {
       "manual-review-final.csv",
       "rejected-products.csv",
       "rejected-products-final.csv",
+      "confirmed-duplicates.csv",
+      "probable-review-final.csv",
     ]
       .map((name) => path.join(manifest_dir, name))
       .filter((p) => existsSync(p))

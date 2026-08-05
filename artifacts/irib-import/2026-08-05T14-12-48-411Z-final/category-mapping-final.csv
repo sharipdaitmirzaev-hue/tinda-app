@@ -1,0 +1,15 @@
+source_catalog,category,category_slug,category_id,rule
+catalog-cok,Сок,sok,32a861a6-7c39-4329-b17c-09d3a420f7c2,Соки Ириб → sok
+catalog-nektar,Нектар,nektar,46d78cfd-6749-441c-9b27-c7237552cad8,Нектары Ириб → nektar
+catalog-limonadi-v-pet,Лимонады,limonady,a8af36d2-ef7a-49ce-8aea-42fdf99359ae,Лимонады ПЭТ → limonady (Cola → kola)
+catalog-limonadi-v-stekle,Лимонады,limonady,a8af36d2-ef7a-49ce-8aea-42fdf99359ae,Mindari стекло → limonady
+catalog-gold-grand,Лимонады,limonady,a8af36d2-ef7a-49ce-8aea-42fdf99359ae,GOLD GRAND → limonady
+Bro Lemon / Selesta,Лимонады,limonady,a8af36d2-ef7a-49ce-8aea-42fdf99359ae,brand lines → limonady
+catalog-chai-holodnyj,Холодный чай,kholodnyy-chay,88192b93-0ce7-4b67-b6a5-9cb208a17bbb,Ice Bar → kholodnyy-chay
+catalog-kvas,Квас,kvas,e1f3f5b4-7b79-4652-8989-82d30cff34a1,Янтарный квас → kvas
+catalog-mineral-water,Газированная вода,voda-gazirovannaya,81730d5f-f669-4ea0-b6af-e0f7d645a8fa,Тарки-Тау → voda-gazirovannaya
+Талих still,Негазированная вода,voda-negazirovannaya,977a592b-8d39-4bac-afe4-a7d17687657d,plain Талих → voda-negazirovannaya
+Родничок/Чегери,Питьевая вода,voda-pitevaya,58b17c1b-ce93-47d6-9e9d-df407b076889,drinking water
+PROFI SPORT ENERGY,Энергетические напитки,energeticheskie-napitki,a3f3ce9e-00db-4cb4-961d-54e48343b03d,caffeinated energy
+PROFI SPORT BCAA/Isotonic/L-Carnitine,,,,category_manual — no sports-drink leaf
+Талих Спорт flavored,Газированные напитки,gazirovannye-napitki,a98cf12f-e064-4b67-93ef-0a9fdb47bb71,flavored water drinks
