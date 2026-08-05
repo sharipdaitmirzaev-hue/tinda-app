@@ -1,0 +1,12 @@
+{
+  "name": "tinda-app",
+  "install": "bash .cursor/install.sh",
+  "start": "bash .cursor/start.sh",
+  "terminals": [
+    {
+      "name": "dev",
+      "command": "cd /workspace && npm run dev"
+    }
+  ],
+  "ports": [3000]
+}
