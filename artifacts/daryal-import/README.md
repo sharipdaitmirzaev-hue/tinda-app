@@ -56,3 +56,4 @@ npm run import:daryal:apply   # blocked until explicit confirmation
 - `latest-discover/` — live HTML extract
 - `latest-dry-run/` — stage 1 proposed
 - `latest-stage2/` — approved-import-manifest, processed images, contact sheet, gaps, collision check
+- production collision: live `q=SKU` probes against tindamarket.ru catalog (0 hits) + offline soft-overlap universe

@@ -144,8 +144,34 @@ def split_wide_pair(mask, x0: int, x1: int) -> tuple[tuple[int, int], tuple[int,
     return (x0, x0 + valley), (x0 + valley, x1)
 
 
+def trim_content(im: Image.Image, pad: int = 4, white_thr: int = 248) -> Image.Image:
+    """Drop near-empty / near-white margins (removes pair-bleed slivers)."""
+    import numpy as np
+
+    arr = np.array(im.convert("RGBA"))
+    a = arr[:, :, 3]
+    rgb = arr[:, :, :3].astype(int)
+    mask = (a > 15) & ~((rgb[:, :, 0] > white_thr) & (rgb[:, :, 1] > white_thr) & (rgb[:, :, 2] > white_thr))
+    if not mask.any():
+        return im
+    # Require a column/row to have meaningful non-white density to keep
+    col = mask.sum(axis=0)
+    row = mask.sum(axis=1)
+    col_thr = max(int(mask.shape[0] * 0.02), 3)
+    row_thr = max(int(mask.shape[1] * 0.02), 3)
+    xs = np.where(col >= col_thr)[0]
+    ys = np.where(row >= row_thr)[0]
+    if len(xs) == 0 or len(ys) == 0:
+        return im
+    x0 = max(0, int(xs[0]) - pad)
+    x1 = min(im.width, int(xs[-1]) + 1 + pad)
+    y0 = max(0, int(ys[0]) - pad)
+    y1 = min(im.height, int(ys[-1]) + 1 + pad)
+    return im.crop((x0, y0, x1, y1))
+
+
 def to_canvas(crop: Image.Image, size: int = CANVAS) -> Image.Image:
-    im = crop.convert("RGBA")
+    im = trim_content(crop.convert("RGBA"))
     # trim near-empty margins lightly already done; fit into square
     bg = Image.new("RGBA", (size, size), (255, 255, 255, 255))
     max_side = max(im.size)
@@ -224,8 +250,90 @@ def parse_water_live(html: str) -> dict:
     }
 
 
+def _api_get_json(url: str, timeout: int = 45) -> dict:
+    import time
+
+    last_err = None
+    for attempt in range(1, 4):
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": UA, "Accept": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=timeout) as res:
+                return json.loads(res.read().decode("utf-8"))
+        except Exception as exc:  # noqa: BLE001
+            last_err = str(exc)
+            time.sleep(1.0 * attempt)
+    raise RuntimeError(last_err or "api_get_failed")
+
+
+def probe_live_sku_collisions(proposed_skus: list[str]) -> dict:
+    """Exact SKU collision probes against live public catalog (reliable; full dump is flaky)."""
+    import urllib.parse
+
+    exact_hits: dict[str, dict] = {}
+    brand_hits: list[dict] = []
+    errors: list[str] = []
+    catalog_total = None
+    try:
+        health = _api_get_json("https://tindamarket.ru/api/v1/health")
+        page1 = _api_get_json(
+            "https://tindamarket.ru/api/v1/catalog/products?page=1&page_size=1"
+        )
+        catalog_total = page1.get("total")
+        for q in ("DARYAL", "Дарьял", "Аква Дарьял"):
+            data = _api_get_json(
+                "https://tindamarket.ru/api/v1/catalog/products?"
+                f"q={urllib.parse.quote(q)}&page_size=50"
+            )
+            for item in data.get("items") or []:
+                brand_hits.append(
+                    {
+                        "sku": item.get("sku"),
+                        "name": item.get("name"),
+                        "brand": item.get("brand"),
+                        "query": q,
+                    }
+                )
+        for sku in proposed_skus:
+            data = _api_get_json(
+                "https://tindamarket.ru/api/v1/catalog/products?"
+                f"q={urllib.parse.quote(sku)}&page_size=20"
+            )
+            for item in data.get("items") or []:
+                if str(item.get("sku") or "").upper() == sku.upper():
+                    exact_hits[sku.upper()] = {
+                        "sku": item.get("sku"),
+                        "name": item.get("name"),
+                        "brand": item.get("brand"),
+                        "category_name": item.get("category_name"),
+                    }
+        return {
+            "ok": True,
+            "error": None,
+            "health": health,
+            "catalog_total": catalog_total,
+            "exact_hits": exact_hits,
+            "brand_hits": brand_hits,
+            "probed_skus": len(proposed_skus),
+            "errors": errors,
+        }
+    except Exception as exc:  # noqa: BLE001
+        return {
+            "ok": False,
+            "error": str(exc),
+            "health": None,
+            "catalog_total": catalog_total,
+            "exact_hits": exact_hits,
+            "brand_hits": brand_hits,
+            "probed_skus": len(proposed_skus),
+            "errors": errors + [str(exc)],
+        }
+
+
 def load_collision_universe() -> dict:
-    """Offline production collision check: last known catalog snapshot + Bavaria approved SKUs."""
+    """Offline universe for soft flavor overlaps; live exact probes done separately."""
     before_path = (
         ROOT
         / "artifacts/bavaria-import/2026-07-31T12-18-06-212Z-apply/existing-products-before.json"
@@ -246,9 +354,7 @@ def load_collision_universe() -> dict:
         "snapshot_count": len(items),
         "sku_universe_count": len(by_sku),
         "by_sku": by_sku,
-        "live_api_ok": False,
-        "live_api_error": "tindamarket.ru TLS/TCP reset from this cloud agent",
-        "note": "Live production API unreachable; collision check uses last known snapshot (incl. Bavaria).",
+        "note": "Soft-overlap universe from offline snapshot; SKU collisions use live exact probes.",
     }
 
 
@@ -429,7 +535,7 @@ def main():
             bi += 1
         for a_b, ml in assignments:
             a, b = a_b
-            crop = crop_bottle(pet_im, pmask, a, b, pad=6)
+            crop = crop_bottle(pet_im, pmask, a, b, pad=2)
             sku = sku_for("Дарьял", taste, ml, "PET")
             canvas = to_canvas(crop)
             out_path = proc / f"{sku}.webp"
@@ -664,14 +770,35 @@ def main():
 
     # --- collisions ---
     universe = load_collision_universe()
+    live_probe = probe_live_sku_collisions([p["proposed_sku"] for p in approved])
+    universe["live_api_ok"] = bool(live_probe.get("ok"))
+    universe["live_api_error"] = live_probe.get("error")
+    universe["live_api_meta"] = {
+        "catalog_total": live_probe.get("catalog_total"),
+        "probed_skus": live_probe.get("probed_skus"),
+        "brand_hits": live_probe.get("brand_hits"),
+        "health": live_probe.get("health"),
+        "method": "exact_sku_and_brand_q_probes",
+    }
+    if live_probe.get("ok"):
+        universe["source"] = "live_exact_sku_probes+offline_soft_universe"
+        universe["note"] = (
+            "SKU collisions checked via live catalog q=SKU probes; "
+            "soft flavor overlaps use offline snapshot+Bavaria."
+        )
+
     sku_collisions = []
     soft_name_hits = []
     for p in approved:
         sku_u = p["proposed_sku"].upper()
-        if sku_u in universe["by_sku"]:
-            sku_collisions.append(
-                {"proposed_sku": p["proposed_sku"], "existing": universe["by_sku"][sku_u]}
-            )
+        # Prefer live exact hits; also flag offline snapshot collisions
+        existing = None
+        if sku_u in (live_probe.get("exact_hits") or {}):
+            existing = live_probe["exact_hits"][sku_u]
+        elif sku_u in universe["by_sku"]:
+            existing = universe["by_sku"][sku_u]
+        if existing:
+            sku_collisions.append({"proposed_sku": p["proposed_sku"], "existing": existing})
             p["duplicate_status"] = "sku_collision"
         # soft: same taste keywords under other brands — not a blocker
         taste = (p.get("taste") or "").lower()
@@ -694,6 +821,7 @@ def main():
                     break
 
     assert not sku_collisions, sku_collisions
+    assert live_probe.get("ok"), f"live production probe failed: {live_probe.get('error')}"
     assert len(approved) == 22, len(approved)
     assert all(p["proposed_sku"] in crops for p in approved)
 
@@ -833,11 +961,12 @@ code{{font-size:10px}}
             "existing_products_modified": False,
             "sku_collisions": sku_collisions,
             "live_production_api": {
-                "ok": False,
-                "error": universe["live_api_error"],
-                "fallback": universe["source"],
-                "snapshot_count": universe["snapshot_count"],
-                "sku_universe_count": universe["sku_universe_count"],
+                "ok": bool(universe.get("live_api_ok")),
+                "error": universe.get("live_api_error"),
+                "source": universe.get("source"),
+                "snapshot_count": universe.get("snapshot_count"),
+                "sku_universe_count": universe.get("sku_universe_count"),
+                "meta": universe.get("live_api_meta"),
             },
             "soft_same_flavor_other_brand": len(soft_name_hits),
         },
@@ -904,6 +1033,7 @@ code{{font-size:10px}}
             {
                 **{k: v for k, v in universe.items() if k != "by_sku"},
                 "sku_collisions": sku_collisions,
+                "daryal_brand_hits_live": live_probe.get("brand_hits") or [],
                 "daryal_brand_hits_in_snapshot": [
                     {"sku": p.get("sku"), "name": p.get("name"), "brand": p.get("brand")}
                     for p in universe["by_sku"].values()
@@ -911,6 +1041,12 @@ code{{font-size:10px}}
                     or "daryal" in f"{p.get('sku')}".lower()
                 ],
                 "soft_flavor_overlap_count": len(soft_name_hits),
+                "live_probe": {
+                    "ok": live_probe.get("ok"),
+                    "catalog_total": live_probe.get("catalog_total"),
+                    "probed_skus": live_probe.get("probed_skus"),
+                    "exact_hit_count": len(live_probe.get("exact_hits") or {}),
+                },
             },
             ensure_ascii=False,
             indent=2,
@@ -986,9 +1122,12 @@ Distribution: {category_distribution}
 - **production apply blocked** until explicit confirmation
 
 ## Production collision check
-- Live API: **unreachable** from this agent (`{universe['live_api_error']}`)
-- Fallback: `{universe['source']}` (snapshot={universe['snapshot_count']}, universe={universe['sku_universe_count']})
+- Live API: **{"ok" if universe.get("live_api_ok") else "failed"}**{"" if universe.get("live_api_ok") else f" (`{universe.get('live_api_error')}`)"}
+- Method: exact `q=SKU` probes for all approved + brand search (`DARYAL` / `Дарьял`)
+- Catalog total (live): {live_probe.get("catalog_total")}
+- Source: `{universe['source']}` (offline soft-universe={universe['sku_universe_count']})
 - SKU collisions: **{len(sku_collisions)}**
+- Live Daryal brand hits: **{len(live_probe.get("brand_hits") or [])}**
 - Soft same-flavor other-brand overlaps: {len(soft_name_hits)} (informational only)
 
 ## Artifacts

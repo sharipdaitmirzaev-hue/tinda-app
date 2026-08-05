@@ -1,0 +1,29 @@
+{
+  "source": "live_exact_sku_probes+offline_soft_universe",
+  "snapshot_path": "artifacts/bavaria-import/2026-07-31T12-18-06-212Z-apply/existing-products-before.json",
+  "snapshot_count": 176,
+  "sku_universe_count": 176,
+  "note": "SKU collisions checked via live catalog q=SKU probes; soft flavor overlaps use offline snapshot+Bavaria.",
+  "live_api_ok": true,
+  "live_api_error": null,
+  "live_api_meta": {
+    "catalog_total": 621,
+    "probed_skus": 22,
+    "brand_hits": [],
+    "health": {
+      "ok": true,
+      "database": "ok"
+    },
+    "method": "exact_sku_and_brand_q_probes"
+  },
+  "sku_collisions": [],
+  "daryal_brand_hits_live": [],
+  "daryal_brand_hits_in_snapshot": [],
+  "soft_flavor_overlap_count": 11,
+  "live_probe": {
+    "ok": true,
+    "catalog_total": 621,
+    "probed_skus": 22,
+    "exact_hit_count": 0
+  }
+}
