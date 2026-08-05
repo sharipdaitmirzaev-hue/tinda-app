@@ -1,0 +1,8 @@
+id,line,status,detail
+cold_tea_fiesta,Холодный чай,gap_not_imported,"ФИЕСТА малина — только meta/описание, нет SKU (название+вкус+объём+тара+image) на официальном сайте"
+juice_other,Сокосодержащие,gap_not_imported,Отдельных confirmed SKU нет; меню-ссылка закомментирована
+frutimix_multifrukt,Фрутимикс,manual,"Мультифрукт — вкус confirmed, объём/тара отсутствуют; не в approved"
+frutimix_krasnyy_apelsin,Фрутимикс,manual,"Красный апельсин — вкус confirmed на сайте, объём/тара отсутствуют; не в approved"
+grapefruit_raspberry_comment,Газированные,rejected,Грейпфрут-малина только в HTML comment
+beer_all,Живое пиво,rejected,Алкоголь — вне scope
+no_pdf_price_photoshoot,Sources,gap_source,PDF/прайс/официальная фотосъёмка отсутствуют — использован только darialgroup.ru

@@ -27,6 +27,7 @@
     "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-ingest.py && python3 scripts/bavaria-pdf-site-merge.py",
     "import:daryal:discover": "tsx scripts/import-daryal.ts discover",
     "import:daryal:dry-run": "tsx scripts/import-daryal.ts dry-run",
+    "import:daryal:stage2": "python3 scripts/daryal-stage2-review.py",
     "import:daryal:apply": "tsx scripts/import-daryal.ts apply"
   },
   "dependencies": {

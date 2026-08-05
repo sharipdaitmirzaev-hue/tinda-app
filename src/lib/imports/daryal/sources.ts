@@ -37,7 +37,7 @@ export const DARYAL_OFFICIAL_SOURCES = [
       "artifacts/daryal-import/pdf-source/DARYAL-CATALOG.pdf",
       "/mnt/data/DARYAL-CATALOG.pdf",
     ],
-    note: "Опциональный равноправный источник; без PDF сайт остаётся primary",
+    note: "Сейчас отсутствует; scope stage2 — только официальный сайт darialgroup.ru",
   },
 ] as const;
 

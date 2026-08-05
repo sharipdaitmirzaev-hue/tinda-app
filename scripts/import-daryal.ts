@@ -5,9 +5,10 @@
  * Commands:
  *   discover  — fetch official site pages, extract variants (no DB writes)
  *   dry-run   — build proposed SKUs + reports (no DB writes)
- *   apply     — intentionally not implemented in stage 1
+ *   apply     — gated; blocked until explicit production confirmation
  *
  * Scope: non-alcoholic only. Alcoholic beer (/beer/) is inventoried as excluded.
+ * Stage 2 review/images: `npm run import:daryal:stage2` (Python).
  * Never edits existing products. Never runs without an explicit later apply gate.
  */
 import { createHash } from "crypto";
@@ -483,10 +484,12 @@ async function cmd_dry_run(args: string[]) {
     policy: {
       sales_status: "showcase",
       price_amount: null,
+      orderable: false,
       create_only: true,
       merge_forbidden: true,
       alcohol_excluded: true,
       apply_implemented: false,
+      note: "price_amount=null maps user intent price=0 / not orderable under catalog schema",
     },
     existing_catalog_warning: existing_warning,
     counts: {
@@ -609,8 +612,10 @@ ${ready
 async function cmd_apply() {
   console.error(
     [
-      "apply is not implemented for Daryal stage 1.",
-      "Complete discover → dry-run → human/PDF review first.",
+      "APPLY BLOCKED for Daryal.",
+      "Stage 2 prepared approved-import-manifest + images under artifacts/daryal-import/latest-stage2/.",
+      "Production apply requires separate explicit confirmation.",
+      "Policy: create-only, showcase, price_amount=null, orderable=false; do not modify existing products.",
       "Do not write to production DB yet.",
     ].join("\n"),
   );

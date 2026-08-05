@@ -1,14 +1,7 @@
-# PDF / прайс «Дарьял» (опционально)
+# PDF source (optional)
 
-## Куда положить файл
+Сейчас PDF-каталог / прайс / отдельная фотосъёмка **отсутствуют**.
 
-Если производитель даст каталог/буклет/прайс в PDF:
+Stage 2 использует только официальный сайт https://darialgroup.ru.
 
-1. `artifacts/daryal-import/pdf-source/DARYAL-CATALOG.pdf` ← предпочтительно  
-2. `/mnt/data/DARYAL-CATALOG.pdf`
-
-## Важно
-
-- Официальный **primary** источник сейчас — сайт https://darialgroup.ru  
-- Без PDF можно делать discover / dry-run по сайту  
-- Apply в production **нельзя** запускать, пока нет human review (и желательно PDF при расхождениях)
+Если производитель предоставит файл, положите его сюда как `DARYAL-CATALOG.pdf` и согласуйте отдельный review pass.
