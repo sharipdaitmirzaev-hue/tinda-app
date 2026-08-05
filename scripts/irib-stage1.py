@@ -1110,10 +1110,12 @@ def main():
             "units_per_package": 1,
         }
 
-    write_csv(out / "discovered-products.csv", [row(p) for p in products])
-    write_csv(out / "approved-products.csv", [row(p) for p in approved])
-    write_csv(out / "manual-review.csv", [row(p) for p in manual])
-    write_csv(out / "rejected-products.csv", [row(p) for p in rejected])
+    product_rows = [row(p) for p in products]
+    fieldnames = list(product_rows[0].keys()) if product_rows else []
+    write_csv(out / "discovered-products.csv", product_rows, fieldnames)
+    write_csv(out / "approved-products.csv", [row(p) for p in approved], fieldnames)
+    write_csv(out / "manual-review.csv", [row(p) for p in manual], fieldnames)
+    write_csv(out / "rejected-products.csv", [row(p) for p in rejected], fieldnames)
     write_csv(out / "image-audit.csv", image_audit)
     write_csv(out / "possible-duplicates.csv", duplicates)
     write_csv(out / "source-evidence.csv", evidence)
