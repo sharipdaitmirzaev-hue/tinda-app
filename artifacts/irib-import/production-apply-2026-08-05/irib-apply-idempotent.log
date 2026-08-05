@@ -1,0 +1,12 @@
+# IRIB APPLY REPORT
+
+- started: 2026-08-05T14:28:56.687Z
+- backup: `/backups/tinda-prod-irib-20260805-142608.sql`
+- backup sha256: `a3add0037eec1292477ba277068cff75163954d6167b9e61145965bacc892203`
+- created: **0**
+- skipped existing: **38**
+- errors: **0**
+- images uploaded: **0**
+- existing products edited: **false**
+- catalog: 708 → 708
+

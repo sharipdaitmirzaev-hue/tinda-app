@@ -29,7 +29,12 @@
     "import:aqualania:dry-run": "tsx scripts/import-aqualania.ts dry-run",
     "import:aqualania:stage1": "python3 scripts/aqualania-stage1.py",
     "import:aqualania:final": "python3 scripts/aqualania-stage2-final.py",
-    "import:aqualania:apply": "tsx scripts/import-aqualania.ts apply"
+    "import:aqualania:apply": "tsx scripts/import-aqualania.ts apply",
+    "import:irib:discover": "tsx scripts/import-irib.ts discover",
+    "import:irib:dry-run": "tsx scripts/import-irib.ts dry-run",
+    "import:irib:stage1": "python3 scripts/irib-stage1.py",
+    "import:irib:final": "python3 scripts/irib-stage2-final.py",
+    "import:irib:apply": "tsx scripts/import-irib.ts apply"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",

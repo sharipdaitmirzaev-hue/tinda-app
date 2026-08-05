@@ -1,0 +1,30 @@
+proposed_sku,proposed_name,duplicate_status,existing_sku,existing_name,existing_brand,existing_volume,existing_package
+IRIB-NEKTAR-ABRIKOSOVYY-330-GLASS,"Нектар Ириб Абрикосовый, 330 мл, стекло",probable_match,ZY-IRIB-750-GLASS-002,"Нектар Ириб ст/б 0,75л Абрикосовый",Ириб,750 мл,стекло
+IRIB-NEKTAR-ABRIKOSOVYY-500-GLASS,"Нектар Ириб Абрикосовый, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-002,"Нектар Ириб ст/б 0,75л Абрикосовый",Ириб,750 мл,стекло
+IRIB-NEKTAR-ABRIKOSOVYY-750-GLASS,"Нектар Ириб Абрикосовый, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-002,"Нектар Ириб ст/б 0,75л Абрикосовый",Ириб,750 мл,стекло
+IRIB-NEKTAR-PERSIKOVYY-500-GLASS,"Нектар Ириб Персиковый, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-006,"Нектар Ириб ст/б 0,75л Персиковый 50%",Ириб,750 мл,стекло
+IRIB-NEKTAR-PERSIKOVYY-750-GLASS,"Нектар Ириб Персиковый, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-006,"Нектар Ириб ст/б 0,75л Персиковый 50%",Ириб,750 мл,стекло
+IRIB-NEKTAR-VISHNEVYY-330-GLASS,"Нектар Ириб Вишневый, 330 мл, стекло",probable_match,ZY-IRIB-750-GLASS-004,"Нектар Ириб ст/б 0,75л Вишневый 50%",Ириб,750 мл,стекло
+IRIB-NEKTAR-VISHNEVYY-500-GLASS,"Нектар Ириб Вишневый, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-004,"Нектар Ириб ст/б 0,75л Вишневый 50%",Ириб,750 мл,стекло
+IRIB-NEKTAR-VISHNEVYY-750-GLASS,"Нектар Ириб Вишневый, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-004,"Нектар Ириб ст/б 0,75л Вишневый 50%",Ириб,750 мл,стекло
+IRIB-NEKTAR-YABLOCHNYY-500-GLASS,"Нектар Ириб Яблочный, 500 мл, стекло",probable_match,ZY-IRIB-330-GLASS-001,"Сок Ириб ст/б 0,33л Яблочный 100%",Ириб,330 мл,стекло
+IRIB-NEKTAR-YABLOCHNYY-500-GLASS,"Нектар Ириб Яблочный, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-005,"Сок Ириб ст/б 0,75л Яблочный 100%",Ириб,750 мл,стекло
+IRIB-NEKTAR-YABLOCHNYY-750-GLASS,"Нектар Ириб Яблочный, 750 мл, стекло",exact_match,ZY-IRIB-330-GLASS-001,"Сок Ириб ст/б 0,33л Яблочный 100%",Ириб,330 мл,стекло
+IRIB-NEKTAR-YABLOCHNYY-750-GLASS,"Нектар Ириб Яблочный, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-005,"Сок Ириб ст/б 0,75л Яблочный 100%",Ириб,750 мл,стекло
+IRIB-SOK-ANANASOVYY-500-GLASS,"Сок Ириб Ананасовый, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-009,"Сок Ириб ст/б 0,75л Ананасовый 100%",Ириб,750 мл,стекло
+IRIB-SOK-ANANASOVYY-750-GLASS,"Сок Ириб Ананасовый, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-009,"Сок Ириб ст/б 0,75л Ананасовый 100%",Ириб,750 мл,стекло
+IRIB-SOK-APELSINOVYY-330-GLASS,"Сок Ириб Апельсиновый, 330 мл, стекло",probable_match,ZY-IRIB-750-GLASS-007,"Сок Ириб ст/б 0,75л Апельсиновый 100%",Ириб,750 мл,стекло
+IRIB-SOK-APELSINOVYY-500-GLASS,"Сок Ириб Апельсиновый, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-007,"Сок Ириб ст/б 0,75л Апельсиновый 100%",Ириб,750 мл,стекло
+IRIB-SOK-APELSINOVYY-750-GLASS,"Сок Ириб Апельсиновый, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-007,"Сок Ириб ст/б 0,75л Апельсиновый 100%",Ириб,750 мл,стекло
+IRIB-SOK-GRANATOVYY-500-GLASS,"Сок Ириб Гранатовый, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-001,"Сок Ириб ст/б 0,75л Гранатовый 100%",Ириб,750 мл,стекло
+IRIB-SOK-GRANATOVYY-750-GLASS,"Сок Ириб Гранатовый, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-001,"Сок Ириб ст/б 0,75л Гранатовый 100%",Ириб,750 мл,стекло
+IRIB-SOK-TOMATNYY-750-GLASS,"Сок Ириб Томатный, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-011,"Сок Ириб ст/б 0,75л Томатный 100%",Ириб,750 мл,стекло
+IRIB-SOK-VINOGRADNYY-330-GLASS,"Сок Ириб Виноградный, 330 мл, стекло",probable_match,ZY-IRIB-750-GLASS-008,"Сок Ириб ст/б 0,75л виноградный красный 100%",Ириб,750 мл,стекло
+IRIB-SOK-VINOGRADNYY-500-GLASS,"Сок Ириб Виноградный, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-008,"Сок Ириб ст/б 0,75л виноградный красный 100%",Ириб,750 мл,стекло
+IRIB-SOK-VINOGRADNYY-750-GLASS,"Сок Ириб Виноградный, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-008,"Сок Ириб ст/б 0,75л виноградный красный 100%",Ириб,750 мл,стекло
+IRIB-SOK-YABLOCHNYY-330-GLASS,"Сок Ириб Яблочный, 330 мл, стекло",exact_match,ZY-IRIB-330-GLASS-001,"Сок Ириб ст/б 0,33л Яблочный 100%",Ириб,330 мл,стекло
+IRIB-SOK-YABLOCHNYY-500-GLASS,"Сок Ириб Яблочный, 500 мл, стекло",probable_match,ZY-IRIB-330-GLASS-001,"Сок Ириб ст/б 0,33л Яблочный 100%",Ириб,330 мл,стекло
+IRIB-SOK-YABLOCHNYY-500-GLASS,"Сок Ириб Яблочный, 500 мл, стекло",probable_match,ZY-IRIB-750-GLASS-005,"Сок Ириб ст/б 0,75л Яблочный 100%",Ириб,750 мл,стекло
+IRIB-SOK-YABLOCHNYY-750-GLASS,"Сок Ириб Яблочный, 750 мл, стекло",exact_match,ZY-IRIB-330-GLASS-001,"Сок Ириб ст/б 0,33л Яблочный 100%",Ириб,330 мл,стекло
+IRIB-SOK-YABLOCHNYY-750-GLASS,"Сок Ириб Яблочный, 750 мл, стекло",exact_match,ZY-IRIB-750-GLASS-005,"Сок Ириб ст/б 0,75л Яблочный 100%",Ириб,750 мл,стекло
+IRIB-TARKI-TAU-TARKI-TAU-500-GLASS,"Вода Тарки-Тау Тарки-Тау, 500 мл, стекло",exact_match,ZY-IRIB-500-GLASS-001,"Вода Ириб минер Тарки Тау ст/б 0,5л",Ириб,500 мл,стекло
