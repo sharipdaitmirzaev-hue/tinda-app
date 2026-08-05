@@ -67,7 +67,9 @@
     "orderable": false,
     "create_only": true,
     "modify_existing_products": false,
-    "note": "User intent price=0 + orderable=false mapped to showcase + price_amount=null (catalog schema: 0 is not used as no-price; null = not orderable)."
+    "note": "User intent price=0 + orderable=false mapped to showcase + price_amount=null (catalog schema: 0 is not used as no-price; null = not orderable).",
+    "availability": "on_order",
+    "units_per_package": 1
   },
   "approved_skus": [
     "DARYAL-AKVA-DARYAL-GAZ-1500-PET",
