@@ -235,15 +235,26 @@ async function cmd_apply() {
   }
 
   const manifest_dir = path.dirname(manifest_path!);
-  const approved_csv = path.join(manifest_dir, "approved-products.csv");
-  if (!existsSync(approved_csv)) {
-    console.error("APPLY BLOCKED: approved-products.csv missing next to manifest");
+  const approved_csv_candidates = [
+    path.join(manifest_dir, "approved-products-final.csv"),
+    path.join(manifest_dir, "approved-products.csv"),
+  ];
+  const approved_csv = approved_csv_candidates.find((p) => existsSync(p));
+  if (!approved_csv) {
+    console.error(
+      "APPLY BLOCKED: approved-products-final.csv (or approved-products.csv) missing next to manifest",
+    );
     process.exitCode = 2;
     return;
   }
 
   const blocked = new Set(
-    ["manual-review.csv", "rejected-products.csv"]
+    [
+      "manual-review.csv",
+      "manual-review-final.csv",
+      "rejected-products.csv",
+      "rejected-products-final.csv",
+    ]
       .map((name) => path.join(manifest_dir, name))
       .filter((p) => existsSync(p))
       .flatMap((p) => parse_csv_rows(readFileSync(p, "utf8")).map((r) => r.proposed_sku)),

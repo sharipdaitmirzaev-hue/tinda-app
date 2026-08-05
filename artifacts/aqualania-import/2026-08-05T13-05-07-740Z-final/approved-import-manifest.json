@@ -1,0 +1,172 @@
+{
+  "stage": "final-pre-apply",
+  "created_at": "2026-08-05T13:05:44Z",
+  "based_on_stage1": "artifacts/aqualania-import/2026-08-05T12-38-20-797Z-stage1",
+  "manufacturer": "ООО «Константа-7»",
+  "brand": "AquAlania",
+  "source_primary": "https://aqualania.ru/product",
+  "source_en": "https://aqualania.ru/enproduct",
+  "scope": {
+    "official_site_only": true,
+    "third_party_forbidden": true,
+    "production_writes": false,
+    "apply_run": false
+  },
+  "decisions": {
+    "igristoe": {
+      "status": "approved",
+      "alcohol": "non_alcoholic_confirmed",
+      "evidence": [
+        "RU product title: Напиток безалкогольный сильногазированный «Игристое»",
+        "EN: Non alcoholic carbonated drink with Sparkling wine / Champagne flavor",
+        "Glass label text: НАПИТОК БЕЗАЛКОГОЛЬНЫЙ СИЛЬНОГАЗИРОВАННЫЙ"
+      ],
+      "naming": "Напиток газированный AquAlania Игристое, … (без слова «вино»)",
+      "skus": [
+        "AQUALANIA-CAN-IGRISTOE-330-CAN",
+        "AQUALANIA-PREMIUM-IGRISTOE-500-GLASS"
+      ]
+    },
+    "feijoa": {
+      "status": "approved",
+      "image": "exact",
+      "asset_filename": "tarhun.png",
+      "finding": "Filename misleading; label text/illustration confirm Feijoa. taruhn.png is Tarhun SKU.",
+      "sku": "AQUALANIA-PREMIUM-FEYHOA-500-GLASS"
+    },
+    "light_low_res": {
+      "status": "approved_exact_low_res",
+      "upscaled": false,
+      "dimensions": [
+        {
+          "sku": "AQUALANIA-LIGHT-ANANAS-330-PETCAN",
+          "flavor": "Ананас",
+          "width": 224,
+          "height": 200,
+          "bytes": 36999,
+          "status": "exact_low_res"
+        },
+        {
+          "sku": "AQUALANIA-LIGHT-APELSIN-330-PETCAN",
+          "flavor": "Апельсин",
+          "width": 224,
+          "height": 200,
+          "bytes": 39216,
+          "status": "exact_low_res"
+        },
+        {
+          "sku": "AQUALANIA-LIGHT-KLUBNIKA-330-PETCAN",
+          "flavor": "Клубника",
+          "width": 224,
+          "height": 200,
+          "bytes": 42514,
+          "status": "exact_low_res"
+        },
+        {
+          "sku": "AQUALANIA-LIGHT-MANGO-MARAKUYYA-330-PETCAN",
+          "flavor": "Манго-Маракуйя",
+          "width": 224,
+          "height": 200,
+          "bytes": 37184,
+          "status": "exact_low_res"
+        },
+        {
+          "sku": "AQUALANIA-LIGHT-MOHITO-330-PETCAN",
+          "flavor": "Мохито",
+          "width": 224,
+          "height": 200,
+          "bytes": 38440,
+          "status": "exact_low_res"
+        },
+        {
+          "sku": "AQUALANIA-LIGHT-VISHNYA-330-PETCAN",
+          "flavor": "Вишня",
+          "width": 224,
+          "height": 200,
+          "bytes": 39196,
+          "status": "exact_low_res"
+        },
+        {
+          "sku": "AQUALANIA-LIGHT-YABLOKO-330-PETCAN",
+          "flavor": "Яблоко",
+          "width": 224,
+          "height": 200,
+          "bytes": 36167,
+          "status": "exact_low_res"
+        }
+      ]
+    }
+  },
+  "counts": {
+    "discovered": 25,
+    "approved": 25,
+    "manual": 0,
+    "rejected": 0,
+    "images_exact": 18,
+    "images_exact_low_res": 7,
+    "images_shared": 0,
+    "images_missing": 0,
+    "production_products_scanned": 643,
+    "production_sku_collisions": 0,
+    "probable_matches": 0
+  },
+  "line_distribution": {
+    "CAN": 5,
+    "LIGHT": 7,
+    "PREMIUM": 11,
+    "WATER": 2
+  },
+  "category_distribution_approved": {
+    "Газированные напитки": 12,
+    "Лимонады": 10,
+    "Кола": 1,
+    "Газированная вода": 1,
+    "Негазированная вода": 1
+  },
+  "approved_skus": [
+    "AQUALANIA-CAN-DYNYA-MYATA-330-CAN",
+    "AQUALANIA-CAN-IGRISTOE-330-CAN",
+    "AQUALANIA-CAN-MANGO-VINOGRAD-330-CAN",
+    "AQUALANIA-CAN-MOHITO-CLASSIC-330-CAN",
+    "AQUALANIA-CAN-MOHITO-KLUBNICHNYY-330-CAN",
+    "AQUALANIA-LIGHT-ANANAS-330-PETCAN",
+    "AQUALANIA-LIGHT-APELSIN-330-PETCAN",
+    "AQUALANIA-LIGHT-KLUBNIKA-330-PETCAN",
+    "AQUALANIA-LIGHT-MANGO-MARAKUYYA-330-PETCAN",
+    "AQUALANIA-LIGHT-MOHITO-330-PETCAN",
+    "AQUALANIA-LIGHT-VISHNYA-330-PETCAN",
+    "AQUALANIA-LIGHT-YABLOKO-330-PETCAN",
+    "AQUALANIA-PREMIUM-BARBARIS-500-GLASS",
+    "AQUALANIA-PREMIUM-DYNYA-MYATA-500-GLASS",
+    "AQUALANIA-PREMIUM-FEYHOA-500-GLASS",
+    "AQUALANIA-PREMIUM-GRUSHA-500-GLASS",
+    "AQUALANIA-PREMIUM-IGRISTOE-500-GLASS",
+    "AQUALANIA-PREMIUM-KOLA-500-GLASS",
+    "AQUALANIA-PREMIUM-LIMONAD-500-GLASS",
+    "AQUALANIA-PREMIUM-MANGO-VINOGRAD-500-GLASS",
+    "AQUALANIA-PREMIUM-SAPERAVI-500-GLASS",
+    "AQUALANIA-PREMIUM-SLIVA-500-GLASS",
+    "AQUALANIA-PREMIUM-TARHUN-500-GLASS",
+    "AQUALANIA-WATER-SPARKLING-500-PET",
+    "AQUALANIA-WATER-STILL-500-PET"
+  ],
+  "manual_skus": [],
+  "rejected_skus": [],
+  "apply": {
+    "sales_status": "showcase",
+    "is_active": true,
+    "price_amount": null,
+    "availability": "on_order",
+    "orderable": false,
+    "units_per_package": 1,
+    "create_only": true,
+    "modify_existing_products": false,
+    "auto_create_categories": false
+  },
+  "checks": {
+    "production_db_modified": false,
+    "apply_run": false,
+    "merge_used": false,
+    "existing_products_modified": false
+  }
+}

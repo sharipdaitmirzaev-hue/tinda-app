@@ -4,13 +4,25 @@
 Производитель: ООО «Константа-7».
 
 ## Stage 1
-
 ```bash
 npm run import:aqualania:stage1
-# or
-python3 scripts/aqualania-stage1.py
 ```
+Latest stage1: `latest-stage1/`
 
-Latest: `latest-stage1/` → `2026-08-05T12-38-20-797Z-stage1`
+## Final (stage 2)
+```bash
+python3 scripts/aqualania-stage2-final.py
+# or
+npm run import:aqualania:final
+```
+Latest final: `latest-final/` → `2026-08-05T13-05-07-740Z-final`
 
-Apply: `npm run import:aqualania:apply` (gated; not run in stage 1).
+Manifest: `artifacts/aqualania-import/2026-08-05T13-05-07-740Z-final/approved-import-manifest-final.json`
+
+Apply (gated; not run until confirmed):
+```bash
+npm run import:aqualania:apply -- \
+  --i-understand-and-have-backup \
+  --backup-path="<path>" \
+  --manifest="artifacts/aqualania-import/2026-08-05T13-05-07-740Z-final/approved-import-manifest-final.json"
+```

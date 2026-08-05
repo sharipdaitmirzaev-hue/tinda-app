@@ -28,6 +28,7 @@
     "import:aqualania:discover": "tsx scripts/import-aqualania.ts discover",
     "import:aqualania:dry-run": "tsx scripts/import-aqualania.ts dry-run",
     "import:aqualania:stage1": "python3 scripts/aqualania-stage1.py",
+    "import:aqualania:final": "python3 scripts/aqualania-stage2-final.py",
     "import:aqualania:apply": "tsx scripts/import-aqualania.ts apply"
   },
   "dependencies": {

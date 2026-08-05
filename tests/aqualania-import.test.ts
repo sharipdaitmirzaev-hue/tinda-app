@@ -261,6 +261,44 @@ describe("aqualania create-only apply guards", () => {
   });
 });
 
+describe("aqualania disputed resolutions", () => {
+  it("keeps Igristoe as distinct glass vs can SKUs without wine wording dependency", () => {
+    const glass = build_aqualania_sku({
+      line: "PREMIUM",
+      flavor_key: "IGRISTOE",
+      volume_ml: 500,
+      package_code: "GLASS",
+    });
+    const can = build_aqualania_sku({
+      line: "CAN",
+      flavor_key: "IGRISTOE",
+      volume_ml: 330,
+      package_code: "CAN",
+    });
+    expect(glass).toBe("AQUALANIA-PREMIUM-IGRISTOE-500-GLASS");
+    expect(can).toBe("AQUALANIA-CAN-IGRISTOE-330-CAN");
+    expect(glass).not.toBe(can);
+  });
+
+  it("keeps Feijoa and Tarhun as separate premium SKUs", () => {
+    const feijoa = build_aqualania_sku({
+      line: "PREMIUM",
+      flavor_key: "FEYHOA",
+      volume_ml: 500,
+      package_code: "GLASS",
+    });
+    const tarhun = build_aqualania_sku({
+      line: "PREMIUM",
+      flavor_key: "TARHUN",
+      volume_ml: 500,
+      package_code: "GLASS",
+    });
+    expect(feijoa).toBe("AQUALANIA-PREMIUM-FEYHOA-500-GLASS");
+    expect(tarhun).toBe("AQUALANIA-PREMIUM-TARHUN-500-GLASS");
+    expect(feijoa).not.toBe(tarhun);
+  });
+});
+
 describe("aqualania review / manifest filters", () => {
   it("excludes image mismatch from auto-approve", () => {
     expect(image_mismatch_excluded("mismatch")).toBe(true);
