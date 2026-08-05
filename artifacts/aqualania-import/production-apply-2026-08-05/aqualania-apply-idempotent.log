@@ -1,0 +1,12 @@
+# AquAlania APPLY REPORT
+
+- started: 2026-08-05T13:11:59.385Z
+- backup: `/backups/tinda-prod-aqualania-20260805-131023.sql`
+- backup sha256: `7b7043bedf0cba75ee064f0243c979a78b988b8f0372c098e2e70f2183b20861`
+- created: **0**
+- skipped existing: **25**
+- errors: **0**
+- images uploaded: **0**
+- existing products edited: **false**
+- catalog: 670 → 670
+

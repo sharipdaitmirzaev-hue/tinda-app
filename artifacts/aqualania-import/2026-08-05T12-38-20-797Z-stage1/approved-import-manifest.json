@@ -1,0 +1,165 @@
+{
+  "stage": "stage1-site-discovered-dry-run",
+  "created_at": "2026-08-05T12:39:00Z",
+  "manufacturer": "ООО «Константа-7»",
+  "brand": "AquAlania",
+  "source_primary": "https://aqualania.ru/product",
+  "source_en": "https://aqualania.ru/enproduct",
+  "pdf_file_available": false,
+  "scope": {
+    "official_site_only": true,
+    "third_party_forbidden": true,
+    "production_writes": false,
+    "apply_run": false
+  },
+  "counts": {
+    "discovered": 25,
+    "approved": 25,
+    "manual": 0,
+    "rejected": 0,
+    "images_exact": 18,
+    "images_exact_low_res": 7,
+    "images_shared": 0,
+    "images_missing": 0,
+    "production_sku_collisions": 0,
+    "probable_matches": 0
+  },
+  "line_distribution": {
+    "CAN": 5,
+    "LIGHT": 7,
+    "PREMIUM": 11,
+    "WATER": 2
+  },
+  "category_distribution_approved": {
+    "Газированные напитки": 12,
+    "Лимонады": 10,
+    "Кола": 1,
+    "Газированная вода": 1,
+    "Негазированная вода": 1
+  },
+  "approved_skus": [
+    "AQUALANIA-CAN-DYNYA-MYATA-330-CAN",
+    "AQUALANIA-CAN-IGRISTOE-330-CAN",
+    "AQUALANIA-CAN-MANGO-VINOGRAD-330-CAN",
+    "AQUALANIA-CAN-MOHITO-CLASSIC-330-CAN",
+    "AQUALANIA-CAN-MOHITO-KLUBNICHNYY-330-CAN",
+    "AQUALANIA-LIGHT-ANANAS-330-PETCAN",
+    "AQUALANIA-LIGHT-APELSIN-330-PETCAN",
+    "AQUALANIA-LIGHT-KLUBNIKA-330-PETCAN",
+    "AQUALANIA-LIGHT-MANGO-MARAKUYYA-330-PETCAN",
+    "AQUALANIA-LIGHT-MOHITO-330-PETCAN",
+    "AQUALANIA-LIGHT-VISHNYA-330-PETCAN",
+    "AQUALANIA-LIGHT-YABLOKO-330-PETCAN",
+    "AQUALANIA-PREMIUM-BARBARIS-500-GLASS",
+    "AQUALANIA-PREMIUM-DYNYA-MYATA-500-GLASS",
+    "AQUALANIA-PREMIUM-FEYHOA-500-GLASS",
+    "AQUALANIA-PREMIUM-GRUSHA-500-GLASS",
+    "AQUALANIA-PREMIUM-IGRISTOE-500-GLASS",
+    "AQUALANIA-PREMIUM-KOLA-500-GLASS",
+    "AQUALANIA-PREMIUM-LIMONAD-500-GLASS",
+    "AQUALANIA-PREMIUM-MANGO-VINOGRAD-500-GLASS",
+    "AQUALANIA-PREMIUM-SAPERAVI-500-GLASS",
+    "AQUALANIA-PREMIUM-SLIVA-500-GLASS",
+    "AQUALANIA-PREMIUM-TARHUN-500-GLASS",
+    "AQUALANIA-WATER-SPARKLING-500-PET",
+    "AQUALANIA-WATER-STILL-500-PET"
+  ],
+  "manual_skus": [],
+  "rejected_skus": [],
+  "categories": [
+    {
+      "name": "Лимонады",
+      "slug": "limonady",
+      "id": "a8af36d2-ef7a-49ce-8aea-42fdf99359ae"
+    },
+    {
+      "name": "Кола",
+      "slug": "kola",
+      "id": "34bee47b-61c3-4e15-81db-75d58ecf018b"
+    },
+    {
+      "name": "Газированная вода",
+      "slug": "voda-gazirovannaya",
+      "id": "81730d5f-f669-4ea0-b6af-e0f7d645a8fa"
+    },
+    {
+      "name": "Негазированная вода",
+      "slug": "voda-negazirovannaya",
+      "id": "977a592b-8d39-4bac-afe4-a7d17687657d"
+    },
+    {
+      "name": "Газированные напитки",
+      "slug": "gazirovannye-napitki",
+      "id": "a98cf12f-e064-4b67-93ef-0a9fdb47bb71"
+    }
+  ],
+  "categories_to_create": [],
+  "disputed": [
+    {
+      "sku": "AQUALANIA-CAN-IGRISTOE-330-CAN",
+      "flavor": "Игристое",
+      "reason": " Flavor label «Игристое» confirmed on RU/EN site (EN: Champagne)."
+    },
+    {
+      "sku": "AQUALANIA-LIGHT-ANANAS-330-PETCAN",
+      "flavor": "Ананас",
+      "reason": "Official Light assets are small (~224px); kept as exact_low_res."
+    },
+    {
+      "sku": "AQUALANIA-LIGHT-APELSIN-330-PETCAN",
+      "flavor": "Апельсин",
+      "reason": "Official Light assets are small (~224px); kept as exact_low_res."
+    },
+    {
+      "sku": "AQUALANIA-LIGHT-KLUBNIKA-330-PETCAN",
+      "flavor": "Клубника",
+      "reason": "Official Light assets are small (~224px); kept as exact_low_res."
+    },
+    {
+      "sku": "AQUALANIA-LIGHT-MANGO-MARAKUYYA-330-PETCAN",
+      "flavor": "Манго-Маракуйя",
+      "reason": "Official Light assets are small (~224px); kept as exact_low_res."
+    },
+    {
+      "sku": "AQUALANIA-LIGHT-MOHITO-330-PETCAN",
+      "flavor": "Мохито",
+      "reason": "Official Light assets are small (~224px); kept as exact_low_res."
+    },
+    {
+      "sku": "AQUALANIA-LIGHT-VISHNYA-330-PETCAN",
+      "flavor": "Вишня",
+      "reason": "Official Light assets are small (~224px); kept as exact_low_res."
+    },
+    {
+      "sku": "AQUALANIA-LIGHT-YABLOKO-330-PETCAN",
+      "flavor": "Яблоко",
+      "reason": "Official Light assets are small (~224px); kept as exact_low_res."
+    },
+    {
+      "sku": "AQUALANIA-PREMIUM-FEYHOA-500-GLASS",
+      "flavor": "Фейхоа",
+      "reason": "Feijoa uses asset filename tarhun.png on official site (DOM title confirms Feijoa)."
+    },
+    {
+      "sku": "AQUALANIA-PREMIUM-IGRISTOE-500-GLASS",
+      "flavor": "Игристое",
+      "reason": " Flavor label «Игристое» confirmed on RU/EN site (EN: Sparkling wine)."
+    }
+  ],
+  "apply": {
+    "sales_status": "showcase",
+    "is_active": true,
+    "price_amount": null,
+    "availability": "on_order",
+    "orderable": false,
+    "units_per_package": 1,
+    "create_only": true,
+    "modify_existing_products": false
+  },
+  "checks": {
+    "production_db_modified": false,
+    "apply_run": false,
+    "merge_used": false,
+    "existing_products_modified": false
+  }
+}

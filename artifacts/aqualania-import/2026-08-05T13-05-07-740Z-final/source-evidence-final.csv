@@ -1,0 +1,6 @@
+page,url,http_status,bytes,error
+product,https://aqualania.ru/product,200,144954,
+enproduct,https://aqualania.ru/enproduct,200,139715,
+home,https://aqualania.ru/,200,135505,
+sitemap,https://aqualania.ru/sitemap.xml,200,582,
+robots,https://aqualania.ru/robots.txt,200,182,
