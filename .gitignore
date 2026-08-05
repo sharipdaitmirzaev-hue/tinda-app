@@ -69,3 +69,12 @@ artifacts/bavaria-import/image-completion-*/source-downloads/
 
 # Regenerable PNG sidecars of Bavaria processed webp
 artifacts/bavaria-import/image-completion-*/processed/*.png
+
+# AquAlania official source downloads (regenerate via import:aqualania:stage1)
+artifacts/aqualania-import/**/source-downloads/
+artifacts/aqualania-import/**/raw-html/
+
+# Local regenerable caches / bytecode
+/tmp/
+scripts/__pycache__/
+**/__pycache__/

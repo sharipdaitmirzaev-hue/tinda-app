@@ -1,0 +1,7 @@
+line,category,category_slug,category_id,rule
+PREMIUM (non-cola),Лимонады,limonady,a8af36d2-ef7a-49ce-8aea-42fdf99359ae,premium glass lemonades → limonady
+PREMIUM Cola,Кола,kola,34bee47b-61c3-4e15-81db-75d58ecf018b,cola glass → kola
+WATER sparkling,Газированная вода,voda-gazirovannaya,81730d5f-f669-4ea0-b6af-e0f7d645a8fa,mineral sparkling water
+WATER still,Негазированная вода,voda-negazirovannaya,977a592b-8d39-4bac-afe4-a7d17687657d,mineral still water
+LIGHT,Газированные напитки,gazirovannye-napitki,a98cf12f-e064-4b67-93ef-0a9fdb47bb71,sugar-free light line
+CAN,Газированные напитки,gazirovannye-napitki,a98cf12f-e064-4b67-93ef-0a9fdb47bb71,aluminum can line

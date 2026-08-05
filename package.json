@@ -24,7 +24,11 @@
     "import:bavaria:apply": "tsx scripts/import-bavaria.ts apply",
     "import:bavaria:preflight": "python3 scripts/bavaria-preflight-apply.py",
     "import:bavaria:pdf-ingest": "python3 scripts/bavaria-pdf-ingest.py",
-    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-ingest.py && python3 scripts/bavaria-pdf-site-merge.py"
+    "import:bavaria:pdf-review": "python3 scripts/bavaria-pdf-ingest.py && python3 scripts/bavaria-pdf-site-merge.py",
+    "import:aqualania:discover": "tsx scripts/import-aqualania.ts discover",
+    "import:aqualania:dry-run": "tsx scripts/import-aqualania.ts dry-run",
+    "import:aqualania:stage1": "python3 scripts/aqualania-stage1.py",
+    "import:aqualania:apply": "tsx scripts/import-aqualania.ts apply"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1095.0",
