@@ -26,3 +26,8 @@ npm run import:aqualania:apply -- \
   --backup-path="<path>" \
   --manifest="artifacts/aqualania-import/2026-08-05T13-05-07-740Z-final/approved-import-manifest-final.json"
 ```
+
+## Production apply (2026-08-05)
+
+See `production-apply-2026-08-05/PRODUCTION-APPLY-REPORT.md`.
+Created 25 / skipped 0 / errors 0; idempotent second apply skipped 25.
