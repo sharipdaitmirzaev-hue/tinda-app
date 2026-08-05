@@ -1,0 +1,43 @@
+{
+  "fetched_at": "2026-08-05T07:27:40Z",
+  "sparkling": {
+    "glass_05": [
+      "Кола-апельсин",
+      "Апельсин-кориандр",
+      "Тархун",
+      "Груша",
+      "Фейхоа-Шелковица",
+      "Мохито",
+      "Гранат"
+    ],
+    "pet_05": [
+      "Кола-апельсин",
+      "Апельсин",
+      "Тархун",
+      "Груша",
+      "Мохито"
+    ],
+    "pet_15": [
+      "Кола-апельсин",
+      "Апельсин",
+      "Тархун",
+      "Груша"
+    ],
+    "grapefruit_comment_only": true
+  },
+  "water": {
+    "still": true,
+    "gaz": true,
+    "packs_confirmed": true,
+    "pack_labels": [
+      "СТЕКЛО 0,5Л",
+      "ПЭТ 0,5Л",
+      "ПЭТ 1,5Л"
+    ]
+  },
+  "glass_image_order_note": "Official glass lineup L→R ends with Гранат then Мохито; HTML list order is Мохито then Гранат. Crops mapped by visual identity.",
+  "frutimix_tastes": [
+    "Мультифрукт",
+    "Красный апельсин"
+  ]
+}

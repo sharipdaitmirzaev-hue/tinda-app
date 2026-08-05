@@ -64,6 +64,11 @@ artifacts/bavaria-import/**/renders-small/
 # Bavaria image-completion official source downloads (regenerate via script)
 artifacts/bavaria-import/image-completion-*/source-downloads/
 
+# Daryal stage2 regenerable downloads / debug crops
+artifacts/daryal-import/**/source-downloads/
+artifacts/daryal-import/**/raw-html/
+artifacts/daryal-import/stage2-work/
+
 # Local DB dumps from agent/VPS rehearsal (never commit)
 /backups/
 
