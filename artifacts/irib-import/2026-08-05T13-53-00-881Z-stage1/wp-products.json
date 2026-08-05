@@ -1,0 +1,4817 @@
+[
+  {
+    "id": 1731,
+    "date": "2025-02-27T14:41:30",
+    "date_gmt": "2025-02-27T14:41:30",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1731"
+    },
+    "modified": "2025-03-04T09:24:19",
+    "modified_gmt": "2025-03-04T09:24:19",
+    "slug": "profi-sport-energy-so-vkusom-guarana",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/profi-sport-energy-so-vkusom-guarana/",
+    "title": {
+      "rendered": "PROFI SPORT ENERGY со вкусом гуарана"
+    },
+    "content": {
+      "rendered": "\n<p>Идеально подходит для тренировок, повышая работоспособность и помогая преодолеть физическую и умственную усталость. </p>\n\n\n\n<p>Рекомендовано: 1 бутылка перед силовыми, беговыми тренировками.</p>\n\n\n\n<p>Присутствует кофеин, который помогает избавиться от жира, увеличивает силу и выносливость.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Идеально подходит для тренировок, повышая работоспособность и помогая преодолеть физическую и умственную усталость. Рекомендовано: 1 бутылка перед силовыми, беговыми тренировками. Присутствует кофеин, который помогает избавиться от жира, увеличивает силу и выносливость.</p>\n",
+      "protected": false
+    },
+    "featured_media": 1756,
+    "template": "",
+    "class_list": [
+      "post-1731",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-sportivnye-napitki"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1731"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1756"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1731"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1466,
+    "date": "2024-02-15T09:56:32",
+    "date_gmt": "2024-02-15T09:56:32",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1466"
+    },
+    "modified": "2024-02-15T10:50:30",
+    "modified_gmt": "2024-02-15T10:50:30",
+    "slug": "profi-sport-bcaa-chernika",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/profi-sport-bcaa-chernika/",
+    "title": {
+      "rendered": "PROFI SPORT BCAA «Черника»"
+    },
+    "content": {
+      "rendered": "\n<p>Лейцин &#8212; снижает уровень сахара в крови, способствуя усилению выработки гормона роста, увеличению мышечной массы</p>\n<p>Валин &#8212; улучшает азотистый баланс, способствует регенерации поврежденных волокон мышечной ткани, препятствует разрушению белка</p>\n<p>Изолейцин &#8212; стабилизирует уровень сахара в крови, ускоряет восстановление поврежденных мышечных тканей. Оптимальное соотношение &#8212; BCAA 2:1-1</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Лейцин &#8212; снижает уровень сахара в крови, способствуя усилению выработки гормона роста, увеличению мышечной массы Валин &#8212; улучшает азотистый баланс, способствует регенерации поврежденных волокон мышечной ткани, препятствует разрушению белка Изолейцин &#8212; стабилизирует уровень сахара в крови, ускоряет восстановление поврежденных мышечных тканей. Оптимальное соотношение &#8212; BCAA 2:1-1</p>\n",
+      "protected": false
+    },
+    "featured_media": 1473,
+    "template": "",
+    "class_list": [
+      "post-1466",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-sportivnye-napitki"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1466"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1473"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1466"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1421,
+    "date": "2023-11-28T05:22:39",
+    "date_gmt": "2023-11-28T05:22:39",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1421"
+    },
+    "modified": "2023-11-28T05:22:39",
+    "modified_gmt": "2023-11-28T05:22:39",
+    "slug": "limonad-mohito",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-mohito/",
+    "title": {
+      "rendered": "Лимонад мохито"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1213,
+    "template": "",
+    "class_list": [
+      "post-1421",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-stekle"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1421"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1213"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1421"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1225,
+    "date": "2023-09-05T15:29:23",
+    "date_gmt": "2023-09-05T15:29:23",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1225"
+    },
+    "modified": "2023-11-28T04:43:13",
+    "modified_gmt": "2023-11-28T04:43:13",
+    "slug": "limonad-grusha-v-pet",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-grusha-v-pet/",
+    "title": {
+      "rendered": "Лимонад «Груша» в ПЭТ"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1226,
+    "template": "",
+    "class_list": [
+      "post-1225",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-pet"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1225"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1226"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1225"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1224,
+    "date": "2023-09-05T15:28:52",
+    "date_gmt": "2023-09-05T15:28:52",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1224"
+    },
+    "modified": "2023-09-05T16:26:38",
+    "modified_gmt": "2023-09-05T16:26:38",
+    "slug": "limonad-mohito-v-pet",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-mohito-v-pet/",
+    "title": {
+      "rendered": "Лимонад «Мохито» в ПЭТ"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1229,
+    "template": "",
+    "class_list": [
+      "post-1224",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-pet"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1224"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1229"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1224"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1222,
+    "date": "2023-09-05T15:27:20",
+    "date_gmt": "2023-09-05T15:27:20",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1222"
+    },
+    "modified": "2023-09-05T16:33:05",
+    "modified_gmt": "2023-09-05T16:33:05",
+    "slug": "limonad-apelsin-v-pet",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-apelsin-v-pet/",
+    "title": {
+      "rendered": "Лимонад «Апельсин» в ПЭТ"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1231,
+    "template": "",
+    "class_list": [
+      "post-1222",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-pet"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1222"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1231"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1222"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1221,
+    "date": "2023-09-05T15:24:46",
+    "date_gmt": "2023-09-05T15:24:46",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1221"
+    },
+    "modified": "2023-09-05T16:35:21",
+    "modified_gmt": "2023-09-05T16:35:21",
+    "slug": "limonad-cola-v-pet",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-cola-v-pet/",
+    "title": {
+      "rendered": "Лимонад «Cola» в ПЭТ"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1237,
+    "template": "",
+    "class_list": [
+      "post-1221",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-pet"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1221"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1237"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1221"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1220,
+    "date": "2023-09-05T15:22:18",
+    "date_gmt": "2023-09-05T15:22:18",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1220"
+    },
+    "modified": "2023-09-05T16:34:15",
+    "modified_gmt": "2023-09-05T16:34:15",
+    "slug": "limonad-s-mango-v-pet",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-s-mango-v-pet/",
+    "title": {
+      "rendered": "Лимонад «Манго» в ПЭТ"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1235,
+    "template": "",
+    "class_list": [
+      "post-1220",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-pet"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1220"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1235"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1220"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1204,
+    "date": "2023-09-05T14:07:33",
+    "date_gmt": "2023-09-05T14:07:33",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1204"
+    },
+    "modified": "2023-09-05T14:42:53",
+    "modified_gmt": "2023-09-05T14:42:53",
+    "slug": "limonad-s-ananasom",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-s-ananasom/",
+    "title": {
+      "rendered": "Лимонад с ананасом"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1211,
+    "template": "",
+    "class_list": [
+      "post-1204",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-stekle"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1204"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1211"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1204"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1202,
+    "date": "2023-09-05T14:05:06",
+    "date_gmt": "2023-09-05T14:05:06",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1202"
+    },
+    "modified": "2023-09-05T14:52:45",
+    "modified_gmt": "2023-09-05T14:52:45",
+    "slug": "limonad-grusha",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-grusha/",
+    "title": {
+      "rendered": "Лимонад с грушей"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1208,
+    "template": "",
+    "class_list": [
+      "post-1202",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-stekle"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1202"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1208"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1202"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1197,
+    "date": "2023-09-05T13:50:48",
+    "date_gmt": "2023-09-05T13:50:48",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1197"
+    },
+    "modified": "2023-09-05T14:00:56",
+    "modified_gmt": "2023-09-05T14:00:56",
+    "slug": "limonad-s-shipovnikom",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/limonad-s-shipovnikom/",
+    "title": {
+      "rendered": "Лимонад с шиповником"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1199,
+    "template": "",
+    "class_list": [
+      "post-1197",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-stekle"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1197"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1199"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1197"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1191,
+    "date": "2023-09-05T11:56:25",
+    "date_gmt": "2023-09-05T11:56:25",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1191"
+    },
+    "modified": "2023-09-05T13:09:43",
+    "modified_gmt": "2023-09-05T13:09:43",
+    "slug": "mindari-s-mango",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/mindari-s-mango/",
+    "title": {
+      "rendered": "Лимонад с манго"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 1192,
+    "template": "",
+    "class_list": [
+      "post-1191",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-limonadi-v-stekle"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1191"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1192"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1191"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1035,
+    "date": "2023-05-18T13:14:33",
+    "date_gmt": "2023-05-18T13:14:33",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=1035"
+    },
+    "modified": "2023-07-28T11:48:14",
+    "modified_gmt": "2023-07-28T11:48:14",
+    "slug": "rodnikovaya-svezhest-3",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-svezhest-3/",
+    "title": {
+      "rendered": "&#171;Чегери&#187; &#8212; родниковая вода"
+    },
+    "content": {
+      "rendered": "\n<p>Вода минеральная природная негазированная высшей категории 0,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Вода минеральная природная негазированная высшей категории 0,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1182,
+    "template": "",
+    "class_list": [
+      "post-1035",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/1035"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1182"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=1035"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 884,
+    "date": "2022-08-26T12:27:15",
+    "date_gmt": "2022-08-26T12:27:15",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=884"
+    },
+    "modified": "2025-11-21T14:07:11",
+    "modified_gmt": "2025-11-21T14:07:11",
+    "slug": "ice-bar-mango-klubnika",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/ice-bar-mango-klubnika/",
+    "title": {
+      "rendered": "Ice Bar манго-клубника"
+    },
+    "content": {
+      "rendered": "\n<p>Холодный чай 0,5/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Холодный чай 0,5/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 989,
+    "template": "",
+    "class_list": [
+      "post-884",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-chai-holodnyj"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/884"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/989"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=884"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 823,
+    "date": "2022-08-23T15:52:32",
+    "date_gmt": "2022-08-23T15:52:32",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=823"
+    },
+    "modified": "2023-12-27T09:05:12",
+    "modified_gmt": "2023-12-27T09:05:12",
+    "slug": "multifruktovyj-sok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/multifruktovyj-sok/",
+    "title": {
+      "rendered": "Мультифруктовый сок"
+    },
+    "content": {
+      "rendered": "\n<p>0,33/0,5/0.75л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,33/0,5/0.75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 965,
+    "template": "",
+    "class_list": [
+      "post-823",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/823"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/965"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=823"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 818,
+    "date": "2022-08-23T15:33:34",
+    "date_gmt": "2022-08-23T15:33:34",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=818"
+    },
+    "modified": "2025-11-26T09:33:34",
+    "modified_gmt": "2025-11-26T09:33:34",
+    "slug": "818",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/818/",
+    "title": {
+      "rendered": "Талих Спорт «Гранат»"
+    },
+    "content": {
+      "rendered": "\n<p>Освежающий напиток со вкусом манго на основе воды «Талих» 0,6л</p>\n\n\n\n<p></p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Освежающий напиток со вкусом манго на основе воды «Талих» 0,6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1796,
+    "template": "",
+    "class_list": [
+      "post-818",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/818"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1796"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=818"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 788,
+    "date": "2022-08-23T14:48:14",
+    "date_gmt": "2022-08-23T14:48:14",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=788"
+    },
+    "modified": "2023-11-27T11:07:01",
+    "modified_gmt": "2023-11-27T11:07:01",
+    "slug": "irib-mango",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/irib-mango/",
+    "title": {
+      "rendered": "Манговый нектар"
+    },
+    "content": {
+      "rendered": "\n<p>0,5/0,33л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,5/0,33л</p>\n",
+      "protected": false
+    },
+    "featured_media": 972,
+    "template": "",
+    "class_list": [
+      "post-788",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/788"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/972"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=788"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 787,
+    "date": "2022-08-23T14:26:08",
+    "date_gmt": "2022-08-23T14:26:08",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=787"
+    },
+    "modified": "2023-11-27T11:45:34",
+    "modified_gmt": "2023-11-27T11:45:34",
+    "slug": "tarki-tau-steklo",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/tarki-tau-steklo/",
+    "title": {
+      "rendered": "Тарки-Тау стекло"
+    },
+    "content": {
+      "rendered": "\n<p>0,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 985,
+    "template": "",
+    "class_list": [
+      "post-787",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-mineral-water"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/787"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/985"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=787"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 770,
+    "date": "2021-05-02T19:13:22",
+    "date_gmt": "2021-05-02T19:13:22",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=770"
+    },
+    "modified": "2023-10-24T11:51:00",
+    "modified_gmt": "2023-10-24T11:51:00",
+    "slug": "rodnikovaya-svezhest-2",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-svezhest-2/",
+    "title": {
+      "rendered": "Родниковая свежесть"
+    },
+    "content": {
+      "rendered": "\n<p> Вода минеральная природная негазированная высшей категории 19л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Вода минеральная природная негазированная высшей категории 19л</p>\n",
+      "protected": false
+    },
+    "featured_media": 772,
+    "template": "",
+    "class_list": [
+      "post-770",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/770"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/772"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=770"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 756,
+    "date": "2021-04-12T22:53:32",
+    "date_gmt": "2021-04-12T22:53:32",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=756"
+    },
+    "modified": "2023-11-27T11:07:46",
+    "modified_gmt": "2023-11-27T11:07:46",
+    "slug": "apelsinovyj-sok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/apelsinovyj-sok/",
+    "title": {
+      "rendered": "Апельсиновый сок"
+    },
+    "content": {
+      "rendered": "\n<p>0,33/0,5/0,75л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,33/0,5/0,75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 962,
+    "template": "",
+    "class_list": [
+      "post-756",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/756"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/962"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=756"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 749,
+    "date": "2021-04-12T22:03:46",
+    "date_gmt": "2021-04-12T22:03:46",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=749"
+    },
+    "modified": "2021-05-02T15:53:37",
+    "modified_gmt": "2021-05-02T15:53:37",
+    "slug": "ananas-0-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/ananas-0-6l/",
+    "title": {
+      "rendered": "Ананас"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0.6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0.6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 751,
+    "template": "",
+    "class_list": [
+      "post-749",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-gold-grand"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/749"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/751"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=749"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 746,
+    "date": "2021-04-12T22:01:12",
+    "date_gmt": "2021-04-12T22:01:12",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=746"
+    },
+    "modified": "2023-10-24T11:37:41",
+    "modified_gmt": "2023-10-24T11:37:41",
+    "slug": "grusha-0-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/grusha-0-6l/",
+    "title": {
+      "rendered": "Груша"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0,6/ 1,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0,6/ 1,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 747,
+    "template": "",
+    "class_list": [
+      "post-746",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-gold-grand"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/746"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/747"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=746"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 743,
+    "date": "2021-04-12T21:56:19",
+    "date_gmt": "2021-04-12T21:56:19",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=743"
+    },
+    "modified": "2023-10-24T11:48:47",
+    "modified_gmt": "2023-10-24T11:48:47",
+    "slug": "multifrukt-0-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/multifrukt-0-6l/",
+    "title": {
+      "rendered": "Мультифрукт"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0.6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0.6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 745,
+    "template": "",
+    "class_list": [
+      "post-743",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-gold-grand"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/743"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/745"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=743"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 740,
+    "date": "2021-04-12T21:48:56",
+    "date_gmt": "2021-04-12T21:48:56",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=740"
+    },
+    "modified": "2021-05-02T15:53:54",
+    "modified_gmt": "2021-05-02T15:53:54",
+    "slug": "mohito-0-6l-negazirovannyj",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/mohito-0-6l-negazirovannyj/",
+    "title": {
+      "rendered": "Мохито негазированный"
+    },
+    "content": {
+      "rendered": "\n<p>напиток негазированный 0,6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток негазированный 0,6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 741,
+    "template": "",
+    "class_list": [
+      "post-740",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-gold-grand"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/740"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/741"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=740"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 737,
+    "date": "2021-04-12T21:45:31",
+    "date_gmt": "2021-04-12T21:45:31",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=737"
+    },
+    "modified": "2023-10-24T11:46:41",
+    "modified_gmt": "2023-10-24T11:46:41",
+    "slug": "mohito-0-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/mohito-0-6l/",
+    "title": {
+      "rendered": "Мохито"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0,6л/ 1,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0,6л/ 1,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 739,
+    "template": "",
+    "class_list": [
+      "post-737",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-gold-grand"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/737"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/739"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=737"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 733,
+    "date": "2021-04-12T21:42:24",
+    "date_gmt": "2021-04-12T21:42:24",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=733"
+    },
+    "modified": "2023-10-24T12:01:02",
+    "modified_gmt": "2023-10-24T12:01:02",
+    "slug": "tarhun-3",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/tarhun-3/",
+    "title": {
+      "rendered": "Тархун"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0,6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0,6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 734,
+    "template": "",
+    "class_list": [
+      "post-733",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-gold-grand"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/733"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/734"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=733"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 718,
+    "date": "2021-04-12T19:32:45",
+    "date_gmt": "2021-04-12T19:32:45",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=718"
+    },
+    "modified": "2024-04-01T13:46:37",
+    "modified_gmt": "2024-04-01T13:46:37",
+    "slug": "yablochnyj-sok-3l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/yablochnyj-sok-3l/",
+    "title": {
+      "rendered": "Яблочный сок 3л"
+    },
+    "content": {
+      "rendered": "\n<p>Яблочный сок 3л. Меры предосторожности: после вскрытия упаковки хранить в холодильнике.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Яблочный сок 3л. Меры предосторожности: после вскрытия упаковки хранить в холодильнике.</p>\n",
+      "protected": false
+    },
+    "featured_media": 719,
+    "template": "",
+    "class_list": [
+      "post-718",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/718"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/719"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=718"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 704,
+    "date": "2021-04-12T19:00:02",
+    "date_gmt": "2021-04-12T19:00:02",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=704"
+    },
+    "modified": "2023-11-27T12:04:35",
+    "modified_gmt": "2023-11-27T12:04:35",
+    "slug": "yablochnyj-nektar",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/yablochnyj-nektar/",
+    "title": {
+      "rendered": "Яблочный нектар"
+    },
+    "content": {
+      "rendered": "\n<p>0,5/0,75/3л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,5/0,75/3л</p>\n",
+      "protected": false
+    },
+    "featured_media": 893,
+    "template": "",
+    "class_list": [
+      "post-704",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/704"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/893"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=704"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 701,
+    "date": "2021-04-12T18:50:45",
+    "date_gmt": "2021-04-12T18:50:45",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=701"
+    },
+    "modified": "2024-04-01T13:45:57",
+    "modified_gmt": "2024-04-01T13:45:57",
+    "slug": "yablochno-abrikosovyj-nektar-3l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/yablochno-abrikosovyj-nektar-3l/",
+    "title": {
+      "rendered": "Яблочно-абрикосовый нектар 3л"
+    },
+    "content": {
+      "rendered": "\n<p> Яблочно-абрикосовый нектар 3л. Меры предосторожности: беречь от воздействия прямого солнечного света. </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Яблочно-абрикосовый нектар 3л. Меры предосторожности: беречь от воздействия прямого солнечного света.</p>\n",
+      "protected": false
+    },
+    "featured_media": 702,
+    "template": "",
+    "class_list": [
+      "post-701",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/701"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/702"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=701"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 698,
+    "date": "2021-04-12T18:45:52",
+    "date_gmt": "2021-04-12T18:45:52",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=698"
+    },
+    "modified": "2024-04-01T13:46:11",
+    "modified_gmt": "2024-04-01T13:46:11",
+    "slug": "yablochnyj-nektar-3l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/yablochnyj-nektar-3l/",
+    "title": {
+      "rendered": "Яблочный нектар 3л"
+    },
+    "content": {
+      "rendered": "\n<p> Яблочный нектар 3л. Меры предосторожности: беречь от воздействия прямого солнечного света. </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Яблочный нектар 3л. Меры предосторожности: беречь от воздействия прямого солнечного света.</p>\n",
+      "protected": false
+    },
+    "featured_media": 700,
+    "template": "",
+    "class_list": [
+      "post-698",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/698"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/700"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=698"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 695,
+    "date": "2021-04-12T18:31:35",
+    "date_gmt": "2021-04-12T18:31:35",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=695"
+    },
+    "modified": "2024-04-01T13:46:24",
+    "modified_gmt": "2024-04-01T13:46:24",
+    "slug": "abrikosovyj-nektar",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/abrikosovyj-nektar/",
+    "title": {
+      "rendered": "Абрикосовый нектар 3л"
+    },
+    "content": {
+      "rendered": "\n<p> Абрикосовый нектар 3л. Меры предосторожности: беречь от воздействия прямого солнечного света. </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Абрикосовый нектар 3л. Меры предосторожности: беречь от воздействия прямого солнечного света.</p>\n",
+      "protected": false
+    },
+    "featured_media": 697,
+    "template": "",
+    "class_list": [
+      "post-695",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/695"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/697"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=695"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 683,
+    "date": "2021-04-04T12:15:15",
+    "date_gmt": "2021-04-04T12:15:15",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=683"
+    },
+    "modified": "2022-08-26T11:53:28",
+    "modified_gmt": "2022-08-26T11:53:28",
+    "slug": "multifrukt-2",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/multifrukt-2/",
+    "title": {
+      "rendered": "Мультифрукт"
+    },
+    "content": {
+      "rendered": "\n<p>0.75л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0.75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 679,
+    "template": "",
+    "class_list": [
+      "post-683",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/683"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/679"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=683"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 568,
+    "date": "2021-01-07T14:14:48",
+    "date_gmt": "2021-01-07T14:14:48",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=568"
+    },
+    "modified": "2025-03-04T09:27:21",
+    "modified_gmt": "2025-03-04T09:27:21",
+    "slug": "isotonic",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/isotonic/",
+    "title": {
+      "rendered": "PROFI SPORT ISOTONIC"
+    },
+    "content": {
+      "rendered": "\n<p>Спортивный негазированный напиток со вкусом гуавы 0,5л</p>\n\n\n\n<p>Помогает сокращать мышцы во время физической активности и компенсировать потерю солей во время тренировок.</p>\n\n\n\n<p>Рекомендовано: часть изотоника нужно выпить за 30 – 60 минут до начала тренировок, остальную долю напитка выпивают во время тренировки.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Спортивный негазированный напиток со вкусом гуавы 0,5л Помогает сокращать мышцы во время физической активности и компенсировать потерю солей во время тренировок. Рекомендовано: часть изотоника нужно выпить за 30 – 60 минут до начала тренировок, остальную долю напитка выпивают во время тренировки.</p>\n",
+      "protected": false
+    },
+    "featured_media": 869,
+    "template": "",
+    "class_list": [
+      "post-568",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-sportivnye-napitki"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/568"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/869"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=568"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 566,
+    "date": "2021-01-07T14:14:07",
+    "date_gmt": "2021-01-07T14:14:07",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=566"
+    },
+    "modified": "2025-02-28T10:16:45",
+    "modified_gmt": "2025-02-28T10:16:45",
+    "slug": "energy",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/energy/",
+    "title": {
+      "rendered": "PROFI SPORT ENERGY"
+    },
+    "content": {
+      "rendered": "\n<p> Спортивный негазированный напиток со вкусом гуараны  0,5 л</p>\n\n\n\n<p>Увеличивает выносливость, повышает работоспособность и готовит организм к интенсивным тренировкам, способствует снижению жировой массы и придает бодрость.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Спортивный негазированный напиток со вкусом гуараны 0,5 л Увеличивает выносливость, повышает работоспособность и готовит организм к интенсивным тренировкам, способствует снижению жировой массы и придает бодрость.</p>\n",
+      "protected": false
+    },
+    "featured_media": 871,
+    "template": "",
+    "class_list": [
+      "post-566",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-sportivnye-napitki"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/566"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/871"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=566"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 564,
+    "date": "2021-01-07T14:13:29",
+    "date_gmt": "2021-01-07T14:13:29",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=564"
+    },
+    "modified": "2025-03-04T09:30:27",
+    "modified_gmt": "2025-03-04T09:30:27",
+    "slug": "bacaa",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bacaa/",
+    "title": {
+      "rendered": "PROFI SPORT BCAA"
+    },
+    "content": {
+      "rendered": "\n<p>Спортивный негазированный напиток со вкусом апельсина 0,5л повышает выносливость, ускоряет восстановление мышечных белков.</p>\n\n\n\n<p>Рекомендовано: чтобы быстро восстановить уровень аминокислот в крови принимать BCAA можно до, во время и после тренировки.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Спортивный негазированный напиток со вкусом апельсина 0,5л повышает выносливость, ускоряет восстановление мышечных белков. Рекомендовано: чтобы быстро восстановить уровень аминокислот в крови принимать BCAA можно до, во время и после тренировки.</p>\n",
+      "protected": false
+    },
+    "featured_media": 873,
+    "template": "",
+    "class_list": [
+      "post-564",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-sportivnye-napitki"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/564"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/873"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=564"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 559,
+    "date": "2021-01-07T14:02:48",
+    "date_gmt": "2021-01-07T14:02:48",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=559"
+    },
+    "modified": "2025-03-04T09:29:37",
+    "modified_gmt": "2025-03-04T09:29:37",
+    "slug": "l_carnitine",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/l_carnitine/",
+    "title": {
+      "rendered": "PROFI SPORT L_CARNITINE"
+    },
+    "content": {
+      "rendered": "\n<p>Напиток способствующий приливу сил и энергии перед тренировкой.</p>\n\n\n\n<p></p>\n\n\n\n<p>Помогает превратить жир в мышечные клетки, что поможет снизить уровень жировой ткани в организме.</p>\n\n\n\n<p>Рекомендовано: выпить за 15 минут до тренировки и после.</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Напиток способствующий приливу сил и энергии перед тренировкой. Помогает превратить жир в мышечные клетки, что поможет снизить уровень жировой ткани в организме. Рекомендовано: выпить за 15 минут до тренировки и после.</p>\n",
+      "protected": false
+    },
+    "featured_media": 875,
+    "template": "",
+    "class_list": [
+      "post-559",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-sportivnye-napitki"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/559"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/875"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=559"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 546,
+    "date": "2020-07-30T15:22:24",
+    "date_gmt": "2020-07-30T15:22:24",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=546"
+    },
+    "modified": "2021-05-02T18:09:17",
+    "modified_gmt": "2021-05-02T18:09:17",
+    "slug": "bro-lemon-tarhun",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bro-lemon-tarhun/",
+    "title": {
+      "rendered": "Bro lemon Тархун"
+    },
+    "content": {
+      "rendered": "\n<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 547,
+    "template": "",
+    "class_list": [
+      "post-546",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/546"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/547"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=546"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 540,
+    "date": "2020-07-30T15:19:17",
+    "date_gmt": "2020-07-30T15:19:17",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=540"
+    },
+    "modified": "2021-05-02T18:15:36",
+    "modified_gmt": "2021-05-02T18:15:36",
+    "slug": "bro-lemon-apelsin",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bro-lemon-apelsin/",
+    "title": {
+      "rendered": "Bro lemon Апельсин"
+    },
+    "content": {
+      "rendered": "\n<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 541,
+    "template": "",
+    "class_list": [
+      "post-540",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/540"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/541"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=540"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 537,
+    "date": "2020-07-30T15:00:08",
+    "date_gmt": "2020-07-30T15:00:08",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=537"
+    },
+    "modified": "2021-05-02T18:11:15",
+    "modified_gmt": "2021-05-02T18:11:15",
+    "slug": "bro-lemon-ananas",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bro-lemon-ananas/",
+    "title": {
+      "rendered": "Bro lemon Ананас"
+    },
+    "content": {
+      "rendered": "\n<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 538,
+    "template": "",
+    "class_list": [
+      "post-537",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/537"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/538"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=537"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 534,
+    "date": "2020-07-30T14:39:45",
+    "date_gmt": "2020-07-30T14:39:45",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=534"
+    },
+    "modified": "2021-05-02T18:16:19",
+    "modified_gmt": "2021-05-02T18:16:19",
+    "slug": "bro-lemon-multifrukt",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bro-lemon-multifrukt/",
+    "title": {
+      "rendered": "Bro lemon Мультифрукт"
+    },
+    "content": {
+      "rendered": "\n<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 535,
+    "template": "",
+    "class_list": [
+      "post-534",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/534"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/535"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=534"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 533,
+    "date": "2020-07-30T14:08:39",
+    "date_gmt": "2020-07-30T14:08:39",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=533"
+    },
+    "modified": "2023-12-27T09:08:16",
+    "modified_gmt": "2023-12-27T09:08:16",
+    "slug": "ice-bar-persik",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/ice-bar-persik/",
+    "title": {
+      "rendered": "Ice Bar Персик"
+    },
+    "content": {
+      "rendered": "\n<p>Холодный чай 0,5/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Холодный чай 0,5/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 877,
+    "template": "",
+    "class_list": [
+      "post-533",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-chai-holodnyj"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/533"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/877"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=533"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 543,
+    "date": "2020-07-30T11:10:36",
+    "date_gmt": "2020-07-30T11:10:36",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=543"
+    },
+    "modified": "2021-05-02T18:10:23",
+    "modified_gmt": "2021-05-02T18:10:23",
+    "slug": "bro-lemon-mahito",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bro-lemon-mahito/",
+    "title": {
+      "rendered": "Bro lemon Мохито"
+    },
+    "content": {
+      "rendered": "\n<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 544,
+    "template": "",
+    "class_list": [
+      "post-543",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/543"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/544"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=543"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 503,
+    "date": "2020-04-30T12:36:37",
+    "date_gmt": "2020-04-30T12:36:37",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=503"
+    },
+    "modified": "2023-11-28T05:10:36",
+    "modified_gmt": "2023-11-28T05:10:36",
+    "slug": "rodnichok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnichok/",
+    "title": {
+      "rendered": "Родничок"
+    },
+    "content": {
+      "rendered": "\n<p>Вода питьевая негазированная высшей категории 0,33л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Вода питьевая негазированная высшей категории 0,33л</p>\n",
+      "protected": false
+    },
+    "featured_media": 982,
+    "template": "",
+    "class_list": [
+      "post-503",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/503"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/982"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=503"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 502,
+    "date": "2020-04-06T20:13:49",
+    "date_gmt": "2020-04-06T20:13:49",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=502"
+    },
+    "modified": "2022-10-24T00:08:35",
+    "modified_gmt": "2022-10-24T00:08:35",
+    "slug": "ice-bar-yagodnyj",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/ice-bar-yagodnyj/",
+    "title": {
+      "rendered": "Ice Bar Ягодный"
+    },
+    "content": {
+      "rendered": "\n<p>Холодный чай 0,5/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Холодный чай 0,5/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 993,
+    "template": "",
+    "class_list": [
+      "post-502",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-chai-holodnyj"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/502"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/993"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=502"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 483,
+    "date": "2020-04-06T19:42:37",
+    "date_gmt": "2020-04-06T19:42:37",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=483"
+    },
+    "modified": "2021-05-02T18:17:37",
+    "modified_gmt": "2021-05-02T18:17:37",
+    "slug": "bro-lemon-cola",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bro-lemon-cola/",
+    "title": {
+      "rendered": "Bro lemon Cola"
+    },
+    "content": {
+      "rendered": "\n<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 472,
+    "template": "",
+    "class_list": [
+      "post-483",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/483"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/472"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=483"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 471,
+    "date": "2020-04-06T19:40:48",
+    "date_gmt": "2020-04-06T19:40:48",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=471"
+    },
+    "modified": "2021-05-02T18:18:39",
+    "modified_gmt": "2021-05-02T18:18:39",
+    "slug": "bro-lemon-grusha",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/bro-lemon-grusha/",
+    "title": {
+      "rendered": "Bro lemon Груша"
+    },
+    "content": {
+      "rendered": "\n<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>газированный напиток 0,5л/1,25л</p>\n",
+      "protected": false
+    },
+    "featured_media": 475,
+    "template": "",
+    "class_list": [
+      "post-471",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/471"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/475"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=471"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 467,
+    "date": "2020-04-06T19:17:57",
+    "date_gmt": "2020-04-06T19:17:57",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=467"
+    },
+    "modified": "2022-08-26T11:57:59",
+    "modified_gmt": "2022-08-26T11:57:59",
+    "slug": "kvas",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/kvas/",
+    "title": {
+      "rendered": "Янтарный квас"
+    },
+    "content": {
+      "rendered": "\n<p>0.5/1.25/1,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0.5/1.25/1,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 881,
+    "template": "",
+    "class_list": [
+      "post-467",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-katalog-produktsii",
+      "catalog-kvas"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/467"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/881"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=467"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 466,
+    "date": "2020-04-06T19:07:41",
+    "date_gmt": "2020-04-06T19:07:41",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=466"
+    },
+    "modified": "2023-10-24T12:01:51",
+    "modified_gmt": "2023-10-24T12:01:51",
+    "slug": "tarhun",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/tarhun/",
+    "title": {
+      "rendered": "Тархун"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный</p>\n",
+      "protected": false
+    },
+    "featured_media": 681,
+    "template": "",
+    "class_list": [
+      "post-466",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/466"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/681"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=466"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 464,
+    "date": "2020-04-06T19:06:18",
+    "date_gmt": "2020-04-06T19:06:18",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=464"
+    },
+    "modified": "2021-04-04T12:28:23",
+    "modified_gmt": "2021-04-04T12:28:23",
+    "slug": "shipovnik",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/shipovnik/",
+    "title": {
+      "rendered": "Шиповник"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 680,
+    "template": "",
+    "class_list": [
+      "post-464",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/464"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/680"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=464"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 463,
+    "date": "2020-04-06T19:01:32",
+    "date_gmt": "2020-04-06T19:01:32",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=463"
+    },
+    "modified": "2023-10-24T11:45:13",
+    "modified_gmt": "2023-10-24T11:45:13",
+    "slug": "mohito",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/mohito/",
+    "title": {
+      "rendered": "Мохито"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 678,
+    "template": "",
+    "class_list": [
+      "post-463",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/463"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/678"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=463"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 462,
+    "date": "2020-04-06T19:00:08",
+    "date_gmt": "2020-04-06T19:00:08",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=462"
+    },
+    "modified": "2021-04-04T12:10:55",
+    "modified_gmt": "2021-04-04T12:10:55",
+    "slug": "granat",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/granat/",
+    "title": {
+      "rendered": "Гранат"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 676,
+    "template": "",
+    "class_list": [
+      "post-462",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/462"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/676"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=462"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 461,
+    "date": "2020-04-06T18:58:56",
+    "date_gmt": "2020-04-06T18:58:56",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=461"
+    },
+    "modified": "2023-10-24T11:43:36",
+    "modified_gmt": "2023-10-24T11:43:36",
+    "slug": "grusha",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/grusha/",
+    "title": {
+      "rendered": "Груша"
+    },
+    "content": {
+      "rendered": "\n<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 677,
+    "template": "",
+    "class_list": [
+      "post-461",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/461"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/677"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=461"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 443,
+    "date": "2020-04-06T18:55:10",
+    "date_gmt": "2020-04-06T18:55:10",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=443"
+    },
+    "modified": "2021-04-04T12:07:13",
+    "modified_gmt": "2021-04-04T12:07:13",
+    "slug": "ananas",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/ananas/",
+    "title": {
+      "rendered": "&#171;Ананас&#187;"
+    },
+    "content": {
+      "rendered": "\n<p>Напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Напиток газированный 0,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 674,
+    "template": "",
+    "class_list": [
+      "post-443",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/443"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/674"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=443"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 432,
+    "date": "2020-04-06T17:21:28",
+    "date_gmt": "2020-04-06T17:21:28",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=432"
+    },
+    "modified": "2025-11-26T09:08:16",
+    "modified_gmt": "2025-11-26T09:08:16",
+    "slug": "rodnikovaya-sport-limon-0-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-sport-limon-0-6l/",
+    "title": {
+      "rendered": "Талих Спорт &#171;Лимон&#187;"
+    },
+    "content": {
+      "rendered": "\n<p>Освежающий натуральный напиток на основе воды «Талих» 0,6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Освежающий натуральный напиток на основе воды «Талих» 0,6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1790,
+    "template": "",
+    "class_list": [
+      "post-432",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/432"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1790"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=432"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 415,
+    "date": "2020-04-06T17:20:53",
+    "date_gmt": "2020-04-06T17:20:53",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=415"
+    },
+    "modified": "2025-11-26T09:53:44",
+    "modified_gmt": "2025-11-26T09:53:44",
+    "slug": "rodnikovaya-svezhest",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-svezhest/",
+    "title": {
+      "rendered": "Талих"
+    },
+    "content": {
+      "rendered": "\n<p>Вода минеральная природная негазированная 1,5л  </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Вода минеральная природная негазированная 1,5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1807,
+    "template": "",
+    "class_list": [
+      "post-415",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/415"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1807"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=415"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 427,
+    "date": "2020-04-06T17:18:36",
+    "date_gmt": "2020-04-06T17:18:36",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=427"
+    },
+    "modified": "2025-11-26T09:09:54",
+    "modified_gmt": "2025-11-26T09:09:54",
+    "slug": "rodnikovaya-sport-klubnika-0-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-sport-klubnika-0-6l/",
+    "title": {
+      "rendered": "Талих Спорт &#171;Клубника&#187;"
+    },
+    "content": {
+      "rendered": "\n<p>Освежающий напиток со вкусом клубники на основе воды «Талих» 0,6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Освежающий напиток со вкусом клубники на основе воды «Талих» 0,6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1783,
+    "template": "",
+    "class_list": [
+      "post-427",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/427"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1783"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=427"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 426,
+    "date": "2020-04-06T17:10:43",
+    "date_gmt": "2020-04-06T17:10:43",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=426"
+    },
+    "modified": "2025-11-26T08:55:34",
+    "modified_gmt": "2025-11-26T08:55:34",
+    "slug": "rodnikovaya-sport-0-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-sport-0-6l/",
+    "title": {
+      "rendered": "Талих спорт"
+    },
+    "content": {
+      "rendered": "\n<p>Вода минеральная природная негазированная высшей категории 0,6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Вода минеральная природная негазированная высшей категории 0,6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1781,
+    "template": "",
+    "class_list": [
+      "post-426",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/426"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1781"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=426"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 419,
+    "date": "2020-04-06T17:03:32",
+    "date_gmt": "2020-04-06T17:03:32",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=419"
+    },
+    "modified": "2025-11-26T09:41:45",
+    "modified_gmt": "2025-11-26T09:41:45",
+    "slug": "rodnikovaya-svezhest-0-5l-2",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-svezhest-0-5l-2/",
+    "title": {
+      "rendered": "Талих"
+    },
+    "content": {
+      "rendered": "\n<p> Вода минеральная природная негазированная высшей категории 0,6л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Вода минеральная природная негазированная высшей категории 0,6л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1800,
+    "template": "",
+    "class_list": [
+      "post-419",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/419"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1800"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=419"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 416,
+    "date": "2020-04-06T16:49:58",
+    "date_gmt": "2020-04-06T16:49:58",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=416"
+    },
+    "modified": "2025-11-26T09:47:37",
+    "modified_gmt": "2025-11-26T09:47:37",
+    "slug": "rodnikovaya-svezhest-6l",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/rodnikovaya-svezhest-6l/",
+    "title": {
+      "rendered": "Талих"
+    },
+    "content": {
+      "rendered": "\n<p>Вода минеральная природная негазированная высшей категории 5л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>Вода минеральная природная негазированная высшей категории 5л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1802,
+    "template": "",
+    "class_list": [
+      "post-416",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-voda"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/416"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1802"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=416"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 406,
+    "date": "2020-04-06T15:20:52",
+    "date_gmt": "2020-04-06T15:20:52",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=406"
+    },
+    "modified": "2023-11-27T12:01:01",
+    "modified_gmt": "2023-11-27T12:01:01",
+    "slug": "yablochno-abrikosovyj-nektar",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/yablochno-abrikosovyj-nektar/",
+    "title": {
+      "rendered": "Яблочно-абрикосовый нектар"
+    },
+    "content": {
+      "rendered": "\n<p>0,5/0,75/3л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,5/0,75/3л</p>\n",
+      "protected": false
+    },
+    "featured_media": 976,
+    "template": "",
+    "class_list": [
+      "post-406",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/406"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/976"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=406"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 405,
+    "date": "2020-04-06T15:17:27",
+    "date_gmt": "2020-04-06T15:17:27",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=405"
+    },
+    "modified": "2023-11-27T11:17:38",
+    "modified_gmt": "2023-11-27T11:17:38",
+    "slug": "vishnevyj-nektar",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/vishnevyj-nektar/",
+    "title": {
+      "rendered": "Вишневый нектар"
+    },
+    "content": {
+      "rendered": "\n<p>0,33/0,5/0,75л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,33/0,5/0,75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1018,
+    "template": "",
+    "class_list": [
+      "post-405",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/405"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1018"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=405"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 400,
+    "date": "2020-04-06T15:02:06",
+    "date_gmt": "2020-04-06T15:02:06",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=400"
+    },
+    "modified": "2023-11-27T10:53:31",
+    "modified_gmt": "2023-11-27T10:53:31",
+    "slug": "persikovyj-nektar",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/persikovyj-nektar/",
+    "title": {
+      "rendered": "Персиковый нектар"
+    },
+    "content": {
+      "rendered": "\n<p>0,5/ 0,75л. </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,5/ 0,75л.</p>\n",
+      "protected": false
+    },
+    "featured_media": 979,
+    "template": "",
+    "class_list": [
+      "post-400",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/400"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/979"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=400"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 399,
+    "date": "2020-04-06T14:47:00",
+    "date_gmt": "2020-04-06T14:47:00",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=399"
+    },
+    "modified": "2023-11-27T11:23:36",
+    "modified_gmt": "2023-11-27T11:23:36",
+    "slug": "yablochnyj-sok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/yablochnyj-sok/",
+    "title": {
+      "rendered": "Яблочный сок"
+    },
+    "content": {
+      "rendered": "\n<p class=\"has-text-align-left\">0,33/0,5/0,75/3л</p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,33/0,5/0,75/3л</p>\n",
+      "protected": false
+    },
+    "featured_media": 960,
+    "template": "",
+    "class_list": [
+      "post-399",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/399"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/960"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=399"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 398,
+    "date": "2020-04-06T14:37:55",
+    "date_gmt": "2020-04-06T14:37:55",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=398"
+    },
+    "modified": "2023-11-28T04:40:15",
+    "modified_gmt": "2023-11-28T04:40:15",
+    "slug": "granatovyj-sok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/granatovyj-sok/",
+    "title": {
+      "rendered": "Гранатовый сок"
+    },
+    "content": {
+      "rendered": "\n<p>0,5/ 0,75л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,5/ 0,75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1016,
+    "template": "",
+    "class_list": [
+      "post-398",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/398"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1016"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=398"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 397,
+    "date": "2020-04-06T14:34:45",
+    "date_gmt": "2020-04-06T14:34:45",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=397"
+    },
+    "modified": "2023-11-27T11:52:49",
+    "modified_gmt": "2023-11-27T11:52:49",
+    "slug": "vinogradnyj-sok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/vinogradnyj-sok/",
+    "title": {
+      "rendered": "Виноградный сок"
+    },
+    "content": {
+      "rendered": "\n<p>0,33/0,5/0,75л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,33/0,5/0,75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 1014,
+    "template": "",
+    "class_list": [
+      "post-397",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/397"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/1014"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=397"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 378,
+    "date": "2020-04-06T11:06:15",
+    "date_gmt": "2020-04-06T11:06:15",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=378"
+    },
+    "modified": "2023-11-27T11:10:21",
+    "modified_gmt": "2023-11-27T11:10:21",
+    "slug": "tomatnyj-sok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/tomatnyj-sok/",
+    "title": {
+      "rendered": "Томатный сок прямого отжима"
+    },
+    "content": {
+      "rendered": "\n<p>  0,75л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 967,
+    "template": "",
+    "class_list": [
+      "post-378",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/378"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/967"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=378"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 362,
+    "date": "2020-04-06T10:05:22",
+    "date_gmt": "2020-04-06T10:05:22",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=362"
+    },
+    "modified": "2023-11-27T11:56:32",
+    "modified_gmt": "2023-11-27T11:56:32",
+    "slug": "sok-ananasovyj",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/sok-ananasovyj/",
+    "title": {
+      "rendered": "Ананасовый сок"
+    },
+    "content": {
+      "rendered": "\n<p> 0,5/ 0,75л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,5/ 0,75л</p>\n",
+      "protected": false
+    },
+    "featured_media": 840,
+    "template": "",
+    "class_list": [
+      "post-362",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-cok"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/362"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/840"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=362"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 352,
+    "date": "2020-03-24T09:01:11",
+    "date_gmt": "2020-03-24T09:01:11",
+    "guid": {
+      "rendered": "https://irib.su/?post_type=product&#038;p=352"
+    },
+    "modified": "2023-11-27T11:41:48",
+    "modified_gmt": "2023-11-27T11:41:48",
+    "slug": "abrikosovyj-sok",
+    "status": "publish",
+    "type": "product",
+    "link": "https://irib.su/product/abrikosovyj-sok/",
+    "title": {
+      "rendered": "Абрикосовый нектар"
+    },
+    "content": {
+      "rendered": "\n<p>0,33/0,5/0,75/3л </p>\n",
+      "protected": false
+    },
+    "excerpt": {
+      "rendered": "<p>0,33/0,5/0,75/3л</p>\n",
+      "protected": false
+    },
+    "featured_media": 974,
+    "template": "",
+    "class_list": [
+      "post-352",
+      "product",
+      "type-product",
+      "status-publish",
+      "has-post-thumbnail",
+      "hentry",
+      "catalog-nektar"
+    ],
+    "_links": {
+      "self": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product/352"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/product"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/types/product"
+        }
+      ],
+      "wp:featuredmedia": [
+        {
+          "embeddable": true,
+          "href": "https://irib.su/wp-json/wp/v2/media/974"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://irib.su/wp-json/wp/v2/media?parent=352"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

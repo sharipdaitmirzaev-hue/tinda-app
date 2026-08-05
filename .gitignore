@@ -74,6 +74,10 @@ artifacts/bavaria-import/image-completion-*/processed/*.png
 artifacts/aqualania-import/**/source-downloads/
 artifacts/aqualania-import/**/raw-html/
 
+# IRIB official source downloads (regenerate via import:irib:stage1)
+artifacts/irib-import/**/source-downloads/
+artifacts/irib-import/**/raw-html/
+
 # Local regenerable caches / bytecode
 /tmp/
 scripts/__pycache__/
