@@ -1,0 +1,5 @@
+name,reason,evidence,source_url
+Грейпфрут-малина,unclear_or_unconfirmed_sku,Вкус только в HTML-комментарии на /sparkling/ — не live assortment,https://darialgroup.ru/sparkling/
+Живое пиво /beer/ (все позиции),alcoholic_excluded,Алкогольная линейка; scope = только безалкогольное,https://darialgroup.ru/beer/
+Холодный чай «ФИЕСТА» (малина),insufficient_sku_data,"Упоминание в meta description /negazirovannye-napitki/ и тексте /products/; отдельной страницы/SKU с объёмом, тарой и подтверждённым изображением в sitemap нет",https://darialgroup.ru/negazirovannye-napitki/
+Сокосодержащие (кроме Фрутимикс manual),insufficient_sku_data,Пункт меню «Сокосодержащие» закомментирован; отдельных confirmed SKU на сайте нет,https://darialgroup.ru/products/

@@ -1,0 +1,23 @@
+{
+  "kind": "daryal-dry-run",
+  "created_at": "2026-07-31T15:23:23.584Z",
+  "manufacturer": "Дарьял",
+  "scope": "non_alcoholic_only",
+  "source_discover": "artifacts/daryal-import/seed-discover",
+  "policy": {
+    "sales_status": "showcase",
+    "price_amount": null,
+    "create_only": true,
+    "merge_forbidden": true,
+    "alcohol_excluded": true,
+    "apply_implemented": false
+  },
+  "existing_catalog_warning": "existing catalog fetch failed: AbortError: This operation was aborted; duplicate check skipped",
+  "counts": {
+    "proposed": 22,
+    "manual_review": 2,
+    "skipped_alcohol": 13,
+    "existing_catalog": 0
+  },
+  "sha256_proposed": "1380dce3f936c5fc72c1a3cf7156732b936843c7dcb220511a5bb141b1cca323"
+}

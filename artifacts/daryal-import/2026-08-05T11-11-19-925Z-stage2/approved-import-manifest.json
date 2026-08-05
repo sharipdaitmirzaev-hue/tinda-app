@@ -1,0 +1,183 @@
+{
+  "stage": "stage2-site-verified-approved",
+  "created_at": "2026-08-05T11:11:50Z",
+  "manufacturer": "ООО ВПБЗ «Дарьял»",
+  "source_primary": "https://darialgroup.ru",
+  "source_booklet": null,
+  "pdf_file_available": false,
+  "scope_decisions": {
+    "non_alcoholic_only": true,
+    "beer_excluded": true,
+    "alcohol_excluded": true,
+    "unclear_alcohol_excluded": true,
+    "official_site_only": true,
+    "third_party_forbidden_without_approval": true,
+    "frutimix_manual_only": true,
+    "cold_tea_requires_full_sku_or_gap": true
+  },
+  "approved_count": 22,
+  "manual_review_count": 2,
+  "rejected_count": 4,
+  "images_prepared": 22,
+  "skus_without_image": 0,
+  "category_distribution": {
+    "Газированные напитки": 16,
+    "Минеральная вода": 6
+  },
+  "categories": [
+    {
+      "name": "Газированные напитки",
+      "slug": "gazirovannye-napitki"
+    },
+    {
+      "name": "Минеральная вода",
+      "slug": "voda-mineralnaya"
+    }
+  ],
+  "categories_to_create": [],
+  "checks": {
+    "production_db_modified": false,
+    "apply_run": false,
+    "merge_used": false,
+    "existing_products_modified": false,
+    "sku_collisions": [],
+    "live_production_api": {
+      "ok": true,
+      "error": null,
+      "source": "live_exact_sku_probes+offline_soft_universe",
+      "snapshot_count": 176,
+      "sku_universe_count": 176,
+      "meta": {
+        "catalog_total": 621,
+        "probed_skus": 22,
+        "brand_hits": [],
+        "health": {
+          "ok": true,
+          "database": "ok"
+        },
+        "method": "exact_sku_and_brand_q_probes"
+      }
+    },
+    "soft_same_flavor_other_brand": 11
+  },
+  "apply": {
+    "sales_status": "showcase",
+    "is_active": true,
+    "price_amount": null,
+    "orderable": false,
+    "create_only": true,
+    "modify_existing_products": false,
+    "note": "User intent price=0 + orderable=false mapped to showcase + price_amount=null (catalog schema: 0 is not used as no-price; null = not orderable).",
+    "availability": "on_order",
+    "units_per_package": 1
+  },
+  "approved_skus": [
+    "DARYAL-AKVA-DARYAL-GAZ-1500-PET",
+    "DARYAL-AKVA-DARYAL-GAZ-500-GLASS",
+    "DARYAL-AKVA-DARYAL-GAZ-500-PET",
+    "DARYAL-AKVA-DARYAL-STILL-1500-PET",
+    "DARYAL-AKVA-DARYAL-STILL-500-GLASS",
+    "DARYAL-AKVA-DARYAL-STILL-500-PET",
+    "DARYAL-DARYAL-APELSIN-1500-PET",
+    "DARYAL-DARYAL-APELSIN-500-PET",
+    "DARYAL-DARYAL-APELSIN-KORIANDR-500-GLASS",
+    "DARYAL-DARYAL-FEYHOA-SHELKOVITSA-500-GLASS",
+    "DARYAL-DARYAL-GRANAT-500-GLASS",
+    "DARYAL-DARYAL-GRUSHA-1500-PET",
+    "DARYAL-DARYAL-GRUSHA-500-GLASS",
+    "DARYAL-DARYAL-GRUSHA-500-PET",
+    "DARYAL-DARYAL-KOLA-APELSIN-1500-PET",
+    "DARYAL-DARYAL-KOLA-APELSIN-500-GLASS",
+    "DARYAL-DARYAL-KOLA-APELSIN-500-PET",
+    "DARYAL-DARYAL-MOHITO-500-GLASS",
+    "DARYAL-DARYAL-MOHITO-500-PET",
+    "DARYAL-DARYAL-TARHUN-1500-PET",
+    "DARYAL-DARYAL-TARHUN-500-GLASS",
+    "DARYAL-DARYAL-TARHUN-500-PET"
+  ],
+  "manual_names": [
+    "Фрутимикс Мультифрукт",
+    "Фрутимикс Красный апельсин"
+  ],
+  "gaps": [
+    {
+      "id": "cold_tea_fiesta",
+      "line": "Холодный чай",
+      "status": "gap_not_imported",
+      "detail": "ФИЕСТА малина — только meta/описание, нет SKU (название+вкус+объём+тара+image) на официальном сайте"
+    },
+    {
+      "id": "juice_other",
+      "line": "Сокосодержащие",
+      "status": "gap_not_imported",
+      "detail": "Отдельных confirmed SKU нет; меню-ссылка закомментирована"
+    },
+    {
+      "id": "frutimix_multifrukt",
+      "line": "Фрутимикс",
+      "status": "manual",
+      "detail": "Мультифрукт — вкус confirmed, объём/тара отсутствуют; не в approved"
+    },
+    {
+      "id": "frutimix_krasnyy_apelsin",
+      "line": "Фрутимикс",
+      "status": "manual",
+      "detail": "Красный апельсин — вкус confirmed на сайте, объём/тара отсутствуют; не в approved"
+    },
+    {
+      "id": "grapefruit_raspberry_comment",
+      "line": "Газированные",
+      "status": "rejected",
+      "detail": "Грейпфрут-малина только в HTML comment"
+    },
+    {
+      "id": "beer_all",
+      "line": "Живое пиво",
+      "status": "rejected",
+      "detail": "Алкоголь — вне scope"
+    },
+    {
+      "id": "no_pdf_price_photoshoot",
+      "line": "Sources",
+      "status": "gap_source",
+      "detail": "PDF/прайс/официальная фотосъёмка отсутствуют — использован только darialgroup.ru"
+    }
+  ],
+  "source_images": {
+    "sparkling-products-glass_1.png": {
+      "url": "https://darialgroup.ru/local/templates/sm/images/sparkling/sparkling-products-glass_1.png",
+      "http_status": 200,
+      "bytes": 283561,
+      "sha256": "c8e0fa05a8c4071edcd3420fe702775f8739552d51c6b77ee2dced2c810e7ec2"
+    },
+    "sparkling-products-pet.png": {
+      "url": "https://darialgroup.ru/local/templates/sm/images/sparkling/sparkling-products-pet.png",
+      "http_status": 200,
+      "bytes": 312252,
+      "sha256": "6a08e05f316351ab173b17b7715c42d7acf4bbe135b728365562c0edeae19887"
+    },
+    "water-still.png": {
+      "url": "https://darialgroup.ru/upload/iblock/8f4/n00jgc2ona8jrquu4w7akzu1wt69kmic.png",
+      "http_status": 200,
+      "bytes": 367825,
+      "sha256": "d373695c421aea958bfe43986ed3a9dd1cc42ae5ad52b2a1f90ebdd59a331c65"
+    },
+    "water-gaz.png": {
+      "url": "https://darialgroup.ru/upload/iblock/bf7/xo9dzpvdbr2h2jcvredlzqz30wxj15oa.png",
+      "http_status": 200,
+      "bytes": 347528,
+      "sha256": "402f66c07698944594c1118ae5a8a63462a6996bbc9132b4c54def8c1cbee6e0"
+    },
+    "frutimix.png": {
+      "url": "https://darialgroup.ru/upload/iblock/b81/b81a36e32fb6055b535a0a9b42d3fa6e.png",
+      "http_status": 200,
+      "bytes": 165992,
+      "sha256": "32a5cddf42f127f7f9c48fb1f1f4e6a327e548a1222acf0522fac204d75c63a1"
+    }
+  },
+  "artifacts": {
+    "processed_dir": "artifacts/daryal-import/2026-08-05T11-11-19-925Z-stage2/processed",
+    "contact_sheet_jpg": "artifacts/daryal-import/2026-08-05T11-11-19-925Z-stage2/contact-sheet.jpg",
+    "contact_sheet_html": "artifacts/daryal-import/2026-08-05T11-11-19-925Z-stage2/contact-sheet.html"
+  }
+}
