@@ -1,0 +1,84 @@
+{
+  "source": "https://online.metro-cc.ru/search?q=%D0%B3%D0%B0%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%BD%D0%B0%D0%BF%D0%B8%D1%82%D0%BA%D0%B8",
+  "generated_at": "2026-07-27T11:50:14.641Z",
+  "pages_fetched": 15,
+  "metro_search_total": 443,
+  "found_in_allowed_categories": 423,
+  "unique_after_dedupe": 408,
+  "duplicates_removed": 15,
+  "rejected_other_category_or_noise": 15,
+  "without_image": 0,
+  "missing_fields": {},
+  "notes": [
+    "metro_price is reference-only and must not become TINDA price_amount",
+    "price_amount left empty intentionally",
+    "images were not downloaded; only image_url links saved",
+    "allowed categories: Газировка и лимонады, Тоник"
+  ],
+  "rejected_sample": [
+    {
+      "reason": "other category: Безалкогольное шампанское",
+      "slug": "075l-napitok-abrau-dyurso-layt-ba-gaz"
+    },
+    {
+      "reason": "other category: Нектар",
+      "slug": "097l-sok-nap-limonad-lyubimyy-greypfrutklubnika-tet-326489"
+    },
+    {
+      "reason": "other category: Нектар",
+      "slug": "097l-sok-nap-limonad-lyubimyy-marakuyyamango-tet-326486"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-cocktail-rossini-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-cocktail-paloma-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-cocktail-french-75-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-cocktail-bellini-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-cocktail-gintonic-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-cocktail-rumcola-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-italian-orange-spritztonic-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Безалкогольный алкоголь",
+      "slug": "napitok-drinksome-cocktail-cuba-libre-bezalkogolnyy-gazirovannyy-330ml"
+    },
+    {
+      "reason": "other category: Холодный кофе",
+      "slug": "025l-gaz-napitok-kofeynyy-egoiste-nitro-steklo-83898"
+    },
+    {
+      "reason": "other category: Холодный кофе",
+      "slug": "025l-gaz-napitok-kofeynyy-egoiste-nitro-steklo-83931"
+    },
+    {
+      "reason": "other category: Нектар",
+      "slug": "097l-sok-nap-limonad-lyubimyy-greypfrutklubnika-tet-326641"
+    },
+    {
+      "reason": "other category: Нектар",
+      "slug": "097l-sok-nap-limonad-lyubimyy-marakuyyamango-tet-326488"
+    }
+  ],
+  "partially_determined": {
+    "package_type_material_unknown": 160,
+    "note": "package_type=шт|упаковка means material (PET/стекло/жб) was not inferred from name/slug"
+  }
+}
