@@ -250,19 +250,33 @@ async function cmd_apply() {
     return;
   }
 
-  const blocked = new Set(
-    [
-      "manual-review.csv",
-      "manual-review-final.csv",
-      "rejected-products.csv",
-      "rejected-products-final.csv",
-      "confirmed-duplicates.csv",
-      "probable-review-final.csv",
-    ]
-      .map((name) => path.join(manifest_dir, name))
-      .filter((p) => existsSync(p))
-      .flatMap((p) => parse_csv_rows(readFileSync(p, "utf8")).map((r) => r.proposed_sku)),
-  );
+  // Hard-block buckets never enter create apply.
+  // probable-review-final may still list rows decided as new_product (audit trail);
+  // only keep_manual / conflict / confirmed_duplicate decisions are blocked.
+  const blocked = new Set<string>();
+  for (const name of [
+    "manual-review.csv",
+    "manual-review-final.csv",
+    "rejected-products.csv",
+    "rejected-products-final.csv",
+    "confirmed-duplicates.csv",
+  ]) {
+    const p = path.join(manifest_dir, name);
+    if (!existsSync(p)) continue;
+    for (const r of parse_csv_rows(readFileSync(p, "utf8"))) {
+      if (r.proposed_sku) blocked.add(r.proposed_sku.trim());
+    }
+  }
+  const probable_path = path.join(manifest_dir, "probable-review-final.csv");
+  if (existsSync(probable_path)) {
+    for (const r of parse_csv_rows(readFileSync(probable_path, "utf8"))) {
+      const sku = r.proposed_sku?.trim();
+      if (!sku) continue;
+      const decision = (r.decision || r.final_decision || "").trim().toLowerCase();
+      if (decision === "new_product") continue;
+      blocked.add(sku);
+    }
+  }
 
   const approved_rows = parse_csv_rows(readFileSync(approved_csv, "utf8")).filter((r) =>
     manifest.approved_skus!.includes(r.proposed_sku),
